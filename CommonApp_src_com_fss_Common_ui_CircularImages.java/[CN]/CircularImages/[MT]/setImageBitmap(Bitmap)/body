@@ -1,0 +1,9 @@
+{
+  post(new Runnable(){
+    @Override public void run(){
+      set=true;
+      CircularImages.super.setImageBitmap(getCroppedBitmap(bm));
+    }
+  }
+);
+}

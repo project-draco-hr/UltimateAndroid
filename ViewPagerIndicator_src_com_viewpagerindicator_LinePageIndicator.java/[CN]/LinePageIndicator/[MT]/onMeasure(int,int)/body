@@ -1,0 +1,3 @@
+{
+  setMeasuredDimension(measureWidth(widthMeasureSpec),measureHeight(heightMeasureSpec));
+}

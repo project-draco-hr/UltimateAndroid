@@ -1,0 +1,8 @@
+{
+  Gson gson=new Gson();
+  ArrayList<HashMap<String,Object>> arrayList=new ArrayList<HashMap<String,Object>>();
+  arrayList=gson.fromJson(jsonString,new TypeToken<ArrayList<HashMap<String,Object>>>(){
+  }
+.getType());
+  return arrayList;
+}

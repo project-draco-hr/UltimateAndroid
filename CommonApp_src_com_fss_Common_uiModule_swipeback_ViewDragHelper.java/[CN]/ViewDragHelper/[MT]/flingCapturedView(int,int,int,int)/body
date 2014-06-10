@@ -1,0 +1,7 @@
+{
+  if (!mReleaseInProgress) {
+    throw new IllegalStateException("Cannot flingCapturedView outside of a call to " + "Callback#onViewReleased");
+  }
+  mScroller.fling(mCapturedView.getLeft(),mCapturedView.getTop(),(int)VelocityTrackerCompat.getXVelocity(mVelocityTracker,mActivePointerId),(int)VelocityTrackerCompat.getYVelocity(mVelocityTracker,mActivePointerId),minLeft,maxLeft,minTop,maxTop);
+  setDragState(STATE_SETTLING);
+}

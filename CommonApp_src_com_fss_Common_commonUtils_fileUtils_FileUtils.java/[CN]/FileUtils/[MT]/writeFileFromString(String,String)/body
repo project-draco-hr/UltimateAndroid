@@ -1,0 +1,8 @@
+{
+  FileOutputStream fileOutputStream=new FileOutputStream(new File(fileName));
+  BufferedOutputStream bufferedOutputStream=new BufferedOutputStream(fileOutputStream);
+  bufferedOutputStream.write(content.getBytes());
+  bufferedOutputStream.flush();
+  bufferedOutputStream.close();
+  fileOutputStream.close();
+}

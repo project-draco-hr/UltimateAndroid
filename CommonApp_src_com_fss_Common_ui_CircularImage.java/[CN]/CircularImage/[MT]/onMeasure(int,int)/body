@@ -1,0 +1,6 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  if (!init) {
+    initPaint();
+  }
+}

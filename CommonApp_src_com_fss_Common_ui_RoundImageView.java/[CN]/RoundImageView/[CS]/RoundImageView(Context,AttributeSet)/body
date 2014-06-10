@@ -1,0 +1,6 @@
+{
+  super(context,attrs);
+  mContext=context;
+  this.setClickable(true);
+  setCustomAttributes(attrs);
+}

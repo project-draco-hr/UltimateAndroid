@@ -1,0 +1,4 @@
+{
+  Drawable drawable=new BitmapDrawable(bitmap);
+  return drawable;
+}

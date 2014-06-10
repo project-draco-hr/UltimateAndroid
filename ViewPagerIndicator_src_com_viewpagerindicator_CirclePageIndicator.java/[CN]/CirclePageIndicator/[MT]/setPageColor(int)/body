@@ -1,0 +1,4 @@
+{
+  mPaintPageFill.setColor(pageColor);
+  invalidate();
+}

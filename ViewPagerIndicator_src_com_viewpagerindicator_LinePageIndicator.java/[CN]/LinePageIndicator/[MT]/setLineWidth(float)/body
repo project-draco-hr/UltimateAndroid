@@ -1,0 +1,4 @@
+{
+  mLineWidth=lineWidth;
+  invalidate();
+}

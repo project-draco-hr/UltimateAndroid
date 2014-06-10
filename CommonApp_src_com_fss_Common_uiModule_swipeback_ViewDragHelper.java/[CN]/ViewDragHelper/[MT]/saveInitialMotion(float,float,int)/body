@@ -1,0 +1,7 @@
+{
+  ensureMotionHistorySizeForId(pointerId);
+  mInitialMotionX[pointerId]=mLastMotionX[pointerId]=x;
+  mInitialMotionY[pointerId]=mLastMotionY[pointerId]=y;
+  mInitialEdgeTouched[pointerId]=getEdgeTouched((int)x,(int)y);
+  mPointersDown|=1 << pointerId;
+}

@@ -1,0 +1,24 @@
+{
+  String packageName=context.getPackageName();
+  String DATABASE_PATH="/data/data/" + packageName + "/databases/";
+  try {
+    String path=context.getDatabasePath(dbname).getAbsolutePath();
+    if (context.getDatabasePath(dbname).getAbsolutePath().substring(0,path.lastIndexOf("/")).contains("qingdaonews")) {
+      DATABASE_PATH=path.substring(0,path.lastIndexOf("/") + 1);
+    }
+    Logs.d(context.getDatabasePath(dbname).getAbsolutePath() + "  " + context.getApplicationContext().getPackageResourcePath());
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e,"");
+  }
+  try {
+    copyDataBaseToPhone(DATABASE_PATH,dbname,context,resource);
+    return true;
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e.getMessage());
+    return false;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  String currentDataPath="";
+  if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+    currentDataPath=Environment.getExternalStorageDirectory().getAbsolutePath() + "/qingdaobus";
+  }
+ else {
+    currentDataPath=context.getFilesDir().getAbsolutePath();
+  }
+  return currentDataPath;
+}

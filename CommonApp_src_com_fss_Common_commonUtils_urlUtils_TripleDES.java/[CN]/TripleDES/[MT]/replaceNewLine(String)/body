@@ -1,0 +1,12 @@
+{
+  String strResult="";
+  int intStart=0;
+  int intLoc=strText.indexOf("\n",intStart);
+  while (intLoc != -1) {
+    strResult+=strText.substring(intStart,intLoc - 1);
+    intStart=intLoc + 1;
+    intLoc=strText.indexOf("\n",intStart);
+  }
+  strResult+=strText.substring(intStart,strText.length());
+  return strResult;
+}

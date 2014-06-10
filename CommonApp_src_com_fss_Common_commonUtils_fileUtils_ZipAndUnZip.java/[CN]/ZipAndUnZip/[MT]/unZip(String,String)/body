@@ -1,0 +1,42 @@
+{
+  if (!mDestPath.endsWith("/")) {
+    mDestPath=mDestPath + "/";
+  }
+  FileOutputStream fileOut=null;
+  ZipInputStream zipIn=null;
+  ZipEntry zipEntry=null;
+  File file=null;
+  int readedBytes=0;
+  byte buf[]=new byte[4096];
+  try {
+    zipIn=new ZipInputStream(new BufferedInputStream(new FileInputStream(unZipfileName)));
+    while ((zipEntry=zipIn.getNextEntry()) != null) {
+      file=new File(mDestPath + zipEntry.getName());
+      if (zipEntry.isDirectory()) {
+        file.mkdirs();
+      }
+ else {
+        File parent=file.getParentFile();
+        if (!parent.exists()) {
+          parent.mkdirs();
+        }
+        fileOut=new FileOutputStream(file);
+        while ((readedBytes=zipIn.read(buf)) > 0) {
+          fileOut.write(buf,0,readedBytes);
+        }
+        fileOut.close();
+      }
+      zipIn.closeEntry();
+    }
+    return 1;
+  }
+ catch (  IOException ioe) {
+    ioe.printStackTrace();
+    return 0;
+  }
+catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e,"");
+    return 0;
+  }
+}

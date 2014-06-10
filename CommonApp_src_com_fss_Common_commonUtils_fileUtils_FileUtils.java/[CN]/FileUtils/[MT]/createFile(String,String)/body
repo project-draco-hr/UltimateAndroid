@@ -1,0 +1,4 @@
+{
+  File file=new File(path + "/" + fileName);
+  if (!file.exists())   file.createNewFile();
+}

@@ -1,0 +1,17 @@
+{
+  if (this.logFileName == null) {
+    this.logFileName=this.getLogFileNameFromConfigFile();
+    if (this.logFileName == null) {
+      this.logFileName=DEFAULT_LOG_FILE_NAME;
+    }
+  }
+  File logFile=new File(this.logFileName);
+  try {
+    writer=new PrintWriter(new FileWriter(logFile,true),true);
+    System.out.println("????????????????????????" + logFile.getAbsolutePath());
+  }
+ catch (  IOException ex) {
+    String errmsg="????????????????????????:" + logFile.getAbsolutePath();
+    throw new LogException(errmsg,ex);
+  }
+}

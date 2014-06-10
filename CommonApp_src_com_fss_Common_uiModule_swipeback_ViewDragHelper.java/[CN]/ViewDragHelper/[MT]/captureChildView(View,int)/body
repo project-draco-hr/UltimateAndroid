@@ -1,0 +1,9 @@
+{
+  if (childView.getParent() != mParentView) {
+    throw new IllegalArgumentException("captureChildView: parameter must be a descendant " + "of the ViewDragHelper's tracked parent view (" + mParentView + ")");
+  }
+  mCapturedView=childView;
+  mActivePointerId=activePointerId;
+  mCallback.onViewCaptured(childView,activePointerId);
+  setDragState(STATE_DRAGGING);
+}

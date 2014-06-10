@@ -1,0 +1,4 @@
+{
+  mGapWidth=gapWidth;
+  invalidate();
+}

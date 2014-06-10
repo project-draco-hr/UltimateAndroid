@@ -1,0 +1,10 @@
+{
+  int nextSetBit=-1;
+  if (dest == null || set == null) {
+    return;
+  }
+  dest.writeInt(set.cardinality());
+  while ((nextSetBit=set.nextSetBit(nextSetBit + 1)) != -1) {
+    dest.writeInt(nextSetBit);
+  }
+}

@@ -1,0 +1,15 @@
+{
+  float result;
+  int specMode=MeasureSpec.getMode(measureSpec);
+  int specSize=MeasureSpec.getSize(measureSpec);
+  if (specMode == MeasureSpec.EXACTLY) {
+    result=specSize;
+  }
+ else {
+    result=mPaintSelected.getStrokeWidth() + getPaddingTop() + getPaddingBottom();
+    if (specMode == MeasureSpec.AT_MOST) {
+      result=Math.min(result,specSize);
+    }
+  }
+  return (int)FloatMath.ceil(result);
+}
