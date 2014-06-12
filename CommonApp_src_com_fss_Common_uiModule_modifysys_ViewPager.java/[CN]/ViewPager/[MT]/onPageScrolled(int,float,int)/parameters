@@ -1,0 +1,3 @@
+int position
+float offset
+int offsetPixels

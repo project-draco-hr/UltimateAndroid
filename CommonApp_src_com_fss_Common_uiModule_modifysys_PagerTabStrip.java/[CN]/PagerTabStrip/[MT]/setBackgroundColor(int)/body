@@ -1,0 +1,6 @@
+{
+  super.setBackgroundColor(color);
+  if (!mDrawFullUnderlineSet) {
+    mDrawFullUnderline=(color & 0xFF000000) == 0;
+  }
+}

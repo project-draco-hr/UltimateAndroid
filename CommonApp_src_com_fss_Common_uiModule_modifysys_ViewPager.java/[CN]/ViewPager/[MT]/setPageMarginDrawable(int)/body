@@ -1,0 +1,3 @@
+{
+  setPageMarginDrawable(getContext().getResources().getDrawable(resId));
+}

@@ -1,0 +1,7 @@
+{
+  mTextColor=color;
+  mCurrText.setTextColor(color);
+  final int transparentColor=(mNonPrimaryAlpha << 24) | (mTextColor & 0xFFFFFF);
+  mPrevText.setTextColor(transparentColor);
+  mNextText.setTextColor(transparentColor);
+}

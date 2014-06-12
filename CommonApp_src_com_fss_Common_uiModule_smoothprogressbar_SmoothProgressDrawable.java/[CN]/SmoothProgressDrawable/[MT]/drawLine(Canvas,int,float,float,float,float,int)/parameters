@@ -1,0 +1,7 @@
+Canvas canvas
+int canvasWidth
+float startX
+float startY
+float stopX
+float stopY
+int currentIndexColor

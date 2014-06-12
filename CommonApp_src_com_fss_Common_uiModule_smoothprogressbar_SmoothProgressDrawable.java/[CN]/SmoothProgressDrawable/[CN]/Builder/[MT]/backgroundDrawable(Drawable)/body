@@ -1,0 +1,4 @@
+{
+  mBackgroundDrawableWhenHidden=backgroundDrawableWhenHidden;
+  return this;
+}

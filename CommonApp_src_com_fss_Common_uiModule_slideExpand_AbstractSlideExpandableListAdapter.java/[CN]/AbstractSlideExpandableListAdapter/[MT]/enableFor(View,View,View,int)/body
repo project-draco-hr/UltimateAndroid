@@ -33,18 +33,18 @@
         int type=target.getVisibility() == View.VISIBLE ? ExpandCollapseAnimation.COLLAPSE : ExpandCollapseAnimation.EXPAND;
         if (type == ExpandCollapseAnimation.EXPAND) {
           openItems.set(position,true);
-          ((ImageView)button).setImageResource(R.drawable.abc_ic_clear);
+          ((ImageView)button).setImageResource(R.drawable.ico_arrow2x);
         }
  else {
           openItems.set(position,false);
-          ((ImageView)button).setImageResource(R.drawable.abc_ic_go);
+          ((ImageView)button).setImageResource(R.drawable.ico_arrow_grey2x);
         }
         if (type == ExpandCollapseAnimation.EXPAND) {
           if (lastOpenPosition != -1 && lastOpenPosition != position) {
             if (lastOpen != null) {
               animateView(button,lastOpen,ExpandCollapseAnimation.COLLAPSE);
               notifiyExpandCollapseListener(ExpandCollapseAnimation.COLLAPSE,lastOpen,lastOpenPosition);
-              if (lastOpenButton != null)               ((ImageView)lastOpenButton).setImageResource(R.drawable.abc_ic_go);
+              if (lastOpenButton != null)               ((ImageView)lastOpenButton).setImageResource(R.drawable.ico_arrow2x);
             }
             openItems.set(lastOpenPosition,false);
           }

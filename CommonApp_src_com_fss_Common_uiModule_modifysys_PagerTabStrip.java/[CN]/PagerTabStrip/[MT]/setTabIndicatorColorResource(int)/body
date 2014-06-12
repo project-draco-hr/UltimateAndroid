@@ -1,0 +1,3 @@
+{
+  setTabIndicatorColor(getContext().getResources().getColor(resId));
+}

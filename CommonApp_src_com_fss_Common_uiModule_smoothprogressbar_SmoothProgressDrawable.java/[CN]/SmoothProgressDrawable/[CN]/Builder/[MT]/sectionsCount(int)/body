@@ -1,0 +1,5 @@
+{
+  if (sectionsCount <= 0)   throw new IllegalArgumentException("SectionsCount must be > 0");
+  mSectionsCount=sectionsCount;
+  return this;
+}

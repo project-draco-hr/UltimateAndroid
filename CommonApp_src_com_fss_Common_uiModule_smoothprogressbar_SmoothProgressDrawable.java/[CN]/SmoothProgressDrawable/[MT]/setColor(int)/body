@@ -1,0 +1,3 @@
+{
+  setColors(new int[]{color});
+}
