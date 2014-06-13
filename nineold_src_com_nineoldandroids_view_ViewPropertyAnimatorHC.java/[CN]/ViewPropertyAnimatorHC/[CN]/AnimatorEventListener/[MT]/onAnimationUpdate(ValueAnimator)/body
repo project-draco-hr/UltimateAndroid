@@ -1,0 +1,24 @@
+{
+  float fraction=animation.getAnimatedFraction();
+  PropertyBundle propertyBundle=mAnimatorMap.get(animation);
+  int propertyMask=propertyBundle.mPropertyMask;
+  if ((propertyMask & TRANSFORM_MASK) != 0) {
+    View v=mView.get();
+    if (v != null) {
+      v.invalidate();
+    }
+  }
+  ArrayList<NameValuesHolder> valueList=propertyBundle.mNameValuesHolder;
+  if (valueList != null) {
+    int count=valueList.size();
+    for (int i=0; i < count; ++i) {
+      NameValuesHolder values=valueList.get(i);
+      float value=values.mFromValue + fraction * values.mDeltaValue;
+      setValue(values.mNameConstant,value);
+    }
+  }
+  View v=mView.get();
+  if (v != null) {
+    v.invalidate();
+  }
+}

@@ -1,0 +1,4 @@
+{
+  animateProperty(ALPHA,value);
+  return this;
+}

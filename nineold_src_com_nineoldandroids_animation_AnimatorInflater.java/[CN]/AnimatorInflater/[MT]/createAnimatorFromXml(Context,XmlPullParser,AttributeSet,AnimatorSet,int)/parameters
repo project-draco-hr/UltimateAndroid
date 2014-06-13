@@ -1,0 +1,5 @@
+Context c
+XmlPullParser parser
+AttributeSet attrs
+AnimatorSet parent
+int sequenceOrdering

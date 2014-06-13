@@ -1,0 +1,17 @@
+{
+  ViewPropertyAnimator animator=ANIMATORS.get(view);
+  if (animator == null) {
+    final int version=Integer.valueOf(Build.VERSION.SDK);
+    if (version >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+      animator=new ViewPropertyAnimatorICS(view);
+    }
+ else     if (version >= Build.VERSION_CODES.HONEYCOMB) {
+      animator=new ViewPropertyAnimatorHC(view);
+    }
+ else {
+      animator=new ViewPropertyAnimatorPreHC(view);
+    }
+    ANIMATORS.put(view,animator);
+  }
+  return animator;
+}
