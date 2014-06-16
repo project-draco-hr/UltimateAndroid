@@ -1,0 +1,5 @@
+Context c
+XmlPullParser parser
+AttributeSet attrs
+com.fss.Common.nineoldandroids.animation.AnimatorSet parent
+int sequenceOrdering

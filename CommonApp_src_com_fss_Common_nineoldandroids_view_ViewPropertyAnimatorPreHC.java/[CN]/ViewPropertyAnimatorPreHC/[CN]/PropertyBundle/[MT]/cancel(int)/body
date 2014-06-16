@@ -1,0 +1,14 @@
+{
+  if ((mPropertyMask & propertyConstant) != 0 && mNameValuesHolder != null) {
+    int count=mNameValuesHolder.size();
+    for (int i=0; i < count; ++i) {
+      NameValuesHolder nameValuesHolder=mNameValuesHolder.get(i);
+      if (nameValuesHolder.mNameConstant == propertyConstant) {
+        mNameValuesHolder.remove(i);
+        mPropertyMask&=~propertyConstant;
+        return true;
+      }
+    }
+  }
+  return false;
+}

@@ -1,0 +1,4 @@
+{
+  float fromValue=getValue(constantName);
+  animatePropertyBy(constantName,fromValue,byValue);
+}

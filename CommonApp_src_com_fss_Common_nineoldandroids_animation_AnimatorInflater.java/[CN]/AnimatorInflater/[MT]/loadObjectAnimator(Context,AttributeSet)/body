@@ -1,0 +1,9 @@
+{
+  ObjectAnimator anim=new ObjectAnimator();
+  loadAnimator(context,attrs,anim);
+  TypedArray a=context.obtainStyledAttributes(attrs,PropertyAnimator);
+  String propertyName=a.getString(PropertyAnimator_propertyName);
+  anim.setPropertyName(propertyName);
+  a.recycle();
+  return anim;
+}

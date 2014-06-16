@@ -1,0 +1,3 @@
+{
+  return createAnimatorFromXml(c,parser,Xml.asAttributeSet(parser),null,0);
+}

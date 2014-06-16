@@ -1,0 +1,3 @@
+{
+  return NEEDS_PROXY ? wrap(view).getScrollX() : Honeycomb.getScrollX(view);
+}

@@ -1,0 +1,7 @@
+{
+  if (mRotationY != rotationY) {
+    prepareForUpdate();
+    mRotationY=rotationY;
+    invalidateAfterUpdate();
+  }
+}

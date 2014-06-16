@@ -1,0 +1,13 @@
+{
+  try {
+    PropertyValuesHolder newPVH=(PropertyValuesHolder)super.clone();
+    newPVH.mPropertyName=mPropertyName;
+    newPVH.mProperty=mProperty;
+    newPVH.mKeyframeSet=mKeyframeSet.clone();
+    newPVH.mEvaluator=mEvaluator;
+    return newPVH;
+  }
+ catch (  CloneNotSupportedException e) {
+    return null;
+  }
+}

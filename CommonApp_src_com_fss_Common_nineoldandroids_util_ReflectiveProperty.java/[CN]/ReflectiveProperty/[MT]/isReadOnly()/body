@@ -1,0 +1,3 @@
+{
+  return (mSetter == null && mField == null);
+}
