@@ -1,0 +1,5 @@
+{
+  mPaintSelected.setStrokeWidth(lineHeight);
+  mPaintUnselected.setStrokeWidth(lineHeight);
+  invalidate();
+}

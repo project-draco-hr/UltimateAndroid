@@ -1,0 +1,4 @@
+{
+  mRadius=radius;
+  invalidate();
+}

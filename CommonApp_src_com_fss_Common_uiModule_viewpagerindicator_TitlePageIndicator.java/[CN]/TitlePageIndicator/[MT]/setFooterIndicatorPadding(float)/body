@@ -1,0 +1,4 @@
+{
+  mFooterPadding=footerIndicatorPadding;
+  invalidate();
+}
