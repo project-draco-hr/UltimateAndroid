@@ -1,4 +1,0 @@
-{
-  mBoldText=selectedBold;
-  invalidate();
-}

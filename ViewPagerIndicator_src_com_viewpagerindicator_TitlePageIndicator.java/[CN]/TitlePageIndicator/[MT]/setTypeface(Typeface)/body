@@ -1,4 +1,0 @@
-{
-  mPaintText.setTypeface(typeface);
-  invalidate();
-}

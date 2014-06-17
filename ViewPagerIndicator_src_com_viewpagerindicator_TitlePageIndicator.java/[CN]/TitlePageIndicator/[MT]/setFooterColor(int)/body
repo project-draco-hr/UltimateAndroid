@@ -1,5 +1,0 @@
-{
-  mPaintFooterLine.setColor(footerColor);
-  mPaintFooterIndicator.setColor(footerColor);
-  invalidate();
-}

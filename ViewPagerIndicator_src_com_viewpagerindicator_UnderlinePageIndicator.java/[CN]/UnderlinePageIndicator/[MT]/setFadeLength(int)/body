@@ -1,4 +1,0 @@
-{
-  mFadeLength=fadeLength;
-  mFadeBy=0xFF / (mFadeLength / FADE_FRAME_MS);
-}

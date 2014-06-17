@@ -1,4 +1,0 @@
-{
-  curViewBound.right=(int)(right - mClipPadding);
-  curViewBound.left=(int)(curViewBound.right - curViewWidth);
-}
