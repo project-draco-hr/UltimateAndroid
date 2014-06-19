@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.main);
+  ButterKnife.inject(this);
+  mContent=new LandingFragment();
+  getSupportFragmentManager().beginTransaction().add(R.id.main_content_frame,mContent).commit();
+  initViews();
+}

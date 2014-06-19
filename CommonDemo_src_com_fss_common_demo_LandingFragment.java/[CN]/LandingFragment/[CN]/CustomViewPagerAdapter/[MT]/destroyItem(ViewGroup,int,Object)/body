@@ -1,0 +1,3 @@
+{
+  if (viewpagerList != null && viewpagerList.size() > position && viewpagerList.get(position) != null)   container.removeView(viewpagerList.get(position));
+}

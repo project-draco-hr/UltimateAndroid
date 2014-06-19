@@ -1,0 +1,35 @@
+{
+  HashMap<String,String> map=new HashMap<>();
+  map.put("name","name1");
+  map.put("detail","detail1");
+  map.put("subname","sub1");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","name2");
+  map.put("detail","detail2");
+  map.put("subname","sub2");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","name3");
+  map.put("detail","detail3");
+  map.put("subname","sub3");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","name4");
+  map.put("detail","detail4");
+  map.put("subname","sub4");
+  enhanceList.add(map);
+  enhancedListAdapter=new EnhancedListAdapter(enhanceList);
+  landingEnhanceListView.setAdapter(enhancedListAdapter);
+  landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
+    @Override public EnhancedListView.Undoable onDismiss(    EnhancedListView listView,    int position){
+      enhancedListAdapter.remove(position);
+      return null;
+    }
+  }
+);
+  landingEnhanceListView.setSwipingLayout(R.id.swiping_layout);
+  landingEnhanceListView.setUndoStyle(null);
+  landingEnhanceListView.enableSwipeToDismiss();
+  landingEnhanceListView.setSwipeDirection(EnhancedListView.SwipeDirection.START);
+}

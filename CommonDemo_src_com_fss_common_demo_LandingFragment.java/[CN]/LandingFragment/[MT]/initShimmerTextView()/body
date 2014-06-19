@@ -1,0 +1,15 @@
+{
+  shimmer=new Shimmer();
+  shimmer.setRepeatCount(10).setDuration(1500).setStartDelay(300).setDirection(Shimmer.ANIMATION_DIRECTION_LTR).setAnimatorListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animation){
+    }
+    @Override public void onAnimationEnd(    Animator animation){
+    }
+    @Override public void onAnimationCancel(    Animator animation){
+    }
+    @Override public void onAnimationRepeat(    Animator animation){
+    }
+  }
+);
+  shimmer.start(landingShimmerTextView);
+}

@@ -1,0 +1,8 @@
+{
+  mainView=inflater.inflate(R.layout.landing_fragment,container,false);
+  ButterKnife.inject(this,mainView);
+  initEnhanceList();
+  initViewPager();
+  initShimmerTextView();
+  return mainView;
+}
