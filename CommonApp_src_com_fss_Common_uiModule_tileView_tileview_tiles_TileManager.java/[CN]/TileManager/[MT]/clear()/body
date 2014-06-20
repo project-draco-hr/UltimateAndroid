@@ -1,0 +1,26 @@
+{
+  suppressRender();
+  cancelRender();
+  for (  Tile m : scheduledToRender) {
+    m.destroy();
+  }
+  scheduledToRender.clear();
+  for (  Tile m : alreadyRendered) {
+    m.destroy();
+  }
+  alreadyRendered.clear();
+  for (  ScalingLayout tileGroup : tileGroups.values()) {
+    int totalChildren=tileGroup.getChildCount();
+    for (int i=0; i < totalChildren; i++) {
+      View child=tileGroup.getChildAt(i);
+      if (child instanceof ImageView) {
+        ImageView imageView=(ImageView)child;
+        imageView.setImageBitmap(null);
+      }
+    }
+    tileGroup.removeAllViews();
+  }
+  if (cache != null) {
+    cache.clear();
+  }
+}

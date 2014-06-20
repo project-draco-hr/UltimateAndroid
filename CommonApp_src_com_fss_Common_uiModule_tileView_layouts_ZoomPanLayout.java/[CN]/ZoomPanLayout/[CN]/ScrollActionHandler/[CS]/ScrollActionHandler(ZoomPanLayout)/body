@@ -1,0 +1,4 @@
+{
+  super();
+  reference=new WeakReference<ZoomPanLayout>(zoomPanLayout);
+}

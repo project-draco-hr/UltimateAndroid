@@ -3,6 +3,5 @@
   ButterKnife.inject(this,mainView);
   initEnhanceList();
   initViewPager();
-  initShimmerTextView();
   return mainView;
 }

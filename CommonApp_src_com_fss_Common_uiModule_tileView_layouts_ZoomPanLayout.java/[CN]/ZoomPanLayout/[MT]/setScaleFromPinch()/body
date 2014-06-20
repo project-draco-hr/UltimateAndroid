@@ -1,0 +1,9 @@
+{
+  int dx=firstFinger.x - secondFinger.x;
+  int dy=firstFinger.y - secondFinger.y;
+  double pinchCurrentDistance=Math.sqrt(dx * dx + dy * dy);
+  double currentScale=pinchCurrentDistance / pinchStartDistance;
+  currentScale=Math.max(currentScale,MINIMUM_PINCH_SCALE);
+  currentScale=historicalScale * currentScale;
+  setScale(currentScale);
+}

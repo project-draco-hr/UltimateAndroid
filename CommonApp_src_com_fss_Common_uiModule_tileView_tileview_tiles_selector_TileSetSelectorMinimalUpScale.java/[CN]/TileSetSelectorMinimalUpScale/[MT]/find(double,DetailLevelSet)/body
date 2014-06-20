@@ -1,0 +1,20 @@
+{
+  if (levels.size() == 0) {
+    return null;
+  }
+  if (levels.size() == 1) {
+    return levels.get(0);
+  }
+  DetailLevel match=null;
+  int index=levels.size() - 1;
+  for (int i=index; i >= 0; i--) {
+    match=levels.get(i);
+    if (match.getScale() < scale) {
+      if (i < index) {
+        match=levels.get(i + 1);
+      }
+      break;
+    }
+  }
+  return match;
+}

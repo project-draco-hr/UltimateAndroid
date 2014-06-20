@@ -1,0 +1,4 @@
+{
+  offsetWidth=right - left;
+  offsetHeight=bottom - top;
+}

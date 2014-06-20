@@ -5,4 +5,5 @@
   mContent=new LandingFragment();
   getSupportFragmentManager().beginTransaction().add(R.id.main_content_frame,mContent).commit();
   initViews();
+  initShimmerTextView();
 }

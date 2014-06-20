@@ -1,0 +1,6 @@
+{
+  int passed=timePassed();
+  mDuration=passed + extend;
+  mDurationReciprocal=1.0f / mDuration;
+  mFinished=false;
+}

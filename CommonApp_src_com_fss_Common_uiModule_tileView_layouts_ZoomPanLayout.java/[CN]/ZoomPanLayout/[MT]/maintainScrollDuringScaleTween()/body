@@ -1,0 +1,7 @@
+{
+  double deltaScale=scale / historicalScale;
+  int x=(int)(doubleTapStartScroll.x * deltaScale) - doubleTapStartOffset.x;
+  int y=(int)(doubleTapStartScroll.y * deltaScale) - doubleTapStartOffset.y;
+  destinationScroll.set(x,y);
+  scrollToPoint(destinationScroll);
+}

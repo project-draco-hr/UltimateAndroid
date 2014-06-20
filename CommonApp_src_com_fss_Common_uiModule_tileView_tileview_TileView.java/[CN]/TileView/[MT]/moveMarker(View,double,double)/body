@@ -1,0 +1,13 @@
+{
+  if (markerManager.indexOfChild(view) > -1) {
+    Point point=positionManager.translate(x,y);
+    LayoutParams params=view.getLayoutParams();
+    if (params instanceof AnchorLayout.LayoutParams) {
+      AnchorLayout.LayoutParams anchorLayoutParams=(AnchorLayout.LayoutParams)params;
+      anchorLayoutParams.x=point.x;
+      anchorLayoutParams.y=point.y;
+      view.setLayoutParams(anchorLayoutParams);
+      markerManager.requestLayout();
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  double levelScale=detailManager.getCurrentDetailLevelScale();
+  if (tileGroups.containsKey(levelScale)) {
+    return tileGroups.get(levelScale);
+  }
+  ScalingLayout tileGroup=new ScalingLayout(getContext());
+  tileGroup.setScale(1 / levelScale);
+  tileGroups.put(levelScale,tileGroup);
+  addView(tileGroup,new LayoutParams(detailManager.getWidth(),detailManager.getHeight()));
+  return tileGroup;
+}

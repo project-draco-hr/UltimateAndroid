@@ -1,0 +1,3 @@
+{
+  singleTapHistory.set(firstFinger.x,firstFinger.y);
+}

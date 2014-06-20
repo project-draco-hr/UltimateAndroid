@@ -1,0 +1,4 @@
+{
+  detailLevels.clear();
+  update(false);
+}
