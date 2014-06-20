@@ -1,0 +1,8 @@
+{
+  final View itemView=getChildAt(index);
+  final long id=mAdapter.getItemId(index);
+  final OnItemLongClickListener listener=getOnItemLongClickListener();
+  if (listener != null) {
+    listener.onItemLongClick(this,itemView,index,id);
+  }
+}

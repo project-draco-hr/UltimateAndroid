@@ -1,0 +1,9 @@
+{
+  if (isInEditMode() || mAdapter == null) {
+    super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+    return;
+  }
+  mControlHeight=measureChildrens(false);
+  final int measuredWidth=MeasureSpec.getSize(widthMeasureSpec);
+  setMeasuredDimension(measuredWidth,mControlHeight);
+}

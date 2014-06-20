@@ -1,0 +1,7 @@
+{
+  super(c,attrs);
+  setupWidthAndHeight();
+  TypedArray a=c.obtainStyledAttributes(attrs,LAYOUT_ATTRS);
+  span=a.getInteger(SPAN_INDEX,1);
+  a.recycle();
+}

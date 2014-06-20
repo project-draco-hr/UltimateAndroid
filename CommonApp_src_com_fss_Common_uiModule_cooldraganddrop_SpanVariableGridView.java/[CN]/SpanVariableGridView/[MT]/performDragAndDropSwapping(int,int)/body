@@ -1,0 +1,12 @@
+{
+  mPopulating=true;
+  if (from != to) {
+    final View removedChild=getChildAt(from);
+    removedChild.clearAnimation();
+    removeViewInLayout(removedChild);
+    addViewInLayout(removedChild,to,removedChild.getLayoutParams());
+  }
+  mControlHeight=measureChildrens(false);
+  layoutChildrens(to,true);
+  mPopulating=false;
+}

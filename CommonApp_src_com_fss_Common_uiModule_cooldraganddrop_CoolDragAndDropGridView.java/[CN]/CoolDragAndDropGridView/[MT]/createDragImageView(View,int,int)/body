@@ -1,0 +1,23 @@
+{
+  v.destroyDrawingCache();
+  v.setDrawingCacheEnabled(true);
+  Bitmap bm=Bitmap.createBitmap(v.getDrawingCache());
+  mDragPointX=x - v.getLeft();
+  mDragPointY=y - v.getTop();
+  mWindowParams=new WindowManager.LayoutParams();
+  mWindowParams.gravity=Gravity.TOP | Gravity.LEFT;
+  mWindowParams.x=x - mDragPointX + mDragOffsetX;
+  mWindowParams.y=y - mDragPointY + mDragOffsetY;
+  mWindowParams.height=WindowManager.LayoutParams.WRAP_CONTENT;
+  mWindowParams.width=WindowManager.LayoutParams.WRAP_CONTENT;
+  mWindowParams.flags=WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON| WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
+  mWindowParams.format=PixelFormat.TRANSLUCENT;
+  mWindowParams.alpha=0.7f;
+  mWindowParams.windowAnimations=0;
+  ImageView iv=new ImageView(getContext());
+  iv.setBackgroundColor(Color.parseColor("#ff555555"));
+  iv.setImageBitmap(bm);
+  mWindowManager=(WindowManager)getContext().getSystemService(Context.WINDOW_SERVICE);
+  mWindowManager.addView(iv,mWindowParams);
+  return iv;
+}
