@@ -1,0 +1,4 @@
+{
+  Collections.reverse(transitions);
+  return transitions;
+}
