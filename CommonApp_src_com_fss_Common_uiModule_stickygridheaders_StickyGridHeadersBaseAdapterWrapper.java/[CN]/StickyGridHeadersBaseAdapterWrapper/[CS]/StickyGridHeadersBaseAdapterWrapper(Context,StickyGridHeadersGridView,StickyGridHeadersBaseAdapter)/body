@@ -1,0 +1,6 @@
+{
+  mContext=context;
+  mDelegate=delegate;
+  mGridView=gridView;
+  delegate.registerDataSetObserver(mDataSetObserver);
+}

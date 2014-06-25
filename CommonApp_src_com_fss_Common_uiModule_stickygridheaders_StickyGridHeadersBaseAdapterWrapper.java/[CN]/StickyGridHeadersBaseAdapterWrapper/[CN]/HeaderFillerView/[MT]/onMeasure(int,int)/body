@@ -1,0 +1,14 @@
+{
+  View v=(View)getTag();
+  ViewGroup.LayoutParams params=v.getLayoutParams();
+  if (params == null) {
+    params=generateDefaultLayoutParams();
+    v.setLayoutParams(params);
+  }
+  if (v.getVisibility() != View.GONE) {
+    int heightSpec=getChildMeasureSpec(MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED),0,params.height);
+    int widthSpec=getChildMeasureSpec(MeasureSpec.makeMeasureSpec(mGridView.getWidth(),MeasureSpec.EXACTLY),0,params.width);
+    v.measure(widthSpec,heightSpec);
+  }
+  setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec),v.getMeasuredHeight());
+}

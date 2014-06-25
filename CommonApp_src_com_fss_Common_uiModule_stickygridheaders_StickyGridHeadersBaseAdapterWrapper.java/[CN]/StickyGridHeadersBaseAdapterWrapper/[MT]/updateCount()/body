@@ -1,0 +1,13 @@
+{
+  mCount=0;
+  int numHeaders=mDelegate.getNumHeaders();
+  if (numHeaders == 0) {
+    mCount=mDelegate.getCount();
+    mCounted=true;
+    return;
+  }
+  for (int i=0; i < numHeaders; i++) {
+    mCount+=mDelegate.getCountForHeader(i) + mNumColumns;
+  }
+  mCounted=true;
+}

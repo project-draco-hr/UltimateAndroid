@@ -1,0 +1,5 @@
+{
+  this.mIndexBarY=indexBarY;
+  if (mPreviewTextView instanceof TextView)   ((TextView)mPreviewTextView).setText(previewText);
+  setSelection(position);
+}

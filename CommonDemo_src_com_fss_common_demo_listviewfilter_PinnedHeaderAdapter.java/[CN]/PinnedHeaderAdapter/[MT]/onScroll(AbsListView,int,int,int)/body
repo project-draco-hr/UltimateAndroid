@@ -1,0 +1,5 @@
+{
+  if (view instanceof PinnedHeaderListView) {
+    ((PinnedHeaderListView)view).configureHeaderView(firstVisibleItem);
+  }
+}

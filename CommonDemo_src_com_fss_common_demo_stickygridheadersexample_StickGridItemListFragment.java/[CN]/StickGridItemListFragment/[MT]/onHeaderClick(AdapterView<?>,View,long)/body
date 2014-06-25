@@ -1,0 +1,10 @@
+{
+  String text="Header " + ((TextView)view.findViewById(android.R.id.text1)).getText() + " was tapped.";
+  if (mToast == null) {
+    mToast=Toast.makeText(getActivity(),text,Toast.LENGTH_SHORT);
+  }
+ else {
+    mToast.setText(text);
+  }
+  mToast.show();
+}

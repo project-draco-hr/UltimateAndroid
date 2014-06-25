@@ -1,0 +1,3 @@
+{
+  return translatePosition(position).mHeader;
+}

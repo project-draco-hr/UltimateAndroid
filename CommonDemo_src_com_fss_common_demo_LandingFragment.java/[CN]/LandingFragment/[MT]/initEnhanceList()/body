@@ -15,9 +15,14 @@
   map.put("subname","to DragDrop");
   enhanceList.add(map);
   map=new HashMap<>();
-  map.put("name","name4");
+  map.put("name","Stickyheader");
   map.put("detail","try");
-  map.put("subname","sub4");
+  map.put("subname","to StickyHeader");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ListViewFilter");
+  map.put("detail","try");
+  map.put("subname","to ListViewFilter");
   enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
@@ -43,6 +48,12 @@ case 1:
   break;
 case 2:
 BasicUtils.sendIntent(getActivity(),CoolDragAndDropActivity.class);
+break;
+case 3:
+BasicUtils.sendIntent(getActivity(),StickGridItemListActivity.class);
+break;
+case 4:
+BasicUtils.sendIntent(getActivity(),ListViewFilterActivity.class);
 break;
 }
 }

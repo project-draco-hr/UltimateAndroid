@@ -1,0 +1,6 @@
+{
+  this.mItems=items;
+  this.mHeaderResId=headerResId;
+  this.mItemResId=itemResId;
+  mInflater=LayoutInflater.from(context);
+}

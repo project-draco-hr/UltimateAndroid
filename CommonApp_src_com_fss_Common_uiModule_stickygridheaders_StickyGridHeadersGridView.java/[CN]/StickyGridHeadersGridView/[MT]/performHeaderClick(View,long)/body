@@ -1,0 +1,11 @@
+{
+  if (mOnHeaderClickListener != null) {
+    playSoundEffect(SoundEffectConstants.CLICK);
+    if (view != null) {
+      view.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
+    }
+    mOnHeaderClickListener.onHeaderClick(this,view,id);
+    return true;
+  }
+  return false;
+}

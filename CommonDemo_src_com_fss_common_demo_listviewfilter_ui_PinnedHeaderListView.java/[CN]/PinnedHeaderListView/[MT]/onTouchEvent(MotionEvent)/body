@@ -1,0 +1,10 @@
+{
+  if (mIndexBarView != null && ((IndexBarView)mIndexBarView).onTouchEvent(ev)) {
+    setPreviewTextVisibility(true);
+    return true;
+  }
+ else {
+    setPreviewTextVisibility(false);
+    return super.onTouchEvent(ev);
+  }
+}

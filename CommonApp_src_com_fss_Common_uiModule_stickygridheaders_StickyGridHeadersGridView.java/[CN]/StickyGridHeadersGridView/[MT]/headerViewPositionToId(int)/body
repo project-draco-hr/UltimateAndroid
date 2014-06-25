@@ -1,0 +1,6 @@
+{
+  if (pos == MATCHED_STICKIED_HEADER) {
+    return mCurrentHeaderId;
+  }
+  return mAdapter.getHeaderId(getFirstVisiblePosition() + pos);
+}

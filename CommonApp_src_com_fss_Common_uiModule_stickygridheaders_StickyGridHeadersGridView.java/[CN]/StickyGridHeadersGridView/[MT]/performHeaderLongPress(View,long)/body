@@ -1,0 +1,13 @@
+{
+  boolean handled=false;
+  if (mOnHeaderLongClickListener != null) {
+    handled=mOnHeaderLongClickListener.onHeaderLongClick(this,view,id);
+  }
+  if (handled) {
+    if (view != null) {
+      view.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_LONG_CLICKED);
+    }
+    performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+  }
+  return handled;
+}

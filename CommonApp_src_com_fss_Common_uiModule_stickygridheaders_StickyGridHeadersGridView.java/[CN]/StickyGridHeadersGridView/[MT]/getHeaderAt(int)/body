@@ -1,0 +1,11 @@
+{
+  if (position == MATCHED_STICKIED_HEADER) {
+    return mStickiedHeader;
+  }
+  try {
+    return (View)getChildAt(position).getTag();
+  }
+ catch (  Exception e) {
+  }
+  return null;
+}

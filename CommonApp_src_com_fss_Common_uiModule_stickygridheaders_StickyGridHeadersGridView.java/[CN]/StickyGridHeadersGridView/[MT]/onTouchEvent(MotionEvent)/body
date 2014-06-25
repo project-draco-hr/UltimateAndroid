@@ -1,0 +1,127 @@
+{
+  final int action=ev.getAction();
+  boolean wasHeaderChildBeingPressed=mHeaderChildBeingPressed;
+  if (mHeaderChildBeingPressed) {
+    final View tempHeader=getHeaderAt(mMotionHeaderPosition);
+    final View headerHolder=mMotionHeaderPosition == MATCHED_STICKIED_HEADER ? tempHeader : getChildAt(mMotionHeaderPosition);
+    if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
+      mHeaderChildBeingPressed=false;
+    }
+    if (tempHeader != null) {
+      tempHeader.dispatchTouchEvent(transformEvent(ev,mMotionHeaderPosition));
+      tempHeader.invalidate();
+      tempHeader.postDelayed(new Runnable(){
+        public void run(){
+          invalidate(0,headerHolder.getTop(),getWidth(),headerHolder.getTop() + headerHolder.getHeight());
+        }
+      }
+,ViewConfiguration.getPressedStateDuration());
+      invalidate(0,headerHolder.getTop(),getWidth(),headerHolder.getTop() + headerHolder.getHeight());
+    }
+  }
+switch (action & MotionEvent.ACTION_MASK) {
+case MotionEvent.ACTION_DOWN:
+    if (mPendingCheckForTap == null) {
+      mPendingCheckForTap=new CheckForHeaderTap();
+    }
+  postDelayed(mPendingCheckForTap,ViewConfiguration.getTapTimeout());
+final int y=(int)ev.getY();
+mMotionY=y;
+mMotionHeaderPosition=findMotionHeader(y);
+if (mMotionHeaderPosition == NO_MATCHED_HEADER || mScrollState == SCROLL_STATE_FLING) {
+break;
+}
+ else {
+View tempHeader=getHeaderAt(mMotionHeaderPosition);
+if (tempHeader != null) {
+if (tempHeader.dispatchTouchEvent(transformEvent(ev,mMotionHeaderPosition))) {
+mHeaderChildBeingPressed=true;
+tempHeader.setPressed(true);
+}
+tempHeader.invalidate();
+if (mMotionHeaderPosition != MATCHED_STICKIED_HEADER) {
+tempHeader=getChildAt(mMotionHeaderPosition);
+}
+invalidate(0,tempHeader.getTop(),getWidth(),tempHeader.getTop() + tempHeader.getHeight());
+}
+}
+mTouchMode=TOUCH_MODE_DOWN;
+return true;
+case MotionEvent.ACTION_MOVE:
+if (mMotionHeaderPosition != NO_MATCHED_HEADER && Math.abs(ev.getY() - mMotionY) > mTouchSlop) {
+mTouchMode=TOUCH_MODE_REST;
+final View header=getHeaderAt(mMotionHeaderPosition);
+if (header != null) {
+header.setPressed(false);
+header.invalidate();
+}
+final Handler handler=getHandler();
+if (handler != null) {
+handler.removeCallbacks(mPendingCheckForLongPress);
+}
+mMotionHeaderPosition=NO_MATCHED_HEADER;
+}
+break;
+case MotionEvent.ACTION_UP:
+if (mTouchMode == TOUCH_MODE_FINISHED_LONG_PRESS) {
+mTouchMode=TOUCH_MODE_REST;
+return true;
+}
+if (mTouchMode == TOUCH_MODE_REST || mMotionHeaderPosition == NO_MATCHED_HEADER) {
+break;
+}
+final View header=getHeaderAt(mMotionHeaderPosition);
+if (!wasHeaderChildBeingPressed) {
+if (header != null) {
+if (mTouchMode != TOUCH_MODE_DOWN) {
+header.setPressed(false);
+}
+if (mPerformHeaderClick == null) {
+mPerformHeaderClick=new PerformHeaderClick();
+}
+final PerformHeaderClick performHeaderClick=mPerformHeaderClick;
+performHeaderClick.mClickMotionPosition=mMotionHeaderPosition;
+performHeaderClick.rememberWindowAttachCount();
+if (mTouchMode == TOUCH_MODE_DOWN || mTouchMode == TOUCH_MODE_TAP) {
+final Handler handler=getHandler();
+if (handler != null) {
+handler.removeCallbacks(mTouchMode == TOUCH_MODE_DOWN ? mPendingCheckForTap : mPendingCheckForLongPress);
+}
+if (!mDataChanged) {
+mTouchMode=TOUCH_MODE_TAP;
+header.setPressed(true);
+setPressed(true);
+if (mTouchModeReset != null) {
+removeCallbacks(mTouchModeReset);
+}
+mTouchModeReset=new Runnable(){
+@Override public void run(){
+mMotionHeaderPosition=NO_MATCHED_HEADER;
+mTouchModeReset=null;
+mTouchMode=TOUCH_MODE_REST;
+header.setPressed(false);
+setPressed(false);
+header.invalidate();
+invalidate(0,header.getTop(),getWidth(),header.getHeight());
+if (!mDataChanged) {
+performHeaderClick.run();
+}
+}
+}
+;
+postDelayed(mTouchModeReset,ViewConfiguration.getPressedStateDuration());
+}
+ else {
+mTouchMode=TOUCH_MODE_REST;
+}
+}
+ else if (!mDataChanged) {
+performHeaderClick.run();
+}
+}
+}
+mTouchMode=TOUCH_MODE_REST;
+return true;
+}
+return super.onTouchEvent(ev);
+}
