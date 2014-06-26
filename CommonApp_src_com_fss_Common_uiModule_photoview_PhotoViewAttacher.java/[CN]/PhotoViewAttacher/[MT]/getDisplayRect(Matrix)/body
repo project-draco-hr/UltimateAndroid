@@ -1,0 +1,12 @@
+{
+  ImageView imageView=getImageView();
+  if (null != imageView) {
+    Drawable d=imageView.getDrawable();
+    if (null != d) {
+      mDisplayRect.set(0,0,d.getIntrinsicWidth(),d.getIntrinsicHeight());
+      matrix.mapRect(mDisplayRect);
+      return mDisplayRect;
+    }
+  }
+  return null;
+}

@@ -1,0 +1,6 @@
+{
+  super.setImageURI(uri);
+  if (null != mAttacher) {
+    mAttacher.update();
+  }
+}

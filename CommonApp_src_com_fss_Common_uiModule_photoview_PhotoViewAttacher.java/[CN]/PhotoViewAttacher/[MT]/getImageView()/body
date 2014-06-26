@@ -1,0 +1,11 @@
+{
+  ImageView imageView=null;
+  if (null != mImageView) {
+    imageView=mImageView.get();
+  }
+  if (null == imageView) {
+    cleanup();
+    Log.i(LOG_TAG,"ImageView no longer exists. You should not use this PhotoViewAttacher any more.");
+  }
+  return imageView;
+}

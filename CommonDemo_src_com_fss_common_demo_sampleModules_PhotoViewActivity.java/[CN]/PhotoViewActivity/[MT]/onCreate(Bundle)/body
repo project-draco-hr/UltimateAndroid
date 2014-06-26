@@ -1,0 +1,9 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.photo_view_activity);
+  ButterKnife.inject(this);
+  Drawable bitmap=getResources().getDrawable(R.drawable.test_back);
+  photoViewImageView.setImageDrawable(bitmap);
+  photoViewAttacher=new PhotoViewAttacher(photoViewImageView);
+  HandlerUtils.sendMessageHandlerDelay(changeImageHandler,0,2000);
+}

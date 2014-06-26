@@ -1,0 +1,4 @@
+{
+  mAttacher.cleanup();
+  super.onDetachedFromWindow();
+}

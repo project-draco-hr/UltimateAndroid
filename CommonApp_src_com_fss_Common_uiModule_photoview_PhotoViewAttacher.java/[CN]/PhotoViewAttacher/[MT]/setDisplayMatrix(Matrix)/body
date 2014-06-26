@@ -1,0 +1,10 @@
+{
+  if (finalMatrix == null)   throw new IllegalArgumentException("Matrix cannot be null");
+  ImageView imageView=getImageView();
+  if (null == imageView)   return false;
+  if (null == imageView.getDrawable())   return false;
+  mSuppMatrix.set(finalMatrix);
+  setImageViewMatrix(getDrawMatrix());
+  checkMatrixBounds();
+  return true;
+}

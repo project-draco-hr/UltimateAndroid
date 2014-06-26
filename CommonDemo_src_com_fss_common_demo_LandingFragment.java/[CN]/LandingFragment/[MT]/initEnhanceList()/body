@@ -29,6 +29,11 @@
   map.put("detail","try");
   map.put("subname","to FlipView");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Photoview");
+  map.put("detail","try");
+  map.put("subname","to Photoview");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -62,6 +67,9 @@ BasicUtils.sendIntent(getActivity(),ListViewFilterActivity.class);
 break;
 case 5:
 BasicUtils.sendIntent(getActivity(),FlipViewActivity.class);
+break;
+case 6:
+BasicUtils.sendIntent(getActivity(),PhotoViewActivity.class);
 break;
 }
 }
