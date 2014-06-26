@@ -1,0 +1,12 @@
+{
+  canvas.save();
+  canvas.clipRect(isFlippingVertically() ? mTopRect : mLeftRect);
+  final float degreesFlipped=getDegreesFlipped();
+  final Page p=degreesFlipped > 90 ? mPreviousPage : mCurrentPage;
+  if (p.valid) {
+    setDrawWithLayer(p.v,true);
+    drawChild(canvas,p.v,0);
+  }
+  drawPreviousShadow(canvas);
+  canvas.restore();
+}

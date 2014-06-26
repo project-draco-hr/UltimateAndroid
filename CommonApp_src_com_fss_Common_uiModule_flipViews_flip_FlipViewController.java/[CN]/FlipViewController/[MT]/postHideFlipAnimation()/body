@@ -1,0 +1,10 @@
+{
+  if (inFlipAnimation) {
+    handler.post(new Runnable(){
+      @Override public void run(){
+        hideFlipAnimation();
+      }
+    }
+);
+  }
+}

@@ -1,0 +1,5 @@
+FlipView v
+OverFlipMode mode
+boolean overFlippingPrevious
+float overFlipDistance
+float flipDistancePerPage

@@ -1,0 +1,4 @@
+{
+  ReusableFormatter formatter=thread_local_formatter.get();
+  return formatter.format(msg,args);
+}

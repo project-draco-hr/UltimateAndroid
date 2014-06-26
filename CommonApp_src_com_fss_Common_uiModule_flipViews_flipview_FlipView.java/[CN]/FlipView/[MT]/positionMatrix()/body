@@ -1,0 +1,6 @@
+{
+  mMatrix.preScale(0.25f,0.25f);
+  mMatrix.postScale(4.0f,4.0f);
+  mMatrix.preTranslate(-getWidth() / 2,-getHeight() / 2);
+  mMatrix.postTranslate(getWidth() / 2,getHeight() / 2);
+}

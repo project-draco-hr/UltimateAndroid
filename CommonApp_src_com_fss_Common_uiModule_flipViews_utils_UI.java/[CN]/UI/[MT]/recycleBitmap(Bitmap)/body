@@ -1,0 +1,10 @@
+{
+  if (bm != null) {
+    if (bm.isRecycled()) {
+      AphidLog.w("Bitmap is recycled already?");
+    }
+ else {
+      bm.recycle();
+    }
+  }
+}

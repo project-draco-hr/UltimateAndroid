@@ -24,6 +24,11 @@
   map.put("detail","try");
   map.put("subname","to ListViewFilter");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FlipView");
+  map.put("detail","try");
+  map.put("subname","to FlipView");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -54,6 +59,9 @@ BasicUtils.sendIntent(getActivity(),StickGridItemListActivity.class);
 break;
 case 4:
 BasicUtils.sendIntent(getActivity(),ListViewFilterActivity.class);
+break;
+case 5:
+BasicUtils.sendIntent(getActivity(),FlipViewActivity.class);
 break;
 }
 }

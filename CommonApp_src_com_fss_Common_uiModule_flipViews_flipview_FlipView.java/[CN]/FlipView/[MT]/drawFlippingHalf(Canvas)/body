@@ -1,0 +1,31 @@
+{
+  canvas.save();
+  mCamera.save();
+  final float degreesFlipped=getDegreesFlipped();
+  if (degreesFlipped > 90) {
+    canvas.clipRect(isFlippingVertically() ? mTopRect : mLeftRect);
+    if (mIsFlippingVertically) {
+      mCamera.rotateX(degreesFlipped - 180);
+    }
+ else {
+      mCamera.rotateY(180 - degreesFlipped);
+    }
+  }
+ else {
+    canvas.clipRect(isFlippingVertically() ? mBottomRect : mRightRect);
+    if (mIsFlippingVertically) {
+      mCamera.rotateX(degreesFlipped);
+    }
+ else {
+      mCamera.rotateY(-degreesFlipped);
+    }
+  }
+  mCamera.getMatrix(mMatrix);
+  positionMatrix();
+  canvas.concat(mMatrix);
+  setDrawWithLayer(mCurrentPage.v,true);
+  drawChild(canvas,mCurrentPage.v,0);
+  drawFlippingShadeShine(canvas);
+  mCamera.restore();
+  canvas.restore();
+}

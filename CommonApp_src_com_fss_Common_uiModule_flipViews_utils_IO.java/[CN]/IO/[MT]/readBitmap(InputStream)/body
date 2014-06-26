@@ -1,0 +1,15 @@
+{
+  if (input == null) {
+    return null;
+  }
+  try {
+    return BitmapFactory.decodeStream(input);
+  }
+ catch (  Exception e) {
+    AphidLog.e(e,"Failed to read bitmap");
+    return null;
+  }
+ finally {
+    close(input);
+  }
+}

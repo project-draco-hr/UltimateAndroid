@@ -1,0 +1,13 @@
+{
+  if (this.adapter != null) {
+    this.adapter.unregisterDataSetObserver(adapterDataObserver);
+  }
+  Assert.assertNotNull("adapter should not be null",adapter);
+  this.adapter=adapter;
+  adapterDataCount=adapter.getCount();
+  adapterDataObserver=new MyDataSetObserver();
+  this.adapter.registerDataSetObserver(adapterDataObserver);
+  if (adapterDataCount > 0) {
+    setSelection(initialPosition);
+  }
+}

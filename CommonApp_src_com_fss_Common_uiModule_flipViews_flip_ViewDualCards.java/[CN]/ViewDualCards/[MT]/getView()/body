@@ -1,0 +1,3 @@
+{
+  return viewRef != null ? viewRef.get() : null;
+}
