@@ -1,0 +1,5 @@
+{
+  prepareFold(mOrientation,mAnchorFactor,mNumberOfFolds);
+  calculateMatrices();
+  invalidate();
+}
