@@ -35,9 +35,9 @@
   map.put("subname","to Photoview");
   enhanceList.add(map);
   map=new HashMap<>();
-  map.put("name","SquareProgress");
+  map.put("name","FoldingActivity");
   map.put("detail","try");
-  map.put("subname","to Square");
+  map.put("subname","to Folding");
   enhanceList.add(map);
   map=new HashMap<>();
   map.put("name","CircularBar");
@@ -82,7 +82,7 @@ case 6:
 BasicUtils.sendIntent(getActivity(),PhotoViewActivity.class);
 break;
 case 7:
-BasicUtils.sendIntent(getActivity(),SquareProgressBarActivity.class);
+BasicUtils.sendIntent(getActivity(),FoldingActivitys.class);
 break;
 case 8:
 BasicUtils.sendIntent(getActivity(),CircularBarActivity.class);

@@ -1,0 +1,36 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.folding_drawer_activity_drawer);
+  mTitle=mDrawerTitle=getTitle();
+  mAnimalTitles=getResources().getStringArray(R.array.items_name);
+  mDrawerLayout=(FoldingDrawerLayout)findViewById(R.id.drawer_layout);
+  mDrawerList=(ListView)findViewById(R.id.left_drawer);
+  mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,GravityCompat.START);
+  mDrawerList.setAdapter(new ArrayAdapter<String>(this,R.layout.left_menu_layout,mAnimalTitles));
+  mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+  mItemSelectedListener=new ItemSelectedListener();
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  getSupportActionBar().setHomeButtonEnabled(true);
+  mDrawerToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.drawable.ic_drawer,R.string.drawer_open,R.string.drawer_close){
+    @SuppressLint("NewApi") public void onDrawerClosed(    View view){
+      getSupportActionBar().setTitle(mTitle);
+      if (IS_HONEYCOMB) {
+        invalidateOptionsMenu();
+      }
+    }
+    public void onDrawerSlide(    View drawerView,    float slideOffset){
+    }
+    @SuppressLint("NewApi") public void onDrawerOpened(    View drawerView){
+      getSupportActionBar().setTitle(mDrawerTitle);
+      if (IS_HONEYCOMB) {
+        invalidateOptionsMenu();
+      }
+    }
+  }
+;
+  mDrawerLayout.setDrawerListener(mDrawerToggle);
+  if (savedInstanceState == null) {
+    selectItem(0);
+  }
+  HandlerUtils.sendMessageHandlerDelay(getNumHandler,0,1000);
+}

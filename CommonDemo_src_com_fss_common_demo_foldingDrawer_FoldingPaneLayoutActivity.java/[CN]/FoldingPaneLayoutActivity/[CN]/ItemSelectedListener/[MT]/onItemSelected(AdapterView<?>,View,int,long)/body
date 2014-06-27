@@ -1,0 +1,4 @@
+{
+  int mNumberOfFolds=Integer.parseInt(parent.getItemAtPosition(pos).toString());
+  mPaneLayout.getFoldingLayout().setNumberOfFolds(mNumberOfFolds);
+}
