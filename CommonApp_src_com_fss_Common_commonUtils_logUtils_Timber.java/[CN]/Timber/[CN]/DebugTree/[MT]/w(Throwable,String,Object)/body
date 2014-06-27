@@ -1,0 +1,3 @@
+{
+  throwShade(Log.WARN,formatString(message,args),t);
+}

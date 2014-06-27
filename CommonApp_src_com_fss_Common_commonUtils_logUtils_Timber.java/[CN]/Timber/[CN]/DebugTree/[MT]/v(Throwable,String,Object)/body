@@ -1,0 +1,3 @@
+{
+  throwShade(Log.VERBOSE,formatString(message,args),t);
+}

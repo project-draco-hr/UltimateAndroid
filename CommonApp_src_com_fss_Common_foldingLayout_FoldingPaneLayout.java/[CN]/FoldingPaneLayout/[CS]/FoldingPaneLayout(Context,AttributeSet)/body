@@ -1,4 +1,0 @@
-{
-  this(context,attrs,0);
-  initView(context,attrs);
-}
