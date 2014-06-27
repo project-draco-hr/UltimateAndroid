@@ -1,0 +1,4 @@
+HoloCircularProgressBar progressBar
+Animator.AnimatorListener listener
+float progress
+int duration

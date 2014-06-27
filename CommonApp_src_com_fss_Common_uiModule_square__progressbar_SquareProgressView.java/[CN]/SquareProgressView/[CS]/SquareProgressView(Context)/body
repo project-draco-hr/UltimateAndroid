@@ -1,0 +1,17 @@
+{
+  super(context);
+  progressBarPaint=new Paint();
+  progressBarPaint.setColor(context.getResources().getColor(android.R.color.holo_green_dark));
+  progressBarPaint.setStrokeWidth(CalculationUtil.convertDpToPx(widthInDp,getContext()));
+  progressBarPaint.setAntiAlias(true);
+  progressBarPaint.setStyle(Style.STROKE);
+  outlinePaint=new Paint();
+  outlinePaint.setColor(context.getResources().getColor(android.R.color.black));
+  outlinePaint.setStrokeWidth(1);
+  outlinePaint.setAntiAlias(true);
+  outlinePaint.setStyle(Style.STROKE);
+  textPaint=new Paint();
+  textPaint.setColor(context.getResources().getColor(android.R.color.black));
+  textPaint.setAntiAlias(true);
+  textPaint.setStyle(Style.STROKE);
+}

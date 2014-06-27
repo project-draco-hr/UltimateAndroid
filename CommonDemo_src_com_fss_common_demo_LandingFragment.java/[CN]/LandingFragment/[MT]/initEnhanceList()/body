@@ -34,6 +34,16 @@
   map.put("detail","try");
   map.put("subname","to Photoview");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","SquareProgress");
+  map.put("detail","try");
+  map.put("subname","to Square");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","CircularBar");
+  map.put("detail","try");
+  map.put("subname","to CircularBar");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -70,6 +80,12 @@ BasicUtils.sendIntent(getActivity(),FlipViewActivity.class);
 break;
 case 6:
 BasicUtils.sendIntent(getActivity(),PhotoViewActivity.class);
+break;
+case 7:
+BasicUtils.sendIntent(getActivity(),SquareProgressBarActivity.class);
+break;
+case 8:
+BasicUtils.sendIntent(getActivity(),CircularBarActivity.class);
 break;
 }
 }

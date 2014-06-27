@@ -1,0 +1,4 @@
+{
+  this.percentSettings=percentSettings;
+  this.invalidate();
+}
