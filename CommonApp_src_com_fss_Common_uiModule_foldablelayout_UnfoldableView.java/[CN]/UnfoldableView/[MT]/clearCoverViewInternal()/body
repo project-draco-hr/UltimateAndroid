@@ -1,0 +1,11 @@
+{
+  if (mCoverView == null)   return;
+  mCoverHolderLayout.clearView();
+  mCoverViewParams.width=mCoverViewParamWidth;
+  mCoverViewParams.height=mCoverViewParamHeight;
+  switchViews(mCoverPlaceHolderView,mCoverView,mCoverViewParams);
+  mCoverView=null;
+  mCoverViewParams=null;
+  mCoverViewPosition=null;
+  mCoverPlaceHolderView=null;
+}

@@ -1,0 +1,4 @@
+{
+  mExtrenalVisibility=visibility;
+  applyVisibility();
+}

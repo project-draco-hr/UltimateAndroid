@@ -1,0 +1,8 @@
+{
+  if (mUnfoldableView != null && (mUnfoldableView.isUnfolded() || mUnfoldableView.isUnfolding())) {
+    mUnfoldableView.foldBack();
+  }
+ else {
+    super.onBackPressed();
+  }
+}

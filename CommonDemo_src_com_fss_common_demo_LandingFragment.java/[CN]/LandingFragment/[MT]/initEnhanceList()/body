@@ -44,6 +44,16 @@
   map.put("detail","try");
   map.put("subname","to CircularBar");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FoldableList");
+  map.put("detail","try");
+  map.put("subname","to FoldableList");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","UnfoldableList");
+  map.put("detail","try");
+  map.put("subname","to UnfoldableList");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -86,6 +96,12 @@ BasicUtils.sendIntent(getActivity(),FoldingActivitys.class);
 break;
 case 8:
 BasicUtils.sendIntent(getActivity(),CircularBarActivity.class);
+break;
+case 9:
+BasicUtils.sendIntent(getActivity(),FoldableListActivity.class);
+break;
+case 10:
+BasicUtils.sendIntent(getActivity(),UnfoldableDetailsActivity.class);
 break;
 }
 }

@@ -1,0 +1,12 @@
+{
+  float intencity=getShadowIntencity(rotation,gravity);
+  if (intencity > 0) {
+    int alpha=(int)(SHADOW_MAX_ALPHA * intencity);
+    mSolidShadow.setAlpha(alpha);
+    canvas.drawRect(bounds,mSolidShadow);
+  }
+  boolean isDrawGlance=computeGlance(bounds,rotation,gravity);
+  if (isDrawGlance) {
+    canvas.drawBitmap(mGlance,mGlanceFrom,mGlanceTo,mGlancePaint);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  mGestureDetector=new GestureDetector(context,this);
+  mAnimator=ObjectAnimator.ofFloat(this,"foldRotation",0);
+  mMinDistanceBeforeScroll=ViewConfiguration.get(context).getScaledPagingTouchSlop();
+  mFoldShading=new SimpleFoldShading();
+}

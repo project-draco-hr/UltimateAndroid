@@ -1,0 +1,4 @@
+{
+  setScaleX(scale);
+  setScaleY(scale);
+}

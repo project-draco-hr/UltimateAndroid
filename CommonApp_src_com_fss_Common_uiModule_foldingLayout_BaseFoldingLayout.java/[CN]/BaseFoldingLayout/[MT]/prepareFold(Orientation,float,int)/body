@@ -1,0 +1,57 @@
+{
+  mSrc=new float[NUM_OF_POLY_POINTS];
+  mDst=new float[NUM_OF_POLY_POINTS];
+  mDstRect=new Rect();
+  mFoldFactor=0;
+  mPreviousFoldFactor=0;
+  mIsFoldPrepared=false;
+  mSolidShadow=new Paint();
+  mGradientShadow=new Paint();
+  mOrientation=orientation;
+  mIsHorizontal=(orientation == Orientation.HORIZONTAL);
+  if (mIsHorizontal) {
+    mShadowLinearGradient=new LinearGradient(0,0,SHADING_FACTOR,0,Color.BLACK,Color.TRANSPARENT,TileMode.CLAMP);
+  }
+ else {
+    mShadowLinearGradient=new LinearGradient(0,0,0,SHADING_FACTOR,Color.BLACK,Color.TRANSPARENT,TileMode.CLAMP);
+  }
+  mGradientShadow.setStyle(Style.FILL);
+  mGradientShadow.setShader(mShadowLinearGradient);
+  mShadowGradientMatrix=new Matrix();
+  mAnchorFactor=anchorFactor;
+  mNumberOfFolds=numberOfFolds;
+  mOriginalWidth=getMeasuredWidth();
+  mOriginalHeight=getMeasuredHeight();
+  mFoldRectArray=new Rect[mNumberOfFolds];
+  mMatrix=new Matrix[mNumberOfFolds];
+  for (int x=0; x < mNumberOfFolds; x++) {
+    mMatrix[x]=new Matrix();
+  }
+  int h=mOriginalHeight;
+  int w=mOriginalWidth;
+  if (Util.IS_JBMR2 && h != 0 && w != 0) {
+    mFullBitmap=Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(mFullBitmap);
+    getChildAt(0).draw(canvas);
+  }
+  int delta=Math.round(mIsHorizontal ? ((float)w) / ((float)mNumberOfFolds) : ((float)h) / ((float)mNumberOfFolds));
+  for (int x=0; x < mNumberOfFolds; x++) {
+    if (mIsHorizontal) {
+      int deltap=(x + 1) * delta > w ? w - x * delta : delta;
+      mFoldRectArray[x]=new Rect(x * delta,0,x * delta + deltap,h);
+    }
+ else {
+      int deltap=(x + 1) * delta > h ? h - x * delta : delta;
+      mFoldRectArray[x]=new Rect(0,x * delta,w,x * delta + deltap);
+    }
+  }
+  if (mIsHorizontal) {
+    mFoldMaxHeight=h;
+    mFoldMaxWidth=delta;
+  }
+ else {
+    mFoldMaxHeight=delta;
+    mFoldMaxWidth=w;
+  }
+  mIsFoldPrepared=true;
+}

@@ -1,0 +1,10 @@
+{
+  mSolidShadow=new Paint();
+  mSolidShadow.setColor(SHADOW_COLOR);
+  mGlance=glance;
+  mGlancePaint=new Paint();
+  mGlancePaint.setDither(true);
+  mGlancePaint.setFilterBitmap(true);
+  mGlanceFrom=new Rect();
+  mGlanceTo=new Rect();
+}

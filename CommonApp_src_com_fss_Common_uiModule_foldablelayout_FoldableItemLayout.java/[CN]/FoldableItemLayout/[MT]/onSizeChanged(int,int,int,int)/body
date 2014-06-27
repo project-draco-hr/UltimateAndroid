@@ -1,0 +1,13 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  mWidth=w;
+  mHeight=h;
+  if (mCacheBitmap != null) {
+    mCacheBitmap.recycle();
+    mCacheBitmap=null;
+  }
+  mCacheBitmap=Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888);
+  mBaseLayout.setCacheCanvas(new Canvas(mCacheBitmap));
+  mTopPart.setCacheBitmap(mCacheBitmap);
+  mBottomPart.setCacheBitmap(mCacheBitmap);
+}
