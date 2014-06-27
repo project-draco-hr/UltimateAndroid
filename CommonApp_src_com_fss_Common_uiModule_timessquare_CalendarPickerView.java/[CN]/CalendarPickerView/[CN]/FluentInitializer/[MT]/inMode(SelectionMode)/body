@@ -1,0 +1,5 @@
+{
+  selectionMode=mode;
+  validateAndUpdate();
+  return this;
+}

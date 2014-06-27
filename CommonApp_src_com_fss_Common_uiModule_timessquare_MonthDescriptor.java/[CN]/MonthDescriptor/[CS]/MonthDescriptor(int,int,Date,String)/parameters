@@ -1,0 +1,4 @@
+int month
+int year
+Date date
+String label

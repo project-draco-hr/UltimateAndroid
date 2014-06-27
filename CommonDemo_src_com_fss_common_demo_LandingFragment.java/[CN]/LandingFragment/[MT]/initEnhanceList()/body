@@ -54,6 +54,11 @@
   map.put("detail","try");
   map.put("subname","to UnfoldableList");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","TimeSquare");
+  map.put("detail","try");
+  map.put("subname","to TimeSquare");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -102,6 +107,9 @@ BasicUtils.sendIntent(getActivity(),FoldableListActivity.class);
 break;
 case 10:
 BasicUtils.sendIntent(getActivity(),UnfoldableDetailsActivity.class);
+break;
+case 11:
+BasicUtils.sendIntent(getActivity(),CalendarSquareActivity.class);
 break;
 }
 }

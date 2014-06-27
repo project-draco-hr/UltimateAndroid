@@ -1,0 +1,4 @@
+{
+  isHighlighted=highlighted;
+  refreshDrawableState();
+}

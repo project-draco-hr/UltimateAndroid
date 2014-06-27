@@ -1,0 +1,3 @@
+{
+  return dateConfiguredListener == null || dateConfiguredListener.isDateSelectable(date);
+}

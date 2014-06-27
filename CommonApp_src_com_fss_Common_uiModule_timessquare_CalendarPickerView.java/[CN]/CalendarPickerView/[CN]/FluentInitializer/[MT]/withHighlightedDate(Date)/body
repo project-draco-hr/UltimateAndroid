@@ -1,0 +1,3 @@
+{
+  return withHighlightedDates(Arrays.asList(date));
+}
