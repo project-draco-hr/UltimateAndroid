@@ -59,6 +59,11 @@
   map.put("detail","try");
   map.put("subname","to TimeSquare");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FaceCrop");
+  map.put("detail","try");
+  map.put("subname","to FaceCrop");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -110,6 +115,9 @@ BasicUtils.sendIntent(getActivity(),UnfoldableDetailsActivity.class);
 break;
 case 11:
 BasicUtils.sendIntent(getActivity(),CalendarSquareActivity.class);
+break;
+case 12:
+BasicUtils.sendIntent(getActivity(),FaceCropActivity.class);
 break;
 }
 }
