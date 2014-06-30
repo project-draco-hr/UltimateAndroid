@@ -69,6 +69,11 @@
   map.put("detail","try");
   map.put("subname","to KenBurns");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Discroll");
+  map.put("detail","try");
+  map.put("subname","to Discroll");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -126,6 +131,9 @@ BasicUtils.sendIntent(getActivity(),FaceCropActivity.class);
 break;
 case 13:
 BasicUtils.sendIntent(getActivity(),KenBurnsViewActivity.class);
+break;
+case 14:
+BasicUtils.sendIntent(getActivity(),DiscrollActivity.class);
 break;
 }
 }

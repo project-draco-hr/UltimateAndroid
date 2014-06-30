@@ -1,0 +1,10 @@
+{
+  super.onDraw(canvas);
+  makeAndMeasurePath();
+  if (!isInEditMode()) {
+    float length=mPathMeasure.getLength();
+    PathEffect effect=new DashPathEffect(new float[]{length,length},length * (1 - mRatio));
+    mPaint.setPathEffect(effect);
+  }
+  canvas.drawPath(mPath,mPaint);
+}
