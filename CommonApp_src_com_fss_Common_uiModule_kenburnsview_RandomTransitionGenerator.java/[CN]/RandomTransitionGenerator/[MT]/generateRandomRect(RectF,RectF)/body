@@ -1,0 +1,24 @@
+{
+  float drawableRatio=MathUtils.getRectRatio(drawableBounds);
+  float viewportRectRatio=MathUtils.getRectRatio(viewportRect);
+  RectF maxCrop;
+  if (drawableRatio > viewportRectRatio) {
+    float r=(drawableBounds.height() / viewportRect.height()) * viewportRect.width();
+    float b=drawableBounds.height();
+    maxCrop=new RectF(0,0,r,b);
+  }
+ else {
+    float r=drawableBounds.width();
+    float b=(drawableBounds.width() / viewportRect.width()) * viewportRect.height();
+    maxCrop=new RectF(0,0,r,b);
+  }
+  float randomFloat=MathUtils.truncate(mRandom.nextFloat(),2);
+  float factor=MIN_RECT_FACTOR + ((1 - MIN_RECT_FACTOR) * randomFloat);
+  float width=factor * maxCrop.width();
+  float height=factor * maxCrop.height();
+  int widthDiff=(int)(drawableBounds.width() - width);
+  int heightDiff=(int)(drawableBounds.height() - height);
+  int left=widthDiff > 0 ? mRandom.nextInt(widthDiff) : 0;
+  int top=heightDiff > 0 ? mRandom.nextInt(heightDiff) : 0;
+  return new RectF(left,top,left + width,top + height);
+}

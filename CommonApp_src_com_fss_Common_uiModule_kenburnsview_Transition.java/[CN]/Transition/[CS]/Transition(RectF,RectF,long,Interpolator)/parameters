@@ -1,0 +1,4 @@
+RectF srcRect
+RectF dstRect
+long duration
+Interpolator interpolator

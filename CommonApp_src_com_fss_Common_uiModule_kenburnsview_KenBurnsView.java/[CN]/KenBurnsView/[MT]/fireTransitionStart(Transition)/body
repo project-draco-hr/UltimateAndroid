@@ -1,0 +1,5 @@
+{
+  if (mTransitionListener != null && transition != null) {
+    mTransitionListener.onTransitionStart(transition);
+  }
+}
