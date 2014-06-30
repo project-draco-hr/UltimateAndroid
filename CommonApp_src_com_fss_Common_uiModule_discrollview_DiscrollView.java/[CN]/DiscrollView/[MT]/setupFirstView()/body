@@ -1,0 +1,6 @@
+{
+  View first=mContent.getChildAt(0);
+  if (first != null) {
+    first.getLayoutParams().height=getHeight();
+  }
+}

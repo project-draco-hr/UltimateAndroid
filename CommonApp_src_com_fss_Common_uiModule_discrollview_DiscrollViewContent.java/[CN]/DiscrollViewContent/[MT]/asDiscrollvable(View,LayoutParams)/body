@@ -1,0 +1,15 @@
+{
+  if (!isDiscrollvable(lp)) {
+    return child;
+  }
+  DiscrollvableView discrollvableChild=new DiscrollvableView(getContext());
+  discrollvableChild.setDiscrollveAlpha(lp.mDiscrollveAlpha);
+  discrollvableChild.setDiscrollveTranslation(lp.mDiscrollveTranslation);
+  discrollvableChild.setDiscrollveScaleX(lp.mDiscrollveScaleX);
+  discrollvableChild.setDiscrollveScaleY(lp.mDiscrollveScaleY);
+  discrollvableChild.setDiscrollveThreshold(lp.mDiscrollveThreshold);
+  discrollvableChild.setDiscrollveFromBgColor(lp.mDiscrollveFromBgColor);
+  discrollvableChild.setDiscrollveToBgColor(lp.mDiscrollveToBgColor);
+  discrollvableChild.addView(child);
+  return discrollvableChild;
+}
