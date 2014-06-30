@@ -1,0 +1,5 @@
+{
+  mMatrix.reset();
+  applyScaleOnMatrix();
+  setCurrentImageMatrix();
+}

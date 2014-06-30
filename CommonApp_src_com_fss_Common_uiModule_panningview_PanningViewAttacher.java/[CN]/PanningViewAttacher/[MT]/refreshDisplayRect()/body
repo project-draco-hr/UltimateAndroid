@@ -1,0 +1,4 @@
+{
+  mDisplayRect.set(0,0,getDrawableIntrinsicWidth(),getDrawableIntrinsicHeight());
+  mMatrix.mapRect(mDisplayRect);
+}
