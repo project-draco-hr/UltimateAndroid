@@ -94,6 +94,16 @@
   map.put("detail","try");
   map.put("subname","to ViewTabs");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Rebound");
+  map.put("detail","try");
+  map.put("subname","Rebound");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ReboundSimple");
+  map.put("detail","try");
+  map.put("subname","Rebound");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -166,6 +176,12 @@ BasicUtils.sendIntent(getActivity(),ProgressbarWheelActivity.class);
 break;
 case 18:
 BasicUtils.sendIntent(getActivity(),ViewpagerSlidingTabsActivity.class);
+break;
+case 19:
+BasicUtils.sendIntent(getActivity(),ReboundActivity.class);
+break;
+case 20:
+BasicUtils.sendIntent(getActivity(),ReboundActivitySimple.class);
 break;
 }
 }

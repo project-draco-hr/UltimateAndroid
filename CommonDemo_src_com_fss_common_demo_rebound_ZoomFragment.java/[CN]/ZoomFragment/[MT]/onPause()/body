@@ -1,0 +1,4 @@
+{
+  super.onPause();
+  mScaleSpring.removeListener(mSpringListener);
+}
