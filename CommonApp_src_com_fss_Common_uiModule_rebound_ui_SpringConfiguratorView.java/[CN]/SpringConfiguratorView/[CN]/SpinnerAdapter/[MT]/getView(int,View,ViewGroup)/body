@@ -1,0 +1,16 @@
+{
+  TextView textView;
+  if (convertView == null) {
+    textView=new TextView(mContext);
+    AbsListView.LayoutParams params=new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+    textView.setLayoutParams(params);
+    int twelvePx=dpToPx(12,getResources());
+    textView.setPadding(twelvePx,twelvePx,twelvePx,twelvePx);
+    textView.setTextColor(mTextColor);
+  }
+ else {
+    textView=(TextView)convertView;
+  }
+  textView.setText(mStrings.get(position));
+  return textView;
+}

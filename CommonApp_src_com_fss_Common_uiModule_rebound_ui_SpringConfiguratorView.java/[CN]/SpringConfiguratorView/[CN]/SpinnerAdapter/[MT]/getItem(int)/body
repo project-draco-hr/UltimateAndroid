@@ -1,0 +1,3 @@
+{
+  return mStrings.get(position);
+}

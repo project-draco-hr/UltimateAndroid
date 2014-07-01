@@ -1,0 +1,4 @@
+{
+  mRestSpeedThreshold=restSpeedThreshold;
+  return this;
+}

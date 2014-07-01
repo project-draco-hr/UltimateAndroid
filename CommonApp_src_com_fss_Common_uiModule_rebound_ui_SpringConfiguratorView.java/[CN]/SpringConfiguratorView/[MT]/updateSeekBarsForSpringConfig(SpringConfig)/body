@@ -1,0 +1,10 @@
+{
+  float tension=(float)OrigamiValueConverter.origamiValueFromTension(springConfig.tension);
+  float tensionRange=MAX_TENSION - MIN_TENSION;
+  int scaledTension=Math.round(((tension - MIN_TENSION) * MAX_SEEKBAR_VAL) / tensionRange);
+  float friction=(float)OrigamiValueConverter.origamiValueFromFriction(springConfig.friction);
+  float frictionRange=MAX_FRICTION - MIN_FRICTION;
+  int scaledFriction=Math.round(((friction - MIN_FRICTION) * MAX_SEEKBAR_VAL) / frictionRange);
+  mTensionSeekBar.setProgress(scaledTension);
+  mFrictionSeekBar.setProgress(scaledFriction);
+}

@@ -1,0 +1,6 @@
+{
+  if (springConfig == null) {
+    throw new IllegalArgumentException("springConfig is required");
+  }
+  return mSpringConfigMap.remove(springConfig) != null;
+}

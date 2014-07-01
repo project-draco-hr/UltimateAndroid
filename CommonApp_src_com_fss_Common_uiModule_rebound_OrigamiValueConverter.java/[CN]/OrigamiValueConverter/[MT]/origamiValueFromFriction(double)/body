@@ -1,0 +1,3 @@
+{
+  return friction == 0 ? 0 : (friction - 25.0) / 3.0 + 8.0;
+}

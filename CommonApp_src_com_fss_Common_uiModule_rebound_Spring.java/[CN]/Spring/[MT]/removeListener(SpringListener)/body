@@ -1,0 +1,7 @@
+{
+  if (listenerToRemove == null) {
+    throw new IllegalArgumentException("listenerToRemove is required");
+  }
+  mListeners.removeListener(listenerToRemove);
+  return this;
+}
