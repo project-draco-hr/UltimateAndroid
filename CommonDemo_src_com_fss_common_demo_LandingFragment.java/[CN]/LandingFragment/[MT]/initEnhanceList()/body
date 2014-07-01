@@ -89,6 +89,11 @@
   map.put("detail","try");
   map.put("subname","to Wheel");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ViewTabs");
+  map.put("detail","try");
+  map.put("subname","to ViewTabs");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -158,6 +163,9 @@ BasicUtils.sendIntent(getActivity(),ParallaxScrollActivity.class);
 break;
 case 17:
 BasicUtils.sendIntent(getActivity(),ProgressbarWheelActivity.class);
+break;
+case 18:
+BasicUtils.sendIntent(getActivity(),ViewpagerSlidingTabsActivity.class);
 break;
 }
 }
