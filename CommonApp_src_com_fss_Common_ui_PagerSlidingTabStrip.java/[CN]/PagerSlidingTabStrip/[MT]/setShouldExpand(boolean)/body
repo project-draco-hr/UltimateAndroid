@@ -1,0 +1,4 @@
+{
+  this.shouldExpand=shouldExpand;
+  requestLayout();
+}
