@@ -1,0 +1,55 @@
+{
+  List<Pair<Integer,T>> visibleViews=new ArrayList<Pair<Integer,T>>();
+  List<Integer> insertedPositions=new ArrayList<Integer>();
+  List<Integer> insertedBelowPositions=new ArrayList<Integer>();
+  int scrollDistance=0;
+  int numInsertedAbove=0;
+  for (  Pair<Integer,T> pair : indexItemPairs) {
+    if (getAbsListView().getFirstVisiblePosition() > pair.first) {
+      int index=pair.first;
+      for (      int insertedPosition : insertedPositions) {
+        if (index >= insertedPosition) {
+          index++;
+        }
+      }
+      mInsertable.add(index,pair.second);
+      insertedPositions.add(index);
+      numInsertedAbove++;
+      if (mShouldAnimateDown) {
+        View view=getView(pair.first,null,getAbsListView());
+        view.measure(View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED),View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED));
+        scrollDistance-=view.getMeasuredHeight();
+      }
+    }
+ else     if (getAbsListView().getLastVisiblePosition() >= pair.first) {
+      int index=pair.first;
+      for (      int insertedPosition : insertedPositions) {
+        if (index >= insertedPosition) {
+          index++;
+        }
+      }
+      Pair<Integer,T> newPair=new Pair<Integer,T>(index,pair.second);
+      visibleViews.add(newPair);
+    }
+ else {
+      int index=pair.first;
+      for (      int insertedPosition : insertedPositions) {
+        if (index >= insertedPosition) {
+          index++;
+        }
+      }
+      for (      int queuedPosition : insertedBelowPositions) {
+        if (index >= queuedPosition) {
+          index++;
+        }
+      }
+      insertedBelowPositions.add(index);
+      mInsertable.add(index,pair.second);
+    }
+  }
+  if (mShouldAnimateDown) {
+    getAbsListView().smoothScrollBy(scrollDistance,(int)(mScrolldownAnimationDurationMs * numInsertedAbove));
+  }
+  mInsertQueue.insert(visibleViews);
+  ((ListView)getAbsListView()).setSelectionFromTop(getAbsListView().getFirstVisiblePosition() + numInsertedAbove,getAbsListView().getChildAt(0).getTop());
+}

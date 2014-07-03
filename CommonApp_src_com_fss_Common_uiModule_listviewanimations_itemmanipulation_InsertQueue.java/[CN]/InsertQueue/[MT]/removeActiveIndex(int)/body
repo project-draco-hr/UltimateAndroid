@@ -1,0 +1,12 @@
+{
+  boolean found=false;
+  for (Iterator<AtomicInteger> iterator=mActiveIndexes.iterator(); iterator.hasNext() && !found; ) {
+    if (iterator.next().get() == index) {
+      iterator.remove();
+      found=true;
+    }
+  }
+  if (mActiveIndexes.isEmpty()) {
+    insertPending();
+  }
+}

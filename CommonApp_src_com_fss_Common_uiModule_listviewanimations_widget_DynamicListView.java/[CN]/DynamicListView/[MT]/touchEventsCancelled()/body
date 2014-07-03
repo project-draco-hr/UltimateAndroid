@@ -1,0 +1,14 @@
+{
+  View mobileView=getViewForId(mMobileItemId);
+  if (mCellIsMobile) {
+    mAboveItemId=INVALID_ID;
+    mMobileItemId=INVALID_ID;
+    mBelowItemId=INVALID_ID;
+    mobileView.setVisibility(VISIBLE);
+    mHoverCell=null;
+    invalidate();
+  }
+  mCellIsMobile=false;
+  mIsMobileScrolling=false;
+  mActivePointerId=INVALID_POINTER_ID;
+}

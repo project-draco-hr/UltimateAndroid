@@ -1,0 +1,7 @@
+{
+  if (this == obj)   return true;
+  if (obj == null)   return false;
+  if (((Object)this).getClass() != obj.getClass())   return false;
+  PendingDismissData other=(PendingDismissData)obj;
+  return position == other.position;
+}

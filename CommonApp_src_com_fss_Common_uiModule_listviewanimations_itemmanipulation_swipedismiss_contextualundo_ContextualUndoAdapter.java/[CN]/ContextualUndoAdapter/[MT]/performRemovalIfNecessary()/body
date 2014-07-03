@@ -1,0 +1,18 @@
+{
+  if (mCurrentRemovedId == -1) {
+    return;
+  }
+  ContextualUndoView currentRemovedView=getCurrentRemovedView(mCurrentRemovedView,mCurrentRemovedId);
+  if (currentRemovedView != null) {
+    ValueAnimator animator=ValueAnimator.ofInt(currentRemovedView.getHeight(),1).setDuration(ANIMATION_DURATION);
+    RemoveViewAnimatorListenerAdapter listener=new RemoveViewAnimatorListenerAdapter(currentRemovedView,mCurrentRemovedId);
+    RemoveViewAnimatorUpdateListener updateListener=new RemoveViewAnimatorUpdateListener(listener);
+    animator.addListener(listener);
+    animator.addUpdateListener(updateListener);
+    animator.start();
+  }
+ else {
+    deleteItemGivenId(mCurrentRemovedId);
+  }
+  clearCurrentRemovedView();
+}

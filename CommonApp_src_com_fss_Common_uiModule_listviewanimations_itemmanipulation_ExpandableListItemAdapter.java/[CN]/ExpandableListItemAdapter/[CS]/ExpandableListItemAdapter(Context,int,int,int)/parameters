@@ -1,0 +1,4 @@
+Context context
+int layoutResId
+int titleParentResId
+int contentParentResId

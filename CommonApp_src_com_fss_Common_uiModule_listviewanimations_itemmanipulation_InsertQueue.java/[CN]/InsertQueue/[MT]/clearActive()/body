@@ -1,0 +1,4 @@
+{
+  mActiveIndexes.clear();
+  insertPending();
+}

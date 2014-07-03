@@ -1,0 +1,11 @@
+{
+  mCurrentRemovedId=getItemId(position);
+  for (int i=0; i < getAbsListView().getChildCount(); i++) {
+    AbsListView absListView=getAbsListView();
+    View childView=absListView.getChildAt(i);
+    int positionForView=AdapterViewUtil.getPositionForView(absListView,childView);
+    if (positionForView == position) {
+      swipeView(childView,positionForView);
+    }
+  }
+}

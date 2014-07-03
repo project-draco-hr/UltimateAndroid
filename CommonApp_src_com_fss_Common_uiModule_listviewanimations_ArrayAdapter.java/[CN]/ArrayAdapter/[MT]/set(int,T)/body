@@ -1,0 +1,5 @@
+{
+  T result=mItems.set(location,object);
+  notifyDataSetChanged();
+  return result;
+}

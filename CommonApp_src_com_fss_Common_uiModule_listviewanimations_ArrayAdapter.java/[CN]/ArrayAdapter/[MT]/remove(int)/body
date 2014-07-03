@@ -1,0 +1,5 @@
+{
+  T result=mItems.remove(location);
+  notifyDataSetChanged();
+  return result;
+}

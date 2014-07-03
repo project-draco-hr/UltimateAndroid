@@ -1,0 +1,10 @@
+{
+  mLastMovedToIndex=indexTwo;
+  ListAdapter adapter=getAdapter();
+  if (adapter instanceof HeaderViewListAdapter) {
+    adapter=((HeaderViewListAdapter)adapter).getWrappedAdapter();
+  }
+  if (adapter instanceof Swappable) {
+    ((Swappable)adapter).swapItems(indexOne - getHeaderViewsCount(),indexTwo - getHeaderViewsCount());
+  }
+}

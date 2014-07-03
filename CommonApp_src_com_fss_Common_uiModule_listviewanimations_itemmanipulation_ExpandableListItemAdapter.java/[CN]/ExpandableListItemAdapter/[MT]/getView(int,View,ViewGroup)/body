@@ -1,0 +1,38 @@
+{
+  ViewGroup view=(ViewGroup)convertView;
+  ViewHolder viewHolder;
+  if (view == null) {
+    view=createView(parent);
+    viewHolder=new ViewHolder();
+    viewHolder.titleParent=(ViewGroup)view.findViewById(mTitleParentResId);
+    viewHolder.contentParent=(ViewGroup)view.findViewById(mContentParentResId);
+    view.setTag(viewHolder);
+  }
+ else {
+    viewHolder=(ViewHolder)view.getTag();
+  }
+  View titleView=getTitleView(position,viewHolder.titleView,viewHolder.titleParent);
+  if (titleView != viewHolder.titleView) {
+    viewHolder.titleParent.removeAllViews();
+    viewHolder.titleParent.addView(titleView);
+    if (mActionViewResId == 0) {
+      view.setOnClickListener(new TitleViewOnClickListener(viewHolder.contentParent));
+    }
+ else {
+      view.findViewById(mActionViewResId).setOnClickListener(new TitleViewOnClickListener(viewHolder.contentParent));
+    }
+  }
+  viewHolder.titleView=titleView;
+  View contentView=getContentView(position,viewHolder.contentView,viewHolder.contentParent);
+  if (contentView != viewHolder.contentView) {
+    viewHolder.contentParent.removeAllViews();
+    viewHolder.contentParent.addView(contentView);
+  }
+  viewHolder.contentView=contentView;
+  viewHolder.contentParent.setVisibility(mExpandedIds.contains(getItemId(position)) ? View.VISIBLE : View.GONE);
+  viewHolder.contentParent.setTag(getItemId(position));
+  LayoutParams layoutParams=viewHolder.contentParent.getLayoutParams();
+  layoutParams.height=LayoutParams.WRAP_CONTENT;
+  viewHolder.contentParent.setLayoutParams(layoutParams);
+  return view;
+}
