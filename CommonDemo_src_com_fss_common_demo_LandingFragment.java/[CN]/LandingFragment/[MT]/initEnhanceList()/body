@@ -104,6 +104,11 @@
   map.put("detail","try");
   map.put("subname","Rebound");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ListAnim");
+  map.put("detail","try");
+  map.put("subname","ListAnim");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -182,6 +187,9 @@ BasicUtils.sendIntent(getActivity(),ReboundActivity.class);
 break;
 case 20:
 BasicUtils.sendIntent(getActivity(),ReboundActivitySimple.class);
+break;
+case 21:
+BasicUtils.sendIntent(getActivity(),ListAnimationActivity.class);
 break;
 }
 }

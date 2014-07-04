@@ -1,0 +1,21 @@
+{
+  super.onActivityResult(requestCode,resultCode,data);
+  if (resultCode == RESULT_OK) {
+    Toast.makeText(this,"Thank you!",Toast.LENGTH_LONG).show();
+    new Thread(){
+      @Override public void run(){
+        try {
+          JSONObject json=new JSONObject(data.getStringExtra("INAPP_PURCHASE_DATA"));
+          mService.consumePurchase(3,getPackageName(),json.getString("purchaseToken"));
+        }
+ catch (        JSONException e) {
+          e.printStackTrace();
+        }
+catch (        RemoteException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+.start();
+  }
+}
