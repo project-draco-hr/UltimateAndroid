@@ -6,12 +6,4 @@
   getSupportFragmentManager().beginTransaction().add(R.id.main_content_frame,mContent).commit();
   initViews();
   initShimmerTextView();
-  new Thread(){
-    @Override public void run(){
-      super.run();
-      Logs.d("11111");
-      HttpsUtils.sendWithSSlSocketWithCrt(MainActivity.this,"ca.crt","https://xxx.xxx");
-    }
-  }
-.start();
 }
