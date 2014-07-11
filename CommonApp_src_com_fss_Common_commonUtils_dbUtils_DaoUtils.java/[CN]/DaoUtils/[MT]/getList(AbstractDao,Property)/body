@@ -1,0 +1,5 @@
+{
+  isLog();
+  List indexFavList=dao.queryBuilder().orderAsc(orderProperty).list();
+  return indexFavList;
+}
