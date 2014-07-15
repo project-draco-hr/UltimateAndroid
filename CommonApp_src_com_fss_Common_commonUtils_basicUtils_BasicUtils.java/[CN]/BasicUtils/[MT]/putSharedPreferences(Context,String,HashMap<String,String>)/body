@@ -1,6 +1,6 @@
 {
   SharedPreferences.Editor sharedDate=context.getSharedPreferences(fileName,0).edit();
-  if (BasicUtils.judgeIfNull(hashMap)) {
+  if (BasicUtils.judgeNotNull(hashMap)) {
     Iterator iterator=hashMap.entrySet().iterator();
     while (iterator.hasNext()) {
       Map.Entry entry=(Map.Entry)iterator.next();
