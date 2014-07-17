@@ -5,12 +5,11 @@
   actionBar.setDisplayHomeAsUpEnabled(true);
   gridView=(DynamicGridView)findViewById(R.id.dynamic_grid_view);
   gridView.setAdapter(new CheeseDynamicAdapter(this,new ArrayList<String>(Arrays.asList(Cheeses.sCheeseStrings)),3));
-  gridView.setOnTouchListener(new View.OnTouchListener(){
-    @Override public boolean onTouch(    View v,    MotionEvent event){
-      if (gridView.isEditMode()) {
-        gridView.stopEditMode();
-      }
-      return false;
+  gridView.setVerticalScrollBarEnabled(false);
+  gridView.setEnabled(false);
+  gridView.setOnDropListener(new DynamicGridView.OnDropListener(){
+    @Override public void onActionDrop(){
+      gridView.stopEditMode();
     }
   }
 );
