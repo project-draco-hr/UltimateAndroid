@@ -114,6 +114,11 @@
   map.put("detail","try");
   map.put("subname","PullSplash");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Jsoup");
+  map.put("detail","try");
+  map.put("subname","Jsoup");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -198,6 +203,9 @@ BasicUtils.sendIntent(getActivity(),ListAnimationActivity.class);
 break;
 case 22:
 BasicUtils.sendIntent(getActivity(),PullSplashActivity.class);
+break;
+case 23:
+BasicUtils.sendIntent(getActivity(),UtilsDemoActivity.class);
 break;
 }
 }

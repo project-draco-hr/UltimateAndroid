@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.jsoup_activity);
+  ButterKnife.inject(this);
+  new Title().execute();
+  mJsoupTextView.setText(UtilsDemo.TestJsoup());
+}
