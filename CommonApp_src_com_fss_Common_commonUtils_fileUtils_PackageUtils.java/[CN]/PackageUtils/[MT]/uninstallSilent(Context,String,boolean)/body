@@ -1,0 +1,18 @@
+{
+  if (packageName == null || packageName.length() == 0) {
+    return DELETE_FAILED_INVALID_PACKAGE;
+  }
+  StringBuilder command=new StringBuilder().append("LD_LIBRARY_PATH=/vendor/lib:/system/lib pm uninstall").append(isKeepData ? " -k " : " ").append(packageName.replace(" ","\\ "));
+  ShellUtils.CommandResult commandResult=ShellUtils.execCommand(command.toString(),!isSystemApplication(context),true);
+  if (commandResult.successMsg != null && (commandResult.successMsg.contains("Success") || commandResult.successMsg.contains("success"))) {
+    return DELETE_SUCCEEDED;
+  }
+  Log.e(TAG,new StringBuilder().append("uninstallSilent successMsg:").append(commandResult.successMsg).append(", ErrorMsg:").append(commandResult.errorMsg).toString());
+  if (commandResult.errorMsg == null) {
+    return DELETE_FAILED_INTERNAL_ERROR;
+  }
+  if (commandResult.errorMsg.contains("Permission denied")) {
+    return DELETE_FAILED_PERMISSION_DENIED;
+  }
+  return DELETE_FAILED_INTERNAL_ERROR;
+}

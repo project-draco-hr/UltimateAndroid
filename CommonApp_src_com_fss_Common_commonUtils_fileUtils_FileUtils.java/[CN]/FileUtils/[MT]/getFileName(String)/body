@@ -1,0 +1,7 @@
+{
+  if (BasicUtils.judgeNotNull(filePath)) {
+    return filePath;
+  }
+  int filePosi=filePath.lastIndexOf(File.separator);
+  return (filePosi == -1) ? filePath : filePath.substring(filePosi + 1);
+}

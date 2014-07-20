@@ -1,0 +1,14 @@
+{
+  if (BasicUtils.judgeNotNull(filePath)) {
+    return filePath;
+  }
+  int extenPosi=filePath.lastIndexOf(FILE_EXTENSION_SEPARATOR);
+  int filePosi=filePath.lastIndexOf(File.separator);
+  if (filePosi == -1) {
+    return (extenPosi == -1 ? filePath : filePath.substring(0,extenPosi));
+  }
+  if (extenPosi == -1) {
+    return filePath.substring(filePosi + 1);
+  }
+  return (filePosi < extenPosi ? filePath.substring(filePosi + 1,extenPosi) : filePath.substring(filePosi + 1));
+}

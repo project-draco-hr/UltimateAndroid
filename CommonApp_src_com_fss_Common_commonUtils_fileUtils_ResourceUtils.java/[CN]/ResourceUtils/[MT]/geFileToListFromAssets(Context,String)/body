@@ -1,0 +1,20 @@
+{
+  if (context == null || BasicUtils.judgeNotNull(fileName)) {
+    return null;
+  }
+  List<String> fileContent=new ArrayList<String>();
+  try {
+    InputStreamReader in=new InputStreamReader(context.getResources().getAssets().open(fileName));
+    BufferedReader br=new BufferedReader(in);
+    String line;
+    while ((line=br.readLine()) != null) {
+      fileContent.add(line);
+    }
+    br.close();
+    return fileContent;
+  }
+ catch (  IOException e) {
+    e.printStackTrace();
+    return null;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  if (context == null) {
+    return null;
+  }
+  StringBuilder s=new StringBuilder();
+  try {
+    InputStreamReader in=new InputStreamReader(context.getResources().openRawResource(resId));
+    BufferedReader br=new BufferedReader(in);
+    String line;
+    while ((line=br.readLine()) != null) {
+      s.append(line);
+    }
+    return s.toString();
+  }
+ catch (  IOException e) {
+    e.printStackTrace();
+    return null;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  if (sourceArray.length == 0) {
+    throw new IllegalArgumentException("The length of source array must be greater than 0.");
+  }
+  Integer[] array=ObjectUtils.transformIntArray(sourceArray);
+  return getLast(array,value,defaultValue,isCircle);
+}

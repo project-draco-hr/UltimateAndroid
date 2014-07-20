@@ -1,23 +1,10 @@
 {
+  InputStream inputStream=null;
   try {
-    int bytesum=0;
-    int byteread=0;
-    File oldfile=new File(oldPath);
-    if (oldfile.exists()) {
-      InputStream inStream=new FileInputStream(oldPath);
-      FileOutputStream fs=new FileOutputStream(newPath);
-      byte[] buffer=new byte[1444];
-      int length;
-      while ((byteread=inStream.read(buffer)) != -1) {
-        bytesum+=byteread;
-        System.out.println(bytesum);
-        fs.write(buffer,0,byteread);
-      }
-      inStream.close();
-    }
+    inputStream=new FileInputStream(sourceFilePath);
   }
- catch (  Exception e) {
-    System.out.println("??????????????????????????????");
-    e.printStackTrace();
+ catch (  FileNotFoundException e) {
+    throw new RuntimeException("FileNotFoundException occurred. ",e);
   }
+  return writeFile(destFilePath,inputStream);
 }

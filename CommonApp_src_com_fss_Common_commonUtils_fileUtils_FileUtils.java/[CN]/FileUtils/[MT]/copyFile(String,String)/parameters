@@ -1,2 +1,2 @@
-String oldPath
-String newPath
+String sourceFilePath
+String destFilePath
