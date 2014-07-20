@@ -1,5 +1,6 @@
 {
   super.onCreate(savedInstanceState);
+  setTheme(R.style.LandingTheme);
   ActionBar actionBar=getSupportActionBar();
   actionBar.setDisplayHomeAsUpEnabled(true);
   setContentView(R.layout.smooth_progress_bar_activity);
