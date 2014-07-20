@@ -1,0 +1,7 @@
+{
+  TypedArray ta=context.obtainStyledAttributes(attrs,R.styleable.drop_down_list_attr);
+  isDropDownStyle=ta.getBoolean(R.styleable.drop_down_list_attr_isDropDownStyle,false);
+  isOnBottomStyle=ta.getBoolean(R.styleable.drop_down_list_attr_isOnBottomStyle,false);
+  isAutoLoadOnBottom=ta.getBoolean(R.styleable.drop_down_list_attr_isAutoLoadOnBottom,false);
+  ta.recycle();
+}

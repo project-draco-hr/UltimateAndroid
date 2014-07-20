@@ -1,0 +1,4 @@
+{
+  mScroller.forceFinished(true);
+  return true;
+}
