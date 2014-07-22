@@ -1,0 +1,26 @@
+{
+  boolean result;
+  BufferedWriter out=null;
+  try {
+    OutputStream clientStream=client.getOutputStream();
+    out=new BufferedWriter(new OutputStreamWriter(clientStream),8 * 1024);
+    out.write(value);
+    out.write("\n");
+    out.flush();
+    result=true;
+  }
+ catch (  Exception e) {
+    result=false;
+  }
+ finally {
+    if (out != null) {
+      try {
+        out.close();
+      }
+ catch (      IOException e) {
+        result=false;
+      }
+    }
+  }
+  return result;
+}
