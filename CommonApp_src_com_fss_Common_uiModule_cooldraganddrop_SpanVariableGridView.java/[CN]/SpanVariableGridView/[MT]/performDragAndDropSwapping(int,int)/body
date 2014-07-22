@@ -1,6 +1,7 @@
 {
   mPopulating=true;
-  if (from != to) {
+  Logs.d("drag----" + from + "   "+ to+ "   "+ mAdapter.getCount());
+  if (from != to && isLastItemCouldDrag ? true : to != mAdapter.getCount() - 1) {
     final View removedChild=getChildAt(from);
     removedChild.clearAnimation();
     removeViewInLayout(removedChild);
