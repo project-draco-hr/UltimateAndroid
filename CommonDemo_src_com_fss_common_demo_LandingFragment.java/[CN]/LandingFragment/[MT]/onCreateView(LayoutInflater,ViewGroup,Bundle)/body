@@ -4,5 +4,6 @@
   initTitanicView();
   initEnhanceList();
   initViewPager();
+  CryptoUtils.testCrypto(getActivity());
   return mainView;
 }

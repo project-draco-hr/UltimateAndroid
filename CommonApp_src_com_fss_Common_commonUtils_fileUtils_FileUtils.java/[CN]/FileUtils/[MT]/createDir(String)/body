@@ -1,4 +1,5 @@
 {
   File dir=new File(fileName);
+  Logs.d(fileName + "    " + dir.exists());
   if (!dir.exists())   dir.mkdir();
 }
