@@ -1,0 +1,5 @@
+{
+  if (numOfChildViews == 1) {
+    throw new IllegalArgumentException("only one child please");
+  }
+}

@@ -129,6 +129,16 @@
   map.put("detail","try");
   map.put("subname","PassCode");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","GestureTouch");
+  map.put("detail","try");
+  map.put("subname","GestureTouch");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","act_anim");
+  map.put("detail","try");
+  map.put("subname","act_anim");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -222,6 +232,12 @@ BasicUtils.sendIntent(getActivity(),ViewServerActivity.class);
 break;
 case 25:
 BasicUtils.sendIntent(getActivity(),PasscodePreferencesActivity.class);
+break;
+case 26:
+BasicUtils.sendIntent(getActivity(),GestureTouchActivity.class);
+break;
+case 27:
+BasicUtils.sendIntent(getActivity(),ActivityAnimationsActivity.class);
 break;
 }
 }
