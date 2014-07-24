@@ -1,0 +1,4 @@
+{
+  activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+  return displayMetrics.heightPixels;
+}

@@ -1,0 +1,18 @@
+{
+  int screenWidth=getScreenWidth();
+  float pivotX;
+  float pivotY=getScreenHeight() * 0.5f;
+  if (direction == DIRECTION_LEFT) {
+    scrollViewMenu=scrollViewLeftMenu;
+    pivotX=screenWidth * 1.5f;
+  }
+ else {
+    scrollViewMenu=scrollViewRightMenu;
+    pivotX=screenWidth * -0.5f;
+  }
+  ViewHelper.setPivotX(viewActivity,pivotX);
+  ViewHelper.setPivotY(viewActivity,pivotY);
+  ViewHelper.setPivotX(imageViewShadow,pivotX);
+  ViewHelper.setPivotY(imageViewShadow,pivotY);
+  scaleDirection=direction;
+}
