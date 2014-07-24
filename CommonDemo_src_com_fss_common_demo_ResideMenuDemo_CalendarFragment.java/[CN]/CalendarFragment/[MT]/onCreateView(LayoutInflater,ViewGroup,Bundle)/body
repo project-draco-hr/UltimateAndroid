@@ -1,0 +1,6 @@
+{
+  parentView=inflater.inflate(R.layout.resize_menu_calendar,container,false);
+  listView=(ListView)parentView.findViewById(R.id.listView);
+  initView();
+  return parentView;
+}

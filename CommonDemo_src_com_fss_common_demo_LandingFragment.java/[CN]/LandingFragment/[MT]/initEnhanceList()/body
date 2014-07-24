@@ -149,6 +149,16 @@
   map.put("detail","try");
   map.put("subname","card swiped");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ShowCase");
+  map.put("detail","try");
+  map.put("subname","ShowCase");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ListBuddies");
+  map.put("detail","try");
+  map.put("subname","ListBuddies");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -254,6 +264,12 @@ BasicUtils.sendIntent(getActivity(),PullScrollViewActivity.class);
 break;
 case 29:
 BasicUtils.sendIntent(getActivity(),CardsSwipedActivity.class);
+break;
+case 30:
+BasicUtils.sendIntent(getActivity(),ShowCaseSampleActivity.class);
+break;
+case 31:
+BasicUtils.sendIntent(getActivity(),ListBuddiesActivity.class);
 break;
 }
 }
