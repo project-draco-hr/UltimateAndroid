@@ -1,0 +1,44 @@
+{
+  if (getScrollY() == 0) {
+    mState=State.NORMAL;
+    if (isTop) {
+      isTop=false;
+      mTouchDownY=event.getY();
+    }
+  }
+  float deltaY=event.getY() - mTouchDownY;
+  if (deltaY < 0 && mState == State.NORMAL) {
+    mState=State.UP;
+  }
+ else   if (deltaY > 0 && mState == State.NORMAL) {
+    mState=State.DOWN;
+  }
+  if (mState == State.UP) {
+    deltaY=deltaY < 0 ? deltaY : 0;
+    isMoving=false;
+    mEnableTouch=false;
+  }
+ else   if (mState == State.DOWN) {
+    if (getScrollY() <= deltaY) {
+      mEnableTouch=true;
+      isMoving=true;
+    }
+    deltaY=deltaY < 0 ? 0 : deltaY;
+  }
+  if (isMoving) {
+    if (mContentRect.isEmpty()) {
+      mContentRect.set(mContentView.getLeft(),mContentView.getTop(),mContentView.getRight(),mContentView.getBottom());
+    }
+    float headerMoveHeight=deltaY * 0.5f * SCROLL_RATIO;
+    mCurrentTop=(int)(mInitTop + headerMoveHeight);
+    mCurrentBottom=(int)(mInitBottom + headerMoveHeight);
+    float contentMoveHeight=deltaY * SCROLL_RATIO;
+    int headerBottom=mCurrentBottom - mHeaderVisibleHeight;
+    int top=(int)(mContentRect.top + contentMoveHeight);
+    int bottom=(int)(mContentRect.bottom + contentMoveHeight);
+    if (top <= headerBottom) {
+      mContentView.layout(mContentRect.left,top,mContentRect.right,bottom);
+      mHeader.layout(mHeader.getLeft(),mCurrentTop,mHeader.getRight(),mCurrentBottom);
+    }
+  }
+}

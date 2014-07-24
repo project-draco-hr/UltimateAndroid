@@ -1,0 +1,5 @@
+{
+  if (getChildCount() > 0) {
+    mContentView=getChildAt(0);
+  }
+}
