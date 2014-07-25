@@ -1,0 +1,13 @@
+{
+  if (mViewStubGap == null) {
+    mViewStubGap=(ViewStub)findViewById(R.id.gap);
+  }
+  if (mGapView == null) {
+    mGapView=mViewStubGap.inflate();
+  }
+  setLeftListMargin(0);
+  setGapWidth(mGap);
+  if (mGapView != null) {
+    mGapView.setVisibility(View.VISIBLE);
+  }
+}

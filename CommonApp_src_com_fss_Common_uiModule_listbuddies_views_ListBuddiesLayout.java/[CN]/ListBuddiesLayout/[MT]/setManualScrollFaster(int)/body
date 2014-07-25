@@ -1,0 +1,4 @@
+{
+  isManualScrollLeftListFaster=option == 1;
+  return this;
+}
