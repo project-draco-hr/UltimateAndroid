@@ -1,0 +1,4 @@
+{
+  showcaseView.setSingleShot(shotId);
+  return this;
+}

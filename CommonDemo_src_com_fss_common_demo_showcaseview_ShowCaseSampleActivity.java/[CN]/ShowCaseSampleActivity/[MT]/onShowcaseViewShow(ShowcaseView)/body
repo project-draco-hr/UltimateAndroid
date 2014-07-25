@@ -1,0 +1,4 @@
+{
+  dimView(listView);
+  buttonBlocked.setText("button_hide");
+}

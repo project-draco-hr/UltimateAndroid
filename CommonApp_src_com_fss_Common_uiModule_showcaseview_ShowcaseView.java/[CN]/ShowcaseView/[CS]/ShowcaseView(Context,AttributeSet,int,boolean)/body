@@ -1,0 +1,23 @@
+{
+  super(context,attrs,defStyle);
+  ApiUtils apiUtils=new ApiUtils();
+  animationFactory=new AnimatorAnimationFactory();
+  showcaseAreaCalculator=new ShowcaseAreaCalculator();
+  shotStateStore=new ShotStateStore(context);
+  apiUtils.setFitsSystemWindowsCompat(this);
+  getViewTreeObserver().addOnPreDrawListener(this);
+  getViewTreeObserver().addOnGlobalLayoutListener(this);
+  final TypedArray styled=context.getTheme().obtainStyledAttributes(attrs,R.styleable.ShowcaseView,R.attr.showcaseViewStyle,R.style.ShowcaseView);
+  fadeInMillis=getResources().getInteger(android.R.integer.config_mediumAnimTime);
+  fadeOutMillis=getResources().getInteger(android.R.integer.config_mediumAnimTime);
+  mEndButton=(Button)LayoutInflater.from(context).inflate(R.layout.showcase_button,null);
+  if (newStyle) {
+    showcaseDrawer=new NewShowcaseDrawer(getResources());
+  }
+ else {
+    showcaseDrawer=new StandardShowcaseDrawer(getResources());
+  }
+  textDrawer=new TextDrawer(getResources(),showcaseAreaCalculator,getContext());
+  updateStyle(styled,false);
+  init();
+}

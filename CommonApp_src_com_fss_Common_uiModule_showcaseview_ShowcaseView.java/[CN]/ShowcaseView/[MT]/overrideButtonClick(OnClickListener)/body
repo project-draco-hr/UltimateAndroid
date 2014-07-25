@@ -1,0 +1,9 @@
+{
+  if (shotStateStore.hasShot()) {
+    return;
+  }
+  if (mEndButton != null) {
+    mEndButton.setOnClickListener(listener != null ? listener : this);
+  }
+  hasCustomClickListener=true;
+}

@@ -1,0 +1,3 @@
+{
+  setShowcasePosition(point.x,point.y);
+}

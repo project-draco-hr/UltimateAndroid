@@ -1,0 +1,5 @@
+{
+  showcaseView.setBlocksTouches(true);
+  showcaseView.setHideOnTouchOutside(true);
+  return this;
+}

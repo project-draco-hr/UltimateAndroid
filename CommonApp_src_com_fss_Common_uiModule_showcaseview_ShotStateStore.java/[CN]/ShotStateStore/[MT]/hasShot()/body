@@ -1,0 +1,3 @@
+{
+  return isSingleShot() && context.getSharedPreferences(PREFS_SHOWCASE_INTERNAL,Context.MODE_PRIVATE).getBoolean("hasShot" + shotId,false);
+}

@@ -1,0 +1,19 @@
+{
+  Target internal=null;
+  setUp();
+switch (mType) {
+case SPINNER:
+    internal=new ViewTarget(mActionBarWrapper.getSpinnerView());
+  break;
+case HOME:
+internal=new ViewTarget(mReflector.getHomeButton());
+break;
+case OVERFLOW:
+internal=new ViewTarget(mActionBarWrapper.getOverflowView());
+break;
+case TITLE:
+internal=new ViewTarget(mActionBarWrapper.getTitleView());
+break;
+}
+return internal.getPoint();
+}
