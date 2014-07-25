@@ -1,0 +1,6 @@
+{
+  PackageManager packageManager=context.getPackageManager();
+  PackageInfo packInfo=packageManager.getPackageInfo(context.getPackageName(),0);
+  String version=packInfo.versionName;
+  return version;
+}
