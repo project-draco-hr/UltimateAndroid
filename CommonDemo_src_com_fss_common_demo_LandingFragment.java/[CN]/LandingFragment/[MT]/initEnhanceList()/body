@@ -164,6 +164,11 @@
   map.put("detail","try");
   map.put("subname","act");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","AutoFit");
+  map.put("detail","try");
+  map.put("subname","AutoFit");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -278,6 +283,9 @@ BasicUtils.sendIntent(getActivity(),ListBuddiesActivity.class);
 break;
 case 32:
 BasicUtils.sendIntent(getActivity(),ActivityTransitionActivity.class);
+break;
+case 33:
+BasicUtils.sendIntent(getActivity(),AutofitTextViewActivity.class);
 break;
 }
 }
