@@ -159,6 +159,11 @@
   map.put("detail","try");
   map.put("subname","ListBuddies");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ActivityTransition");
+  map.put("detail","try");
+  map.put("subname","act");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -270,6 +275,9 @@ BasicUtils.sendIntent(getActivity(),ShowCaseSampleActivity.class);
 break;
 case 31:
 BasicUtils.sendIntent(getActivity(),ListBuddiesActivity.class);
+break;
+case 32:
+BasicUtils.sendIntent(getActivity(),ActivityTransitionActivity.class);
 break;
 }
 }
