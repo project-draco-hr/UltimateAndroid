@@ -1,0 +1,8 @@
+CharSequence text
+TextPaint paint
+float targetWidth
+int maxLines
+float low
+float high
+float precision
+DisplayMetrics displayMetrics

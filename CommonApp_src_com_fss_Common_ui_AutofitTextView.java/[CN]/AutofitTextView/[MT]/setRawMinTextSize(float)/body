@@ -1,0 +1,6 @@
+{
+  if (minSize != mMinTextSize) {
+    mMinTextSize=minSize;
+    refitText();
+  }
+}
