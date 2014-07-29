@@ -10,6 +10,7 @@
       myCookieStore.addCookie(cookie);
     }
   }
+  AsyncHttpClient client=new AsyncHttpClient();
   client.setCookieStore(myCookieStore);
   client.get(getAbsoluteUrl(url),responseHandler);
 }
