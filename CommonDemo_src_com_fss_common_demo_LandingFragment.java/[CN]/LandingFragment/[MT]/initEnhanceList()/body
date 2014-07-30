@@ -169,6 +169,11 @@
   map.put("detail","try");
   map.put("subname","AutoFit");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Draggable");
+  map.put("detail","try");
+  map.put("subname","Draggable");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -286,6 +291,9 @@ BasicUtils.sendIntent(getActivity(),ActivityTransitionActivity.class);
 break;
 case 33:
 BasicUtils.sendIntent(getActivity(),AutofitTextViewActivity.class);
+break;
+case 34:
+BasicUtils.sendIntent(getActivity(),DraggableGridViewPagerTestActivity.class);
 break;
 }
 }
