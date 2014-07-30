@@ -1,0 +1,7 @@
+{
+  removeCallbacks(mEndScrollRunnable);
+  if (mAdapter != null) {
+    mAdapter.unregisterDataSetObserver(mDataSetObserver);
+  }
+  super.onDetachedFromWindow();
+}

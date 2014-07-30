@@ -1,0 +1,23 @@
+{
+  final int childCount=getChildCount();
+  mPageCount=(childCount + mPageSize - 1) / mPageSize;
+  mGridWidth=(getWidth() - mPaddingLeft - mPaddingRight- (mColCount - 1) * mGridGap) / mColCount;
+  mGridHeight=(getHeight() - mPaddingTop - mPaddingButtom- (mRowCount - 1) * mGridGap) / mRowCount;
+  mGridWidth=mGridHeight=Math.min(mGridWidth,mGridHeight);
+  mMaxOverScrollSize=mGridWidth / 2;
+  mEdgeSize=mGridWidth / 2;
+  newPositions.clear();
+  for (int i=0; i < childCount; i++) {
+    final View child=getChildAt(i);
+    final Rect rect=getRectByPosition(i);
+    child.measure(MeasureSpec.makeMeasureSpec(rect.width(),MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(rect.height(),MeasureSpec.EXACTLY));
+    DEBUG_LOG("child.layout position=" + i + ", rect="+ rect);
+    child.layout(rect.left,rect.top,rect.right,rect.bottom);
+    newPositions.add(-1);
+  }
+  if (mCurItem > 0 && mCurItem < mPageCount) {
+    final int curItem=mCurItem;
+    mCurItem=0;
+    setCurrentItem(curItem);
+  }
+}

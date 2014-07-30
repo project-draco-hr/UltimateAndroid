@@ -1,0 +1,21 @@
+{
+  int newTopMargin=changingHeaderViewTopMargin(deltaY);
+  if (newTopMargin >= 0 && mHeaderState != RELEASE_TO_REFRESH) {
+    mHeaderTextView.setText("???????????????");
+    mHeaderUpdateTextView.setVisibility(View.GONE);
+    mHeaderImageView.clearAnimation();
+    mHeaderImageView.startAnimation(mFlipAnimation);
+    mHeaderState=RELEASE_TO_REFRESH;
+  }
+ else   if (newTopMargin < 0 && newTopMargin > -mHeaderViewHeight) {
+    mHeaderImageView.clearAnimation();
+    mHeaderImageView.startAnimation(mFlipAnimation);
+    if (ifPushFoot) {
+      mHeaderTextView.setText("??????????????????");
+    }
+ else {
+      mHeaderTextView.setText("????????????");
+    }
+    mHeaderState=PULL_TO_REFRESH;
+  }
+}

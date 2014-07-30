@@ -1,0 +1,12 @@
+{
+  final int pointerIndex=MotionEventCompat.getActionIndex(ev);
+  final int pointerId=MotionEventCompat.getPointerId(ev,pointerIndex);
+  if (pointerId == mActivePointerId) {
+    final int newPointerIndex=pointerIndex == 0 ? 1 : 0;
+    mLastMotionX=MotionEventCompat.getX(ev,newPointerIndex);
+    mActivePointerId=MotionEventCompat.getPointerId(ev,newPointerIndex);
+    if (mVelocityTracker != null) {
+      mVelocityTracker.clear();
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  super(context,attrs);
+  this.context=context;
+  init();
+}
