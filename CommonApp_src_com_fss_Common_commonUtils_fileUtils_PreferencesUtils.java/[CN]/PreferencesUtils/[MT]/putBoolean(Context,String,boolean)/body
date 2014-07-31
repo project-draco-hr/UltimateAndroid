@@ -1,6 +1,3 @@
 {
-  SharedPreferences settings=context.getSharedPreferences(PREFERENCE_NAME,Context.MODE_PRIVATE);
-  SharedPreferences.Editor editor=settings.edit();
-  editor.putBoolean(key,value);
-  return editor.commit();
+  return putBoolean(context,PREFERENCE_NAME,key,value);
 }
