@@ -4,7 +4,7 @@
     result=Base64.encode(context,type);
   }
  else {
-    result=com.fss.Common.commonUtils.urlUtils.Base64.encodeBytesToBytes(context);
+    result=com.fss.common.commonUtils.urlUtils.Base64.encodeBytesToBytes(context);
   }
   return result;
 }

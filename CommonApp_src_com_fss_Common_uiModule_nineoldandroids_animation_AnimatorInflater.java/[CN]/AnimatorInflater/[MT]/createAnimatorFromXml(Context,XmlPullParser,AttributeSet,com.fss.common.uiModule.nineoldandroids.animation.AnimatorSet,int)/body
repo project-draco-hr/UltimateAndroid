@@ -15,12 +15,12 @@
       anim=loadAnimator(c,attrs,null);
     }
  else     if (name.equals("set")) {
-      anim=new com.fss.Common.uiModule.nineoldandroids.animation.AnimatorSet();
+      anim=new com.fss.common.uiModule.nineoldandroids.animation.AnimatorSet();
       TypedArray a=c.obtainStyledAttributes(attrs,AnimatorSet);
       TypedValue orderingValue=new TypedValue();
       a.getValue(AnimatorSet_ordering,orderingValue);
       int ordering=orderingValue.type == TypedValue.TYPE_INT_DEC ? orderingValue.data : TOGETHER;
-      createAnimatorFromXml(c,parser,attrs,(com.fss.Common.uiModule.nineoldandroids.animation.AnimatorSet)anim,ordering);
+      createAnimatorFromXml(c,parser,attrs,(com.fss.common.uiModule.nineoldandroids.animation.AnimatorSet)anim,ordering);
       a.recycle();
     }
  else {
