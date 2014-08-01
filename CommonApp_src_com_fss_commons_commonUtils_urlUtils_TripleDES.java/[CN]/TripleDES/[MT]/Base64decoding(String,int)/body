@@ -1,0 +1,10 @@
+{
+  byte[] result;
+  if (judgeVerionOfSdk() > 17) {
+    result=Base64.decode(context,type);
+  }
+ else {
+    result=com.fss.commons.commonUtils.urlUtils.Base64.decode(context);
+  }
+  return result;
+}
