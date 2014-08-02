@@ -1,0 +1,6 @@
+{
+  if (null == milliliter || milliliter.size() == 0)   return;
+  drawStraightLine(c);
+  drawBrokenLine(c);
+  drawDate(c);
+}

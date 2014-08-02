@@ -1,0 +1,11 @@
+{
+  for (int i=0; i < score.size(); i++) {
+    RectF f=new RectF();
+    f.set(tb * 0.2f + interval_left_right * i,getHeight() - tb * 11.0f,tb * 3.2f + interval_left_right * i,getHeight() - tb * 2.0f);
+    c.drawRoundRect(f,tb * 0.3f,tb * 0.3f,paint_rectf_gray);
+    float base=score.get(i).score * (tb * 10.0f / 100);
+    RectF f1=new RectF();
+    f1.set(tb * 0.2f + interval_left_right * i,getHeight() - (base + tb * 1.5f),tb * 3.2f + interval_left_right * i,getHeight() - tb * 1.5f);
+    c.drawRoundRect(f1,tb * 0.3f,tb * 0.3f,paint_rectf_blue);
+  }
+}
