@@ -194,6 +194,11 @@
   map.put("detail","try");
   map.put("subname","RiseNumber");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Nifty");
+  map.put("detail","try");
+  map.put("subname","Nifty");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -326,6 +331,9 @@ BasicUtils.sendIntent(getActivity(),TriangleFrameActivity.class);
 break;
 case 38:
 BasicUtils.sendIntent(getActivity(),RiseNumberActivity.class);
+break;
+case 39:
+BasicUtils.sendIntent(getActivity(),NiftyDialogActivity.class);
 break;
 }
 }
