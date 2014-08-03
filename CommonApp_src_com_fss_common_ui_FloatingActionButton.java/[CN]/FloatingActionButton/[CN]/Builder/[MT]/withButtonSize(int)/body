@@ -1,0 +1,5 @@
+{
+  size=convertToPixels(size,scale);
+  params=new FrameLayout.LayoutParams(size,size);
+  return this;
+}

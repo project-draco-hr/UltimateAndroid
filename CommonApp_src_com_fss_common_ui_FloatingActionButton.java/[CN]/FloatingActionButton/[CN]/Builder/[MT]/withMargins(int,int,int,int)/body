@@ -1,0 +1,4 @@
+{
+  params.setMargins(convertToPixels(left,scale),convertToPixels(top,scale),convertToPixels(right,scale),convertToPixels(bottom,scale));
+  return this;
+}
