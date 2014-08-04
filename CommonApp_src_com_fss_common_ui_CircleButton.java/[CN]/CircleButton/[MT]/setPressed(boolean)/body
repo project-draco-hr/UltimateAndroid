@@ -1,0 +1,12 @@
+{
+  super.setPressed(pressed);
+  if (circlePaint != null) {
+    circlePaint.setColor(pressed ? pressedColor : defaultColor);
+  }
+  if (pressed) {
+    showPressedRing();
+  }
+ else {
+    hidePressedRing();
+  }
+}
