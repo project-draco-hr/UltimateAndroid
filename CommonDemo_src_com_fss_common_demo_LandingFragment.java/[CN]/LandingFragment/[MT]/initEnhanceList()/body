@@ -204,6 +204,11 @@
   map.put("detail","try");
   map.put("subname","Icons");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","EdgeEffect");
+  map.put("detail","try");
+  map.put("subname","EdgeEffect");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -342,6 +347,9 @@ BasicUtils.sendIntent(getActivity(),NiftyDialogActivity.class);
 break;
 case 40:
 BasicUtils.sendIntent(getActivity(),DifferentIconsActivity.class);
+break;
+case 41:
+BasicUtils.sendIntent(getActivity(),EdgeEffectActivity.class);
 break;
 }
 }
