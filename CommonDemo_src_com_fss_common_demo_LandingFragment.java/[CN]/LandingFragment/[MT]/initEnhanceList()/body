@@ -199,6 +199,11 @@
   map.put("detail","try");
   map.put("subname","Nifty");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Icons");
+  map.put("detail","try");
+  map.put("subname","Icons");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -334,6 +339,9 @@ BasicUtils.sendIntent(getActivity(),RiseNumberActivity.class);
 break;
 case 39:
 BasicUtils.sendIntent(getActivity(),NiftyDialogActivity.class);
+break;
+case 40:
+BasicUtils.sendIntent(getActivity(),DifferentIconsActivity.class);
 break;
 }
 }
