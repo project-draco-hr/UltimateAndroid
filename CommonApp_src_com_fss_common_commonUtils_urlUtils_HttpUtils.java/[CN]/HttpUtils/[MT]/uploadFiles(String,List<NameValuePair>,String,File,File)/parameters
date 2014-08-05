@@ -1,0 +1,5 @@
+String url
+List<NameValuePair> paramsList
+String fileParams
+File file
+File files

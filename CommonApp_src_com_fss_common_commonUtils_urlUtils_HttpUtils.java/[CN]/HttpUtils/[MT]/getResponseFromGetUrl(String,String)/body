@@ -1,0 +1,46 @@
+{
+  Log.d("Chen","url--" + url);
+  if (null != params && !"".equals(params)) {
+    url=url + "?";
+    String[] paramarray=params.split(",");
+    for (int index=0; null != paramarray && index < paramarray.length; index++) {
+      if (index == 0) {
+        url=url + paramarray[index];
+      }
+ else {
+        url=url + "&" + paramarray[index];
+      }
+    }
+  }
+  HttpGet httpRequest=new HttpGet(url);
+  HttpParams httpParameters=new BasicHttpParams();
+  int timeoutConnection=30000;
+  HttpConnectionParams.setConnectionTimeout(httpParameters,timeoutConnection);
+  int timeoutSocket=30000;
+  HttpConnectionParams.setSoTimeout(httpParameters,timeoutSocket);
+  DefaultHttpClient httpclient=new DefaultHttpClient(httpParameters);
+  StringBuffer sb=new StringBuffer();
+  try {
+    HttpResponse httpResponse=httpclient.execute(httpRequest);
+    String inputLine="";
+    if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+      InputStreamReader is=new InputStreamReader(httpResponse.getEntity().getContent());
+      BufferedReader in=new BufferedReader(is);
+      while ((inputLine=in.readLine()) != null) {
+        sb.append(inputLine);
+      }
+      in.close();
+    }
+ else     if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_NOT_MODIFIED) {
+      return "";
+    }
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+    return "";
+  }
+ finally {
+    httpclient.getConnectionManager().shutdown();
+  }
+  return sb.toString();
+}
