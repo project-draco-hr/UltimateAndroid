@@ -8,19 +8,17 @@
     params.setParameter(CoreConnectionPNames.SO_TIMEOUT,30000);
     mHttpClient=new DefaultHttpClient(params);
     HttpPost httpPost=new HttpPost(url);
-    MultipartEntityBuilder entityBuilder=MultipartEntityBuilder.create();
-    entityBuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+    MultipartEntity multipartEntity=new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
     if (BasicUtils.judgeNotNull(paramsList)) {
       for (      NameValuePair nameValuePair : paramsList) {
-        entityBuilder.addTextBody(nameValuePair.getName(),nameValuePair.getValue());
+        multipartEntity.addPart(nameValuePair.getName(),new StringBody(nameValuePair.getValue()));
       }
     }
-    entityBuilder.addBinaryBody(fileParams,file);
+    multipartEntity.addPart(fileParams,new FileBody(file));
     for (    File f : files) {
-      entityBuilder.addBinaryBody(fileParams,f);
+      multipartEntity.addPart(fileParams,new FileBody(f));
     }
-    HttpEntity entity=entityBuilder.build();
-    httpPost.setEntity(entity);
+    httpPost.setEntity(multipartEntity);
     HttpResponse httpResp=mHttpClient.execute(httpPost);
     if (httpResp.getStatusLine().getStatusCode() == 200) {
       result=EntityUtils.toString(httpResp.getEntity(),"UTF-8");
