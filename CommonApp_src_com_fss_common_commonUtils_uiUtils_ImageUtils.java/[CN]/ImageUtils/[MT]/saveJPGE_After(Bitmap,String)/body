@@ -1,0 +1,18 @@
+{
+  File file=new File(path);
+  try {
+    FileOutputStream out=new FileOutputStream(file);
+    if (bitmap.compress(Bitmap.CompressFormat.JPEG,100,out)) {
+      out.flush();
+      out.close();
+    }
+  }
+ catch (  FileNotFoundException e) {
+    e.printStackTrace();
+  }
+catch (  IOException e) {
+    e.printStackTrace();
+  }
+ finally {
+  }
+}
