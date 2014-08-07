@@ -40,9 +40,6 @@
     public void onClick(    View v){
       Bimp.drr=drr;
       Bimp.max=max;
-      for (int i=0; i < del.size(); i++) {
-        FileUtils.deleteFileFromPath(SDPATH + del.get(i) + ".JPEG");
-      }
       finish();
     }
   }

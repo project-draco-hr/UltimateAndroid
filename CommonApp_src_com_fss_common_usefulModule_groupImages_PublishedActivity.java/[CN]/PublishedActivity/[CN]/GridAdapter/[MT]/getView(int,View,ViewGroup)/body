@@ -18,6 +18,7 @@
   }
  else {
     ImageLoader.getInstance().displayImage("file://" + Bimp.drr.get(position),holder.image);
+    Logs.d("drr---" + Bimp.drr.get(position) + "   "+ position+ "  "+ Bimp.drr.size());
   }
   return convertView;
 }
