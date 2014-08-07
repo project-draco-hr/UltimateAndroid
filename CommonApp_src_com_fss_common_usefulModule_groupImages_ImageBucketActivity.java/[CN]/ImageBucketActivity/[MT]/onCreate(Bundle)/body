@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.group_activity_image_bucket);
+  helper=AlbumHelper.getHelper();
+  helper.init(getApplicationContext());
+  initData();
+  initView();
+}

@@ -1,0 +1,8 @@
+{
+  Intent openCameraIntent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+  File file=new File(Environment.getExternalStorageDirectory() + "/myimage/",String.valueOf(System.currentTimeMillis()) + ".jpg");
+  path=file.getPath();
+  Uri imageUri=Uri.fromFile(file);
+  openCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+  startActivityForResult(openCameraIntent,TAKE_PICTURE);
+}

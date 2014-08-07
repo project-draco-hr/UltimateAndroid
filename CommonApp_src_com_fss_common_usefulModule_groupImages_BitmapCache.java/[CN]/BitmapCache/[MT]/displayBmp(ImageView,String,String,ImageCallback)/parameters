@@ -1,0 +1,4 @@
+ImageView iv
+String thumbPath
+String sourcePath
+ImageCallback callback

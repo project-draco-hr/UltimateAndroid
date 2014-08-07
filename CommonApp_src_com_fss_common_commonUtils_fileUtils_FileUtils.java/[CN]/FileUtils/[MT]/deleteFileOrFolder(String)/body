@@ -3,7 +3,7 @@
   if (f.isDirectory()) {
     String[] list=f.list();
     for (int i=0; i < list.length; i++) {
-      deleteFile(fileName + "//" + list[i]);
+      deleteFileOrFolder(fileName + "//" + list[i]);
     }
   }
   f.delete();
