@@ -1,6 +1,5 @@
 {
   List<File> fileList=new ArrayList<>();
-  fileList.add(file);
   for (  File f : files) {
     fileList.add(f);
   }
