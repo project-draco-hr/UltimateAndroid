@@ -209,6 +209,11 @@
   map.put("detail","try");
   map.put("subname","EdgeEffect");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ViewPager");
+  map.put("detail","try");
+  map.put("subname","Transform");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -350,6 +355,9 @@ BasicUtils.sendIntent(getActivity(),DifferentIconsActivity.class);
 break;
 case 41:
 BasicUtils.sendIntent(getActivity(),EdgeEffectActivity.class);
+break;
+case 42:
+BasicUtils.sendIntent(getActivity(),ViewPagerTransformerActivity.class);
 break;
 }
 }
