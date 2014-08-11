@@ -1,0 +1,12 @@
+{
+  MeetingDAO dao=null;
+  try {
+    dao=daoFactory.getMeetingDAO(context);
+    dao.delete(this);
+  }
+  finally {
+    if (dao != null) {
+      dao.close();
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  this(team,dateTime,numParticipants,individualStatusLength,meetingLength,quickestStatus,longestStatus);
+  this.id=id;
+}

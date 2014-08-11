@@ -1,0 +1,15 @@
+{
+  float totalNumParticipants=0;
+  float totalIndividualStatusLength=0;
+  float totalMeetingLength=0;
+  float totalQuickestStatus=0;
+  float totalLongestStatus=0;
+  for (  MeetingStats meetingStats : meetingStatsList) {
+    totalNumParticipants+=meetingStats.getNumParticipants();
+    totalIndividualStatusLength+=meetingStats.getIndividualStatusLength();
+    totalMeetingLength+=meetingStats.getMeetingLength();
+    totalQuickestStatus+=meetingStats.getQuickestStatus();
+    totalLongestStatus+=meetingStats.getLongestStatus();
+  }
+  return new MeetingStats(totalNumParticipants / meetingStatsList.size(),totalIndividualStatusLength / meetingStatsList.size(),totalMeetingLength / meetingStatsList.size(),totalQuickestStatus / meetingStatsList.size(),totalLongestStatus / meetingStatsList.size());
+}

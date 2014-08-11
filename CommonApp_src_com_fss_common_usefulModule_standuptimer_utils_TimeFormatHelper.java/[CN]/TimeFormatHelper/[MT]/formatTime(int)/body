@@ -1,0 +1,3 @@
+{
+  return Integer.toString(seconds / 60) + ":" + padWithZeros(seconds % 60);
+}

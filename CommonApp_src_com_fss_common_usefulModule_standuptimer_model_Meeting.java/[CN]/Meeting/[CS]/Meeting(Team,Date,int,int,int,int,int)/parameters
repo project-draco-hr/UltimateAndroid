@@ -1,0 +1,7 @@
+Team team
+Date dateTime
+int numParticipants
+int individualStatusLength
+int meetingLength
+int quickestStatus
+int longestStatus

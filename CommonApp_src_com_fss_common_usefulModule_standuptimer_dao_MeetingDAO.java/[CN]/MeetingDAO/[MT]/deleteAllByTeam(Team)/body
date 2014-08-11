@@ -1,0 +1,5 @@
+{
+  Logger.d("Deleting all meetings for team " + team.getName());
+  SQLiteDatabase db=getWritableDatabase();
+  db.delete(MEETINGS_TABLE_NAME,MEETINGS_TEAM_NAME + " = ?",new String[]{team.getName()});
+}
