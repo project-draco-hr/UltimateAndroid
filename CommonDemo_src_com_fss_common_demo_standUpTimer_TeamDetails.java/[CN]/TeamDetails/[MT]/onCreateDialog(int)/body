@@ -1,0 +1,27 @@
+{
+switch (id) {
+case CONFIRM_DELETE_MEETING_DIALOG:
+    if (confirmDeleteMeetingDialog == null) {
+      AlertDialog.Builder builder=new AlertDialog.Builder(this);
+      builder.setMessage("Are you sure you want to delete this meeting?");
+      builder.setCancelable(true);
+      builder.setPositiveButton("Yes",deleteMeetingConfirmationListener());
+      builder.setNegativeButton("No",cancelListener());
+      confirmDeleteMeetingDialog=builder.create();
+    }
+  return confirmDeleteMeetingDialog;
+case CONFIRM_DELETE_TEAM_DIALOG:
+if (confirmDeleteTeamDialog == null) {
+  AlertDialog.Builder builder=new AlertDialog.Builder(this);
+  builder.setMessage("Are you sure you want to delete this team?");
+  builder.setCancelable(true);
+  builder.setPositiveButton("Yes",deleteTeamConfirmationListener());
+  builder.setNegativeButton("No",cancelListener());
+  confirmDeleteTeamDialog=builder.create();
+}
+return confirmDeleteTeamDialog;
+default :
+Logger.e("Attempting to create an unkonwn dialog with an id of " + id);
+return null;
+}
+}

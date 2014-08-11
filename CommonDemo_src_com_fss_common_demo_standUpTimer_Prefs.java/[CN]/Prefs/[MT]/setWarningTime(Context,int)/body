@@ -1,0 +1,3 @@
+{
+  PreferenceManager.getDefaultSharedPreferences(context).edit().putString(WARNING_TIME,Integer.toString(warningTime)).commit();
+}

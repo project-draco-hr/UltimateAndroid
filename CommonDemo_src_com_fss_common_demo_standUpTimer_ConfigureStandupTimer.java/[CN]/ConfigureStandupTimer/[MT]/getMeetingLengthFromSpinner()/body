@@ -1,0 +1,18 @@
+{
+  int minutes=0;
+switch (meetingLengthSpinner.getSelectedItemPosition()) {
+case 0:
+    minutes=5;
+  break;
+case 1:
+minutes=10;
+break;
+case 2:
+minutes=15;
+break;
+case 3:
+minutes=20;
+break;
+}
+return minutes;
+}

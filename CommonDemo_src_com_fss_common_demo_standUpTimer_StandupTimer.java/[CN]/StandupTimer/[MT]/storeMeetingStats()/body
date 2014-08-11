@@ -1,0 +1,15 @@
+{
+  if (team != null) {
+    long meetingEndTime=System.currentTimeMillis();
+    if (individualStatusEndTime == 0) {
+      individualStatusEndTime=meetingEndTime;
+    }
+    try {
+      Meeting meeting=new Meeting(team,new Date(meetingStartTime),completedParticipants,(int)((individualStatusEndTime - individualStatusStartTime) / 1000),(int)((meetingEndTime - meetingStartTime) / 1000),quickestStatus,longestStatus);
+      persistMeeting(meeting);
+    }
+ catch (    IllegalArgumentException e) {
+      Logger.e("Could not store the meeting in the database.  " + e);
+    }
+  }
+}

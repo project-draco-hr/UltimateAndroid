@@ -1,0 +1,7 @@
+{
+  TabHost tabHost=getTabHost();
+  tabHost.addTab(tabHost.newTabSpec("stats_tab").setIndicator("stats").setContent(createMeetingDetails(team)));
+  tabHost.addTab(tabHost.newTabSpec("meetings_tab").setIndicator("meetings").setContent(createMeetingList()));
+  getTabHost().setCurrentTab(0);
+  findViewById(R.id.team_stats).bringToFront();
+}

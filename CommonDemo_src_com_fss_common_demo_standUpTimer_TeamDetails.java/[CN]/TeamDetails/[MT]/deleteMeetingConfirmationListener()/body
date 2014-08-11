@@ -1,0 +1,10 @@
+{
+  return new DialogInterface.OnClickListener(){
+    public void onClick(    DialogInterface dialog,    int id){
+      String dateString=(String)meetingList.getAdapter().getItem(positionOfMeetingToDelete);
+      deleteMeeting(dateString);
+      updateTabContents();
+    }
+  }
+;
+}

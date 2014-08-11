@@ -1,0 +1,8 @@
+{
+  if (meetingLengthEditText != null) {
+    return getMeetingLengthFromTextArea();
+  }
+ else {
+    return getMeetingLengthFromSpinner();
+  }
+}

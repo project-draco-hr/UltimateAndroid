@@ -1,0 +1,3 @@
+{
+  PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(SOUNDS,value).commit();
+}

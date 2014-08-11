@@ -1,0 +1,10 @@
+{
+switch (v.getId()) {
+case R.id.next_button:
+    processNextButtonClick();
+  break;
+case R.id.finished_button:
+processFinishedButtonClick();
+break;
+}
+}

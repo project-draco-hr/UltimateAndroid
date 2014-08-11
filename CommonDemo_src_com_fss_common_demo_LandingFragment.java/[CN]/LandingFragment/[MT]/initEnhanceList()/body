@@ -214,6 +214,11 @@
   map.put("detail","try");
   map.put("subname","Transform");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","StandUpTimer");
+  map.put("detail","try");
+  map.put("subname","Timer");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -358,6 +363,9 @@ BasicUtils.sendIntent(getActivity(),EdgeEffectActivity.class);
 break;
 case 42:
 BasicUtils.sendIntent(getActivity(),ViewPagerTransformerActivity.class);
+break;
+case 43:
+BasicUtils.sendIntent(getActivity(),ConfigureStandupTimer.class);
 break;
 }
 }
