@@ -1,0 +1,11 @@
+{
+  AdapterContextMenuInfo info=(AdapterContextMenuInfo)item.getMenuInfo();
+switch (item.getItemId()) {
+case R.id.delete_team:
+    positionOfTeamToDelete=info.position;
+  showDialog(CONFIRM_DELETE_DIALOG);
+return true;
+default :
+return super.onContextItemSelected(item);
+}
+}

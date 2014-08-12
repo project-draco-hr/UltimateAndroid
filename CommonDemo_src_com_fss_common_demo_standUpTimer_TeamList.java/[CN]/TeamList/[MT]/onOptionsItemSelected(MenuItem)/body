@@ -1,0 +1,11 @@
+{
+switch (item.getItemId()) {
+case R.id.add_team:
+    Logger.d("Displaying the add team dialog box");
+  displayAddTeamDialog();
+return true;
+default :
+Logger.e("Unknown menu item selected");
+return false;
+}
+}

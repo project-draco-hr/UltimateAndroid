@@ -1,0 +1,17 @@
+{
+  Cursor cursor=null;
+  Meeting meeting=null;
+  try {
+    SQLiteDatabase db=getReadableDatabase();
+    cursor=db.query(MEETINGS_TABLE_NAME,MEETINGS_ALL_COLUMS,_ID + " = ?",new String[]{id.toString()},null,null,null);
+    if (cursor.getCount() == 1) {
+      if (cursor.moveToFirst()) {
+        meeting=createMeetingFromCursorData(cursor);
+      }
+    }
+  }
+  finally {
+    closeCursor(cursor);
+  }
+  return meeting;
+}

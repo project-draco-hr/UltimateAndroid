@@ -1,0 +1,6 @@
+{
+  if (name == null) {
+    throw new IllegalArgumentException("Team name must not be null");
+  }
+  this.name=name.trim();
+}

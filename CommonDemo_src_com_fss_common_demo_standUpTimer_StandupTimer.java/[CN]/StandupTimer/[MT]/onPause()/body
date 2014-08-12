@@ -1,0 +1,13 @@
+{
+  super.onPause();
+synchronized (this) {
+    cancelTimer();
+    releaseWakeLock();
+    if (finished) {
+      clearState();
+    }
+ else {
+      saveState();
+    }
+  }
+}

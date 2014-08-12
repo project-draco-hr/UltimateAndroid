@@ -1,0 +1,3 @@
+{
+  return completedParticipants < totalParticipants;
+}

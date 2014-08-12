@@ -1,0 +1,3 @@
+{
+  return (int)(dips * getResources().getDisplayMetrics().density);
+}

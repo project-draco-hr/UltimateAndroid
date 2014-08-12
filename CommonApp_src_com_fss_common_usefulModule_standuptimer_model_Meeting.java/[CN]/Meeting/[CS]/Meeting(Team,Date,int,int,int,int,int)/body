@@ -1,0 +1,18 @@
+{
+  if (team == null) {
+    throw new IllegalArgumentException("Meeting team must not be null");
+  }
+ else {
+    this.team=new Team(team.getName());
+  }
+  if (dateTime == null) {
+    throw new IllegalArgumentException("Meeting date/time must not be null");
+  }
+ else {
+    this.dateTime=dateTime;
+  }
+  if (numParticipants < 1) {
+    throw new IllegalArgumentException("Meeting must have at least 1 participant");
+  }
+  meetingStats=new MeetingStats(numParticipants,individualStatusLength,meetingLength,quickestStatus,longestStatus);
+}
