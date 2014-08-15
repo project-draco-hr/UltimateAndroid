@@ -1,0 +1,5 @@
+{
+  for (  Map.Entry<String,String> entry : map.entrySet()) {
+    Logs.d(entry.getKey() + "/" + entry.getValue());
+  }
+}
