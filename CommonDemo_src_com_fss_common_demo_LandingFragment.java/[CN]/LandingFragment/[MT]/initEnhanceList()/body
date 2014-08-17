@@ -219,6 +219,11 @@
   map.put("detail","try");
   map.put("subname","Timer");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","CircularProgress");
+  map.put("detail","try");
+  map.put("subname","Button");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -366,6 +371,9 @@ BasicUtils.sendIntent(getActivity(),ViewPagerTransformerActivity.class);
 break;
 case 43:
 BasicUtils.sendIntent(getActivity(),ConfigureStandupTimer.class);
+break;
+case 44:
+BasicUtils.sendIntent(getActivity(),CircularProgressButtonActivity.class);
 break;
 }
 }
