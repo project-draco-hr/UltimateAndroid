@@ -1,0 +1,8 @@
+{
+  Parcelable superState=super.onSaveInstanceState();
+  SavedState savedState=new SavedState(superState);
+  savedState.mProgress=mProgress;
+  savedState.mIndeterminateProgressMode=mIndeterminateProgressMode;
+  savedState.mConfigurationChanged=true;
+  return savedState;
+}

@@ -1,0 +1,3 @@
+{
+  background.getGradientDrawable().setColor(color);
+}
