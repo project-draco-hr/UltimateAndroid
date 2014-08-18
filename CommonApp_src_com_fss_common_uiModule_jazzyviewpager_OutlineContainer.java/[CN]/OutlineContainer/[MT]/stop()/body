@@ -1,0 +1,4 @@
+{
+  if (!mIsRunning)   return;
+  mIsRunning=false;
+}

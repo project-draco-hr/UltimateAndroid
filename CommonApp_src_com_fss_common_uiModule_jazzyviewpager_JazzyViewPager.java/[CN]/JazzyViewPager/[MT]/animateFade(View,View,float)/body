@@ -1,0 +1,8 @@
+{
+  if (left != null) {
+    ViewHelper.setAlpha(left,1 - positionOffset);
+  }
+  if (right != null) {
+    ViewHelper.setAlpha(right,positionOffset);
+  }
+}

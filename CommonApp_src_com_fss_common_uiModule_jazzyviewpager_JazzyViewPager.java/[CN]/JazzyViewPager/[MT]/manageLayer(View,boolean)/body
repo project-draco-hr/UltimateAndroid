@@ -1,0 +1,5 @@
+{
+  if (!API_11)   return;
+  int layerType=enableHardware ? View.LAYER_TYPE_HARDWARE : View.LAYER_TYPE_NONE;
+  if (layerType != v.getLayerType())   v.setLayerType(layerType,null);
+}
