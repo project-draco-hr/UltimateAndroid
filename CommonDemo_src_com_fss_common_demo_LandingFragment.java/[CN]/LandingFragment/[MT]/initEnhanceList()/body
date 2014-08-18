@@ -224,6 +224,11 @@
   map.put("detail","try");
   map.put("subname","Button");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","JazzyViewPager");
+  map.put("detail","try");
+  map.put("subname","Jazzy");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -374,6 +379,9 @@ BasicUtils.sendIntent(getActivity(),ConfigureStandupTimer.class);
 break;
 case 44:
 BasicUtils.sendIntent(getActivity(),CircularProgressButtonActivity.class);
+break;
+case 45:
+BasicUtils.sendIntent(getActivity(),JazzyViewActivity.class);
 break;
 }
 }
