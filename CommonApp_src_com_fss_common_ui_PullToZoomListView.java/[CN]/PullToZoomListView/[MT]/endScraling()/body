@@ -1,0 +1,4 @@
+{
+  if (this.mHeaderContainer.getBottom() >= this.mHeaderHeight)   Log.d("mmm","endScraling");
+  this.mScalingRunnalable.startAnimation(200L);
+}

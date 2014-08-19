@@ -1,0 +1,3 @@
+{
+  if (this.mOnScrollListener != null)   this.mOnScrollListener.onScrollStateChanged(paramAbsListView,paramInt);
+}

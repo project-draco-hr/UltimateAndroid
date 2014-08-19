@@ -1,6 +1,6 @@
 {
   boolean flag=true;
-  if (!(string != null && !string.equals("") && !string.equals("null")))   return false;
+  if (!(string != null && !string.equals("") && !string.equals("null") && !string.trim().equals("")))   return false;
   for (  String s : strings) {
     if (s == null || s.equals("") || s.equals("null")) {
       flag=false;
