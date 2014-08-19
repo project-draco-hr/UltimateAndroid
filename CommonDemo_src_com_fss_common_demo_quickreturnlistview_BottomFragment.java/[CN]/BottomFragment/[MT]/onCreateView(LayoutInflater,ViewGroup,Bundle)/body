@@ -1,0 +1,5 @@
+{
+  View view=inflater.inflate(R.layout.footer_fragment,null);
+  mQuickReturnView=(TextView)view.findViewById(R.id.footer);
+  return view;
+}
