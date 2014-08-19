@@ -4,7 +4,7 @@
   mQuickReturnView.setText("Animation");
   mListView.addHeaderView(mHeader);
   String[] array=new String[]{"Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android"};
-  setListAdapter(new ArrayAdapter<String>(getActivity(),R.layout.list_item,R.id.text1,array));
+  setListAdapter(new ArrayAdapter<String>(getActivity(),R.layout.quick_return_listview_list_item,R.id.text1,array));
   mListView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
     @Override public void onGlobalLayout(){
       mQuickReturnHeight=mQuickReturnView.getHeight();

@@ -229,6 +229,16 @@
   map.put("detail","try");
   map.put("subname","Jazzy");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","PulltoZoom");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","QuickReturn");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -382,6 +392,12 @@ BasicUtils.sendIntent(getActivity(),CircularProgressButtonActivity.class);
 break;
 case 45:
 BasicUtils.sendIntent(getActivity(),JazzyViewActivity.class);
+break;
+case 46:
+BasicUtils.sendIntent(getActivity(),PulltoZoomListViewActivity.class);
+break;
+case 47:
+BasicUtils.sendIntent(getActivity(),QuickReturnListViewActivity.class);
 break;
 }
 }

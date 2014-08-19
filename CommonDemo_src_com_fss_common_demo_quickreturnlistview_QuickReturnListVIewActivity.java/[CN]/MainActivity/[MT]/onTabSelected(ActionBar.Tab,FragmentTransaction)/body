@@ -1,3 +1,0 @@
-{
-  mPager.setCurrentItem(tab.getPosition());
-}
