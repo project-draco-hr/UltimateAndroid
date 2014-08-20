@@ -239,6 +239,11 @@
   map.put("detail","try");
   map.put("subname","ListView");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","SuperListview");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -398,6 +403,9 @@ BasicUtils.sendIntent(getActivity(),PulltoZoomListViewActivity.class);
 break;
 case 47:
 BasicUtils.sendIntent(getActivity(),QuickReturnListViewActivity.class);
+break;
+case 48:
+BasicUtils.sendIntent(getActivity(),SuperListViewActivity.class);
 break;
 }
 }

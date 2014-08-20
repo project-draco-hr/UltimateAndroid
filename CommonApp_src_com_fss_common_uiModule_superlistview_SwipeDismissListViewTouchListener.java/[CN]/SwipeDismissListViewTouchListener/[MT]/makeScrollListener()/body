@@ -1,0 +1,10 @@
+{
+  return new AbsListView.OnScrollListener(){
+    @Override public void onScrollStateChanged(    AbsListView absListView,    int scrollState){
+      setEnabled(scrollState != AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL);
+    }
+    @Override public void onScroll(    AbsListView absListView,    int i,    int i1,    int i2){
+    }
+  }
+;
+}
