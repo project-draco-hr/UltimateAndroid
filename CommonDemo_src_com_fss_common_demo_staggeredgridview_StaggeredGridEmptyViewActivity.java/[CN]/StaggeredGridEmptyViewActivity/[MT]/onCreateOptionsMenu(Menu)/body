@@ -1,0 +1,4 @@
+{
+  getMenuInflater().inflate(R.menu.staggered_grid_view_activity_sgv_empty_view,menu);
+  return true;
+}
