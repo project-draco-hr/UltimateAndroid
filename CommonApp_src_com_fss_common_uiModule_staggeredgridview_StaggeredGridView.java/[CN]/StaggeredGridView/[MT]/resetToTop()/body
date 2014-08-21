@@ -1,0 +1,15 @@
+{
+  if (mColumnCount > 0) {
+    if (mColumnTops == null) {
+      mColumnTops=new int[mColumnCount];
+    }
+    if (mColumnBottoms == null) {
+      mColumnBottoms=new int[mColumnCount];
+    }
+    initColumnTopsAndBottoms();
+    mPositionData.clear();
+    mNeedSync=false;
+    mDistanceToTop=0;
+    setSelection(0);
+  }
+}

@@ -1,0 +1,36 @@
+{
+switch (mTouchMode) {
+default :
+    return;
+case TOUCH_MODE_FLINGING:
+{
+    if (mItemCount == 0 || getChildCount() == 0) {
+      endFling();
+      return;
+    }
+    final Scroller scroller=mScroller;
+    boolean more=scroller.computeScrollOffset();
+    final int y=scroller.getCurrY();
+    int delta=mLastFlingY - y;
+    if (delta > 0) {
+      mMotionPosition=mFirstPosition;
+      delta=Math.min(getHeight() - getPaddingBottom() - getPaddingTop()- 1,delta);
+    }
+ else {
+      int offsetToLast=getChildCount() - 1;
+      mMotionPosition=mFirstPosition + offsetToLast;
+      delta=Math.max(-(getHeight() - getPaddingBottom() - getPaddingTop()- 1),delta);
+    }
+    final boolean atEnd=moveTheChildren(delta,delta);
+    if (more && !atEnd) {
+      invalidate();
+      mLastFlingY=y;
+      postOnAnimate(this);
+    }
+ else {
+      endFling();
+    }
+    break;
+  }
+}
+}

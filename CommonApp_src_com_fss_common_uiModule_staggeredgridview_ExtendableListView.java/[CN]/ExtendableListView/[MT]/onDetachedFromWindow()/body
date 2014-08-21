@@ -1,0 +1,8 @@
+{
+  super.onDetachedFromWindow();
+  mRecycleBin.clear();
+  if (mFlingRunnable != null) {
+    removeCallbacks(mFlingRunnable);
+  }
+  mIsAttached=false;
+}

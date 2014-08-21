@@ -1,0 +1,11 @@
+{
+  onSecondaryPointerUp(event);
+  final int x=mMotionX;
+  final int y=mMotionY;
+  final int motionPosition=pointToPosition(x,y);
+  if (motionPosition >= 0) {
+    mMotionPosition=motionPosition;
+  }
+  mLastY=y;
+  return true;
+}

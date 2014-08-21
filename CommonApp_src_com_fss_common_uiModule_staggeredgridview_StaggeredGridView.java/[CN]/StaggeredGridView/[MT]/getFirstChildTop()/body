@@ -1,0 +1,6 @@
+{
+  if (isHeaderOrFooter(mFirstPosition)) {
+    return super.getFirstChildTop();
+  }
+  return getLowestPositionedTop();
+}

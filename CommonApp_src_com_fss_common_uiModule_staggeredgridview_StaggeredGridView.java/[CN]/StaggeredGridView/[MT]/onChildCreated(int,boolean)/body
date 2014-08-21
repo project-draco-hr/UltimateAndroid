@@ -1,0 +1,11 @@
+{
+  super.onChildCreated(position,flowDown);
+  if (!isHeaderOrFooter(position)) {
+    final int column=getChildColumn(position,flowDown);
+    setPositionColumn(position,column);
+    if (DBG)     Log.d(TAG,"onChildCreated position:" + position + " is in column:"+ column);
+  }
+ else {
+    setPositionIsHeaderFooter(position);
+  }
+}

@@ -1,0 +1,9 @@
+{
+  if (!mNeedSync) {
+    Arrays.fill(mColumnBottoms,0);
+  }
+ else {
+    mNeedSync=false;
+  }
+  System.arraycopy(mColumnTops,0,mColumnBottoms,0,mColumnCount);
+}

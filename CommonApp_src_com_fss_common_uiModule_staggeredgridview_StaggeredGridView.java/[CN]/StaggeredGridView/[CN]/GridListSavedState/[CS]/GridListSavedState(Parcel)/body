@@ -1,0 +1,7 @@
+{
+  super(in);
+  columnCount=in.readInt();
+  columnTops=new int[columnCount >= 0 ? columnCount : 0];
+  in.readIntArray(columnTops);
+  positionData=in.readSparseArray(GridItemRecord.class.getClassLoader());
+}

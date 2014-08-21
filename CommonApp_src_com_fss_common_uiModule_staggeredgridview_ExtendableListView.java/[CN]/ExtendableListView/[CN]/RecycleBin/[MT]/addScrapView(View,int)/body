@@ -1,0 +1,31 @@
+{
+  if (DBG)   Log.d(TAG,"addScrapView position = " + position);
+  LayoutParams lp=(LayoutParams)scrap.getLayoutParams();
+  if (lp == null) {
+    return;
+  }
+  lp.position=position;
+  int viewType=lp.viewType;
+  final boolean scrapHasTransientState=ViewCompat.hasTransientState(scrap);
+  if (!shouldRecycleViewType(viewType) || scrapHasTransientState) {
+    if (viewType != ITEM_VIEW_TYPE_HEADER_OR_FOOTER || scrapHasTransientState) {
+      if (mSkippedScrap == null) {
+        mSkippedScrap=new ArrayList<View>();
+      }
+      mSkippedScrap.add(scrap);
+    }
+    if (scrapHasTransientState) {
+      if (mTransientStateViews == null) {
+        mTransientStateViews=new SparseArrayCompat<View>();
+      }
+      mTransientStateViews.put(position,scrap);
+    }
+    return;
+  }
+  if (mViewTypeCount == 1) {
+    mCurrentScrap.add(scrap);
+  }
+ else {
+    mScrapViews[viewType].add(scrap);
+  }
+}

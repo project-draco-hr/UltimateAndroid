@@ -1,0 +1,12 @@
+{
+  if (mViewTypeCount == 1) {
+    return retrieveFromScrap(mCurrentScrap,position);
+  }
+ else {
+    int whichScrap=mAdapter.getItemViewType(position);
+    if (whichScrap >= 0 && whichScrap < mScrapViews.length) {
+      return retrieveFromScrap(mScrapViews[whichScrap],position);
+    }
+  }
+  return null;
+}

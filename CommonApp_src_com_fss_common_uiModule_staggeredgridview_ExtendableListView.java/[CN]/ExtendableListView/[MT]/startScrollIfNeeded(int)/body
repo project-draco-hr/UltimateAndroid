@@ -1,0 +1,30 @@
+{
+  final int deltaY=y - mMotionY;
+  final int distance=Math.abs(deltaY);
+  final boolean overscroll=false;
+  if (overscroll || distance > mTouchSlop) {
+    if (overscroll) {
+      mMotionCorrection=0;
+    }
+ else {
+      mTouchMode=TOUCH_MODE_SCROLLING;
+      mMotionCorrection=deltaY > 0 ? mTouchSlop : -mTouchSlop;
+    }
+    final Handler handler=getHandler();
+    if (handler != null) {
+      handler.removeCallbacks(mPendingCheckForLongPress);
+    }
+    setPressed(false);
+    View motionView=getChildAt(mMotionPosition - mFirstPosition);
+    if (motionView != null) {
+      motionView.setPressed(false);
+    }
+    final ViewParent parent=getParent();
+    if (parent != null) {
+      parent.requestDisallowInterceptTouchEvent(true);
+    }
+    scrollIfNeeded(y);
+    return true;
+  }
+  return false;
+}

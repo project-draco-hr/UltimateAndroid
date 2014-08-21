@@ -1,0 +1,8 @@
+{
+  if (mVelocityTracker == null) {
+    mVelocityTracker=VelocityTracker.obtain();
+  }
+ else {
+    mVelocityTracker.clear();
+  }
+}

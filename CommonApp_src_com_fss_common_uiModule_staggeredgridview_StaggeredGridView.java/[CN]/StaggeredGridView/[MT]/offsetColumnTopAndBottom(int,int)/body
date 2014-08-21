@@ -1,0 +1,6 @@
+{
+  if (offset != 0) {
+    mColumnTops[column]+=offset;
+    mColumnBottoms[column]+=offset;
+  }
+}

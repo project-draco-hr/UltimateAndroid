@@ -1,0 +1,9 @@
+{
+  super.onAttachedToWindow();
+  if (mAdapter != null) {
+    mDataChanged=true;
+    mOldItemCount=mItemCount;
+    mItemCount=mAdapter.getCount();
+  }
+  mIsAttached=true;
+}
