@@ -1,0 +1,9 @@
+{
+  mReachedBarPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mReachedBarPaint.setColor(mReachedBarColor);
+  mUnreachedBarPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mUnreachedBarPaint.setColor(mUnreachedBarColor);
+  mTextPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mTextPaint.setColor(mTextColor);
+  mTextPaint.setTextSize(mTextSize);
+}

@@ -1,0 +1,22 @@
+{
+  int result;
+  int mode=MeasureSpec.getMode(measureSpec);
+  int size=MeasureSpec.getSize(measureSpec);
+  int padding=isWidth ? getPaddingLeft() + getPaddingRight() : getPaddingTop() + getPaddingBottom();
+  if (mode == MeasureSpec.EXACTLY) {
+    result=size;
+  }
+ else {
+    result=isWidth ? getSuggestedMinimumWidth() : getSuggestedMinimumHeight();
+    result+=padding;
+    if (mode == MeasureSpec.AT_MOST) {
+      if (isWidth) {
+        result=Math.max(result,size);
+      }
+ else {
+        result=Math.min(result,size);
+      }
+    }
+  }
+  return result;
+}

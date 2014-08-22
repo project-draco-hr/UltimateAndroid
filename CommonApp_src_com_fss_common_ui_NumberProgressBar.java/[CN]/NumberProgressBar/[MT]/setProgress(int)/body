@@ -1,0 +1,6 @@
+{
+  if (Progress <= getMax() && Progress >= 0) {
+    this.mProgress=Progress;
+    invalidate();
+  }
+}
