@@ -1,0 +1,15 @@
+{
+switch (v.getId()) {
+case R.id.btn_increase_font_size:
+    increaseFontSize();
+  break;
+case R.id.btn_decrease_font_size:
+decreaseFontSize();
+break;
+case R.id.btn_reset:
+reset();
+break;
+default :
+break;
+}
+}

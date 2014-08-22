@@ -254,6 +254,16 @@
   map.put("detail","try");
   map.put("subname","ListView");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FlowTextView");
+  map.put("detail","try");
+  map.put("subname","TextView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Google");
+  map.put("detail","try");
+  map.put("subname","ProgressBar");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -422,6 +432,12 @@ BasicUtils.sendIntent(getActivity(),StaggeredGridViewActivity.class);
 break;
 case 50:
 BasicUtils.sendIntent(getActivity(),DropDownListViewDemo.class);
+break;
+case 51:
+BasicUtils.sendIntent(getActivity(),FlowTextViewActivity.class);
+break;
+case 52:
+BasicUtils.sendIntent(getActivity(),GoogleProgressBarActivity.class);
 break;
 }
 }
