@@ -1,0 +1,39 @@
+{
+  int circleRadius=mSize / 10;
+  canvas.drawRect(0,0,mSize,mSize,shadow ? mPaintShadow : mPaint);
+switch (side) {
+case ONE:
+    canvas.drawCircle(mSize / 2,mSize / 2,circleRadius,mPaintCircle);
+  break;
+case TWO:
+canvas.drawCircle(mSize / 4,mSize - mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+break;
+case THREE:
+canvas.drawCircle(mSize / 2,mSize / 2,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize - mSize / 4,mSize / 10,mPaintCircle);
+break;
+case FOUR:
+canvas.drawCircle(mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize / 4,mSize - mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize - mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+break;
+case FIVE:
+canvas.drawCircle(mSize / 2,mSize / 2,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize / 4,mSize - mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize - mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+break;
+case SIX:
+canvas.drawCircle(mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize / 4,mSize / 2,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize / 4,mSize - mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize / 4,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize / 2,circleRadius,mPaintCircle);
+canvas.drawCircle(mSize - mSize / 4,mSize - mSize / 4,circleRadius,mPaintCircle);
+break;
+}
+}

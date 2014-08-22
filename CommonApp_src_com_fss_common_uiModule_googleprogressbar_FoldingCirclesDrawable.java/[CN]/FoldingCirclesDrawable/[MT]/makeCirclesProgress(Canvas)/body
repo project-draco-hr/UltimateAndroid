@@ -1,0 +1,13 @@
+{
+switch (mCurrentState) {
+case FOLDING_DOWN:
+case FOLDING_UP:
+    drawYMotion(canvas);
+  break;
+case FOLDING_RIGHT:
+case FOLDING_LEFT:
+drawXMotion(canvas);
+break;
+}
+canvas.drawPath(mPath,mAbovePaint);
+}

@@ -1,0 +1,6 @@
+{
+  mPaint1.setColorFilter(cf);
+  mPaint2.setColorFilter(cf);
+  mPaint3.setColorFilter(cf);
+  mPaint4.setColorFilter(cf);
+}

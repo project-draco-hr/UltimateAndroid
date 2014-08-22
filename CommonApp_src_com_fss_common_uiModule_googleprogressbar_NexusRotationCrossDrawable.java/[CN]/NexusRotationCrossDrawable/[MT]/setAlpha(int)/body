@@ -1,0 +1,6 @@
+{
+  mPaint1.setAlpha(alpha);
+  mPaint2.setAlpha(alpha);
+  mPaint3.setAlpha(alpha);
+  mPaint4.setAlpha(alpha);
+}

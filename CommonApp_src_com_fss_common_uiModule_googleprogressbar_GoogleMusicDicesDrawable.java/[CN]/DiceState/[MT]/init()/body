@@ -1,0 +1,11 @@
+{
+  mPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mPaint.setColor(DICE_SIDE_COLOR);
+  mPaintShadow=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mPaintShadow.setColor(DICE_SIDE_SHADOW_COLOR);
+  mPaintCircle=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mPaintCircle.setColor(Color.WHITE);
+  mDiceStates=new DiceState[]{new DiceState(DiceSide.ONE,DiceSide.THREE),new DiceState(DiceSide.TWO,DiceSide.THREE),new DiceState(DiceSide.TWO,DiceSide.SIX),new DiceState(DiceSide.FOUR,DiceSide.SIX),new DiceState(DiceSide.FOUR,DiceSide.FIVE),new DiceState(DiceSide.ONE,DiceSide.FIVE)};
+  mDiceRotation=DiceRotation.LEFT;
+  initObjectAnimator();
+}

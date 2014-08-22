@@ -1,0 +1,26 @@
+{
+  int animationLevel=level == MAX_LEVEL ? 0 : level;
+  int stateForLevel=(int)(animationLevel / MAX_LEVEL_PER_CIRCLE);
+  mCurrentState=ProgressStates.values()[stateForLevel];
+  resetColor(mCurrentState);
+  int levelForCircle=(int)(animationLevel % MAX_LEVEL_PER_CIRCLE);
+  boolean halfPassed;
+  if (!goesBackward) {
+    halfPassed=levelForCircle != (int)(animationLevel % (MAX_LEVEL_PER_CIRCLE / 2));
+  }
+ else {
+    halfPassed=levelForCircle == (int)(animationLevel % (MAX_LEVEL_PER_CIRCLE / 2));
+    levelForCircle=(int)(MAX_LEVEL_PER_CIRCLE - levelForCircle);
+  }
+  mFstHalfPaint.setColor(fstColor);
+  mScndHalfPaint.setColor(scndColor);
+  if (!halfPassed) {
+    mAbovePaint.setColor(mScndHalfPaint.getColor());
+  }
+ else {
+    mAbovePaint.setColor(mFstHalfPaint.getColor());
+  }
+  setAlpha(mAlpha);
+  mAxisValue=(int)(mControlPointMinimum + (mControlPointMaximum - mControlPointMinimum) * (levelForCircle / MAX_LEVEL_PER_CIRCLE));
+  return true;
+}
