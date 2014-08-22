@@ -1,0 +1,5 @@
+ArrayList<HtmlObject> objects
+Object[] spans
+int lineStart
+int lineEnd
+float baseXOffset

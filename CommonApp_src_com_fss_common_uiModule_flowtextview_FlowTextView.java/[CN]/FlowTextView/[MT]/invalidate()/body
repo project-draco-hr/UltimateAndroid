@@ -1,0 +1,4 @@
+{
+  this.needsMeasure=true;
+  super.invalidate();
+}

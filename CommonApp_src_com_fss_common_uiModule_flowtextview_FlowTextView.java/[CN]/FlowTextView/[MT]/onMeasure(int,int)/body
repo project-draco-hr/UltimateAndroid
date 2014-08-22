@@ -1,0 +1,22 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  int widthMode=MeasureSpec.getMode(widthMeasureSpec);
+  int heightMode=MeasureSpec.getMode(heightMeasureSpec);
+  int widthSize=MeasureSpec.getSize(widthMeasureSpec);
+  int heightSize=MeasureSpec.getSize(heightMeasureSpec);
+  int width;
+  int height;
+  if (widthMode == MeasureSpec.EXACTLY) {
+    width=widthSize;
+  }
+ else {
+    width=this.getWidth();
+  }
+  if (heightMode == MeasureSpec.EXACTLY) {
+    height=heightSize;
+  }
+ else {
+    height=mDesiredHeight;
+  }
+  setMeasuredDimension(width,height + getLineHeight());
+}

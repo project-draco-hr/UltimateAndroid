@@ -1,0 +1,58 @@
+{
+  sorterMap.clear();
+  int charFlagSize=lineEnd - lineStart;
+  boolean[] charFlags=new boolean[charFlagSize];
+  String tempString;
+  int spanStart;
+  int spanEnd;
+  int charCounter;
+  for (  Object span : spans) {
+    spanStart=mSpannable.getSpanStart(span);
+    spanEnd=mSpannable.getSpanEnd(span);
+    if (spanStart < lineStart)     spanStart=lineStart;
+    if (spanEnd > lineEnd)     spanEnd=lineEnd;
+    for (charCounter=spanStart; charCounter < spanEnd; charCounter++) {
+      int charFlagIndex=charCounter - lineStart;
+      charFlags[charFlagIndex]=true;
+    }
+    tempString=extractText(spanStart,spanEnd);
+    sorterMap.put(spanStart,parseSpan(span,tempString,spanStart,spanEnd));
+  }
+  charCounter=0;
+  while (!isArrayFull(charFlags)) {
+    while (true) {
+      if (charCounter >= charFlagSize)       break;
+      if (charFlags[charCounter] == true) {
+        charCounter++;
+        continue;
+      }
+      int temp1=charCounter;
+      while (true) {
+        if (charCounter > charFlagSize)         break;
+        if (charCounter < charFlagSize) {
+          if (charFlags[charCounter] == false) {
+            charFlags[charCounter]=true;
+            charCounter++;
+            continue;
+          }
+        }
+        int temp2=charCounter;
+        spanStart=lineStart + temp1;
+        spanEnd=lineStart + temp2;
+        tempString=extractText(spanStart,spanEnd);
+        sorterMap.put(spanStart,parseSpan(null,tempString,spanStart,spanEnd));
+        break;
+      }
+    }
+  }
+  Object[] sorterKeys=sorterMap.keySet().toArray();
+  Arrays.sort(sorterKeys);
+  float thisXoffset=baseXOffset;
+  for (charCounter=0; charCounter < sorterKeys.length; charCounter++) {
+    HtmlObject thisObj=sorterMap.get(sorterKeys[charCounter]);
+    thisObj.xOffset=thisXoffset;
+    thisXoffset+=thisObj.paint.measureText(thisObj.content);
+    objects.add(thisObj);
+  }
+  return (thisXoffset - baseXOffset);
+}

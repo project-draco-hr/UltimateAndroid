@@ -1,0 +1,22 @@
+{
+  int event_code=event.getAction();
+  if (event_code == MotionEvent.ACTION_DOWN) {
+    distance=0;
+    x1=event.getX();
+    y1=event.getY();
+  }
+  if (event_code == MotionEvent.ACTION_MOVE) {
+    x2=event.getX();
+    y2=event.getY();
+    distance=getPointDistance(x1,y1,x2,y2);
+  }
+  if (distance < 10) {
+    if (event_code == MotionEvent.ACTION_UP) {
+      onClick(event.getX(),event.getY());
+    }
+    return true;
+  }
+ else {
+    return false;
+  }
+}
