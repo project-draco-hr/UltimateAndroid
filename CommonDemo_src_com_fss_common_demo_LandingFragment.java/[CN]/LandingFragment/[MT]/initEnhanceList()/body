@@ -249,6 +249,11 @@
   map.put("detail","try");
   map.put("subname","GridView");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","DropDownListview");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -414,6 +419,9 @@ BasicUtils.sendIntent(getActivity(),SuperListViewActivity.class);
 break;
 case 49:
 BasicUtils.sendIntent(getActivity(),StaggeredGridViewActivity.class);
+break;
+case 50:
+BasicUtils.sendIntent(getActivity(),DropDownListViewDemo.class);
 break;
 }
 }
