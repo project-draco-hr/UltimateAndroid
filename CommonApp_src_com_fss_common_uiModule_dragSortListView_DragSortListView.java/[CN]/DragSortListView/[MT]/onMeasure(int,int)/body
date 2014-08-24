@@ -1,0 +1,10 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  if (mFloatView != null) {
+    if (mFloatView.isLayoutRequested()) {
+      measureFloatView();
+    }
+    mFloatViewOnMeasured=true;
+  }
+  mWidthMeasureSpec=widthMeasureSpec;
+}

@@ -1,0 +1,23 @@
+{
+  mFloatLoc.x=x - mDragDeltaX;
+  mFloatLoc.y=y - mDragDeltaY;
+  doDragFloatView(true);
+  int minY=Math.min(y,mFloatViewMid + mFloatViewHeightHalf);
+  int maxY=Math.max(y,mFloatViewMid - mFloatViewHeightHalf);
+  int currentScrollDir=mDragScroller.getScrollDir();
+  if (minY > mLastY && minY > mDownScrollStartY && currentScrollDir != DragScroller.DOWN) {
+    if (currentScrollDir != DragScroller.STOP) {
+      mDragScroller.stopScrolling(true);
+    }
+    mDragScroller.startScrolling(DragScroller.DOWN);
+  }
+ else   if (maxY < mLastY && maxY < mUpScrollStartY && currentScrollDir != DragScroller.UP) {
+    if (currentScrollDir != DragScroller.STOP) {
+      mDragScroller.stopScrolling(true);
+    }
+    mDragScroller.startScrolling(DragScroller.UP);
+  }
+ else   if (maxY >= mUpScrollStartY && minY <= mDownScrollStartY && mDragScroller.isScrolling()) {
+    mDragScroller.stopScrolling(true);
+  }
+}

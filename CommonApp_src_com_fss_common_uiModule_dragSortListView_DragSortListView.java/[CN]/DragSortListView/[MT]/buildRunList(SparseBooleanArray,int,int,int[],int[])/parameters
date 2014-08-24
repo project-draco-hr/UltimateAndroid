@@ -1,0 +1,5 @@
+SparseBooleanArray cip
+int rangeStart
+int rangeEnd
+int[] runStart
+int[] runEnd

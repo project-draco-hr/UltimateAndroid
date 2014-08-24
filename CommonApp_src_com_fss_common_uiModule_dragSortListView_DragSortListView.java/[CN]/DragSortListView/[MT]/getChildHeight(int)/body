@@ -1,0 +1,36 @@
+{
+  if (position == mSrcPos) {
+    return 0;
+  }
+  View v=getChildAt(position - getFirstVisiblePosition());
+  if (v != null) {
+    return getChildHeight(position,v,false);
+  }
+ else {
+    int childHeight=mChildHeightCache.get(position);
+    if (childHeight != -1) {
+      return childHeight;
+    }
+    final ListAdapter adapter=getAdapter();
+    int type=adapter.getItemViewType(position);
+    final int typeCount=adapter.getViewTypeCount();
+    if (typeCount != mSampleViewTypes.length) {
+      mSampleViewTypes=new View[typeCount];
+    }
+    if (type >= 0) {
+      if (mSampleViewTypes[type] == null) {
+        v=adapter.getView(position,null,this);
+        mSampleViewTypes[type]=v;
+      }
+ else {
+        v=adapter.getView(position,mSampleViewTypes[type],this);
+      }
+    }
+ else {
+      v=adapter.getView(position,null,this);
+    }
+    childHeight=getChildHeight(position,v,true);
+    mChildHeightCache.add(position,childHeight);
+    return childHeight;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  try {
+    v.setImageResource(Integer.parseInt(value));
+  }
+ catch (  NumberFormatException nfe) {
+    v.setImageURI(Uri.parse(value));
+  }
+}

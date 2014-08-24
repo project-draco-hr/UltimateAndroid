@@ -1,0 +1,8 @@
+{
+  if (mAdapterWrapper == null) {
+    return null;
+  }
+ else {
+    return mAdapterWrapper.getAdapter();
+  }
+}

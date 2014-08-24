@@ -1,0 +1,5 @@
+{
+  mMap=new SparseIntArray(size);
+  mOrder=new ArrayList<Integer>(size);
+  mMaxSize=size;
+}
