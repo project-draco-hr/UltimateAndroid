@@ -1,0 +1,11 @@
+{
+  View v=super.getView(position,convertView,parent);
+  View tv=v.findViewById(R.id.text);
+  tv.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      Toast.makeText(mContext,"text clicked",Toast.LENGTH_SHORT).show();
+    }
+  }
+);
+  return v;
+}

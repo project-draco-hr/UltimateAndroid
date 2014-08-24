@@ -1,0 +1,5 @@
+{
+  Intent intent=new Intent();
+  intent.setClassName(this,mActivities.get(position).name);
+  startActivity(intent);
+}

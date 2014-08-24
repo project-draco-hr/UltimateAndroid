@@ -1,0 +1,7 @@
+{
+  if (from != to) {
+    String data=mData.remove(dataPosition(from));
+    mData.add(dataPosition(to),data);
+    notifyDataSetChanged();
+  }
+}

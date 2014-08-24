@@ -1,0 +1,11 @@
+{
+  if (position == mDivPos) {
+    return SECTION_DIV;
+  }
+ else   if (position < mDivPos) {
+    return SECTION_ONE;
+  }
+ else {
+    return SECTION_TWO;
+  }
+}
