@@ -269,6 +269,11 @@
   map.put("detail","try");
   map.put("subname","ProgressBar");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FancyCoverFlow");
+  map.put("detail","try");
+  map.put("subname","FancyCoverFlow");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -446,6 +451,9 @@ BasicUtils.sendIntent(getActivity(),GoogleProgressBarActivity.class);
 break;
 case 53:
 BasicUtils.sendIntent(getActivity(),NumberProgressBarActivity.class);
+break;
+case 54:
+BasicUtils.sendIntent(getActivity(),FancyCoverFlowActivity.class);
 break;
 }
 }

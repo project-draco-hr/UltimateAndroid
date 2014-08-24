@@ -1,0 +1,13 @@
+{
+  CustomViewGroup customViewGroup=null;
+  if (reuseableView != null) {
+    customViewGroup=(CustomViewGroup)reuseableView;
+  }
+ else {
+    customViewGroup=new CustomViewGroup(viewGroup.getContext());
+    customViewGroup.setLayoutParams(new FancyCoverFlow.LayoutParams(300,600));
+  }
+  customViewGroup.getImageView().setImageResource(this.getItem(i));
+  customViewGroup.getTextView().setText(String.format("Item %d",i));
+  return customViewGroup;
+}
