@@ -1,0 +1,4 @@
+{
+  mHeaderLayoutResId=layoutResId;
+  return (T)this;
+}

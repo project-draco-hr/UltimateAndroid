@@ -1,0 +1,4 @@
+{
+  mHeaderOverlayView=view;
+  return (T)this;
+}

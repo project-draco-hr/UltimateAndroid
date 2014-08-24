@@ -1,0 +1,4 @@
+{
+  mLightActionBar=value;
+  return (T)this;
+}

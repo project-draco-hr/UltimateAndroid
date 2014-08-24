@@ -1,0 +1,22 @@
+{
+  try {
+    Method method=activity.getClass().getMethod(methodName);
+    return (T)method.invoke(activity);
+  }
+ catch (  NoSuchMethodException e) {
+    e.printStackTrace();
+  }
+catch (  IllegalArgumentException e) {
+    e.printStackTrace();
+  }
+catch (  IllegalAccessException e) {
+    e.printStackTrace();
+  }
+catch (  InvocationTargetException e) {
+    e.printStackTrace();
+  }
+catch (  ClassCastException e) {
+    e.printStackTrace();
+  }
+  return null;
+}
