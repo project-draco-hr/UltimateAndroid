@@ -1,0 +1,12 @@
+{
+  View child=this.getChildAt(0);
+  if (child != null) {
+    final int originalChildHeight=this.getMeasuredHeight();
+    this.originalScaledownFactor=this.isReflectionEnabled ? (originalChildHeight * (1 - this.imageReflectionRatio) - reflectionGap) / originalChildHeight : 1.0f;
+    final int childHeight=(int)(this.originalScaledownFactor * originalChildHeight);
+    final int childWidth=(int)(this.originalScaledownFactor * getMeasuredWidth());
+    int heightSpec=MeasureSpec.makeMeasureSpec(childHeight,MeasureSpec.AT_MOST);
+    int widthSpec=MeasureSpec.makeMeasureSpec(childWidth,MeasureSpec.AT_MOST);
+    this.getChildAt(0).measure(widthSpec,heightSpec);
+  }
+}

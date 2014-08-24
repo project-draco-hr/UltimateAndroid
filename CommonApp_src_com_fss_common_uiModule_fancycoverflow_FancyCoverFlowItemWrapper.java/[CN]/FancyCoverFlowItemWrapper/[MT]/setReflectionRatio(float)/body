@@ -1,0 +1,6 @@
+{
+  if (imageReflectionRatio != this.imageReflectionRatio) {
+    this.imageReflectionRatio=imageReflectionRatio;
+    this.remeasureChildren();
+  }
+}
