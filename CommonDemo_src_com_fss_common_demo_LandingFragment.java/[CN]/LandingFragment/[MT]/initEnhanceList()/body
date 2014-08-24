@@ -284,6 +284,11 @@
   map.put("detail","try");
   map.put("subname","Listview");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FadingActionbar");
+  map.put("detail","try");
+  map.put("subname","FadingActionbar");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -470,6 +475,9 @@ BasicUtils.sendIntent(getActivity(),SingleChoiceListView.class);
 break;
 case 56:
 BasicUtils.sendIntent(getActivity(),MultipleChoiceListView.class);
+break;
+case 57:
+BasicUtils.sendIntent(getActivity(),HomeActivity.class);
 break;
 }
 }

@@ -1,0 +1,12 @@
+{
+  Fragment fragment=new SampleFragment();
+  Bundle args=new Bundle();
+  args.putInt(SampleFragment.ARG_IMAGE_RES,mCityImages[position]);
+  args.putInt(SampleFragment.ARG_ACTION_BG_RES,R.drawable.fading_actionbar_ab_background);
+  fragment.setArguments(args);
+  FragmentManager fragmentManager=getFragmentManager();
+  fragmentManager.beginTransaction().replace(R.id.content_frame,fragment).commit();
+  mDrawerList.setItemChecked(position,true);
+  setTitle(mCityNames[position]);
+  mDrawerLayout.closeDrawer(mDrawerList);
+}
