@@ -2,7 +2,6 @@
   new Thread(){
     @Override public void run(){
       super.run();
-      Logs.d("11111");
       HttpsUtils.sendWithSSlSocketWithCrt(MainActivity.this,"ca.crt","https://xxx.xxx");
     }
   }
