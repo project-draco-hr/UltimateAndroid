@@ -6,7 +6,7 @@
     if (oldfile.exists()) {
       InputStream inStream=new FileInputStream(oldPath);
       FileOutputStream fs=new FileOutputStream(newPath);
-      byte[] buffer=new byte[1444];
+      byte[] buffer=new byte[1024];
       int length;
       while ((byteread=inStream.read(buffer)) != -1) {
         bytesum+=byteread;
@@ -17,7 +17,7 @@
     }
   }
  catch (  Exception e) {
-    System.out.println("??????????????????????????????");
+    System.out.println("copy failed");
     e.printStackTrace();
   }
 }
