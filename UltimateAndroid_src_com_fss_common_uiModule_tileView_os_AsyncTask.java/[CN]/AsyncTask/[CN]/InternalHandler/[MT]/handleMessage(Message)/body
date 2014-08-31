@@ -1,0 +1,11 @@
+{
+  AsyncTaskResult result=(AsyncTaskResult)msg.obj;
+switch (msg.what) {
+case MESSAGE_POST_RESULT:
+    result.mTask.finish(result.mData[0]);
+  break;
+case MESSAGE_POST_PROGRESS:
+result.mTask.onProgressUpdate(result.mData);
+break;
+}
+}

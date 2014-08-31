@@ -1,0 +1,12 @@
+{
+  float startAngle=mCurrentGlobalAngle - mCurrentGlobalAngleOffset;
+  float sweepAngle=mCurrentSweepAngle;
+  if (!mModeAppearing) {
+    startAngle=startAngle + sweepAngle;
+    sweepAngle=360 - sweepAngle - MIN_SWEEP_ANGLE;
+  }
+ else {
+    sweepAngle+=MIN_SWEEP_ANGLE;
+  }
+  canvas.drawArc(fBounds,startAngle,sweepAngle,false,mPaint);
+}

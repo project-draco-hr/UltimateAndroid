@@ -1,0 +1,3 @@
+{
+  return mScrolling ? scrollDir : STOP;
+}

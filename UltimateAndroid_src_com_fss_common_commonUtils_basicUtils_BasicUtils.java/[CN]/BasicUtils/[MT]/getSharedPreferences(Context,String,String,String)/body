@@ -1,0 +1,5 @@
+{
+  SharedPreferences sp=context.getSharedPreferences(fileName,0);
+  String parameter=sp.getString(parameterName,otherDefaultReturns);
+  return parameter;
+}

@@ -1,0 +1,6 @@
+{
+  if (mDelegate == null) {
+    return 0;
+  }
+  return mDelegate.getCount();
+}

@@ -1,0 +1,3 @@
+{
+  return team.getId() == null && findByName(team.getName()) != null;
+}

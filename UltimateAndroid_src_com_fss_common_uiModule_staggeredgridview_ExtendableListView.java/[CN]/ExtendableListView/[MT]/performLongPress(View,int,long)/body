@@ -1,0 +1,11 @@
+{
+  boolean handled=false;
+  OnItemLongClickListener onItemLongClickListener=getOnItemLongClickListener();
+  if (onItemLongClickListener != null) {
+    handled=onItemLongClickListener.onItemLongClick(ExtendableListView.this,child,longPressPosition,longPressId);
+  }
+  if (handled) {
+    performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+  }
+  return handled;
+}

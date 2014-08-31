@@ -1,0 +1,32 @@
+{
+  HttpClient newInstance;
+  HttpParams params=new BasicHttpParams();
+  HttpProtocolParams.setVersion(params,HttpVersion.HTTP_1_1);
+  HttpProtocolParams.setContentCharset(params,HTTP.DEFAULT_CONTENT_CHARSET);
+  HttpProtocolParams.setUseExpectContinue(params,true);
+  ConnManagerParams.setTimeout(params,5000);
+  HttpConnectionParams.setConnectionTimeout(params,TIMEOUT);
+  HttpConnectionParams.setSoTimeout(params,TIMEOUT_SOCKET);
+  SchemeRegistry schReg=new SchemeRegistry();
+  schReg.register(new Scheme("http",PlainSocketFactory.getSocketFactory(),80));
+  schReg.register(new Scheme("https",SSLSocketFactory.getSocketFactory(),443));
+  ClientConnectionManager conMgr=new ThreadSafeClientConnManager(params,schReg);
+  newInstance=new DefaultHttpClient(conMgr,params);
+switch (checkNetworkType(mContext)) {
+case TYPE_CT_WAP:
+{
+      HttpHost proxy=new HttpHost("10.0.0.200",80,"http");
+      newInstance.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,proxy);
+      Logs.v("?????????????????????cm_cu_wap,????????????10.0.0.200??????www");
+    }
+  break;
+case TYPE_CM_CU_WAP:
+{
+  HttpHost proxy=new HttpHost("10.0.0.172",80,"http");
+  newInstance.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY,proxy);
+  Logs.v("?????????????????????cm_cu_wap,????????????10.0.0.172??????www");
+}
+break;
+}
+return newInstance;
+}

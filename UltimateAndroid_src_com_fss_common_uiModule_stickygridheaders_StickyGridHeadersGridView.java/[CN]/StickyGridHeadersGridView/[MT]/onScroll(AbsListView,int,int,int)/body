@@ -1,0 +1,8 @@
+{
+  if (mScrollListener != null) {
+    mScrollListener.onScroll(view,firstVisibleItem,visibleItemCount,totalItemCount);
+  }
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO) {
+    scrollChanged(firstVisibleItem);
+  }
+}

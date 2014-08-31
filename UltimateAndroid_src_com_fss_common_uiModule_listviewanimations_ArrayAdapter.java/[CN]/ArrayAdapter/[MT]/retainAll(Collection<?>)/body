@@ -1,0 +1,5 @@
+{
+  boolean result=mItems.retainAll(objects);
+  notifyDataSetChanged();
+  return result;
+}

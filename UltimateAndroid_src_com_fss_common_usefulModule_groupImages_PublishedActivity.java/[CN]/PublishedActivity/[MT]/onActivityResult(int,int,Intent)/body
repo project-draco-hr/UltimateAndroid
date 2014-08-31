@@ -1,0 +1,12 @@
+{
+  if (resultCode == RESULT_OK) {
+switch (requestCode) {
+case TAKE_PICTURE:
+      if (Bimp.drr.size() < 9 && resultCode == RESULT_OK) {
+        Bimp.drr.add(path);
+        Logs.d("path--" + path);
+      }
+    break;
+}
+}
+}

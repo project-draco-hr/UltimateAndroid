@@ -1,0 +1,37 @@
+{
+  if (mProperty != null) {
+    try {
+      Object testValue=mProperty.get(target);
+      for (      Keyframe kf : mKeyframeSet.mKeyframes) {
+        if (!kf.hasValue()) {
+          kf.setValue(mProperty.get(target));
+        }
+      }
+      return;
+    }
+ catch (    ClassCastException e) {
+      Log.e("PropertyValuesHolder","No such property (" + mProperty.getName() + ") on target object "+ target+ ". Trying reflection instead");
+      mProperty=null;
+    }
+  }
+  Class targetClass=target.getClass();
+  if (mSetter == null) {
+    setupSetter(targetClass);
+  }
+  for (  Keyframe kf : mKeyframeSet.mKeyframes) {
+    if (!kf.hasValue()) {
+      if (mGetter == null) {
+        setupGetter(targetClass);
+      }
+      try {
+        kf.setValue(mGetter.invoke(target));
+      }
+ catch (      InvocationTargetException e) {
+        Log.e("PropertyValuesHolder",e.toString());
+      }
+catch (      IllegalAccessException e) {
+        Log.e("PropertyValuesHolder",e.toString());
+      }
+    }
+  }
+}

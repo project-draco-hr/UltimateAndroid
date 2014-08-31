@@ -1,0 +1,10 @@
+{
+  if (mHeightRatio > 0.0) {
+    int width=MeasureSpec.getSize(widthMeasureSpec);
+    int height=(int)(width * mHeightRatio);
+    setMeasuredDimension(width,height);
+  }
+ else {
+    super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  }
+}

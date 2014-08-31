@@ -1,0 +1,7 @@
+{
+  SharedPreferences preferences=getPreferences(MODE_PRIVATE);
+  meetingLength=preferences.getInt(MEETING_LENGTH,5);
+  numParticipants=preferences.getInt(NUMBER_OF_PARTICIPANTS,2);
+  teamNamesPos=preferences.getInt(TEAM_NAMES_POS,0);
+  Logger.i("Retrieved state.  mettingLengthPos = " + meetingLength + ", numParticipants = "+ numParticipants+ ", teamNamePos = "+ teamNamesPos);
+}

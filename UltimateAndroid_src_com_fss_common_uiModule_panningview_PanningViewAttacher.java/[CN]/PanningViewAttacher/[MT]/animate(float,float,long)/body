@@ -1,0 +1,35 @@
+{
+  Log.d(TAG,"startPanning : " + start + " to "+ end+ ", in "+ duration+ "ms");
+  mCurrentAnimator=ValueAnimator.ofFloat(start,end);
+  mCurrentAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator animation){
+      float value=(Float)animation.getAnimatedValue();
+      mMatrix.reset();
+      applyScaleOnMatrix();
+      if (mIsPortrait) {
+        mMatrix.postTranslate(value,0);
+      }
+ else {
+        mMatrix.postTranslate(0,value);
+      }
+      refreshDisplayRect();
+      mCurrentPlayTime=animation.getCurrentPlayTime();
+      setCurrentImageMatrix();
+    }
+  }
+);
+  mCurrentAnimator.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      Log.d(TAG,"animation has finished, startPanning in the other way");
+      changeWay();
+      animate_();
+    }
+    @Override public void onAnimationCancel(    Animator animation){
+      Log.d(TAG,"panning animation canceled");
+    }
+  }
+);
+  mCurrentAnimator.setDuration(duration);
+  mCurrentAnimator.setInterpolator(mLinearInterpolator);
+  mCurrentAnimator.start();
+}

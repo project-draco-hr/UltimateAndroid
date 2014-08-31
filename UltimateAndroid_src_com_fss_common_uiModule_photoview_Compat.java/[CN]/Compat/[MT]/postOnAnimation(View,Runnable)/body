@@ -1,0 +1,8 @@
+{
+  if (VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN) {
+    postOnAnimationJellyBean(view,runnable);
+  }
+ else {
+    view.postDelayed(runnable,SIXTY_FPS_INTERVAL);
+  }
+}

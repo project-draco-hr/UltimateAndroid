@@ -1,0 +1,18 @@
+{
+  MorphingAnimation animation=createProgressMorphing(getHeight(),mCornerRadius,getHeight(),getWidth());
+  animation.setFromColor(mColorProgress);
+  animation.setToColor(getNormalColor(mIdleColorState));
+  animation.setFromStrokeColor(mColorIndicator);
+  animation.setToStrokeColor(getNormalColor(mIdleColorState));
+  animation.setListener(new OnAnimationEndListener(){
+    @Override public void onAnimationEnd(){
+      removeIcon();
+      setText(mIdleText);
+      mMorphingInProgress=false;
+      mState=State.IDLE;
+      mStateManager.checkState(CircularProgressButton.this);
+    }
+  }
+);
+  animation.start();
+}

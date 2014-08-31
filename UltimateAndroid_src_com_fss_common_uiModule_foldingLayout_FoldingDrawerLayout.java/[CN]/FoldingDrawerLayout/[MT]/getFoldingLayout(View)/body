@@ -1,0 +1,6 @@
+{
+  if (!isDrawerView2(getRealDrawer(drawerView))) {
+    throw new IllegalArgumentException("View " + drawerView + " is not a sliding drawer");
+  }
+  return isFoldingLayout(getRealDrawer(drawerView)) ? (BaseFoldingLayout)getRealDrawer(drawerView) : null;
+}

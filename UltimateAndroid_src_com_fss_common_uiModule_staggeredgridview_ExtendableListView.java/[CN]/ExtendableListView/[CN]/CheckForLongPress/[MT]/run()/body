@@ -1,0 +1,20 @@
+{
+  final int motionPosition=mMotionPosition;
+  final View child=getChildAt(motionPosition);
+  if (child != null) {
+    final int longPressPosition=mMotionPosition;
+    final long longPressId=mAdapter.getItemId(mMotionPosition + mFirstPosition);
+    boolean handled=false;
+    if (sameWindow() && !mDataChanged) {
+      handled=performLongPress(child,longPressPosition + mFirstPosition,longPressId);
+    }
+    if (handled) {
+      mTouchMode=TOUCH_MODE_IDLE;
+      setPressed(false);
+      child.setPressed(false);
+    }
+ else {
+      mTouchMode=TOUCH_MODE_DONE_WAITING;
+    }
+  }
+}

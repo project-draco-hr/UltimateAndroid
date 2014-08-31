@@ -1,0 +1,5 @@
+{
+  if (speed < 0)   throw new IllegalArgumentException("Speed must be >= 0");
+  mSpeed=speed;
+  return this;
+}

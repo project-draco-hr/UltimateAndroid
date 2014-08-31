@@ -1,0 +1,12 @@
+{
+  super.dispatchDraw(canvas);
+  final ViewGroup row=(ViewGroup)getChildAt(1);
+  int top=row.getTop();
+  int bottom=getBottom();
+  final int left=row.getChildAt(0).getLeft() + getLeft();
+  canvas.drawLine(left + FLOAT_FUDGE,top,left + FLOAT_FUDGE,bottom,dividerPaint);
+  for (int c=0; c < 7; c++) {
+    float x=left + row.getChildAt(c).getRight() - FLOAT_FUDGE;
+    canvas.drawLine(x,top,x,bottom,dividerPaint);
+  }
+}

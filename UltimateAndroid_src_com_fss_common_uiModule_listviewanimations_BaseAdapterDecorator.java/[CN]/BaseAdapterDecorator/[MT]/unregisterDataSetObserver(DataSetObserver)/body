@@ -1,0 +1,3 @@
+{
+  mDecoratedBaseAdapter.unregisterDataSetObserver(observer);
+}

@@ -1,0 +1,3 @@
+GL10 gl
+int width
+int height

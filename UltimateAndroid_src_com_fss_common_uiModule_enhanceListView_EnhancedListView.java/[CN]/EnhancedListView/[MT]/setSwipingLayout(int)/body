@@ -1,0 +1,4 @@
+{
+  mSwipingLayout=swipingLayoutId;
+  return this;
+}

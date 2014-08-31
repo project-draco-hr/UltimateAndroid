@@ -1,0 +1,17 @@
+{
+  int rtlSign=1;
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+    if (getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+      rtlSign=-1;
+    }
+  }
+switch (mSwipeDirection) {
+default :
+case BOTH:
+    return true;
+case START:
+  return rtlSign * deltaX < 0;
+case END:
+return rtlSign * deltaX > 0;
+}
+}

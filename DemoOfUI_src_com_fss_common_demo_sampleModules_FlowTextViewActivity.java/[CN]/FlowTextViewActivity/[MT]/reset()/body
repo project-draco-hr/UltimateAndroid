@@ -1,0 +1,3 @@
+{
+  flowTextView.setTextSize(defaultFontSize);
+}

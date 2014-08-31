@@ -1,0 +1,21 @@
+{
+  if (null == mImageView) {
+    return;
+  }
+  final ImageView imageView=mImageView.get();
+  if (null != imageView) {
+    ViewTreeObserver observer=imageView.getViewTreeObserver();
+    if (null != observer && observer.isAlive()) {
+      observer.removeGlobalOnLayoutListener(this);
+    }
+    imageView.setOnTouchListener(null);
+    cancelFling();
+  }
+  if (null != mGestureDetector) {
+    mGestureDetector.setOnDoubleTapListener(null);
+  }
+  mMatrixChangeListener=null;
+  mPhotoTapListener=null;
+  mViewTapListener=null;
+  mImageView=null;
+}

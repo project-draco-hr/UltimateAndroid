@@ -1,0 +1,4 @@
+{
+  mIndexBarViewMargin=40;
+  this.mIndexBarView=indexBarView;
+}

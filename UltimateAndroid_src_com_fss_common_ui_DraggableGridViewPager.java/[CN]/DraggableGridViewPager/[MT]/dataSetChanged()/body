@@ -1,0 +1,18 @@
+{
+  DEBUG_LOG("dataSetChanged");
+  for (int i=0; i < getChildCount() && i < mAdapter.getCount(); i++) {
+    final View child=getChildAt(i);
+    final View newChild=mAdapter.getView(i,child,this);
+    if (newChild != child) {
+      removeViewAt(i);
+      addView(newChild,i);
+    }
+  }
+  for (int i=getChildCount(); i < mAdapter.getCount(); i++) {
+    final View child=mAdapter.getView(i,null,this);
+    addView(child);
+  }
+  while (getChildCount() > mAdapter.getCount()) {
+    removeViewAt(getChildCount() - 1);
+  }
+}

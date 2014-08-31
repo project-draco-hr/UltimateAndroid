@@ -1,0 +1,4 @@
+{
+  mSearchView.addTextChangedListener(filterTextWatcher);
+  super.onPostCreate(savedInstanceState);
+}

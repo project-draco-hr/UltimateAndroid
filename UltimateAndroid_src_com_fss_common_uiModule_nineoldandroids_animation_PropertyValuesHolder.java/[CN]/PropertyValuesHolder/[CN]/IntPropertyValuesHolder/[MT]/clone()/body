@@ -1,0 +1,5 @@
+{
+  PropertyValuesHolder.IntPropertyValuesHolder newPVH=(PropertyValuesHolder.IntPropertyValuesHolder)super.clone();
+  newPVH.mIntKeyframeSet=(IntKeyframeSet)newPVH.mKeyframeSet;
+  return newPVH;
+}

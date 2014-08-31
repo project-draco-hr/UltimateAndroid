@@ -1,0 +1,3 @@
+{
+  mOnItemSelectedListener.onItemSelected(parent,view,mAdapter.translatePosition(position).mPosition,id);
+}

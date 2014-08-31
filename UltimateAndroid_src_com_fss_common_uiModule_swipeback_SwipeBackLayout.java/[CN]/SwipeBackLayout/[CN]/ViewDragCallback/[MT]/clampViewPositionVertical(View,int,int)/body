@@ -1,0 +1,7 @@
+{
+  int ret=0;
+  if ((mTrackingEdge & EDGE_BOTTOM) != 0) {
+    ret=Math.min(0,Math.max(top,-child.getHeight()));
+  }
+  return ret;
+}

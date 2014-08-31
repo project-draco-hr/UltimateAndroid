@@ -1,0 +1,12 @@
+{
+  final Rect childRect=new Rect(childView.getLeft(),childView.getTop(),childView.getRight(),childView.getBottom());
+  if (parentView == childView) {
+    return childRect;
+  }
+  ViewGroup parent;
+  while ((parent=(ViewGroup)childView.getParent()) != parentView) {
+    childRect.offset(parent.getLeft(),parent.getTop());
+    childView=parent;
+  }
+  return childRect;
+}

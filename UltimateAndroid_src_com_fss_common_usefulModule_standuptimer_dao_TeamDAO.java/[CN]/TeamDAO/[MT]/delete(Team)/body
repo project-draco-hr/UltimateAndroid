@@ -1,0 +1,7 @@
+{
+  Logger.d("Deleting team with the name of '" + team.getName() + "'");
+  if (team.getId() != null) {
+    SQLiteDatabase db=getWritableDatabase();
+    db.delete(TEAMS_TABLE_NAME,_ID + " = ?",new String[]{team.getId().toString()});
+  }
+}

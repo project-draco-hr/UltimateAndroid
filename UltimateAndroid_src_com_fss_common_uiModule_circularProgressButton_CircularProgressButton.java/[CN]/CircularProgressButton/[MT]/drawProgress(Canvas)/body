@@ -1,0 +1,12 @@
+{
+  if (mProgressDrawable == null) {
+    int offset=(getWidth() - getHeight()) / 2;
+    int size=getHeight() - mPaddingProgress * 2;
+    mProgressDrawable=new CircularProgressDrawable(size,mStrokeWidth,mColorIndicator);
+    int left=offset + mPaddingProgress;
+    mProgressDrawable.setBounds(left,mPaddingProgress,left,mPaddingProgress);
+  }
+  float sweepAngle=(360f / mMaxProgress) * mProgress;
+  mProgressDrawable.setSweepAngle(sweepAngle);
+  mProgressDrawable.draw(canvas);
+}

@@ -1,0 +1,4 @@
+{
+  this.requestLayout();
+  this.invalidate();
+}

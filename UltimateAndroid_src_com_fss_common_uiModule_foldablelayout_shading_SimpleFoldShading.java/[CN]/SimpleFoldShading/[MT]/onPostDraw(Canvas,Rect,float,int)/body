@@ -1,0 +1,8 @@
+{
+  float intencity=getShadowIntencity(rotation,gravity);
+  if (intencity > 0) {
+    int alpha=(int)(SHADOW_MAX_ALPHA * intencity);
+    mSolidShadow.setAlpha(alpha);
+    canvas.drawRect(bounds,mSolidShadow);
+  }
+}

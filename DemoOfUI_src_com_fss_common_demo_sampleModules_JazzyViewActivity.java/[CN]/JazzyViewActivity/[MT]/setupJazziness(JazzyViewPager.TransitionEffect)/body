@@ -1,0 +1,6 @@
+{
+  mJazzy=(JazzyViewPager)findViewById(R.id.jazzy_pager);
+  mJazzy.setTransitionEffect(effect);
+  mJazzy.setAdapter(new MainAdapter());
+  mJazzy.setPageMargin(30);
+}

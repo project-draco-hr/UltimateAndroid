@@ -1,0 +1,10 @@
+{
+  super(baseAdapter);
+  mAnimators=new SparseArray<Animator>();
+  mAnimationStartMillis=-1;
+  mFirstAnimatedPosition=-1;
+  mLastAnimatedPosition=-1;
+  if (baseAdapter instanceof AnimationAdapter) {
+    ((AnimationAdapter)baseAdapter).setHasParentAnimationAdapter(true);
+  }
+}

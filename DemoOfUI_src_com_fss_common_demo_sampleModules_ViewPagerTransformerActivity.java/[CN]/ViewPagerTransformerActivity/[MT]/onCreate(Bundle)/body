@@ -1,0 +1,19 @@
+{
+  super.onCreate(savedInstanceState);
+  int selectedPage=0;
+  if (savedInstanceState != null) {
+    mSelectedItem=savedInstanceState.getInt(KEY_SELECTED_CLASS);
+    selectedPage=savedInstanceState.getInt(KEY_SELECTED_PAGE);
+  }
+  final ArrayAdapter<TransformerItem> actionBarAdapter=new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,android.R.id.text1,TRANSFORM_CLASSES);
+  final ActionBar actionBar=getActionBar();
+  actionBar.setListNavigationCallbacks(actionBarAdapter,this);
+  actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+  actionBar.setDisplayOptions(actionBar.getDisplayOptions() ^ ActionBar.DISPLAY_SHOW_TITLE);
+  setContentView(R.layout.viewpager_transform_activity);
+  mAdapter=new PageAdapter(getFragmentManager());
+  mPager=(ViewPager)findViewById(R.id.container);
+  mPager.setAdapter(mAdapter);
+  mPager.setCurrentItem(selectedPage);
+  actionBar.setSelectedNavigationItem(mSelectedItem);
+}

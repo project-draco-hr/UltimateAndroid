@@ -1,0 +1,5 @@
+{
+  removeAllViewsInLayout();
+  mNextAdapterPosition=0;
+  mTopCard=null;
+}

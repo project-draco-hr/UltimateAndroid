@@ -1,0 +1,10 @@
+{
+  final Rect bounds=getBounds();
+  if (mPath == null) {
+    mPath=new Path();
+  }
+  mPath.reset();
+  mPath.addArc(getRect(),mStartAngle,mSweepAngle);
+  mPath.offset(bounds.left,bounds.top);
+  canvas.drawPath(mPath,createPaint());
+}

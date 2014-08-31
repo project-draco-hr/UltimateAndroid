@@ -1,0 +1,4 @@
+AdapterView<?> adapterView
+View view
+int i
+long l

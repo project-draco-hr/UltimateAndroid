@@ -1,0 +1,4 @@
+{
+  super(new ContextWrapperEdgeEffect(context),attrs,defStyle,privateBrowsing);
+  init(context,attrs,defStyle);
+}

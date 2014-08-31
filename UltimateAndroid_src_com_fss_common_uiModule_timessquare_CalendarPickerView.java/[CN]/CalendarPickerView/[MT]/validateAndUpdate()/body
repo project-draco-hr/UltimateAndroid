@@ -1,0 +1,6 @@
+{
+  if (getAdapter() == null) {
+    setAdapter(adapter);
+  }
+  adapter.notifyDataSetChanged();
+}

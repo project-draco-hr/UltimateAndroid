@@ -1,0 +1,21 @@
+{
+  if (sIsLogEnabled) {
+    StackTraceElement[] stackTrace=Thread.currentThread().getStackTrace();
+    Log.println(priority,tag,stackTrace[4].toString());
+    StringBuilder str=new StringBuilder();
+    String prevClass=null;
+    for (int i=5; i < stackTrace.length; i++) {
+      String className=stackTrace[i].getFileName();
+      int idx=className.indexOf(".java");
+      if (idx >= 0) {
+        className=className.substring(0,idx);
+      }
+      if (prevClass == null || !prevClass.equals(className)) {
+        str.append(className.substring(0,idx));
+      }
+      prevClass=className;
+      str.append(".").append(stackTrace[i].getMethodName()).append(":").append(stackTrace[i].getLineNumber()).append("->");
+    }
+    Log.println(priority,tag,str.toString());
+  }
+}

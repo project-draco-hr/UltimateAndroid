@@ -1,0 +1,11 @@
+{
+  renderIsCancelled=false;
+  renderIsSuppressed=false;
+  if (detailLevelToRender == null) {
+    return;
+  }
+  if (handler.hasMessages(RENDER_FLAG)) {
+    handler.removeMessages(RENDER_FLAG);
+  }
+  handler.sendEmptyMessageDelayed(RENDER_FLAG,RENDER_BUFFER);
+}

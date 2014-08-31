@@ -1,0 +1,6 @@
+{
+  final int absValue=Math.abs(value);
+  if (absValue < absMin)   return 0;
+  if (absValue > absMax)   return value > 0 ? absMax : -absMax;
+  return value;
+}

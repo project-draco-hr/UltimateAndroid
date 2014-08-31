@@ -1,0 +1,32 @@
+{
+  Animation anim=new ExpandCollapseAnimation(target,type);
+  anim.setDuration(getAnimationDuration());
+  anim.setAnimationListener(new AnimationListener(){
+    @Override public void onAnimationStart(    Animation animation){
+    }
+    @Override public void onAnimationRepeat(    Animation animation){
+    }
+    @Override public void onAnimationEnd(    Animation animation){
+      if (type == ExpandCollapseAnimation.EXPAND) {
+        if (parent instanceof ListView) {
+          ListView listView=(ListView)parent;
+          int movement=target.getBottom();
+          Rect r=new Rect();
+          boolean visible=target.getGlobalVisibleRect(r);
+          Rect r2=new Rect();
+          listView.getGlobalVisibleRect(r2);
+          if (!visible) {
+            listView.smoothScrollBy(movement,getAnimationDuration());
+          }
+ else {
+            if (r2.bottom == r.bottom) {
+              listView.smoothScrollBy(movement,getAnimationDuration());
+            }
+          }
+        }
+      }
+    }
+  }
+);
+  target.startAnimation(anim);
+}

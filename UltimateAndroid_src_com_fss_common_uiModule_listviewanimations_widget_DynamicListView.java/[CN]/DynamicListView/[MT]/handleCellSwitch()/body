@@ -1,0 +1,52 @@
+{
+  final int deltaY=mLastEventY - mDownY;
+  int deltaYTotal=mHoverCellOriginalBounds.top + mTotalOffset + deltaY;
+  View belowView=getViewForId(mBelowItemId);
+  View mobileView=getViewForId(mMobileItemId);
+  View aboveView=getViewForId(mAboveItemId);
+  boolean isBelow=(belowView != null) && (deltaYTotal > belowView.getTop());
+  boolean isAbove=(aboveView != null) && (deltaYTotal < aboveView.getTop());
+  if (isBelow || isAbove) {
+    final long switchItemId=isBelow ? mBelowItemId : mAboveItemId;
+    View switchView=isBelow ? belowView : aboveView;
+    final int originalItem=getPositionForView(mobileView);
+    if (switchView == null) {
+      updateNeighborViewsForId(mMobileItemId);
+      return;
+    }
+    if (getPositionForView(switchView) < getHeaderViewsCount()) {
+      return;
+    }
+    swapElements(originalItem,getPositionForView(switchView));
+    BaseAdapter adapter;
+    if (getAdapter() instanceof HeaderViewListAdapter) {
+      adapter=(BaseAdapter)((HeaderViewListAdapter)getAdapter()).getWrappedAdapter();
+    }
+ else {
+      adapter=(BaseAdapter)getAdapter();
+    }
+    adapter.notifyDataSetChanged();
+    mDownY=mLastEventY;
+    mDownX=mLastEventX;
+    final int switchViewStartTop=switchView.getTop();
+    mobileView.setVisibility(View.VISIBLE);
+    switchView.setVisibility(View.INVISIBLE);
+    updateNeighborViewsForId(mMobileItemId);
+    final ViewTreeObserver observer=getViewTreeObserver();
+    observer.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener(){
+      public boolean onPreDraw(){
+        observer.removeOnPreDrawListener(this);
+        View switchView=getViewForId(switchItemId);
+        mTotalOffset+=deltaY;
+        int switchViewNewTop=switchView.getTop();
+        int delta=switchViewStartTop - switchViewNewTop;
+        ViewHelper.setTranslationY(switchView,delta);
+        ObjectAnimator animator=ObjectAnimator.ofFloat(switchView,"translationY",0);
+        animator.setDuration(MOVE_DURATION);
+        animator.start();
+        return true;
+      }
+    }
+);
+  }
+}

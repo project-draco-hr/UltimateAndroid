@@ -1,0 +1,4 @@
+{
+  super.onDetach();
+  mCallbacks=sDummyCallbacks;
+}

@@ -1,0 +1,4 @@
+{
+  removeView(v);
+  markerMap.remove(v);
+}

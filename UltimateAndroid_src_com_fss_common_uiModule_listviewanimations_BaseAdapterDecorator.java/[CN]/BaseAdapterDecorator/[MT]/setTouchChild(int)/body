@@ -1,0 +1,7 @@
+{
+  mResIdTouchChild=childResId;
+  if (mListView instanceof DynamicListView) {
+    DynamicListView dynListView=(DynamicListView)mListView;
+    dynListView.setDynamicTouchChild(mResIdTouchChild);
+  }
+}

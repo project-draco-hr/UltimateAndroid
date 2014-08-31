@@ -1,0 +1,28 @@
+{
+  double relativeScale=getRelativeScale();
+  int drawableWidth=(int)(detailManager.getWidth() * getScale() * relativeScale);
+  int drawableHeight=(int)(detailManager.getHeight() * getScale() * relativeScale);
+  double offsetWidth=(tileWidth * relativeScale);
+  double offsetHeight=(tileHeight * relativeScale);
+  LinkedList<Tile> intersections=new LinkedList<Tile>();
+  viewport.set(detailManager.getComputedViewport());
+  viewport.top=Math.max(viewport.top,0);
+  viewport.left=Math.max(viewport.left,0);
+  viewport.right=Math.min(viewport.right,drawableWidth);
+  viewport.bottom=Math.min(viewport.bottom,drawableHeight);
+  int startingRow=(int)Math.floor(viewport.top / offsetHeight);
+  int endingRow=(int)Math.ceil(viewport.bottom / offsetHeight);
+  int startingColumn=(int)Math.floor(viewport.left / offsetWidth);
+  int endingColumn=(int)Math.ceil(viewport.right / offsetWidth);
+  DetailLevelPatternParser parser=detailManager.getDetailLevelPatternParser();
+  for (int iterationRow=startingRow; iterationRow < endingRow; iterationRow++) {
+    for (int iterationColumn=startingColumn; iterationColumn < endingColumn; iterationColumn++) {
+      String fileName=parser.parse(pattern,iterationRow,iterationColumn);
+      int left=iterationColumn * tileWidth;
+      int top=iterationRow * tileHeight;
+      Tile tile=new Tile(left,top,tileWidth,tileHeight,fileName);
+      intersections.add(tile);
+    }
+  }
+  return intersections;
+}

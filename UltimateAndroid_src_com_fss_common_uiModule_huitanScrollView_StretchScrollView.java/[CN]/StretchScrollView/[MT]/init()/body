@@ -1,0 +1,3 @@
+{
+  setOverScrollMode(OVER_SCROLL_NEVER);
+}

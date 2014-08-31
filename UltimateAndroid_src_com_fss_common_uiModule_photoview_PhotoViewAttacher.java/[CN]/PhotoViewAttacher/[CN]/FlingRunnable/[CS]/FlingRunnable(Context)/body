@@ -1,0 +1,3 @@
+{
+  mScroller=ScrollerProxy.getScroller(context);
+}

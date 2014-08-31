@@ -1,0 +1,3 @@
+int movePos
+View moveItem
+boolean forceInvalidate

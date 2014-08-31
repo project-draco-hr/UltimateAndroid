@@ -1,0 +1,6 @@
+{
+  if (precision != mPrecision) {
+    mPrecision=precision;
+    refitText();
+  }
+}

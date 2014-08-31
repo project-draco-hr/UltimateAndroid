@@ -1,0 +1,12 @@
+{
+  int w=v.getWidth();
+  int h=v.getHeight();
+  int top=v.getTop();
+  int left=v.getLeft();
+  Bitmap b=getBitmapFromView(v);
+  BitmapDrawable drawable=new BitmapDrawable(getResources(),b);
+  mHoverCellOriginalBounds=new Rect(left,top,left + w,top + h);
+  mHoverCellCurrentBounds=new Rect(mHoverCellOriginalBounds);
+  drawable.setBounds(mHoverCellCurrentBounds);
+  return drawable;
+}

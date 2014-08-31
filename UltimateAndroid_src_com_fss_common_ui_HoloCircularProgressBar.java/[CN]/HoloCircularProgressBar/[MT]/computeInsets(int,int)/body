@@ -1,0 +1,32 @@
+{
+  final int layoutDirection;
+  int absoluteGravity=mGravity;
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    layoutDirection=getLayoutDirection();
+    absoluteGravity=Gravity.getAbsoluteGravity(mGravity,layoutDirection);
+  }
+switch (absoluteGravity & Gravity.HORIZONTAL_GRAVITY_MASK) {
+case Gravity.LEFT:
+    mHorizontalInset=0;
+  break;
+case Gravity.RIGHT:
+mHorizontalInset=dx;
+break;
+case Gravity.CENTER_HORIZONTAL:
+default :
+mHorizontalInset=dx / 2;
+break;
+}
+switch (absoluteGravity & Gravity.VERTICAL_GRAVITY_MASK) {
+case Gravity.TOP:
+mVerticalInset=0;
+break;
+case Gravity.BOTTOM:
+mVerticalInset=dy;
+break;
+case Gravity.CENTER_VERTICAL:
+default :
+mVerticalInset=dy / 2;
+break;
+}
+}

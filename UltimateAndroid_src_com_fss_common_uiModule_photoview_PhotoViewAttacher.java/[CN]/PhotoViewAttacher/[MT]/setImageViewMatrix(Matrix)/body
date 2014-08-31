@@ -1,0 +1,13 @@
+{
+  ImageView imageView=getImageView();
+  if (null != imageView) {
+    checkImageViewScaleType();
+    imageView.setImageMatrix(matrix);
+    if (null != mMatrixChangeListener) {
+      RectF displayRect=getDisplayRect(matrix);
+      if (null != displayRect) {
+        mMatrixChangeListener.onMatrixChanged(displayRect);
+      }
+    }
+  }
+}

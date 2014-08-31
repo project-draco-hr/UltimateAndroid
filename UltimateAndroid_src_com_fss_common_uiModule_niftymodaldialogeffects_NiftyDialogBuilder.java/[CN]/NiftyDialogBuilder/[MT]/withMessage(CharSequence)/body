@@ -1,0 +1,4 @@
+{
+  mMessage.setText(text);
+  return this;
+}

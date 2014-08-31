@@ -1,0 +1,10 @@
+{
+  List<View> views=new ArrayList<View>();
+  for (int i=0; i < getAbsListView().getChildCount(); i++) {
+    View child=getAbsListView().getChildAt(i);
+    if (positions.contains(AdapterViewUtil.getPositionForView(getAbsListView(),child))) {
+      views.add(child);
+    }
+  }
+  return views;
+}

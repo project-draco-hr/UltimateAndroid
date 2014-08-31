@@ -1,0 +1,5 @@
+{
+  super(context);
+  setAngle(humidity);
+  init();
+}

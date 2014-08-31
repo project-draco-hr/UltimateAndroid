@@ -1,0 +1,13 @@
+{
+  super(context,attrs,defStyle);
+  paint=new Paint();
+  paint.setAntiAlias(true);
+  paintBorder=new Paint();
+  paintBorder.setAntiAlias(true);
+  TypedArray attributes=context.obtainStyledAttributes(attrs,R.styleable.CircularImageView,defStyle,0);
+  if (attributes.getBoolean(R.styleable.CircularImageView_border,true)) {
+    setBorderWidth(attributes.getColor(R.styleable.CircularImageView_border_width,1));
+    setBorderColor(attributes.getInt(R.styleable.CircularImageView_border_color,context.getResources().getColor(R.color.three9)));
+  }
+  if (attributes.getBoolean(R.styleable.CircularImageView_shadow,false))   addShadow();
+}

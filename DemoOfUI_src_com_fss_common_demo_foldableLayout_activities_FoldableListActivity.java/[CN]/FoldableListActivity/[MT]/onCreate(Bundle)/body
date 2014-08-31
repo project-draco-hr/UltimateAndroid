@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.foldable_activity_foldable_list);
+  FoldableListLayout foldableListLayout=(FoldableListLayout)findViewById(R.id.foldable_list);
+  foldableListLayout.setAdapter(new PaintingsAdapter(this));
+}

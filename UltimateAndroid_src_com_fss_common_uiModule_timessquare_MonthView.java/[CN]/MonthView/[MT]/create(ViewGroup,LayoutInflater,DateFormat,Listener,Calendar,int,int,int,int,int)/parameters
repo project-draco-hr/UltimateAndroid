@@ -1,0 +1,10 @@
+ViewGroup parent
+LayoutInflater inflater
+DateFormat weekdayNameFormat
+Listener listener
+Calendar today
+int dividerColor
+int dayBackgroundResId
+int dayTextColorResId
+int titleTextColor
+int headerTextColor

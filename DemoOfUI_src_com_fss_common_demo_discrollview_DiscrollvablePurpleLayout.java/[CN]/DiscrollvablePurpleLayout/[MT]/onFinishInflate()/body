@@ -1,0 +1,7 @@
+{
+  super.onFinishInflate();
+  mPurpleView1=findViewById(R.id.purpleView1);
+  mPurpleView1TranslationX=mPurpleView1.getTranslationX();
+  mPurpleView2=findViewById(R.id.purpleView2);
+  mPurpleView2TranslationX=mPurpleView2.getTranslationX();
+}

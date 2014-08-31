@@ -1,0 +1,5 @@
+{
+  mGap=value;
+  setGap();
+  return this;
+}

@@ -1,0 +1,3 @@
+{
+  checkIndeterminateDrawable().setProgressiveStopSpeed(speed);
+}

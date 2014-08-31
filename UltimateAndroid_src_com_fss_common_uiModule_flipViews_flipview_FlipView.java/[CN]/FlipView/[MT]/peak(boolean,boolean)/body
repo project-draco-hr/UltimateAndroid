@@ -1,0 +1,26 @@
+{
+  final float baseFlipDistance=mCurrentPageIndex * FLIP_DISTANCE_PER_PAGE;
+  if (next) {
+    mPeakAnim=ValueAnimator.ofFloat(baseFlipDistance,baseFlipDistance + FLIP_DISTANCE_PER_PAGE / 4);
+  }
+ else {
+    mPeakAnim=ValueAnimator.ofFloat(baseFlipDistance,baseFlipDistance - FLIP_DISTANCE_PER_PAGE / 4);
+  }
+  mPeakAnim.setInterpolator(mPeakInterpolator);
+  mPeakAnim.addUpdateListener(new AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator animation){
+      setFlipDistance((Float)animation.getAnimatedValue());
+    }
+  }
+);
+  mPeakAnim.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      endPeak();
+    }
+  }
+);
+  mPeakAnim.setDuration(PEAK_ANIM_DURATION);
+  mPeakAnim.setRepeatMode(ValueAnimator.REVERSE);
+  mPeakAnim.setRepeatCount(once ? 1 : ValueAnimator.INFINITE);
+  mPeakAnim.start();
+}

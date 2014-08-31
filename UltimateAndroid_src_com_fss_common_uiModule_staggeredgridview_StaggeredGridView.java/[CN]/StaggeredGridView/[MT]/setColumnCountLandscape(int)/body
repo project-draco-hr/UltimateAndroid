@@ -1,0 +1,5 @@
+{
+  mColumnCountLandscape=columnCountLandscape;
+  onSizeChanged(getWidth(),getHeight());
+  requestLayoutChildren();
+}

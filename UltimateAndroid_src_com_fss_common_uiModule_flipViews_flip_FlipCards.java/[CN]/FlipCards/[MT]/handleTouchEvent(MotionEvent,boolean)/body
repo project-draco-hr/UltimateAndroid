@@ -1,0 +1,77 @@
+{
+switch (event.getAction()) {
+case MotionEvent.ACTION_DOWN:
+    lastPageIndex=getPageIndexFromAngle(accumulatedAngle);
+  lastPosition=orientationVertical ? event.getY() : event.getX();
+return isOnTouchEvent;
+case MotionEvent.ACTION_MOVE:
+float delta=orientationVertical ? (lastPosition - event.getY()) : (lastPosition - event.getX());
+if (Math.abs(delta) > controller.getTouchSlop()) {
+setState(STATE_TOUCH);
+forward=delta > 0;
+}
+if (state == STATE_TOUCH) {
+if (Math.abs(delta) > MIN_MOVEMENT) {
+forward=delta > 0;
+}
+controller.showFlipAnimation();
+float angleDelta;
+if (orientationVertical) {
+angleDelta=180 * delta / controller.getContentHeight() * MOVEMENT_RATE;
+}
+ else {
+angleDelta=180 * delta / controller.getContentWidth() * MOVEMENT_RATE;
+}
+if (Math.abs(angleDelta) > MAX_TOUCH_MOVE_ANGLE) {
+angleDelta=Math.signum(angleDelta) * MAX_TOUCH_MOVE_ANGLE;
+}
+if (Math.abs(getPageIndexFromAngle(accumulatedAngle + angleDelta) - lastPageIndex) <= 1) {
+accumulatedAngle+=angleDelta;
+}
+if (frontCards.getIndex() == maxIndex - 1) {
+if (accumulatedAngle > frontCards.getIndex() * 180) {
+accumulatedAngle=Math.min(accumulatedAngle,controller.isOverFlipEnabled() ? (frontCards.getIndex() * 180 + MAX_TIP_ANGLE) : (frontCards.getIndex() * 180));
+}
+}
+if (accumulatedAngle < 0) {
+accumulatedAngle=Math.max(accumulatedAngle,controller.isOverFlipEnabled() ? -MAX_TIP_ANGLE : 0);
+}
+int anglePageIndex=getPageIndexFromAngle(accumulatedAngle);
+if (accumulatedAngle >= 0) {
+if (anglePageIndex != frontCards.getIndex()) {
+if (anglePageIndex == frontCards.getIndex() - 1) {
+  swapCards();
+  frontCards.resetWithIndex(backCards.getIndex() - 1);
+  controller.flippedToView(anglePageIndex,false);
+}
+ else if (anglePageIndex == frontCards.getIndex() + 1) {
+  swapCards();
+  backCards.resetWithIndex(frontCards.getIndex() + 1);
+  controller.flippedToView(anglePageIndex,false);
+}
+ else {
+  throw new RuntimeException(AphidLog.format("Inconsistent states: anglePageIndex: %d, accumulatedAngle %.1f, frontCards %d, backCards %d",anglePageIndex,accumulatedAngle,frontCards.getIndex(),backCards.getIndex()));
+}
+}
+}
+lastPosition=orientationVertical ? event.getY() : event.getX();
+controller.getSurfaceView().requestRender();
+return true;
+}
+return isOnTouchEvent;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+if (state == STATE_TOUCH) {
+if (accumulatedAngle < 0) {
+forward=true;
+}
+ else if (accumulatedAngle >= frontCards.getIndex() * 180 && frontCards.getIndex() == maxIndex - 1) {
+forward=false;
+}
+setState(STATE_AUTO_ROTATE);
+controller.getSurfaceView().requestRender();
+}
+return isOnTouchEvent;
+}
+return false;
+}

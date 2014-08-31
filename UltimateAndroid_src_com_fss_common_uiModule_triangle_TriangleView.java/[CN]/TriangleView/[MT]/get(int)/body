@@ -1,0 +1,8 @@
+{
+  int[] tag=new int[lenght];
+  tag[0]=0;
+  for (int i=1; i < tag.length; i++) {
+    tag[i]=tag[i - 1] + i;
+  }
+  return tag;
+}

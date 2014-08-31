@@ -1,0 +1,5 @@
+{
+  if (null == score || score.size() == 0)   return;
+  drawDate(c);
+  drawRectf(c);
+}

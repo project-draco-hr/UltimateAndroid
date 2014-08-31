@@ -1,0 +1,10 @@
+{
+  File f=new File(fileName);
+  if (f.isDirectory()) {
+    String[] list=f.list();
+    for (int i=0; i < list.length; i++) {
+      deleteFileOrFolder(fileName + "//" + list[i]);
+    }
+  }
+  f.delete();
+}

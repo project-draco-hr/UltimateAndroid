@@ -1,0 +1,8 @@
+{
+  if (mAdapter != null) {
+    mAdapter.unregisterDataSetObserver(dataSetObserver);
+    mAdapter=null;
+  }
+  mRecycler=new Recycler();
+  removeAllViews();
+}

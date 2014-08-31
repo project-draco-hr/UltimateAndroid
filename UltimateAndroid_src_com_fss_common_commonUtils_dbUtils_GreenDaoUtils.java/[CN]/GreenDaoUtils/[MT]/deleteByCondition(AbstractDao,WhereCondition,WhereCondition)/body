@@ -1,0 +1,5 @@
+{
+  isLog();
+  QueryBuilder qb=dao.queryBuilder();
+  qb.where(cond,condmore).buildDelete().executeDeleteWithoutDetachingEntities();
+}

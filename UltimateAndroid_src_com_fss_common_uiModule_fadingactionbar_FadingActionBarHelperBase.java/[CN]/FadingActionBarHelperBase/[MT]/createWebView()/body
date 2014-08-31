@@ -1,0 +1,14 @@
+{
+  ViewGroup webViewContainer=(ViewGroup)mInflater.inflate(R.layout.fab__webview_container,null);
+  ObservableWebViewWithHeader webView=(ObservableWebViewWithHeader)mContentView;
+  webView.setOnScrollChangedCallback(mOnScrollChangedListener);
+  webViewContainer.addView(webView);
+  mHeaderContainer=(FrameLayout)webViewContainer.findViewById(R.id.fab__header_container);
+  initializeGradient(mHeaderContainer);
+  mHeaderContainer.addView(mHeaderView,0);
+  mMarginView=new FrameLayout(webView.getContext());
+  mMarginView.setBackgroundColor(Color.TRANSPARENT);
+  mMarginView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+  webView.addView(mMarginView);
+  return webViewContainer;
+}

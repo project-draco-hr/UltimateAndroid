@@ -1,0 +1,15 @@
+{
+  final int startLeft=mCapturedView.getLeft();
+  final int startTop=mCapturedView.getTop();
+  final int dx=finalLeft - startLeft;
+  final int dy=finalTop - startTop;
+  if (dx == 0 && dy == 0) {
+    mScroller.abortAnimation();
+    setDragState(STATE_IDLE);
+    return false;
+  }
+  final int duration=computeSettleDuration(mCapturedView,dx,dy,xvel,yvel);
+  mScroller.startScroll(startLeft,startTop,dx,dy,duration);
+  setDragState(STATE_SETTLING);
+  return true;
+}

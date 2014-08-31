@@ -1,0 +1,4 @@
+{
+  mReversed=reversed;
+  return this;
+}

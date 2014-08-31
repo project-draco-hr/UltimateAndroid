@@ -1,0 +1,19 @@
+{
+  boolean needsMoreDrawing=false;
+  if (!mBottomEdgeEffect.isFinished()) {
+    canvas.save();
+    if (mFlipView.isFlippingVertically()) {
+      mBottomEdgeEffect.setSize(mFlipView.getWidth(),mFlipView.getHeight());
+      canvas.rotate(180);
+      canvas.translate(-mFlipView.getWidth(),-mFlipView.getHeight());
+    }
+ else {
+      mBottomEdgeEffect.setSize(mFlipView.getHeight(),mFlipView.getWidth());
+      canvas.rotate(90);
+      canvas.translate(0,-mFlipView.getWidth());
+    }
+    needsMoreDrawing=mBottomEdgeEffect.draw(canvas);
+    canvas.restore();
+  }
+  return needsMoreDrawing;
+}

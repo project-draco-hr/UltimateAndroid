@@ -1,0 +1,81 @@
+{
+  if (mBlockLayoutRequests)   return;
+  mBlockLayoutRequests=true;
+  try {
+    super.layoutChildren();
+    invalidate();
+    if (mAdapter == null) {
+      clearState();
+      invokeOnItemScrollListener();
+      return;
+    }
+    int childrenTop=getListPaddingTop();
+    int childCount=getChildCount();
+    View oldFirst=null;
+    if (mLayoutMode == LAYOUT_NORMAL) {
+      oldFirst=getChildAt(0);
+    }
+    boolean dataChanged=mDataChanged;
+    if (dataChanged) {
+      handleDataChanged();
+    }
+    if (mItemCount == 0) {
+      clearState();
+      invokeOnItemScrollListener();
+      return;
+    }
+ else     if (mItemCount != mAdapter.getCount()) {
+      throw new IllegalStateException("The content of the adapter has changed but " + "ExtendableListView did not receive a notification. Make sure the content of " + "your adapter is not modified from a background thread, but only "+ "from the UI thread. [in ExtendableListView(" + getId() + ", "+ getClass()+ ") with Adapter("+ mAdapter.getClass()+ ")]");
+    }
+    final int firstPosition=mFirstPosition;
+    final RecycleBin recycleBin=mRecycleBin;
+    if (dataChanged) {
+      for (int i=0; i < childCount; i++) {
+        recycleBin.addScrapView(getChildAt(i),firstPosition + i);
+      }
+    }
+ else {
+      recycleBin.fillActiveViews(childCount,firstPosition);
+    }
+    detachAllViewsFromParent();
+    recycleBin.removeSkippedScrap();
+switch (mLayoutMode) {
+case LAYOUT_FORCE_TOP:
+{
+        mFirstPosition=0;
+        resetToTop();
+        adjustViewsUpOrDown();
+        fillFromTop(childrenTop);
+        adjustViewsUpOrDown();
+        break;
+      }
+case LAYOUT_SYNC:
+{
+      fillSpecific(mSyncPosition,mSpecificTop);
+      break;
+    }
+case LAYOUT_NORMAL:
+default :
+{
+    if (childCount == 0) {
+      fillFromTop(childrenTop);
+    }
+ else     if (mFirstPosition < mItemCount) {
+      fillSpecific(mFirstPosition,oldFirst == null ? childrenTop : oldFirst.getTop());
+    }
+ else {
+      fillSpecific(0,childrenTop);
+    }
+    break;
+  }
+}
+recycleBin.scrapActiveViews();
+mDataChanged=false;
+mNeedSync=false;
+mLayoutMode=LAYOUT_NORMAL;
+invokeOnItemScrollListener();
+}
+  finally {
+mBlockLayoutRequests=false;
+}
+}

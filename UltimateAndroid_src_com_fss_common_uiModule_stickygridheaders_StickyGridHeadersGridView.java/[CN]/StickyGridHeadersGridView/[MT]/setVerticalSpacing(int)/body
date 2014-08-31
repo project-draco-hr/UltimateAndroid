@@ -1,0 +1,4 @@
+{
+  super.setVerticalSpacing(verticalSpacing);
+  mVerticalSpacing=verticalSpacing;
+}

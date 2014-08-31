@@ -1,0 +1,6 @@
+{
+  addView(v,params);
+  markerMap.put(v,new Rect());
+  requestLayout();
+  return v;
+}

@@ -1,0 +1,6 @@
+{
+  super.onSaveInstanceState(outState);
+  if (mActivatedPosition != ListView.INVALID_POSITION) {
+    outState.putInt(STATE_ACTIVATED_POSITION,mActivatedPosition);
+  }
+}

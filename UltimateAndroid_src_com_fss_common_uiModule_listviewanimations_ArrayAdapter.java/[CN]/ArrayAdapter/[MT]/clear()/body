@@ -1,0 +1,4 @@
+{
+  mItems.clear();
+  notifyDataSetChanged();
+}

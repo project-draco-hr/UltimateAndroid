@@ -1,0 +1,4 @@
+{
+  mScaledTextSpacing=spacingPixels;
+  requestLayout();
+}

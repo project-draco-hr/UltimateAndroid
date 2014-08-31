@@ -1,0 +1,19 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.stand_up_timer_meeting_details);
+  String teamName=getIntent().getStringExtra("teamName");
+  String meetingTime=getIntent().getStringExtra("meetingTime");
+  Logger.i("Looking for meeting for '" + teamName + "' at '"+ meetingTime+ "'");
+  Date date=null;
+  try {
+    date=new SimpleDateFormat(Meeting.DESCRIPTION_FORMAT).parse(meetingTime);
+  }
+ catch (  ParseException e) {
+    String msg="Could not parse the date/time '" + meetingTime + "'. "+ e.getMessage();
+    Logger.e(msg);
+    throw new RuntimeException(msg);
+  }
+  Team team=Team.findByName(teamName,this);
+  meeting=Meeting.findByTeamAndDate(team,date,this);
+  displayMeetingStats(team,date);
+}

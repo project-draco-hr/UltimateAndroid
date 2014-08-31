@@ -1,0 +1,3 @@
+{
+  return ObjectAnimator.ofFloat(view,TRANSLATION_Y,500,0);
+}

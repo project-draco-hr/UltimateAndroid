@@ -1,0 +1,8 @@
+{
+  if (constraint != null && constraint.length() > 0) {
+    mListView.setIndexBarVisibility(false);
+  }
+ else {
+    mListView.setIndexBarVisibility(true);
+  }
+}

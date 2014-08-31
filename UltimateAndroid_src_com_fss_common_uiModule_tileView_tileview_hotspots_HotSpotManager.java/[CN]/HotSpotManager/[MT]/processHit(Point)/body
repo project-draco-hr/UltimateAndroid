@@ -1,0 +1,15 @@
+{
+  if (listeners.isEmpty()) {
+    return;
+  }
+  HotSpot hotSpot=getMatch(point);
+  if (hotSpot != null) {
+    HotSpotEventListener spotListener=hotSpot.getHotSpotEventListener();
+    if (spotListener != null) {
+      spotListener.onHotSpotTap(hotSpot,point.x,point.y);
+    }
+    for (    HotSpotEventListener listener : listeners) {
+      listener.onHotSpotTap(hotSpot,point.x,point.y);
+    }
+  }
+}

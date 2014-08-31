@@ -1,0 +1,14 @@
+{
+  if (mViewPager == viewPager) {
+    return;
+  }
+  if (mViewPager != null) {
+    mViewPager.setOnPageChangeListener(null);
+  }
+  if (viewPager.getAdapter() == null) {
+    throw new IllegalStateException("ViewPager does not have adapter instance.");
+  }
+  mViewPager=viewPager;
+  mViewPager.setOnPageChangeListener(this);
+  invalidate();
+}

@@ -1,0 +1,9 @@
+{
+  super.setAbsListView(listView);
+  mContextualUndoListViewTouchListener=new ContextualUndoListViewTouchListener(listView,this);
+  mContextualUndoListViewTouchListener.setIsParentHorizontalScrollContainer(isParentHorizontalScrollContainer());
+  mContextualUndoListViewTouchListener.setTouchChild(getTouchChild());
+  listView.setOnTouchListener(mContextualUndoListViewTouchListener);
+  listView.setOnScrollListener(mContextualUndoListViewTouchListener.makeScrollListener());
+  listView.setOnHierarchyChangeListener(new HierarchyChangeListener());
+}

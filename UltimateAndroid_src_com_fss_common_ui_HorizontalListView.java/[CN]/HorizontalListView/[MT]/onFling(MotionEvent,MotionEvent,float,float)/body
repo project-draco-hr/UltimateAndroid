@@ -1,0 +1,7 @@
+{
+synchronized (HorizontalListView.this) {
+    mScroller.fling(mNextX,0,(int)-velocityX,0,0,mMaxX,0,0);
+  }
+  requestLayout();
+  return true;
+}

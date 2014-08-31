@@ -1,0 +1,6 @@
+{
+  TileManager tileManager=reference.get();
+  if (tileManager != null) {
+    tileManager.onRenderTaskPostExecute();
+  }
+}

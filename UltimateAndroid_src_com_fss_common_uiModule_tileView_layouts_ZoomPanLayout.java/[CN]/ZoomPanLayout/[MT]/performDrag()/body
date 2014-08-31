@@ -1,0 +1,13 @@
+{
+  Point delta=new Point();
+  if (secondFingerIsDown && !firstFingerIsDown) {
+    delta.set(lastSecondFinger.x,lastSecondFinger.y);
+    delta.offset(-secondFinger.x,-secondFinger.y);
+  }
+ else {
+    delta.set(lastFirstFinger.x,lastFirstFinger.y);
+    delta.offset(-firstFinger.x,-firstFinger.y);
+  }
+  scrollPosition.offset(delta.x,delta.y);
+  scrollToPoint(scrollPosition);
+}

@@ -1,0 +1,6 @@
+{
+  mTitle.setTextColor(Color.parseColor(defTextColor));
+  mDivider.setBackgroundColor(Color.parseColor(defDividerColor));
+  mMessage.setTextColor(Color.parseColor(defMsgColor));
+  mLinearLayoutView.setBackgroundColor(Color.parseColor(defDialogColor));
+}

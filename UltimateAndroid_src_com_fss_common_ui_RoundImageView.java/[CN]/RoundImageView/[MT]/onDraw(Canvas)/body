@@ -1,0 +1,19 @@
+{
+  Drawable drawable=getDrawable();
+  if (drawable == null) {
+    drawable=defaultDrawable;
+  }
+  if (getWidth() == 0 || getHeight() == 0) {
+    return;
+  }
+  if (drawable.getClass() == NinePatchDrawable.class)   return;
+  Bitmap b=((BitmapDrawable)drawable).getBitmap();
+  Bitmap bitmap=b.copy(Config.ARGB_8888,true);
+  int radius=0;
+  int w=getWidth() - getPaddingLeft() - getPaddingRight();
+  int h=getHeight() - getPaddingTop() - getPaddingBottom();
+  radius=(w < h ? w : h) / 2 - mBorderThickness * 2;
+  drawCircleBorder(canvas,radius,isPressed ? mBorderColorPressed : mBorderColor);
+  Bitmap roundBitmap=getCroppedRoundBitmap(bitmap,radius);
+  canvas.drawBitmap(roundBitmap,getWidth() / 2 - radius,getHeight() / 2 - radius,null);
+}

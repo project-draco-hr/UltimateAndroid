@@ -1,0 +1,4 @@
+{
+  float distance=Math.abs(deltaFlipDistance);
+  return (int)(MAX_SINGLE_PAGE_FLIP_ANIM_DURATION * Math.sqrt(distance / FLIP_DISTANCE_PER_PAGE));
+}

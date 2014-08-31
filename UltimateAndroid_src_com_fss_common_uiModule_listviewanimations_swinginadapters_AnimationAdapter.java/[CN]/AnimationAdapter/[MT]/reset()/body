@@ -1,0 +1,10 @@
+{
+  mAnimators.clear();
+  mFirstAnimatedPosition=-1;
+  mLastAnimatedPosition=-1;
+  mAnimationStartMillis=-1;
+  mShouldAnimate=true;
+  if (getDecoratedBaseAdapter() instanceof AnimationAdapter) {
+    ((AnimationAdapter)getDecoratedBaseAdapter()).reset();
+  }
+}

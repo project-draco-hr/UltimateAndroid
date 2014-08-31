@@ -1,0 +1,3 @@
+{
+  return SuperAwesomeCardFragment.newInstance(position);
+}

@@ -1,0 +1,44 @@
+{
+  int index=0;
+  float temp_x=0;
+  float temp_y=0;
+  float base=(getHeight() - tb * 3.0f) / (Collections.max(milliliter) - Collections.min(milliliter));
+  Shader mShader=new LinearGradient(0,0,0,getHeight(),new int[]{Color.argb(100,0,255,255),Color.argb(45,0,255,255),Color.argb(10,0,255,255)},null,Shader.TileMode.CLAMP);
+  framPanint.setShader(mShader);
+  for (int i=0; i < milliliter.size() - 1; i++) {
+    float x1=interval_left_right * i;
+    float y1=getHeight() - tb * 1.5f - (base * milliliter.get(i));
+    float x2=interval_left_right * (i + 1);
+    float y2=getHeight() - tb * 1.5f - (base * milliliter.get(i + 1));
+    if ((int)(base * milliliter.get(i + 1)) == 0 && index == 0) {
+      index++;
+      temp_x=x1;
+      temp_y=y1;
+    }
+    if ((int)(base * milliliter.get(i + 1)) != 0 && index != 0) {
+      index=0;
+      x1=temp_x;
+      y1=temp_y;
+    }
+    if (index == 0) {
+      c.drawLine(x1,y1,x2,y2,paint_brokenLine);
+      path.lineTo(x1,y1);
+      if (i != 0)       c.drawBitmap(bitmap_point,x1 - bitmap_point.getWidth() / 2,y1 - bitmap_point.getHeight() / 2,null);
+      if (i == milliliter.size() - 2) {
+        path.lineTo(x2,y2);
+        path.lineTo(x2,getHeight());
+        path.lineTo(0,getHeight());
+        path.close();
+        c.drawPath(path,framPanint);
+        c.drawBitmap(bitmap_point,x2 - bitmap_point.getWidth() / 2,y2 - bitmap_point.getHeight() / 2,null);
+      }
+    }
+  }
+  paint_dottedline.setColor(orangeLineColor);
+  Path path=new Path();
+  path.moveTo(0,getHeight() - tb * 6.5f);
+  path.lineTo(getWidth(),getHeight() - tb * 6.5f);
+  PathEffect effects=new DashPathEffect(new float[]{tb * 0.3f,tb * 0.3f,tb * 0.3f,tb * 0.3f},tb * 0.1f);
+  paint_dottedline.setPathEffect(effects);
+  c.drawPath(path,paint_dottedline);
+}

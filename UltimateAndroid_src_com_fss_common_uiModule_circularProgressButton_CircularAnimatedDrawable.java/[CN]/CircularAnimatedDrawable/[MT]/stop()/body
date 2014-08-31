@@ -1,0 +1,9 @@
+{
+  if (!isRunning()) {
+    return;
+  }
+  mRunning=false;
+  mObjectAnimatorAngle.cancel();
+  mObjectAnimatorSweep.cancel();
+  invalidateSelf();
+}

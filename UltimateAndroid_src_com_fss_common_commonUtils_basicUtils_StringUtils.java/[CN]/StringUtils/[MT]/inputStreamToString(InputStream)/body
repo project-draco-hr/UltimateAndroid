@@ -1,0 +1,14 @@
+{
+  StringBuilder total=new StringBuilder();
+  try {
+    BufferedReader r=new BufferedReader(new InputStreamReader(inputStream));
+    String line;
+    while ((line=r.readLine()) != null) {
+      total.append(line);
+    }
+  }
+ catch (  IOException e) {
+    Logs.e(e,"");
+  }
+  return total.toString();
+}

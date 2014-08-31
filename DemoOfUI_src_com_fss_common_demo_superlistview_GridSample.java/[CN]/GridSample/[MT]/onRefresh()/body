@@ -1,0 +1,10 @@
+{
+  Toast.makeText(this,"Refresh",Toast.LENGTH_LONG).show();
+  Handler handler=new Handler();
+  handler.postDelayed(new Runnable(){
+    public void run(){
+      mAdapter.insert("New stuff",0);
+    }
+  }
+,2000);
+}

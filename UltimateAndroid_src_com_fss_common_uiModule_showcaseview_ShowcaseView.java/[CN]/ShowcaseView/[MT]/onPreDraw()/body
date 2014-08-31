@@ -1,0 +1,9 @@
+{
+  boolean recalculatedCling=showcaseAreaCalculator.calculateShowcaseRect(showcaseX,showcaseY,showcaseDrawer);
+  boolean recalculateText=recalculatedCling || hasAlteredText;
+  if (recalculateText) {
+    textDrawer.calculateTextPosition(getMeasuredWidth(),getMeasuredHeight(),this,shouldCentreText);
+  }
+  hasAlteredText=false;
+  return true;
+}

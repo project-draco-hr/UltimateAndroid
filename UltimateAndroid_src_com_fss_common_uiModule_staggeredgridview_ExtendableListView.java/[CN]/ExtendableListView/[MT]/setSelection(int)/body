@@ -1,0 +1,12 @@
+{
+  if (position >= 0) {
+    mLayoutMode=LAYOUT_SYNC;
+    mSpecificTop=getListPaddingTop();
+    mFirstPosition=0;
+    if (mNeedSync) {
+      mSyncPosition=position;
+      mSyncRowId=mAdapter.getItemId(position);
+    }
+    requestLayout();
+  }
+}

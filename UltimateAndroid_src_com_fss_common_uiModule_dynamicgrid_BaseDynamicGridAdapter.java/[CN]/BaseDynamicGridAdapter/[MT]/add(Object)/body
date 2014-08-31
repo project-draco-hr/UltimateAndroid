@@ -1,0 +1,5 @@
+{
+  addStableId(item);
+  mItems.add(item);
+  notifyDataSetChanged();
+}

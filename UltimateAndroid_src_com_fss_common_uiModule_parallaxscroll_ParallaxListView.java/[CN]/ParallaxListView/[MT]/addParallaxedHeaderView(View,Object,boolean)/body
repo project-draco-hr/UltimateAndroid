@@ -1,0 +1,4 @@
+{
+  super.addHeaderView(v,data,isSelectable);
+  helper.addParallaxedHeaderView(v,data,isSelectable);
+}

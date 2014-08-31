@@ -1,0 +1,10 @@
+{
+  padding=resources.getDimension(R.dimen.showcase_text_padding);
+  actionBarOffset=resources.getDimension(R.dimen.showcase_action_bar_offset);
+  this.calculator=calculator;
+  this.context=context;
+  titlePaint=new TextPaint();
+  titlePaint.setAntiAlias(true);
+  textPaint=new TextPaint();
+  textPaint.setAntiAlias(true);
+}

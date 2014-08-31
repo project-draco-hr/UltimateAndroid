@@ -1,0 +1,4 @@
+{
+  mListeners.clear();
+  mSpringSystem.deregisterSpring(this);
+}

@@ -1,0 +1,16 @@
+{
+  String uri=path;
+  if (!uri.endsWith("/")) {
+    uri=uri + "/";
+  }
+  uri=uri + fileName;
+  File dirFile=new File(path);
+  if (!dirFile.exists()) {
+    dirFile.mkdir();
+  }
+  File myCaptureFile=new File(uri);
+  BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(myCaptureFile));
+  bm.compress(Bitmap.CompressFormat.JPEG,80,bos);
+  bos.flush();
+  bos.close();
+}

@@ -1,0 +1,5 @@
+{
+  updateCountDownTimer("");
+  mContentView.setVisibility(View.INVISIBLE);
+  mUndoView.setVisibility(View.VISIBLE);
+}

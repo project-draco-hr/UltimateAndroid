@@ -1,0 +1,13 @@
+{
+  CheeseViewHolder holder;
+  if (convertView == null) {
+    convertView=LayoutInflater.from(getContext()).inflate(R.layout.dynamic_grid_view_item_grid,null);
+    holder=new CheeseViewHolder(convertView);
+    convertView.setTag(holder);
+  }
+ else {
+    holder=(CheeseViewHolder)convertView.getTag();
+  }
+  holder.build(getItem(position).toString());
+  return convertView;
+}

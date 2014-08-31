@@ -1,0 +1,6 @@
+{
+  ObjectAnimator animator=createBaseWobble(v);
+  animator.setFloatValues(-2,2);
+  animator.start();
+  mWobbleAnimators.add(animator);
+}

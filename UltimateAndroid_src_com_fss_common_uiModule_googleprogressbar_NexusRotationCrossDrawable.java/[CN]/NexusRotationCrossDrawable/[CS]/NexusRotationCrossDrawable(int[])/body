@@ -1,0 +1,13 @@
+{
+  mArrowPoints=new Point[5];
+  mPath=new Path();
+  mPaint1=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mPaint1.setColor(colors[0]);
+  mPaint2=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mPaint2.setColor(colors[1]);
+  mPaint3=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mPaint3.setColor(colors[2]);
+  mPaint4=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mPaint4.setColor(colors[3]);
+  initObjectAnimator();
+}

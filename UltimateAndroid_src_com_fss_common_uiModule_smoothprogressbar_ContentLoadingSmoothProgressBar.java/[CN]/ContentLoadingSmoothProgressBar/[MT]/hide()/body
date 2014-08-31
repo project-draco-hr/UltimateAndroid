@@ -1,0 +1,14 @@
+{
+  mDismissed=true;
+  removeCallbacks(mDelayedShow);
+  long diff=System.currentTimeMillis() - mStartTime;
+  if (diff >= MIN_SHOW_TIME || mStartTime == -1) {
+    setVisibility(View.GONE);
+  }
+ else {
+    if (!mPostedHide) {
+      postDelayed(mDelayedHide,MIN_SHOW_TIME - diff);
+      mPostedHide=true;
+    }
+  }
+}

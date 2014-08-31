@@ -1,0 +1,4 @@
+int icon
+int spans
+String title
+String description

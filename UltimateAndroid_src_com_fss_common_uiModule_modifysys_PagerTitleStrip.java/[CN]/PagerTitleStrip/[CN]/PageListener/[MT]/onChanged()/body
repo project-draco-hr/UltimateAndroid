@@ -1,0 +1,6 @@
+{
+  updateText(mPager.getCurrentItem(),mPager.getAdapter());
+  Logs.d("select------");
+  final float offset=mLastKnownPositionOffset >= 0 ? mLastKnownPositionOffset : 0;
+  updateTextPositions(mPager.getCurrentItem(),offset,true);
+}

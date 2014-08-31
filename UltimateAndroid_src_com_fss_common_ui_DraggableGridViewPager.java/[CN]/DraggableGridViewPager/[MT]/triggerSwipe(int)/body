@@ -1,0 +1,8 @@
+{
+  if (edge == EDGE_LFET && mCurItem > 0) {
+    setCurrentItem(mCurItem - 1,true);
+  }
+ else   if (edge == EDGE_RIGHT && mCurItem < mPageCount - 1) {
+    setCurrentItem(mCurItem + 1,true);
+  }
+}

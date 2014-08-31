@@ -1,0 +1,12 @@
+{
+  Logger.d("Disabling the individual timer");
+  remainingIndividualSeconds=0;
+  TextView participantNumber=(TextView)findViewById(R.id.participant_number);
+  participantNumber.setText("individual_status_complete");
+  TextView individualTimeRemaining=(TextView)findViewById(R.id.individual_time_remaining);
+  individualTimeRemaining.setText(TimeFormatHelper.formatTime(remainingIndividualSeconds));
+  individualTimeRemaining.setTextColor(Color.GRAY);
+  Button nextButton=(Button)findViewById(R.id.next_button);
+  nextButton.setClickable(false);
+  nextButton.setTextColor(Color.GRAY);
+}

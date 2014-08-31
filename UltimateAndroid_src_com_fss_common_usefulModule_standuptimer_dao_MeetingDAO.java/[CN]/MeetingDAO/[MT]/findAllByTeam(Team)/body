@@ -1,0 +1,17 @@
+{
+  List<Meeting> meetings=new ArrayList<Meeting>();
+  Cursor cursor=null;
+  try {
+    SQLiteDatabase db=getReadableDatabase();
+    cursor=db.query(MEETINGS_TABLE_NAME,MEETINGS_ALL_COLUMS,MEETINGS_TEAM_NAME + " = ?",new String[]{team.getName()},null,null,MEETINGS_MEETING_TIME);
+    while (cursor.moveToNext()) {
+      meetings.add(createMeetingFromCursorData(cursor));
+    }
+  }
+  finally {
+    closeCursor(cursor);
+  }
+  Logger.d("Found " + meetings.size() + " meetings");
+  Collections.reverse(meetings);
+  return meetings;
+}

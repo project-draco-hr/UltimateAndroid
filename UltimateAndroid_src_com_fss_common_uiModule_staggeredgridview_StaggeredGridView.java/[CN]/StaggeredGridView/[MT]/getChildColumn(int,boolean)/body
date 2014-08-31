@@ -1,0 +1,13 @@
+{
+  int column=getPositionColumn(position);
+  final int columnCount=mColumnCount;
+  if (column < 0 || column >= columnCount) {
+    if (flowDown) {
+      column=getHighestPositionedBottomColumn();
+    }
+ else {
+      column=getLowestPositionedTopColumn();
+    }
+  }
+  return column;
+}

@@ -1,0 +1,12 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.viewpager_sliding_tabs_activity);
+  tabs=(PagerSlidingTabStrip)findViewById(R.id.tabs);
+  pager=(ViewPager)findViewById(R.id.pager);
+  adapter=new MyPagerAdapter(getSupportFragmentManager());
+  pager.setAdapter(adapter);
+  final int pageMargin=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,4,getResources().getDisplayMetrics());
+  pager.setPageMargin(pageMargin);
+  tabs.setViewPager(pager);
+  changeColor(currentColor);
+}

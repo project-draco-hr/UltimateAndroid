@@ -1,0 +1,3 @@
+{
+  activity.startActivity(new Intent(activity,Sample4Activity.class));
+}

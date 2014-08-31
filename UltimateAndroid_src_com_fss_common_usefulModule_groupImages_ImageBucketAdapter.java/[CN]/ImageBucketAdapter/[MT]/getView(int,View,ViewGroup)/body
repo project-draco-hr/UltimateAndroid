@@ -1,0 +1,30 @@
+{
+  Holder holder;
+  if (arg1 == null) {
+    holder=new Holder();
+    arg1=View.inflate(act,R.layout.group_item_image_bucket,null);
+    holder.iv=(ImageView)arg1.findViewById(R.id.image);
+    holder.selected=(ImageView)arg1.findViewById(R.id.isselected);
+    holder.name=(TextView)arg1.findViewById(R.id.name);
+    holder.count=(TextView)arg1.findViewById(R.id.count);
+    arg1.setTag(holder);
+  }
+ else {
+    holder=(Holder)arg1.getTag();
+  }
+  ImageBucket item=dataList.get(arg0);
+  holder.count.setText("" + item.count);
+  holder.name.setText(item.bucketName);
+  holder.selected.setVisibility(View.GONE);
+  if (item.imageList != null && item.imageList.size() > 0) {
+    String thumbPath=item.imageList.get(0).thumbnailPath;
+    String sourcePath=item.imageList.get(0).imagePath;
+    holder.iv.setTag(sourcePath);
+    cache.displayBmp(holder.iv,thumbPath,sourcePath,callback);
+  }
+ else {
+    holder.iv.setImageBitmap(null);
+    Log.e(TAG,"no images in bucket " + item.bucketName);
+  }
+  return arg1;
+}

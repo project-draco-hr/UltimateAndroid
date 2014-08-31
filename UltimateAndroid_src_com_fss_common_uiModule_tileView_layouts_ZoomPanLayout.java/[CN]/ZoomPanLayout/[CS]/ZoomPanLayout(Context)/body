@@ -1,0 +1,10 @@
+{
+  super(context);
+  setWillNotDraw(false);
+  scrollActionHandler=new ScrollActionHandler(this);
+  scroller=new Scroller(context);
+  scroller.setFriction(FRICTION);
+  clip=new StaticLayout(context);
+  super.addView(clip,-1,new LayoutParams(-1,-1));
+  updateClip();
+}

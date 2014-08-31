@@ -1,0 +1,4 @@
+float startX
+float startY
+float velocityX
+float velocityY

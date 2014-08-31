@@ -1,0 +1,8 @@
+{
+  if (isTweening) {
+    return;
+  }
+  doubleTapDestinationScale=destination;
+  tween.setDuration(duration);
+  tween.start();
+}

@@ -1,0 +1,24 @@
+{
+  int column=getPositionColumn(position);
+  int gridChildTop;
+  int gridChildBottom;
+  int childTopMargin=getChildTopMargin(position);
+  int childBottomMargin=getChildBottomMargin();
+  int verticalMargins=childTopMargin + childBottomMargin;
+  if (flowDown) {
+    gridChildTop=mColumnBottoms[column];
+    gridChildBottom=gridChildTop + (getChildHeight(child) + verticalMargins);
+  }
+ else {
+    gridChildBottom=mColumnTops[column];
+    gridChildTop=gridChildBottom - (getChildHeight(child) + verticalMargins);
+  }
+  if (DBG)   Log.d(TAG,"onLayoutChild position:" + position + " column:"+ column+ " gridChildTop:"+ gridChildTop+ " gridChildBottom:"+ gridChildBottom);
+  GridLayoutParams layoutParams=(GridLayoutParams)child.getLayoutParams();
+  layoutParams.column=column;
+  updateColumnBottomIfNeeded(column,gridChildBottom);
+  updateColumnTopIfNeeded(column,gridChildTop);
+  gridChildTop+=childTopMargin;
+  gridChildBottom-=childBottomMargin;
+  child.layout(childrenLeft,gridChildTop,childRight,gridChildBottom);
+}

@@ -1,0 +1,5 @@
+{
+  reset(view);
+  setupAnimation(view);
+  mAnimatorSet.start();
+}

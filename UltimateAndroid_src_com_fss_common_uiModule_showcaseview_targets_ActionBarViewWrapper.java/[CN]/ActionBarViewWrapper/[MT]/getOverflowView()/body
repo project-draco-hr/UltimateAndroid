@@ -1,0 +1,17 @@
+{
+  try {
+    Field actionMenuPresenterField=mAbsActionBarViewClass.getDeclaredField("mActionMenuPresenter");
+    actionMenuPresenterField.setAccessible(true);
+    Object actionMenuPresenter=actionMenuPresenterField.get(mActionBarView);
+    Field overflowButtonField=actionMenuPresenter.getClass().getDeclaredField("mOverflowButton");
+    overflowButtonField.setAccessible(true);
+    return (View)overflowButtonField.get(actionMenuPresenter);
+  }
+ catch (  IllegalAccessException e) {
+    e.printStackTrace();
+  }
+catch (  NoSuchFieldException e) {
+    e.printStackTrace();
+  }
+  return null;
+}

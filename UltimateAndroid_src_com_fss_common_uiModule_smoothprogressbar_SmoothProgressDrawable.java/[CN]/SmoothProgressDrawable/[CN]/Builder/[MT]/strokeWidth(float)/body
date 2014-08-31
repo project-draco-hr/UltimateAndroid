@@ -1,0 +1,5 @@
+{
+  if (width < 0)   throw new IllegalArgumentException("The width must be >= 0");
+  mStrokeWidth=width;
+  return this;
+}

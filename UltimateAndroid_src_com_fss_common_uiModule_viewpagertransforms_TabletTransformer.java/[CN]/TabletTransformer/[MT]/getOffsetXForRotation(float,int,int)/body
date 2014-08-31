@@ -1,0 +1,13 @@
+{
+  OFFSET_MATRIX.reset();
+  OFFSET_CAMERA.save();
+  OFFSET_CAMERA.rotateY(Math.abs(degrees));
+  OFFSET_CAMERA.getMatrix(OFFSET_MATRIX);
+  OFFSET_CAMERA.restore();
+  OFFSET_MATRIX.preTranslate(-width * 0.5f,-height * 0.5f);
+  OFFSET_MATRIX.postTranslate(width * 0.5f,height * 0.5f);
+  OFFSET_TEMP_FLOAT[0]=width;
+  OFFSET_TEMP_FLOAT[1]=height;
+  OFFSET_MATRIX.mapPoints(OFFSET_TEMP_FLOAT);
+  return (width - OFFSET_TEMP_FLOAT[0]) * (degrees > 0.0f ? 1.0f : -1.0f);
+}

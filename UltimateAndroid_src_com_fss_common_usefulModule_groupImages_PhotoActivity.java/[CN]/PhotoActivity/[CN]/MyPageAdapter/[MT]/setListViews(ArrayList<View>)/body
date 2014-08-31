@@ -1,0 +1,4 @@
+{
+  this.listViews=listViews;
+  size=listViews == null ? 0 : listViews.size();
+}

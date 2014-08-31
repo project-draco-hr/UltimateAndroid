@@ -1,0 +1,12 @@
+{
+  if (name.contains(".")) {
+    return createViewOrFailQuietly(name,null,context,attrs);
+  }
+  for (  final String prefix : sClassPrefixList) {
+    final View view=createViewOrFailQuietly(name,prefix,context,attrs);
+    if (view != null) {
+      return view;
+    }
+  }
+  return null;
+}

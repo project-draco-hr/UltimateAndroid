@@ -1,0 +1,11 @@
+{
+  if (mProgressiveStartActivated) {
+    resetProgressiveStart(0);
+  }
+  if (isRunning())   return;
+  if (mCallbacks != null) {
+    mCallbacks.onStart();
+  }
+  scheduleSelf(mUpdater,SystemClock.uptimeMillis() + FRAME_DURATION);
+  invalidateSelf();
+}

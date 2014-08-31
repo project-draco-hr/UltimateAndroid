@@ -1,0 +1,6 @@
+{
+  if (numberOfFolds != mNumberOfFolds) {
+    mNumberOfFolds=numberOfFolds;
+    updateFold();
+  }
+}

@@ -1,0 +1,5 @@
+{
+  super.setLines(lines);
+  mMaxLines=lines;
+  refitText();
+}

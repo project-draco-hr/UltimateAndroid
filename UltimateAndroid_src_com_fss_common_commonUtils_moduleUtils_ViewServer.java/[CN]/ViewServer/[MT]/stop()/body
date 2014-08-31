@@ -1,0 +1,38 @@
+{
+  if (mThread != null) {
+    mThread.interrupt();
+    if (mThreadPool != null) {
+      try {
+        mThreadPool.shutdownNow();
+      }
+ catch (      SecurityException e) {
+        Log.w(LOG_TAG,"Could not stop all view server threads");
+      }
+    }
+    mThreadPool=null;
+    mThread=null;
+    try {
+      mServer.close();
+      mServer=null;
+      return true;
+    }
+ catch (    IOException e) {
+      Log.w(LOG_TAG,"Could not close the view server");
+    }
+  }
+  mWindowsLock.writeLock().lock();
+  try {
+    mWindows.clear();
+  }
+  finally {
+    mWindowsLock.writeLock().unlock();
+  }
+  mFocusLock.writeLock().lock();
+  try {
+    mFocusedWindow=null;
+  }
+  finally {
+    mFocusLock.writeLock().unlock();
+  }
+  return false;
+}

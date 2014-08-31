@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.fading_actionbar_activity_home);
+  String[] titles=getActivityTitles();
+  setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,titles));
+}

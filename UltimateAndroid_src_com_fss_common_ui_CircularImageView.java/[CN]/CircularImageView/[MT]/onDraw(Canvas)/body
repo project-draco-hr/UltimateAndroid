@@ -1,0 +1,13 @@
+{
+  BitmapDrawable bitmapDrawable=(BitmapDrawable)this.getDrawable();
+  if (bitmapDrawable != null)   image=bitmapDrawable.getBitmap();
+  if (image != null) {
+    canvasSize=canvas.getWidth();
+    if (canvas.getHeight() < canvasSize)     canvasSize=canvas.getHeight();
+    BitmapShader shader=new BitmapShader(Bitmap.createScaledBitmap(image,canvasSize,canvasSize,false),Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
+    paint.setShader(shader);
+    int circleCenter=(canvasSize - (borderWidth * 2)) / 2;
+    canvas.drawCircle(circleCenter + borderWidth,circleCenter + borderWidth,((canvasSize - (borderWidth * 2)) / 2) + borderWidth - 4.0f,paintBorder);
+    canvas.drawCircle(circleCenter + borderWidth,circleCenter + borderWidth,((canvasSize - (borderWidth * 2)) / 2) - 4.0f,paint);
+  }
+}

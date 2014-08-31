@@ -1,0 +1,3 @@
+{
+  a.overridePendingTransition(R.anim.ac_transition_appear_bottom_right_in,R.anim.ac_transition_appear_bottom_right_out);
+}

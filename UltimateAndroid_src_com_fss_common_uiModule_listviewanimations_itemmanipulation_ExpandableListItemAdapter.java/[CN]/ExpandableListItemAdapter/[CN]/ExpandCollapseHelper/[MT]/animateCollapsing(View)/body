@@ -1,0 +1,11 @@
+{
+  int origHeight=view.getHeight();
+  ValueAnimator animator=createHeightAnimator(view,origHeight,0);
+  animator.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    final Animator animator){
+      view.setVisibility(View.GONE);
+    }
+  }
+);
+  animator.start();
+}

@@ -1,0 +1,16 @@
+{
+  try {
+    Class<?>[] classes=Activity.class.getDeclaredClasses();
+    Class<?> translucentConversionListenerClazz=null;
+    for (    Class clazz : classes) {
+      if (clazz.getSimpleName().contains("TranslucentConversionListener")) {
+        translucentConversionListenerClazz=clazz;
+      }
+    }
+    Method method=Activity.class.getDeclaredMethod("convertToTranslucent",translucentConversionListenerClazz);
+    method.setAccessible(true);
+    method.invoke(mActivity,new Object[]{null});
+  }
+ catch (  Throwable t) {
+  }
+}

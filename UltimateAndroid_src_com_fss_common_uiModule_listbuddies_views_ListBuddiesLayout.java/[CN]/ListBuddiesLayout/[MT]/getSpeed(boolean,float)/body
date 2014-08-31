@@ -1,0 +1,10 @@
+{
+  int speed;
+  if (isManualScrollLeftListFaster && isCalculationForLeft || !isManualScrollLeftListFaster && !isCalculationForLeft) {
+    speed=(int)-deltaY * 2;
+  }
+ else {
+    speed=(int)-deltaY / 2;
+  }
+  return speed;
+}

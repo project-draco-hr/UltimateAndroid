@@ -1,0 +1,4 @@
+{
+  this.mOnItemSelectedListener=listener;
+  super.setOnItemSelectedListener(this);
+}

@@ -1,0 +1,19 @@
+{
+  if (mLastDragged >= 0) {
+    for (int i=0; i < getChildCount(); i++) {
+      getChildAt(i).clearAnimation();
+    }
+    if (mLastTarget >= 0 && mLastDragged != mLastTarget) {
+      final View child=getChildAt(mLastDragged);
+      removeViewAt(mLastDragged);
+      addView(child,mLastTarget);
+      if (mOnRearrangeListener != null) {
+        mOnRearrangeListener.onRearrange(mLastDragged,mLastTarget);
+      }
+    }
+    mLastDragged=-1;
+    mLastTarget=-1;
+    requestLayout();
+    invalidate();
+  }
+}

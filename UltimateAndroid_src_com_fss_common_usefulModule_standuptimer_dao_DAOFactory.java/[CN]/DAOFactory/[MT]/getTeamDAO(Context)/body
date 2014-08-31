@@ -1,0 +1,11 @@
+{
+  if (cacheDAOInstances) {
+    if (cachedTeamDAO == null) {
+      cachedTeamDAO=new TeamDAO(getProperDAOContext(context));
+    }
+    return cachedTeamDAO;
+  }
+ else {
+    return new TeamDAO(getProperDAOContext(context));
+  }
+}

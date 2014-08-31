@@ -1,0 +1,7 @@
+{
+  Logger.d("Updating team with the name of '" + team.getName() + "'");
+  ContentValues values=new ContentValues();
+  values.put(TEAMS_NAME,team.getName());
+  long id=db.update(TEAMS_TABLE_NAME,values,_ID + " = ?",new String[]{team.getId().toString()});
+  return new Team(id,team.getName());
+}

@@ -1,0 +1,10 @@
+{
+  this.date=date;
+  isCurrentMonth=currentMonth;
+  isSelectable=selectable;
+  isHighlighted=highlighted;
+  isSelected=selected;
+  isToday=today;
+  this.value=value;
+  this.rangeState=rangeState;
+}

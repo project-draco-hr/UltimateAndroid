@@ -1,0 +1,27 @@
+{
+  double topMost=-Integer.MAX_VALUE;
+  double bottomMost=Integer.MAX_VALUE;
+  double leftMost=Integer.MAX_VALUE;
+  double rightMost=-Integer.MAX_VALUE;
+  for (  double[] coordinate : points) {
+    double x=coordinate[0];
+    double y=coordinate[1];
+    if (positionManager.contains(x,y)) {
+      topMost=Math.max(topMost,x);
+      bottomMost=Math.min(bottomMost,x);
+      leftMost=Math.min(leftMost,y);
+      rightMost=Math.max(rightMost,y);
+    }
+  }
+  Point topRight=translate(topMost,rightMost);
+  Point bottomLeft=translate(bottomMost,leftMost);
+  int width=bottomLeft.x - topRight.x;
+  int height=bottomLeft.y - topRight.y;
+  double scaleX=Math.abs(getWidth() / (double)width);
+  double scaleY=Math.abs(getHeight() / (double)height);
+  double destinationScale=Math.min(scaleX,scaleY);
+  double middleX=(rightMost + leftMost) * 0.5f;
+  double middleY=(topMost + bottomMost) * 0.5f;
+  moveToAndCenter(middleY,middleX);
+  setScaleFromCenter(destinationScale);
+}

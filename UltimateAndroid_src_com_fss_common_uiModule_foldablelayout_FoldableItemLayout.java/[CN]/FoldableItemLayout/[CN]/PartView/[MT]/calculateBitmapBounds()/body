@@ -1,0 +1,18 @@
+{
+  if (mBitmap == null) {
+    mBitmapBounds.set(0,0,0,0);
+  }
+ else {
+    int h=mBitmap.getHeight();
+    int w=mBitmap.getWidth();
+    int top=mGravity == Gravity.TOP ? 0 : (int)(h * (1 - mClippingFactor) - 0.5f);
+    int bottom=mGravity == Gravity.TOP ? (int)(h * mClippingFactor + 0.5f) : h;
+    mBitmapBounds.set(0,top,w,bottom);
+    if (mVisibleBounds != null) {
+      if (!mBitmapBounds.intersect(mVisibleBounds)) {
+        mBitmapBounds.set(0,0,0,0);
+      }
+    }
+  }
+  invalidate();
+}

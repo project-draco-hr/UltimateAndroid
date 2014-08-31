@@ -1,0 +1,17 @@
+{
+  super.onFoldRotationChanged(layout,position);
+  float stage=getFoldRotation() / 180;
+  float coverW=mCoverViewPosition.width();
+  float detailsW=mDetailsViewPosition.width();
+  if (position == 0) {
+    float coverScale=1 - (1 - detailsW / coverW) * stage;
+    layout.setScale(coverScale);
+  }
+ else {
+    float detailsScale=1 - (1 - coverW / detailsW) * (1 - stage);
+    layout.setScale(detailsScale);
+    float dH=mDetailsViewPosition.height() / 2 - mCoverViewPosition.height() * detailsW / coverW;
+    float translationY=stage < 0.5f ? -dH * (1 - 2 * stage) : 0;
+    layout.setRollingDistance(translationY);
+  }
+}

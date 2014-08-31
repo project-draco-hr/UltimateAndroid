@@ -1,0 +1,4 @@
+{
+  mScrimColor=color;
+  invalidate();
+}

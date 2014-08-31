@@ -1,0 +1,5 @@
+{
+  parentView=inflater.inflate(R.layout.resize_menu_home,container,false);
+  setUpViews();
+  return parentView;
+}

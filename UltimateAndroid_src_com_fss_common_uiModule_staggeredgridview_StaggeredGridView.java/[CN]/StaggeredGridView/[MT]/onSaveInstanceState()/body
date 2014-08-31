@@ -1,0 +1,21 @@
+{
+  ListSavedState listState=(ListSavedState)super.onSaveInstanceState();
+  GridListSavedState ss=new GridListSavedState(listState.getSuperState());
+  ss.selectedId=listState.selectedId;
+  ss.firstId=listState.firstId;
+  ss.viewTop=listState.viewTop;
+  ss.position=listState.position;
+  ss.height=listState.height;
+  boolean haveChildren=getChildCount() > 0 && getCount() > 0;
+  if (haveChildren && mFirstPosition > 0) {
+    ss.columnCount=mColumnCount;
+    ss.columnTops=mColumnTops;
+    ss.positionData=mPositionData;
+  }
+ else {
+    ss.columnCount=mColumnCount >= 0 ? mColumnCount : 0;
+    ss.columnTops=new int[ss.columnCount];
+    ss.positionData=new SparseArray<Object>();
+  }
+  return ss;
+}

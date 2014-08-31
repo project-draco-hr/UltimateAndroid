@@ -1,0 +1,4 @@
+{
+  mRotationDegrees-=detector.getRotationDegreesDelta();
+  return true;
+}

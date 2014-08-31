@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.google_progress_bar_activity_main);
+  ButterKnife.inject(this);
+  refresh();
+}

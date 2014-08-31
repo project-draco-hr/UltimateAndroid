@@ -1,0 +1,4 @@
+{
+  Intent intent=new Intent(this,SingleParallaxScrollView.class);
+  startActivity(intent);
+}

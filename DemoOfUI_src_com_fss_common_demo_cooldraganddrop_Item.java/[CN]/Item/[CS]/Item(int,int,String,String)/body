@@ -1,0 +1,6 @@
+{
+  mIcon=icon;
+  mSpans=spans;
+  mTitle=title;
+  mDescription=description;
+}

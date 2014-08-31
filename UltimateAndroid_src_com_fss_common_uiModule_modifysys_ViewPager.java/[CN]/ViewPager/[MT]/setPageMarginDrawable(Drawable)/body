@@ -1,0 +1,6 @@
+{
+  mMarginDrawable=d;
+  if (d != null)   refreshDrawableState();
+  setWillNotDraw(d == null);
+  invalidate();
+}

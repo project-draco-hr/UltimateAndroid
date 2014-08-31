@@ -1,0 +1,12 @@
+{
+  if (isShimmering) {
+    if (paint.getShader() == null) {
+      paint.setShader(linearGradient);
+    }
+    linearGradientMatrix.setTranslate(2 * gradientX,0);
+    linearGradient.setLocalMatrix(linearGradientMatrix);
+  }
+ else {
+    paint.setShader(null);
+  }
+}

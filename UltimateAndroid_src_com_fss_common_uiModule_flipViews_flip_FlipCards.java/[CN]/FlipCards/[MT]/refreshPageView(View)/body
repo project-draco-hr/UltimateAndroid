@@ -1,0 +1,12 @@
+{
+  boolean match=false;
+  if (frontCards.getView() == view) {
+    frontCards.resetWithIndex(frontCards.getIndex());
+    match=true;
+  }
+  if (backCards.getView() == view) {
+    backCards.resetWithIndex(backCards.getIndex());
+    match=true;
+  }
+  return match;
+}

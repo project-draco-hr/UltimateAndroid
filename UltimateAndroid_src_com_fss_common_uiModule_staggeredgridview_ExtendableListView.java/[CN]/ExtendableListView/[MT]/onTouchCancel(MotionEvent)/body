@@ -1,0 +1,12 @@
+{
+  mTouchMode=TOUCH_MODE_IDLE;
+  setPressed(false);
+  invalidate();
+  final Handler handler=getHandler();
+  if (handler != null) {
+    handler.removeCallbacks(mPendingCheckForLongPress);
+  }
+  recycleVelocityTracker();
+  mActivePointerId=INVALID_POINTER;
+  return true;
+}

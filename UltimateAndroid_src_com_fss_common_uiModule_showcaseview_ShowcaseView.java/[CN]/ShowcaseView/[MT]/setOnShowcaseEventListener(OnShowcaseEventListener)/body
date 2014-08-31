@@ -1,0 +1,8 @@
+{
+  if (listener != null) {
+    mEventListener=listener;
+  }
+ else {
+    mEventListener=OnShowcaseEventListener.NONE;
+  }
+}

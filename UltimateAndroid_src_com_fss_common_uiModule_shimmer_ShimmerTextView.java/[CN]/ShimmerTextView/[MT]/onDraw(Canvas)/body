@@ -1,0 +1,6 @@
+{
+  if (shimmerViewHelper != null) {
+    shimmerViewHelper.onDraw();
+  }
+  super.onDraw(canvas);
+}

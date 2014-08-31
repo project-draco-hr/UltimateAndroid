@@ -1,0 +1,29 @@
+{
+  float position=rotation;
+  while (position < 0)   position+=360;
+  position%=360;
+  if (position > 180)   position-=360;
+  float rotationX=0;
+  boolean isVisible=true;
+  if (mGravity == Gravity.TOP) {
+    if (position <= -90 || position == 180) {
+      isVisible=false;
+    }
+ else     if (position < 0) {
+      rotationX=position;
+    }
+  }
+ else {
+    if (position >= 90) {
+      isVisible=false;
+    }
+ else     if (position > 0) {
+      rotationX=position;
+    }
+  }
+  setRotationX(rotationX);
+  mInternalVisibility=isVisible ? VISIBLE : INVISIBLE;
+  applyVisibility();
+  mLocalFoldRotation=position;
+  invalidate();
+}

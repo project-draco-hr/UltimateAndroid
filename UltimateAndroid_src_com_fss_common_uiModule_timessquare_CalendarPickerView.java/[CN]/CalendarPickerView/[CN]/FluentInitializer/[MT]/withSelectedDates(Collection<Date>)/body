@@ -1,0 +1,13 @@
+{
+  if (selectionMode == SelectionMode.SINGLE && selectedDates.size() > 1) {
+    throw new IllegalArgumentException("SINGLE mode can't be used with multiple selectedDates");
+  }
+  if (selectedDates != null) {
+    for (    Date date : selectedDates) {
+      selectDate(date);
+    }
+  }
+  scrollToSelectedDates();
+  validateAndUpdate();
+  return this;
+}

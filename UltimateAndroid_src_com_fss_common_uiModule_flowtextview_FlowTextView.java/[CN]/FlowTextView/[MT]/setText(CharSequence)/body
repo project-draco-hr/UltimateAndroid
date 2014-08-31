@@ -1,0 +1,11 @@
+{
+  mText=text;
+  if (text instanceof Spannable) {
+    mIsHtml=true;
+    mSpanParser.setSpannable((Spannable)text);
+  }
+ else {
+    mIsHtml=false;
+  }
+  this.invalidate();
+}

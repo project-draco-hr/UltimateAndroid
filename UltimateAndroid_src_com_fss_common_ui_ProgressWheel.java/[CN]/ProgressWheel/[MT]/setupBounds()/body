@@ -1,0 +1,17 @@
+{
+  int minValue=Math.min(layout_width,layout_height);
+  int xOffset=layout_width - minValue;
+  int yOffset=layout_height - minValue;
+  paddingTop=this.getPaddingTop() + (yOffset / 2);
+  paddingBottom=this.getPaddingBottom() + (yOffset / 2);
+  paddingLeft=this.getPaddingLeft() + (xOffset / 2);
+  paddingRight=this.getPaddingRight() + (xOffset / 2);
+  int width=getWidth();
+  int height=getHeight();
+  rectBounds=new RectF(paddingLeft,paddingTop,width - paddingRight,height - paddingBottom);
+  circleBounds=new RectF(paddingLeft + barWidth,paddingTop + barWidth,width - paddingRight - barWidth,height - paddingBottom - barWidth);
+  circleInnerContour=new RectF(circleBounds.left + (rimWidth / 2.0f) + (contourSize / 2.0f),circleBounds.top + (rimWidth / 2.0f) + (contourSize / 2.0f),circleBounds.right - (rimWidth / 2.0f) - (contourSize / 2.0f),circleBounds.bottom - (rimWidth / 2.0f) - (contourSize / 2.0f));
+  circleOuterContour=new RectF(circleBounds.left - (rimWidth / 2.0f) - (contourSize / 2.0f),circleBounds.top - (rimWidth / 2.0f) - (contourSize / 2.0f),circleBounds.right + (rimWidth / 2.0f) + (contourSize / 2.0f),circleBounds.bottom + (rimWidth / 2.0f) + (contourSize / 2.0f));
+  fullRadius=(width - paddingRight - barWidth) / 2;
+  circleRadius=(fullRadius - barWidth) + 1;
+}

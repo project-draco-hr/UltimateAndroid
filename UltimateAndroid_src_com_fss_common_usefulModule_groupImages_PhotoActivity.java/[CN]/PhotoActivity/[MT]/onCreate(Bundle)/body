@@ -1,0 +1,57 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.group_activity_photo);
+  photo_relativeLayout=(RelativeLayout)findViewById(R.id.photo_relativeLayout);
+  photo_relativeLayout.setBackgroundColor(0x70000000);
+  for (int i=0; i < Bimp.drr.size(); i++) {
+    drr.add(Bimp.drr.get(i));
+  }
+  max=Bimp.max;
+  Button photo_bt_exit=(Button)findViewById(R.id.photo_bt_exit);
+  photo_bt_exit.setOnClickListener(new View.OnClickListener(){
+    public void onClick(    View v){
+      finish();
+    }
+  }
+);
+  Button photo_bt_del=(Button)findViewById(R.id.photo_bt_del);
+  photo_bt_del.setOnClickListener(new View.OnClickListener(){
+    public void onClick(    View v){
+      if (listViews.size() == 1) {
+        Bimp.drr.clear();
+        Bimp.max=0;
+        finish();
+      }
+ else {
+        String newStr=drr.get(count).substring(drr.get(count).lastIndexOf("/") + 1,drr.get(count).lastIndexOf("."));
+        drr.remove(count);
+        del.add(newStr);
+        max--;
+        pager.removeAllViews();
+        listViews.remove(count);
+        adapter.setListViews(listViews);
+        adapter.notifyDataSetChanged();
+      }
+    }
+  }
+);
+  Button photo_bt_enter=(Button)findViewById(R.id.photo_bt_enter);
+  photo_bt_enter.setOnClickListener(new View.OnClickListener(){
+    public void onClick(    View v){
+      Bimp.drr=drr;
+      Bimp.max=max;
+      finish();
+    }
+  }
+);
+  pager=(ViewPager)findViewById(R.id.viewpager);
+  pager.setOnPageChangeListener(pageChangeListener);
+  for (int i=0; i < drr.size(); i++) {
+    initListViews(drr.get(i));
+  }
+  adapter=new MyPageAdapter(listViews);
+  pager.setAdapter(adapter);
+  Intent intent=getIntent();
+  int id=intent.getIntExtra("ID",0);
+  pager.setCurrentItem(id);
+}

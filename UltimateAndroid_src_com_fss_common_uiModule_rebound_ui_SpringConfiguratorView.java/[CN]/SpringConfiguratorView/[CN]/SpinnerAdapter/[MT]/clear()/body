@@ -1,0 +1,4 @@
+{
+  mStrings.clear();
+  notifyDataSetChanged();
+}

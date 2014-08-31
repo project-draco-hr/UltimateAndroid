@@ -1,0 +1,10 @@
+{
+  super.layoutChildren();
+  if (mFloatView != null) {
+    if (mFloatView.isLayoutRequested() && !mFloatViewOnMeasured) {
+      measureFloatView();
+    }
+    mFloatView.layout(0,0,mFloatView.getMeasuredWidth(),mFloatView.getMeasuredHeight());
+    mFloatViewOnMeasured=false;
+  }
+}

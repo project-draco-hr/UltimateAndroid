@@ -1,0 +1,4 @@
+int position
+int y
+boolean flowDown
+boolean selected

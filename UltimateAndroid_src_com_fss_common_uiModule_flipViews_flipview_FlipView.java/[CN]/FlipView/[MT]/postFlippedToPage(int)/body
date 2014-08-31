@@ -1,0 +1,10 @@
+{
+  post(new Runnable(){
+    @Override public void run(){
+      if (mOnFlipListener != null) {
+        mOnFlipListener.onFlippedToPage(FlipView.this,page,mAdapter.getItemId(page));
+      }
+    }
+  }
+);
+}

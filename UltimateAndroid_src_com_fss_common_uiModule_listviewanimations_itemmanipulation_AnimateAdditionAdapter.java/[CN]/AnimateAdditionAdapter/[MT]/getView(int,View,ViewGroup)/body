@@ -1,0 +1,35 @@
+{
+  final View view=super.getView(position,convertView,parent);
+  if (mInsertQueue.getActiveIndexes().contains(position)) {
+    int widthMeasureSpec=View.MeasureSpec.makeMeasureSpec(ViewGroup.LayoutParams.MATCH_PARENT,View.MeasureSpec.AT_MOST);
+    int heightMeasureSpec=View.MeasureSpec.makeMeasureSpec(ViewGroup.LayoutParams.WRAP_CONTENT,View.MeasureSpec.AT_MOST);
+    view.measure(widthMeasureSpec,heightMeasureSpec);
+    int originalHeight=view.getMeasuredHeight();
+    ValueAnimator heightAnimator=ValueAnimator.ofInt(1,originalHeight);
+    heightAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+      @Override public void onAnimationUpdate(      final ValueAnimator animation){
+        ViewGroup.LayoutParams layoutParams=view.getLayoutParams();
+        layoutParams.height=(Integer)animation.getAnimatedValue();
+        view.setLayoutParams(layoutParams);
+      }
+    }
+);
+    ObjectAnimator alphaAnimator=ObjectAnimator.ofFloat(view,ALPHA,0,1);
+    AnimatorSet animatorSet=new AnimatorSet();
+    Animator[] customAnimators=getAdditionalAnimators(view,parent);
+    Animator[] animators=new Animator[customAnimators.length + 2];
+    animators[0]=heightAnimator;
+    animators[1]=alphaAnimator;
+    System.arraycopy(customAnimators,0,animators,2,customAnimators.length);
+    animatorSet.playTogether(animators);
+    animatorSet.setDuration(mInsertionAnimationDurationMs);
+    animatorSet.addListener(new AnimatorListenerAdapter(){
+      @Override public void onAnimationEnd(      final Animator animation){
+        mInsertQueue.removeActiveIndex(position);
+      }
+    }
+);
+    animatorSet.start();
+  }
+  return view;
+}

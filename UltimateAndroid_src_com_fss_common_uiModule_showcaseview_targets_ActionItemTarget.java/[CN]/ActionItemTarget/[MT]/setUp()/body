@@ -1,0 +1,5 @@
+{
+  Reflector reflector=ReflectorFactory.getReflectorForActivity(mActivity);
+  ViewParent p=reflector.getActionBarView();
+  mActionBarWrapper=new ActionBarViewWrapper(p);
+}

@@ -1,0 +1,9 @@
+{
+  return new TabHost.TabContentFactory(){
+    public View createTabContent(    String tag){
+      setStatsTabContent();
+      return findViewById(R.id.team_stats);
+    }
+  }
+;
+}

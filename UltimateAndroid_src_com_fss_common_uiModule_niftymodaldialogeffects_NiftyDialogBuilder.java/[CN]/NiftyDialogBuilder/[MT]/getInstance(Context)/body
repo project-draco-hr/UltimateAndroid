@@ -1,0 +1,10 @@
+{
+  if (instance == null) {
+synchronized (NiftyDialogBuilder.class) {
+      if (instance == null) {
+        instance=new NiftyDialogBuilder(context,R.style.dialog_untran);
+      }
+    }
+  }
+  return instance;
+}

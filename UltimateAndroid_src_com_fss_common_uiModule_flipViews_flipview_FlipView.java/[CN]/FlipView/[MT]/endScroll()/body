@@ -1,0 +1,5 @@
+{
+  final boolean wasScrolling=!mScroller.isFinished();
+  mScroller.abortAnimation();
+  return wasScrolling;
+}

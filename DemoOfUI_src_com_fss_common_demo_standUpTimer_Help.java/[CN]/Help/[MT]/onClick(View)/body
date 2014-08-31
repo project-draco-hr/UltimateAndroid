@@ -1,0 +1,7 @@
+{
+switch (v.getId()) {
+case R.id.help_ok:
+    finish();
+  break;
+}
+}

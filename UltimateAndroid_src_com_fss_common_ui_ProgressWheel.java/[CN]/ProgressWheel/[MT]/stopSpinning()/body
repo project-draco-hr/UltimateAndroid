@@ -1,0 +1,5 @@
+{
+  isSpinning=false;
+  progress=0;
+  spinHandler.removeMessages(0);
+}

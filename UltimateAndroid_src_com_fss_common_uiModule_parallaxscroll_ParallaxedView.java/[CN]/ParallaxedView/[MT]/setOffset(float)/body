@@ -1,0 +1,9 @@
+{
+  View view=this.view.get();
+  if (view != null)   if (isAPI11) {
+    view.setTranslationY(offset);
+  }
+ else {
+    translatePreICS(view,offset);
+  }
+}

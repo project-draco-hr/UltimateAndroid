@@ -1,0 +1,5 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  View title=getChildAt(0);
+  headerHeight=title == null ? 0 : title.getMeasuredHeight();
+}

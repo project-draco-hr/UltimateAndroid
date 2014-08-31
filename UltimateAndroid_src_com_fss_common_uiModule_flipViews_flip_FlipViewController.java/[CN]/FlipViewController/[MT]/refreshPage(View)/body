@@ -1,0 +1,5 @@
+{
+  if (cards.refreshPageView(pageView)) {
+    requestLayout();
+  }
+}

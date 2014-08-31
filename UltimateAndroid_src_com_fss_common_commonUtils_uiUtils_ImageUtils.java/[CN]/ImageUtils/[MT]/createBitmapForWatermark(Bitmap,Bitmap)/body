@@ -1,0 +1,16 @@
+{
+  if (src == null) {
+    return null;
+  }
+  int w=src.getWidth();
+  int h=src.getHeight();
+  int ww=watermark.getWidth();
+  int wh=watermark.getHeight();
+  Bitmap newb=Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888);
+  Canvas cv=new Canvas(newb);
+  cv.drawBitmap(src,0,0,null);
+  cv.drawBitmap(watermark,w - ww + 5,h - wh + 5,null);
+  cv.save(Canvas.ALL_SAVE_FLAG);
+  cv.restore();
+  return newb;
+}

@@ -1,0 +1,32 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.circular_progress_ac_sample_2);
+  ActionBar actionBar=getActionBar();
+  if (actionBar != null) {
+    actionBar.setTitle("IntegerProgressSample");
+  }
+  final CircularProgressButton circularButton1=(CircularProgressButton)findViewById(R.id.circularButton1);
+  circularButton1.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      if (circularButton1.getProgress() == 0) {
+        simulateSuccessProgress(circularButton1);
+      }
+ else {
+        circularButton1.setProgress(0);
+      }
+    }
+  }
+);
+  final CircularProgressButton circularButton2=(CircularProgressButton)findViewById(R.id.circularButton2);
+  circularButton2.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      if (circularButton2.getProgress() == 0) {
+        simulateErrorProgress(circularButton2);
+      }
+ else {
+        circularButton2.setProgress(0);
+      }
+    }
+  }
+);
+}

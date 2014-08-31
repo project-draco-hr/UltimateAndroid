@@ -1,0 +1,6 @@
+{
+  PointF d=detector.getFocusDelta();
+  mFocusX+=d.x;
+  mFocusY+=d.y;
+  return true;
+}

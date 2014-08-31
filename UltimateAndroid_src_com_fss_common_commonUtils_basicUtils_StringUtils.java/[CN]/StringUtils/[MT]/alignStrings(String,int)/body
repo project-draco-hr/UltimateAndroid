@@ -1,0 +1,18 @@
+{
+  int stringLength=getStringUnicodeLength(initString);
+  String transString=initString;
+  try {
+    if (requireLength > stringLength)     for (int i=0; i < (requireLength - stringLength); i++) {
+      transString=transString + "  ";
+    }
+    if ((requireLength < stringLength) && requireLength >= 2) {
+      transString=initString.substring(0,requireLength - 1) + "..";
+    }
+  }
+ catch (  Exception e) {
+    Logs.d(initString + "    " + stringLength+ "   "+ requireLength+ "    "+ transString);
+    e.printStackTrace();
+    Logs.e(e,"");
+  }
+  return transString;
+}

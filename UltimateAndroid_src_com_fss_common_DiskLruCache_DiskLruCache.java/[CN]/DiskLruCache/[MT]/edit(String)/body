@@ -1,0 +1,3 @@
+{
+  return edit(key,ANY_SEQUENCE_NUMBER);
+}

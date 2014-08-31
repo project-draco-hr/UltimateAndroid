@@ -1,0 +1,12 @@
+{
+  Intent i=new Intent(this,ActivityTransitiorSecond.class);
+  i.putExtra("backAnimation",_animationList[arg2]);
+  startActivity(i);
+  try {
+    ActivityAnimator anim=new ActivityAnimator();
+    anim.getClass().getMethod(_animationList[arg2] + "Animation",Activity.class).invoke(anim,this);
+  }
+ catch (  Exception e) {
+    Toast.makeText(this,"An error occured " + e.toString(),Toast.LENGTH_LONG).show();
+  }
+}

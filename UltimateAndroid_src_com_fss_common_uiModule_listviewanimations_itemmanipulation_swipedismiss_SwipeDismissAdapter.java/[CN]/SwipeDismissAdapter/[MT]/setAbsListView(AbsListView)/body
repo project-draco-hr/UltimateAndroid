@@ -1,0 +1,10 @@
+{
+  super.setAbsListView(listView);
+  if (mDecoratedBaseAdapter instanceof ArrayAdapter<?>) {
+    ((ArrayAdapter<?>)mDecoratedBaseAdapter).propagateNotifyDataSetChanged(this);
+  }
+  mSwipeDismissListViewTouchListener=createListViewTouchListener(listView);
+  mSwipeDismissListViewTouchListener.setIsParentHorizontalScrollContainer(isParentHorizontalScrollContainer());
+  mSwipeDismissListViewTouchListener.setTouchChild(getTouchChild());
+  listView.setOnTouchListener(mSwipeDismissListViewTouchListener);
+}

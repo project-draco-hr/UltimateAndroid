@@ -1,0 +1,22 @@
+{
+  super(context,attrs,defStyle);
+  SpringSystem springSystem=SpringSystem.create();
+  springConfigRegistry=SpringConfigRegistry.getInstance();
+  spinnerAdapter=new SpinnerAdapter(context);
+  Resources resources=getResources();
+  mRevealPx=dpToPx(40,resources);
+  mStashPx=dpToPx(280,resources);
+  mRevealerSpring=springSystem.createSpring();
+  SpringListener revealerSpringListener=new RevealerSpringListener();
+  mRevealerSpring.setCurrentValue(1).setEndValue(1).addListener(revealerSpringListener);
+  addView(generateHierarchy(context));
+  SeekbarListener seekbarListener=new SeekbarListener();
+  mTensionSeekBar.setMax(MAX_SEEKBAR_VAL);
+  mTensionSeekBar.setOnSeekBarChangeListener(seekbarListener);
+  mFrictionSeekBar.setMax(MAX_SEEKBAR_VAL);
+  mFrictionSeekBar.setOnSeekBarChangeListener(seekbarListener);
+  mSpringSelectorSpinner.setAdapter(spinnerAdapter);
+  mSpringSelectorSpinner.setOnItemSelectedListener(new SpringSelectedListener());
+  refreshSpringConfigurations();
+  this.setTranslationY(mStashPx);
+}

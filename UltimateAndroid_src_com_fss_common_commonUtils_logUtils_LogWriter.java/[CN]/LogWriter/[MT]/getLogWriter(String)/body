@@ -1,0 +1,6 @@
+{
+  if (logWriter == null) {
+    logWriter=new LogWriter(logFileName);
+  }
+  return logWriter;
+}

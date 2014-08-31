@@ -1,0 +1,5 @@
+{
+  if (!mListeners.contains(listener)) {
+    mListeners.add(listener);
+  }
+}

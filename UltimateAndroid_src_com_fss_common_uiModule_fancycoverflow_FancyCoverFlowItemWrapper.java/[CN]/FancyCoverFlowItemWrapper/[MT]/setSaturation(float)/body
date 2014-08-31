@@ -1,0 +1,7 @@
+{
+  if (saturation != this.saturation) {
+    this.saturation=saturation;
+    this.colorMatrix.setSaturation(saturation);
+    this.paint.setColorFilter(new ColorMatrixColorFilter(this.colorMatrix));
+  }
+}

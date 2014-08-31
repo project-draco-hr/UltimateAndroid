@@ -1,0 +1,4 @@
+{
+  mGenerateBackgroundUsingColors=true;
+  return this;
+}

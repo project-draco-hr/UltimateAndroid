@@ -1,0 +1,5 @@
+{
+  String[] projection={Albums._ID,Albums.ALBUM,Albums.ALBUM_ART,Albums.ALBUM_KEY,Albums.ARTIST,Albums.NUMBER_OF_SONGS};
+  Cursor cursor=cr.query(Albums.EXTERNAL_CONTENT_URI,projection,null,null,null);
+  getAlbumColumnData(cursor);
+}

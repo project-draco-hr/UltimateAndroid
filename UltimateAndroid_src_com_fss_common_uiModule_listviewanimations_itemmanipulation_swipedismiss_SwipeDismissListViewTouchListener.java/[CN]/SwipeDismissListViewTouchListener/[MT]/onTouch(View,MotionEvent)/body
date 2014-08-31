@@ -1,0 +1,23 @@
+{
+  if (mVirtualListCount == -1) {
+    mVirtualListCount=mListView.getAdapter().getCount();
+  }
+  if (mViewWidth < 2) {
+    mViewWidth=mListView.getWidth();
+  }
+switch (motionEvent.getActionMasked()) {
+case MotionEvent.ACTION_DOWN:
+    mDisallowSwipe=false;
+  view.onTouchEvent(motionEvent);
+return handleDownEvent(motionEvent);
+case MotionEvent.ACTION_MOVE:
+return handleMoveEvent(motionEvent);
+case MotionEvent.ACTION_CANCEL:
+return handleCancelEvent(motionEvent);
+case MotionEvent.ACTION_UP:
+mDisallowSwipe=false;
+mTouchChildTouched=false;
+return handleUpEvent(motionEvent);
+}
+return false;
+}

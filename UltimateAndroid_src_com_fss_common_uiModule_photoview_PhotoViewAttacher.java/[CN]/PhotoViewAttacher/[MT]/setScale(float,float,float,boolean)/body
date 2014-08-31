@@ -1,0 +1,16 @@
+{
+  ImageView imageView=getImageView();
+  if (null != imageView) {
+    if (scale < mMinScale || scale > mMaxScale) {
+      LogManager.getLogger().i(LOG_TAG,"Scale must be within the range of minScale and maxScale");
+      return;
+    }
+    if (animate) {
+      imageView.post(new AnimatedZoomRunnable(getScale(),scale,focalX,focalY));
+    }
+ else {
+      mSuppMatrix.setScale(scale,scale,focalX,focalY);
+      checkAndDisplayMatrix();
+    }
+  }
+}

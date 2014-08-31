@@ -1,0 +1,21 @@
+{
+  if (reader == null) {
+    return null;
+  }
+  StringBuilder builder=new StringBuilder();
+  char[] buf=new char[1024];
+  int len=-1;
+  try {
+    while ((len=reader.read(buf)) != -1) {
+      builder.append(buf,0,len);
+    }
+    return builder.toString();
+  }
+ catch (  IOException e) {
+    AphidLog.e(e,"Failed to readString");
+    return null;
+  }
+ finally {
+    close(reader);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  super.resetState();
+  mSloppyGesture=false;
+  mPrevAverageY=0.0f;
+  mCurrAverageY=0.0f;
+}

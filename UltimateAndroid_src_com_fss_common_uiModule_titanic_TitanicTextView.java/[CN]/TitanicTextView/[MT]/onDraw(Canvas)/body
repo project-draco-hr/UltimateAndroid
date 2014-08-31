@@ -1,0 +1,13 @@
+{
+  if (sinking && shader != null) {
+    if (getPaint().getShader() == null) {
+      getPaint().setShader(shader);
+    }
+    shaderMatrix.setTranslate(maskX,maskY + offsetY);
+    shader.setLocalMatrix(shaderMatrix);
+  }
+ else {
+    getPaint().setShader(null);
+  }
+  super.onDraw(canvas);
+}

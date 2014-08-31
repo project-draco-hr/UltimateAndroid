@@ -1,0 +1,4 @@
+{
+  if (colors == null || colors.length == 0)   return null;
+  return new ShapeDrawable(new ColorsShape(strokeWidth,colors));
+}

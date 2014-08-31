@@ -1,0 +1,13 @@
+{
+  Spring spring=mSpringRegistry.get(springId);
+  if (spring == null) {
+    throw new IllegalArgumentException("springId " + springId + " does not reference a registered spring");
+  }
+synchronized (this) {
+    mActiveSprings.add(spring);
+    if (getIsIdle()) {
+      mIdle=false;
+      mSpringLooper.start();
+    }
+  }
+}

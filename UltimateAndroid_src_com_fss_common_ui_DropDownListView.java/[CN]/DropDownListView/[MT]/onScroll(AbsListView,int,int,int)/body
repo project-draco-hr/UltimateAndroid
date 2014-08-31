@@ -1,0 +1,34 @@
+{
+  if (isDropDownStyle) {
+    if (currentScrollState == SCROLL_STATE_TOUCH_SCROLL && currentHeaderStatus != HEADER_STATUS_LOADING) {
+      if (firstVisibleItem == 0) {
+        headerImage.setVisibility(View.VISIBLE);
+        int pointBottom=headerOriginalHeight + headerReleaseMinDistance;
+        if (headerLayout.getBottom() >= pointBottom) {
+          setHeaderStatusReleaseToLoad();
+        }
+ else         if (headerLayout.getBottom() < pointBottom) {
+          setHeaderStatusDropDownToLoad();
+        }
+      }
+ else {
+        setHeaderStatusClickToLoad();
+      }
+    }
+ else     if (currentScrollState == SCROLL_STATE_FLING && firstVisibleItem == 0 && currentHeaderStatus != HEADER_STATUS_LOADING) {
+      setSecondPositionVisible();
+      hasReachedTop=true;
+    }
+ else     if (currentScrollState == SCROLL_STATE_FLING && hasReachedTop) {
+      setSecondPositionVisible();
+    }
+  }
+  if (isOnBottomStyle && isAutoLoadOnBottom && hasMore) {
+    if (firstVisibleItem > 0 && totalItemCount > 0 && (firstVisibleItem + visibleItemCount == totalItemCount)) {
+      onBottom();
+    }
+  }
+  if (onScrollListener != null) {
+    onScrollListener.onScroll(view,firstVisibleItem,visibleItemCount,totalItemCount);
+  }
+}

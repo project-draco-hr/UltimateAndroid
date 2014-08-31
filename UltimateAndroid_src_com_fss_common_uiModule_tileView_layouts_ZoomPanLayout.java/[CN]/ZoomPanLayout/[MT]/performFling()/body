@@ -1,0 +1,15 @@
+{
+  if (secondFingerIsDown) {
+    return false;
+  }
+  velocity.computeCurrentVelocity(VELOCITY_UNITS);
+  double xv=velocity.getXVelocity();
+  double yv=velocity.getYVelocity();
+  double totalVelocity=Math.abs(xv) + Math.abs(yv);
+  if (totalVelocity > MINIMUM_VELOCITY) {
+    scroller.fling(getScrollX(),getScrollY(),(int)-xv,(int)-yv,0,getLimitX(),0,getLimitY());
+    postInvalidate();
+    return true;
+  }
+  return false;
+}

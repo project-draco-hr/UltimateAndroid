@@ -1,0 +1,6 @@
+{
+  this.mActivePointerId=-1;
+  this.mLastMotionY=-1.0F;
+  this.mMaxScale=-1.0F;
+  this.mLastScale=-1.0F;
+}

@@ -1,0 +1,3 @@
+{
+  return NEEDS_PROXY ? wrap(view).getRotationY() : Honeycomb.getRotationY(view);
+}

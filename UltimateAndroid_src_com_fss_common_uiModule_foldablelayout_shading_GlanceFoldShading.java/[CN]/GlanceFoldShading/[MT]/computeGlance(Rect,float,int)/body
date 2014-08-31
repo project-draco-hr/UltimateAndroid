@@ -1,0 +1,21 @@
+{
+  if (gravity == Gravity.BOTTOM) {
+    if (rotation > 0 && rotation < 90) {
+      final float aspect=(float)mGlance.getWidth() / (float)bounds.width();
+      final int distance=(int)(bounds.height() * ((rotation - 60f) / 15f));
+      final int distanceOnGlance=(int)(distance * aspect);
+      int scaledGlanceHeight=(int)(mGlance.getHeight() / aspect);
+      mGlanceTo.set(bounds.left,bounds.top + distance,bounds.right,bounds.top + distance + scaledGlanceHeight);
+      if (!mGlanceTo.intersect(bounds)) {
+        return false;
+      }
+      int scaledBoundsHeight=(int)(bounds.height() * aspect);
+      mGlanceFrom.set(0,-distanceOnGlance,mGlance.getWidth(),-distanceOnGlance + scaledBoundsHeight);
+      if (!mGlanceFrom.intersect(0,0,mGlance.getWidth(),mGlance.getHeight())) {
+        return false;
+      }
+      return true;
+    }
+  }
+  return false;
+}

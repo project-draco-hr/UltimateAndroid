@@ -1,0 +1,4 @@
+{
+  this.transformationCamera=new Camera();
+  this.setSpacing(0);
+}

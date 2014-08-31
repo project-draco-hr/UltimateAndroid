@@ -1,0 +1,6 @@
+{
+  if (newPosition < getCount()) {
+    DynamicGridUtils.reorder(mItems,originalPosition,newPosition);
+    notifyDataSetChanged();
+  }
+}

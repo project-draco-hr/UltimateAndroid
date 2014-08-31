@@ -1,0 +1,20 @@
+{
+  if (mLastDragged >= 0) {
+    final View v=getChildAt(mLastDragged);
+    final Rect r=new Rect(v.getLeft(),v.getTop(),v.getRight(),v.getBottom());
+    r.inset(-r.width() / 20,-r.height() / 20);
+    v.measure(MeasureSpec.makeMeasureSpec(r.width(),MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(r.height(),MeasureSpec.EXACTLY));
+    v.layout(r.left,r.top,r.right,r.bottom);
+    AnimationSet animSet=new AnimationSet(true);
+    ScaleAnimation scale=new ScaleAnimation(0.9091f,1,0.9091f,1,v.getWidth() / 2,v.getHeight() / 2);
+    scale.setDuration(ANIMATION_DURATION);
+    AlphaAnimation alpha=new AlphaAnimation(1,.5f);
+    alpha.setDuration(ANIMATION_DURATION);
+    animSet.addAnimation(scale);
+    animSet.addAnimation(alpha);
+    animSet.setFillEnabled(true);
+    animSet.setFillAfter(true);
+    v.clearAnimation();
+    v.startAnimation(animSet);
+  }
+}

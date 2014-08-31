@@ -1,0 +1,9 @@
+{
+  TypedArray a=context.obtainStyledAttributes(attributeSet,R.styleable.PanningView);
+  try {
+    mPanningDurationInMs=a.getInt(R.styleable.PanningView_panningDurationInMs,PanningViewAttacher.DEFAULT_PANNING_DURATION_IN_MS);
+  }
+  finally {
+    a.recycle();
+  }
+}

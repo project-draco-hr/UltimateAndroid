@@ -1,0 +1,6 @@
+{
+  if (Max > 0) {
+    this.mMax=Max;
+    invalidate();
+  }
+}

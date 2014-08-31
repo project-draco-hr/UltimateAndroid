@@ -1,0 +1,7 @@
+{
+  long itemId=getItemId(position);
+  if (mExpandedIds.contains(itemId)) {
+    return;
+  }
+  toggle(position);
+}

@@ -1,0 +1,5 @@
+{
+  mDivider=drawable;
+  setDividerAndHeight(drawable,mDividerHeight);
+  return this;
+}

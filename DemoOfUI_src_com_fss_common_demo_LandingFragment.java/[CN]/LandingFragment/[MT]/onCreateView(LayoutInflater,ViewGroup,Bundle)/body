@@ -1,0 +1,9 @@
+{
+  mainView=inflater.inflate(R.layout.landing_fragment,container,false);
+  ButterKnife.inject(this,mainView);
+  initTitanicView();
+  initEnhanceList();
+  initViewPager();
+  CryptoUtils.testCrypto(getActivity());
+  return mainView;
+}

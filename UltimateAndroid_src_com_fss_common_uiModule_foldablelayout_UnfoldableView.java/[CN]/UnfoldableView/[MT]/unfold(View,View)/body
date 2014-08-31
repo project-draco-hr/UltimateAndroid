@@ -1,0 +1,13 @@
+{
+  if (mCoverView == coverView && mDetailsView == detailsView)   return;
+  if ((mCoverView != null && mCoverView != coverView) || (mDetailsView != null && mDetailsView != detailsView)) {
+    mScheduledDetailsView=detailsView;
+    mScheduledCoverView=coverView;
+    foldBack();
+    return;
+  }
+  setCoverViewInternal(coverView);
+  setDetailsViewInternal(detailsView);
+  setAdapter(mAdapter);
+  scrollToPosition(1);
+}

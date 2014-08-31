@@ -1,0 +1,486 @@
+{
+  HashMap<String,String> map=new HashMap<>();
+  map.put("name","SmoothBar");
+  map.put("detail","try");
+  map.put("subname","to ProgressBar");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","DynamicGrid");
+  map.put("detail","try");
+  map.put("subname","to DynamicGrid");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Cool Drag Drop ");
+  map.put("detail","try");
+  map.put("subname","to DragDrop");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Stickyheader");
+  map.put("detail","try");
+  map.put("subname","to StickyHeader");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ListViewFilter");
+  map.put("detail","try");
+  map.put("subname","to ListViewFilter");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FlipView");
+  map.put("detail","try");
+  map.put("subname","to FlipView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Photoview");
+  map.put("detail","try");
+  map.put("subname","to Photoview");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FoldingActivity");
+  map.put("detail","try");
+  map.put("subname","to Folding");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","CircularBar");
+  map.put("detail","try");
+  map.put("subname","to CircularBar");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FoldableList");
+  map.put("detail","try");
+  map.put("subname","to FoldableList");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","UnfoldableList");
+  map.put("detail","try");
+  map.put("subname","to UnfoldableList");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","TimeSquare");
+  map.put("detail","try");
+  map.put("subname","to TimeSquare");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FaceCrop");
+  map.put("detail","try");
+  map.put("subname","to FaceCrop");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","KenBurns");
+  map.put("detail","try");
+  map.put("subname","to KenBurns");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Discroll");
+  map.put("detail","try");
+  map.put("subname","to Discroll");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Panning");
+  map.put("detail","try");
+  map.put("subname","to Panning");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ParScroll");
+  map.put("detail","try");
+  map.put("subname","to ParScroll");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ProgressWheel");
+  map.put("detail","try");
+  map.put("subname","to Wheel");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ViewTabs");
+  map.put("detail","try");
+  map.put("subname","to ViewTabs");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Rebound");
+  map.put("detail","try");
+  map.put("subname","Rebound");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ReboundSimple");
+  map.put("detail","try");
+  map.put("subname","Rebound");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ListAnim");
+  map.put("detail","try");
+  map.put("subname","ListAnim");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","PullSplash");
+  map.put("detail","try");
+  map.put("subname","PullSplash");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Jsoup");
+  map.put("detail","try");
+  map.put("subname","Jsoup");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ViewServer");
+  map.put("detail","try");
+  map.put("subname","ViewServer");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","PassCode");
+  map.put("detail","try");
+  map.put("subname","PassCode");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","GestureTouch");
+  map.put("detail","try");
+  map.put("subname","GestureTouch");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","act_anim");
+  map.put("detail","try");
+  map.put("subname","act_anim");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","pullscrollview");
+  map.put("detail","try");
+  map.put("subname","pull");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","card swiped");
+  map.put("detail","try");
+  map.put("subname","card swiped");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ShowCase");
+  map.put("detail","try");
+  map.put("subname","ShowCase");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ListBuddies");
+  map.put("detail","try");
+  map.put("subname","ListBuddies");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ActivityTransition");
+  map.put("detail","try");
+  map.put("subname","act");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","AutoFit");
+  map.put("detail","try");
+  map.put("subname","AutoFit");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Draggable");
+  map.put("detail","try");
+  map.put("subname","Draggable");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FloatLayout");
+  map.put("detail","try");
+  map.put("subname","FloatLayout");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","WireFrame");
+  map.put("detail","try");
+  map.put("subname","WireFrame");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Trigle");
+  map.put("detail","try");
+  map.put("subname","Frame");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","RiseNumber");
+  map.put("detail","try");
+  map.put("subname","RiseNumber");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Nifty");
+  map.put("detail","try");
+  map.put("subname","Nifty");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Icons");
+  map.put("detail","try");
+  map.put("subname","Icons");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","EdgeEffect");
+  map.put("detail","try");
+  map.put("subname","EdgeEffect");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ViewPager");
+  map.put("detail","try");
+  map.put("subname","Transform");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","StandUpTimer");
+  map.put("detail","try");
+  map.put("subname","Timer");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","CircularProgress");
+  map.put("detail","try");
+  map.put("subname","Button");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","JazzyViewPager");
+  map.put("detail","try");
+  map.put("subname","Jazzy");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","PulltoZoom");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","QuickReturn");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","SuperListview");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Staggered");
+  map.put("detail","try");
+  map.put("subname","GridView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","DropDownListview");
+  map.put("detail","try");
+  map.put("subname","ListView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FlowTextView");
+  map.put("detail","try");
+  map.put("subname","TextView");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Google");
+  map.put("detail","try");
+  map.put("subname","ProgressBar");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Number");
+  map.put("detail","try");
+  map.put("subname","ProgressBar");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FancyCoverFlow");
+  map.put("detail","try");
+  map.put("subname","FancyCoverFlow");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","DragSort");
+  map.put("detail","try");
+  map.put("subname","Listview");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","DragSort");
+  map.put("detail","try");
+  map.put("subname","Listview");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","FadingActionbar");
+  map.put("detail","try");
+  map.put("subname","FadingActionbar");
+  enhanceList.add(map);
+  enhancedListAdapter=new EnhancedListAdapter(enhanceList);
+  landingEnhanceListView.setAdapter(enhancedListAdapter);
+  landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
+    @Override public EnhancedListView.Undoable onDismiss(    EnhancedListView listView,    int position){
+      enhancedListAdapter.remove(position);
+      return null;
+    }
+  }
+);
+  landingEnhanceListView.setSwipingLayout(R.id.swiping_layout);
+  landingEnhanceListView.setUndoStyle(null);
+  landingEnhanceListView.enableSwipeToDismiss();
+  landingEnhanceListView.setSwipeDirection(EnhancedListView.SwipeDirection.START);
+  landingEnhanceListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+    @Override public void onItemClick(    AdapterView<?> parent,    View view,    int position,    long id){
+switch (position) {
+case 0:
+        BasicUtils.sendIntent(getActivity(),SmoothProgressBarActivity.class);
+      break;
+case 1:
+    BasicUtils.sendIntent(getActivity(),DynamicGridActivity.class);
+  break;
+case 2:
+BasicUtils.sendIntent(getActivity(),CoolDragAndDropActivity.class);
+break;
+case 3:
+BasicUtils.sendIntent(getActivity(),StickGridItemListActivity.class);
+break;
+case 4:
+BasicUtils.sendIntent(getActivity(),ListViewFilterActivity.class);
+break;
+case 5:
+BasicUtils.sendIntent(getActivity(),FlipViewActivity.class);
+break;
+case 6:
+BasicUtils.sendIntent(getActivity(),PhotoViewActivity.class);
+break;
+case 7:
+BasicUtils.sendIntent(getActivity(),FoldingActivitys.class);
+break;
+case 8:
+BasicUtils.sendIntent(getActivity(),CircularBarActivity.class);
+break;
+case 9:
+BasicUtils.sendIntent(getActivity(),FoldableListActivity.class);
+break;
+case 10:
+BasicUtils.sendIntent(getActivity(),UnfoldableDetailsActivity.class);
+break;
+case 11:
+BasicUtils.sendIntent(getActivity(),CalendarSquareActivity.class);
+break;
+case 12:
+BasicUtils.sendIntent(getActivity(),FaceCropActivity.class);
+break;
+case 13:
+BasicUtils.sendIntent(getActivity(),KenBurnsViewActivity.class);
+break;
+case 14:
+BasicUtils.sendIntent(getActivity(),DiscrollActivity.class);
+break;
+case 15:
+BasicUtils.sendIntent(getActivity(),PanningViewActivity.class);
+break;
+case 16:
+BasicUtils.sendIntent(getActivity(),ParallaxScrollActivity.class);
+break;
+case 17:
+BasicUtils.sendIntent(getActivity(),ProgressbarWheelActivity.class);
+break;
+case 18:
+BasicUtils.sendIntent(getActivity(),ViewpagerSlidingTabsActivity.class);
+break;
+case 19:
+BasicUtils.sendIntent(getActivity(),ReboundActivity.class);
+break;
+case 20:
+BasicUtils.sendIntent(getActivity(),ReboundActivitySimple.class);
+break;
+case 21:
+BasicUtils.sendIntent(getActivity(),ListAnimationActivity.class);
+break;
+case 22:
+BasicUtils.sendIntent(getActivity(),PullSplashActivity.class);
+break;
+case 23:
+BasicUtils.sendIntent(getActivity(),UtilsDemoActivity.class);
+break;
+case 24:
+BasicUtils.sendIntent(getActivity(),ViewServerActivity.class);
+break;
+case 25:
+BasicUtils.sendIntent(getActivity(),PasscodePreferencesActivity.class);
+break;
+case 26:
+BasicUtils.sendIntent(getActivity(),GestureTouchActivity.class);
+break;
+case 27:
+BasicUtils.sendIntent(getActivity(),ActivityAnimationsActivity.class);
+break;
+case 28:
+BasicUtils.sendIntent(getActivity(),PullScrollViewActivity.class);
+break;
+case 29:
+BasicUtils.sendIntent(getActivity(),CardsSwipedActivity.class);
+break;
+case 30:
+BasicUtils.sendIntent(getActivity(),ShowCaseSampleActivity.class);
+break;
+case 31:
+BasicUtils.sendIntent(getActivity(),ListBuddiesActivity.class);
+break;
+case 32:
+BasicUtils.sendIntent(getActivity(),ActivityTransitionActivity.class);
+break;
+case 33:
+BasicUtils.sendIntent(getActivity(),AutofitTextViewActivity.class);
+break;
+case 34:
+BasicUtils.sendIntent(getActivity(),DraggableGridViewPagerTestActivity.class);
+break;
+case 35:
+BasicUtils.sendIntent(getActivity(),FloatLabelActivity.class);
+break;
+case 36:
+BasicUtils.sendIntent(getActivity(),WireFrameActivity.class);
+break;
+case 37:
+BasicUtils.sendIntent(getActivity(),TriangleFrameActivity.class);
+break;
+case 38:
+BasicUtils.sendIntent(getActivity(),RiseNumberActivity.class);
+break;
+case 39:
+BasicUtils.sendIntent(getActivity(),NiftyDialogActivity.class);
+break;
+case 40:
+BasicUtils.sendIntent(getActivity(),DifferentIconsActivity.class);
+break;
+case 41:
+BasicUtils.sendIntent(getActivity(),EdgeEffectActivity.class);
+break;
+case 42:
+BasicUtils.sendIntent(getActivity(),ViewPagerTransformerActivity.class);
+break;
+case 43:
+BasicUtils.sendIntent(getActivity(),ConfigureStandupTimer.class);
+break;
+case 44:
+BasicUtils.sendIntent(getActivity(),CircularProgressButtonActivity.class);
+break;
+case 45:
+BasicUtils.sendIntent(getActivity(),JazzyViewActivity.class);
+break;
+case 46:
+BasicUtils.sendIntent(getActivity(),PulltoZoomListViewActivity.class);
+break;
+case 47:
+BasicUtils.sendIntent(getActivity(),QuickReturnListViewActivity.class);
+break;
+case 48:
+BasicUtils.sendIntent(getActivity(),SuperListViewActivity.class);
+break;
+case 49:
+BasicUtils.sendIntent(getActivity(),StaggeredGridViewActivity.class);
+break;
+case 50:
+BasicUtils.sendIntent(getActivity(),DropDownListViewDemo.class);
+break;
+case 51:
+BasicUtils.sendIntent(getActivity(),FlowTextViewActivity.class);
+break;
+case 52:
+BasicUtils.sendIntent(getActivity(),GoogleProgressBarActivity.class);
+break;
+case 53:
+BasicUtils.sendIntent(getActivity(),NumberProgressBarActivity.class);
+break;
+case 54:
+BasicUtils.sendIntent(getActivity(),FancyCoverFlowActivity.class);
+break;
+case 55:
+BasicUtils.sendIntent(getActivity(),SingleChoiceListView.class);
+break;
+case 56:
+BasicUtils.sendIntent(getActivity(),MultipleChoiceListView.class);
+break;
+case 57:
+BasicUtils.sendIntent(getActivity(),HomeActivity.class);
+break;
+}
+}
+}
+);
+}

@@ -1,0 +1,6 @@
+{
+  if (positionOffset > 0.5f) {
+    position++;
+  }
+  updateTextPositions(position,positionOffset,true);
+}

@@ -1,0 +1,5 @@
+{
+  View v=adapter.getView(position,null,mDslv);
+  v.getBackground().setLevel(10000);
+  return v;
+}

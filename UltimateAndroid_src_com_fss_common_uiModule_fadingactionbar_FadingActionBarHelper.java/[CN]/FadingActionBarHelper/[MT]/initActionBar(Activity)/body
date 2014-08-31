@@ -1,0 +1,4 @@
+{
+  mActionBar=activity.getActionBar();
+  super.initActionBar(activity);
+}

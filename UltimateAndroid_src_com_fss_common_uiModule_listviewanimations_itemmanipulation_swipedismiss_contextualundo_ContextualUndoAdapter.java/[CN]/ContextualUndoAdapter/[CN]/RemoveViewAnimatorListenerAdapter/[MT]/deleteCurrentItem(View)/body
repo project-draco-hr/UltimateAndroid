@@ -1,0 +1,4 @@
+{
+  int position=AdapterViewUtil.getPositionForView(getAbsListView(),view);
+  mDeleteItemCallback.deleteItem(position);
+}

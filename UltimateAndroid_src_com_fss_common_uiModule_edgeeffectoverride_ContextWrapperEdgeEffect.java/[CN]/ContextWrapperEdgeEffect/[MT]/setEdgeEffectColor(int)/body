@@ -1,0 +1,5 @@
+{
+  mColor=color;
+  if (mEdgeDrawable != null)   mEdgeDrawable.setColorFilter(color,PorterDuff.Mode.MULTIPLY);
+  if (mGlowDrawable != null)   mGlowDrawable.setColorFilter(color,PorterDuff.Mode.MULTIPLY);
+}

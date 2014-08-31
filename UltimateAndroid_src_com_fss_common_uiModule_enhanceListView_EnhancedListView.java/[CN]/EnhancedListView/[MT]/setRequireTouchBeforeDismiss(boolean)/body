@@ -1,0 +1,4 @@
+{
+  mTouchBeforeAutoHide=touchBeforeDismiss;
+  return this;
+}

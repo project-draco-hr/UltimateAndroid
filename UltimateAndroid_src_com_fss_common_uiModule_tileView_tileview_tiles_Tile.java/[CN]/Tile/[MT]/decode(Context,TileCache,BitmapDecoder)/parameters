@@ -1,0 +1,3 @@
+Context context
+TileCache cache
+BitmapDecoder decoder

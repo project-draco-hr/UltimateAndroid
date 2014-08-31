@@ -1,0 +1,4 @@
+Canvas canvas
+Rect bounds
+float rotation
+int gravity

@@ -1,0 +1,8 @@
+{
+  if (null != mAttacher) {
+    mAttacher.setScaleType(scaleType);
+  }
+ else {
+    mPendingScaleType=scaleType;
+  }
+}

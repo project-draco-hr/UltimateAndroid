@@ -1,0 +1,3 @@
+{
+  return getInt(context,key,-1);
+}

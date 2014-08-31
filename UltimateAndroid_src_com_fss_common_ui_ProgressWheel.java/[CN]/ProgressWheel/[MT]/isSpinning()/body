@@ -1,0 +1,8 @@
+{
+  if (isSpinning) {
+    return true;
+  }
+ else {
+    return false;
+  }
+}

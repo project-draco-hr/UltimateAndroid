@@ -1,0 +1,8 @@
+{
+  FillerView fillerView=(FillerView)convertView;
+  if (fillerView == null) {
+    fillerView=new FillerView(mContext);
+  }
+  fillerView.setMeasureTarget(lastViewSeen);
+  return fillerView;
+}

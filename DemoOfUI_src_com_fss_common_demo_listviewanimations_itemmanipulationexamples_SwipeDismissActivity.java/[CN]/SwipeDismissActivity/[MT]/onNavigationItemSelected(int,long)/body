@@ -1,0 +1,18 @@
+{
+switch (itemPosition) {
+case 0:
+    setSwipeDismissAdapter();
+  return true;
+case 1:
+setContextualUndoAdapter();
+return true;
+case 2:
+setContextualUndoWithTimedDeleteAdapter();
+return true;
+case 3:
+setContextualUndoWithTimedDeleteAndCountDownAdapter();
+return true;
+default :
+return false;
+}
+}

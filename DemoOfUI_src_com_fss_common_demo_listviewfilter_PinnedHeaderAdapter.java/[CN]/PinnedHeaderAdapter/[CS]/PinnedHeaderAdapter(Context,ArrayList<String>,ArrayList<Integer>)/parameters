@@ -1,0 +1,3 @@
+Context context
+ArrayList<String> listItems
+ArrayList<Integer> listSectionPos

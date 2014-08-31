@@ -1,0 +1,3 @@
+{
+  return list != null && list.size() > 0 ? true : false;
+}

@@ -1,0 +1,24 @@
+{
+  postDelayed(new Runnable(){
+    @Override public void run(){
+      if (!shotStateStore.hasShot()) {
+        updateBitmap();
+        Point targetPoint=target.getPoint();
+        if (targetPoint != null) {
+          hasNoTarget=false;
+          if (animate) {
+            animationFactory.animateTargetToPoint(ShowcaseView.this,targetPoint);
+          }
+ else {
+            setShowcasePosition(targetPoint);
+          }
+        }
+ else {
+          hasNoTarget=true;
+          invalidate();
+        }
+      }
+    }
+  }
+,100);
+}
