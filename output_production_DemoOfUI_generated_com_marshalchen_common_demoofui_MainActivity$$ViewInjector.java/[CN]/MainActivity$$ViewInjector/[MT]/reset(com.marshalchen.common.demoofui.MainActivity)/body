@@ -1,0 +1,7 @@
+{
+  target.mDrawerLayout=null;
+  target.mDrawerList=null;
+  target.favShimmerTextView=null;
+  target.main_content_frame=null;
+  target.favShimmerReaLayout=null;
+}

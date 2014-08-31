@@ -1,0 +1,5 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165546,"field 'photoViewImageView'");
+  target.photoViewImageView=(android.widget.ImageView)view;
+}

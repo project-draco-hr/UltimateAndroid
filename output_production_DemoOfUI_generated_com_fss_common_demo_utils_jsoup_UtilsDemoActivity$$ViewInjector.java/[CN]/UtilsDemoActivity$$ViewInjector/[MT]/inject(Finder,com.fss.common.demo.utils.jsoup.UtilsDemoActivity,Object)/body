@@ -1,0 +1,5 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165446,"field 'mJsoupTextView'");
+  target.mJsoupTextView=(android.widget.TextView)view;
+}

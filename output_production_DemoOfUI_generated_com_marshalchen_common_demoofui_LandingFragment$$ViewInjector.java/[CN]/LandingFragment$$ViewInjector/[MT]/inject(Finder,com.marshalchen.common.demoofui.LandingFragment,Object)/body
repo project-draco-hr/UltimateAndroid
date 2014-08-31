@@ -1,0 +1,9 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165453,"field 'landingEnhanceListView'");
+  target.landingEnhanceListView=(com.marshalchen.common.uiModule.enhanceListView.EnhancedListView)view;
+  view=finder.findRequiredView(source,2131165450,"field 'landingMallViewpager'");
+  target.landingMallViewpager=(android.support.v4.view.ViewPager)view;
+  view=finder.findRequiredView(source,2131165452,"field 'titanicTextView'");
+  target.titanicTextView=(com.marshalchen.common.uiModule.titanic.TitanicTextView)view;
+}

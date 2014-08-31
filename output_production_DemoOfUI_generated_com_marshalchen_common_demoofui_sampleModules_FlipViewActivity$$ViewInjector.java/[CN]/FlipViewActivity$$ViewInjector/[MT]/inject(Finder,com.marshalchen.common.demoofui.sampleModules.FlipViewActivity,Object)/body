@@ -1,0 +1,7 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165398,"field 'flipViewListHorizontal'");
+  target.flipViewListHorizontal=(com.marshalchen.common.uiModule.flipViews.flipview.FlipView)view;
+  view=finder.findRequiredView(source,2131165397,"field 'flipViewListVertical'");
+  target.flipViewListVertical=(com.marshalchen.common.uiModule.flipViews.flipview.FlipView)view;
+}

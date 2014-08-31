@@ -1,0 +1,7 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165389,"field 'faceCropImageView'");
+  target.faceCropImageView=(android.widget.ImageView)view;
+  view=finder.findRequiredView(source,2131165390,"field 'faceCropImageViewCroped'");
+  target.faceCropImageViewCroped=(android.widget.ImageView)view;
+}

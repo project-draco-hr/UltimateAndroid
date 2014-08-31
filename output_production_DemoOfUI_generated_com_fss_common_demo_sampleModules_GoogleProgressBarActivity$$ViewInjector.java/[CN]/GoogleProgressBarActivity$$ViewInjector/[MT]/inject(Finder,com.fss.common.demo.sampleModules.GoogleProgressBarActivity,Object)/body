@@ -1,0 +1,5 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165421,"field 'mProgressBar'");
+  target.mProgressBar=(com.marshalchen.common.uiModule.googleprogressbar.GoogleProgressBar)view;
+}

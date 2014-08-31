@@ -1,0 +1,6 @@
+{
+  target.smoothProgressBar=null;
+  target.smoothProgressBar1=null;
+  target.smoothProgressBar2=null;
+  target.smoothProgressBar3=null;
+}

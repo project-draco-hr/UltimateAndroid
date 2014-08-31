@@ -1,0 +1,5 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165338,"field 'circularProgressBar'");
+  target.circularProgressBar=(com.marshalchen.common.ui.HoloCircularProgressBar)view;
+}

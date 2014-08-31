@@ -1,0 +1,15 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165454,"field 'landViewPagerImage'");
+  target.landViewPagerImage=(android.widget.ImageView)view;
+  view=finder.findRequiredView(source,2131165458,"field 'landViewPagerImage1'");
+  target.landViewPagerImage1=(android.widget.ImageView)view;
+  view=finder.findRequiredView(source,2131165456,"field 'landViewPagerName'");
+  target.landViewPagerName=(android.widget.TextView)view;
+  view=finder.findRequiredView(source,2131165460,"field 'landViewPagerName1'");
+  target.landViewPagerName1=(android.widget.TextView)view;
+  view=finder.findRequiredView(source,2131165457,"field 'landViewPagerInfo'");
+  target.landViewPagerInfo=(android.widget.TextView)view;
+  view=finder.findRequiredView(source,2131165461,"field 'landViewPagerInfo1'");
+  target.landViewPagerInfo1=(android.widget.TextView)view;
+}

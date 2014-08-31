@@ -1,0 +1,7 @@
+{
+  View view;
+  view=finder.findRequiredView(source,2131165448,"field 'kenBurnsView'");
+  target.kenBurnsView=(com.marshalchen.common.uiModule.kenburnsview.KenBurnsView)view;
+  view=finder.findRequiredView(source,2131165447,"field 'viewSwitcher'");
+  target.viewSwitcher=(android.widget.ViewSwitcher)view;
+}
