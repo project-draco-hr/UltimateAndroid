@@ -1,7 +1,0 @@
-{
-  Intent intent=new Intent();
-  intent.setClass(context,classes);
-  intent.putExtra(key,value);
-  intent.putExtra(anotherKey,anotherValue);
-  context.startActivity(intent);
-}

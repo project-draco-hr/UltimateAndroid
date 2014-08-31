@@ -1,8 +1,0 @@
-{
-  int count=getChildCount();
-  int paddingTop=0;
-  if (mClipToPadding) {
-    paddingTop=getListPaddingTop();
-  }
-  return count > 0 ? getChildAt(count - 1).getBottom() : paddingTop;
-}

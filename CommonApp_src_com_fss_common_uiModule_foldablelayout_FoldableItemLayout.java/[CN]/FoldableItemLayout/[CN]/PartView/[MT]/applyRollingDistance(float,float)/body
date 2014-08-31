@@ -1,7 +1,0 @@
-{
-  setTranslationY((int)(distance * scale + 0.5f));
-  final int h=getHeight() / 2;
-  final float topClipping=h == 0 ? 0.5f : (h - distance) / h / 2;
-  mClippingFactor=mGravity == Gravity.TOP ? topClipping : 1f - topClipping;
-  calculateBitmapBounds();
-}

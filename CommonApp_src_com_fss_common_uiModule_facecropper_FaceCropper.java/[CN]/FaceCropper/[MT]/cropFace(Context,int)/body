@@ -1,5 +1,0 @@
-{
-  BitmapFactory.Options bitmapOptions=new BitmapFactory.Options();
-  bitmapOptions.inPreferredConfig=Bitmap.Config.RGB_565;
-  return cropFace(BitmapFactory.decodeResource(ctx.getResources(),resDrawable,bitmapOptions));
-}

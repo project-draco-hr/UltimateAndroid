@@ -1,5 +1,0 @@
-int position
-View floatView
-int dragFlags
-int deltaX
-int deltaY

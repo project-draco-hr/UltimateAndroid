@@ -1,8 +1,0 @@
-{
-  if (mDrawerToggle.onOptionsItemSelected(item)) {
-    return true;
-  }
- else {
-    return super.onOptionsItemSelected(item);
-  }
-}

@@ -1,5 +1,0 @@
-{
-  vertexBuffer=toFloatBuffer(cardVertices);
-  indexBuffer=toShortBuffer(indices);
-  textureBuffer=toFloatBuffer(textureCoordinates);
-}

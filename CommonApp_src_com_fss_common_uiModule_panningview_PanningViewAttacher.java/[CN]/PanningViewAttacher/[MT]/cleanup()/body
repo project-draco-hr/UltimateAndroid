@@ -1,8 +1,0 @@
-{
-  if (null != mImageView) {
-    getImageView().getViewTreeObserver().removeGlobalOnLayoutListener(this);
-  }
-  mViewTreeObserver=null;
-  stopPanning();
-  mImageView=null;
-}

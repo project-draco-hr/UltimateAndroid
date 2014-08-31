@@ -1,5 +1,0 @@
-{
-  this.paint=new Paint();
-  this.colorMatrix=new ColorMatrix();
-  this.setSaturation(1);
-}

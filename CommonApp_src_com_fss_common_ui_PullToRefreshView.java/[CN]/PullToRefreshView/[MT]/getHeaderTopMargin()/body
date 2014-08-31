@@ -1,4 +1,0 @@
-{
-  LayoutParams params=(LayoutParams)mHeaderView.getLayoutParams();
-  return params.topMargin;
-}

@@ -1,7 +1,0 @@
-{
-  int meetingLength=getIntent().getIntExtra("meetingLength",0);
-  int numParticipants=getIntent().getIntExtra("numParticipants",0);
-  Logger.d("Data from Intent: meetingLength = " + meetingLength);
-  Logger.d("Data from Intent: numParticipants = " + numParticipants);
-  loadState(meetingLength,numParticipants);
-}

@@ -1,3 +1,0 @@
-{
-  return parent.findViewById(expandable_view_id);
-}

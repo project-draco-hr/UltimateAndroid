@@ -1,4 +1,0 @@
-{
-  if (paintBorder != null)   paintBorder.setColor(borderColor);
-  this.invalidate();
-}

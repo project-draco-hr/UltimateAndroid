@@ -1,3 +1,0 @@
-{
-  return getRowPaddingLeft() + mItemMargin + ((mItemMargin + mColumnWidth) * colIndex);
-}

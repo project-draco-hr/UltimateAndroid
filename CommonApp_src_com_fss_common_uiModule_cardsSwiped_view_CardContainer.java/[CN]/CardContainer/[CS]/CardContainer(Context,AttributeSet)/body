@@ -1,5 +1,0 @@
-{
-  super(context,attrs);
-  initFromXml(attrs);
-  init();
-}

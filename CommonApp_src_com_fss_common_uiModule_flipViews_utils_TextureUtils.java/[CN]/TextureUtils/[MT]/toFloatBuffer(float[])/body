@@ -1,8 +1,0 @@
-{
-  ByteBuffer buf=ByteBuffer.allocateDirect(v.length * 4);
-  buf.order(ByteOrder.nativeOrder());
-  FloatBuffer buffer=buf.asFloatBuffer();
-  buffer.put(v);
-  buffer.position(0);
-  return buffer;
-}

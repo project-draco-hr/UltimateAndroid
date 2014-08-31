@@ -1,6 +1,0 @@
-{
-  Parcelable superState=super.onSaveInstanceState();
-  SavedState ss=new SavedState(superState);
-  ss.areHeadersSticky=mAreHeadersSticky;
-  return ss;
-}

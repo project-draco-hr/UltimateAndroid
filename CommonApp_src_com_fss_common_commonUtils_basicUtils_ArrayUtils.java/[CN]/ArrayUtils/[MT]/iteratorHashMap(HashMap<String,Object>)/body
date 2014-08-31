@@ -1,7 +1,0 @@
-{
-  Iterator it=hashMap.entrySet().iterator();
-  while (it.hasNext()) {
-    Map.Entry pairs=(Map.Entry)it.next();
-    Logs.d(pairs.getKey() + " = " + pairs.getValue());
-  }
-}

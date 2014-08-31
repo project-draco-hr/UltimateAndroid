@@ -1,7 +1,0 @@
-{
-  if (apiUtils.isCompatWithHoneycomb()) {
-    for (    View view : views) {
-      view.setAlpha(alpha);
-    }
-  }
-}

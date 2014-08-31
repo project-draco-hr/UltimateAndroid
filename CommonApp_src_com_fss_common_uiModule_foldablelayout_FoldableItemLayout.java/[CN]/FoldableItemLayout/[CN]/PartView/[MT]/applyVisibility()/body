@@ -1,3 +1,0 @@
-{
-  super.setVisibility(mExtrenalVisibility == VISIBLE ? mInternalVisibility : mExtrenalVisibility);
-}

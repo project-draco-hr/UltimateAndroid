@@ -1,8 +1,0 @@
-{
-  this.mColor=color;
-  if (mTextPaint != null) {
-    mTextPaint.setColor(mColor);
-  }
-  mPaintHelper.setColor(mColor);
-  this.invalidate();
-}

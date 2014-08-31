@@ -1,3 +1,0 @@
-{
-  return getLong(context,key,-1);
-}

@@ -1,9 +1,0 @@
-{
-  DSLVFragmentClicks f=DSLVFragmentClicks.newInstance(mNumHeaders,mNumFooters);
-  f.removeMode=mRemoveMode;
-  f.removeEnabled=mRemoveEnabled;
-  f.dragStartMode=mDragStartMode;
-  f.sortEnabled=mSortEnabled;
-  f.dragEnabled=mDragEnabled;
-  return f;
-}

@@ -1,4 +1,0 @@
-{
-  GridItemRecord rec=getOrCreateRecord(position);
-  rec.isHeaderFooter=true;
-}

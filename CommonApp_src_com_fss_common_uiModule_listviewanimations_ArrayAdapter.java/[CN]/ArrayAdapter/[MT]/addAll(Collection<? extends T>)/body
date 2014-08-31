@@ -1,5 +1,0 @@
-{
-  boolean result=mItems.addAll(collection);
-  notifyDataSetChanged();
-  return result;
-}

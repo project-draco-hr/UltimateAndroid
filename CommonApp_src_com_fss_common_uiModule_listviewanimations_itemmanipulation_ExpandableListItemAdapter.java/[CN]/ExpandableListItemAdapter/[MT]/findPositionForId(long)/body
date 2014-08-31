@@ -1,8 +1,0 @@
-{
-  for (int i=0; i < getCount(); i++) {
-    if (getItemId(i) == id) {
-      return i;
-    }
-  }
-  return -1;
-}

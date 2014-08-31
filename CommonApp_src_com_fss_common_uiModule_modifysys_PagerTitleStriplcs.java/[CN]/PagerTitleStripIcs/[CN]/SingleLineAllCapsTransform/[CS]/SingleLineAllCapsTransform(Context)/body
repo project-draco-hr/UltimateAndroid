@@ -1,3 +1,0 @@
-{
-  mLocale=context.getResources().getConfiguration().locale;
-}

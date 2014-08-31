@@ -1,4 +1,0 @@
-{
-  mEventListener.onShowcaseViewShow(this);
-  fadeInShowcase();
-}

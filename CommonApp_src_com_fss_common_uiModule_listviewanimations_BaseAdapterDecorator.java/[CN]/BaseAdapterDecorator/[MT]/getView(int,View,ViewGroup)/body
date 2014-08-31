@@ -1,3 +1,0 @@
-{
-  return mDecoratedBaseAdapter.getView(position,convertView,parent);
-}

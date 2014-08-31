@@ -1,6 +1,0 @@
-{
-  if (mHeaderViewInfos.size() > 0) {
-    return removeFixedViewInfo(v,mHeaderViewInfos);
-  }
-  return false;
-}

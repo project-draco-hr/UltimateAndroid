@@ -1,4 +1,0 @@
-{
-  mContentLayoutResId=layoutResId;
-  return (T)this;
-}

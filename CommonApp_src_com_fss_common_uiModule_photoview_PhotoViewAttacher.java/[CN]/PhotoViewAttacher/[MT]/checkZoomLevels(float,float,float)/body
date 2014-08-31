@@ -1,8 +1,0 @@
-{
-  if (minZoom >= midZoom) {
-    throw new IllegalArgumentException("MinZoom has to be less than MidZoom");
-  }
- else   if (midZoom >= maxZoom) {
-    throw new IllegalArgumentException("MidZoom has to be less than MaxZoom");
-  }
-}

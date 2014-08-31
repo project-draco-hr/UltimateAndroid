@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.parallax_scroll_scroll_multiple_parallax);
-}

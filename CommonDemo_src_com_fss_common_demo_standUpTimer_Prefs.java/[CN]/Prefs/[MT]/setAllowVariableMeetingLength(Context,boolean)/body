@@ -1,3 +1,0 @@
-{
-  PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(VARIABLE_MEETING_LENGTH,value).commit();
-}

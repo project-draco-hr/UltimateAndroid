@@ -1,4 +1,0 @@
-{
-  super(context,theme);
-  init(context);
-}

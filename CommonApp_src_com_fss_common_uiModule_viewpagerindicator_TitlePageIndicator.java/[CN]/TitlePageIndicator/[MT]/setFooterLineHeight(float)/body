@@ -1,5 +1,0 @@
-{
-  mFooterLineHeight=footerLineHeight;
-  mPaintFooterLine.setStrokeWidth(mFooterLineHeight);
-  invalidate();
-}

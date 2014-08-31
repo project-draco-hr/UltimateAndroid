@@ -1,4 +1,0 @@
-{
-  mTitle.setText(title);
-  return this;
-}

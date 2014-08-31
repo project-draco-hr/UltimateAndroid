@@ -1,8 +1,0 @@
-{
-  checkColorIndex(index);
-  mCurrentOffset=0;
-  mFinishing=false;
-  mStartSection=0;
-  mCurrentSections=0;
-  mColorsIndex=index;
-}

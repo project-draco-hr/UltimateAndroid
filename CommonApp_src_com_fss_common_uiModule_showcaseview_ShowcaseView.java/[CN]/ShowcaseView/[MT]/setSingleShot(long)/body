@@ -1,3 +1,0 @@
-{
-  shotStateStore.setSingleShot(shotId);
-}

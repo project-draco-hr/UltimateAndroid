@@ -1,4 +1,0 @@
-{
-  mTitleSpan=new TextAppearanceSpan(this.context,styleId);
-  setContentTitle(mTitle);
-}

@@ -1,6 +1,0 @@
-{
-  ImageView imageView=getImageView();
-  if (null != imageView) {
-    setScale(scale,(imageView.getRight()) / 2,(imageView.getBottom()) / 2,animate);
-  }
-}

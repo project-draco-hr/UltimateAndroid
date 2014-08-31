@@ -1,6 +1,0 @@
-{
-  if (where < 0 || where > (getCount() - 1)) {
-    return;
-  }
-  insert(item,where);
-}

@@ -1,3 +1,0 @@
-{
-  return targetColumnRowPair.y > mobileColumnRowPair.y && targetColumnRowPair.x > mobileColumnRowPair.x;
-}

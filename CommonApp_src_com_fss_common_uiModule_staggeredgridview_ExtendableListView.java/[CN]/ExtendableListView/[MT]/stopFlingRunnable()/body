@@ -1,5 +1,0 @@
-{
-  if (mFlingRunnable != null) {
-    mFlingRunnable.endFling();
-  }
-}

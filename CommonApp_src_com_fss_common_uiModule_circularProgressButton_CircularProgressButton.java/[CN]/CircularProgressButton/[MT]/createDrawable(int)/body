@@ -1,9 +1,0 @@
-{
-  GradientDrawable drawable=(GradientDrawable)getResources().getDrawable(R.drawable.circular_progress_background).mutate();
-  drawable.setColor(color);
-  drawable.setCornerRadius(mCornerRadius);
-  StrokeGradientDrawable strokeGradientDrawable=new StrokeGradientDrawable(drawable);
-  strokeGradientDrawable.setStrokeColor(color);
-  strokeGradientDrawable.setStrokeWidth(mStrokeWidth);
-  return strokeGradientDrawable;
-}

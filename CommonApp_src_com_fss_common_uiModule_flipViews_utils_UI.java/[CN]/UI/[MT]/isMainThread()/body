@@ -1,3 +1,0 @@
-{
-  return Looper.myLooper() == Looper.getMainLooper();
-}

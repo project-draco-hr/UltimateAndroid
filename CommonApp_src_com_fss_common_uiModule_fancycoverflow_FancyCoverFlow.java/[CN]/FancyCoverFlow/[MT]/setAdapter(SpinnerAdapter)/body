@@ -1,6 +1,0 @@
-{
-  if (!(adapter instanceof FancyCoverFlowAdapter)) {
-    throw new ClassCastException(FancyCoverFlow.class.getSimpleName() + " only works in conjunction with a " + FancyCoverFlowAdapter.class.getSimpleName());
-  }
-  super.setAdapter(adapter);
-}

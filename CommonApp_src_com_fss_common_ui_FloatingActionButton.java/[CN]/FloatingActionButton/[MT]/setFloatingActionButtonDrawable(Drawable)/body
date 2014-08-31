@@ -1,4 +1,0 @@
-{
-  mBitmap=((BitmapDrawable)FloatingActionButtonDrawable).getBitmap();
-  invalidate();
-}

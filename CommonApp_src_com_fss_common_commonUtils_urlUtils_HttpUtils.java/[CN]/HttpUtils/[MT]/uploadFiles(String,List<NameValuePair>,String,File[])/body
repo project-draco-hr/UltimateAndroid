@@ -1,7 +1,0 @@
-{
-  List<File> fileList=new ArrayList<>();
-  for (  File f : files) {
-    fileList.add(f);
-  }
-  return uploadFiles(url,paramsList,fileParams,fileList);
-}

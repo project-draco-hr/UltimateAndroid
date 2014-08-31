@@ -1,3 +1,0 @@
-{
-  return "StickyGridHeadersGridView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " areHeadersSticky="+ areHeadersSticky+ "}";
-}

@@ -1,4 +1,0 @@
-{
-  super(content,start,end,xOffset,paint);
-  this.url=url;
-}

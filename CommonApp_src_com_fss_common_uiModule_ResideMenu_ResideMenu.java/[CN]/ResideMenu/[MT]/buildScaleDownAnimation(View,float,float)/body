@@ -1,7 +1,0 @@
-{
-  AnimatorSet scaleDown=new AnimatorSet();
-  scaleDown.playTogether(ObjectAnimator.ofFloat(target,"scaleX",targetScaleX),ObjectAnimator.ofFloat(target,"scaleY",targetScaleY));
-  scaleDown.setInterpolator(AnimationUtils.loadInterpolator(activity,android.R.anim.decelerate_interpolator));
-  scaleDown.setDuration(250);
-  return scaleDown;
-}

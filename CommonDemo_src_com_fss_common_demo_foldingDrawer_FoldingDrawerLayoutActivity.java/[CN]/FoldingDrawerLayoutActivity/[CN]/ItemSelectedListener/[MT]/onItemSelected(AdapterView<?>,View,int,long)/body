@@ -1,4 +1,0 @@
-{
-  int mNumberOfFolds=Integer.parseInt(parent.getItemAtPosition(pos).toString());
-  mDrawerLayout.getFoldingLayout(mDrawerList).setNumberOfFolds(mNumberOfFolds);
-}

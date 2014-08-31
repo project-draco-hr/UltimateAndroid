@@ -1,3 +1,0 @@
-{
-  ((ViewPager)arg0).removeView(listViews.get(arg1 % size));
-}

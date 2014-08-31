@@ -1,7 +1,0 @@
-{
-  super.onAttach(activity);
-  mArguments=getArguments();
-  int actionBarBg=mArguments != null ? mArguments.getInt(ARG_ACTION_BG_RES) : R.drawable.fading_actionbar_ab_background_light;
-  mFadingHelper=new FadingActionBarHelper().actionBarBackground(actionBarBg).headerLayout(R.layout.fading_actionbar_header_light).contentLayout(R.layout.fading_actionbar_activity_scrollview).lightActionBar(actionBarBg == R.drawable.fading_actionbar_ab_background_light);
-  mFadingHelper.initActionBar(activity);
-}

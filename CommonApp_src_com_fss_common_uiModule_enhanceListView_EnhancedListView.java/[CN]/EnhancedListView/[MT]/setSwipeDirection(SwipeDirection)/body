@@ -1,4 +1,0 @@
-{
-  mSwipeDirection=direction;
-  return this;
-}

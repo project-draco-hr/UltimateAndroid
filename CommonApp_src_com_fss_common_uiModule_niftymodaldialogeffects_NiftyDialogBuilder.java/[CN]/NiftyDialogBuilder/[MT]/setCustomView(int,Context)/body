@@ -1,5 +1,0 @@
-{
-  View customView=View.inflate(context,resId,null);
-  ((FrameLayout)mDialogView.findViewById(R.id.customPanel)).addView(customView);
-  return this;
-}

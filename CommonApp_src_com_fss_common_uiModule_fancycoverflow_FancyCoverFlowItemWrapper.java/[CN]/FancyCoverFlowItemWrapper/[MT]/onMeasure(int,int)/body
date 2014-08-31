@@ -1,7 +1,0 @@
-{
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  this.remeasureChildren();
-  if (this.isReflectionEnabled) {
-    this.setMeasuredDimension((int)(this.getMeasuredWidth() * this.originalScaledownFactor),this.getMeasuredHeight());
-  }
-}

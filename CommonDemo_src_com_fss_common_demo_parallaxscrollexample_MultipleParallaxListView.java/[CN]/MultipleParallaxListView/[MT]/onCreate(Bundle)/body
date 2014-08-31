@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.parallax_scroll_list_multiple_parallax);
-  ParallaxListView listView=(ParallaxListView)findViewById(R.id.list_view);
-  CustomListAdapter adapter=new CustomListAdapter(LayoutInflater.from(this));
-  listView.setAdapter(adapter);
-}

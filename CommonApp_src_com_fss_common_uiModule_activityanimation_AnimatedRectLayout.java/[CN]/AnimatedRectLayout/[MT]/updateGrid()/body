@@ -1,4 +1,0 @@
-{
-  prepareGrid();
-  invalidate();
-}

@@ -1,4 +1,0 @@
-{
-  discStart=(int)(weight * 2.4f);
-  invalidate();
-}

@@ -1,3 +1,0 @@
-{
-  mScroller=new Scroller(getContext());
-}

@@ -1,7 +1,0 @@
-{
-  int index=mListSectionPos.indexOf(currentSectionPosition);
-  if ((index + 1) < mListSectionPos.size()) {
-    return mListSectionPos.get(index + 1);
-  }
-  return mListSectionPos.get(index);
-}

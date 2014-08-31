@@ -1,7 +1,0 @@
-{
-  super.onPause();
-  progress=361;
-  pw_two.stopSpinning();
-  pw_two.resetCount();
-  pw_two.setText("Click\none of the\nbuttons");
-}

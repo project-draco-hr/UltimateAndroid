@@ -1,4 +1,0 @@
-{
-  source=super.getTransformation(source,view);
-  return source != null ? source.toString().toUpperCase(mLocale) : null;
-}

@@ -1,3 +1,0 @@
-{
-  return map != null && map.size() > 0 ? true : false;
-}

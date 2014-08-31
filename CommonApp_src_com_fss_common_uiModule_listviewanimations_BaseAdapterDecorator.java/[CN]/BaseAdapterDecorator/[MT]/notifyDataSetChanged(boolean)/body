@@ -1,5 +1,0 @@
-{
-  if (force || !(mDecoratedBaseAdapter instanceof ArrayAdapter<?>)) {
-    mDecoratedBaseAdapter.notifyDataSetChanged();
-  }
-}

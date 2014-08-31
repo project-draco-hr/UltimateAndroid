@@ -1,8 +1,0 @@
-{
-  String rst=str;
-  rst=rst.replaceAll("&lt;","<");
-  rst=rst.replaceAll("&gt;",">");
-  rst=rst.replaceAll("&quot;","\"");
-  rst=rst.replaceAll("&amp;","&");
-  return rst;
-}

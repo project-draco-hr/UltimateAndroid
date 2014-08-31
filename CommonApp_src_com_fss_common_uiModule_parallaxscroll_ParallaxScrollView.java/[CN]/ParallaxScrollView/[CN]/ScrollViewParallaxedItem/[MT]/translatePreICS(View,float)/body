@@ -1,4 +1,0 @@
-{
-  view.offsetTopAndBottom((int)offset - lastOffset);
-  lastOffset=(int)offset;
-}

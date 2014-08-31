@@ -1,3 +1,0 @@
-{
-  return drawerView instanceof BaseFoldingLayout;
-}

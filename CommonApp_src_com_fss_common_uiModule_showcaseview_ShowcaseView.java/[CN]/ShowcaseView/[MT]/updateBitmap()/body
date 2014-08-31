@@ -1,5 +1,0 @@
-{
-  if (bitmapBuffer == null || haveBoundsChanged()) {
-    bitmapBuffer=Bitmap.createBitmap(getMeasuredWidth(),getMeasuredHeight(),Bitmap.Config.ARGB_8888);
-  }
-}

@@ -1,6 +1,0 @@
-{
-  int color=context.getResources().getColor(R.color.default_edgeeffect_color);
-  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.EdgeEffectView,defStyle,0);
-  setEdgeEffectColor(color=a.getColor(R.styleable.EdgeEffectView_edgeeffect_color,color));
-  a.recycle();
-}

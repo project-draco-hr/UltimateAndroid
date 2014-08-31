@@ -1,7 +1,0 @@
-{
-  super(dslv,R.id.text,DragSortController.ON_DOWN,0);
-  setRemoveEnabled(false);
-  mDslv=dslv;
-  mAdapter=adapter;
-  mDivPos=adapter.getDivPosition();
-}

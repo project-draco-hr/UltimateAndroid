@@ -1,7 +1,0 @@
-{
-  View view=inflater.inflate(R.layout.quick_return_listview_fragment,null);
-  mHeader=inflater.inflate(R.layout.quick_return_listview_header,null);
-  mQuickReturnView=(TextView)view.findViewById(R.id.sticky);
-  mPlaceHolder=mHeader.findViewById(R.id.placeholder);
-  return view;
-}

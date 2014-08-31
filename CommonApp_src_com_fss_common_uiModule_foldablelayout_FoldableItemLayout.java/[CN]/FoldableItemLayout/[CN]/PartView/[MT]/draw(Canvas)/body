@@ -1,5 +1,0 @@
-{
-  if (mShading != null)   mShading.onPreDraw(canvas,mBitmapBounds,mLocalFoldRotation,mGravity);
-  if (mBitmap != null)   canvas.drawBitmap(mBitmap,mBitmapBounds,mBitmapBounds,mBitmapPaint);
-  if (mShading != null)   mShading.onPostDraw(canvas,mBitmapBounds,mLocalFoldRotation,mGravity);
-}

@@ -1,3 +1,0 @@
-{
-  return new HtmlObject(content,start,end,thisXOffset,mFlowTextView.getTextPaint());
-}

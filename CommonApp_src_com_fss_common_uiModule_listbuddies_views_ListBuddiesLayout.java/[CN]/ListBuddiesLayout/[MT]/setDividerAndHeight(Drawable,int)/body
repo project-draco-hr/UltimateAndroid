@@ -1,4 +1,0 @@
-{
-  setListsDivider(drawable);
-  setHeightDivider(dividerHeight);
-}

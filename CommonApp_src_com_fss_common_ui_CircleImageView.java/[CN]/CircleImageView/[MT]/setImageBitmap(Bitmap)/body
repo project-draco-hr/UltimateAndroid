@@ -1,5 +1,0 @@
-{
-  super.setImageBitmap(bm);
-  mBitmap=bm;
-  setup();
-}

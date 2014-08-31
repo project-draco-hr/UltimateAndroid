@@ -1,4 +1,0 @@
-{
-  super.onTextChanged(text,start,lengthBefore,lengthAfter);
-  refitText();
-}

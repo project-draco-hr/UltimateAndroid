@@ -1,7 +1,0 @@
-{
-  for (int i=0; i < score.size(); i++) {
-    String date=score.get(i).date;
-    String date_1=date.substring(date.indexOf("-") + 1,date.length());
-    c.drawText(date_1,tb * 1.7f + interval_left_right * i,getHeight(),paint_date);
-  }
-}

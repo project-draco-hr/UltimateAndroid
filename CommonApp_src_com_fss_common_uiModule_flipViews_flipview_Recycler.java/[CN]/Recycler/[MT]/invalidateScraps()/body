@@ -1,7 +1,0 @@
-{
-  for (  SparseArray<Scrap> array : scraps) {
-    for (int i=0; i < array.size(); i++) {
-      array.valueAt(i).valid=false;
-    }
-  }
-}

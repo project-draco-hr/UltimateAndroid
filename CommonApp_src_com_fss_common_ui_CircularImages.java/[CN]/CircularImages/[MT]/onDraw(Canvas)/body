@@ -1,9 +1,0 @@
-{
-  if (!set) {
-    set=true;
-    setImageBitmap(getCroppedBitmap(((BitmapDrawable)getDrawable()).getBitmap()));
-  }
-  super.onDraw(canvas);
-  paint.setStrokeWidth(padding);
-  canvas.drawCircle(getMeasuredWidth() / 2,getMeasuredWidth() / 2,(float)(getMeasuredWidth() * .5 - padding * .5),paint);
-}

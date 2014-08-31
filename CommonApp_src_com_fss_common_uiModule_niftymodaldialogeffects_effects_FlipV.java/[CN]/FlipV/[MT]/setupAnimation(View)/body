@@ -1,3 +1,0 @@
-{
-  getAnimatorSet().playTogether(ObjectAnimator.ofFloat(view,"rotationX",-90,0).setDuration(DURATION));
-}

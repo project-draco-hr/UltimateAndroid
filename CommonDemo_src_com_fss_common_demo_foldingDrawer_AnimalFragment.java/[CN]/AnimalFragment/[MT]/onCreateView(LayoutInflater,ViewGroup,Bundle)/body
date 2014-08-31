@@ -1,9 +1,0 @@
-{
-  View rootView=inflater.inflate(R.layout.folding_drawer_fragment_animal,container,false);
-  int i=getArguments().getInt(ARG_ANIMAL_NUMBER);
-  String planet=getResources().getStringArray(R.array.items_name)[i];
-  int imageId=getResources().getIdentifier(planet.toLowerCase(Locale.getDefault()),"drawable",getActivity().getPackageName());
-  ((ImageView)rootView.findViewById(R.id.image)).setImageResource(imageId);
-  getActivity().setTitle(planet);
-  return rootView;
-}

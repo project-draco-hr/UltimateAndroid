@@ -1,5 +1,0 @@
-{
-  if (context == null || textView == null || config == null)   return;
-  if (!config.isFontSet())   return;
-  applyFontToTextView(context,textView,config.getFontPath());
-}

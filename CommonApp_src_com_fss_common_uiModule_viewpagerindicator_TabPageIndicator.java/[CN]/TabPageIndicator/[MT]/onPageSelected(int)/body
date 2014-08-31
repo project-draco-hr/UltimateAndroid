@@ -1,6 +1,0 @@
-{
-  setCurrentItem(arg0);
-  if (mListener != null) {
-    mListener.onPageSelected(arg0);
-  }
-}

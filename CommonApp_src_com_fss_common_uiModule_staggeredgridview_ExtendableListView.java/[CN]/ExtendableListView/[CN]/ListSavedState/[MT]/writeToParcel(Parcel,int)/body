@@ -1,8 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeLong(selectedId);
-  out.writeLong(firstId);
-  out.writeInt(viewTop);
-  out.writeInt(position);
-  out.writeInt(height);
-}

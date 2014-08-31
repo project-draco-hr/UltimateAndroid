@@ -1,3 +1,0 @@
-{
-  throwShade(Log.VERBOSE,formatString(message,args),null);
-}

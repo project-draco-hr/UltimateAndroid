@@ -1,4 +1,0 @@
-{
-  mContext=context;
-  super.setOnScrollListener(this);
-}

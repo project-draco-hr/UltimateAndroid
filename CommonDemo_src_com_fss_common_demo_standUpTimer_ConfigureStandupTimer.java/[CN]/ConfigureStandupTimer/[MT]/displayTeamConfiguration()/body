@@ -1,3 +1,0 @@
-{
-  startActivity(new Intent(this,TeamList.class));
-}

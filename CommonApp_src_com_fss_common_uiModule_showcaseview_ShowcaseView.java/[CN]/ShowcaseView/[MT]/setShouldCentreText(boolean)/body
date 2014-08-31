@@ -1,5 +1,0 @@
-{
-  this.shouldCentreText=shouldCentreText;
-  hasAlteredText=true;
-  invalidate();
-}

@@ -1,3 +1,0 @@
-{
-  return (mStartValue < mEndValue && getCurrentValue() > mEndValue) || (mStartValue > mEndValue && getCurrentValue() < mEndValue);
-}

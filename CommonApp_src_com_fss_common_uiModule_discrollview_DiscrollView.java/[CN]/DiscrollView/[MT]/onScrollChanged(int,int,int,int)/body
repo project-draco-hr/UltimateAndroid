@@ -1,4 +1,0 @@
-{
-  super.onScrollChanged(l,t,oldl,oldt);
-  onScrollChanged(t);
-}

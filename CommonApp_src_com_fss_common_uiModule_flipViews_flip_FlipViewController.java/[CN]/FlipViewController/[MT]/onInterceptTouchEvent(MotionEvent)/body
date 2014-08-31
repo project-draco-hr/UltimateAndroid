@@ -1,8 +1,0 @@
-{
-  if (flipByTouchEnabled) {
-    return cards.handleTouchEvent(event,false);
-  }
- else {
-    return false;
-  }
-}

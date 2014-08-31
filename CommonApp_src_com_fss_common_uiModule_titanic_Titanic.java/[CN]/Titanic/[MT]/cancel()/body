@@ -1,5 +1,0 @@
-{
-  if (animatorSet != null) {
-    animatorSet.cancel();
-  }
-}

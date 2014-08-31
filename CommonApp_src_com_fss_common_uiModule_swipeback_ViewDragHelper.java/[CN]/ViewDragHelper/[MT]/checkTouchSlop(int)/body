@@ -1,9 +1,0 @@
-{
-  final int count=mInitialMotionX.length;
-  for (int i=0; i < count; i++) {
-    if (checkTouchSlop(directions,i)) {
-      return true;
-    }
-  }
-  return false;
-}

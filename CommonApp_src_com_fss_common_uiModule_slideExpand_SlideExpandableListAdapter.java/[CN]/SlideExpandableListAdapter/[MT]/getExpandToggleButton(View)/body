@@ -1,3 +1,0 @@
-{
-  return parent.findViewById(toggle_button_id);
-}

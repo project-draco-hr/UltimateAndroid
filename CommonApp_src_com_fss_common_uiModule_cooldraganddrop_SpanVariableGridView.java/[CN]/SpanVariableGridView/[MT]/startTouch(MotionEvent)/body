@@ -1,7 +1,0 @@
-{
-  mTouchStartX=(int)event.getX();
-  mTouchStartY=(int)event.getY();
-  mTouchStartItemPosition=pointToPosition(INVALID_POSITION,mTouchStartX,mTouchStartY);
-  startLongPressCheck();
-  mTouchState=TOUCH_STATE_CLICK;
-}

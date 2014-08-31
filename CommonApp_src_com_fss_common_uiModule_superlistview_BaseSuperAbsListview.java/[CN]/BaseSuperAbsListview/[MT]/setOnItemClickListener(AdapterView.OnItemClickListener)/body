@@ -1,3 +1,0 @@
-{
-  mList.setOnItemClickListener(listener);
-}

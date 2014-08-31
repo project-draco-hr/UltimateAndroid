@@ -1,5 +1,0 @@
-{
-  if (sIsLogEnabled) {
-    d(String.format(message,args));
-  }
-}

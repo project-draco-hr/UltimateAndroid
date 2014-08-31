@@ -1,6 +1,0 @@
-{
-  if (mDecoratedBaseAdapter instanceof SectionIndexer) {
-    return ((SectionIndexer)mDecoratedBaseAdapter).getPositionForSection(section);
-  }
-  return 0;
-}

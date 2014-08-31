@@ -1,4 +1,0 @@
-{
-  mStrings.add(string);
-  notifyDataSetChanged();
-}

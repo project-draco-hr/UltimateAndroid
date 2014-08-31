@@ -1,6 +1,0 @@
-{
-  AsyncHttpClient client=new AsyncHttpClient();
-  PersistentCookieStore myCookieStore=new PersistentCookieStore(context);
-  client.setCookieStore(myCookieStore);
-  client.get(getAbsoluteUrl(url),responseHandler);
-}

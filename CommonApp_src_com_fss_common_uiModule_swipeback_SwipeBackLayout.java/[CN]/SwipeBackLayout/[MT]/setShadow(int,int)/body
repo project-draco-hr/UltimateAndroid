@@ -1,3 +1,0 @@
-{
-  setShadow(getResources().getDrawable(resId),edgeFlag);
-}

@@ -1,4 +1,0 @@
-{
-  mListeners=new HashSet<CallbackClass>();
-  mReturnSet=null;
-}

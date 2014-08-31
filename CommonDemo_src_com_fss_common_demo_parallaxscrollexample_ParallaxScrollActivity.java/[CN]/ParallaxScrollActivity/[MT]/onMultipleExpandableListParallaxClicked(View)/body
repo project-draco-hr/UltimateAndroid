@@ -1,4 +1,0 @@
-{
-  Intent intent=new Intent(this,MultipleParallaxExpandableListView.class);
-  startActivity(intent);
-}

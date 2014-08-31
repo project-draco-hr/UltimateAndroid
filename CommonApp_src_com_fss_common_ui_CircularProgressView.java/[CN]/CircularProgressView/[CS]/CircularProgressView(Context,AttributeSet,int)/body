@@ -1,5 +1,0 @@
-{
-  super(context,attrs,defStyleAttr);
-  mDrawable=new CircularProgressDrawable(Color.RED,10);
-  mDrawable.setCallback(this);
-}

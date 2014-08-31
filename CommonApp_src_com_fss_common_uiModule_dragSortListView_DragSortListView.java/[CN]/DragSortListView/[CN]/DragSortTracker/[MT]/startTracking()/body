@@ -1,5 +1,0 @@
-{
-  mBuilder.append("<DSLVStates>\n");
-  mNumFlushes=0;
-  mTracking=true;
-}

@@ -1,4 +1,0 @@
-{
-  cards.refreshAllPages();
-  requestLayout();
-}

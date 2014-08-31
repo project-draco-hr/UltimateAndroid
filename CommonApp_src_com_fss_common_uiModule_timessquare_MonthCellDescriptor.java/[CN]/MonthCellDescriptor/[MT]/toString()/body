@@ -1,3 +1,0 @@
-{
-  return "MonthCellDescriptor{" + "date=" + date + ", value="+ value+ ", isCurrentMonth="+ isCurrentMonth+ ", isSelected="+ isSelected+ ", isToday="+ isToday+ ", isSelectable="+ isSelectable+ ", isHighlighted="+ isHighlighted+ ", rangeState="+ rangeState+ '}';
-}

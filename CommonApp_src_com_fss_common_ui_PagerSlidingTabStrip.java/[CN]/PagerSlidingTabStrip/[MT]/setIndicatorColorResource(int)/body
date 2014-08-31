@@ -1,4 +1,0 @@
-{
-  this.indicatorColor=getResources().getColor(resId);
-  invalidate();
-}

@@ -1,4 +1,0 @@
-{
-  mSelectedSpringConfig=mSpringConfigs.get(i);
-  updateSeekBarsForSpringConfig(mSelectedSpringConfig);
-}

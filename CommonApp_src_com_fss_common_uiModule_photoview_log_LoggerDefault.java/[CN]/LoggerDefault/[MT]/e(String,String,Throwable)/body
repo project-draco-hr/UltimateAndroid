@@ -1,3 +1,0 @@
-{
-  return Log.e(tag,msg,tr);
-}

@@ -1,4 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeByte((byte)(areHeadersSticky ? 1 : 0));
-}

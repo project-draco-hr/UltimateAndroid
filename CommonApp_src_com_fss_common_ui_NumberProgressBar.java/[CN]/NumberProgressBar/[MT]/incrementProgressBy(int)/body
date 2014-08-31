@@ -1,5 +1,0 @@
-{
-  if (by > 0) {
-    setProgress(getProgress() + by);
-  }
-}

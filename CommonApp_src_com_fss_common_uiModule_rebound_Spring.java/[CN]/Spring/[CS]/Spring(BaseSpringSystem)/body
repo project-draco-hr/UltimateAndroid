@@ -1,8 +1,0 @@
-{
-  if (springSystem == null) {
-    throw new IllegalArgumentException("Spring cannot be created outside of a BaseSpringSystem");
-  }
-  mSpringSystem=springSystem;
-  mId="spring:" + ID++;
-  setSpringConfig(SpringConfig.defaultConfig);
-}

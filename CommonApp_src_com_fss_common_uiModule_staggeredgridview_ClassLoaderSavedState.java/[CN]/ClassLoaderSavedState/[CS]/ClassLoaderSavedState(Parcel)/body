@@ -1,4 +1,0 @@
-{
-  Parcelable superState=source.readParcelable(mClassLoader);
-  mSuperState=superState != null ? superState : EMPTY_STATE;
-}

@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  WindowManager.LayoutParams params=getWindow().getAttributes();
-  params.height=ViewGroup.LayoutParams.MATCH_PARENT;
-  params.width=ViewGroup.LayoutParams.MATCH_PARENT;
-  getWindow().setAttributes((WindowManager.LayoutParams)params);
-}

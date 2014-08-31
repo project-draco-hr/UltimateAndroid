@@ -1,7 +1,0 @@
-{
-  int left=getScrollX();
-  int top=getScrollY();
-  int right=left + getWidth();
-  int bottom=top + getHeight();
-  detailManager.updateViewport(left,top,right,bottom);
-}

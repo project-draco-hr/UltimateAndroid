@@ -1,9 +1,0 @@
-{
-  if (position == ListView.INVALID_POSITION) {
-    mGridView.setItemChecked(mActivatedPosition,false);
-  }
- else {
-    mGridView.setItemChecked(position,true);
-  }
-  mActivatedPosition=position;
-}

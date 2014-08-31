@@ -1,4 +1,0 @@
-{
-  this.underlineHeight=underlineHeightPx;
-  invalidate();
-}

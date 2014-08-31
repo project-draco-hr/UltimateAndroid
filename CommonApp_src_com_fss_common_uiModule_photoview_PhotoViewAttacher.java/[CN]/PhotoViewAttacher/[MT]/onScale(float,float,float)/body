@@ -1,9 +1,0 @@
-{
-  if (DEBUG) {
-    LogManager.getLogger().d(LOG_TAG,String.format("onScale: scale: %.2f. fX: %.2f. fY: %.2f",scaleFactor,focusX,focusY));
-  }
-  if (getScale() < mMaxScale || scaleFactor < 1f) {
-    mSuppMatrix.postScale(scaleFactor,scaleFactor,focusX,focusY);
-    checkAndDisplayMatrix();
-  }
-}

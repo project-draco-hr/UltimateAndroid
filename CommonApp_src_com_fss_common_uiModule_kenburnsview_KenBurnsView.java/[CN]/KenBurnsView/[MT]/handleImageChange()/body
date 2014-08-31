@@ -1,6 +1,0 @@
-{
-  updateDrawableBounds();
-  if (mInitialized && !mViewportRect.isEmpty()) {
-    startNewTransition();
-  }
-}

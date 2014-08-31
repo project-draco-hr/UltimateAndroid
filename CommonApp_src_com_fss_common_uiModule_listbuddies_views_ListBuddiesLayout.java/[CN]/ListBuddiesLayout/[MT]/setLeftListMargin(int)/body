@@ -1,7 +1,0 @@
-{
-  if (mListViewLeft != null) {
-    LayoutParams params=(LayoutParams)mListViewLeft.getLayoutParams();
-    params.setMargins(0,0,marginRigth,0);
-    mListViewLeft.setLayoutParams(params);
-  }
-}

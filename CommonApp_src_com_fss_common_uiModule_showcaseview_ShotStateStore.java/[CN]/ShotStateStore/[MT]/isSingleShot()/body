@@ -1,3 +1,0 @@
-{
-  return shotId != INVALID_SHOT_ID;
-}

@@ -1,4 +1,0 @@
-{
-  mCurrentSweepAngle=currentSweepAngle;
-  invalidateSelf();
-}

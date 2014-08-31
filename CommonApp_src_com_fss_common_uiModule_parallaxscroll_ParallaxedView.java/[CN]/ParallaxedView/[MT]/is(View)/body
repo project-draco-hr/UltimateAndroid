@@ -1,3 +1,0 @@
-{
-  return (v != null && view != null && view.get() != null && view.get().equals(v));
-}

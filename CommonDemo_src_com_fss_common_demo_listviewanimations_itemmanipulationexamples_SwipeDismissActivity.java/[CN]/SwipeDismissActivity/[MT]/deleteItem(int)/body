@@ -1,4 +1,0 @@
-{
-  mAdapter.remove(position);
-  mAdapter.notifyDataSetChanged();
-}

@@ -1,4 +1,0 @@
-{
-  this.tension=tension;
-  this.friction=friction;
-}

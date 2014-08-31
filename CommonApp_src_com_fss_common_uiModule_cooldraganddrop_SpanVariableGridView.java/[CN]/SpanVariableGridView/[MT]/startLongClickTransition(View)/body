@@ -1,8 +1,0 @@
-{
-  if (clickedChild != null && mItemTransitionDrawable == null) {
-    if (clickedChild.getBackground().getCurrent() instanceof TransitionDrawable) {
-      mItemTransitionDrawable=(TransitionDrawable)clickedChild.getBackground().getCurrent();
-      mItemTransitionDrawable.startTransition(ViewConfiguration.getLongPressTimeout());
-    }
-  }
-}

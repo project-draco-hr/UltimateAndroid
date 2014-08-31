@@ -1,3 +1,0 @@
-{
-  super(superState,AbsListView.class.getClassLoader());
-}

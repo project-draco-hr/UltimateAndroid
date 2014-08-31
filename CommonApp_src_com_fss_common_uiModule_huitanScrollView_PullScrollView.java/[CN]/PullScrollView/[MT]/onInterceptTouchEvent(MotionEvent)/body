@@ -1,8 +1,0 @@
-{
-  if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-    mTouchDownY=ev.getY();
-    mCurrentTop=mInitTop=mHeader.getTop();
-    mCurrentBottom=mInitBottom=mHeader.getBottom();
-  }
-  return super.onInterceptTouchEvent(ev);
-}

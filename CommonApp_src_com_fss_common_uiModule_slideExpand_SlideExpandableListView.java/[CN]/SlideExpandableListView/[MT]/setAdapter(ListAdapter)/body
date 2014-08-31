@@ -1,4 +1,0 @@
-{
-  this.adapter=new SlideExpandableListAdapter(adapter);
-  super.setAdapter(this.adapter);
-}

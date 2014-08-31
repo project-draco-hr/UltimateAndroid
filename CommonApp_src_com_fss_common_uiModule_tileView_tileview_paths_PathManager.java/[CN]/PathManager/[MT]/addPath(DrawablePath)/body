@@ -1,5 +1,0 @@
-{
-  paths.add(drawablePath);
-  invalidate();
-  return drawablePath;
-}

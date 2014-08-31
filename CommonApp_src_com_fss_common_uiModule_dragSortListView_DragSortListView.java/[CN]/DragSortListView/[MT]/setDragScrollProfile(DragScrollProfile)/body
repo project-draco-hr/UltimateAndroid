@@ -1,5 +1,0 @@
-{
-  if (ssp != null) {
-    mScrollProfile=ssp;
-  }
-}

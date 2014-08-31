@@ -1,5 +1,0 @@
-{
-  mScale=scale;
-  mTopPart.applyScale(scale);
-  mBottomPart.applyScale(scale);
-}

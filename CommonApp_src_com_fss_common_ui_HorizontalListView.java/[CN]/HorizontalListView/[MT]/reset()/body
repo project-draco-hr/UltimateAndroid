@@ -1,5 +1,0 @@
-{
-  initView();
-  removeAllViewsInLayout();
-  requestLayout();
-}

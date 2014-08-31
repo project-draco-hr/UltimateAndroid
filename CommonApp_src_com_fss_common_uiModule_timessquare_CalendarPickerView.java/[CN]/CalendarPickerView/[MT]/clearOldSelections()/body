@@ -1,7 +1,0 @@
-{
-  for (  MonthCellDescriptor selectedCell : selectedCells) {
-    selectedCell.setSelected(false);
-  }
-  selectedCells.clear();
-  selectedCals.clear();
-}

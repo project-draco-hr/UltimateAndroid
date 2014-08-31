@@ -1,8 +1,0 @@
-{
-  super.onScrollChanged(l,t,oldl,oldt);
-  float factor=parallaxFactor;
-  for (  ParallaxedView parallaxedView : parallaxedViews) {
-    parallaxedView.setOffset((float)t / factor);
-    factor*=innerParallaxFactor;
-  }
-}

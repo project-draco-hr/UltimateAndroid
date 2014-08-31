@@ -1,5 +1,0 @@
-{
-  for (  int position : reverseSortedPositions) {
-    mGoogleCardsAdapter.remove(position);
-  }
-}

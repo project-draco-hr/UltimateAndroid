@@ -1,5 +1,0 @@
-{
-  float mappedValue=(float)SpringUtil.mapValueFromRangeToRange(spring.getCurrentValue(),0,1,1,0.5);
-  mImageView.setScaleX(mappedValue);
-  mImageView.setScaleY(mappedValue);
-}

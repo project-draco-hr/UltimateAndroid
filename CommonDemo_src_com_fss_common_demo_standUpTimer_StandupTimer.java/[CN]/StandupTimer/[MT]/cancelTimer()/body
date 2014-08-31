@@ -1,7 +1,0 @@
-{
-  if (timer != null) {
-    Logger.d("Canceling timer");
-    timer.cancel();
-    timer=null;
-  }
-}

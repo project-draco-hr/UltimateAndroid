@@ -1,5 +1,0 @@
-{
-  super(context,attrs,defStyle);
-  this.initialize();
-  this.applyXmlAttributes(attrs);
-}

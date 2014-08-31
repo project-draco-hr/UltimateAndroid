@@ -1,8 +1,0 @@
-{
-  super(context,attrs,defStyle);
-  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.FlipView);
-  mIsFlippingVertically=a.getInt(R.styleable.FlipView_orientation,VERTICAL_FLIP) == VERTICAL_FLIP;
-  setOverFlipMode(OverFlipMode.values()[a.getInt(R.styleable.FlipView_overFlipMode,0)]);
-  a.recycle();
-  init();
-}

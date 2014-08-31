@@ -1,5 +1,0 @@
-{
-  progress=0;
-  setText("0%");
-  invalidate();
-}

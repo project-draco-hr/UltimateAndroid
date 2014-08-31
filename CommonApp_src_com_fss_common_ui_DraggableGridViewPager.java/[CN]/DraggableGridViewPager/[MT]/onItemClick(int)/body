@@ -1,6 +1,0 @@
-{
-  DEBUG_LOG("onItemClick position=" + position);
-  if (mOnItemClickListener != null) {
-    mOnItemClickListener.onItemClick(null,getChildAt(position),position,position / mColCount);
-  }
-}

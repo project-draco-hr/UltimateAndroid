@@ -1,5 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.group_activity_selectimg);
-  Init();
-}

@@ -1,6 +1,0 @@
-{
-  if (id == null) {
-    throw new IllegalArgumentException("id is required");
-  }
-  return mSpringRegistry.get(id);
-}

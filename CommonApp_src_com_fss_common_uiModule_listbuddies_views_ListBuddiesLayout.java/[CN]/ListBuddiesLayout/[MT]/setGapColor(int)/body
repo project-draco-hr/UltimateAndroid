@@ -1,5 +1,0 @@
-{
-  mGapColor=color;
-  setGap();
-  return this;
-}

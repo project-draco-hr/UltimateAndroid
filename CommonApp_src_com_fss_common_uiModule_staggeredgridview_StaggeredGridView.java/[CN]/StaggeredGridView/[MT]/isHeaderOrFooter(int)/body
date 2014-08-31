@@ -1,4 +1,0 @@
-{
-  final int viewType=mAdapter.getItemViewType(position);
-  return viewType == ITEM_VIEW_TYPE_HEADER_OR_FOOTER;
-}

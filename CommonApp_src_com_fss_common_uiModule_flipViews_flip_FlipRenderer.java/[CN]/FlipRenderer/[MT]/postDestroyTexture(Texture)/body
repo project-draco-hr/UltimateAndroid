@@ -1,5 +1,0 @@
-{
-synchronized (postDestroyTextures) {
-    postDestroyTextures.add(texture);
-  }
-}

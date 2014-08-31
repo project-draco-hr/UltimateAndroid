@@ -1,7 +1,0 @@
-{
-  mCurrentPage=position;
-  invalidate();
-  if (mListener != null) {
-    mListener.onPageSelected(position);
-  }
-}

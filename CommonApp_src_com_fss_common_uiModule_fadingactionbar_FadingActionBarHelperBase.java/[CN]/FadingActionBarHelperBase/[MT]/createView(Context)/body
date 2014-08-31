@@ -1,3 +1,0 @@
-{
-  return createView(LayoutInflater.from(context));
-}

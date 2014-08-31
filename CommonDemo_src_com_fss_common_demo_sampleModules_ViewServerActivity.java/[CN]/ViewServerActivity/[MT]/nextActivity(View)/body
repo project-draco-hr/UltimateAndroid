@@ -1,5 +1,0 @@
-{
-  Intent intent=new Intent(this,getClass());
-  intent.putExtra("counter",mCounter + 1);
-  startActivity(intent);
-}

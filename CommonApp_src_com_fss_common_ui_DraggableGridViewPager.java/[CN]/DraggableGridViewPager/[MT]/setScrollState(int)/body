@@ -1,9 +1,0 @@
-{
-  if (mScrollState == newState) {
-    return;
-  }
-  mScrollState=newState;
-  if (mOnPageChangeListener != null) {
-    mOnPageChangeListener.onPageScrollStateChanged(newState);
-  }
-}

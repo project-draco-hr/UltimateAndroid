@@ -1,8 +1,0 @@
-{
-  if (getAbsListView() == null) {
-    throw new IllegalStateException("Call setListView() on this AnimationAdapter before setShouldAnimateNotVisible()!");
-  }
-  mShouldAnimate=true;
-  mFirstAnimatedPosition=getAbsListView().getLastVisiblePosition();
-  mLastAnimatedPosition=getAbsListView().getLastVisiblePosition();
-}

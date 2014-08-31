@@ -1,4 +1,0 @@
-{
-  AsyncHttpClient client=new AsyncHttpClient();
-  client.post(getAbsoluteUrl(url),responseHandler);
-}

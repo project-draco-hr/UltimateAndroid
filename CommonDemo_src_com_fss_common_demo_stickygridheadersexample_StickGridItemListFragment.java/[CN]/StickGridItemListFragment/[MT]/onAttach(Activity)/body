@@ -1,7 +1,0 @@
-{
-  super.onAttach(activity);
-  if (!(activity instanceof Callbacks)) {
-    throw new IllegalStateException("Activity must implement fragment's callbacks.");
-  }
-  mCallbacks=(Callbacks)activity;
-}

@@ -1,3 +1,0 @@
-{
-  mStream.write(buffer,offset,count);
-}

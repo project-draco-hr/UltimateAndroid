@@ -1,5 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.jazzy_view_activity_main);
-  setupJazziness(JazzyViewPager.TransitionEffect.Tablet);
-}

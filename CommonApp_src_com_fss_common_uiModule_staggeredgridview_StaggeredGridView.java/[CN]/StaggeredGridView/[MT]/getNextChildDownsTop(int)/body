@@ -1,8 +1,0 @@
-{
-  if (isHeaderOrFooter(position)) {
-    return super.getNextChildDownsTop(position);
-  }
- else {
-    return getHighestPositionedBottom();
-  }
-}

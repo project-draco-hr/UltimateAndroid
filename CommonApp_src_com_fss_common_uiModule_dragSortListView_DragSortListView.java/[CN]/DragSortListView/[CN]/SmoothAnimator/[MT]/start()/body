@@ -1,6 +1,0 @@
-{
-  mStartTime=SystemClock.uptimeMillis();
-  mCanceled=false;
-  onStart();
-  post(this);
-}

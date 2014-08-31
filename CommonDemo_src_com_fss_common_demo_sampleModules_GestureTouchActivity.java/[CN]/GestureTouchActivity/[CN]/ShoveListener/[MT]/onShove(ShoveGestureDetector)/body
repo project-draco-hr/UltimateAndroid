@@ -1,6 +1,0 @@
-{
-  mAlpha+=detector.getShovePixelsDelta();
-  if (mAlpha > 255)   mAlpha=255;
- else   if (mAlpha < 0)   mAlpha=0;
-  return true;
-}

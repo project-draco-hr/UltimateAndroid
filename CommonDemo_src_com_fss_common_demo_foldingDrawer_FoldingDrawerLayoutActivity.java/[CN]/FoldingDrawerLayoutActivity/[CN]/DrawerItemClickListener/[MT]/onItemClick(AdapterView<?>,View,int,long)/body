@@ -1,4 +1,0 @@
-{
-  selectItem(position);
-  mDrawerLayout.getFoldingLayout(mDrawerList).setNumberOfFolds(position + 3);
-}

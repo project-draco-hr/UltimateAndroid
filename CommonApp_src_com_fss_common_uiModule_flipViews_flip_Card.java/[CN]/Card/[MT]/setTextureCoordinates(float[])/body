@@ -1,4 +1,0 @@
-{
-  this.textureCoordinates=textureCoordinates;
-  this.dirty=true;
-}

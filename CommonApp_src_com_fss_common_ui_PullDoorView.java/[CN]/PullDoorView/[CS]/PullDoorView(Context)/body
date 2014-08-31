@@ -1,5 +1,0 @@
-{
-  super(context);
-  mContext=context;
-  setupView();
-}

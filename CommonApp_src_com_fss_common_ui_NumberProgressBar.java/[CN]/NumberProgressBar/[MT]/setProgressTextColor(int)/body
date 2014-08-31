@@ -1,5 +1,0 @@
-{
-  this.mTextColor=TextColor;
-  mTextPaint.setColor(mTextColor);
-  invalidate();
-}

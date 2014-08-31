@@ -1,6 +1,0 @@
-{
-  if (getChildCount() == 0) {
-    ((CalendarRowView)child).setIsHeaderRow(true);
-  }
-  super.addView(child,index,params);
-}

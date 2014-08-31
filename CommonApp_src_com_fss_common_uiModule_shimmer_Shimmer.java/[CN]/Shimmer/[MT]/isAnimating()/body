@@ -1,3 +1,0 @@
-{
-  return animator != null && animator.isRunning();
-}

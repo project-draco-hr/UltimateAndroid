@@ -1,4 +1,0 @@
-{
-  mIcon.setImageDrawable(icon);
-  return this;
-}

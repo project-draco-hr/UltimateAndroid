@@ -1,3 +1,0 @@
-{
-  return getLong(context,PREFERENCE_NAME,key,defaultValue);
-}

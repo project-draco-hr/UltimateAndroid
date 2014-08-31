@@ -1,4 +1,0 @@
-{
-  if (mTitle.getText().equals(""))   mDialogView.findViewById(R.id.topPanel).setVisibility(View.GONE);
-  super.show();
-}

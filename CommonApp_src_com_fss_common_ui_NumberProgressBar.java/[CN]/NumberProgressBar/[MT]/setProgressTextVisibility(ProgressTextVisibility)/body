@@ -1,9 +1,0 @@
-{
-  if (visibility == ProgressTextVisibility.Visible) {
-    mIfDrawText=true;
-  }
- else {
-    mIfDrawText=false;
-  }
-  invalidate();
-}

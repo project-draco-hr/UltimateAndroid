@@ -1,3 +1,0 @@
-{
-  return createLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-}

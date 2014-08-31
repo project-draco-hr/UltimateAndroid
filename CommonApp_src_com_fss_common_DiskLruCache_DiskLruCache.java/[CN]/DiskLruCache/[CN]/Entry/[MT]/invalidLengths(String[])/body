@@ -1,3 +1,0 @@
-{
-  throw new IOException("unexpected journal line: " + java.util.Arrays.toString(strings));
-}

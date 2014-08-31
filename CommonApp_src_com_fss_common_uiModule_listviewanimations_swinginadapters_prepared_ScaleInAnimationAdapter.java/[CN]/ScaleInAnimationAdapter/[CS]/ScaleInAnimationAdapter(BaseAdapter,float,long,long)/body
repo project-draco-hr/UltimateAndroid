@@ -1,6 +1,0 @@
-{
-  super(baseAdapter);
-  mScaleFrom=scaleFrom;
-  mAnimationDelayMillis=animationDelayMillis;
-  mAnimationDurationMillis=animationDurationMillis;
-}

@@ -1,5 +1,0 @@
-{
-  final ViewDragHelper helper=create(forParent,cb);
-  helper.mTouchSlop=(int)(helper.mTouchSlop * (1 / sensitivity));
-  return helper;
-}

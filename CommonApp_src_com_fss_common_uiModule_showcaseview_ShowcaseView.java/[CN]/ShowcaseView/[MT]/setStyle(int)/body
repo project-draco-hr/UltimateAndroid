@@ -1,4 +1,0 @@
-{
-  TypedArray array=getContext().obtainStyledAttributes(theme,R.styleable.ShowcaseView);
-  updateStyle(array,true);
-}

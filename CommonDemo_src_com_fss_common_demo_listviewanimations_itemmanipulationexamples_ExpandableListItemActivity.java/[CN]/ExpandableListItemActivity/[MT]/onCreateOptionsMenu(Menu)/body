@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.list_anim_menu_expandablelistitem,menu);
-  return super.onCreateOptionsMenu(menu);
-}

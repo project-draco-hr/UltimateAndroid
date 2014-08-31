@@ -1,6 +1,0 @@
-{
-  if (this.isPagingEnabled) {
-    return super.onTouchEvent(event);
-  }
-  return false;
-}

@@ -1,3 +1,0 @@
-{
-  this(baseAdapter,undoLayoutId,undoActionId,-1,-1,deleteItemCallback,null);
-}

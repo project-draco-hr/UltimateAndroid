@@ -1,3 +1,0 @@
-{
-  super.attachBaseContext(new CalligraphyContextWrapper(newBase));
-}

@@ -1,5 +1,0 @@
-{
-  mDrawMatrix.set(mBaseMatrix);
-  mDrawMatrix.postConcat(mSuppMatrix);
-  return mDrawMatrix;
-}

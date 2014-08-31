@@ -1,4 +1,0 @@
-{
-  Animator animator=getAnimator(parent,view);
-  return new Animator[]{animator};
-}

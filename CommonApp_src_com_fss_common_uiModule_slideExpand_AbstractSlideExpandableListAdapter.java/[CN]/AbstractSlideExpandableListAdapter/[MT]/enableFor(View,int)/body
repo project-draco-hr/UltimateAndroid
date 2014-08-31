@@ -1,9 +1,0 @@
-{
-  View more=getExpandToggleButton(parent);
-  View itemToolbar=getExpandableView(parent);
-  itemToolbar.measure(parent.getWidth(),parent.getHeight());
-  View expandItem=getExpandableItemView(parent);
-  expandItem.measure(parent.getWidth(),parent.getHeight());
-  enableFor(expandItem,more,itemToolbar,position);
-  itemToolbar.requestLayout();
-}

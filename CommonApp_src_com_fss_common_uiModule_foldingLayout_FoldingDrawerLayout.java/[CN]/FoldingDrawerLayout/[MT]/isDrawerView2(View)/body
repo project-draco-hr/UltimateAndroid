@@ -1,5 +1,0 @@
-{
-  final int gravity=((LayoutParams)child.getLayoutParams()).gravity;
-  final int absGravity=GravityCompat.getAbsoluteGravity(gravity,ViewCompat.getLayoutDirection(child));
-  return (absGravity & (Gravity.LEFT | Gravity.RIGHT)) != 0;
-}

@@ -1,6 +1,0 @@
-{
-  if (mContentView == null) {
-    addView(contentView);
-  }
-  mContentView=contentView;
-}

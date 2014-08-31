@@ -1,3 +1,0 @@
-{
-  mScroller.forceFinished(finished);
-}

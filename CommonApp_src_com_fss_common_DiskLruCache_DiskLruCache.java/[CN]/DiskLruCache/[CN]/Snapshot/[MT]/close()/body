@@ -1,5 +1,0 @@
-{
-  for (  InputStream in : ins) {
-    Util.closeQuietly(in);
-  }
-}

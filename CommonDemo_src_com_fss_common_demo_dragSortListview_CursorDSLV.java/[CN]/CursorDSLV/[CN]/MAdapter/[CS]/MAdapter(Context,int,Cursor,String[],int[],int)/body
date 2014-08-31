@@ -1,4 +1,0 @@
-{
-  super(ctxt,rmid,c,cols,ids,something);
-  mContext=ctxt;
-}

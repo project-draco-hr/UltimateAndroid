@@ -1,5 +1,0 @@
-{
-  this.mUnreachedBarColor=BarColor;
-  mUnreachedBarPaint.setColor(mReachedBarColor);
-  invalidate();
-}

@@ -1,8 +1,0 @@
-{
-  if (state == ViewPager.SCROLL_STATE_IDLE) {
-    scrollToChild(pager.getCurrentItem(),0);
-  }
-  if (delegatePageListener != null) {
-    delegatePageListener.onPageScrollStateChanged(state);
-  }
-}

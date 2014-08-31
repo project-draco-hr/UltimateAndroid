@@ -1,4 +1,0 @@
-{
-  this.logFileName=fileName;
-  this.init();
-}

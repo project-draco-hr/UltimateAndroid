@@ -1,5 +1,0 @@
-{
-  if (mBackgroundDrawable == backgroundDrawable)   return;
-  mBackgroundDrawable=backgroundDrawable;
-  invalidateSelf();
-}

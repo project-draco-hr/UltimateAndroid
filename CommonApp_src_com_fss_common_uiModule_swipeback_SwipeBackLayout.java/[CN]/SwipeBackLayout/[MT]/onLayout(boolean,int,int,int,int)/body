@@ -1,5 +1,0 @@
-{
-  mInLayout=true;
-  if (mContentView != null)   mContentView.layout(mContentLeft,mContentTop,mContentLeft + mContentView.getMeasuredWidth(),mContentTop + mContentView.getMeasuredHeight());
-  mInLayout=false;
-}

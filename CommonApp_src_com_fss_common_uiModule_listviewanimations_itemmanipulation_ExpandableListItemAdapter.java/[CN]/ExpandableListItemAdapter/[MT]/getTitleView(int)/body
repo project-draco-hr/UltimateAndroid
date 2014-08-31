@@ -1,9 +1,0 @@
-{
-  View titleView=null;
-  View parentView=findViewForPosition(position);
-  Object tag=parentView.getTag();
-  if (tag instanceof ViewHolder) {
-    titleView=((ViewHolder)tag).titleView;
-  }
-  return titleView;
-}

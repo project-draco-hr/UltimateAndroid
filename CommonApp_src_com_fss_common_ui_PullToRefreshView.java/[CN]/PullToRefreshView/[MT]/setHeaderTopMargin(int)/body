@@ -1,6 +1,0 @@
-{
-  LayoutParams params=(LayoutParams)mHeaderView.getLayoutParams();
-  params.topMargin=topMargin;
-  mHeaderView.setLayoutParams(params);
-  invalidate();
-}

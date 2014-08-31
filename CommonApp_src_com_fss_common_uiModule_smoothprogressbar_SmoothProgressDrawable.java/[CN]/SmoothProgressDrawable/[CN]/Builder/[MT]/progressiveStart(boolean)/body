@@ -1,4 +1,0 @@
-{
-  mProgressiveStartActivated=progressiveStartActivated;
-  return this;
-}

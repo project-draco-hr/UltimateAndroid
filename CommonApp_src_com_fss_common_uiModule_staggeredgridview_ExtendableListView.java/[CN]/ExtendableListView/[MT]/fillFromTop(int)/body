@@ -1,7 +1,0 @@
-{
-  mFirstPosition=Math.min(mFirstPosition,mItemCount - 1);
-  if (mFirstPosition < 0) {
-    mFirstPosition=0;
-  }
-  return fillDown(mFirstPosition,nextTop);
-}

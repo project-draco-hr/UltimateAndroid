@@ -1,3 +1,0 @@
-{
-  show(context,message,Toast.LENGTH_SHORT);
-}

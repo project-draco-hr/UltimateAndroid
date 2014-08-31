@@ -1,5 +1,0 @@
-{
-  mHeaderBottomPosition=0;
-  swapStickiedHeader(null);
-  mCurrentHeaderId=INVALID_ROW_ID;
-}

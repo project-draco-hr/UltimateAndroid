@@ -1,6 +1,0 @@
-{
-  SavedState savedState=(SavedState)state;
-  super.onRestoreInstanceState(savedState.getSuperState());
-  currentPosition=savedState.currentPosition;
-  requestLayout();
-}

@@ -1,4 +1,0 @@
-{
-  showLoading(mListView,mLoadingView,mEmptyView);
-  super.onPreExecute();
-}

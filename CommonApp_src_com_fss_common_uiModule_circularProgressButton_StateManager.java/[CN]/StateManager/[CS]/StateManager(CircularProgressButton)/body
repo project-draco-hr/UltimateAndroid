@@ -1,4 +1,0 @@
-{
-  mIsEnabled=progressButton.isEnabled();
-  mProgress=progressButton.getProgress();
-}

@@ -1,5 +1,0 @@
-{
-  super(context,attrs,defStyle);
-  mContext=context;
-  setCustomAttributes(attrs);
-}

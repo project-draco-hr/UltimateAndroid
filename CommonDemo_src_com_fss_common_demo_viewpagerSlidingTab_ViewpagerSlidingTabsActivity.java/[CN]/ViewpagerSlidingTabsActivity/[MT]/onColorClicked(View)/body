@@ -1,4 +1,0 @@
-{
-  int color=Color.parseColor(v.getTag().toString());
-  changeColor(color);
-}

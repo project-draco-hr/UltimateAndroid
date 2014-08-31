@@ -1,4 +1,0 @@
-{
-  child.offsetLeftAndRight(childrenLeft - child.getLeft());
-  child.offsetTopAndBottom(childTop - child.getTop());
-}

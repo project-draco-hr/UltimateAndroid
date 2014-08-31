@@ -1,5 +1,0 @@
-{
-  if (!(getFactory() instanceof CalligraphyFactory)) {
-    setFactory(new CalligraphyFactory(getFactory(),mAttributeId));
-  }
-}

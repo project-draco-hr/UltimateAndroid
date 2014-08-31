@@ -1,5 +1,0 @@
-{
-  if (strokeWidth < 0)   throw new IllegalArgumentException("The strokeWidth must be >= 0");
-  mPaint.setStrokeWidth(strokeWidth);
-  invalidateSelf();
-}

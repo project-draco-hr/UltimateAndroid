@@ -1,4 +1,0 @@
-{
-  mActionBarBackgroundResId=drawableResId;
-  return (T)this;
-}

@@ -1,4 +1,0 @@
-{
-  container.addView(viewpagerList.get(position),0);
-  return viewpagerList.get(position);
-}

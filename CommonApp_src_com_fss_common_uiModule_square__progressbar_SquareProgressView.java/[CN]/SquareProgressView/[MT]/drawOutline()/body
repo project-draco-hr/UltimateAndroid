@@ -1,9 +1,0 @@
-{
-  Path outlinePath=new Path();
-  outlinePath.moveTo(0,0);
-  outlinePath.lineTo(canvas.getWidth(),0);
-  outlinePath.lineTo(canvas.getWidth(),canvas.getHeight());
-  outlinePath.lineTo(0,canvas.getHeight());
-  outlinePath.lineTo(0,0);
-  canvas.drawPath(outlinePath,outlinePaint);
-}

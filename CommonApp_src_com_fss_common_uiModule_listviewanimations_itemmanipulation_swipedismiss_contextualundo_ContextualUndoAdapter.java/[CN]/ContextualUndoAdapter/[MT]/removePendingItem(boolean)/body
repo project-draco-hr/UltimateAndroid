@@ -1,8 +1,0 @@
-{
-  if (animate) {
-    animateRemovePendingItem();
-  }
- else {
-    removePendingItem();
-  }
-}

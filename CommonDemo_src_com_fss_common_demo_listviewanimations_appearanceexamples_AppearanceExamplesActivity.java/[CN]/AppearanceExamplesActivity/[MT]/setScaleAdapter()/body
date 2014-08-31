@@ -1,5 +1,0 @@
-{
-  AnimationAdapter animAdapter=new ScaleInAnimationAdapter(mAdapter);
-  animAdapter.setAbsListView(getListView());
-  getListView().setAdapter(animAdapter);
-}

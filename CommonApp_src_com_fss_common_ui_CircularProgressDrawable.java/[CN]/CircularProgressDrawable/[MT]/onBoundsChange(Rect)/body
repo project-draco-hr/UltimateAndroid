@@ -1,7 +1,0 @@
-{
-  super.onBoundsChange(bounds);
-  fBounds.left=bounds.left + mBorderWidth / 2f + .5f;
-  fBounds.right=bounds.right - mBorderWidth / 2f - .5f;
-  fBounds.top=bounds.top + mBorderWidth / 2f + .5f;
-  fBounds.bottom=bounds.bottom - mBorderWidth / 2f - .5f;
-}

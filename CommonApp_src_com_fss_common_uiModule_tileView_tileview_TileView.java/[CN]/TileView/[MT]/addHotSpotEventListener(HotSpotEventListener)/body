@@ -1,3 +1,0 @@
-{
-  hotSpotManager.addHotSpotEventListener(listener);
-}

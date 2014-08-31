@@ -1,5 +1,0 @@
-{
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  int h=getMeasuredHeight();
-  setPadding(0,h / 2,0,0);
-}

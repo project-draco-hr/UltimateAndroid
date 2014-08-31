@@ -1,6 +1,0 @@
-{
-  if (tree instanceof TaggedTree) {
-    TAGGED_TREES.append(FOREST.size(),true);
-  }
-  FOREST.add(tree);
-}

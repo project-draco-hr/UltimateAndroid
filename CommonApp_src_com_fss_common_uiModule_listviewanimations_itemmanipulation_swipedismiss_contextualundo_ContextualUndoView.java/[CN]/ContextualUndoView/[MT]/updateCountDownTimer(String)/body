@@ -1,5 +1,0 @@
-{
-  if (mCountDownTV != null) {
-    mCountDownTV.setText(timerText);
-  }
-}

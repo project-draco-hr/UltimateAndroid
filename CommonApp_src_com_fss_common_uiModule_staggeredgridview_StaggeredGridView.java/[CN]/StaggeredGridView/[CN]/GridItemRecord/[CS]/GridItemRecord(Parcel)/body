@@ -1,5 +1,0 @@
-{
-  column=in.readInt();
-  heightRatio=in.readDouble();
-  isHeaderFooter=in.readByte() == 1;
-}

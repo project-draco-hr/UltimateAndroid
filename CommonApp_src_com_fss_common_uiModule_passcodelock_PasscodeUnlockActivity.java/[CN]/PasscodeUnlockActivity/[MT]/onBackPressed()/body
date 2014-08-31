@@ -1,8 +1,0 @@
-{
-  AppLockManager.getInstance().getCurrentAppLock().forcePasswordLock();
-  Intent i=new Intent();
-  i.setAction(Intent.ACTION_MAIN);
-  i.addCategory(Intent.CATEGORY_HOME);
-  this.startActivity(i);
-  finish();
-}

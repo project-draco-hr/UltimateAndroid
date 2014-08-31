@@ -1,5 +1,0 @@
-{
-  for (  TextPaint paint : mPaintHeap) {
-    paint.setColor(color);
-  }
-}

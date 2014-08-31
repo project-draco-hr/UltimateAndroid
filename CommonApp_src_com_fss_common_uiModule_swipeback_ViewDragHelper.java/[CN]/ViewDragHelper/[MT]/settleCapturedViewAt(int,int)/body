@@ -1,6 +1,0 @@
-{
-  if (!mReleaseInProgress) {
-    throw new IllegalStateException("Cannot settleCapturedViewAt outside of a call to " + "Callback#onViewReleased");
-  }
-  return forceSettleCapturedViewAt(finalLeft,finalTop,(int)VelocityTrackerCompat.getXVelocity(mVelocityTracker,mActivePointerId),(int)VelocityTrackerCompat.getYVelocity(mVelocityTracker,mActivePointerId));
-}

@@ -1,6 +1,0 @@
-{
-synchronized (mLock) {
-    mNeedFocusedWindowUpdate=true;
-    mLock.notifyAll();
-  }
-}

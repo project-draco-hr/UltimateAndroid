@@ -1,5 +1,0 @@
-{
-  Bitmap bitmap=bitmapDrawable.getBitmap();
-  bitmapDrawable=new BitmapDrawable(toRoundCorner(bitmap,pixels));
-  return bitmapDrawable;
-}

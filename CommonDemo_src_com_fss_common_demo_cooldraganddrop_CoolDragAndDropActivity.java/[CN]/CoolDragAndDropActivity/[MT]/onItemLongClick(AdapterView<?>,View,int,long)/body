@@ -1,4 +1,0 @@
-{
-  mCoolDragAndDropGridView.startDragAndDrop();
-  return false;
-}

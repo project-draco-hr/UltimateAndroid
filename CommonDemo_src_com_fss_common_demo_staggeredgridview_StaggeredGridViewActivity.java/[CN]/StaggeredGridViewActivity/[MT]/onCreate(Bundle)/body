@@ -1,9 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setTitle("SGV Sample");
-  setContentView(R.layout.staggered_grid_view_activity_main);
-  findViewById(R.id.btn_sgv).setOnClickListener(this);
-  findViewById(R.id.btn_sgv_fragment).setOnClickListener(this);
-  findViewById(R.id.btn_sgv_empty_view).setOnClickListener(this);
-  findViewById(R.id.btn_listview).setOnClickListener(this);
-}

@@ -1,5 +1,0 @@
-{
-  float mSpacingMult=1.0f;
-  float mSpacingAdd=0.0f;
-  return Math.round(mTextPaint.getFontMetricsInt(null) * mSpacingMult + mSpacingAdd);
-}

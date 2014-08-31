@@ -1,4 +1,0 @@
-{
-  mStarted=false;
-  mHandler.removeCallbacks(mLooperRunnable);
-}

@@ -1,9 +1,0 @@
-{
-  super(new ContextWrapperEdgeEffect(context),attrs);
-  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-    init(context,attrs,android.R.attr.horizontalScrollViewStyle);
-  }
- else {
-    init(context,attrs,0);
-  }
-}

@@ -1,5 +1,0 @@
-{
-  super.onFinishInflate();
-  title=(TextView)findViewById(R.id.title);
-  grid=(CalendarGridView)findViewById(R.id.calendar_grid);
-}

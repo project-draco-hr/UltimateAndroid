@@ -1,3 +1,0 @@
-{
-  return DiskLruCache.this.edit(key,sequenceNumber);
-}

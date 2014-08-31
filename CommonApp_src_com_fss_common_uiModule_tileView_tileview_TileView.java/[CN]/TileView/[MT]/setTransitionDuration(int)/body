@@ -1,3 +1,0 @@
-{
-  tileManager.setTransitionDuration(duration);
-}

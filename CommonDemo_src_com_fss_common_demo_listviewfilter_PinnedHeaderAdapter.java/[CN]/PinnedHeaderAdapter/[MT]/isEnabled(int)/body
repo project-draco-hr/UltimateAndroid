@@ -1,3 +1,0 @@
-{
-  return !mListSectionPos.contains(position);
-}

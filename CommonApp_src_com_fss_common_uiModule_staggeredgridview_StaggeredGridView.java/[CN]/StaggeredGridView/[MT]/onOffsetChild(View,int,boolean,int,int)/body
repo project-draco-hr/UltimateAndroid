@@ -1,8 +1,0 @@
-{
-  if (isHeaderOrFooter(position)) {
-    offsetGridHeaderFooter(child,position,flowDown,childrenLeft,childTop);
-  }
- else {
-    offsetGridChild(child,position,flowDown,childrenLeft,childTop);
-  }
-}

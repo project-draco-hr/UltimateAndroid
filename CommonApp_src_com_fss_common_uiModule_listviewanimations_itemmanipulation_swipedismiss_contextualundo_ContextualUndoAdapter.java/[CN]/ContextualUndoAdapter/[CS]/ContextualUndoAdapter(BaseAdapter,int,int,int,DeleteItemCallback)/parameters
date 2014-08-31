@@ -1,5 +1,0 @@
-BaseAdapter baseAdapter
-int undoLayoutResId
-int undoActionResId
-int autoDeleteTimeMillis
-DeleteItemCallback deleteItemCallback

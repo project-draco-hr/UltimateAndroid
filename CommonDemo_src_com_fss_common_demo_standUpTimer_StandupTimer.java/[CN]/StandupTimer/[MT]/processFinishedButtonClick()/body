@@ -1,9 +1,0 @@
-{
-  if (completedParticipants != totalParticipants) {
-    completedParticipants++;
-    calculateIndividualStatusStats();
-  }
-  shutdownTimer();
-  storeMeetingStats();
-  finish();
-}

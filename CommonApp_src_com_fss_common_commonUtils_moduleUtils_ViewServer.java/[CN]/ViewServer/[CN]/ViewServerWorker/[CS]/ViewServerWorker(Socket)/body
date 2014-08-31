@@ -1,5 +1,0 @@
-{
-  mClient=client;
-  mNeedWindowListUpdate=false;
-  mNeedFocusedWindowUpdate=false;
-}

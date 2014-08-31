@@ -1,8 +1,0 @@
-{
-  if (!isRunning())   return;
-  if (mCallbacks != null) {
-    mCallbacks.onStop();
-  }
-  mRunning=false;
-  unscheduleSelf(mUpdater);
-}

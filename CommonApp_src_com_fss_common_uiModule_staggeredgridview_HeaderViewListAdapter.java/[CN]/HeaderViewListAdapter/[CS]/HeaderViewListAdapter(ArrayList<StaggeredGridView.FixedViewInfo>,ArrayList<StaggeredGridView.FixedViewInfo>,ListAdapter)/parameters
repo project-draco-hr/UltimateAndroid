@@ -1,3 +1,0 @@
-ArrayList<StaggeredGridView.FixedViewInfo> headerViewInfos
-ArrayList<StaggeredGridView.FixedViewInfo> footerViewInfos
-ListAdapter adapter

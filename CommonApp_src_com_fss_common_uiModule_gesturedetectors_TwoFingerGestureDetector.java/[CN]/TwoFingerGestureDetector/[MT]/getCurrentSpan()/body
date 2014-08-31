@@ -1,8 +1,0 @@
-{
-  if (mCurrLen == -1) {
-    final float cvx=mCurrFingerDiffX;
-    final float cvy=mCurrFingerDiffY;
-    mCurrLen=FloatMath.sqrt(cvx * cvx + cvy * cvy);
-  }
-  return mCurrLen;
-}

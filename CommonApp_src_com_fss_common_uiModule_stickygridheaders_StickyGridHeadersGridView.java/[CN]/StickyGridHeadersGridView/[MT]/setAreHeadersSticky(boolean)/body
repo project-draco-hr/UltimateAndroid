@@ -1,6 +1,0 @@
-{
-  if (useStickyHeaders != mAreHeadersSticky) {
-    mAreHeadersSticky=useStickyHeaders;
-    requestLayout();
-  }
-}

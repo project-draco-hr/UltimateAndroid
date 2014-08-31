@@ -1,4 +1,0 @@
-{
-  this.leftMenuItems=menuItems;
-  rebuildMenu();
-}

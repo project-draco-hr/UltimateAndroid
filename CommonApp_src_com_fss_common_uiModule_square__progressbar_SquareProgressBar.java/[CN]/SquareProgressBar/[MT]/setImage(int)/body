@@ -1,4 +1,0 @@
-{
-  imageView=(ImageView)findViewById(R.id.imageView1);
-  imageView.setImageResource(image);
-}

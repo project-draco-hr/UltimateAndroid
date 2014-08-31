@@ -1,7 +1,0 @@
-{
-  mUndoView=View.inflate(getContext(),undoLayoutResId,null);
-  addView(mUndoView);
-  if (countDownTextViewResId != -1) {
-    mCountDownTV=(TextView)mUndoView.findViewById(countDownTextViewResId);
-  }
-}

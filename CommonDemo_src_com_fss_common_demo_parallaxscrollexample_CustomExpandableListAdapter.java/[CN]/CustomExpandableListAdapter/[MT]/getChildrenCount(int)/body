@@ -1,3 +1,0 @@
-{
-  return groupPosition * 2 + 1;
-}

@@ -1,4 +1,0 @@
-{
-  this.mOverFlipMode=overFlipMode;
-  mOverFlipper=OverFlipperFactory.create(this,mOverFlipMode);
-}

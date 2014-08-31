@@ -1,5 +1,0 @@
-{
-  mGreenView1.setTranslationY(mGreenView1TranslationY);
-  mGreenView1.setTextColor(mGreenColor);
-  setBackgroundColor(mBlackColor);
-}

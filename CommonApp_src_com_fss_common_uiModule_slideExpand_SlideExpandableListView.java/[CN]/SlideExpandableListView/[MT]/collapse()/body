@@ -1,6 +1,0 @@
-{
-  if (adapter != null) {
-    return adapter.collapseLastOpen();
-  }
-  return false;
-}

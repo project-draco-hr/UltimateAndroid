@@ -1,4 +1,0 @@
-{
-  super.setUnselectedAlpha(unselectedAlpha);
-  this.unselectedAlpha=unselectedAlpha;
-}

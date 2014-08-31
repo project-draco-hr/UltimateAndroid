@@ -1,4 +1,0 @@
-{
-  setOnTouchListener(this);
-  setChildrenDrawingOrderEnabled(true);
-}

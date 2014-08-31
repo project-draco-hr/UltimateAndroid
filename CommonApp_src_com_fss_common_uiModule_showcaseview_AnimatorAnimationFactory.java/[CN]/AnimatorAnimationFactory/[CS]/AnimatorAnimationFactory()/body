@@ -1,3 +1,0 @@
-{
-  interpolator=new AccelerateDecelerateInterpolator();
-}

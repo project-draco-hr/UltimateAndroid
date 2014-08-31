@@ -1,7 +1,0 @@
-{
-  int position=adapterView.getPositionForView(view);
-  if (adapterView instanceof ListView) {
-    position-=((ListView)adapterView).getHeaderViewsCount();
-  }
-  return position;
-}

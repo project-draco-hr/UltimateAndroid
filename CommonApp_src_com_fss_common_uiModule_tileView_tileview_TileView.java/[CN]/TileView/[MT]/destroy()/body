@@ -1,5 +1,0 @@
-{
-  tileManager.clear();
-  sampleManager.clear();
-  pathManager.clear();
-}

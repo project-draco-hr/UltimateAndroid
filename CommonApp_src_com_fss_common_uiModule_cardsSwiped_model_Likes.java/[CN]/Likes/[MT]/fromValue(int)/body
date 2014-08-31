@@ -1,8 +1,0 @@
-{
-  for (  Like style : Like.values()) {
-    if (style.value == value) {
-      return style;
-    }
-  }
-  return null;
-}

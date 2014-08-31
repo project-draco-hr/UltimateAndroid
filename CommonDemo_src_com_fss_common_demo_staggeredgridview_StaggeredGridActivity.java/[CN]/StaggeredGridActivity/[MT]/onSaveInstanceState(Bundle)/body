@@ -1,4 +1,0 @@
-{
-  super.onSaveInstanceState(outState);
-  outState.putStringArrayList(SAVED_DATA_KEY,mData);
-}

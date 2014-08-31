@@ -1,4 +1,0 @@
-{
-  view.getLayoutParams().height=startH + (int)(diff * interpolatedTime);
-  view.requestLayout();
-}

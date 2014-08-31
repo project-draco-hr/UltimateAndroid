@@ -1,8 +1,0 @@
-{
-  if (NEEDS_PROXY) {
-    wrap(view).setRotation(rotation);
-  }
- else {
-    Honeycomb.setRotation(view,rotation);
-  }
-}

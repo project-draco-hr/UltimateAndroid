@@ -1,4 +1,0 @@
-{
-  mCurrentRemovedView=currentRemovedView;
-  mCurrentRemovedId=currentRemovedView.getItemId();
-}

@@ -1,7 +1,0 @@
-{
-  mDiameter=Math.min(width,height);
-  mHalf=mDiameter / 2;
-  mOval.set(0,0,mDiameter,mDiameter);
-  mControlPointMinimum=-mDiameter / 6;
-  mControlPointMaximum=mDiameter + mDiameter / 6;
-}

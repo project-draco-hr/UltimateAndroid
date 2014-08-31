@@ -1,8 +1,0 @@
-{
-  if (isVisible) {
-    mIndexBarVisibility=true;
-  }
- else {
-    mIndexBarVisibility=false;
-  }
-}

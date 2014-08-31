@@ -1,3 +1,0 @@
-{
-  return colorStateList.getColorForState(new int[]{android.R.attr.state_pressed},0);
-}

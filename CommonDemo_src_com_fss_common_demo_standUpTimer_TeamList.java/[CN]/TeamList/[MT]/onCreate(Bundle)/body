@@ -1,5 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.stand_up_timer_teams);
-  registerForContextMenu(getListView());
-}

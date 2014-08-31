@@ -1,4 +1,0 @@
-{
-  mAnimateAdditionAdapter.insert(position,"This is newly added item " + mAddedItemNumber);
-  mAddedItemNumber++;
-}

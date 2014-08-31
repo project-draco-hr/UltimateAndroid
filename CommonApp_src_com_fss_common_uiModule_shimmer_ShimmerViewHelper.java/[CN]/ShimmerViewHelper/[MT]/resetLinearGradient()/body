@@ -1,4 +1,0 @@
-{
-  linearGradient=new LinearGradient(-view.getWidth(),0,0,0,new int[]{primaryColor,reflectionColor,primaryColor},new float[]{0,0.5f,1},Shader.TileMode.CLAMP);
-  paint.setShader(linearGradient);
-}

@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  mScaleSpring=mSpringSystem.createSpring();
-}

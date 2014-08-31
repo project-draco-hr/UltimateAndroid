@@ -1,3 +1,0 @@
-{
-  checkIndeterminateDrawable().setMirrorMode(mirrorMode);
-}

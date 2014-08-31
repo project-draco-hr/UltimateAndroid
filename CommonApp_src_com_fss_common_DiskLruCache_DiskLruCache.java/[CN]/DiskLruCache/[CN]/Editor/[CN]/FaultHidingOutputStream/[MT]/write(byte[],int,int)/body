@@ -1,8 +1,0 @@
-{
-  try {
-    out.write(buffer,offset,length);
-  }
- catch (  IOException e) {
-    hasErrors=true;
-  }
-}

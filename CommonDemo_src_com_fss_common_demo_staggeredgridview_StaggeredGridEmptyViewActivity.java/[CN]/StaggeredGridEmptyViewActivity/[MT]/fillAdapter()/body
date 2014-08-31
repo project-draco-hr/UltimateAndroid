@@ -1,5 +1,0 @@
-{
-  for (  String data : mData) {
-    mAdapter.add(data);
-  }
-}

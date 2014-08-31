@@ -1,7 +1,0 @@
-{
-  mBackgroundColorPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
-  mBackgroundColorPaint.setColor(mProgressBackgroundColor);
-  mBackgroundColorPaint.setStyle(Paint.Style.STROKE);
-  mBackgroundColorPaint.setStrokeWidth(mCircleStrokeWidth);
-  invalidate();
-}

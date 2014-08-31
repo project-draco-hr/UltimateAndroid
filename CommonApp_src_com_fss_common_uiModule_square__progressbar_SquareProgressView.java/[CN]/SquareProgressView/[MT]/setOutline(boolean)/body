@@ -1,4 +1,0 @@
-{
-  this.outline=outline;
-  this.invalidate();
-}

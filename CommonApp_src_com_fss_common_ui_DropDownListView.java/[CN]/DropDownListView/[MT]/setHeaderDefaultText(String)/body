@@ -1,6 +1,0 @@
-{
-  this.headerDefaultText=headerDefaultText;
-  if (headerText != null && currentHeaderStatus == HEADER_STATUS_CLICK_TO_LOAD) {
-    headerText.setText(headerDefaultText);
-  }
-}

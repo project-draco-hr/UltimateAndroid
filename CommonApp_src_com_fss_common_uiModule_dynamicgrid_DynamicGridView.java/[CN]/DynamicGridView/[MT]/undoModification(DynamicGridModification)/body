@@ -1,5 +1,0 @@
-{
-  for (  Pair<Integer,Integer> transition : modification.getTransitions()) {
-    reorderElements(transition.second,transition.first);
-  }
-}

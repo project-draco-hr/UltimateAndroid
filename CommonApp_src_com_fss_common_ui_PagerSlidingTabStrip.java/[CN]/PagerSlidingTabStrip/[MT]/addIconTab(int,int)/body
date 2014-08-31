@@ -1,5 +1,0 @@
-{
-  ImageButton tab=new ImageButton(getContext());
-  tab.setImageResource(resId);
-  addTab(position,tab);
-}

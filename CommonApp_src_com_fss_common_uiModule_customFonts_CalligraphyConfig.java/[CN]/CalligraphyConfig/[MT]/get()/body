@@ -1,4 +1,0 @@
-{
-  if (mInstance == null)   mInstance=new CalligraphyConfig();
-  return mInstance;
-}

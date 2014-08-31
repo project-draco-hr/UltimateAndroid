@@ -1,3 +1,0 @@
-{
-  showcaseDrawable.setColorFilter(color,PorterDuff.Mode.MULTIPLY);
-}

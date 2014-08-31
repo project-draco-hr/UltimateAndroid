@@ -1,9 +1,0 @@
-{
-  return new DialogInterface.OnClickListener(){
-    public void onClick(    DialogInterface dialog,    int id){
-      team.delete(TeamDetails.this);
-      finish();
-    }
-  }
-;
-}

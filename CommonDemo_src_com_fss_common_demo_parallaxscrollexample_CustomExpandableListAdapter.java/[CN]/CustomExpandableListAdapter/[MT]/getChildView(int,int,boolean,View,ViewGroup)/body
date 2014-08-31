@@ -1,6 +1,0 @@
-{
-  TextView textView=(TextView)convertView;
-  if (textView == null)   textView=(TextView)inflater.inflate(R.layout.parallax_scroll_item_child,null);
-  textView.setText(getChild(groupPosition,childPosition));
-  return textView;
-}

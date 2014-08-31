@@ -1,4 +1,0 @@
-{
-  showcaseView.setContentText(text);
-  return this;
-}

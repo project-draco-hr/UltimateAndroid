@@ -1,4 +1,0 @@
-{
-  super.onDestroy();
-  ViewServer.get(this).removeWindow(this);
-}

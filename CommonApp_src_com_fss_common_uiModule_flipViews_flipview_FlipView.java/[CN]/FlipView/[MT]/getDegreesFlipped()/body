@@ -1,7 +1,0 @@
-{
-  float localFlipDistance=mFlipDistance % FLIP_DISTANCE_PER_PAGE;
-  if (localFlipDistance < 0) {
-    localFlipDistance+=FLIP_DISTANCE_PER_PAGE;
-  }
-  return (localFlipDistance / FLIP_DISTANCE_PER_PAGE) * 180;
-}

@@ -1,4 +1,0 @@
-{
-  mListeners.clear();
-  mReturnSet=null;
-}

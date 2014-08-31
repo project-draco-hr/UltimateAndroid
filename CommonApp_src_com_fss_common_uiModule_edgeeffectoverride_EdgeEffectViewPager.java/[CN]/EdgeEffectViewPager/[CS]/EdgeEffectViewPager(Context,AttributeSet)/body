@@ -1,4 +1,0 @@
-{
-  super(new ContextWrapperEdgeEffect(context),attrs);
-  init(context,attrs,0);
-}

@@ -1,8 +1,0 @@
-{
-  if (!mOutlineEnabled || child instanceof OutlineContainer)   return child;
-  OutlineContainer out=new OutlineContainer(getContext());
-  out.setLayoutParams(generateDefaultLayoutParams());
-  child.setLayoutParams(new OutlineContainer.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
-  out.addView(child);
-  return out;
-}

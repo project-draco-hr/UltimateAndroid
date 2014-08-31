@@ -1,8 +1,0 @@
-{
-  if (down) {
-    correctTooHigh(getChildCount());
-  }
- else {
-    correctTooLow(getChildCount());
-  }
-}

@@ -1,4 +1,0 @@
-{
-  mEmptyView=emptyView;
-  updateEmptyStatus();
-}

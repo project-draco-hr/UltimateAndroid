@@ -1,4 +1,0 @@
-{
-  super.registerDataSetObserver(observer);
-  mDelegate.registerDataSetObserver(observer);
-}

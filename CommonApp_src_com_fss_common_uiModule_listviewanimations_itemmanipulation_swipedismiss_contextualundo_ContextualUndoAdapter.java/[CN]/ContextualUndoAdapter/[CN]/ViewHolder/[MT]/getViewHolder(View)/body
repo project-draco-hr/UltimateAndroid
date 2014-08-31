@@ -1,3 +1,0 @@
-{
-  return (ViewHolder)view.getTag();
-}

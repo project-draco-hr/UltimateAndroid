@@ -1,4 +1,0 @@
-{
-  mContentView.setVisibility(View.VISIBLE);
-  mUndoView.setVisibility(View.INVISIBLE);
-}

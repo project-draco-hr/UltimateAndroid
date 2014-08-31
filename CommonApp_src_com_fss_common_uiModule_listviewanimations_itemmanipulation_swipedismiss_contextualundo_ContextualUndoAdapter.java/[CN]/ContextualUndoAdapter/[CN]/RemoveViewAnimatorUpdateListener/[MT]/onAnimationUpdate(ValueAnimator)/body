@@ -1,7 +1,0 @@
-{
-  ContextualUndoView dismissView=mParentAdapter.getViewBeingAnimated();
-  if (dismissView != null) {
-    mLayoutParams.height=(Integer)valueAnimator.getAnimatedValue();
-    dismissView.setLayoutParams(mLayoutParams);
-  }
-}

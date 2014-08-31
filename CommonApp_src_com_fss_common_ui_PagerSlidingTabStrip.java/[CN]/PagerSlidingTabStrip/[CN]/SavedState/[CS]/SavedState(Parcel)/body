@@ -1,4 +1,0 @@
-{
-  super(in);
-  currentPosition=in.readInt();
-}

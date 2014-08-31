@@ -1,4 +1,0 @@
-{
-  mContentView=view;
-  return (T)this;
-}

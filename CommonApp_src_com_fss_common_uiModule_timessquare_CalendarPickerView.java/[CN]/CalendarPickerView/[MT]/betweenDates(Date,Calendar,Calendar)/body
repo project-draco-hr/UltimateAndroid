@@ -1,4 +1,0 @@
-{
-  final Date min=minCal.getTime();
-  return (date.equals(min) || date.after(min)) && date.before(maxCal.getTime());
-}

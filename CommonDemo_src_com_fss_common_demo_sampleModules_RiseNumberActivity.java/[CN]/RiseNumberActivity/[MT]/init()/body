@@ -1,5 +1,0 @@
-{
-  mTextViewAll.withNumber(46000).start();
-  mTextViewIn.withNumber(489.15f).start();
-  mTextViewOut.withNumber(367.24f).start();
-}

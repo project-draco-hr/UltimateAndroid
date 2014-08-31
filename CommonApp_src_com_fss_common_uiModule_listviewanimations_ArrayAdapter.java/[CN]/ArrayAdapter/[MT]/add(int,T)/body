@@ -1,4 +1,0 @@
-{
-  mItems.add(location,object);
-  notifyDataSetChanged();
-}

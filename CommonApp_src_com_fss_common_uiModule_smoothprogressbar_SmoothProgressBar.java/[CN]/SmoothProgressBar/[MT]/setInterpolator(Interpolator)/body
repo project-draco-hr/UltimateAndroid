@@ -1,5 +1,0 @@
-{
-  super.setInterpolator(interpolator);
-  Drawable ret=getIndeterminateDrawable();
-  if (ret != null && (ret instanceof SmoothProgressDrawable))   ((SmoothProgressDrawable)ret).setInterpolator(interpolator);
-}

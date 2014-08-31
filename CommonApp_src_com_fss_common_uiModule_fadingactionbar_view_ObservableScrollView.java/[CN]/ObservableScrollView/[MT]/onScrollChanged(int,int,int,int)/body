@@ -1,6 +1,0 @@
-{
-  super.onScrollChanged(l,t,oldl,oldt);
-  if (mOnScrollChangedListener != null) {
-    mOnScrollChangedListener.onScroll(l,t);
-  }
-}

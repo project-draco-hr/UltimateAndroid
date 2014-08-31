@@ -1,6 +1,0 @@
-{
-  super.setTouchChild(childResId);
-  if (mContextualUndoListViewTouchListener != null) {
-    mContextualUndoListViewTouchListener.setTouchChild(childResId);
-  }
-}

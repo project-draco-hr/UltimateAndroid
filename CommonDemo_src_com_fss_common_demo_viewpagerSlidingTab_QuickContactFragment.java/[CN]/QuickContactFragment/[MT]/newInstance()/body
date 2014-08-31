@@ -1,4 +1,0 @@
-{
-  QuickContactFragment f=new QuickContactFragment();
-  return f;
-}

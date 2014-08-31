@@ -1,5 +1,0 @@
-{
-  if (progressiveStartSpeed < 0)   throw new IllegalArgumentException("progressiveStartSpeed must be >= 0");
-  mProgressiveStartSpeed=progressiveStartSpeed;
-  return this;
-}

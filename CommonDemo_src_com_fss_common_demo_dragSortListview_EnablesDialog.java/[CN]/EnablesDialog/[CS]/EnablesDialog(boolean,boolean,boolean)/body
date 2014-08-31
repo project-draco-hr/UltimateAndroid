@@ -1,7 +1,0 @@
-{
-  super();
-  mEnabled=new boolean[3];
-  mEnabled[0]=drag;
-  mEnabled[1]=sort;
-  mEnabled[2]=remove;
-}

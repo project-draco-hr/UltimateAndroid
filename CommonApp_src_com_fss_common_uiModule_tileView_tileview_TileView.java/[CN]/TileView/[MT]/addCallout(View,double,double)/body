@@ -1,4 +1,0 @@
-{
-  Point point=positionManager.translate(x,y);
-  return calloutManager.addMarker(view,point.x,point.y);
-}

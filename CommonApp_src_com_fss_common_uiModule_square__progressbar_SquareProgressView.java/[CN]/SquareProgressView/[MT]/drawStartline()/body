@@ -1,6 +1,0 @@
-{
-  Path outlinePath=new Path();
-  outlinePath.moveTo(canvas.getWidth() / 2,0);
-  outlinePath.lineTo(canvas.getWidth() / 2,strokewidth);
-  canvas.drawPath(outlinePath,outlinePaint);
-}

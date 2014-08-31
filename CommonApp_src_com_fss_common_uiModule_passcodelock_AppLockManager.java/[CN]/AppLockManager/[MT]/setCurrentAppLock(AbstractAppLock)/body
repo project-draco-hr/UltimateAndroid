@@ -1,6 +1,0 @@
-{
-  if (currentAppLocker != null) {
-    currentAppLocker.disable();
-  }
-  currentAppLocker=newAppLocker;
-}

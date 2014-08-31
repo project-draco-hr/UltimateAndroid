@@ -1,5 +1,0 @@
-{
-  this.mReachedBarColor=ProgressColor;
-  mReachedBarPaint.setColor(mReachedBarColor);
-  invalidate();
-}

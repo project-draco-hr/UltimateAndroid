@@ -1,4 +1,0 @@
-{
-  setAlpha(view,1f);
-  setTranslationX(view,0);
-}

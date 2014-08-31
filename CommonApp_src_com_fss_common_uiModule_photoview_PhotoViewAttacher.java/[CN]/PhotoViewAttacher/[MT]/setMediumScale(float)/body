@@ -1,4 +1,0 @@
-{
-  checkZoomLevels(mMinScale,mediumScale,mMaxScale);
-  mMidScale=mediumScale;
-}

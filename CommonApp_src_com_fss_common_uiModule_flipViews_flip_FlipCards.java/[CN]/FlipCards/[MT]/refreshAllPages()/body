@@ -1,4 +1,0 @@
-{
-  frontCards.resetWithIndex(frontCards.getIndex());
-  backCards.resetWithIndex(backCards.getIndex());
-}

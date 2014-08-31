@@ -1,4 +1,0 @@
-{
-  LayoutParams lp=new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,x,y);
-  return addMarker(v,lp);
-}

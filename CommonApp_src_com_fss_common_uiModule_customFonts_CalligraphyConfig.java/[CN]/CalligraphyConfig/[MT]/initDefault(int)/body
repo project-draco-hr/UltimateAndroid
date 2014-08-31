@@ -1,3 +1,0 @@
-{
-  mInstance=new CalligraphyConfig(defaultAttributeId);
-}

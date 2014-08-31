@@ -1,8 +1,0 @@
-{
-  for (  Calendar selectedCal : selectedCals) {
-    if (sameDate(cal,selectedCal)) {
-      return true;
-    }
-  }
-  return false;
-}

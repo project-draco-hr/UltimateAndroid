@@ -1,4 +1,0 @@
-{
-  this.mContext=context;
-  this.mColumnCount=columnCount;
-}

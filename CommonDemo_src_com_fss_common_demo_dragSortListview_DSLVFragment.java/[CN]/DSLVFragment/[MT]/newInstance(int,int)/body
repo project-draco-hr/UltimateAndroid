@@ -1,8 +1,0 @@
-{
-  DSLVFragment f=new DSLVFragment();
-  Bundle args=new Bundle();
-  args.putInt("headers",headers);
-  args.putInt("footers",footers);
-  f.setArguments(args);
-  return f;
-}

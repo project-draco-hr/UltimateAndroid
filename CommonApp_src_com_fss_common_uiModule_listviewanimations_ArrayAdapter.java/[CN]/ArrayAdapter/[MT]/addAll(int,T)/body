@@ -1,6 +1,0 @@
-{
-  for (int i=location; i < objects.length + location; i++) {
-    mItems.add(i,objects[i]);
-  }
-  notifyDataSetChanged();
-}

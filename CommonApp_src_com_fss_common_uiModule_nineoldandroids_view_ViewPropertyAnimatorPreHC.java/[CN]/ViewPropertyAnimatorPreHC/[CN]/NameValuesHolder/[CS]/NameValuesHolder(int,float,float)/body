@@ -1,5 +1,0 @@
-{
-  mNameConstant=nameConstant;
-  mFromValue=fromValue;
-  mDeltaValue=deltaValue;
-}

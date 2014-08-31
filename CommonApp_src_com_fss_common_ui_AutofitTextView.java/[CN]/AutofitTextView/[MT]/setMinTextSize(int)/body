@@ -1,3 +1,0 @@
-{
-  setMinTextSize(TypedValue.COMPLEX_UNIT_SP,minSize);
-}

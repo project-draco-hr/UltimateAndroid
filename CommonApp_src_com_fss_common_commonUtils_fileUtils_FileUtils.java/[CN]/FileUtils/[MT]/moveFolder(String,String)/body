@@ -1,4 +1,0 @@
-{
-  copyFolder(oldPath,newPath);
-  delFolder(oldPath);
-}

@@ -1,5 +1,0 @@
-{
-  View child=getChildAt(0);
-  measureChild(child,widthMeasureSpec,heightMeasureSpec);
-  setMeasuredDimension(widthMeasureSpec,heightMeasureSpec);
-}

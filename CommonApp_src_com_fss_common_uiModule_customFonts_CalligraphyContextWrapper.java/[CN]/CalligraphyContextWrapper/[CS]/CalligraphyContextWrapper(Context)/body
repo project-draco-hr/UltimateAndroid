@@ -1,4 +1,0 @@
-{
-  super(base);
-  mAttributeId=CalligraphyConfig.get().getAttrId();
-}

@@ -1,7 +1,0 @@
-{
-  if (isOnBottomStyle && !isOnBottomLoading) {
-    isOnBottomLoading=true;
-    onBottomBegin();
-    footerButton.performClick();
-  }
-}

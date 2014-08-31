@@ -1,8 +1,0 @@
-{
-  int minHeight=0;
-  final Drawable bg=getBackground();
-  if (bg != null) {
-    minHeight=bg.getIntrinsicHeight();
-  }
-  return minHeight;
-}

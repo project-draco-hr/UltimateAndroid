@@ -1,8 +1,0 @@
-{
-  if (mDurationSet) {
-    return mDuration;
-  }
- else {
-    return new ValueAnimator().getDuration();
-  }
-}

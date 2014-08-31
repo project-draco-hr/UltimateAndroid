@@ -1,4 +1,0 @@
-{
-  showcaseView.setTarget(target);
-  return this;
-}

@@ -1,5 +1,0 @@
-{
-  mSuppMatrix.reset();
-  setImageViewMatrix(getDrawMatrix());
-  checkMatrixBounds();
-}

@@ -1,9 +1,0 @@
-{
-  View v=getChildAt(position - getFirstVisiblePosition());
-  if (v != null) {
-    return v.getHeight();
-  }
- else {
-    return calcItemHeight(position,getChildHeight(position));
-  }
-}

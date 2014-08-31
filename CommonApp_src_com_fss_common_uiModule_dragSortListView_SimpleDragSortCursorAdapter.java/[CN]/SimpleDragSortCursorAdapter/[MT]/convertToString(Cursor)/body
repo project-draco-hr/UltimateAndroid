@@ -1,9 +1,0 @@
-{
-  if (mCursorToStringConverter != null) {
-    return mCursorToStringConverter.convertToString(cursor);
-  }
- else   if (mStringConversionColumn > -1) {
-    return cursor.getString(mStringConversionColumn);
-  }
-  return super.convertToString(cursor);
-}

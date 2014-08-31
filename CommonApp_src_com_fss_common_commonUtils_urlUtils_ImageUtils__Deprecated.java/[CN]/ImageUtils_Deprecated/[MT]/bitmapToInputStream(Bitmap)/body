@@ -1,7 +1,0 @@
-{
-  ByteArrayOutputStream bos=new ByteArrayOutputStream();
-  bitmap.compress(Bitmap.CompressFormat.PNG,0,bos);
-  byte[] bitmapdata=bos.toByteArray();
-  ByteArrayInputStream bs=new ByteArrayInputStream(bitmapdata);
-  return bs;
-}

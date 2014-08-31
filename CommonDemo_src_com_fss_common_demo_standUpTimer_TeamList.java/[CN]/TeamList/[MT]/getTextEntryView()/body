@@ -1,7 +1,0 @@
-{
-  if (textEntryView == null) {
-    LayoutInflater factory=LayoutInflater.from(this);
-    textEntryView=factory.inflate(R.layout.stand_up_timer_collect_text,null);
-  }
-  return textEntryView;
-}

@@ -1,4 +1,0 @@
-{
-  this.flipViewController=flipViewController;
-  this.cards=cards;
-}

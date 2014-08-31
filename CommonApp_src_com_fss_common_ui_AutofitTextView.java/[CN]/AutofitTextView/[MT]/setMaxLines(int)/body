@@ -1,7 +1,0 @@
-{
-  super.setMaxLines(maxLines);
-  if (maxLines != mMaxLines) {
-    mMaxLines=maxLines;
-    refitText();
-  }
-}

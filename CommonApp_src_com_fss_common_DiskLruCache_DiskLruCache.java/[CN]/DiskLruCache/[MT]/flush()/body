@@ -1,5 +1,0 @@
-{
-  checkNotClosed();
-  trimToSize();
-  journalWriter.flush();
-}

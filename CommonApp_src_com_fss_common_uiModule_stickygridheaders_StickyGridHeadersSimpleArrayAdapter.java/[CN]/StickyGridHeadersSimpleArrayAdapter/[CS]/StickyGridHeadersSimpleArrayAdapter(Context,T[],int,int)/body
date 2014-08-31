@@ -1,3 +1,0 @@
-{
-  init(context,Arrays.asList(items),headerResId,itemResId);
-}

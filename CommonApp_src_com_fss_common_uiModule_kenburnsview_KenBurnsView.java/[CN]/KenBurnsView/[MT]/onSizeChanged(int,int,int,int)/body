@@ -1,4 +1,0 @@
-{
-  super.onSizeChanged(w,h,oldw,oldh);
-  updateViewport(w,h);
-}

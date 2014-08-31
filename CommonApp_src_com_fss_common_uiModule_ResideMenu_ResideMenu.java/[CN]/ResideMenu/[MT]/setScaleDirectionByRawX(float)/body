@@ -1,4 +1,0 @@
-{
-  if (currentRawX < lastRawX)   setScaleDirection(DIRECTION_RIGHT);
- else   setScaleDirection(DIRECTION_LEFT);
-}

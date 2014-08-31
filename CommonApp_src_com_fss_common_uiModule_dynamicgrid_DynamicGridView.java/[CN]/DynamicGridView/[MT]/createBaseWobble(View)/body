@@ -1,9 +1,0 @@
-{
-  ObjectAnimator animator=new ObjectAnimator();
-  animator.setDuration(180);
-  animator.setRepeatMode(ValueAnimator.REVERSE);
-  animator.setRepeatCount(ValueAnimator.INFINITE);
-  animator.setPropertyName("rotation");
-  animator.setTarget(v);
-  return animator;
-}

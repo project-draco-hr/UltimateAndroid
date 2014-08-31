@@ -1,3 +1,0 @@
-{
-  PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(UNLIMITED_PARTICIPANTS,value).commit();
-}

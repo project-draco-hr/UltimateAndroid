@@ -1,3 +1,0 @@
-{
-  return judgeNotNull(object,new Object[0]);
-}

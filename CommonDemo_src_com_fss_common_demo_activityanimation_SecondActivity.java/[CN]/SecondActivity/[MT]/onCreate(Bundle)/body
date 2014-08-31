@@ -1,5 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  findViews();
-  mNext.setOnClickListener(this);
-}

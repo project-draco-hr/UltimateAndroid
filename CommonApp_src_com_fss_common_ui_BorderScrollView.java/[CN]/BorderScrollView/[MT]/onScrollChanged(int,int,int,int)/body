@@ -1,4 +1,0 @@
-{
-  super.onScrollChanged(x,y,oldx,oldy);
-  doOnBorderListener();
-}

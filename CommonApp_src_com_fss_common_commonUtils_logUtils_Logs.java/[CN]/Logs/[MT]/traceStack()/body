@@ -1,5 +1,0 @@
-{
-  if (sIsLogEnabled) {
-    traceStack(sApplicationTag,Log.ERROR);
-  }
-}

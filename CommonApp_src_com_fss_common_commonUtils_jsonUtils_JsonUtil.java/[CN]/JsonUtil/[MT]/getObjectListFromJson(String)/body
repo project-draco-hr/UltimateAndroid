@@ -1,7 +1,0 @@
-{
-  Gson gson=new Gson();
-  Object object=gson.fromJson(jsonString,new TypeToken<List<Object>>(){
-  }
-.getType());
-  return object;
-}

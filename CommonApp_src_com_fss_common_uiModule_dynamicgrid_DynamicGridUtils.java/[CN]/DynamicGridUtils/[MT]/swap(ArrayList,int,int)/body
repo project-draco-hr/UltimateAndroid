@@ -1,6 +1,0 @@
-{
-  Object firstObject=list.get(firstIndex);
-  Object secondObject=list.get(secondIndex);
-  list.set(firstIndex,secondObject);
-  list.set(secondIndex,firstObject);
-}

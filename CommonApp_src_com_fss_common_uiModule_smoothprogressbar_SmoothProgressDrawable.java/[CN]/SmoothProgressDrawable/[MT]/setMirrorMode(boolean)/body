@@ -1,5 +1,0 @@
-{
-  if (mMirrorMode == mirrorMode)   return;
-  mMirrorMode=mirrorMode;
-  invalidateSelf();
-}

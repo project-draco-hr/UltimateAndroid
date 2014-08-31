@@ -1,4 +1,0 @@
-{
-  super.onFinishInflate();
-  mPathView=findViewById(R.id.pathView);
-}

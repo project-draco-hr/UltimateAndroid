@@ -1,9 +1,0 @@
-{
-  if (!(state instanceof AbstractSlideExpandableListAdapter.SavedState)) {
-    super.onRestoreInstanceState(state);
-    return;
-  }
-  AbstractSlideExpandableListAdapter.SavedState ss=(AbstractSlideExpandableListAdapter.SavedState)state;
-  super.onRestoreInstanceState(ss.getSuperState());
-  adapter.onRestoreInstanceState(ss);
-}

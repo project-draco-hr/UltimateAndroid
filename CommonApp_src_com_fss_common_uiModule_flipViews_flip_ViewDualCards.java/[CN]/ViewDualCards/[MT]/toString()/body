@@ -1,3 +1,0 @@
-{
-  return "ViewDualCards: (" + index + ", view: "+ getView()+ ")";
-}

@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.edge_effect_webview_layout);
-  mWebView=((WebView)findViewById(R.id.webview));
-  initWebView();
-}

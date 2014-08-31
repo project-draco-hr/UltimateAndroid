@@ -1,6 +1,0 @@
-{
-  mModeAppearing=!mModeAppearing;
-  if (mModeAppearing) {
-    mCurrentGlobalAngleOffset=(mCurrentGlobalAngleOffset + MIN_SWEEP_ANGLE * 2) % 360;
-  }
-}

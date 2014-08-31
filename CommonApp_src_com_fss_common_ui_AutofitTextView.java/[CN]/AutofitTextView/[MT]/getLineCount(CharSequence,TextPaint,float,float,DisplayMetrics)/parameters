@@ -1,5 +1,0 @@
-CharSequence text
-TextPaint paint
-float size
-float width
-DisplayMetrics displayMetrics

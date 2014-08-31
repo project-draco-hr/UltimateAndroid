@@ -1,4 +1,0 @@
-int item
-boolean smoothScroll
-int velocity
-boolean dispatchSelected

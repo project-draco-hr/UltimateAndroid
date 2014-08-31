@@ -1,3 +1,0 @@
-{
-  return (selectedCals.size() > 0 ? selectedCals.get(0).getTime() : null);
-}

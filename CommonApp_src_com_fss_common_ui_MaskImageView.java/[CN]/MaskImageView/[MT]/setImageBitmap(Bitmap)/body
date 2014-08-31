@@ -1,4 +1,0 @@
-{
-  Drawable d=createStateDrawable(getContext(),new BitmapDrawable(getContext().getResources(),bm));
-  setImageDrawable(d);
-}

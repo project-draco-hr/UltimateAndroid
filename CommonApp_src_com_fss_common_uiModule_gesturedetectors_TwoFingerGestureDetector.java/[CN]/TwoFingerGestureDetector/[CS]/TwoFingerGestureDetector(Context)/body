@@ -1,5 +1,0 @@
-{
-  super(context);
-  ViewConfiguration config=ViewConfiguration.get(context);
-  mEdgeSlop=config.getScaledEdgeSlop();
-}

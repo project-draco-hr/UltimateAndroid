@@ -1,4 +1,0 @@
-{
-  parallaxScroll();
-  if (this.listener != null)   this.listener.onScroll(view,firstVisibleItem,visibleItemCount,totalItemCount);
-}

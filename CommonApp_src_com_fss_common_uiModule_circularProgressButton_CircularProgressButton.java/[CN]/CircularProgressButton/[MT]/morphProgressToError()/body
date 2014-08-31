@@ -1,9 +1,0 @@
-{
-  MorphingAnimation animation=createProgressMorphing(getHeight(),mCornerRadius,getHeight(),getWidth());
-  animation.setFromColor(mColorProgress);
-  animation.setToColor(getNormalColor(mErrorColorState));
-  animation.setFromStrokeColor(mColorIndicator);
-  animation.setToStrokeColor(getNormalColor(mErrorColorState));
-  animation.setListener(mErrorStateListener);
-  animation.start();
-}

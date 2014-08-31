@@ -1,3 +1,0 @@
-{
-  startScroll(startX,startY,dx,dy,DEFAULT_DURATION);
-}

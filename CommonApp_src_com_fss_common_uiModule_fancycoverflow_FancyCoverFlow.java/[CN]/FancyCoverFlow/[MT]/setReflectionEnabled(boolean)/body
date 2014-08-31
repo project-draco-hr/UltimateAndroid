@@ -1,6 +1,0 @@
-{
-  this.reflectionEnabled=reflectionEnabled;
-  if (this.getAdapter() != null) {
-    ((FancyCoverFlowAdapter)this.getAdapter()).notifyDataSetChanged();
-  }
-}

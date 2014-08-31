@@ -1,4 +1,0 @@
-{
-  mReversed=reversed;
-  return this;
-}

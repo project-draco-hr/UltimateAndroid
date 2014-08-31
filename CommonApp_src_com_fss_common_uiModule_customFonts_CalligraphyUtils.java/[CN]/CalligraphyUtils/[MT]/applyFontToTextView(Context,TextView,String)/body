@@ -1,6 +1,0 @@
-{
-  if (textView == null || context == null)   return false;
-  final AssetManager assetManager=context.getAssets();
-  final Typeface typeface=TypefaceUtils.load(assetManager,filePath);
-  return applyFontToTextView(textView,typeface);
-}

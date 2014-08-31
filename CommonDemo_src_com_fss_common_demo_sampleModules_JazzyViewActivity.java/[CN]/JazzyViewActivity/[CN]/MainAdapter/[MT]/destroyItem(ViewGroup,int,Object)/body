@@ -1,3 +1,0 @@
-{
-  container.removeView(mJazzy.findViewFromObject(position));
-}

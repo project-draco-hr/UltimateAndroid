@@ -1,5 +1,0 @@
-{
-  mDividerHeight=value;
-  setDividerAndHeight(mDivider,value);
-  return this;
-}

@@ -1,4 +1,0 @@
-{
-  if (null == imageView)   return 0;
-  return imageView.getWidth() - imageView.getPaddingLeft() - imageView.getPaddingRight();
-}

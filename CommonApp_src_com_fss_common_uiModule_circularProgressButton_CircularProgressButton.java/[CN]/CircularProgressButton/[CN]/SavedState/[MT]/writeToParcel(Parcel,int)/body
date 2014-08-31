@@ -1,6 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeInt(mProgress);
-  out.writeInt(mIndeterminateProgressMode ? 1 : 0);
-  out.writeInt(mConfigurationChanged ? 1 : 0);
-}

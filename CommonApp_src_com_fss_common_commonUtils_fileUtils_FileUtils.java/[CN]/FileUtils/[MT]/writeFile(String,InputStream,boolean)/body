@@ -1,3 +1,0 @@
-{
-  return writeFile(filePath != null ? new File(filePath) : null,stream,append);
-}

@@ -1,5 +1,0 @@
-{
-  MenuInflater inflater=getMenuInflater();
-  inflater.inflate(R.menu.main_menu_layout,menu);
-  return super.onCreateOptionsMenu(menu);
-}

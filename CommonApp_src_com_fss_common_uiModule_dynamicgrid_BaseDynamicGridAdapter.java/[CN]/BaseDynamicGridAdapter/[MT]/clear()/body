@@ -1,5 +1,0 @@
-{
-  clearStableIdMap();
-  mItems.clear();
-  notifyDataSetChanged();
-}

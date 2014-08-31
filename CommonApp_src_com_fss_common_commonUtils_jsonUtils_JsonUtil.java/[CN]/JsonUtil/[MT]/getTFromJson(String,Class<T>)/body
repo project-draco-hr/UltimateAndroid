@@ -1,4 +1,0 @@
-{
-  Gson gson=new Gson();
-  return gson.fromJson(jsonString,t);
-}

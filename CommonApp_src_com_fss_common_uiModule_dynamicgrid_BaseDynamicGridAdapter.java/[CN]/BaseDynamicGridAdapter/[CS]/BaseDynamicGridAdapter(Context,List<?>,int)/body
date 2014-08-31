@@ -1,5 +1,0 @@
-{
-  mContext=context;
-  mColumnCount=columnCount;
-  init(items);
-}

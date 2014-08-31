@@ -1,3 +1,0 @@
-{
-  return mHeaderViewInfos.size();
-}

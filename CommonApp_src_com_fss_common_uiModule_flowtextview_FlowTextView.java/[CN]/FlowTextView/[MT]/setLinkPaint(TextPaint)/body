@@ -1,4 +1,0 @@
-{
-  this.mLinkPaint=mLinkPaint;
-  invalidate();
-}

@@ -1,9 +1,0 @@
-{
-  if (mThread != null) {
-    return false;
-  }
-  mThread=new Thread(this,"Local View Server [port=" + mPort + "]");
-  mThreadPool=Executors.newFixedThreadPool(VIEW_SERVER_MAX_CONNECTIONS);
-  mThread.start();
-  return true;
-}

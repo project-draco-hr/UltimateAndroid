@@ -1,4 +1,0 @@
-{
-  mDismissCallback=dismissCallback;
-  return this;
-}

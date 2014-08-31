@@ -1,6 +1,0 @@
-{
-  logWriter=null;
-  if (writer != null) {
-    writer.close();
-  }
-}

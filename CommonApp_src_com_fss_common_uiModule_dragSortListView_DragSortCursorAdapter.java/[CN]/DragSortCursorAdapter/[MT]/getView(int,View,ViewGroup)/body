@@ -1,3 +1,0 @@
-{
-  return super.getView(mListMapping.get(position,position),convertView,parent);
-}

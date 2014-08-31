@@ -1,9 +1,0 @@
-{
-  if (x < mEdgeSize) {
-    return EDGE_LFET;
-  }
- else   if (x >= (getWidth() - mEdgeSize)) {
-    return EDGE_RIGHT;
-  }
-  return -1;
-}

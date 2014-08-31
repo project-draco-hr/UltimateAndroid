@@ -1,5 +1,0 @@
-{
-  final float progress=(float)(Math.random() * 2);
-  int duration=3000;
-  animate(progressBar,listener,progress,duration);
-}

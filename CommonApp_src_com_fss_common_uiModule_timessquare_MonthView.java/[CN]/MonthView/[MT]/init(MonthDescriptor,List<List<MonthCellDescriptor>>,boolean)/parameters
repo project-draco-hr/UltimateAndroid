@@ -1,3 +1,0 @@
-MonthDescriptor month
-List<List<MonthCellDescriptor>> cells
-boolean displayOnly

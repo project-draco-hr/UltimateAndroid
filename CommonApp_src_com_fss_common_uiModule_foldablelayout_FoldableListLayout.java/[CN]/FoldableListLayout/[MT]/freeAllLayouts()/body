@@ -1,9 +1,0 @@
-{
-  int size=mFoldableLayoutsMap.size();
-  for (int i=0; i < size; i++) {
-    FoldableItemLayout layout=mFoldableLayoutsMap.valueAt(i);
-    layout.getBaseLayout().removeAllViews();
-    mFoldableLayoutsCache.offer(layout);
-  }
-  mFoldableLayoutsMap.clear();
-}

@@ -1,8 +1,0 @@
-{
-  if (mAdapter != null) {
-    return getFootersCount() + getHeadersCount() + mAdapter.getCount();
-  }
- else {
-    return getFootersCount() + getHeadersCount();
-  }
-}

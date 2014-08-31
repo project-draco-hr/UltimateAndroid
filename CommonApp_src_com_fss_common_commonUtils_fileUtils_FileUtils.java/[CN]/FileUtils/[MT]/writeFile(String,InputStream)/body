@@ -1,3 +1,0 @@
-{
-  return writeFile(filePath,stream,false);
-}

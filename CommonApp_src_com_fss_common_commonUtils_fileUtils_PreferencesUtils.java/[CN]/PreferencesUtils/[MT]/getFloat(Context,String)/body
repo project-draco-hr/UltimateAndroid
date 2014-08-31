@@ -1,3 +1,0 @@
-{
-  return getFloat(context,key,-1);
-}

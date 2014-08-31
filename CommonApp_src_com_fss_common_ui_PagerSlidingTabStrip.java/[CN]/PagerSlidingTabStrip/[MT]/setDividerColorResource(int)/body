@@ -1,4 +1,0 @@
-{
-  this.dividerColor=getResources().getColor(resId);
-  invalidate();
-}

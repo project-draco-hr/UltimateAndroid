@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.fading_actionbar_listview_activity_menu,menu);
-  return true;
-}

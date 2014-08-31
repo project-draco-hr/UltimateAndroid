@@ -1,5 +1,0 @@
-{
-  mCapturedView=child;
-  mActivePointerId=INVALID_POINTER;
-  return forceSettleCapturedViewAt(finalLeft,finalTop,0,0);
-}

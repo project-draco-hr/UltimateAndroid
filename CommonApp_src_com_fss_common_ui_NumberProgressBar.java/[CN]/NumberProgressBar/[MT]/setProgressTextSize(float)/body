@@ -1,5 +1,0 @@
-{
-  this.mTextSize=TextSize;
-  mTextPaint.setTextSize(mTextSize);
-  invalidate();
-}

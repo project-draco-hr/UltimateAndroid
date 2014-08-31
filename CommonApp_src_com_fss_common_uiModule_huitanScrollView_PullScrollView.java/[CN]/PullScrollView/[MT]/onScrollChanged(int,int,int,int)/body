@@ -1,6 +1,0 @@
-{
-  super.onScrollChanged(l,t,oldl,oldt);
-  if (getScrollY() == 0) {
-    isTop=true;
-  }
-}

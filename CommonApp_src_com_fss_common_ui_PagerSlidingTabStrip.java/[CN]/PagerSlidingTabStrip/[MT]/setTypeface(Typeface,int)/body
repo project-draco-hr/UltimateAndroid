@@ -1,5 +1,0 @@
-{
-  this.tabTypeface=typeface;
-  this.tabTypefaceStyle=style;
-  updateTabStyles();
-}

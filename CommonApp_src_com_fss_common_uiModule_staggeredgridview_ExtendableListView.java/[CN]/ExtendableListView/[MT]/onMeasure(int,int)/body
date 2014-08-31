@@ -1,7 +1,0 @@
-{
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  int widthSize=MeasureSpec.getSize(widthMeasureSpec);
-  int heightSize=MeasureSpec.getSize(heightMeasureSpec);
-  setMeasuredDimension(widthSize,heightSize);
-  mWidthMeasureSpec=widthMeasureSpec;
-}

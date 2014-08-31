@@ -1,8 +1,0 @@
-{
-  if (AphidLog.ENABLE_DEBUG) {
-    int error=gl.glGetError();
-    if (error != 0) {
-      throw new RuntimeException(GLU.gluErrorString(error));
-    }
-  }
-}

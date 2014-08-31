@@ -1,6 +1,0 @@
-{
-  if (anchorFactor != mAnchorFactor) {
-    mAnchorFactor=anchorFactor;
-    updateFold();
-  }
-}

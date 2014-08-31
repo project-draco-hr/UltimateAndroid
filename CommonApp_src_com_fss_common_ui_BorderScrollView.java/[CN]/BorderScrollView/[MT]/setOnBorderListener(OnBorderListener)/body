@@ -1,9 +1,0 @@
-{
-  this.onBorderListener=onBorderListener;
-  if (onBorderListener == null) {
-    return;
-  }
-  if (contentView == null) {
-    contentView=getChildAt(0);
-  }
-}

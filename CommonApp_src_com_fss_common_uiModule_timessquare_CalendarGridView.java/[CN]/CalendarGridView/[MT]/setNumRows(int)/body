@@ -1,6 +1,0 @@
-{
-  if (oldNumRows != numRows) {
-    oldWidthMeasureSize=0;
-  }
-  oldNumRows=numRows;
-}

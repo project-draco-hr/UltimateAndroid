@@ -1,6 +1,0 @@
-{
-  LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-  inflater.inflate(R.layout.residemenu_item,this);
-  iv_icon=(ImageView)findViewById(R.id.iv_icon);
-  tv_title=(TextView)findViewById(R.id.tv_title);
-}

@@ -1,4 +1,0 @@
-{
-  setGap();
-  setDividerAndHeight(mDivider,mDividerHeight);
-}

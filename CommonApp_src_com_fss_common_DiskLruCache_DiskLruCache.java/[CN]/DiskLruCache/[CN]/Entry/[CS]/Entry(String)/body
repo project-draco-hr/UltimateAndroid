@@ -1,4 +1,0 @@
-{
-  this.key=key;
-  this.lengths=new long[valueCount];
-}

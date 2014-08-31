@@ -1,5 +1,0 @@
-{
-  super(context,attrs,defStyle);
-  this.context=context;
-  Logs.d("autowarap====");
-}

@@ -1,5 +1,0 @@
-{
-  Assert.assertNotNull(view);
-  detachViewFromParent(view);
-  addReleasedView(view);
-}

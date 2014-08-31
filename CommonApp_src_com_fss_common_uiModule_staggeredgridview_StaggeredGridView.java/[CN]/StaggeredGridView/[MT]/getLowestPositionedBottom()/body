@@ -1,4 +1,0 @@
-{
-  final int column=getLowestPositionedBottomColumn();
-  return mColumnBottoms[column];
-}

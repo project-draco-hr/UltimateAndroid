@@ -1,5 +1,0 @@
-{
-  for (  CalculateChildrenPosition listener : mCalculateChildrenPositionList) {
-    listener.onCalculatePosition(view,position,row,column);
-  }
-}

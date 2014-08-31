@@ -1,4 +1,0 @@
-{
-  super(in);
-  areHeadersSticky=in.readByte() != 0;
-}

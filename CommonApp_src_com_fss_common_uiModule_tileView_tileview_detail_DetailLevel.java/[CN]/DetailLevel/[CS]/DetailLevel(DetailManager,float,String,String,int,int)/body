@@ -1,8 +1,0 @@
-{
-  detailManager=zm;
-  scale=s;
-  pattern=p;
-  downsample=d;
-  tileWidth=tw;
-  tileHeight=th;
-}

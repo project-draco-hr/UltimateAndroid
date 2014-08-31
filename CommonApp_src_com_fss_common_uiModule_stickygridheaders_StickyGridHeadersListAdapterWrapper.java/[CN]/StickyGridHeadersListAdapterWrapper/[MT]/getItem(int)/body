@@ -1,6 +1,0 @@
-{
-  if (mDelegate == null) {
-    return null;
-  }
-  return mDelegate.getItem(position);
-}

@@ -1,3 +1,0 @@
-{
-  getAdapterInterface().reorderItems(originalPosition,targetPosition);
-}

@@ -1,5 +1,0 @@
-{
-  this.widthInDp=width;
-  progressBarPaint.setStrokeWidth(CalculationUtil.convertDpToPx(widthInDp,getContext()));
-  this.invalidate();
-}

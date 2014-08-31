@@ -1,3 +1,0 @@
-{
-  this(wrapped,R.id.expandable_toggle_button,R.id.expandable,R.id.expandable_item);
-}

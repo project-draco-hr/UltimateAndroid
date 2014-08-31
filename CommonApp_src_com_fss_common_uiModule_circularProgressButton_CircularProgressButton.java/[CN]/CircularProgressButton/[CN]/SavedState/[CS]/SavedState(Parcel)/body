@@ -1,6 +1,0 @@
-{
-  super(in);
-  mProgress=in.readInt();
-  mIndeterminateProgressMode=in.readInt() == 1;
-  mConfigurationChanged=in.readInt() == 1;
-}

@@ -1,7 +1,0 @@
-{
-  super.onCreate();
-  ImageLoaderConfiguration config=UniversalImageLoader.getDefaultImageLoaderConfiguration(getApplicationContext());
-  ImageLoader.getInstance().init(config);
-  AppLockManager.getInstance().enableDefaultAppLockIfAvailable(this);
-  CalligraphyConfig.initDefault("fonts/Satisfy-Regular.ttf",R.attr.fontPath);
-}

@@ -1,8 +1,0 @@
-{
-  this.defaultColor=color;
-  this.pressedColor=getHighlightColor(color,PRESSED_COLOR_LIGHTUP);
-  circlePaint.setColor(defaultColor);
-  focusPaint.setColor(defaultColor);
-  focusPaint.setAlpha(PRESSED_RING_ALPHA);
-  this.invalidate();
-}

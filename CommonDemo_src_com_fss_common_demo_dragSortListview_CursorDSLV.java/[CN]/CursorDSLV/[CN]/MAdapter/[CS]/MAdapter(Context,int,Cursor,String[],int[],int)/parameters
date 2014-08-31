@@ -1,6 +1,0 @@
-Context ctxt
-int rmid
-Cursor c
-String[] cols
-int[] ids
-int something

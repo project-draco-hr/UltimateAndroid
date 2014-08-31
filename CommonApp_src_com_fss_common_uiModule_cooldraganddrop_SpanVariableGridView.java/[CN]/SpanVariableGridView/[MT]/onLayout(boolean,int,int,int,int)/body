@@ -1,6 +1,0 @@
-{
-  if (mAdapter == null) {
-    return;
-  }
-  layoutChildrens(INVALID_POSITION,false);
-}

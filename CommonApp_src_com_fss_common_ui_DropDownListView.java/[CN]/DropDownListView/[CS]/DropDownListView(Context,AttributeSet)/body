@@ -1,5 +1,0 @@
-{
-  super(context,attrs);
-  getAttrs(context,attrs);
-  init(context);
-}

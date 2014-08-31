@@ -1,3 +1,0 @@
-{
-  this.parallaxedView=new ListViewParallaxedItem(v);
-}

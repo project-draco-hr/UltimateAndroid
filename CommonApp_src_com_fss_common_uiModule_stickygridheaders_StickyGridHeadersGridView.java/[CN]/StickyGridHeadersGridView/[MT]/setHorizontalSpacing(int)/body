@@ -1,4 +1,0 @@
-{
-  super.setHorizontalSpacing(horizontalSpacing);
-  mHorizontalSpacing=horizontalSpacing;
-}

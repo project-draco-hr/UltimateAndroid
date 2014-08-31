@@ -1,4 +1,0 @@
-{
-  this.fadeInMillis=fadeInMillis;
-  this.fadeOutMillis=fadeOutMillis;
-}

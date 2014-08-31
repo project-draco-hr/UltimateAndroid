@@ -1,4 +1,0 @@
-{
-  mSolidShadow=new Paint();
-  mSolidShadow.setColor(SHADOW_COLOR);
-}

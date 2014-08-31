@@ -1,3 +1,0 @@
-{
-  checkIndeterminateDrawable().setColor(color);
-}

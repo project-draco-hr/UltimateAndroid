@@ -1,9 +1,0 @@
-{
-  int x=point.x;
-  int y=point.y;
-  int mx=Math.max(0,Math.min(x,getLimitX()));
-  int my=Math.max(0,Math.min(y,getLimitY()));
-  if (x != mx || y != my) {
-    point.set(mx,my);
-  }
-}

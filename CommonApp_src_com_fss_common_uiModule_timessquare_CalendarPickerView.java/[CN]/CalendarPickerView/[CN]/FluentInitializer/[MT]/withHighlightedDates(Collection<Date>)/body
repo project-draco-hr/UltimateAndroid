@@ -1,4 +1,0 @@
-{
-  highlightDates(dates);
-  return this;
-}

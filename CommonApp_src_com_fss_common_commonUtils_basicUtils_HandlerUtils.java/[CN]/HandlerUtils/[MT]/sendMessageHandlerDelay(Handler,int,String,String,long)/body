@@ -1,8 +1,0 @@
-{
-  Message message=new Message();
-  message.what=what;
-  Bundle bundle=new Bundle();
-  bundle.putString(key,value);
-  message.setData(bundle);
-  handler.sendMessageDelayed(message,delayTime);
-}

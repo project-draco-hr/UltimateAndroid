@@ -1,3 +1,0 @@
-{
-  return (mPointersDown & 1 << pointerId) != 0;
-}

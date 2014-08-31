@@ -1,4 +1,0 @@
-{
-  touchFeedbackDrawable=new StateListDrawable();
-  touchFeedbackDrawable.addState(new int[]{android.R.attr.state_pressed},getColor(a));
-}

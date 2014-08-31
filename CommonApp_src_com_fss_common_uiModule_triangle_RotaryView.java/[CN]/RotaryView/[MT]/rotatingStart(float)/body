@@ -1,5 +1,0 @@
-{
-  discStart=0;
-  postInvalidate();
-  new RotationArc(angle);
-}

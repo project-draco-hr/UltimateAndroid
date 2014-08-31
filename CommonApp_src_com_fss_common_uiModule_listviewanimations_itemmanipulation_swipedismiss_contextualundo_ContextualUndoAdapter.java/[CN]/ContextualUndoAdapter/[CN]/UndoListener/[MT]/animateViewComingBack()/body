@@ -1,3 +1,0 @@
-{
-  animate(mContextualUndoView).translationX(0).setDuration(ANIMATION_DURATION).setListener(null);
-}

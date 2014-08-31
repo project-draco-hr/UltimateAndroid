@@ -1,6 +1,0 @@
-{
-  super.notifyDataSetChanged();
-  if (mDataSetChangedSlavedAdapter != null) {
-    mDataSetChangedSlavedAdapter.notifyDataSetChanged();
-  }
-}

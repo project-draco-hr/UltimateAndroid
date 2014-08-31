@@ -1,4 +1,0 @@
-{
-  super.onDraw(c);
-  drawTriangle(c);
-}

@@ -1,3 +1,0 @@
-{
-  return seconds < 10 ? "0" + seconds : Integer.toString(seconds);
-}

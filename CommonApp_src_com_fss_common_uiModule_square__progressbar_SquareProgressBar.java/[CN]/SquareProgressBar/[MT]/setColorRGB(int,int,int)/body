@@ -1,3 +1,0 @@
-{
-  bar.setColor(Color.rgb(r,g,b));
-}

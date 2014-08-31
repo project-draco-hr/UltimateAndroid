@@ -1,4 +1,0 @@
-{
-  this.isCurrentMonth=isCurrentMonth;
-  refreshDrawableState();
-}

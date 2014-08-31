@@ -1,4 +1,0 @@
-Context context
-String url
-RequestParams params
-AsyncHttpResponseHandler responseHandler

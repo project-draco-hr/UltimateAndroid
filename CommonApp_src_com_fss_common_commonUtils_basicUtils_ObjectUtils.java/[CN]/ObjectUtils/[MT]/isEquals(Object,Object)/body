@@ -1,3 +1,0 @@
-{
-  return actual == expected || (actual == null ? expected == null : actual.equals(expected));
-}

@@ -1,4 +1,0 @@
-{
-  onTouch(e);
-  return true;
-}

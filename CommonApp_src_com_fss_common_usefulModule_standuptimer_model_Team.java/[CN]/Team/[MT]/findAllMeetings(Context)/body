@@ -1,3 +1,0 @@
-{
-  return Meeting.findAllByTeam(this,context);
-}

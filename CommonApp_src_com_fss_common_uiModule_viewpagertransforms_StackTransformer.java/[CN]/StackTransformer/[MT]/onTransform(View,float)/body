@@ -1,3 +1,0 @@
-{
-  view.setTranslationX(position < 0 ? 0f : -view.getWidth() * position);
-}

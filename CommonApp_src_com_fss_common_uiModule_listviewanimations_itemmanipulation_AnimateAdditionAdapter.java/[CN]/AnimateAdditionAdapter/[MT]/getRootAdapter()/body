@@ -1,7 +1,0 @@
-{
-  BaseAdapter adapter=getDecoratedBaseAdapter();
-  while (adapter instanceof BaseAdapterDecorator) {
-    adapter=((BaseAdapterDecorator)adapter).getDecoratedBaseAdapter();
-  }
-  return adapter;
-}

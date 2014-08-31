@@ -1,7 +1,0 @@
-{
-  this.numParticipants=numParticipants;
-  this.individualStatusLength=individualStatusLength;
-  this.meetingLength=meetingLength;
-  this.quickestStatus=quickestStatus;
-  this.longestStatus=longestStatus;
-}

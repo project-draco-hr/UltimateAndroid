@@ -1,4 +1,0 @@
-{
-  titleText.setText(title);
-  image.setImageResource(R.drawable.ic_launcher);
-}

@@ -1,4 +1,0 @@
-{
-  final int column=getHighestPositionedTopColumn();
-  return mColumnTops[column];
-}

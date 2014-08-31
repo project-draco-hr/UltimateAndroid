@@ -1,5 +1,0 @@
-{
-  Class<? extends Activity> class_=activitiesInfo.get(position).activityClass;
-  Intent intent=new Intent(this,class_);
-  startActivity(intent);
-}

@@ -1,4 +1,0 @@
-{
-  setLastUpdated(lastUpdated);
-  onHeaderRefreshComplete();
-}

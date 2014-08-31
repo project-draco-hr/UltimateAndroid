@@ -1,6 +1,0 @@
-{
-  AnimatorSet scaleUp=new AnimatorSet();
-  scaleUp.playTogether(ObjectAnimator.ofFloat(target,"scaleX",targetScaleX),ObjectAnimator.ofFloat(target,"scaleY",targetScaleY));
-  scaleUp.setDuration(250);
-  return scaleUp;
-}

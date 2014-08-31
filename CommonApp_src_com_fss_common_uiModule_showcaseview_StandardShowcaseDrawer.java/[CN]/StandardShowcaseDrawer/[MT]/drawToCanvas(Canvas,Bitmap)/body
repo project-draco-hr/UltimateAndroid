@@ -1,3 +1,0 @@
-{
-  canvas.drawBitmap(bitmapBuffer,0,0,basicPaint);
-}

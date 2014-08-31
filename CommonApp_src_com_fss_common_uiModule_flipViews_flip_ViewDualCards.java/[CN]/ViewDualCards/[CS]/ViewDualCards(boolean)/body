@@ -1,5 +1,0 @@
-{
-  topCard.setOrientation(orientationVertical);
-  bottomCard.setOrientation(orientationVertical);
-  this.orientationVertical=orientationVertical;
-}

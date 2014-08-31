@@ -1,5 +1,0 @@
-{
-  for (int i=0; i < bufferedViews.size(); i++) {
-    bufferedViews.get(i).setVisibility(index == i ? VISIBLE : GONE);
-  }
-}

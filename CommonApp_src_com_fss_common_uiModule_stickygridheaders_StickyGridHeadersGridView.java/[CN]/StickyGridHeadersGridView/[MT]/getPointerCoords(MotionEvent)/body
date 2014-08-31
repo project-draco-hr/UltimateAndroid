@@ -1,9 +1,0 @@
-{
-  int n=e.getPointerCount();
-  MotionEvent.PointerCoords[] r=new MotionEvent.PointerCoords[n];
-  for (int i=0; i < n; i++) {
-    r[i]=new MotionEvent.PointerCoords();
-    e.getPointerCoords(i,r[i]);
-  }
-  return r;
-}
