@@ -1,5 +1,0 @@
-{
-  View view;
-  view=finder.findRequiredView(source,2131165572,"field 'reboundImageView'");
-  target.reboundImageView=(android.widget.ImageView)view;
-}

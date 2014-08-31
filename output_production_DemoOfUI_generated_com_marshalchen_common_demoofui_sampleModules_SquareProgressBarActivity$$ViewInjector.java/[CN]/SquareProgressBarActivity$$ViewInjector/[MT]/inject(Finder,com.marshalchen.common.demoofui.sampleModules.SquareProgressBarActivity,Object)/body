@@ -1,5 +1,0 @@
-{
-  View view;
-  view=finder.findRequiredView(source,2131165611,"field 'squareProgressBar'");
-  target.squareProgressBar=(com.marshalchen.common.uiModule.square_progressbar.SquareProgressBar)view;
-}

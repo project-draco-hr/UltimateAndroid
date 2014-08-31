@@ -1,5 +1,0 @@
-{
-  View view;
-  view=finder.findRequiredView(source,2131165526,"field 'panningView'");
-  target.panningView=(com.marshalchen.common.uiModule.panningview.PanningView)view;
-}
