@@ -1,0 +1,5 @@
+{
+  File cacheDir=StorageUtils.getCacheDirectory(context);
+  ImageLoaderConfiguration.Builder builder=new ImageLoaderConfiguration.Builder(context).threadPoolSize(3).threadPriority(Thread.NORM_PRIORITY - 1).tasksProcessingOrder(QueueProcessingType.FIFO).denyCacheImageMultipleSizesInMemory().memoryCacheSizePercentage(13).discCache(new UnlimitedDiscCache(cacheDir)).discCacheFileCount(1000).discCacheFileNameGenerator(new HashCodeFileNameGenerator()).imageDownloader(new BaseImageDownloader(context)).imageDecoder(new BaseImageDecoder(false)).defaultDisplayImageOptions(getDefaultImageOptions());
+  return builder;
+}
