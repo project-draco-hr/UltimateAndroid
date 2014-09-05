@@ -21,7 +21,8 @@
     String time=formatter.format(new Date());
     String fileName="crash-" + time + "-"+ timestamp+ ".log";
     if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-      String path=StorageUtils.getCacheDirectory(mContext) + (BasicUtils.judgeNotNull(crashFilePath) ? crashFilePath : "/crash/");
+      String path=Environment.getExternalStorageDirectory().getAbsolutePath() + (BasicUtils.judgeNotNull(crashFilePath) ? crashFilePath : "/crash/");
+      Logs.d("path----" + path);
       File dir=new File(path);
       if (!dir.exists()) {
         dir.mkdirs();
