@@ -12,6 +12,6 @@
 .start();
   collectDeviceInfo(mContext);
   String filemameString=saveCrashInfo2File(ex);
-  Log.d("filemameString",filemameString);
+  Logs.d("filemameString",filemameString);
   return true;
 }

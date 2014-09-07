@@ -7,12 +7,11 @@
       Thread.sleep(1000);
     }
  catch (    InterruptedException e) {
-      Log.e(TAG,"error : ",e);
+      Logs.e("error : ",e);
     }
-    Log.d(TAG,"uncaught exception is catched!");
-    Log.d("Chen","PendingIntent");
+    Logs.d("uncaught exception is catched!");
     System.exit(0);
-    Log.d("Chen","SystemPendingIntent");
+    Logs.d("SystemPendingIntent");
     android.os.Process.killProcess(android.os.Process.myPid());
   }
 }

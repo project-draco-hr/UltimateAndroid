@@ -10,17 +10,17 @@
     }
   }
  catch (  NameNotFoundException e) {
-    Log.e(TAG,"an error occured when collect package info",e);
+    Logs.e("an error occured when collect package info",e);
   }
   Field[] fields=Build.class.getDeclaredFields();
   for (  Field field : fields) {
     try {
       field.setAccessible(true);
       infos.put(field.getName(),field.get(null).toString());
-      Log.d(TAG,field.getName() + " : " + field.get(null));
+      Logs.d(field.getName() + " : " + field.get(null));
     }
  catch (    Exception e) {
-      Log.e(TAG,"an error occured when collect crash info",e);
+      Logs.e("an error occured when collect crash info",e);
     }
   }
 }

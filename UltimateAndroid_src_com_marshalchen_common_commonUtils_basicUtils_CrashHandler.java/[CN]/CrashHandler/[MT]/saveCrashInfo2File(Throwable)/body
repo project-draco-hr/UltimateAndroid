@@ -34,7 +34,7 @@
     return fileName;
   }
  catch (  Exception e) {
-    Log.e(TAG,"an error occured while writing file...",e);
+    Logs.e("an error occured while writing file...",e);
   }
   return null;
 }

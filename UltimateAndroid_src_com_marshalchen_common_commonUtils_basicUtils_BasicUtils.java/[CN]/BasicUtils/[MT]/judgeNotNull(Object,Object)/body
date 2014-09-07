@@ -4,7 +4,7 @@
   for (  Object o : objects) {
     if (o == null) {
       flag=false;
-      break;
+      return flag;
     }
   }
   return flag;
