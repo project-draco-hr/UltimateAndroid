@@ -1,0 +1,6 @@
+{
+  if (sIsLogEnabled) {
+    Log.e(tag,getContent(getCurrentStackTraceElement()) + "\n>" + exception.getMessage()+ "\n>"+ exception.getStackTrace()+ "   "+ message);
+    exception.printStackTrace();
+  }
+}
