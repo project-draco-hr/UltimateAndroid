@@ -1,8 +1,7 @@
 {
-  View customView=View.inflate(context,resId,null);
   if (mFrameLayoutCustomView.getChildCount() > 0) {
     mFrameLayoutCustomView.removeAllViews();
   }
-  mFrameLayoutCustomView.addView(customView);
+  mFrameLayoutCustomView.addView(view);
   return this;
 }
