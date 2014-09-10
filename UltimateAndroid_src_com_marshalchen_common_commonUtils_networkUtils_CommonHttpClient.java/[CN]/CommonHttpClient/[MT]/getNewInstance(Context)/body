@@ -12,7 +12,7 @@
   schReg.register(new Scheme("https",SSLSocketFactory.getSocketFactory(),443));
   ClientConnectionManager conMgr=new ThreadSafeClientConnManager(params,schReg);
   newInstance=new DefaultHttpClient(conMgr,params);
-switch (checkNetworkType(mContext)) {
+switch (checkNetworkTypeDeprecated(mContext)) {
 case TYPE_CT_WAP:
 {
       HttpHost proxy=new HttpHost("10.0.0.200",80,"http");
