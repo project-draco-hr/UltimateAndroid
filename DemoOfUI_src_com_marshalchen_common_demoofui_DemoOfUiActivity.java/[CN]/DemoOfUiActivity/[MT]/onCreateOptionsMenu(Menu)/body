@@ -5,7 +5,7 @@
   SearchView searchView=(SearchView)MenuItemCompat.getActionView(searchItem);
   searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
     @Override public boolean onQueryTextSubmit(    String s){
-      ToastUtil.show(MainActivity.this,"test~",Toast.LENGTH_SHORT);
+      ToastUtil.show(DemoOfUiActivity.this,"test~",Toast.LENGTH_SHORT);
       return false;
     }
     @Override public boolean onQueryTextChange(    String s){

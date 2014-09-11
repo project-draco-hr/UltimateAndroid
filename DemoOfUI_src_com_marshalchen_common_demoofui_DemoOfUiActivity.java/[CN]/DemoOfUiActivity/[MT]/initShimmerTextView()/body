@@ -6,7 +6,7 @@
     }
     @Override public void onAnimationEnd(    Animator animation){
       main_content_frame.setVisibility(View.VISIBLE);
-      main_content_frame.startAnimation(AnimationUtils.loadAnimation(MainActivity.this,R.anim.fade_ins));
+      main_content_frame.startAnimation(AnimationUtils.loadAnimation(DemoOfUiActivity.this,R.anim.fade_ins));
       favShimmerReaLayout.setVisibility(View.GONE);
     }
     @Override public void onAnimationCancel(    Animator animation){
