@@ -6,5 +6,5 @@
       mAdapter.insert("New stuff",0);
     }
   }
-,200);
+,2000);
 }
