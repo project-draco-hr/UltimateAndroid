@@ -1,0 +1,3 @@
+{
+  setOnScrollListener(loadMoreOnScrollListener);
+}
