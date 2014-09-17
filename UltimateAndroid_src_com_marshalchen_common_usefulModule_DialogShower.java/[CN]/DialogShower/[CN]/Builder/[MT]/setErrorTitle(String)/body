@@ -1,0 +1,4 @@
+{
+  dialogShower.setErrorTitle(title);
+  return this;
+}

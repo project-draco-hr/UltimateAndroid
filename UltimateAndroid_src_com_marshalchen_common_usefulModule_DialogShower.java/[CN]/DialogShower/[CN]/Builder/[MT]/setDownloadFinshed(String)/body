@@ -1,0 +1,4 @@
+{
+  dialogShower.setDownloadFinshed(title);
+  return this;
+}
