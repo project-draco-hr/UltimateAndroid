@@ -1,5 +1,8 @@
 {
   View customView=View.inflate(context,resId,null);
-  ((FrameLayout)mDialogView.findViewById(R.id.customPanel)).addView(customView);
+  if (mFrameLayoutCustomView.getChildCount() > 0) {
+    mFrameLayoutCustomView.removeAllViews();
+  }
+  mFrameLayoutCustomView.addView(customView);
   return this;
 }

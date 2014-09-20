@@ -1,0 +1,11 @@
+{
+  boolean flag=true;
+  if (list == null || list.size() == 0)   return false;
+  if (judgeNotNull(lists))   for (  List l : lists) {
+    if (l == null || l.size() == 0) {
+      flag=false;
+      return false;
+    }
+  }
+  return flag;
+}

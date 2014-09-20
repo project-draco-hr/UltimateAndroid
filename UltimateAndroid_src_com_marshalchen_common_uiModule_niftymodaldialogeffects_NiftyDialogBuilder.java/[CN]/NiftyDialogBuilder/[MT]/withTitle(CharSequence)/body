@@ -1,4 +1,5 @@
 {
+  toggleView(mLinearLayoutTopView,title);
   mTitle.setText(title);
   return this;
 }

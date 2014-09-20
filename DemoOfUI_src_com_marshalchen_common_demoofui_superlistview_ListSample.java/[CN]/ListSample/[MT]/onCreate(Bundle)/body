@@ -7,7 +7,7 @@
   Thread thread=new Thread(new Runnable(){
     @Override public void run(){
       try {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
       }
  catch (      InterruptedException e) {
         e.printStackTrace();
@@ -21,6 +21,8 @@
           mAdapter.add("More stuff5");
           mAdapter.add("More stuff6");
           mAdapter.add("More stuff7");
+          mAdapter.add("More stuff8");
+          mAdapter.add("More stuff9");
           mList.setAdapter(mAdapter);
         }
       }
@@ -31,13 +33,5 @@
   thread.start();
   mList.setRefreshListener(this);
   mList.setRefreshingColor(android.R.color.holo_orange_light,android.R.color.holo_blue_light,android.R.color.holo_green_light,android.R.color.holo_red_light);
-  mList.setupMoreListener(this,1);
-  mList.setupSwipeToDismiss(new SwipeDismissListViewTouchListener.DismissCallbacks(){
-    @Override public boolean canDismiss(    int position){
-      return true;
-    }
-    @Override public void onDismiss(    ListView listView,    int[] reverseSortedPositions){
-    }
-  }
-,true);
+  mList.setupMoreListener(this,8);
 }
