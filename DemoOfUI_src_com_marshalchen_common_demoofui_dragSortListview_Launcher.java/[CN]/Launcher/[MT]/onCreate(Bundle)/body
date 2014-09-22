@@ -2,7 +2,7 @@
   super.onCreate(savedInstanceState);
   setContentView(R.layout.drag_sort_listview_launcher);
   try {
-    PackageInfo pi=getPackageManager().getPackageInfo("com.fss.common.demo.dragSortListview",PackageManager.GET_ACTIVITIES);
+    PackageInfo pi=getPackageManager().getPackageInfo("com.marshalchen.common.demoofui.dragSortListview",PackageManager.GET_ACTIVITIES);
     mActivities=new ArrayList<ActivityInfo>(Arrays.asList(pi.activities));
     String ourName=getClass().getName();
     for (int i=0; i < mActivities.size(); ++i) {

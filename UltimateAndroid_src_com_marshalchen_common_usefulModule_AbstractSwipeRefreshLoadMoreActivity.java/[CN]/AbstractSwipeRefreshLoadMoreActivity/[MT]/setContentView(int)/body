@@ -1,0 +1,4 @@
+{
+  View v=getLayoutInflater().inflate(layoutResID,refreshLayout,false);
+  setContentView(v);
+}

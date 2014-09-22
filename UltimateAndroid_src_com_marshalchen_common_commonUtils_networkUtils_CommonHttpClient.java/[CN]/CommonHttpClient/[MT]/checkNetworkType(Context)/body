@@ -13,34 +13,15 @@
         return TYPE_WIFI_NET;
       }
  else       if (netType == ConnectivityManager.TYPE_MOBILE) {
-        final Cursor c=mContext.getContentResolver().query(PREFERRED_APN_URI,null,null,null,null);
-        if (c != null) {
-          c.moveToFirst();
-          final String user=c.getString(c.getColumnIndex("user"));
-          if (!TextUtils.isEmpty(user)) {
-            Logs.i("","=====================>?????????" + c.getString(c.getColumnIndex("proxy")));
-            if (user.startsWith(CTWAP)) {
-              Logs.i("","=====================>??????wap??????");
-              return TYPE_CT_WAP;
-            }
-          }
-        }
-        c.close();
-        String netMode=networkInfo.getExtraInfo();
-        Logs.i("","netMode ================== " + netMode);
-        if (netMode != null) {
-          netMode=netMode.toLowerCase();
-          if (netMode.equals(CMWAP) || netMode.equals(WAP_3G) || netMode.equals(UNIWAP)) {
-            Logs.i("","=====================>????????????wap??????");
-            return TYPE_CM_CU_WAP;
-          }
-        }
+        return TYPE_MOBILE;
       }
     }
   }
  catch (  Exception ex) {
     ex.printStackTrace();
-    return TYPE_WIFI_NET;
+    Logs.e(ex);
+    return TYPE_MOBILE;
   }
-  return TYPE_WIFI_NET;
+  Logs.e("no-----if");
+  return TYPE_MOBILE;
 }

@@ -1,0 +1,31 @@
+{
+  mDialogView=View.inflate(context,R.layout.nifty_dialog_layout,null);
+  mLinearLayoutView=(LinearLayout)mDialogView.findViewById(R.id.parentPanel);
+  mRelativeLayoutView=(RelativeLayout)mDialogView.findViewById(R.id.main);
+  mLinearLayoutTopView=(LinearLayout)mDialogView.findViewById(R.id.topPanel);
+  mLinearLayoutMsgView=(LinearLayout)mDialogView.findViewById(R.id.contentPanel);
+  mFrameLayoutCustomView=(FrameLayout)mDialogView.findViewById(R.id.customPanel);
+  mTitle=(TextView)mDialogView.findViewById(R.id.alertTitle);
+  mMessage=(TextView)mDialogView.findViewById(R.id.message);
+  mIcon=(ImageView)mDialogView.findViewById(R.id.icon);
+  mDivider=mDialogView.findViewById(R.id.titleDivider);
+  mButton1=(Button)mDialogView.findViewById(R.id.button1);
+  mButton2=(Button)mDialogView.findViewById(R.id.button2);
+  setContentView(mDialogView);
+  this.setOnShowListener(new OnShowListener(){
+    @Override public void onShow(    DialogInterface dialogInterface){
+      mLinearLayoutView.setVisibility(View.VISIBLE);
+      if (type == null) {
+        type=Effectstype.Slidetop;
+      }
+      start(type);
+    }
+  }
+);
+  mRelativeLayoutView.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View view){
+      if (isCancelable)       dismiss();
+    }
+  }
+);
+}

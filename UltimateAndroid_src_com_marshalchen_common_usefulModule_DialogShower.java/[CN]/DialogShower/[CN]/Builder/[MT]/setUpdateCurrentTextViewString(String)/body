@@ -1,0 +1,4 @@
+{
+  dialogShower.setUpdateCurrentTextViewString(title);
+  return this;
+}

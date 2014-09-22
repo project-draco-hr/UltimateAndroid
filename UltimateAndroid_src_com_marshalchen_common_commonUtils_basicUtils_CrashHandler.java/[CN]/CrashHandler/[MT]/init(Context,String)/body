@@ -1,6 +1,3 @@
 {
-  mContext=context;
-  mDefaultHandler=Thread.getDefaultUncaughtExceptionHandler();
-  Thread.setDefaultUncaughtExceptionHandler(this);
-  this.crashFilePath=crashFilePath;
+  init(context,crashFilePath,"");
 }

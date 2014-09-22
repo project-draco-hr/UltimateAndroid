@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  super.setContentView(R.layout.swipe_refresh_layout);
+  refreshLayout=(SwipeRefreshLayout)findViewById(R.id.swipe_container);
+}

@@ -1,4 +1,0 @@
-{
-  BaseEffects animator=type.getAnimator();
-  animator.start(mRlinearLayoutView);
-}

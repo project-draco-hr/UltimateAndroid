@@ -1,4 +1,0 @@
-{
-  mMessage.setText(textResId);
-  return this;
-}

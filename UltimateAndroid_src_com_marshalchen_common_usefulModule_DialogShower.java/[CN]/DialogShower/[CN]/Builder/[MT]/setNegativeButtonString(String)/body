@@ -1,0 +1,4 @@
+{
+  dialogShower.setNegativeButtonString(title);
+  return this;
+}

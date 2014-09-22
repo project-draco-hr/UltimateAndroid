@@ -1,0 +1,4 @@
+{
+  this.mDuration=duration;
+  return this;
+}
