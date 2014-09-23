@@ -1,0 +1,4 @@
+{
+  WebBackForwardList webBackForwardList=getHistoricalList(webView);
+  return webBackForwardList.getItemAtIndex(webBackForwardList.getCurrentIndex() - 1).getUrl();
+}
