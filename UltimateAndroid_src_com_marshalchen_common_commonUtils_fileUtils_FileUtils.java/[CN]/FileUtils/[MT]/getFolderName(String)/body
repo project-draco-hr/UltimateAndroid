@@ -1,5 +1,5 @@
 {
-  if (BasicUtils.judgeNotNull(filePath)) {
+  if (isFileExist(filePath)) {
     return filePath;
   }
   int filePosi=filePath.lastIndexOf(File.separator);
