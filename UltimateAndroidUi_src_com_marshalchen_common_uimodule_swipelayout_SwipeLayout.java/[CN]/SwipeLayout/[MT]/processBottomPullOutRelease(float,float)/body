@@ -1,0 +1,23 @@
+{
+  if (xvel == 0 && getOpenStatus() == Status.Middle)   close();
+  if (mDragEdge == DragEdge.Left || mDragEdge == DragEdge.Right) {
+    if (xvel > 0) {
+      if (mDragEdge == DragEdge.Left)       open();
+ else       close();
+    }
+    if (xvel < 0) {
+      if (mDragEdge == DragEdge.Left)       close();
+ else       open();
+    }
+  }
+ else {
+    if (yvel > 0) {
+      if (mDragEdge == DragEdge.Top)       open();
+ else       close();
+    }
+    if (yvel < 0) {
+      if (mDragEdge == DragEdge.Top)       close();
+ else       open();
+    }
+  }
+}

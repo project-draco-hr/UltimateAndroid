@@ -1,0 +1,17 @@
+{
+  AdapterView adapterView=getAdapterView();
+  boolean enable=true;
+  if (adapterView != null) {
+    Adapter adapter=adapterView.getAdapter();
+    if (adapter != null) {
+      int p=adapterView.getPositionForView(SwipeLayout.this);
+      if (adapter instanceof BaseAdapter) {
+        enable=((BaseAdapter)adapter).isEnabled(p);
+      }
+ else       if (adapter instanceof ListAdapter) {
+        enable=((ListAdapter)adapter).isEnabled(p);
+      }
+    }
+  }
+  return enable;
+}

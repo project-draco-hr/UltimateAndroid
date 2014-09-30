@@ -1,0 +1,9 @@
+{
+  if (mode == Mode.Multiple) {
+    if (!mOpenPositions.contains(position))     mOpenPositions.add(position);
+  }
+ else {
+    mOpenPosition=position;
+  }
+  mAdapter.notifyDataSetChanged();
+}

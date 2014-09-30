@@ -1,0 +1,5 @@
+{
+  for (  SwipeLayout s : mShownLayouts) {
+    if (s != layout)     s.close();
+  }
+}

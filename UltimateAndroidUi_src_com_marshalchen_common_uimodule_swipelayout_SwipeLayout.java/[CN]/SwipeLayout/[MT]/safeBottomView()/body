@@ -1,0 +1,10 @@
+{
+  Status status=getOpenStatus();
+  ViewGroup bottom=getBottomView();
+  if (status == Status.Close) {
+    if (bottom.getVisibility() != INVISIBLE)     bottom.setVisibility(INVISIBLE);
+  }
+ else {
+    if (bottom.getVisibility() != VISIBLE)     bottom.setVisibility(VISIBLE);
+  }
+}

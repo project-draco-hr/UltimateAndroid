@@ -1,0 +1,11 @@
+{
+  int resId=getSwipeLayoutId(position);
+  OnLayoutListener onLayoutListener=new OnLayoutListener(position);
+  SwipeLayout swipeLayout=(SwipeLayout)target.findViewById(resId);
+  if (swipeLayout == null)   throw new IllegalStateException("can not find SwipeLayout in target view");
+  SwipeMemory swipeMemory=new SwipeMemory(position);
+  swipeLayout.addSwipeListener(swipeMemory);
+  swipeLayout.addOnLayoutListener(onLayoutListener);
+  swipeLayout.setTag(resId,new ValueBox(position,swipeMemory,onLayoutListener));
+  mShownLayouts.add(swipeLayout);
+}

@@ -1,0 +1,4 @@
+int surfaceLeft
+int surfaceTop
+int surfaceRight
+int surfaceBottom

@@ -1,0 +1,19 @@
+{
+  int bl=getPaddingLeft(), bt=getPaddingTop();
+  int br, bb;
+  if (dragEdge == DragEdge.Right) {
+    bl=getMeasuredWidth() - mDragDistance;
+  }
+ else   if (dragEdge == DragEdge.Bottom) {
+    bt=getMeasuredHeight() - mDragDistance;
+  }
+  if (dragEdge == DragEdge.Left || dragEdge == DragEdge.Right) {
+    br=bl + mDragDistance;
+    bb=bt + getMeasuredHeight();
+  }
+ else {
+    br=bl + getMeasuredWidth();
+    bb=bt + mDragDistance;
+  }
+  return new Rect(bl,bt,br,bb);
+}
