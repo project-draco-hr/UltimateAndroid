@@ -299,6 +299,11 @@
   map.put("detail","try");
   map.put("subname","Listview");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ResideMenu");
+  map.put("detail","try");
+  map.put("subname","ResideMenu");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -494,6 +499,9 @@ BasicUtils.sendIntent(getActivity(),SwipeRefreshLayoutDemo.class);
 break;
 case 59:
 BasicUtils.sendIntent(getActivity(),UltimateListviewActivity.class);
+break;
+case 60:
+BasicUtils.sendIntent(getActivity(),ResideMenuActivity.class);
 break;
 }
 }
