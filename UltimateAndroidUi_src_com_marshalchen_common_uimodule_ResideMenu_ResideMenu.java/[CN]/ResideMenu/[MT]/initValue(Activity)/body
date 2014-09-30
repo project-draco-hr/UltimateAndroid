@@ -9,4 +9,7 @@
   viewDecor.removeViewAt(0);
   viewActivity.setContent(mContent);
   addView(viewActivity);
+  ViewGroup parent=(ViewGroup)scrollViewLeftMenu.getParent();
+  parent.removeView(scrollViewLeftMenu);
+  parent.removeView(scrollViewRightMenu);
 }

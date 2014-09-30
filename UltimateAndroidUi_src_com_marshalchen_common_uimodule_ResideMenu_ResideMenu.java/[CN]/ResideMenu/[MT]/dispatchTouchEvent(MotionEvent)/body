@@ -24,7 +24,7 @@ ev.setAction(MotionEvent.ACTION_CANCEL);
 }
 }
  else if (pressedState == PRESSED_MOVE_HORIZANTAL) {
-if (currentActivityScaleX < 0.95) scrollViewMenu.setVisibility(VISIBLE);
+if (currentActivityScaleX < 0.95) showScrollViewMenu();
 float targetScale=getTargetScale(ev.getRawX());
 ViewHelper.setScaleX(viewActivity,targetScale);
 ViewHelper.setScaleY(viewActivity,targetScale);
