@@ -1,0 +1,3 @@
+{
+  return LayoutInflater.from(mContext).inflate(R.layout.swipe_layout_grid_item,null);
+}

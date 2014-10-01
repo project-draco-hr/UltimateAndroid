@@ -1,0 +1,4 @@
+{
+  getMenuInflater().inflate(R.menu.swipe_layout_menu,menu);
+  return true;
+}

@@ -304,6 +304,11 @@
   map.put("detail","try");
   map.put("subname","ResideMenu");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Swipe");
+  map.put("detail","try");
+  map.put("subname","SwipeLayout");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -502,6 +507,9 @@ BasicUtils.sendIntent(getActivity(),UltimateListviewActivity.class);
 break;
 case 60:
 BasicUtils.sendIntent(getActivity(),ResideMenuActivity.class);
+break;
+case 61:
+BasicUtils.sendIntent(getActivity(),SwipeLayoutActivity.class);
 break;
 }
 }
