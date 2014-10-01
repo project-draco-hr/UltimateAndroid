@@ -1,0 +1,4 @@
+{
+  mAnimatorSet.setInterpolator(interpolator);
+  return this;
+}

@@ -1,0 +1,4 @@
+{
+  getAnimatorAgent().setStartDelay(delay);
+  return this;
+}
