@@ -309,6 +309,11 @@
   map.put("detail","try");
   map.put("subname","SwipeLayout");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Animations");
+  map.put("detail","try");
+  map.put("subname","Animations");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -510,6 +515,9 @@ BasicUtils.sendIntent(getActivity(),ResideMenuActivity.class);
 break;
 case 61:
 BasicUtils.sendIntent(getActivity(),SwipeLayoutActivity.class);
+break;
+case 62:
+BasicUtils.sendIntent(getActivity(),AndroidAnimationsDemoActivity.class);
 break;
 }
 }
