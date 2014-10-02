@@ -1,0 +1,11 @@
+{
+  float p=time / duration;
+  float x=p * getWidth();
+  float z=getHeight() + y;
+  if (!start) {
+    path.moveTo(x,z);
+    start=true;
+  }
+  path.lineTo(x,z);
+  invalidate();
+}
