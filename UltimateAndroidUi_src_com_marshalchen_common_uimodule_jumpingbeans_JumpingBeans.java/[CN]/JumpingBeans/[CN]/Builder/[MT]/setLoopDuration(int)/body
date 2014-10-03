@@ -1,0 +1,7 @@
+{
+  if (loopDuration < 1) {
+    throw new IllegalArgumentException("The loop duration must be bigger than zero");
+  }
+  this.loopDuration=loopDuration;
+  return this;
+}

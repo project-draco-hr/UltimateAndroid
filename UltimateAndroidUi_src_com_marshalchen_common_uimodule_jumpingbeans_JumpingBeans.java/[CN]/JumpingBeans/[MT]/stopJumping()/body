@@ -1,0 +1,15 @@
+{
+  for (  JumpingBeansSpan bean : jumpingBeans) {
+    if (bean != null) {
+      bean.teardown();
+    }
+  }
+  TextView tv=textView.get();
+  if (tv != null) {
+    CharSequence text=tv.getText();
+    if (text instanceof Spanned) {
+      CharSequence cleanText=removeJumpingBeansSpans((Spanned)text);
+      tv.setText(cleanText);
+    }
+  }
+}
