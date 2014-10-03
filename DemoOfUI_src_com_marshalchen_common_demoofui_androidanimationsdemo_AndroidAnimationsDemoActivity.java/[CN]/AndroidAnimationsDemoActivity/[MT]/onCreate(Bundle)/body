@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.android_animations_activity_my);
+  setContentView(R.layout.android_animations_activity);
   mListView=(ListView)findViewById(R.id.list_items);
   mTarget=findViewById(R.id.hello_world);
   mAdapter=new EffectAdapter(this);

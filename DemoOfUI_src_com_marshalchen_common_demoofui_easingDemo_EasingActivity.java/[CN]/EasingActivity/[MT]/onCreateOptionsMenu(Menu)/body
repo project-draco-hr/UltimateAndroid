@@ -1,4 +1,4 @@
 {
-  getMenuInflater().inflate(R.menu.android_animations_my,menu);
+  getMenuInflater().inflate(R.menu.android_animations,menu);
   return true;
 }
