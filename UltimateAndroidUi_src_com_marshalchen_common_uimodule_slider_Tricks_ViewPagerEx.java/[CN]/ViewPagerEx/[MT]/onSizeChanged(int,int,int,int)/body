@@ -1,0 +1,6 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  if (w != oldw) {
+    recomputeScrollPosition(w,oldw,mPageMargin,mPageMargin);
+  }
+}

@@ -1,0 +1,4 @@
+{
+  item=getOffsetAmount() + (item % getAdapter().getCount());
+  super.setCurrentItem(item);
+}

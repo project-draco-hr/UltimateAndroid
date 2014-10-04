@@ -1,0 +1,3 @@
+{
+  return super.verifyDrawable(who) || who == mMarginDrawable;
+}

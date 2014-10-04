@@ -1,0 +1,5 @@
+{
+  mViewPagerTransformer=transformer;
+  mViewPagerTransformer.setCustomAnimationInterface(mCustomAnimation);
+  mViewPager.setPageTransformer(reverseDrawingOrder,mViewPagerTransformer);
+}
