@@ -1,0 +1,5 @@
+{
+  mBackgroundDrawable=background;
+  updateBackgroundDrawableAttrs(true);
+  super.setBackgroundDrawable(mBackgroundDrawable);
+}

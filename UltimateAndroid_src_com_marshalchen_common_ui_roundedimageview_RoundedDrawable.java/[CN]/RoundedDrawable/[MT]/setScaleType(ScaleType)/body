@@ -1,0 +1,10 @@
+{
+  if (scaleType == null) {
+    scaleType=ScaleType.FIT_CENTER;
+  }
+  if (mScaleType != scaleType) {
+    mScaleType=scaleType;
+    updateShaderMatrix();
+  }
+  return this;
+}

@@ -1,0 +1,3 @@
+{
+  return drawableToBitmap(this);
+}
