@@ -1,0 +1,4 @@
+{
+  startTime=System.currentTimeMillis();
+  targetView.post(this);
+}

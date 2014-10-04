@@ -1,0 +1,3 @@
+{
+  addChildDisappearAnimator(hoverView,resId,technique,DURATION);
+}

@@ -1,0 +1,4 @@
+{
+  if (ratio < 0)   throw new IllegalArgumentException("Can not set ratio less than 0");
+  mZoomRatio=ratio;
+}

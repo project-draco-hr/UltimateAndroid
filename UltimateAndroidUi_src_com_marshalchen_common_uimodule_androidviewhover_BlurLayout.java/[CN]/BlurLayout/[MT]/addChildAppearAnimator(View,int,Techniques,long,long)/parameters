@@ -1,0 +1,5 @@
+View hoverView
+int resId
+Techniques technique
+long duration
+long delay
