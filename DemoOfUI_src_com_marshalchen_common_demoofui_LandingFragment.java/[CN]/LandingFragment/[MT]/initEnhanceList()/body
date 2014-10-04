@@ -329,6 +329,11 @@
   map.put("detail","try");
   map.put("subname","Hover");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","Slider");
+  map.put("detail","try");
+  map.put("subname","Slider");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -542,6 +547,9 @@ BasicUtils.sendIntent(getActivity(),JumpingBeansActivity.class);
 break;
 case 65:
 BasicUtils.sendIntent(getActivity(),AndroidViewHoverActivity.class);
+break;
+case 66:
+BasicUtils.sendIntent(getActivity(),SliderActivity.class);
 break;
 }
 }
