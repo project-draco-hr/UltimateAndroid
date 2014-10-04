@@ -1,4 +1,0 @@
-{
-  setLayerType(LAYER_TYPE_SOFTWARE,paintBorder);
-  paintBorder.setShadowLayer(0.0f,0.0f,0.0f,Color.TRANSPARENT);
-}

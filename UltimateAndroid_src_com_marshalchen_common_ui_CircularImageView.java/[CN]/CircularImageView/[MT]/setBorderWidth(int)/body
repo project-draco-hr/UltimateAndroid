@@ -1,5 +1,0 @@
-{
-  this.borderWidth=borderWidth;
-  this.requestLayout();
-  this.invalidate();
-}

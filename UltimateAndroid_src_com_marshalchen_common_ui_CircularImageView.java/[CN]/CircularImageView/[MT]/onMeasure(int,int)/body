@@ -1,5 +1,0 @@
-{
-  int width=measureWidth(widthMeasureSpec);
-  int height=measureHeight(heightMeasureSpec);
-  setMeasuredDimension(width,height);
-}
