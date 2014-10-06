@@ -1,0 +1,7 @@
+{
+  if (calendar == null) {
+    calendar=Calendar.getInstance();
+  }
+  calendar.set(year,month,day);
+  return calendar.getTime();
+}
