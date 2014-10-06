@@ -1,0 +1,7 @@
+{
+  this.view=view;
+  setExplodeMatrix(MATRIX_3X3);
+  interpolator=new AccelerateDecelerateInterpolator();
+  duration=DURATION_LONG;
+  listener=null;
+}

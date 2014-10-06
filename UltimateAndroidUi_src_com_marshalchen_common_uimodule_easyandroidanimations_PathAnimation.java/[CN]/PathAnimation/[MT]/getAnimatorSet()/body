@@ -1,0 +1,52 @@
+{
+  ViewGroup parentView=(ViewGroup)view.getParent(), rootView=(ViewGroup)view.getRootView();
+  while (!parentView.equals(rootView)) {
+    parentView.setClipChildren(false);
+    parentView=(ViewGroup)parentView.getParent();
+  }
+  rootView.setClipChildren(false);
+  AnimatorSet pathSet=new AnimatorSet();
+  int numOfPoints=points.size();
+  AnimatorSet[] pathAnimSetArray=new AnimatorSet[numOfPoints];
+  List<Animator> pathAnimList=new ArrayList<Animator>();
+  parentView=(ViewGroup)view.getParent();
+  int parentWidth=parentView.getWidth(), parentHeight=parentView.getHeight(), viewWidth=view.getWidth(), viewHeight=view.getHeight();
+  float posX, posY;
+  for (int i=0; i < numOfPoints; i++) {
+    posX=(points.get(i).x / 100f * parentWidth);
+    posY=(points.get(i).y / 100f * parentHeight);
+switch (anchorPoint) {
+case ANCHOR_CENTER:
+      posX=posX - viewWidth / 2;
+    posY=posY - viewHeight / 2;
+  break;
+case ANCHOR_TOP_RIGHT:
+posX-=viewWidth;
+break;
+case ANCHOR_BOTTOM_LEFT:
+posY-=viewHeight;
+break;
+case ANCHOR_BOTTOM_RIGHT:
+posX=posX - viewWidth;
+posY=posY - viewHeight;
+break;
+default :
+break;
+}
+pathAnimSetArray[i]=new AnimatorSet();
+pathAnimSetArray[i].playTogether(ObjectAnimator.ofFloat(view,View.X,posX),ObjectAnimator.ofFloat(view,View.Y,posY));
+pathAnimList.add(pathAnimSetArray[i]);
+}
+pathSet.playSequentially(pathAnimList);
+pathSet.setInterpolator(interpolator);
+pathSet.setDuration(duration / numOfPoints);
+pathSet.addListener(new AnimatorListenerAdapter(){
+@Override public void onAnimationEnd(Animator animation){
+if (getListener() != null) {
+getListener().onAnimationEnd(PathAnimation.this);
+}
+}
+}
+);
+return pathSet;
+}

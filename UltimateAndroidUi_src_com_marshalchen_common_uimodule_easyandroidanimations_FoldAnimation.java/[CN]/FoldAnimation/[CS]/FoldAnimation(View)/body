@@ -1,0 +1,9 @@
+{
+  this.view=view;
+  numOfFolds=1;
+  orientation=Orientation.HORIZONTAL;
+  anchorFactor=0f;
+  interpolator=new AccelerateDecelerateInterpolator();
+  duration=DURATION_LONG;
+  listener=null;
+}

@@ -1,0 +1,4 @@
+{
+  this.color=color;
+  return this;
+}
