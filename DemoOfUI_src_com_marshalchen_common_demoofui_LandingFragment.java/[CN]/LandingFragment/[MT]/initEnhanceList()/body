@@ -339,6 +339,11 @@
   map.put("detail","try");
   map.put("subname","CalendarListView");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","EasyAnimation");
+  map.put("detail","try");
+  map.put("subname","EasyAnimation");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -558,6 +563,9 @@ BasicUtils.sendIntent(getActivity(),SliderActivity.class);
 break;
 case 67:
 BasicUtils.sendIntent(getActivity(),CalendarListViewActivity.class);
+break;
+case 68:
+BasicUtils.sendIntent(getActivity(),EasyAnimationListActivity.class);
 break;
 }
 }
