@@ -1,0 +1,3 @@
+{
+  return px / this.getContext().getResources().getDisplayMetrics().density;
+}

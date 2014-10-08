@@ -1,0 +1,3 @@
+{
+  setHoverAppearAnimator(technique,duration,delay,interpolator,new Animator.AnimatorListener[]{});
+}

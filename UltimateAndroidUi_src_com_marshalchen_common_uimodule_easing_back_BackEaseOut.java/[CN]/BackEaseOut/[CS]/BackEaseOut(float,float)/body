@@ -1,0 +1,4 @@
+{
+  this(duration);
+  s=back;
+}

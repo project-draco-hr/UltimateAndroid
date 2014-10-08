@@ -1,0 +1,10 @@
+{
+  if (xvel == 0 && getOpenStatus() == Status.Middle)   close();
+  int l=getPaddingLeft(), t=getPaddingTop();
+  if (xvel < 0 && mDragEdge == DragEdge.Right)   l-=mDragDistance;
+  if (xvel > 0 && mDragEdge == DragEdge.Left)   l+=mDragDistance;
+  if (yvel > 0 && mDragEdge == DragEdge.Top)   t+=mDragDistance;
+  if (yvel < 0 && mDragEdge == DragEdge.Bottom)   t-=mDragDistance;
+  mDragHelper.smoothSlideViewTo(getSurfaceView(),l,t);
+  invalidate();
+}

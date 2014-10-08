@@ -1,0 +1,8 @@
+{
+  this.view=view;
+  bounceDistance=20;
+  numOfBounces=2;
+  interpolator=new AccelerateDecelerateInterpolator();
+  duration=DURATION_LONG;
+  listener=null;
+}

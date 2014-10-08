@@ -1,0 +1,4 @@
+{
+  ViewHelper.setPivotX(view,position < 0 ? 0 : view.getWidth());
+  ViewHelper.setScaleX(view,position < 0 ? 1f + position : 1f - position);
+}

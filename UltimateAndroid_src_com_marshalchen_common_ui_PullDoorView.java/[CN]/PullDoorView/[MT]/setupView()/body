@@ -10,6 +10,6 @@
   mImgView=new ImageView(mContext);
   mImgView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
   mImgView.setScaleType(ImageView.ScaleType.FIT_XY);
-  mImgView.setImageResource(R.drawable.test_back);
+  mImgView.setImageResource(R.drawable.test);
   addView(mImgView);
 }

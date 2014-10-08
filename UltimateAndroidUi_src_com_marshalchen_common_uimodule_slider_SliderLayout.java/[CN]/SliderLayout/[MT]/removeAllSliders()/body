@@ -1,0 +1,7 @@
+{
+  if (getRealAdapter() != null) {
+    int count=getRealAdapter().getCount();
+    getRealAdapter().removeAllSliders();
+    mViewPager.setCurrentItem(mViewPager.getCurrentItem() + count,false);
+  }
+}

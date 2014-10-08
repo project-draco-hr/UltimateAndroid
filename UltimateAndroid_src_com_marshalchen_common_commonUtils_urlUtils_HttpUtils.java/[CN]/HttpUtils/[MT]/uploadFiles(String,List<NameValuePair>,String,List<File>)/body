@@ -12,7 +12,7 @@
     entityBuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
     if (BasicUtils.judgeNotNull(paramsList)) {
       for (      NameValuePair nameValuePair : paramsList) {
-        entityBuilder.addTextBody(nameValuePair.getName(),nameValuePair.getValue());
+        entityBuilder.addTextBody(nameValuePair.getName(),nameValuePair.getValue(),ContentType.create(HTTP.PLAIN_TEXT_TYPE,HTTP.UTF_8));
       }
     }
     for (    File f : files) {

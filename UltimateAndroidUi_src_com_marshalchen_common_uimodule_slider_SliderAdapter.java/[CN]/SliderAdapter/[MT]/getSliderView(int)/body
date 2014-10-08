@@ -1,0 +1,8 @@
+{
+  if (position < 0 || position >= mImageContents.size()) {
+    return null;
+  }
+ else {
+    return mImageContents.get(position);
+  }
+}

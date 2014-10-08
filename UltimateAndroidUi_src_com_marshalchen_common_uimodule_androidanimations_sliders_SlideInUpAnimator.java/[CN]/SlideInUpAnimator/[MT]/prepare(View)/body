@@ -1,0 +1,5 @@
+{
+  ViewGroup parent=(ViewGroup)target.getParent();
+  int distance=parent.getHeight() - target.getTop();
+  getAnimatorAgent().playTogether(ObjectAnimator.ofFloat(target,"alpha",0,1),ObjectAnimator.ofFloat(target,"translationY",distance,0));
+}

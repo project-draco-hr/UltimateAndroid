@@ -1,0 +1,5 @@
+{
+  if (scrollViewMenu != null && scrollViewMenu.getParent() == null) {
+    addView(scrollViewMenu);
+  }
+}

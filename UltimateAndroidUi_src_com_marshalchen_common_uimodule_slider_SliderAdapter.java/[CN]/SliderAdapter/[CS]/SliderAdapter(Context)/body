@@ -1,0 +1,4 @@
+{
+  mContext=context;
+  mImageContents=new ArrayList<BaseSliderView>();
+}

@@ -1,0 +1,4 @@
+{
+  super.onListItemClick(listView,view,position,id);
+  mCallbacks.onItemSelected(DemoItem.ITEMS.get(position).id);
+}

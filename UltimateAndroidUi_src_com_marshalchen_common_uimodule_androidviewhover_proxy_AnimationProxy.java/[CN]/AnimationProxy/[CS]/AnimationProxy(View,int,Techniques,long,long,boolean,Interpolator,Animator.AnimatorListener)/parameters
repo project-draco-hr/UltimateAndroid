@@ -1,0 +1,8 @@
+View hoverView
+int resId
+Techniques technique
+long duration
+long delay
+boolean invisibleWhenDelaying
+Interpolator interpolator
+Animator.AnimatorListener listeners

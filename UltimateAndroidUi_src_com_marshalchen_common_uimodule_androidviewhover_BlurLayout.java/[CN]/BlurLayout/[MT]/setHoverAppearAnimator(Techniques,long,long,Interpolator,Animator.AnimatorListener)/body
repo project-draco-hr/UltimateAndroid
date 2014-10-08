@@ -1,0 +1,7 @@
+{
+  mHoverAppearAnimator=null;
+  mHoverAppearAnimationComposer=YoYo.with(technique).delay(delay).duration(duration).interpolate(interpolator);
+  for (  Animator.AnimatorListener l : listeners)   mHoverAppearAnimationComposer.withListener(l);
+  mHoverAppearAnimationComposer.withListener(mGlobalListener);
+  mHoverAppearAnimationComposer.withListener(mGlobalAppearingAnimators);
+}

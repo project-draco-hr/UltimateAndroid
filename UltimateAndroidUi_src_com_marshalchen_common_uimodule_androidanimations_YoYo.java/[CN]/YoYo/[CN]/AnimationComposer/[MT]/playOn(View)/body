@@ -1,0 +1,4 @@
+{
+  this.target=target;
+  return new YoYoString(new YoYo(this).play(),this.target);
+}

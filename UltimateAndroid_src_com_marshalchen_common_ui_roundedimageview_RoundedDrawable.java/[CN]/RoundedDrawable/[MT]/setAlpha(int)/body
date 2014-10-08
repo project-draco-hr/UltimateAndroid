@@ -1,0 +1,4 @@
+{
+  mBitmapPaint.setAlpha(alpha);
+  invalidateSelf();
+}

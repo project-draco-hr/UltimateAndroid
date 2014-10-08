@@ -1,0 +1,3 @@
+{
+  return ((SwipeAdapterInterface)(mAdapter)).getSwipeLayoutResourceId(position);
+}

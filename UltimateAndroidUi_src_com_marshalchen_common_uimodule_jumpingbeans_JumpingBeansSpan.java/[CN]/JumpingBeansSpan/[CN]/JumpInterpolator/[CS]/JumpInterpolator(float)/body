@@ -1,0 +1,3 @@
+{
+  animRange=Math.abs(animatedRange);
+}

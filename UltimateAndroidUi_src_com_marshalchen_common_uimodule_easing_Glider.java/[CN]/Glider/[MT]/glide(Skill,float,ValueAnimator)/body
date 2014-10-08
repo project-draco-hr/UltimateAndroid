@@ -1,0 +1,3 @@
+{
+  return Glider.glide(skill,duration,animator,null);
+}

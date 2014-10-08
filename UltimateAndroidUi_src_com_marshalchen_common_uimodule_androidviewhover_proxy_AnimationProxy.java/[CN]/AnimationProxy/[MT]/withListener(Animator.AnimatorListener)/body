@@ -1,0 +1,4 @@
+{
+  if (composer != null)   composer.withListener(l);
+  if (animator != null)   animator.addListener(l);
+}

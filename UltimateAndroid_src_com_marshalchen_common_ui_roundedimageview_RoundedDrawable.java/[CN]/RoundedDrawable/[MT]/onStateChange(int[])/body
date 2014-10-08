@@ -1,0 +1,10 @@
+{
+  int newColor=mBorderColor.getColorForState(state,0);
+  if (mBorderPaint.getColor() != newColor) {
+    mBorderPaint.setColor(newColor);
+    return true;
+  }
+ else {
+    return super.onStateChange(state);
+  }
+}

@@ -1,0 +1,5 @@
+{
+  long current=System.currentTimeMillis();
+  if (current - startTime <= delay)   return true;
+ else   return false;
+}

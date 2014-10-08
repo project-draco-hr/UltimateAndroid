@@ -1,0 +1,4 @@
+{
+  if (duration < 100)   throw new IllegalArgumentException("Duration can not be set to less than 100");
+  DURATION=duration;
+}

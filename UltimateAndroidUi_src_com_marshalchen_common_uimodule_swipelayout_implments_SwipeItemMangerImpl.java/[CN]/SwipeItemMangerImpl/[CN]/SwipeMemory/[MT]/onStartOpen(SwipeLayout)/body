@@ -1,0 +1,5 @@
+{
+  if (mode == Mode.Single) {
+    closeAllExcept(layout);
+  }
+}

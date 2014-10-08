@@ -1,0 +1,4 @@
+{
+  if (getRealAdapter() == null)   throw new IllegalStateException("You did not set a slider adapter");
+  return mViewPager.getCurrentItem() % getRealAdapter().getCount();
+}

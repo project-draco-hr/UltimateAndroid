@@ -1,0 +1,4 @@
+{
+  mDescription=description;
+  return this;
+}

@@ -1,0 +1,36 @@
+{
+  if (!mIsFoldPrepared || mFoldFactor == 0) {
+    super.dispatchDraw(canvas);
+    return;
+  }
+  if (!mShouldDraw) {
+    return;
+  }
+  Rect src;
+  for (int x=0; x < mNumberOfFolds; x++) {
+    src=mFoldRectArray[x];
+    canvas.save();
+    canvas.concat(mMatrix[x]);
+    canvas.clipRect(0,0,src.right - src.left,src.bottom - src.top);
+    if (mIsHorizontal) {
+      canvas.translate(-src.left,0);
+    }
+ else {
+      canvas.translate(0,-src.top);
+    }
+    super.dispatchDraw(canvas);
+    if (mIsHorizontal) {
+      canvas.translate(src.left,0);
+    }
+ else {
+      canvas.translate(0,src.top);
+    }
+    if (x % 2 == 0) {
+      canvas.drawRect(0,0,mFoldDrawWidth,mFoldDrawHeight,mSolidShadow);
+    }
+ else {
+      canvas.drawRect(0,0,mFoldDrawWidth,mFoldDrawHeight,mGradientShadow);
+    }
+    canvas.restore();
+  }
+}

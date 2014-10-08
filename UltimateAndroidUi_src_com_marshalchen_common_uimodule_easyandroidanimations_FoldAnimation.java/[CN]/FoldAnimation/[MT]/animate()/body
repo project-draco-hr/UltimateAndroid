@@ -1,0 +1,31 @@
+{
+  final ViewGroup parentView=(ViewGroup)view.getParent();
+  final int positionView=parentView.indexOfChild(view);
+  final FoldLayout mFoldLayout=new FoldLayout(view.getContext());
+  mFoldLayout.setLayoutParams(new LayoutParams(view.getWidth(),view.getHeight()));
+  mFoldLayout.setX(view.getLeft());
+  mFoldLayout.setY(view.getTop());
+  parentView.removeView(view);
+  parentView.addView(mFoldLayout,positionView);
+  mFoldLayout.addView(view);
+  view.setPadding(ANTIALIAS_PADDING,ANTIALIAS_PADDING,ANTIALIAS_PADDING,ANTIALIAS_PADDING);
+  mFoldLayout.setNumberOfFolds(numOfFolds);
+  mFoldLayout.setOrientation(orientation);
+  mFoldLayout.setAnchorFactor(anchorFactor);
+  ObjectAnimator foldAnim=ObjectAnimator.ofFloat(mFoldLayout,"foldFactor",0,1);
+  foldAnim.setDuration(duration);
+  foldAnim.setInterpolator(interpolator);
+  foldAnim.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      view.setVisibility(View.INVISIBLE);
+      mFoldLayout.removeAllViews();
+      parentView.removeView(mFoldLayout);
+      parentView.addView(view,positionView);
+      if (getListener() != null) {
+        getListener().onAnimationEnd(FoldAnimation.this);
+      }
+    }
+  }
+);
+  foldAnim.start();
+}

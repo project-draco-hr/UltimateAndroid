@@ -1,0 +1,49 @@
+{
+  int y=(mRowHeight + MINI_DAY_NUMBER_TEXT_SIZE) / 2 - DAY_SEPARATOR_WIDTH + MONTH_HEADER_SIZE;
+  int paddingDay=(mWidth - 2 * mPadding) / (2 * mNumDays);
+  int dayOffset=findDayOffset();
+  int day=1;
+  while (day <= mNumCells) {
+    int x=paddingDay * (1 + dayOffset * 2) + mPadding;
+    if ((mMonth == mSelectedBeginMonth && mSelectedBeginDay == day && mSelectedBeginYear == mYear) || (mMonth == mSelectedLastMonth && mSelectedLastDay == day && mSelectedLastYear == mYear)) {
+      if (mDrawRect) {
+        RectF rectF=new RectF(x - DAY_SELECTED_CIRCLE_SIZE,(y - MINI_DAY_NUMBER_TEXT_SIZE / 3) - DAY_SELECTED_CIRCLE_SIZE,x + DAY_SELECTED_CIRCLE_SIZE,(y - MINI_DAY_NUMBER_TEXT_SIZE / 3) + DAY_SELECTED_CIRCLE_SIZE);
+        canvas.drawRoundRect(rectF,10.0f,10.0f,mSelectedCirclePaint);
+      }
+ else       canvas.drawCircle(x,y - MINI_DAY_NUMBER_TEXT_SIZE / 3,DAY_SELECTED_CIRCLE_SIZE,mSelectedCirclePaint);
+    }
+    if (mHasToday && (mToday == day)) {
+      mMonthNumPaint.setColor(mCurrentDayTextColor);
+      mMonthNumPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+    }
+ else {
+      mMonthNumPaint.setColor(mDayNumColor);
+      mMonthNumPaint.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+    }
+    if ((mMonth == mSelectedBeginMonth && mSelectedBeginDay == day && mSelectedBeginYear == mYear) || (mMonth == mSelectedLastMonth && mSelectedLastDay == day && mSelectedLastYear == mYear))     mMonthNumPaint.setColor(mMonthTitleBGColor);
+    if ((mSelectedBeginDay != -1 && mSelectedLastDay != -1 && mSelectedBeginYear == mSelectedLastYear && mSelectedBeginMonth == mSelectedLastMonth && mSelectedBeginDay == mSelectedLastDay && day == mSelectedBeginDay && mMonth == mSelectedBeginMonth && mYear == mSelectedBeginYear))     mMonthNumPaint.setColor(mSelectedDaysColor);
+    if ((mSelectedBeginDay != -1 && mSelectedLastDay != -1 && mSelectedBeginYear == mSelectedLastYear && mSelectedBeginYear == mYear) && (((mMonth == mSelectedBeginMonth && mSelectedLastMonth == mSelectedBeginMonth) && ((mSelectedBeginDay < mSelectedLastDay && day > mSelectedBeginDay && day < mSelectedLastDay) || (mSelectedBeginDay > mSelectedLastDay && day < mSelectedBeginDay && day > mSelectedLastDay))) || ((mSelectedBeginMonth < mSelectedLastMonth && mMonth == mSelectedBeginMonth && day > mSelectedBeginDay) || (mSelectedBeginMonth < mSelectedLastMonth && mMonth == mSelectedLastMonth && day < mSelectedLastDay)) || ((mSelectedBeginMonth > mSelectedLastMonth && mMonth == mSelectedBeginMonth && day < mSelectedBeginDay) || (mSelectedBeginMonth > mSelectedLastMonth && mMonth == mSelectedLastMonth && day > mSelectedLastDay)))) {
+      mMonthNumPaint.setColor(mSelectedDaysColor);
+    }
+    if ((mSelectedBeginDay != -1 && mSelectedLastDay != -1 && mSelectedBeginYear != mSelectedLastYear && ((mSelectedBeginYear == mYear && mMonth == mSelectedBeginMonth) || (mSelectedLastYear == mYear && mMonth == mSelectedLastMonth)) && (((mSelectedBeginMonth < mSelectedLastMonth && mMonth == mSelectedBeginMonth && day < mSelectedBeginDay) || (mSelectedBeginMonth < mSelectedLastMonth && mMonth == mSelectedLastMonth && day > mSelectedLastDay)) || ((mSelectedBeginMonth > mSelectedLastMonth && mMonth == mSelectedBeginMonth && day > mSelectedBeginDay) || (mSelectedBeginMonth > mSelectedLastMonth && mMonth == mSelectedLastMonth && day < mSelectedLastDay))))) {
+      mMonthNumPaint.setColor(mSelectedDaysColor);
+    }
+    if ((mSelectedBeginDay != -1 && mSelectedLastDay != -1 && mSelectedBeginYear == mSelectedLastYear && mYear == mSelectedBeginYear) && ((mMonth > mSelectedBeginMonth && mMonth < mSelectedLastMonth && mSelectedBeginMonth < mSelectedLastMonth) || (mMonth < mSelectedBeginMonth && mMonth > mSelectedLastMonth && mSelectedBeginMonth > mSelectedLastMonth))) {
+      mMonthNumPaint.setColor(mSelectedDaysColor);
+    }
+    if ((mSelectedBeginDay != -1 && mSelectedLastDay != -1 && mSelectedBeginYear != mSelectedLastYear) && ((mSelectedBeginYear < mSelectedLastYear && ((mMonth > mSelectedBeginMonth && mYear == mSelectedBeginYear) || (mMonth < mSelectedLastMonth && mYear == mSelectedLastYear))) || (mSelectedBeginYear > mSelectedLastYear && ((mMonth < mSelectedBeginMonth && mYear == mSelectedBeginYear) || (mMonth > mSelectedLastMonth && mYear == mSelectedLastYear))))) {
+      mMonthNumPaint.setColor(mSelectedDaysColor);
+    }
+    if (!isPrevDayEnabled && prevDay(day,today) && today.month == mMonth && today.year == mYear) {
+      mMonthNumPaint.setColor(mPreviousDayColor);
+      mMonthNumPaint.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
+    }
+    canvas.drawText(String.format("%d",day),x,y,mMonthNumPaint);
+    dayOffset++;
+    if (dayOffset == mNumDays) {
+      dayOffset=0;
+      y+=mRowHeight;
+    }
+    day++;
+  }
+}

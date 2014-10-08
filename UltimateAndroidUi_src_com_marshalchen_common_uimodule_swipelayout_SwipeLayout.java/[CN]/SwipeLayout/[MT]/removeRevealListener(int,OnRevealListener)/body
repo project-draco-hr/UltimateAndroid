@@ -1,0 +1,6 @@
+{
+  View child=findViewById(childId);
+  if (child == null)   return;
+  mShowEntirely.remove(child);
+  if (mRevealListeners.containsKey(child))   mRevealListeners.get(child).remove(l);
+}

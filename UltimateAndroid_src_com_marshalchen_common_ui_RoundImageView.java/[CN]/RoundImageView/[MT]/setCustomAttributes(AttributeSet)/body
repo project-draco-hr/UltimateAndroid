@@ -1,7 +1,0 @@
-{
-  TypedArray a=mContext.obtainStyledAttributes(attrs,R.styleable.roundedimageview);
-  mBorderThickness=a.getDimensionPixelSize(R.styleable.roundedimageview_border_thickness,0);
-  mBorderColor=a.getColor(R.styleable.roundedimageview_border_color,defaultColor);
-  mBorderColorPressed=a.getColor(R.styleable.roundedimageview_border_color_pressed,defaultColor);
-  defaultDrawable=a.getDrawable(R.styleable.roundedimageview_border_default_image_resource);
-}

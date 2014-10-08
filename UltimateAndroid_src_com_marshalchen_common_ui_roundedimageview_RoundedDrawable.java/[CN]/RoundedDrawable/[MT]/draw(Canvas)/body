@@ -1,0 +1,20 @@
+{
+  if (mOval) {
+    if (mBorderWidth > 0) {
+      canvas.drawOval(mDrawableRect,mBitmapPaint);
+      canvas.drawOval(mBorderRect,mBorderPaint);
+    }
+ else {
+      canvas.drawOval(mDrawableRect,mBitmapPaint);
+    }
+  }
+ else {
+    if (mBorderWidth > 0) {
+      canvas.drawRoundRect(mDrawableRect,Math.max(mCornerRadius,0),Math.max(mCornerRadius,0),mBitmapPaint);
+      canvas.drawRoundRect(mBorderRect,mCornerRadius,mCornerRadius,mBorderPaint);
+    }
+ else {
+      canvas.drawRoundRect(mDrawableRect,mCornerRadius,mCornerRadius,mBitmapPaint);
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  if (BasicUtils.judgeNotNull(filePath)) {
+  if (isFileExist(filePath)) {
     return filePath;
   }
   int extenPosi=filePath.lastIndexOf(FILE_EXTENSION_SEPARATOR);

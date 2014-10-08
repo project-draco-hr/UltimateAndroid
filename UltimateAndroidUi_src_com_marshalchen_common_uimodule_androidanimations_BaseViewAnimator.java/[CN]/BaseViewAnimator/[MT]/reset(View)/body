@@ -1,0 +1,12 @@
+{
+  ViewHelper.setAlpha(target,1);
+  ViewHelper.setScaleX(target,1);
+  ViewHelper.setScaleY(target,1);
+  ViewHelper.setTranslationX(target,0);
+  ViewHelper.setTranslationY(target,0);
+  ViewHelper.setRotation(target,0);
+  ViewHelper.setRotationY(target,0);
+  ViewHelper.setRotationX(target,0);
+  ViewHelper.setPivotX(target,target.getMeasuredWidth() / 2.0f);
+  ViewHelper.setPivotY(target,target.getMeasuredHeight() / 2.0f);
+}

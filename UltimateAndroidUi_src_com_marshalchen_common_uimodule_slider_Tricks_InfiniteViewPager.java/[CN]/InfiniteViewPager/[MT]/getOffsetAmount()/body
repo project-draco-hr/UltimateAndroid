@@ -1,0 +1,9 @@
+{
+  if (getAdapter() instanceof InfinitePagerAdapter) {
+    InfinitePagerAdapter infAdapter=(InfinitePagerAdapter)getAdapter();
+    return infAdapter.getRealCount() * 100;
+  }
+ else {
+    return 0;
+  }
+}

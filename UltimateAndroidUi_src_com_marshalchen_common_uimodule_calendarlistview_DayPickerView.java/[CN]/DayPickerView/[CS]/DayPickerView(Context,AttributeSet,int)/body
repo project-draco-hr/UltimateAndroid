@@ -1,0 +1,8 @@
+{
+  super(context,attrs,defStyle);
+  this.attrs=attrs;
+  typedArray=context.obtainStyledAttributes(attrs,R.styleable.DayPickerView);
+  setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+  setDrawSelectorOnTop(false);
+  init(context);
+}

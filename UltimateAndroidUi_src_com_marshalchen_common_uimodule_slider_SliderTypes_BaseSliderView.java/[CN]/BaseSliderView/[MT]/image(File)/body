@@ -1,0 +1,7 @@
+{
+  if (mUrl != null || mRes != 0) {
+    throw new IllegalStateException("Call multi image function," + "you only have permission to call it once");
+  }
+  mFile=file;
+  return this;
+}

@@ -1,0 +1,4 @@
+{
+  mNumRows=DEFAULT_NUM_ROWS;
+  requestLayout();
+}
