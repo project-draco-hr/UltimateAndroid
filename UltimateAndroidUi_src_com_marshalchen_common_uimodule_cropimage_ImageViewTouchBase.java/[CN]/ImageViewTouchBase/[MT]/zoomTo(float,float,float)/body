@@ -1,0 +1,10 @@
+{
+  if (scale > maxZoom) {
+    scale=maxZoom;
+  }
+  float oldScale=getScale();
+  float deltaScale=scale / oldScale;
+  suppMatrix.postScale(deltaScale,deltaScale,centerX,centerY);
+  setImageMatrix(getImageViewMatrix());
+  center(true,true);
+}

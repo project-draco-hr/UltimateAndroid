@@ -1,0 +1,3 @@
+{
+  android.util.Log.e(TAG,msg);
+}

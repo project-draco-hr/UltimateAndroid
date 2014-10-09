@@ -1,0 +1,3 @@
+{
+  setResult(RESULT_OK,new Intent().putExtra(MediaStore.EXTRA_OUTPUT,uri));
+}

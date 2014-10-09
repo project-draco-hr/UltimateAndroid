@@ -1,0 +1,13 @@
+{
+  super.setImageBitmap(bitmap);
+  Drawable d=getDrawable();
+  if (d != null) {
+    d.setDither(true);
+  }
+  Bitmap old=bitmapDisplayed.getBitmap();
+  bitmapDisplayed.setBitmap(bitmap);
+  bitmapDisplayed.setRotation(rotation);
+  if (old != null && old != bitmap && recycler != null) {
+    recycler.recycle(old);
+  }
+}

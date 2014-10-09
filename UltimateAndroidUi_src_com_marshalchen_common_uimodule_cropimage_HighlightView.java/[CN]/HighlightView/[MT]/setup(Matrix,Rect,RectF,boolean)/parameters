@@ -1,0 +1,4 @@
+Matrix m
+Rect imageRect
+RectF cropRect
+boolean maintainAspectRatio
