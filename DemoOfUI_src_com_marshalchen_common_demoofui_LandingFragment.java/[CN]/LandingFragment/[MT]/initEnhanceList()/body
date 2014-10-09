@@ -359,6 +359,11 @@
   map.put("detail","try");
   map.put("subname","TestHtml5Video");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","CropImage");
+  map.put("detail","try");
+  map.put("subname","CropImage");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -590,6 +595,9 @@ BasicUtils.sendIntent(getActivity(),ImageProcessingVideotoImageActivity.class);
 break;
 case 71:
 BasicUtils.sendIntent(getActivity(),TestHTML5WebView.class);
+break;
+case 72:
+BasicUtils.sendIntent(getActivity(),CropExample.class);
 break;
 }
 }
