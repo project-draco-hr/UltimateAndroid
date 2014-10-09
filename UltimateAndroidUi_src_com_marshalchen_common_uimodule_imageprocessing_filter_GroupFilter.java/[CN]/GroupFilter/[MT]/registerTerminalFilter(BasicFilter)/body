@@ -1,0 +1,4 @@
+{
+  terminalFilters.add(filter);
+  registerFilter(filter);
+}

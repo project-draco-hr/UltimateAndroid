@@ -1,0 +1,4 @@
+{
+  this.fractionalWidth=fractionalWidth;
+  this.aspectRatio=aspectRatio;
+}

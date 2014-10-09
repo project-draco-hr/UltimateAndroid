@@ -1,0 +1,11 @@
+{
+  if (!initialized) {
+    initWithGLContext();
+    initialized=true;
+  }
+  if (sizeChanged) {
+    handleSizeChange();
+    sizeChanged=false;
+  }
+  drawFrame();
+}

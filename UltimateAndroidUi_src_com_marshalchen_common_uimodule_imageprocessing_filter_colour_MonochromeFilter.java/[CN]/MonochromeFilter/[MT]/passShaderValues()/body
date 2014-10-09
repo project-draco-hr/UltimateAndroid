@@ -1,0 +1,5 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(intensityHandle,intensity);
+  GLES20.glUniform3f(colourHandle,colour[0],colour[1],colour[2]);
+}

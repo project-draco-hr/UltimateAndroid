@@ -1,0 +1,13 @@
+{
+  if (getCurrentPass() == 1) {
+    texelWidth=1.0f / (float)getWidth();
+    texelHeight=0f;
+  }
+ else {
+    texelWidth=0f;
+    texelHeight=1.0f / (float)getHeight();
+  }
+  super.passShaderValues();
+  GLES20.glUniform1f(texelWidthHandle,texelWidth);
+  GLES20.glUniform1f(texelHeightHandle,texelHeight);
+}

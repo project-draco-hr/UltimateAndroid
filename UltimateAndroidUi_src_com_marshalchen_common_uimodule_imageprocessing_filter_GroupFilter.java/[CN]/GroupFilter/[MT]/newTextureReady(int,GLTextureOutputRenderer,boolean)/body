@@ -1,0 +1,16 @@
+{
+  if (terminalFilters.contains(source)) {
+    setWidth(source.getWidth());
+    setHeight(source.getHeight());
+synchronized (getLockObject()) {
+      for (      GLTextureInputRenderer target : getTargets()) {
+        target.newTextureReady(texture,this,newData);
+      }
+    }
+  }
+ else {
+    for (    BasicFilter initialFilter : initialFilters) {
+      initialFilter.newTextureReady(texture,source,newData);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  this.colorMatrix=colorMatrix;
+  if (intensity < 0) {
+    intensity=0;
+  }
+  if (intensity > 1) {
+    intensity=1;
+  }
+  this.intensity=intensity;
+}

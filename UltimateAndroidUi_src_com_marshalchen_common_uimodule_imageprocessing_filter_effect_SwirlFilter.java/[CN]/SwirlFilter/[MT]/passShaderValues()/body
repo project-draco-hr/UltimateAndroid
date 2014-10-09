@@ -1,0 +1,6 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform2f(centerHandle,center.x,center.y);
+  GLES20.glUniform1f(radiusHandle,radius);
+  GLES20.glUniform1f(angleHandle,angle);
+}

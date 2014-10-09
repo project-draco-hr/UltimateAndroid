@@ -1,0 +1,10 @@
+{
+  super(2);
+  this.topFocusLevel=topFocusLevel;
+  this.bottomFocusLevel=bottomFocusLevel;
+  this.focusFallOffRate=focusFallOffRate;
+  blur=new GaussianBlurFilter(blurSize);
+  blur.addTarget(this);
+  registerInitialFilter(blur);
+  registerTerminalFilter(blur);
+}

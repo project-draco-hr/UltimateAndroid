@@ -1,0 +1,6 @@
+{
+  if (!customSizeSet && this.height != height) {
+    this.height=height;
+    sizeChanged=true;
+  }
+}

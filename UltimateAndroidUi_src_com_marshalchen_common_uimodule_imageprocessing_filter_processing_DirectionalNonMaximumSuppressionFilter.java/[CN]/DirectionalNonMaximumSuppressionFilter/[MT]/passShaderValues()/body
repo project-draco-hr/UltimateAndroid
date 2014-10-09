@@ -1,0 +1,5 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(upperThresholdHandle,upperThreshold);
+  GLES20.glUniform1f(lowerThresholdHandle,lowerThreshold);
+}

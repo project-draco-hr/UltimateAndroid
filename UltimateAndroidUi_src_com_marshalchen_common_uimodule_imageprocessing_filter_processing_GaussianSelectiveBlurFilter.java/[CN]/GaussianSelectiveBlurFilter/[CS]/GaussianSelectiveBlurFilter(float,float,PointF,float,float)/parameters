@@ -1,0 +1,5 @@
+float blurSize
+float aspectRatio
+PointF excludedCirclePoint
+float excludedCircleRadius
+float excludedBlurSize

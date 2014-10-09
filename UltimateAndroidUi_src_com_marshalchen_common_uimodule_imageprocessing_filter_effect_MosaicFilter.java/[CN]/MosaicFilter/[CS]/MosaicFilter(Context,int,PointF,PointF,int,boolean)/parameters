@@ -1,0 +1,6 @@
+Context context
+int id
+PointF inputTileSize
+PointF displayTileSize
+int numOfTiles
+boolean color
