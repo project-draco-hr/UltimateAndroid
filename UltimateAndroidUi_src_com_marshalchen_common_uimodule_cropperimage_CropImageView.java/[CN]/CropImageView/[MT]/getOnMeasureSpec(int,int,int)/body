@@ -1,0 +1,13 @@
+{
+  int spec;
+  if (measureSpecMode == MeasureSpec.EXACTLY) {
+    spec=measureSpecSize;
+  }
+ else   if (measureSpecMode == MeasureSpec.AT_MOST) {
+    spec=Math.min(desiredSize,measureSpecSize);
+  }
+ else {
+    spec=desiredSize;
+  }
+  return spec;
+}

@@ -1,0 +1,10 @@
+{
+  final float left=Edge.LEFT.getCoordinate();
+  final float top=Edge.TOP.getCoordinate();
+  final float right=Edge.RIGHT.getCoordinate();
+  final float bottom=Edge.BOTTOM.getCoordinate();
+  canvas.drawRect(bitmapRect.left,bitmapRect.top,bitmapRect.right,top,mBackgroundPaint);
+  canvas.drawRect(bitmapRect.left,bottom,bitmapRect.right,bitmapRect.bottom,mBackgroundPaint);
+  canvas.drawRect(bitmapRect.left,top,left,bottom,mBackgroundPaint);
+  canvas.drawRect(right,top,bitmapRect.right,bottom,mBackgroundPaint);
+}
