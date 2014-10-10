@@ -1,0 +1,7 @@
+{
+  if (getContext() == null || mSensorManager != null)   return;
+  mSensorManager=(SensorManager)getContext().getSystemService(Context.SENSOR_SERVICE);
+  if (mSensorManager != null) {
+    mSensorManager.registerListener(this,mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),SensorManager.SENSOR_DELAY_FASTEST);
+  }
+}
