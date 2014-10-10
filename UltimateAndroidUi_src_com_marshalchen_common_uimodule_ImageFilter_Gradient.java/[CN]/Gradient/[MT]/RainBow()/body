@@ -1,0 +1,11 @@
+{
+  List<Integer> colors=new ArrayList<Integer>();
+  colors.add(Color.RED);
+  colors.add(Color.MAGENTA);
+  colors.add(Color.BLUE);
+  colors.add(Color.CYAN);
+  colors.add(Color.GREEN);
+  colors.add(Color.YELLOW);
+  colors.add(Color.RED);
+  return new Gradient(colors);
+}

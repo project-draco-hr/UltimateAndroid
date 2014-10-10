@@ -1,0 +1,13 @@
+{
+  int xInt=(int)x;
+  int yInt=(int)y;
+  double xFrac=x - xInt;
+  double yFrac=y - yInt;
+  double x0y0=Noise(xInt,yInt);
+  double x1y0=Noise(xInt + 1,yInt);
+  double x0y1=Noise(xInt,yInt + 1);
+  double x1y1=Noise(xInt + 1,yInt + 1);
+  double v1=CosineInterpolate(x0y0,x1y0,xFrac);
+  double v2=CosineInterpolate(x0y1,x1y1,xFrac);
+  return CosineInterpolate(v1,v2,yFrac);
+}

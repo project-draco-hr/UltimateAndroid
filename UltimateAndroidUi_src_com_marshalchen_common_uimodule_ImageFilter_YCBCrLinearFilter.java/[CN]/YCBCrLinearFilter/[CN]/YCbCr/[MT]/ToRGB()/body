@@ -1,0 +1,5 @@
+{
+  MyColor rgb=new MyColor();
+  ToRGB(this,rgb);
+  return rgb;
+}

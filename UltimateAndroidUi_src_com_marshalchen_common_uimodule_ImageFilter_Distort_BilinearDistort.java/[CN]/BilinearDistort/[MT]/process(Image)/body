@@ -1,0 +1,29 @@
+{
+  clone=imageIn.clone();
+  int width=imageIn.getWidth();
+  int height=imageIn.getHeight();
+  for (int x=0; x < width; x++) {
+    for (int y=0; y < height; y++) {
+      double un_x=0, un_y=0;
+      double[] result=calc_undistorted_coord(x,y,un_x,un_y);
+      un_x=result[0];
+      un_y=result[1];
+      int crNull=Color.WHITE;
+      int cr=crNull;
+      if ((un_x > -1) && (un_x < width) && (un_y > -1)&& (un_y < height)) {
+        int nSrcX=((un_x < 0) ? -1 : (int)un_x);
+        int nSrcY=((un_y < 0) ? -1 : (int)un_y);
+        int nSrcX_1=nSrcX + 1;
+        int nSrcY_1=nSrcY + 1;
+        int[] color=new int[4];
+        color[0]=IsInside(width,height,nSrcX,nSrcY) ? clone.getPixelColor(nSrcX,nSrcY) : crNull;
+        color[1]=IsInside(width,height,nSrcX_1,nSrcY) ? clone.getPixelColor(nSrcX_1,nSrcY) : crNull;
+        color[2]=IsInside(width,height,nSrcX,nSrcY_1) ? clone.getPixelColor(nSrcX,nSrcY_1) : crNull;
+        color[3]=IsInside(width,height,nSrcX_1,nSrcY_1) ? clone.getPixelColor(nSrcX_1,nSrcY_1) : crNull;
+        cr=GetBilinear(un_x - nSrcX,un_y - nSrcY,color);
+      }
+      imageIn.setPixelColor(x,y,cr);
+    }
+  }
+  return imageIn;
+}

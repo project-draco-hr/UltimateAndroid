@@ -1,0 +1,4 @@
+{
+  this.Map=gradient;
+  this.BrightnessFactor=this.ContrastFactor=0f;
+}

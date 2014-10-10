@@ -1,0 +1,7 @@
+{
+  gradient=new GradientFilter();
+  gradient.Gradient=Gradient.Fade();
+  gradient.OriginAngleDegree=angle;
+  saturationFx=new SaturationModifyFilter();
+  saturationFx.SaturationFactor=-0.6f;
+}

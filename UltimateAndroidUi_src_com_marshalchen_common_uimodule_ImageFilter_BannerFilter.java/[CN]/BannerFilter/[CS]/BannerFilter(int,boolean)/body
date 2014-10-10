@@ -1,0 +1,4 @@
+{
+  BannerNum=bannerNum;
+  IsHorizontal=isHorizontal;
+}

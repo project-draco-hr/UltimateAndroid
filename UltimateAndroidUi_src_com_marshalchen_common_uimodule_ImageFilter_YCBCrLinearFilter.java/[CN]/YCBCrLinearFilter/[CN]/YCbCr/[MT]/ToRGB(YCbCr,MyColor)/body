@@ -1,0 +1,9 @@
+{
+  float r=Math.max(0.0f,Math.min(1.0f,(float)(ycbcr.Y + 0.0000 * ycbcr.Cb + 1.4022 * ycbcr.Cr)));
+  float g=Math.max(0.0f,Math.min(1.0f,(float)(ycbcr.Y - 0.3456 * ycbcr.Cb - 0.7145 * ycbcr.Cr)));
+  float b=Math.max(0.0f,Math.min(1.0f,(float)(ycbcr.Y + 1.7710 * ycbcr.Cb + 0.0000 * ycbcr.Cr)));
+  rgb.R=(byte)(r * 255);
+  rgb.G=(byte)(g * 255);
+  rgb.B=(byte)(b * 255);
+  return rgb;
+}
