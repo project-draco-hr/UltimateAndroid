@@ -369,6 +369,11 @@
   map.put("detail","try");
   map.put("subname","CropperImage");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ImageFilter");
+  map.put("detail","try");
+  map.put("subname","ImageFilter");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -606,6 +611,9 @@ BasicUtils.sendIntent(getActivity(),CropExample.class);
 break;
 case 73:
 BasicUtils.sendIntent(getActivity(),CropperSample.class);
+break;
+case 74:
+BasicUtils.sendIntent(getActivity(),ImageFilterActivity.class);
 break;
 }
 }
