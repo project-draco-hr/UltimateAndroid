@@ -1,0 +1,5 @@
+{
+  super.onSaveInstanceState(bundle);
+  bundle.putInt(ASPECT_RATIO_X,mAspectRatioX);
+  bundle.putInt(ASPECT_RATIO_Y,mAspectRatioY);
+}

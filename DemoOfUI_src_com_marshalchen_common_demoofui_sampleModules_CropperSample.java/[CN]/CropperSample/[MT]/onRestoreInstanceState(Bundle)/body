@@ -1,0 +1,5 @@
+{
+  super.onRestoreInstanceState(bundle);
+  mAspectRatioX=bundle.getInt(ASPECT_RATIO_X);
+  mAspectRatioY=bundle.getInt(ASPECT_RATIO_Y);
+}
