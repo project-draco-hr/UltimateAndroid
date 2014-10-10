@@ -1,0 +1,6 @@
+{
+  this.s=s;
+  this.pos=pos;
+  n=s.length();
+  current=s.charAt(pos);
+}

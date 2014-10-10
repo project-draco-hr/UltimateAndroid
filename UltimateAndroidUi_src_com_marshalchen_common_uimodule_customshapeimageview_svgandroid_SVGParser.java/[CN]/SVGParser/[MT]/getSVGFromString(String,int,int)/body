@@ -1,0 +1,3 @@
+{
+  return SVGParser.parse(new ByteArrayInputStream(svgData.getBytes()),searchColor,replaceColor,false);
+}

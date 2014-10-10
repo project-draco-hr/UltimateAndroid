@@ -1,0 +1,3 @@
+{
+  return getBitmap(getWidth(),getHeight());
+}

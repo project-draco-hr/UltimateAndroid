@@ -1,0 +1,6 @@
+{
+  InputStream inputStream=assetMngr.open(svgPath);
+  SVG svg=getSVGFromInputStream(inputStream);
+  inputStream.close();
+  return svg;
+}
