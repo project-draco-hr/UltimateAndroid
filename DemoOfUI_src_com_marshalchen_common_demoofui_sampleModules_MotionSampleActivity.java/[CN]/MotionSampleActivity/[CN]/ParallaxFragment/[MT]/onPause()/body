@@ -1,0 +1,4 @@
+{
+  mBackground.unregisterSensorManager();
+  super.onPause();
+}
