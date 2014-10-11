@@ -1,0 +1,5 @@
+{
+  ViewGroup.LayoutParams lp=mTextField.getLayoutParams();
+  lp.width=2000;
+  mTextField.setLayoutParams(lp);
+}
