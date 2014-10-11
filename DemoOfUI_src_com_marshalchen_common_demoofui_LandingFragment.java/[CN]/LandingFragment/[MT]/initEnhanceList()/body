@@ -399,6 +399,11 @@
   map.put("detail","try");
   map.put("subname","SignaturePad");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","DrawView");
+  map.put("detail","try");
+  map.put("subname","DrawviewActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -654,6 +659,9 @@ BasicUtils.sendIntent(getActivity(),MarqueeViewSample.class);
 break;
 case 79:
 BasicUtils.sendIntent(getActivity(),SignaturePadActivity.class);
+break;
+case 80:
+BasicUtils.sendIntent(getActivity(),DrawableActivity.class);
 break;
 }
 }
