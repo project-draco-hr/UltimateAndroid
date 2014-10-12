@@ -1,0 +1,30 @@
+{
+  double[] sdA=secondDerivative(points);
+  int n=sdA.length;
+  if (n < 1) {
+    return null;
+  }
+  List<Point> output=new ArrayList<Point>(n + 1);
+  for (int i=0; i < n - 1; i++) {
+    Point cur=points[i];
+    Point next=points[(i + 1)];
+    for (int x=cur.x; x < (int)next.x; x++) {
+      double t=(double)(x - cur.x) / (next.x - cur.x);
+      double a=1 - t;
+      double b=t;
+      double h=next.x - cur.x;
+      double y=a * cur.y + b * next.y + (h * h / 6) * ((a * a * a - a) * sdA[i] + (b * b * b - b) * sdA[i + 1]);
+      if (y > 255.0) {
+        y=255.0;
+      }
+ else       if (y < 0.0) {
+        y=0.0;
+      }
+      output.add(new Point(x,(int)y));
+    }
+  }
+  if (output.size() == 255) {
+    output.add(points[points.length - 1]);
+  }
+  return output;
+}

@@ -1,0 +1,39 @@
+{
+  MyColor rgb=new MyColor();
+  YCbCr ycbcr=new YCbCr();
+  float ky=0, by=0;
+  float kcb=0, bcb=0;
+  float kcr=0, bcr=0;
+  if (inY.Max != inY.Min) {
+    ky=(outY.Max - outY.Min) / (inY.Max - inY.Min);
+    by=outY.Min - ky * inY.Min;
+  }
+  if (inCb.Max != inCb.Min) {
+    kcb=(outCb.Max - outCb.Min) / (inCb.Max - inCb.Min);
+    bcb=outCb.Min - kcb * inCb.Min;
+  }
+  if (inCr.Max != inCr.Min) {
+    kcr=(outCr.Max - outCr.Min) / (inCr.Max - inCr.Min);
+    bcr=outCr.Min - kcr * inCr.Min;
+  }
+  for (int x=0; x < imageIn.getWidth(); x++) {
+    for (int y=0; y < imageIn.getHeight(); y++) {
+      rgb.R=imageIn.getRComponent(x,y);
+      rgb.G=imageIn.getGComponent(x,y);
+      rgb.B=imageIn.getBComponent(x,y);
+      ycbcr=YCbCr.FromRGB(rgb,ycbcr);
+      if (ycbcr.Y >= inY.Max)       ycbcr.Y=outY.Max;
+ else       if (ycbcr.Y <= inY.Min)       ycbcr.Y=outY.Min;
+ else       ycbcr.Y=ky * ycbcr.Y + by;
+      if (ycbcr.Cb >= inCb.Max)       ycbcr.Cb=outCb.Max;
+ else       if (ycbcr.Cb <= inCb.Min)       ycbcr.Cb=outCb.Min;
+ else       ycbcr.Cb=kcb * ycbcr.Cb + bcb;
+      if (ycbcr.Cr >= inCr.Max)       ycbcr.Cr=outCr.Max;
+ else       if (ycbcr.Cr <= inCr.Min)       ycbcr.Cr=outCr.Min;
+ else       ycbcr.Cr=kcr * ycbcr.Cr + bcr;
+      rgb=YCbCr.ToRGB(ycbcr,rgb);
+      imageIn.setPixelColor(x,y,rgb.R,rgb.G,rgb.B);
+    }
+  }
+  return imageIn;
+}

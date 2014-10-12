@@ -1,0 +1,4 @@
+{
+  super.initShaderHandles();
+  blurSizeHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_BLUR_SIZE);
+}

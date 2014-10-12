@@ -1,0 +1,12 @@
+{
+  if ((x + stonesize) > width || (y + stonesize) > height || (x - stonesize) < 0 || (y - stonesize) < 0) {
+    return;
+  }
+  for (int posx=x - stonesize; posx < x + stonesize; posx++) {
+    for (int posy=y - stonesize; posy < y + stonesize; posy++) {
+      if ((posx - x) * (posx - x) + (posy - y) * (posy - y) <= stonesize * stonesize) {
+        buf1[width * posy + posx]=(short)-stoneweight;
+      }
+    }
+  }
+}

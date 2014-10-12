@@ -1,0 +1,6 @@
+{
+  if (!uniformVec3List.containsKey(name)) {
+    reInitialize();
+  }
+  uniformVec3List.put(name,value);
+}

@@ -1,0 +1,6 @@
+{
+  canvas.save();
+  canvas.concat(matrix);
+  canvas.drawPath(path,imagePaint);
+  canvas.restore();
+}

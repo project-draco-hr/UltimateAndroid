@@ -1,0 +1,4 @@
+{
+  super.onPreExecute();
+  textView.setVisibility(View.VISIBLE);
+}

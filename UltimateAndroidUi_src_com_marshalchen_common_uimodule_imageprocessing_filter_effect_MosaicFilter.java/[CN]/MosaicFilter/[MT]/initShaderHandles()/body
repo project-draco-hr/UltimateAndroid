@@ -1,0 +1,7 @@
+{
+  super.initShaderHandles();
+  inputTileSizeHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_INPUT_SIZE);
+  displayTileSizeHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_DISPLAY_SIZE);
+  numOfTilesHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_NUM_TILES);
+  colorHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_COLOR);
+}

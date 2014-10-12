@@ -1,0 +1,17 @@
+{
+  super.onLayout(changed,l,t,r,b);
+  if (getChildCount() == 0 || getChildCount() > 1) {
+    throw new RuntimeException("MarqueeView must have exactly one child element.");
+  }
+  if (changed) {
+    View v=getChildAt(0);
+    if (!(v instanceof TextView)) {
+      throw new RuntimeException("The child view of this MarqueeView must be a TextView instance.");
+    }
+    initView(getContext());
+    prepareAnimation();
+    if (mAutoStart) {
+      startMarquee();
+    }
+  }
+}

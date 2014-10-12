@@ -1,0 +1,12 @@
+{
+  super.onCreate(icicle);
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  setContentView(R.layout.crop__activity_crop);
+  initViews();
+  setupFromIntent();
+  if (rotateBitmap == null) {
+    finish();
+    return;
+  }
+  startCrop();
+}

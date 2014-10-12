@@ -1,0 +1,6 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(focusFallOffRateHandle,focusFallOffRate);
+  GLES20.glUniform1f(topFocusLevelHandle,topFocusLevel);
+  GLES20.glUniform1f(bottomFocusLevelHandle,bottomFocusLevel);
+}

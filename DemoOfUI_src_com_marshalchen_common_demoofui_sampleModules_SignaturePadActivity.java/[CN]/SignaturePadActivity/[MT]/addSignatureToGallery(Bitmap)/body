@@ -1,0 +1,16 @@
+{
+  boolean result=false;
+  try {
+    File photo=new File(getAlbumStorageDir("SignaturePad"),String.format("Signature_%d.jpg",System.currentTimeMillis()));
+    saveBitmapToJPG(signature,photo);
+    Intent mediaScanIntent=new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+    Uri contentUri=Uri.fromFile(photo);
+    mediaScanIntent.setData(contentUri);
+    sendBroadcast(mediaScanIntent);
+    result=true;
+  }
+ catch (  IOException e) {
+    e.printStackTrace();
+  }
+  return result;
+}

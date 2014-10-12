@@ -1,0 +1,7 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(blurSizeHandle,blurSize);
+  GLES20.glUniform1f(aspectRatioHandle,aspectRatio);
+  GLES20.glUniform1f(excludedCircleRadiusHandle,excludedCircleRadius);
+  GLES20.glUniform2f(excludedCirclePointHandle,excludedCirclePoint.x,excludedCirclePoint.y);
+}

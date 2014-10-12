@@ -1,0 +1,5 @@
+{
+  double procent=Math.abs((h - _shalo) / (_shalo * 0.07));
+  if (procent < 1)   color=fixpix(color,1 - procent,_halo);
+  return color;
+}

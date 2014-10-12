@@ -1,0 +1,49 @@
+{
+  if (handle == null) {
+    return null;
+  }
+  float touchOffsetX=0;
+  float touchOffsetY=0;
+switch (handle) {
+case TOP_LEFT:
+    touchOffsetX=left - x;
+  touchOffsetY=top - y;
+break;
+case TOP_RIGHT:
+touchOffsetX=right - x;
+touchOffsetY=top - y;
+break;
+case BOTTOM_LEFT:
+touchOffsetX=left - x;
+touchOffsetY=bottom - y;
+break;
+case BOTTOM_RIGHT:
+touchOffsetX=right - x;
+touchOffsetY=bottom - y;
+break;
+case LEFT:
+touchOffsetX=left - x;
+touchOffsetY=0;
+break;
+case TOP:
+touchOffsetX=0;
+touchOffsetY=top - y;
+break;
+case RIGHT:
+touchOffsetX=right - x;
+touchOffsetY=0;
+break;
+case BOTTOM:
+touchOffsetX=0;
+touchOffsetY=bottom - y;
+break;
+case CENTER:
+final float centerX=(right + left) / 2;
+final float centerY=(top + bottom) / 2;
+touchOffsetX=centerX - x;
+touchOffsetY=centerY - y;
+break;
+}
+final Pair<Float,Float> result=new Pair<Float,Float>(touchOffsetX,touchOffsetY);
+return result;
+}

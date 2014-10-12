@@ -1,0 +1,6 @@
+{
+  if (filterLocations.contains(filter)) {
+    filterLocations.remove(filter);
+  }
+  filterLocations.add(location,filter);
+}

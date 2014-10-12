@@ -1,0 +1,9 @@
+{
+  noisefx.Intensity=0.15f;
+  vignetteFx.Size=1f;
+  List<Integer> colors=new ArrayList<Integer>();
+  colors.add(Color.BLACK);
+  colors.add(Color.GREEN);
+  gradientFx.Map=new Gradient(colors);
+  gradientFx.BrightnessFactor=0.2f;
+}

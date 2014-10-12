@@ -1,0 +1,7 @@
+{
+  super(context,id);
+  this.inputTileSize=inputTileSize;
+  this.displayTileSize=displayTileSize;
+  this.numOfTiles=numOfTiles;
+  this.color=color;
+}

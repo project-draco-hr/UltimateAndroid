@@ -1,0 +1,4 @@
+Resources resources
+int resId
+int searchColor
+int replaceColor

@@ -1,0 +1,4 @@
+{
+  final float aspectRatio=(float)rect.width() / (float)rect.height();
+  return aspectRatio;
+}

@@ -1,0 +1,25 @@
+{
+  this.m_VideoType=nVideoType;
+switch (m_VideoType) {
+case 0:
+{
+      this.pattern=new int[]{0,1,0,2,1,2,1,0,2,0,2,1};
+      break;
+    }
+case 1:
+{
+    this.pattern=new int[]{0,1,2};
+    break;
+  }
+case 2:
+{
+  this.pattern=new int[]{0,1,2,2,0,1,1,2,0};
+  break;
+}
+default :
+{
+this.pattern=new int[]{0,1,2,0,0,1,1,1,2,0,0,1,2,2,2,0,0,1,2,0,0,1,1,1,2,2,0,1,2,2,0,0,0,1,2,2,0,1,1,1,2,2,0,1,2,2,0,0,0,1,1,2,0,1,1,2,2,2,0,1,1,2,0,0,0,1,1,2,0,1,1,2,2,2,0};
+break;
+}
+}
+}

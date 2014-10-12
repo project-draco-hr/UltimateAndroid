@@ -1,0 +1,7 @@
+{
+  amount=-amount;
+  _twist=amount * amount * ((amount > 0) ? 1 : -1);
+  _size=1.0 / (Function.FClamp(size,1,200) / 100.0);
+  _offsetX=Function.FClampDouble(offsetX,-2.0,2.0);
+  _offsetY=Function.FClampDouble(offsetY,-2.0,2.0);
+}

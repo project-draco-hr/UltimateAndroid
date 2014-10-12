@@ -1,0 +1,7 @@
+int bitmapWidth
+int bitmapHeight
+float width
+float height
+float scale
+float translateX
+float translateY

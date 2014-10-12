@@ -1,0 +1,3 @@
+{
+  return new SvgShader(R.raw.shape_imageview_imgview_heart,SvgShader.BORDER_TYPE_FILL);
+}

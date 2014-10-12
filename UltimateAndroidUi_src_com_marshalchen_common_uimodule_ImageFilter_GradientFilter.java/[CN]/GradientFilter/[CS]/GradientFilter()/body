@@ -1,0 +1,4 @@
+{
+  this.OriginAngleDegree=0f;
+  this.Gradient=new Gradient();
+}

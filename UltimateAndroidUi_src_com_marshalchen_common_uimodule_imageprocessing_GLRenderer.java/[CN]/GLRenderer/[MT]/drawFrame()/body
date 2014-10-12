@@ -1,0 +1,11 @@
+{
+  if (texture_in == 0) {
+    return;
+  }
+  GLES20.glViewport(0,0,width,height);
+  GLES20.glUseProgram(programHandle);
+  GLES20.glClear(GLES20.GL_DEPTH_BUFFER_BIT | GLES20.GL_COLOR_BUFFER_BIT);
+  GLES20.glClearColor(getBackgroundRed(),getBackgroundGreen(),getBackgroundBlue(),getBackgroundAlpha());
+  passShaderValues();
+  GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP,0,4);
+}

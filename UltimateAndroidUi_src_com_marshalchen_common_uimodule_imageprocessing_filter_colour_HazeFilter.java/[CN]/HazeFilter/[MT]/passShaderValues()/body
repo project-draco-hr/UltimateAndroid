@@ -1,0 +1,5 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(distanceHandle,distance);
+  GLES20.glUniform1f(slopeHandle,slope);
+}

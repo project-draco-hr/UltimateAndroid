@@ -1,0 +1,6 @@
+{
+  super.initShaderHandles();
+  colourHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_COLOUR);
+  thresholdHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_THRESHOLD);
+  smoothingHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_SMOOTHING);
+}

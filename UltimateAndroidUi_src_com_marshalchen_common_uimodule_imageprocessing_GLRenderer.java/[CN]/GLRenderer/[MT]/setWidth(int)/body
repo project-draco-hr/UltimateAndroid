@@ -1,0 +1,6 @@
+{
+  if (!customSizeSet && this.width != width) {
+    this.width=width;
+    sizeChanged=true;
+  }
+}

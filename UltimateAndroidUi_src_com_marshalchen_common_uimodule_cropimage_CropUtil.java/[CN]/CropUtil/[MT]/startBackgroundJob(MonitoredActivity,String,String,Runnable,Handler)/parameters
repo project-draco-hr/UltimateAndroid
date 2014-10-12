@@ -1,0 +1,5 @@
+MonitoredActivity activity
+String title
+String message
+Runnable job
+Handler handler

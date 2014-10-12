@@ -1,0 +1,5 @@
+Image imageIn
+int a_x
+int a_y
+int squareSize
+int a_rgb

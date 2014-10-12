@@ -1,0 +1,5 @@
+{
+  cropIntent.putExtra(Extra.ASPECT_X,1);
+  cropIntent.putExtra(Extra.ASPECT_Y,1);
+  return this;
+}

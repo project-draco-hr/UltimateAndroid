@@ -1,0 +1,28 @@
+{
+  if (isFinishing()) {
+    return;
+  }
+  imageView.setImageRotateBitmapResetBase(rotateBitmap,true);
+  CropUtil.startBackgroundJob(this,null,"crop__wait",new Runnable(){
+    public void run(){
+      final CountDownLatch latch=new CountDownLatch(1);
+      handler.post(new Runnable(){
+        public void run(){
+          if (imageView.getScale() == 1F) {
+            imageView.center(true,true);
+          }
+          latch.countDown();
+        }
+      }
+);
+      try {
+        latch.await();
+      }
+ catch (      InterruptedException e) {
+        throw new RuntimeException(e);
+      }
+      new Cropper().crop();
+    }
+  }
+,handler);
+}

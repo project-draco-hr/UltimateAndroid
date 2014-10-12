@@ -1,0 +1,6 @@
+{
+  if (resId != 0) {
+    Bitmap bitmap=BitmapFactory.decodeResource(getResources(),resId);
+    setImageBitmap(bitmap);
+  }
+}

@@ -1,0 +1,9 @@
+{
+  super.initShaderHandles();
+  for (  String key : uniformIntList.keySet()) {
+    uniformHandleList.put(key,GLES20.glGetUniformLocation(programHandle,key));
+  }
+  for (  String key : uniformFloatList.keySet()) {
+    uniformHandleList.put(key,GLES20.glGetUniformLocation(programHandle,key));
+  }
+}

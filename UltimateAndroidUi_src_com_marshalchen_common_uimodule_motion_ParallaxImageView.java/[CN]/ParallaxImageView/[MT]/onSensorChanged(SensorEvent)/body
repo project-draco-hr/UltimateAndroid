@@ -1,0 +1,5 @@
+{
+  final float[] vectors=mSensorInterpreter.interpretSensorEvent(getContext(),event);
+  if (vectors == null)   return;
+  setTranslate(vectors[2],vectors[1]);
+}

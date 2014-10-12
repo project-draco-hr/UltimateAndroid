@@ -1,0 +1,27 @@
+{
+  String localName=atts.getName();
+  if (inDefsElement) {
+    if (localName.equals("defs")) {
+      inDefsElement=false;
+    }
+    return;
+  }
+  if (localName.equals("svg")) {
+    Path p=popPath();
+    Matrix matrix=popTransform();
+    p.transform(matrix);
+    pathInfo=new PathInfo(p,width,height);
+  }
+ else   if (localName.equals("g")) {
+    if (hidden) {
+      hiddenLevel--;
+      if (hiddenLevel == 0) {
+        hidden=false;
+      }
+    }
+    Path p=popPath();
+    Matrix matrix=popTransform();
+    p.transform(matrix);
+    path.addPath(p);
+  }
+}

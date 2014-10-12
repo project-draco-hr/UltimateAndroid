@@ -1,0 +1,4 @@
+{
+  this.upperThreshold=upperThreshold;
+  this.lowerThreshold=lowerThreshold;
+}

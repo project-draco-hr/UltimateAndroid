@@ -1,0 +1,4 @@
+{
+  mCleanupRunner.run();
+  mHandler.removeCallbacks(mCleanupRunner);
+}

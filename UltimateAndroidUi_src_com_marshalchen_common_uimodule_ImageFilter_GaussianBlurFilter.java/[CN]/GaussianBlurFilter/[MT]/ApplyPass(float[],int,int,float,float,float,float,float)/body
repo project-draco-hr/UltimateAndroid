@@ -1,0 +1,17 @@
+{
+  float num=1f / b0;
+  int triplewidth=width * 3;
+  for (int i=0; i < height; i++) {
+    int steplength=i * triplewidth;
+    for (int j=steplength + 9; j < (steplength + triplewidth); j+=3) {
+      pixels[j]=(b * pixels[j]) + ((((b1 * pixels[j - 3]) + (b2 * pixels[j - 6])) + (b3 * pixels[j - 9])) * num);
+      pixels[j + 1]=(b * pixels[j + 1]) + ((((b1 * pixels[(j + 1) - 3]) + (b2 * pixels[(j + 1) - 6])) + (b3 * pixels[(j + 1) - 9])) * num);
+      pixels[j + 2]=(b * pixels[j + 2]) + ((((b1 * pixels[(j + 2) - 3]) + (b2 * pixels[(j + 2) - 6])) + (b3 * pixels[(j + 2) - 9])) * num);
+    }
+    for (int k=((steplength + triplewidth) - 9) - 3; k >= steplength; k-=3) {
+      pixels[k]=(b * pixels[k]) + ((((b1 * pixels[k + 3]) + (b2 * pixels[k + 6])) + (b3 * pixels[k + 9])) * num);
+      pixels[k + 1]=(b * pixels[k + 1]) + ((((b1 * pixels[(k + 1) + 3]) + (b2 * pixels[(k + 1) + 6])) + (b3 * pixels[(k + 1) + 9])) * num);
+      pixels[k + 2]=(b * pixels[k + 2]) + ((((b1 * pixels[(k + 2) + 3]) + (b2 * pixels[(k + 2) + 6])) + (b3 * pixels[(k + 2) + 9])) * num);
+    }
+  }
+}

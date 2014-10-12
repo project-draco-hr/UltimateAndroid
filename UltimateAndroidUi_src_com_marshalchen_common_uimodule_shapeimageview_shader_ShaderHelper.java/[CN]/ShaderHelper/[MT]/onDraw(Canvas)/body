@@ -1,0 +1,10 @@
+{
+  if (shader == null) {
+    createShader();
+  }
+  if (shader != null && viewWidth > 0 && viewHeight > 0) {
+    draw(canvas,imagePaint,borderPaint);
+    return true;
+  }
+  return false;
+}

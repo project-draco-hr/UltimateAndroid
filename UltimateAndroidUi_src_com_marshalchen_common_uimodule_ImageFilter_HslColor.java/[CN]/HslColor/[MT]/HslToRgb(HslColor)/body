@@ -1,0 +1,16 @@
+{
+  int r, g, b;
+  if (hsl.h == 0) {
+    r=g=b=(byte)(hsl.l * 255);
+  }
+ else {
+    double v1, v2;
+    double hue=(double)hsl.h / 360;
+    v2=(hsl.l < 0.5) ? (hsl.l * (1 + hsl.s)) : ((hsl.l + hsl.s) - (hsl.l * hsl.s));
+    v1=2 * hsl.l - v2;
+    r=(byte)(255 * Hue_2_RGB(v1,v2,hue + (1.0 / 3)));
+    g=(byte)(255 * Hue_2_RGB(v1,v2,hue));
+    b=(byte)(255 * Hue_2_RGB(v1,v2,hue - (1.0 / 3)));
+  }
+  return (255 << 24) + (r << 16) + (g << 8)+ b;
+}

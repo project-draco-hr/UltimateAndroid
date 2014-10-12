@@ -1,0 +1,12 @@
+{
+  if (mPressedHandle == null)   return;
+  x+=mTouchOffset.first;
+  y+=mTouchOffset.second;
+  if (mFixAspectRatio) {
+    mPressedHandle.updateCropWindow(x,y,mTargetAspectRatio,mBitmapRect,mSnapRadius);
+  }
+ else {
+    mPressedHandle.updateCropWindow(x,y,mBitmapRect,mSnapRadius);
+  }
+  invalidate();
+}

@@ -1,0 +1,6 @@
+{
+  super.destroy();
+  for (  GLTextureOutputRenderer filter : filters) {
+    filter.destroy();
+  }
+}

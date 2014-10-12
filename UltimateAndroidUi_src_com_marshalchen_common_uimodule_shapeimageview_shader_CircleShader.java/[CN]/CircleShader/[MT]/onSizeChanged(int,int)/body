@@ -1,0 +1,5 @@
+{
+  super.onSizeChanged(width,height);
+  center=Math.round(viewWidth / 2f);
+  borderRadius=Math.round((viewWidth - borderWidth) / 2f);
+}

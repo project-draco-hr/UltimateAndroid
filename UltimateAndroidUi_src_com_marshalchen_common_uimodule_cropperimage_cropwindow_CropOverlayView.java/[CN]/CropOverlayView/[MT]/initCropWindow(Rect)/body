@@ -1,0 +1,33 @@
+{
+  if (initializedCropWindow == false)   initializedCropWindow=true;
+  if (mFixAspectRatio) {
+    if (AspectRatioUtil.calculateAspectRatio(bitmapRect) > mTargetAspectRatio) {
+      Edge.TOP.setCoordinate(bitmapRect.top);
+      Edge.BOTTOM.setCoordinate(bitmapRect.bottom);
+      final float centerX=getWidth() / 2f;
+      final float cropWidth=Math.max(Edge.MIN_CROP_LENGTH_PX,AspectRatioUtil.calculateWidth(Edge.TOP.getCoordinate(),Edge.BOTTOM.getCoordinate(),mTargetAspectRatio));
+      if (cropWidth == Edge.MIN_CROP_LENGTH_PX)       mTargetAspectRatio=(Edge.MIN_CROP_LENGTH_PX) / (Edge.BOTTOM.getCoordinate() - Edge.TOP.getCoordinate());
+      final float halfCropWidth=cropWidth / 2f;
+      Edge.LEFT.setCoordinate(centerX - halfCropWidth);
+      Edge.RIGHT.setCoordinate(centerX + halfCropWidth);
+    }
+ else {
+      Edge.LEFT.setCoordinate(bitmapRect.left);
+      Edge.RIGHT.setCoordinate(bitmapRect.right);
+      final float centerY=getHeight() / 2f;
+      final float cropHeight=Math.max(Edge.MIN_CROP_LENGTH_PX,AspectRatioUtil.calculateHeight(Edge.LEFT.getCoordinate(),Edge.RIGHT.getCoordinate(),mTargetAspectRatio));
+      if (cropHeight == Edge.MIN_CROP_LENGTH_PX)       mTargetAspectRatio=(Edge.RIGHT.getCoordinate() - Edge.LEFT.getCoordinate()) / Edge.MIN_CROP_LENGTH_PX;
+      final float halfCropHeight=cropHeight / 2f;
+      Edge.TOP.setCoordinate(centerY - halfCropHeight);
+      Edge.BOTTOM.setCoordinate(centerY + halfCropHeight);
+    }
+  }
+ else {
+    final float horizontalPadding=0.1f * bitmapRect.width();
+    final float verticalPadding=0.1f * bitmapRect.height();
+    Edge.LEFT.setCoordinate(bitmapRect.left + horizontalPadding);
+    Edge.TOP.setCoordinate(bitmapRect.top + verticalPadding);
+    Edge.RIGHT.setCoordinate(bitmapRect.right - horizontalPadding);
+    Edge.BOTTOM.setCoordinate(bitmapRect.bottom - verticalPadding);
+  }
+}

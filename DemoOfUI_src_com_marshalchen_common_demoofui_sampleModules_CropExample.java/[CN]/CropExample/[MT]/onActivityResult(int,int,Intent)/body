@@ -1,0 +1,8 @@
+{
+  if (requestCode == Crop.REQUEST_PICK && resultCode == RESULT_OK) {
+    beginCrop(result.getData());
+  }
+ else   if (requestCode == Crop.REQUEST_CROP) {
+    handleCrop(resultCode,result);
+  }
+}

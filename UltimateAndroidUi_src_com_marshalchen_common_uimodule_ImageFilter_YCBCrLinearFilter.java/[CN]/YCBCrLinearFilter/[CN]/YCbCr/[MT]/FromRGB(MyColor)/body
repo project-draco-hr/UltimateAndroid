@@ -1,0 +1,5 @@
+{
+  YCbCr ycbcr=new YCbCr();
+  FromRGB(rgb,ycbcr);
+  return ycbcr;
+}

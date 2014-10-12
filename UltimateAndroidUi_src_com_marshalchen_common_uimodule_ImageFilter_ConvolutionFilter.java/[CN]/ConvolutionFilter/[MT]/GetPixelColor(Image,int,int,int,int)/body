@@ -1,0 +1,15 @@
+{
+  if (x < 0) {
+    x=0;
+  }
+ else   if (x >= w) {
+    x=w - 1;
+  }
+  if (y < 0) {
+    y=0;
+  }
+ else   if (y >= h) {
+    y=h - 1;
+  }
+  return (((255 << 24 | (input.getRComponent(x,y) << 16)) | (input.getGComponent(x,y) << 8)) | input.getBComponent(x,y));
+}
