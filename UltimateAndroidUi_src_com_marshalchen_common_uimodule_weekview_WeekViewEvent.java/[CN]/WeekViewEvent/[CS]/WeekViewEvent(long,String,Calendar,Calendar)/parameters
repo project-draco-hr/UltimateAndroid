@@ -1,0 +1,4 @@
+long id
+String name
+Calendar startTime
+Calendar endTime

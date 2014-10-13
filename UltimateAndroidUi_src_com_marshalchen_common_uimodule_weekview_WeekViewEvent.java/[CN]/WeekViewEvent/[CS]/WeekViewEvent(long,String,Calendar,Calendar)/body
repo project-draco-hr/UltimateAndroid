@@ -1,0 +1,6 @@
+{
+  this.mId=id;
+  this.mName=name;
+  this.mStartTime=startTime;
+  this.mEndTime=endTime;
+}

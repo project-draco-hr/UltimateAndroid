@@ -1,0 +1,16 @@
+{
+  this.mId=id;
+  this.mStartTime=Calendar.getInstance();
+  this.mStartTime.set(Calendar.YEAR,startYear);
+  this.mStartTime.set(Calendar.MONTH,startMonth - 1);
+  this.mStartTime.set(Calendar.DAY_OF_MONTH,startDay);
+  this.mStartTime.set(Calendar.HOUR_OF_DAY,startHour);
+  this.mStartTime.set(Calendar.MINUTE,startMinute);
+  this.mEndTime=Calendar.getInstance();
+  this.mEndTime.set(Calendar.YEAR,endYear);
+  this.mEndTime.set(Calendar.MONTH,endMonth - 1);
+  this.mEndTime.set(Calendar.DAY_OF_MONTH,endDay);
+  this.mEndTime.set(Calendar.HOUR_OF_DAY,endHour);
+  this.mEndTime.set(Calendar.MINUTE,endMinute);
+  this.mName=name;
+}

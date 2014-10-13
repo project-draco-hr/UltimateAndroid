@@ -1,0 +1,4 @@
+{
+  mFirstDayOfWeek=firstDayOfWeek;
+  invalidate();
+}
