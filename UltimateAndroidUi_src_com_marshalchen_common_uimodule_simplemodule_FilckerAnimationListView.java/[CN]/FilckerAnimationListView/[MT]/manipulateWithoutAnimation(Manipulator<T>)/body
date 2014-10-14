@@ -1,0 +1,9 @@
+{
+  if (!animating) {
+    manipulator.manipulate((T)adapter.adapter);
+    adapter.notifyDataSetChanged();
+  }
+ else {
+    pendingManipulationsWithoutAnimation.add(manipulator);
+  }
+}

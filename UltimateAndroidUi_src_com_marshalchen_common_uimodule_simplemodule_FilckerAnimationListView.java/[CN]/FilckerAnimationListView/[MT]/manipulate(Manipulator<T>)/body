@@ -1,0 +1,10 @@
+{
+  if (!animating) {
+    prepareAnimation();
+    manipulator.manipulate((T)adapter.adapter);
+    doAnimation();
+  }
+ else {
+    pendingManipulations.add(manipulator);
+  }
+}
