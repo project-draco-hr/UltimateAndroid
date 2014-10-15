@@ -1,0 +1,5 @@
+{
+  final double childCenterX=centerX + radius * Math.cos(Math.toRadians(degrees));
+  final double childCenterY=centerY + radius * Math.sin(Math.toRadians(degrees));
+  return new Rect((int)(childCenterX - size / 2),(int)(childCenterY - size / 2),(int)(childCenterX + size / 2),(int)(childCenterY + size / 2));
+}

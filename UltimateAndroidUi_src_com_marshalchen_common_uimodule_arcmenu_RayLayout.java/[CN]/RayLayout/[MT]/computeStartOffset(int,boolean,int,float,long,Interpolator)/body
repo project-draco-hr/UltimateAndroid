@@ -1,0 +1,8 @@
+{
+  final float delay=delayPercent * duration;
+  final long viewDelay=(long)(getTransformedIndex(expanded,childCount,index) * delay);
+  final float totalDelay=delay * childCount;
+  float normalizedDelay=viewDelay / totalDelay;
+  normalizedDelay=interpolator.getInterpolation(normalizedDelay);
+  return (long)(normalizedDelay * totalDelay);
+}

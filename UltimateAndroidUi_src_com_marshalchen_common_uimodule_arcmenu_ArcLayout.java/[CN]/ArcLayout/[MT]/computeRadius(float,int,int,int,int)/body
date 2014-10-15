@@ -1,0 +1,10 @@
+{
+  if (childCount < 2) {
+    return minRadius;
+  }
+  final float perDegrees=arcDegrees / (childCount - 1);
+  final float perHalfDegrees=perDegrees / 2;
+  final int perSize=childSize + childPadding;
+  final int radius=(int)((perSize / 2) / Math.sin(Math.toRadians(perHalfDegrees)));
+  return Math.max(radius,minRadius);
+}

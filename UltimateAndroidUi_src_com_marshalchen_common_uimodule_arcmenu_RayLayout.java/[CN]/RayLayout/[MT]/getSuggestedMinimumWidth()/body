@@ -1,0 +1,3 @@
+{
+  return mLeftHolderWidth + mChildSize * getChildCount();
+}
