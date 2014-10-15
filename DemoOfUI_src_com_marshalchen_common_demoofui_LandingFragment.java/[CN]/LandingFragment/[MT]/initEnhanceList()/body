@@ -414,6 +414,11 @@
   map.put("detail","try");
   map.put("subname","AnimationFilcker");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","ArcMenu");
+  map.put("detail","try");
+  map.put("subname","ArcMenu");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -678,6 +683,9 @@ BasicUtils.sendIntent(getActivity(),AndroidWeekViewActivity.class);
 break;
 case 82:
 BasicUtils.sendIntent(getActivity(),FilckerAnimationListActivity.class);
+break;
+case 83:
+BasicUtils.sendIntent(getActivity(),ArcMenuActivity.class);
 break;
 }
 }
