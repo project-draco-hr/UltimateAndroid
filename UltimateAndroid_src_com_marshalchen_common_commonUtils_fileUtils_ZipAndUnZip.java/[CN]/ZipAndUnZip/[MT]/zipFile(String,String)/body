@@ -1,10 +1,13 @@
 {
+  FileInputStream in=null;
+  FileOutputStream out=null;
+  ZipOutputStream zipOut=null;
   try {
     File file=new File(fileFrom);
     file.getName();
-    FileInputStream in=new FileInputStream(fileFrom);
-    FileOutputStream out=new FileOutputStream(fileTo);
-    ZipOutputStream zipOut=new ZipOutputStream(out);
+    in=new FileInputStream(fileFrom);
+    out=new FileOutputStream(fileTo);
+    zipOut=new ZipOutputStream(out);
     ZipEntry entry=new ZipEntry(file.getName());
     zipOut.putNextEntry(entry);
     int nNumber;
@@ -19,5 +22,16 @@
   }
  catch (  IOException e) {
     System.out.println(e);
+  }
+ finally {
+    try {
+      if (in != null)       in.close();
+      if (out != null)       out.close();
+      if (zipOut != null)       zipOut.close();
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+      Logs.e(e,"");
+    }
   }
 }
