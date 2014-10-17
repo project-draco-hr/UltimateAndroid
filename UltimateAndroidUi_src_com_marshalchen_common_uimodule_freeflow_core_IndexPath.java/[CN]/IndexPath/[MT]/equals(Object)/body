@@ -1,0 +1,7 @@
+{
+  if (o.getClass() != IndexPath.class) {
+    return false;
+  }
+  IndexPath p=(IndexPath)o;
+  return ((p.section == section) && (p.positionInSection == positionInSection));
+}

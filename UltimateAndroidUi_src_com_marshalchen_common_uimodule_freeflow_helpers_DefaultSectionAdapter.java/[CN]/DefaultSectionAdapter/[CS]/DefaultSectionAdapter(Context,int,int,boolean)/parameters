@@ -1,0 +1,4 @@
+Context context
+int headerCount
+int itemCount
+boolean showHeaders

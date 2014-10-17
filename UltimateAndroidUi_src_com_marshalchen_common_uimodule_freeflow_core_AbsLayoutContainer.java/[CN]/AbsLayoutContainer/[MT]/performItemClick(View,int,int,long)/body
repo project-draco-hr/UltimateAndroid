@@ -1,0 +1,10 @@
+{
+  if (mOnItemClickListener != null) {
+    if (view != null) {
+      view.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
+    }
+    mOnItemClickListener.onItemClick(this,getFreeFlowItemForVisibleItemAt(sectionIndex,positionInSection));
+    return true;
+  }
+  return false;
+}

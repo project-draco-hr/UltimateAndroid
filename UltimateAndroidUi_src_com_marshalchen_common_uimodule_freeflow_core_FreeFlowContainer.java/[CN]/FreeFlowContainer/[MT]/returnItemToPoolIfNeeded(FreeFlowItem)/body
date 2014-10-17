@@ -1,0 +1,10 @@
+{
+  View v=freeflowItem.view;
+  v.setTranslationX(0);
+  v.setTranslationY(0);
+  v.setRotation(0);
+  v.setScaleX(1f);
+  v.setScaleY(1f);
+  v.setAlpha(1);
+  viewpool.returnViewToPool(v);
+}

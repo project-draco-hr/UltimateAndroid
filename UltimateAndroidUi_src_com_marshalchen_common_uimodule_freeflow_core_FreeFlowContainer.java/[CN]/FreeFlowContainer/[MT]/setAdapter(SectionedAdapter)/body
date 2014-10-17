@@ -1,0 +1,19 @@
+{
+  if (adapter == mAdapter) {
+    return;
+  }
+  stopScrolling();
+  logLifecycleEvent("setting adapter");
+  markAdapterDirty=true;
+  viewPortX=0;
+  viewPortY=0;
+  shouldRecalculateScrollWhenComputingLayout=true;
+  this.mAdapter=adapter;
+  if (adapter != null) {
+    viewpool.initializeViewPool(adapter.getViewTypes());
+  }
+  if (mLayout != null) {
+    mLayout.setAdapter(mAdapter);
+  }
+  requestLayout();
+}

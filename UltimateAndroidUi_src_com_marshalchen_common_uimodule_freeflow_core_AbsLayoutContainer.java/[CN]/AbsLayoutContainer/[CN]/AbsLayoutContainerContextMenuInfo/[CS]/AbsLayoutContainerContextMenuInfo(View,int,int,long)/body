@@ -1,0 +1,6 @@
+{
+  this.targetView=targetView;
+  this.sectionIndex=sectionIndex;
+  this.positionInSection=positionInSection;
+  this.id=id;
+}

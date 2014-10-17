@@ -1,0 +1,18 @@
+{
+  if (mPendingCheckForTap != null) {
+    removeCallbacks(mPendingCheckForTap);
+    mPendingCheckForTap=null;
+  }
+  if (mPendingCheckForLongPress != null) {
+    removeCallbacks(mPendingCheckForLongPress);
+    mPendingCheckForLongPress=null;
+  }
+  if (mTouchModeReset != null) {
+    removeCallbacks(mTouchModeReset);
+    mTouchModeReset=null;
+  }
+  if (mPerformClick != null) {
+    removeCallbacks(mPerformClick);
+    mPerformClick=null;
+  }
+}
