@@ -1,0 +1,4 @@
+{
+  this.comments_received_count=comments_received_count;
+  return this;
+}

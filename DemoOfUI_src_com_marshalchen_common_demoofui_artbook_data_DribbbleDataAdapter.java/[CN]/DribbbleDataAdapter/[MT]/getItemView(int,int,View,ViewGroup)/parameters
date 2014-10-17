@@ -1,0 +1,4 @@
+int sectionIndex
+int position
+View convertView
+ViewGroup parent

@@ -1,0 +1,11 @@
+{
+  HttpUtilsAsync.get("http://api.dribbble.com/shots/popular?per_page=" + itemsPerPage + "&page="+ page,new AsyncHttpResponseHandler(){
+    @Override public void onSuccess(    int i,    Header[] headers,    byte[] bytes){
+      DribbbleFeed feed=new Gson().fromJson(new String(bytes),DribbbleFeed.class);
+      caller.onDataLoaded(feed);
+    }
+    @Override public void onFailure(    int i,    Header[] headers,    byte[] bytes,    Throwable throwable){
+    }
+  }
+);
+}

@@ -1,0 +1,15 @@
+{
+  if (convertView == null) {
+    convertView=LayoutInflater.from(context).inflate(R.layout.free_flow_artbook_pic_view,parent,false);
+  }
+  ImageView img=(ImageView)convertView.findViewById(R.id.pic);
+  if (hideImages) {
+    int idx=position % colors.length;
+    img.setBackgroundColor(colors[idx]);
+  }
+ else {
+    Shot s=(Shot)(this.section.getData().get(position));
+    Picasso.with(context).load(s.getImage_teaser_url()).into(img);
+  }
+  return convertView;
+}

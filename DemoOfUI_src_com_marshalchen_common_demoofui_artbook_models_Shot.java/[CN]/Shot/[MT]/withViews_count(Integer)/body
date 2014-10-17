@@ -1,0 +1,4 @@
+{
+  this.views_count=views_count;
+  return this;
+}
