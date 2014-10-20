@@ -1,0 +1,4 @@
+{
+  this.likes_count=likes_count;
+  return this;
+}

@@ -1,0 +1,4 @@
+{
+  mEventPadding=eventPadding;
+  invalidate();
+}

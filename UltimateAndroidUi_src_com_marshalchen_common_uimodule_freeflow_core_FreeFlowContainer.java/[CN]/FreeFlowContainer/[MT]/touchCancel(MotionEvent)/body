@@ -1,0 +1,10 @@
+{
+  mTouchMode=TOUCH_MODE_REST;
+  if (mOnTouchModeChangedListener != null) {
+    mOnTouchModeChangedListener.onTouchModeChanged(mTouchMode);
+  }
+  if (mVelocityTracker != null) {
+    mVelocityTracker.recycle();
+    mVelocityTracker=null;
+  }
+}

@@ -1,0 +1,5 @@
+float arcDegrees
+int childCount
+int childSize
+int childPadding
+int minRadius

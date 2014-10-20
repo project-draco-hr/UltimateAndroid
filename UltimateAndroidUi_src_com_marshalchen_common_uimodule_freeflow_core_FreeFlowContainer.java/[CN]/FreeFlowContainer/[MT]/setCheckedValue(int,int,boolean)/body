@@ -1,0 +1,17 @@
+{
+  int foundAtIndex=-1;
+  for (int i=0; i < mCheckStates.size(); i++) {
+    IndexPath p=mCheckStates.keyAt(i);
+    if (p.section == sectionIndex && p.positionInSection == positionInSection) {
+      foundAtIndex=i;
+      break;
+    }
+  }
+  if (foundAtIndex > -1 && val == false) {
+    mCheckStates.removeAt(foundAtIndex);
+  }
+ else   if (foundAtIndex == -1 && val == true) {
+    IndexPath pos=new IndexPath(sectionIndex,positionInSection);
+    mCheckStates.put(pos,true);
+  }
+}

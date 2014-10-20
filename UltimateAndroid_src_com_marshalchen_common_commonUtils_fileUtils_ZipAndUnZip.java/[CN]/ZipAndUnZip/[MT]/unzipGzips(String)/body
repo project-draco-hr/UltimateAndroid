@@ -1,11 +1,12 @@
 {
+  GZIPInputStream in=null;
+  FileOutputStream out=null;
   try {
     if (!getExtension(inFileName).equalsIgnoreCase("gz")) {
       System.err.println("File name must have extension of \".gz\"");
       System.exit(1);
     }
     System.out.println("Opening the compressed file.");
-    GZIPInputStream in=null;
     try {
       in=new GZIPInputStream(new FileInputStream(inFileName));
     }
@@ -15,7 +16,6 @@
     }
     System.out.println("Open the output file.");
     String outFileName=getFileName(inFileName);
-    FileOutputStream out=null;
     try {
       out=new FileOutputStream(outFileName);
     }
@@ -30,11 +30,19 @@
       out.write(buf,0,len);
     }
     System.out.println("Closing the file and stream");
-    in.close();
-    out.close();
   }
  catch (  IOException e) {
     e.printStackTrace();
     System.exit(1);
+  }
+ finally {
+    try {
+      if (in != null)       in.close();
+      if (out != null)       out.close();
+    }
+ catch (    IOException e) {
+      e.printStackTrace();
+      Logs.e(e,"");
+    }
   }
 }

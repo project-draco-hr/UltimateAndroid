@@ -1,0 +1,55 @@
+{
+  final AnimatorSet animatorSet=new AnimatorSet();
+  final int firstVisiblePosition=getFirstVisiblePosition();
+  final int childCount=getChildCount();
+  for (final Iterator<Entry<Long,Float>> iter=yMap.entrySet().iterator(); iter.hasNext(); ) {
+    final Entry<Long,Float> entry=iter.next();
+    final long id=entry.getKey();
+    final int oldPos=positionMap.get(id);
+    final View child=getChildAt(oldPos - firstVisiblePosition);
+    final int newPos=getPositionForId(id);
+    if (newPos == -1) {
+      final ObjectAnimator anim=animateAlpha(child,false);
+      animatorSet.play(anim);
+      iter.remove();
+      positionMap.remove(id);
+      continue;
+    }
+    if (newPos < firstVisiblePosition || newPos > firstVisiblePosition + childCount) {
+      final float offset;
+      if (newPos < firstVisiblePosition) {
+        offset=-getHeight();
+      }
+ else {
+        offset=getHeight();
+      }
+      final AnimatorProxy proxy=AnimatorProxy.wrap(child);
+      final ObjectAnimator anim=ObjectAnimator.ofFloat(proxy,"translationY",0f,offset);
+      final int finalDuration=getDuration(0,getHeight() / 2,durationUnit);
+      anim.setInterpolator(new AccelerateInterpolator());
+      anim.setDuration((long)(finalDuration * animationDurationFactor));
+      animatorSet.addListener(new AnimatorListenerAdapter(){
+        @Override public void onAnimationEnd(        final Animator animation){
+          child.post(new Runnable(){
+            @Override public void run(){
+              proxy.setTranslationY(0f);
+            }
+          }
+);
+        }
+      }
+);
+      animatorSet.play(anim);
+      iter.remove();
+      positionMap.remove(id);
+      continue;
+    }
+  }
+  if (!animatorSet.getChildAnimations().isEmpty()) {
+    animatorSet.addListener(listener);
+    animatorSet.start();
+  }
+ else {
+    listener.onAnimationEnd(animatorSet);
+  }
+}

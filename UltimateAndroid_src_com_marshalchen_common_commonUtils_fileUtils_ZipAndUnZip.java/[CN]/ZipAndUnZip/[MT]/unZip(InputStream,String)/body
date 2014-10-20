@@ -35,4 +35,14 @@
     ioe.printStackTrace();
     return 0;
   }
+ finally {
+    try {
+      if (fileOut != null)       fileOut.close();
+      if (zipIn != null)       zipIn.close();
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+      Logs.e(e,"");
+    }
+  }
 }

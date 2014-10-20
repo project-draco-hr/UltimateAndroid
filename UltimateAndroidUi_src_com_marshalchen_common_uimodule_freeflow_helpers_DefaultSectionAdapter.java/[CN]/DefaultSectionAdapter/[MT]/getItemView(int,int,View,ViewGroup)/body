@@ -1,0 +1,17 @@
+{
+  TextView tv=null;
+  if (convertView != null) {
+    tv=(TextView)convertView;
+  }
+ else {
+    tv=new TextView(context);
+    RectShape rs=new RectShape();
+    ShapeDrawable sd=new BottomBorderBackground(rs,Color.WHITE,Color.GRAY);
+    tv.setBackgroundDrawable(sd);
+    tv.setPadding(20,0,0,0);
+    tv.setGravity(Gravity.CENTER_VERTICAL);
+  }
+  tv.setLayoutParams(new LayoutParams(300,itemHeight));
+  tv.setText("s" + section + " p"+ position);
+  return tv;
+}

@@ -1,0 +1,9 @@
+{
+  if (mLayout.horizontalScrollEnabled()) {
+    viewPortX=(int)(viewPortX - movementX);
+  }
+  if (mLayout.verticalScrollEnabled()) {
+    viewPortY=(int)(viewPortY - movementY);
+  }
+  moveViewport(fling);
+}

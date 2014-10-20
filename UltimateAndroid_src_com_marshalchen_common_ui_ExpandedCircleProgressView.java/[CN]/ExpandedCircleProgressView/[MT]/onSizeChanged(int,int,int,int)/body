@@ -1,0 +1,8 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  int x=w / 2;
+  int y=h / 2;
+  mProgressCircle=new Circle(x,y,mInnerCircleSize);
+  mInnerCircle=new Circle(x,y,mInnerCircleSize);
+  mOuterCircle=new Circle(x,y,mOuterCircleSize);
+}

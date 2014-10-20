@@ -1,5 +1,5 @@
 {
-  isLog();
+  setIfLog();
   QueryBuilder queryBuilder=dao.queryBuilder();
   if (isAsc) {
     queryBuilder=queryBuilder.orderAsc(orderProperty);

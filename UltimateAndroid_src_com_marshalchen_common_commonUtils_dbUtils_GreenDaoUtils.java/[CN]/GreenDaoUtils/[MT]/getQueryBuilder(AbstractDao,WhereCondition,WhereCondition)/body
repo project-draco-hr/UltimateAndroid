@@ -1,5 +1,5 @@
 {
-  isLog();
+  setIfLog();
   QueryBuilder qb=dao.queryBuilder();
   qb.where(cond,condmore);
   return qb;

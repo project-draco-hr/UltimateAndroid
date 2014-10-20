@@ -1,0 +1,4 @@
+{
+  mEventTextColor=eventTextColor;
+  invalidate();
+}

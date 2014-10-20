@@ -1,0 +1,14 @@
+{
+  mScroller.forceFinished(true);
+  date.set(Calendar.HOUR_OF_DAY,0);
+  date.set(Calendar.MINUTE,0);
+  date.set(Calendar.SECOND,0);
+  mRefreshEvents=true;
+  Calendar today=Calendar.getInstance();
+  today.set(Calendar.HOUR_OF_DAY,0);
+  today.set(Calendar.MINUTE,0);
+  today.set(Calendar.SECOND,0);
+  int dateDifference=(int)(date.getTimeInMillis() - today.getTimeInMillis()) / (1000 * 60 * 60* 24);
+  mCurrentOrigin.x=-dateDifference * (mWidthPerDay + mColumnGap);
+  invalidate();
+}
