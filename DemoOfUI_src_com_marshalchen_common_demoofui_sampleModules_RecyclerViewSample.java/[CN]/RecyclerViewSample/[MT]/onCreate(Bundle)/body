@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.recyler_view_sample);
+  setContentView(R.layout.recycler_view_sample);
   mRecyclerView=(RecyclerView)findViewById(R.id.recycler_view);
   mRecyclerView.setHasFixedSize(true);
   mLayoutManager=new LinearLayoutManager(this);
