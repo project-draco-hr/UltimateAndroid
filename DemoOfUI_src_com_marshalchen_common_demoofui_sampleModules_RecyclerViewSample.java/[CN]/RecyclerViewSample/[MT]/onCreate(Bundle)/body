@@ -11,4 +11,9 @@
   }
   mAdapter=new MyAdapter(mDataset);
   mRecyclerView.setAdapter(mAdapter);
+  LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+  layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+  layoutManager.scrollToPosition(0);
+  mRecyclerView.setLayoutManager(layoutManager);
+  mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 }

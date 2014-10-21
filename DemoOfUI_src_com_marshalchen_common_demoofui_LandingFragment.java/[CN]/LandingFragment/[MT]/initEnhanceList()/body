@@ -439,6 +439,11 @@
   map.put("detail","try");
   map.put("subname","RecylerViewSample");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","RecylerView");
+  map.put("detail","try");
+  map.put("subname","RecylerViewItem");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -718,6 +723,9 @@ BasicUtils.sendIntent(getActivity(),FreeFlowPhotoGridActivity.class);
 break;
 case 87:
 BasicUtils.sendIntent(getActivity(),RecyclerViewSample.class);
+break;
+case 88:
+BasicUtils.sendIntent(getActivity(),RecyclerViewItemAnimatorActivity.class);
 break;
 }
 }
