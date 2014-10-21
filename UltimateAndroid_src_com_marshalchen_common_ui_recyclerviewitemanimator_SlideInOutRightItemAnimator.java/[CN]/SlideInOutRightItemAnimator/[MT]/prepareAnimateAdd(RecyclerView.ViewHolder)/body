@@ -1,0 +1,3 @@
+{
+  ViewCompat.setTranslationX(holder.itemView,+mRecyclerView.getWidth());
+}
