@@ -1,0 +1,13 @@
+{
+  if (FloatingActionButtonDrawable instanceof BitmapDrawable) {
+    mBitmap=((BitmapDrawable)FloatingActionButtonDrawable).getBitmap();
+  }
+ else {
+    Bitmap bitmap=Bitmap.createBitmap(FloatingActionButtonDrawable.getIntrinsicWidth(),FloatingActionButtonDrawable.getIntrinsicHeight(),Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(bitmap);
+    FloatingActionButtonDrawable.setBounds(0,0,canvas.getWidth(),canvas.getHeight());
+    FloatingActionButtonDrawable.draw(canvas);
+    mBitmap=bitmap;
+  }
+  invalidate();
+}

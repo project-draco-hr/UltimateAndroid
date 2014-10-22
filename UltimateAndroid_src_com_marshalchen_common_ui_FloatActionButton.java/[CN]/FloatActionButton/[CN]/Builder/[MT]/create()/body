@@ -1,5 +1,5 @@
 {
-  final FloatingActionButton button=new FloatingActionButton(activity);
+  final FloatActionButton button=new FloatActionButton(activity);
   button.setFloatingActionButtonColor(this.color);
   button.setFloatingActionButtonDrawable(this.drawable);
   params.gravity=this.gravity;
