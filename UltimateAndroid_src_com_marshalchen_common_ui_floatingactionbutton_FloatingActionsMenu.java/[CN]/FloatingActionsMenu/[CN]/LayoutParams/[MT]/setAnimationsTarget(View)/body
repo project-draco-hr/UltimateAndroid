@@ -1,0 +1,6 @@
+{
+  mCollapseAlpha.setTarget(view);
+  mCollapseY.setTarget(view);
+  mExpandAlpha.setTarget(view);
+  mExpandY.setTarget(view);
+}
