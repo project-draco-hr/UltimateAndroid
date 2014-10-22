@@ -6,6 +6,12 @@
   map.put("class","SmoothProgressBarActivity");
   enhanceList.add(map);
   map=new HashMap<>();
+  map.put("name","RippleEffect");
+  map.put("detail","try");
+  map.put("subname","RippleEffect");
+  map.put("class","RippleEffectActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
   map.put("name","DynamicGrid");
   map.put("detail","try");
   map.put("subname","to DynamicGrid");
@@ -815,6 +821,9 @@ BasicUtils.sendIntent(getActivity(),RecyclerViewSample.class);
 break;
 case "RecyclerViewItemAnimatorActivity":
 BasicUtils.sendIntent(getActivity(),RecyclerViewItemAnimatorActivity.class);
+break;
+case "RippleEffectActivity":
+BasicUtils.sendIntent(getActivity(),RippleEffectActivity.class);
 break;
 }
 }
