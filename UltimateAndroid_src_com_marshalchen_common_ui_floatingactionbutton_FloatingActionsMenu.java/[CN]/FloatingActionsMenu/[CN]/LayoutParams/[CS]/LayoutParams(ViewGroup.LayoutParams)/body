@@ -1,17 +1,23 @@
 {
   super(source);
   mExpandY.setInterpolator(sExpandInterpolator);
+  mExpandX.setInterpolator(sExpandInterpolator);
   mExpandAlpha.setInterpolator(sAlphaExpandInterpolator);
   mCollapseY.setInterpolator(sCollapseInterpolator);
+  mCollapseX.setInterpolator(sCollapseInterpolator);
   mCollapseAlpha.setInterpolator(sCollapseInterpolator);
   mCollapseAlpha.setProperty(View.ALPHA);
   mCollapseAlpha.setFloatValues(1f,0f);
   mExpandAlpha.setProperty(View.ALPHA);
   mExpandAlpha.setFloatValues(0f,1f);
   mCollapseY.setProperty(View.TRANSLATION_Y);
+  mCollapseX.setProperty(View.TRANSLATION_X);
   mExpandY.setProperty(View.TRANSLATION_Y);
+  mExpandX.setProperty(View.TRANSLATION_X);
   mExpandAnimation.play(mExpandAlpha);
-  mExpandAnimation.play(mExpandY);
+  if (!isHorizontal)   mExpandAnimation.play(mExpandY);
+ else   mExpandAnimation.play(mExpandX);
   mCollapseAnimation.play(mCollapseAlpha);
-  mCollapseAnimation.play(mCollapseY);
+  if (!isHorizontal)   mCollapseAnimation.play(mCollapseY);
+ else   mCollapseAnimation.play(mCollapseX);
 }
