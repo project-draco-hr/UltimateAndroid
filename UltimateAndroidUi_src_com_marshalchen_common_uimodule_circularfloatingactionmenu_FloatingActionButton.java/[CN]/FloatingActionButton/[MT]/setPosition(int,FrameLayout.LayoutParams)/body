@@ -1,0 +1,32 @@
+{
+  int gravity;
+switch (position) {
+case POSITION_TOP_CENTER:
+    gravity=Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+  break;
+case POSITION_TOP_RIGHT:
+gravity=Gravity.TOP | Gravity.RIGHT;
+break;
+case POSITION_RIGHT_CENTER:
+gravity=Gravity.RIGHT | Gravity.CENTER_VERTICAL;
+break;
+case POSITION_BOTTOM_CENTER:
+gravity=Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
+break;
+case POSITION_BOTTOM_LEFT:
+gravity=Gravity.BOTTOM | Gravity.LEFT;
+break;
+case POSITION_LEFT_CENTER:
+gravity=Gravity.LEFT | Gravity.CENTER_VERTICAL;
+break;
+case POSITION_TOP_LEFT:
+gravity=Gravity.TOP | Gravity.LEFT;
+break;
+case POSITION_BOTTOM_RIGHT:
+default :
+gravity=Gravity.BOTTOM | Gravity.RIGHT;
+break;
+}
+layoutParams.gravity=gravity;
+setLayoutParams(layoutParams);
+}

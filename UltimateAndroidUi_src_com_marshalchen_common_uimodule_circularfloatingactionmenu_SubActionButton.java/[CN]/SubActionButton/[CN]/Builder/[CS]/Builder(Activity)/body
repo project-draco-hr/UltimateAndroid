@@ -1,0 +1,7 @@
+{
+  this.activity=activity;
+  int size=activity.getResources().getDimensionPixelSize(R.dimen.sub_action_button_size);
+  LayoutParams params=new LayoutParams(size,size,Gravity.TOP | Gravity.LEFT);
+  setLayoutParams(params);
+  setTheme(SubActionButton.THEME_LIGHT);
+}

@@ -1,0 +1,4 @@
+{
+  this.animationHandler=animationHandler;
+  return this;
+}

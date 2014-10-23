@@ -1,0 +1,25 @@
+{
+  super.animateMenuOpening(center);
+  setAnimating(true);
+  Animator lastAnimation=null;
+  for (int i=0; i < menu.getSubActionItems().size(); i++) {
+    PropertyValuesHolder pvhX=PropertyValuesHolder.ofFloat(View.TRANSLATION_X,-(menu.getSubActionItems().get(i).x - center.x + menu.getSubActionItems().get(i).width / 2));
+    PropertyValuesHolder pvhY=PropertyValuesHolder.ofFloat(View.TRANSLATION_Y,-(menu.getSubActionItems().get(i).y - center.y + menu.getSubActionItems().get(i).height / 2));
+    PropertyValuesHolder pvhR=PropertyValuesHolder.ofFloat(View.ROTATION,-720);
+    PropertyValuesHolder pvhsX=PropertyValuesHolder.ofFloat(View.SCALE_X,0);
+    PropertyValuesHolder pvhsY=PropertyValuesHolder.ofFloat(View.SCALE_Y,0);
+    PropertyValuesHolder pvhA=PropertyValuesHolder.ofFloat(View.ALPHA,0);
+    final ObjectAnimator animation=ObjectAnimator.ofPropertyValuesHolder(menu.getSubActionItems().get(i).view,pvhX,pvhY,pvhR,pvhsX,pvhsY,pvhA);
+    animation.setDuration(DURATION);
+    animation.setInterpolator(new AccelerateDecelerateInterpolator());
+    animation.addListener(new SubActionItemAnimationListener(menu.getSubActionItems().get(i),ActionType.CLOSING));
+    if (i == 0) {
+      lastAnimation=animation;
+    }
+    animation.setStartDelay((menu.getSubActionItems().size() - i) * LAG_BETWEEN_ITEMS);
+    animation.start();
+  }
+  if (lastAnimation != null) {
+    lastAnimation.addListener(new LastAnimationListener());
+  }
+}

@@ -1,0 +1,4 @@
+{
+  this.endAngle=endAngle;
+  return this;
+}
