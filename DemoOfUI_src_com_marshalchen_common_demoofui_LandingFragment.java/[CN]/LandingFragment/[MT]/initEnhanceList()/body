@@ -24,6 +24,12 @@
   map.put("class","FloatingActionButtonDemo");
   enhanceList.add(map);
   map=new HashMap<>();
+  map.put("name","CircularMenu");
+  map.put("detail","try");
+  map.put("subname","CircularMenu");
+  map.put("class","CircularFloatingActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
   map.put("name","DynamicGrid");
   map.put("detail","try");
   map.put("subname","to DynamicGrid");
@@ -842,6 +848,9 @@ BasicUtils.sendIntent(getActivity(),FloatingActionButtonActivity.class);
 break;
 case "FloatingActionButtonDemo":
 BasicUtils.sendIntent(getActivity(),FloatingActionButtonDemo.class);
+break;
+case "CircularFloatingActivity":
+BasicUtils.sendIntent(getActivity(),CircularFloatingActivity.class);
 break;
 }
 }
