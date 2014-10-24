@@ -1,0 +1,5 @@
+{
+  this.pressedProgressValue=value;
+  circlePaint.setAlpha((int)(DEFAULT_CIRCLE_ALPHA * (1 - value / (circleRadius * 1.22f))));
+  invalidateSelf();
+}

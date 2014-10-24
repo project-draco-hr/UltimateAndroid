@@ -1,0 +1,12 @@
+{
+switch (strokeWidth) {
+case 3:
+    return REGULAR;
+case 2:
+  return THIN;
+case 1:
+return EXTRA_THIN;
+default :
+return THIN;
+}
+}

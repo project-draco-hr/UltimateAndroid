@@ -1,0 +1,5 @@
+{
+  SavedState savedState=(SavedState)state;
+  super.onRestoreInstanceState(savedState.getSuperState());
+  setState(savedState.state);
+}

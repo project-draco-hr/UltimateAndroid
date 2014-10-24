@@ -1,0 +1,10 @@
+int color
+Stroke stroke
+long transformDuration
+long pressedDuration
+int width
+int height
+float iconWidth
+float circleRadius
+float strokeWidth
+float dip1
