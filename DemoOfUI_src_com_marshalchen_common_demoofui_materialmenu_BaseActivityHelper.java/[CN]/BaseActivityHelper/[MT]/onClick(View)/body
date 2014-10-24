@@ -1,0 +1,32 @@
+{
+  final int id=v.getId();
+switch (id) {
+case R.id.animate_item_menu:
+    materialMenuView.animateState(IconState.BURGER);
+  break;
+case R.id.animate_item_arrow:
+materialMenuView.animateState(IconState.ARROW);
+break;
+case R.id.animate_item_x:
+materialMenuView.animateState(IconState.X);
+break;
+case R.id.animate_item_check:
+materialMenuView.animateState(IconState.CHECK);
+break;
+case R.id.switch_item_menu:
+materialMenuView.setState(IconState.BURGER);
+break;
+case R.id.switch_item_arrow:
+materialMenuView.setState(IconState.ARROW);
+break;
+case R.id.switch_item_x:
+materialMenuView.setState(IconState.X);
+break;
+case R.id.switch_item_check:
+materialMenuView.setState(IconState.CHECK);
+break;
+case R.id.material_menu_button:
+setMainState();
+break;
+}
+}
