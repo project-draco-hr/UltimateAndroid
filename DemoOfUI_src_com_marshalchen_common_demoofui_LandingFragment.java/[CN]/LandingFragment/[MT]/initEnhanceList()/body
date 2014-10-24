@@ -36,6 +36,12 @@
   map.put("class","MaterialMenuToolbarActivity");
   enhanceList.add(map);
   map=new HashMap<>();
+  map.put("name","MaterialMenu");
+  map.put("detail","try");
+  map.put("subname","MaterialMenuAppcompatActivity");
+  map.put("class","MaterialMenuAppcompatActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
   map.put("name","DynamicGrid");
   map.put("detail","try");
   map.put("subname","to DynamicGrid");
@@ -860,6 +866,9 @@ BasicUtils.sendIntent(getActivity(),CircularFloatingActivity.class);
 break;
 case "MaterialMenuToolbarActivity":
 BasicUtils.sendIntent(getActivity(),MaterialMenuToolbarActivity.class);
+break;
+case "MaterialMenuAppcompatActivity":
+BasicUtils.sendIntent(getActivity(),MaterialMenuAppcompatActivity.class);
 break;
 }
 }

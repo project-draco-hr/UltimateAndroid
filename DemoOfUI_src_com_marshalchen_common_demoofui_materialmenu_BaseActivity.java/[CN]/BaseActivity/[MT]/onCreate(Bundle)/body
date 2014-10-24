@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_menu_demo);
+  helper=new BaseActivityHelper();
+}
