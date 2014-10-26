@@ -1,0 +1,5 @@
+{
+  if (menu == null) {
+    throw new NullPointerException("MenuAnimationHandler cannot animate without a valid FloatingActionMenu.");
+  }
+}

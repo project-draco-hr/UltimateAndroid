@@ -1,0 +1,13 @@
+{
+  super.draw(canvas);
+  if (getPaddingLeft() != 0 || getPaddingTop() != 0) {
+    int saveCount=canvas.getSaveCount();
+    canvas.save();
+    canvas.translate(getPaddingLeft(),getPaddingTop());
+    drawable.draw(canvas);
+    canvas.restoreToCount(saveCount);
+  }
+ else {
+    drawable.draw(canvas);
+  }
+}

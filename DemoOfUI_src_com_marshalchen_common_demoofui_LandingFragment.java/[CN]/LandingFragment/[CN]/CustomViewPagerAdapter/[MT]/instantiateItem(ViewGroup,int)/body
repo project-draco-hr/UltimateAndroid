@@ -1,4 +1,12 @@
 {
   container.addView(viewpagerList.get(position),0);
+  viewpagerList.get(position).setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      Intent intent=new Intent();
+      intent.setClass(getActivity(),MaterialActivity.class);
+      startActivity(intent);
+    }
+  }
+);
   return viewpagerList.get(position);
 }

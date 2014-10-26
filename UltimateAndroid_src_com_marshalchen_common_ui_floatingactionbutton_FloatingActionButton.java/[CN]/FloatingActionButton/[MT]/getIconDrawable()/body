@@ -1,0 +1,8 @@
+{
+  if (mIcon != 0) {
+    return getResources().getDrawable(mIcon);
+  }
+ else {
+    return new ColorDrawable(Color.TRANSPARENT);
+  }
+}

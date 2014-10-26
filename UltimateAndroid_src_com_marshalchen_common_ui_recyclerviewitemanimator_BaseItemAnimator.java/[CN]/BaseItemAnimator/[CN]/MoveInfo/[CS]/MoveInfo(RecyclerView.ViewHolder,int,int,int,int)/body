@@ -1,0 +1,7 @@
+{
+  this.holder=holder;
+  this.fromX=fromX;
+  this.fromY=fromY;
+  this.toX=toX;
+  this.toY=toY;
+}

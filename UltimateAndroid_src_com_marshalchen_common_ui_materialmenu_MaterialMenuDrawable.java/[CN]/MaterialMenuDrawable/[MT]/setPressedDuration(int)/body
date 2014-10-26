@@ -1,0 +1,3 @@
+{
+  pressedCircle.setDuration(duration);
+}

@@ -1,0 +1,14 @@
+{
+  gridPaint.setAntiAlias(false);
+  gridPaint.setColor(Color.GREEN);
+  gridPaint.setStrokeWidth(1);
+  iconPaint.setAntiAlias(true);
+  iconPaint.setStyle(Style.STROKE);
+  iconPaint.setStrokeWidth(strokeWidth);
+  iconPaint.setColor(color);
+  circlePaint.setAntiAlias(true);
+  circlePaint.setStyle(Style.FILL);
+  circlePaint.setColor(color);
+  circlePaint.setAlpha(DEFAULT_CIRCLE_ALPHA);
+  setBounds(0,0,width,height);
+}

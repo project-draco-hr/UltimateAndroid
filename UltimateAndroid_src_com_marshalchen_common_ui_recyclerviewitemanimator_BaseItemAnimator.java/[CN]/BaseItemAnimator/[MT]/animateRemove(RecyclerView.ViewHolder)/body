@@ -1,0 +1,4 @@
+{
+  mPendingRemovals.add(holder);
+  return true;
+}

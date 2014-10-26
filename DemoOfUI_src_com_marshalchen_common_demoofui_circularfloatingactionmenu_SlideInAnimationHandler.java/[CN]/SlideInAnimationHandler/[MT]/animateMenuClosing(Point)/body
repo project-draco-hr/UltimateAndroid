@@ -1,0 +1,26 @@
+{
+  super.animateMenuOpening(center);
+  setAnimating(true);
+  Animator lastAnimation=null;
+  for (int i=0; i < menu.getSubActionItems().size(); i++) {
+    PropertyValuesHolder pvhY=PropertyValuesHolder.ofFloat(View.TRANSLATION_Y,DIST_Y);
+    PropertyValuesHolder pvhA=PropertyValuesHolder.ofFloat(View.ALPHA,0);
+    final ObjectAnimator animation=ObjectAnimator.ofPropertyValuesHolder(menu.getSubActionItems().get(i).view,pvhY,pvhA);
+    animation.setDuration(DURATION);
+    animation.setInterpolator(new AccelerateInterpolator());
+    animation.addListener(new SubActionItemAnimationListener(menu.getSubActionItems().get(i),ActionType.CLOSING));
+    if (i == 0) {
+      lastAnimation=animation;
+    }
+    if (i <= menu.getSubActionItems().size() / 2) {
+      animation.setStartDelay(i * LAG_BETWEEN_ITEMS);
+    }
+ else {
+      animation.setStartDelay((menu.getSubActionItems().size() - i) * LAG_BETWEEN_ITEMS);
+    }
+    animation.start();
+  }
+  if (lastAnimation != null) {
+    lastAnimation.addListener(new LastAnimationListener());
+  }
+}

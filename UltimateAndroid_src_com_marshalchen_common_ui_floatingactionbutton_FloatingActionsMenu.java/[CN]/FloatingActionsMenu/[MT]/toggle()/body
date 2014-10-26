@@ -1,0 +1,8 @@
+{
+  if (mExpanded) {
+    collapse();
+  }
+ else {
+    expand();
+  }
+}

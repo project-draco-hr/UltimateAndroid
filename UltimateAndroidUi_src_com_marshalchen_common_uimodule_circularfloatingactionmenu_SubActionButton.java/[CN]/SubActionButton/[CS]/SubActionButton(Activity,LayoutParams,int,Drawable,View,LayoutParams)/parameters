@@ -1,0 +1,6 @@
+Activity activity
+LayoutParams layoutParams
+int theme
+Drawable backgroundDrawable
+View contentView
+LayoutParams contentParams

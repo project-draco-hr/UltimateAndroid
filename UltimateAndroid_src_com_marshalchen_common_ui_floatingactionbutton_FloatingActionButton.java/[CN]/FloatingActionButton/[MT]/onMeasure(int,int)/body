@@ -1,0 +1,4 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  setMeasuredDimension(mDrawableSize,mDrawableSize);
+}

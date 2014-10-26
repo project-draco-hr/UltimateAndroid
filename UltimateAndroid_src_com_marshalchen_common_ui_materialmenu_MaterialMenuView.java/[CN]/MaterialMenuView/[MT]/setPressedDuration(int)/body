@@ -1,0 +1,3 @@
+{
+  drawable.setPressedDuration(duration);
+}

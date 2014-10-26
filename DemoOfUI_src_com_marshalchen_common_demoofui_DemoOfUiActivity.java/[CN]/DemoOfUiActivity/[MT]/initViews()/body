@@ -4,7 +4,7 @@
   actionBar.setHomeButtonEnabled(true);
   mPlanetTitles=getResources().getStringArray(R.array.items_name);
   mTitle=mDrawerTitle=getTitle();
-  mDrawerToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.drawable.ic_drawer,R.string.drawer_open,R.string.drawer_close){
+  mDrawerToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.string.drawer_open,R.string.drawer_close){
     /** 
  * Called when a drawer has settled in a completely closed state. 
  */

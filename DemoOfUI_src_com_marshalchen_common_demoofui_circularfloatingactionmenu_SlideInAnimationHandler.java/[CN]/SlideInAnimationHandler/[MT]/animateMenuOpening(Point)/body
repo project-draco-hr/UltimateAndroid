@@ -1,0 +1,25 @@
+{
+  super.animateMenuOpening(center);
+  setAnimating(true);
+  Animator lastAnimation=null;
+  for (int i=0; i < menu.getSubActionItems().size(); i++) {
+    menu.getSubActionItems().get(i).view.setAlpha(0);
+    FrameLayout.LayoutParams params=(FrameLayout.LayoutParams)menu.getSubActionItems().get(i).view.getLayoutParams();
+    params.setMargins(menu.getSubActionItems().get(i).x,menu.getSubActionItems().get(i).y + DIST_Y,0,0);
+    menu.getSubActionItems().get(i).view.setLayoutParams(params);
+    PropertyValuesHolder pvhY=PropertyValuesHolder.ofFloat(View.TRANSLATION_Y,-DIST_Y);
+    PropertyValuesHolder pvhA=PropertyValuesHolder.ofFloat(View.ALPHA,1);
+    final ObjectAnimator animation=ObjectAnimator.ofPropertyValuesHolder(menu.getSubActionItems().get(i).view,pvhY,pvhA);
+    animation.setDuration(DURATION);
+    animation.setInterpolator(new DecelerateInterpolator());
+    animation.addListener(new SubActionItemAnimationListener(menu.getSubActionItems().get(i),ActionType.OPENING));
+    if (i == 0) {
+      lastAnimation=animation;
+    }
+    animation.setStartDelay(Math.abs(menu.getSubActionItems().size() / 2 - i) * LAG_BETWEEN_ITEMS);
+    animation.start();
+  }
+  if (lastAnimation != null) {
+    lastAnimation.addListener(new LastAnimationListener());
+  }
+}

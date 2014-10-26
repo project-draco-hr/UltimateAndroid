@@ -1,0 +1,4 @@
+{
+  this.subActionItem=subActionItem;
+  this.actionType=actionType;
+}
