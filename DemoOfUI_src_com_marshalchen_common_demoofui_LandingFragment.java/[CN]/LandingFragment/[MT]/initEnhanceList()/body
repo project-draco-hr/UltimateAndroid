@@ -569,6 +569,12 @@
   map.put("subname","RecylerViewItem");
   map.put("class","RecyclerViewItemAnimatorActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","PullToZoomActivity");
+  map.put("detail","try");
+  map.put("subname","PullToZoomActivity");
+  map.put("class","PullToZoomActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -869,6 +875,9 @@ BasicUtils.sendIntent(getActivity(),MaterialMenuToolbarActivity.class);
 break;
 case "MaterialMenuAppcompatActivity":
 BasicUtils.sendIntent(getActivity(),MaterialMenuAppcompatActivity.class);
+break;
+case "PullToZoomActivity":
+BasicUtils.sendIntent(getActivity(),PullToZoomActivity.class);
 break;
 }
 }
