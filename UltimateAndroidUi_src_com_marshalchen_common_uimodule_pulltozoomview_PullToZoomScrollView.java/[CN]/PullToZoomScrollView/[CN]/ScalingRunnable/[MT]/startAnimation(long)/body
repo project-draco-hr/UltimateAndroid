@@ -1,0 +1,7 @@
+{
+  mStartTime=SystemClock.currentThreadTimeMillis();
+  mDuration=paramLong;
+  mScale=((float)(mZoomContainer.getBottom()) / mZoomHeight);
+  mIsFinished=false;
+  post(this);
+}

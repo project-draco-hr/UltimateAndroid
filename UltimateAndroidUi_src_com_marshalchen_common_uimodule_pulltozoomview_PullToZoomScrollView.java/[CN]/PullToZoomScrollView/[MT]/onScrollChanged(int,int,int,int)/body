@@ -1,0 +1,21 @@
+{
+  super.onScrollChanged(left,top,oldLeft,oldTop);
+  if (isEnableZoom) {
+    isHeaderTop=getScrollY() <= 0;
+    Log.d(TAG,"onScrollChanged --> ");
+    if (isParallax) {
+      float f=mZoomHeight - mZoomContainer.getBottom() + getScrollY();
+      Log.d(TAG,"f = " + f);
+      if ((f > 0.0F) && (f < mZoomHeight)) {
+        int i=(int)(0.65D * f);
+        mHeaderContainer.scrollTo(0,-i);
+      }
+ else       if (mHeaderContainer.getScrollY() != 0) {
+        mHeaderContainer.scrollTo(0,0);
+      }
+    }
+  }
+  if (mOnScrollListener != null) {
+    mOnScrollListener.onScrollChanged(left,top,oldLeft,oldTop);
+  }
+}
