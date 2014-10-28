@@ -1,0 +1,15 @@
+{
+  String stateName="Undefined";
+switch (scrollState) {
+case SCROLL_STATE_IDLE:
+    stateName="Idle";
+  break;
+case SCROLL_STATE_DRAGGING:
+stateName="Dragging";
+break;
+case SCROLL_STATE_SETTLING:
+stateName="Flinging";
+break;
+}
+mStateText.setText(stateName);
+}

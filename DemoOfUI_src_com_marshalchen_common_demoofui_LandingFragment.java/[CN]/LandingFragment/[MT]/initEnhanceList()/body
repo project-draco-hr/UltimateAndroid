@@ -575,6 +575,12 @@
   map.put("subname","PullToZoomActivity");
   map.put("class","PullToZoomActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","TwoWayView");
+  map.put("detail","try");
+  map.put("subname","TwoWayViewActivity");
+  map.put("class","TwoWayViewActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -878,6 +884,9 @@ BasicUtils.sendIntent(getActivity(),MaterialMenuAppcompatActivity.class);
 break;
 case "PullToZoomActivity":
 BasicUtils.sendIntent(getActivity(),PullToZoomActivity.class);
+break;
+case "TwoWayViewActivity":
+BasicUtils.sendIntent(getActivity(),TwoWayViewActivity.class);
 break;
 }
 }

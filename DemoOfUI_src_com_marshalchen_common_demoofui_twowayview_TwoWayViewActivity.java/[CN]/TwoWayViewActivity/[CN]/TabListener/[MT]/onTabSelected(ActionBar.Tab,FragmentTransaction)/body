@@ -1,0 +1,11 @@
+{
+  mFragment=(LayoutFragment)getSupportFragmentManager().findFragmentByTag(mTag);
+  if (mFragment == null) {
+    mFragment=(LayoutFragment)LayoutFragment.newInstance(mLayoutId);
+    ft.add(R.id.content,mFragment,mTag);
+  }
+ else {
+    ft.attach(mFragment);
+  }
+  mSelectedLayoutId=mFragment.getLayoutId();
+}
