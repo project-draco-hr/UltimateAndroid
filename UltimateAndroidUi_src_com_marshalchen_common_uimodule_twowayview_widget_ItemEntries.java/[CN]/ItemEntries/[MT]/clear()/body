@@ -1,0 +1,5 @@
+{
+  if (mItemEntries != null) {
+    Arrays.fill(mItemEntries,null);
+  }
+}

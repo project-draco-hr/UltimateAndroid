@@ -1,0 +1,3 @@
+{
+  return (mItemEntries != null ? mItemEntries.getItemEntry(position) : null);
+}

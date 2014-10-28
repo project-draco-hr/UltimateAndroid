@@ -1,0 +1,6 @@
+{
+  final int x=(int)event.getX();
+  final int y=(int)event.getY();
+  mTargetChild=mHostView.findChildViewUnder(x,y);
+  return (mTargetChild != null);
+}

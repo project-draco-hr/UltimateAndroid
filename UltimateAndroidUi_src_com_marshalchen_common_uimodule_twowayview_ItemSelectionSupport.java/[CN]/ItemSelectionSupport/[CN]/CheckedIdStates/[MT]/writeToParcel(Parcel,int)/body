@@ -1,0 +1,8 @@
+{
+  final int size=size();
+  parcel.writeInt(size);
+  for (int i=0; i < size; i++) {
+    parcel.writeLong(keyAt(i));
+    parcel.writeInt(valueAt(i));
+  }
+}

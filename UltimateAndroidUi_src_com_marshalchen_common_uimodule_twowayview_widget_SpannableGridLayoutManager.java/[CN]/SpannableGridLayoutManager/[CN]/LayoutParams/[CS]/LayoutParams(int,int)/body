@@ -1,0 +1,5 @@
+{
+  super(width,height);
+  rowSpan=DEFAULT_SPAN;
+  colSpan=DEFAULT_SPAN;
+}

@@ -1,0 +1,4 @@
+{
+  startLane=laneInfo.startLane;
+  anchorLane=laneInfo.anchorLane;
+}

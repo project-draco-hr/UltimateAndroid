@@ -1,0 +1,21 @@
+{
+  if (state.getItemCount() == 0) {
+    return;
+  }
+  makeAndAddView(position,Direction.END,recycler);
+  final int extraSpaceBefore;
+  final int extraSpaceAfter;
+  final int extraSpace=getExtraLayoutSpace(state);
+  if (state.getTargetScrollPosition() < position) {
+    extraSpaceAfter=0;
+    extraSpaceBefore=extraSpace;
+  }
+ else {
+    extraSpaceAfter=extraSpace;
+    extraSpaceBefore=0;
+  }
+  fillBefore(position - 1,recycler,extraSpaceBefore);
+  adjustViewsStartOrEnd();
+  fillAfter(position + 1,recycler,state,extraSpaceAfter);
+  correctTooHigh(getChildCount(),recycler,state);
+}

@@ -1,0 +1,11 @@
+{
+  if (mInnerEnd != null) {
+    return mInnerEnd;
+  }
+  mInnerEnd=Integer.MAX_VALUE;
+  for (int i=0; i < mLanes.length; i++) {
+    final Rect laneRect=mLanes[i];
+    mInnerEnd=Math.min(mInnerEnd,mIsVertical ? laneRect.bottom : laneRect.right);
+  }
+  return mInnerEnd;
+}

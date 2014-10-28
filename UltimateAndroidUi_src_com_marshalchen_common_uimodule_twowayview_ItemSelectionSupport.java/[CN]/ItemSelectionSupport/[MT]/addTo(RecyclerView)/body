@@ -1,0 +1,10 @@
+{
+  ItemSelectionSupport itemSelectionSupport=from(recyclerView);
+  if (itemSelectionSupport == null) {
+    itemSelectionSupport=new ItemSelectionSupport(recyclerView);
+    recyclerView.setTag(R.id.twowayview_item_selection_support,itemSelectionSupport);
+  }
+ else {
+  }
+  return itemSelectionSupport;
+}

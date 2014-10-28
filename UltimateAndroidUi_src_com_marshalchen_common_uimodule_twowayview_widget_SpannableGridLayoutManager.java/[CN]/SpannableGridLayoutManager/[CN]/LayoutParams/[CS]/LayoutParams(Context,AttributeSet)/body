@@ -1,0 +1,7 @@
+{
+  super(c,attrs);
+  TypedArray a=c.obtainStyledAttributes(attrs,R.styleable.twowayview_SpannableGridViewChild);
+  colSpan=Math.max(DEFAULT_SPAN,a.getInt(R.styleable.twowayview_SpannableGridViewChild_twowayview_colSpan,-1));
+  rowSpan=Math.max(DEFAULT_SPAN,a.getInt(R.styleable.twowayview_SpannableGridViewChild_twowayview_rowSpan,-1));
+  a.recycle();
+}

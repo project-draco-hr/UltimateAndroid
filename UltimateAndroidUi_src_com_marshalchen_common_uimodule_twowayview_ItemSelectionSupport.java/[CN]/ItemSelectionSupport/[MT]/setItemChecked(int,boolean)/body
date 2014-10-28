@@ -1,0 +1,46 @@
+{
+  if (mChoiceMode == ChoiceMode.NONE) {
+    return;
+  }
+  final Adapter adapter=mRecyclerView.getAdapter();
+  if (mChoiceMode == ChoiceMode.MULTIPLE) {
+    boolean oldValue=mCheckedStates.get(position);
+    mCheckedStates.put(position,checked);
+    if (mCheckedIdStates != null && adapter.hasStableIds()) {
+      if (checked) {
+        mCheckedIdStates.put(adapter.getItemId(position),position);
+      }
+ else {
+        mCheckedIdStates.delete(adapter.getItemId(position));
+      }
+    }
+    if (oldValue != checked) {
+      if (checked) {
+        mCheckedCount++;
+      }
+ else {
+        mCheckedCount--;
+      }
+    }
+  }
+ else {
+    boolean updateIds=mCheckedIdStates != null && adapter.hasStableIds();
+    if (checked || isItemChecked(position)) {
+      mCheckedStates.clear();
+      if (updateIds) {
+        mCheckedIdStates.clear();
+      }
+    }
+    if (checked) {
+      mCheckedStates.put(position,true);
+      if (updateIds) {
+        mCheckedIdStates.put(adapter.getItemId(position),position);
+      }
+      mCheckedCount=1;
+    }
+ else     if (mCheckedStates.size() == 0 || !mCheckedStates.valueAt(0)) {
+      mCheckedCount=0;
+    }
+  }
+  updateOnScreenCheckedViews();
+}

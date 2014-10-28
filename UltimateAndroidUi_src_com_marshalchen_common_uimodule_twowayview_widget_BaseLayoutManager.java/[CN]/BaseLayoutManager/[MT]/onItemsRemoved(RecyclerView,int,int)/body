@@ -1,0 +1,4 @@
+{
+  handleUpdate(positionStart,itemCount,UpdateOp.REMOVE);
+  super.onItemsRemoved(recyclerView,positionStart,itemCount);
+}

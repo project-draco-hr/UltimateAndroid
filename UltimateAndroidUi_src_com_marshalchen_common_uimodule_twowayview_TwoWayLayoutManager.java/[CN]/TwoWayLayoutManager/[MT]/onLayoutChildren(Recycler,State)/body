@@ -1,0 +1,18 @@
+{
+  final ItemSelectionSupport itemSelection=ItemSelectionSupport.from(mRecyclerView);
+  if (itemSelection != null) {
+    final Bundle itemSelectionState=getPendingItemSelectionState();
+    if (itemSelectionState != null) {
+      itemSelection.onRestoreInstanceState(itemSelectionState);
+    }
+    if (state.didStructureChange()) {
+      itemSelection.onAdapterDataChanged();
+    }
+  }
+  final int anchorItemPosition=getAnchorItemPosition(state);
+  detachAndScrapAttachedViews(recycler);
+  fillSpecific(anchorItemPosition,recycler,state);
+  onLayoutScrapList(recycler,state);
+  setPendingScrollPositionWithOffset(RecyclerView.NO_POSITION,0);
+  mPendingSavedState=null;
+}

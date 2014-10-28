@@ -1,0 +1,11 @@
+{
+  if (mItemEntries == null || position >= mItemEntries.length) {
+    return;
+  }
+  for (int i=position; i < mItemEntries.length; i++) {
+    final ItemEntry entry=mItemEntries[i];
+    if (entry != null) {
+      entry.invalidateLane();
+    }
+  }
+}

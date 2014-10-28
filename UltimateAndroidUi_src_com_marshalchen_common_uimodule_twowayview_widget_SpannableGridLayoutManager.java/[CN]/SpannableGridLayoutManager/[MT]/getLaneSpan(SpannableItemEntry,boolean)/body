@@ -1,0 +1,3 @@
+{
+  return (isVertical ? entry.colSpan : entry.rowSpan);
+}
