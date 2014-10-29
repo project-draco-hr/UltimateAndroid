@@ -1,0 +1,8 @@
+{
+  for (int i=0; i < getChildCount(); i++) {
+    if (positionOfIndex(i) == position) {
+      return getChildAt(i);
+    }
+  }
+  return null;
+}

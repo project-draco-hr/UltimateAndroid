@@ -581,6 +581,12 @@
   map.put("subname","TwoWayViewActivity");
   map.put("class","TwoWayViewActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","RecyclerView");
+  map.put("detail","try");
+  map.put("subname","RecyclerViewPlayGround");
+  map.put("class","RecyclerViewPlayGroundActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -887,6 +893,9 @@ BasicUtils.sendIntent(getActivity(),PullToZoomActivity.class);
 break;
 case "TwoWayViewActivity":
 BasicUtils.sendIntent(getActivity(),TwoWayViewActivity.class);
+break;
+case "RecyclerViewPlayGroundActivity":
+BasicUtils.sendIntent(getActivity(),RecyclerViewPlayGroundActivity.class);
 break;
 }
 }

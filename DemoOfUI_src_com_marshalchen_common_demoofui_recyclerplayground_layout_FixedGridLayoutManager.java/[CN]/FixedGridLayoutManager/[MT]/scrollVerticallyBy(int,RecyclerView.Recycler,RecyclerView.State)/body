@@ -1,0 +1,57 @@
+{
+  if (getChildCount() == 0) {
+    return 0;
+  }
+  final View topView=getChildAt(0);
+  final View bottomView=getChildAt(getChildCount() - 1);
+  int viewSpan=getDecoratedBottom(bottomView) - getDecoratedTop(topView);
+  if (viewSpan <= getVerticalSpace()) {
+    return 0;
+  }
+  int delta;
+  int maxRowCount=getTotalRowCount();
+  boolean topBoundReached=getFirstVisibleRow() == 0;
+  boolean bottomBoundReached=getLastVisibleRow() >= maxRowCount;
+  if (dy > 0) {
+    if (bottomBoundReached) {
+      int bottomOffset;
+      if (rowOfIndex(getChildCount() - 1) >= (maxRowCount - 1)) {
+        bottomOffset=getVerticalSpace() - getDecoratedBottom(bottomView) + getPaddingBottom();
+      }
+ else {
+        bottomOffset=getVerticalSpace() - (getDecoratedBottom(bottomView) + mDecoratedChildHeight) + getPaddingBottom();
+      }
+      delta=Math.max(-dy,bottomOffset);
+    }
+ else {
+      delta=-dy;
+    }
+  }
+ else {
+    if (topBoundReached) {
+      int topOffset=-getDecoratedTop(topView) + getPaddingTop();
+      delta=Math.min(-dy,topOffset);
+    }
+ else {
+      delta=-dy;
+    }
+  }
+  offsetChildrenVertical(delta);
+  if (dy > 0) {
+    if (getDecoratedBottom(topView) < 0 && !bottomBoundReached) {
+      fillGrid(DIRECTION_DOWN,recycler);
+    }
+ else     if (!bottomBoundReached) {
+      fillGrid(DIRECTION_NONE,recycler);
+    }
+  }
+ else {
+    if (getDecoratedTop(topView) > 0 && !topBoundReached) {
+      fillGrid(DIRECTION_UP,recycler);
+    }
+ else     if (!topBoundReached) {
+      fillGrid(DIRECTION_NONE,recycler);
+    }
+  }
+  return -delta;
+}
