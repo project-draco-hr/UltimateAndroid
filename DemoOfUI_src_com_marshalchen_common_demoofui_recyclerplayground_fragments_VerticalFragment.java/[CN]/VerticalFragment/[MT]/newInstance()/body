@@ -1,0 +1,6 @@
+{
+  VerticalFragment fragment=new VerticalFragment();
+  Bundle args=new Bundle();
+  fragment.setArguments(args);
+  return fragment;
+}

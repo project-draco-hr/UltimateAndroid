@@ -1,0 +1,15 @@
+{
+  final Rect startRect=mLanes[laneInfo.startLane];
+  final int anchorLane=(direction == Direction.END ? laneInfo.anchorLane : laneInfo.startLane);
+  final Rect anchorRect=mLanes[anchorLane];
+  if (mIsVertical) {
+    outRect.left=startRect.left;
+    outRect.top=(direction == Direction.END ? anchorRect.bottom : anchorRect.top - childHeight);
+  }
+ else {
+    outRect.top=startRect.top;
+    outRect.left=(direction == Direction.END ? anchorRect.right : anchorRect.left - childWidth);
+  }
+  outRect.right=outRect.left + childWidth;
+  outRect.bottom=outRect.top + childHeight;
+}

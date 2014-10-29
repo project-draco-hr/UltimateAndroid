@@ -1,0 +1,16 @@
+{
+  if (position >= getItemCount()) {
+    Log.e(TAG,"Cannot scroll to " + position + ", item count is "+ getItemCount());
+    return;
+  }
+  LinearSmoothScroller scroller=new LinearSmoothScroller(recyclerView.getContext()){
+    @Override public PointF computeScrollVectorForPosition(    int targetPosition){
+      final int rowOffset=getGlobalRowOfPosition(targetPosition) - getGlobalRowOfPosition(mFirstVisiblePosition);
+      final int columnOffset=getGlobalColumnOfPosition(targetPosition) - getGlobalColumnOfPosition(mFirstVisiblePosition);
+      return new PointF(columnOffset * mDecoratedChildWidth,rowOffset * mDecoratedChildHeight);
+    }
+  }
+;
+  scroller.setTargetPosition(position);
+  startSmoothScroll(scroller);
+}

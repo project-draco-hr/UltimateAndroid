@@ -1,0 +1,4 @@
+{
+  mTotalColumnCount=count;
+  requestLayout();
+}

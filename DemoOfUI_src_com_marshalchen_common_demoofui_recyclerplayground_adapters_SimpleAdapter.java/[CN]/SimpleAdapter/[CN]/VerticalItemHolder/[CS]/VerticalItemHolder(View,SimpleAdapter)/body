@@ -1,0 +1,9 @@
+{
+  super(itemView);
+  itemView.setOnClickListener(this);
+  mAdapter=adapter;
+  mHomeScore=(TextView)itemView.findViewById(R.id.text_score_home);
+  mAwayScore=(TextView)itemView.findViewById(R.id.text_score_away);
+  mHomeName=(TextView)itemView.findViewById(R.id.text_team_home);
+  mAwayName=(TextView)itemView.findViewById(R.id.text_team_away);
+}

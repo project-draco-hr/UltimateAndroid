@@ -1,0 +1,12 @@
+{
+  if (getChildCount() == 0) {
+    return;
+  }
+  int delta=mLayoutStart - getStartWithPadding();
+  if (delta < 0) {
+    delta=0;
+  }
+  if (delta != 0) {
+    offsetChildren(-delta);
+  }
+}

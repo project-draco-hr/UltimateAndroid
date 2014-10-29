@@ -1,0 +1,7 @@
+{
+  LayoutFragment fragment=new LayoutFragment();
+  Bundle args=new Bundle();
+  args.putInt(ARG_LAYOUT_ID,layoutId);
+  fragment.setArguments(args);
+  return fragment;
+}

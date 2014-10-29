@@ -1,0 +1,9 @@
+{
+  final ItemSelectionSupport itemSelection=from(recyclerView);
+  if (itemSelection == null) {
+    return;
+  }
+  itemSelection.clearChoices();
+  recyclerView.removeOnItemTouchListener(itemSelection.mTouchListener);
+  recyclerView.setTag(R.id.twowayview_item_selection_support,null);
+}

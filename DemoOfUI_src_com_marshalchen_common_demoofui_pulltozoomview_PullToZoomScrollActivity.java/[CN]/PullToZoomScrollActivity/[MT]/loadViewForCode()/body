@@ -1,0 +1,9 @@
+{
+  PullToZoomScrollView scrollView=(PullToZoomScrollView)findViewById(R.id.scroll_view);
+  View headView=LayoutInflater.from(this).inflate(R.layout.pull_to_zoom_profile_head_view,null,false);
+  View zoomView=LayoutInflater.from(this).inflate(R.layout.pull_to_zoom_profile_zoom_view,null,false);
+  View contentView=LayoutInflater.from(this).inflate(R.layout.pull_to_zoom_profile_content_view,null,false);
+  scrollView.setHeaderContainer(headView);
+  scrollView.setZoomView(zoomView);
+  scrollView.setContentContainerView(contentView);
+}

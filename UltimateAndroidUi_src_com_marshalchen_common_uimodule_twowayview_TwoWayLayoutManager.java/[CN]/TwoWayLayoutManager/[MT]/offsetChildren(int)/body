@@ -1,0 +1,10 @@
+{
+  if (mIsVertical) {
+    offsetChildrenVertical(offset);
+  }
+ else {
+    offsetChildrenHorizontal(offset);
+  }
+  mLayoutStart+=offset;
+  mLayoutEnd+=offset;
+}

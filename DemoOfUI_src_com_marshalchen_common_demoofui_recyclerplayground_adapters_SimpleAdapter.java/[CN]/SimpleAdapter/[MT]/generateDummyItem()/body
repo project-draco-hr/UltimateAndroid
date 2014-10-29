@@ -1,0 +1,4 @@
+{
+  Random random=new Random();
+  return new GameItem("Upset Home","Upset Away",random.nextInt(100),random.nextInt(100));
+}

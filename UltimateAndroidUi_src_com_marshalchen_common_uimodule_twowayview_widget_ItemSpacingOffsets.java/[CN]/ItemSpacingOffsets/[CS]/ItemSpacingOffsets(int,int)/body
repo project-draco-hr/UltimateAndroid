@@ -1,0 +1,7 @@
+{
+  if (verticalSpacing < 0 || horizontalSpacing < 0) {
+    throw new IllegalArgumentException("Spacings should be equal or greater than 0");
+  }
+  mVerticalSpacing=verticalSpacing;
+  mHorizontalSpacing=horizontalSpacing;
+}

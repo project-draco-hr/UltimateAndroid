@@ -1,0 +1,6 @@
+{
+  if (mPendingSavedState != null) {
+    return mPendingSavedState.itemSelectionState;
+  }
+  return null;
+}

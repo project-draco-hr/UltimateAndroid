@@ -1,0 +1,14 @@
+{
+  if (layout.isVertical()) {
+    final int paddingLeft=layout.getPaddingLeft();
+    final int paddingRight=layout.getPaddingRight();
+    final int width=layout.getWidth() - paddingLeft - paddingRight;
+    return width / laneCount;
+  }
+ else {
+    final int paddingTop=layout.getPaddingTop();
+    final int paddingBottom=layout.getPaddingBottom();
+    final int height=layout.getHeight() - paddingTop - paddingBottom;
+    return height / laneCount;
+  }
+}

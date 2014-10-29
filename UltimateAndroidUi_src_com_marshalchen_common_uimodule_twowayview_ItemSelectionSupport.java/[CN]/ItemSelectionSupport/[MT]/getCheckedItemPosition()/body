@@ -1,0 +1,6 @@
+{
+  if (mChoiceMode == ChoiceMode.SINGLE && mCheckedStates != null && mCheckedStates.size() == 1) {
+    return mCheckedStates.keyAt(0);
+  }
+  return INVALID_POSITION;
+}

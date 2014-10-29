@@ -1,0 +1,7 @@
+{
+  if (!mNavigationDrawerFragment.isDrawerOpen()) {
+    restoreActionBar();
+    return true;
+  }
+  return super.onCreateOptionsMenu(menu);
+}

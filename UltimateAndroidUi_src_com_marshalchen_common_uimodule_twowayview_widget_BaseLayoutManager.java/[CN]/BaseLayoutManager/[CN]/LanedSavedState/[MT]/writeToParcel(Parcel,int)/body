@@ -1,0 +1,15 @@
+{
+  super.writeToParcel(out,flags);
+  out.writeInt(orientation.ordinal());
+  out.writeInt(laneSize);
+  final int laneCount=(lanes != null ? lanes.length : 0);
+  out.writeInt(laneCount);
+  for (int i=0; i < laneCount; i++) {
+    lanes[i].writeToParcel(out,Rect.PARCELABLE_WRITE_RETURN_VALUE);
+  }
+  final int itemEntriesCount=(itemEntries != null ? itemEntries.size() : 0);
+  out.writeInt(itemEntriesCount);
+  for (int i=0; i < itemEntriesCount; i++) {
+    out.writeParcelable(itemEntries.getItemEntry(i),flags);
+  }
+}

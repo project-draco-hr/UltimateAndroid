@@ -1,0 +1,8 @@
+{
+  for (int l=start; l < start + count; l++) {
+    if (Rect.intersects(mLanes[l],r)) {
+      return true;
+    }
+  }
+  return false;
+}

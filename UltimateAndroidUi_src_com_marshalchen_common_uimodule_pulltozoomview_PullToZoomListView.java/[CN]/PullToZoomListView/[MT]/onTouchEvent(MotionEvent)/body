@@ -1,0 +1,60 @@
+{
+  Log.d(TAG,"action = " + (0xFF & paramMotionEvent.getAction()));
+  if (mHeaderView != null && !isHideHeader && isEnableZoom) {
+switch (0xFF & paramMotionEvent.getAction()) {
+case MotionEvent.ACTION_DOWN:
+case MotionEvent.ACTION_OUTSIDE:
+      if (!mScalingRunnable.isFinished()) {
+        mScalingRunnable.abortAnimation();
+      }
+    mLastMotionY=paramMotionEvent.getY();
+  mActivePointerId=paramMotionEvent.getPointerId(0);
+mMaxScale=(mScreenHeight / mHeaderHeight);
+mLastScale=(mHeaderContainer.getBottom() / mHeaderHeight);
+break;
+case MotionEvent.ACTION_MOVE:
+Log.d(TAG,"mActivePointerId" + mActivePointerId);
+int j=paramMotionEvent.findPointerIndex(mActivePointerId);
+if (j == INVALID_VALUE) {
+Log.e("PullToZoomListView","Invalid pointerId=" + mActivePointerId + " in onTouchEvent");
+}
+ else {
+if (mLastMotionY == -1.0F) {
+mLastMotionY=paramMotionEvent.getY(j);
+}
+if (mHeaderContainer.getBottom() >= mHeaderHeight) {
+ViewGroup.LayoutParams localLayoutParams=mHeaderContainer.getLayoutParams();
+float f=((paramMotionEvent.getY(j) - mLastMotionY + mHeaderContainer.getBottom()) / mHeaderHeight - mLastScale) / 2.0F + mLastScale;
+if ((mLastScale <= 1.0D) && (f < mLastScale)) {
+localLayoutParams.height=mHeaderHeight;
+mHeaderContainer.setLayoutParams(localLayoutParams);
+return super.onTouchEvent(paramMotionEvent);
+}
+mLastScale=Math.min(Math.max(f,1.0F),mMaxScale);
+localLayoutParams.height=((int)(mHeaderHeight * mLastScale));
+if (localLayoutParams.height < mScreenHeight) {
+mHeaderContainer.setLayoutParams(localLayoutParams);
+}
+mLastMotionY=paramMotionEvent.getY(j);
+return true;
+}
+mLastMotionY=paramMotionEvent.getY(j);
+}
+break;
+case MotionEvent.ACTION_UP:
+reset();
+endScaling();
+break;
+case MotionEvent.ACTION_CANCEL:
+int i=paramMotionEvent.getActionIndex();
+mLastMotionY=paramMotionEvent.getY(i);
+mActivePointerId=paramMotionEvent.getPointerId(i);
+break;
+case MotionEvent.ACTION_POINTER_DOWN:
+onSecondaryPointerUp(paramMotionEvent);
+mLastMotionY=paramMotionEvent.getY(paramMotionEvent.findPointerIndex(mActivePointerId));
+break;
+}
+}
+return super.onTouchEvent(paramMotionEvent);
+}

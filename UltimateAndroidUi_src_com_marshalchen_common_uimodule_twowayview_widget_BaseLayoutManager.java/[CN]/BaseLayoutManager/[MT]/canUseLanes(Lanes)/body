@@ -1,0 +1,8 @@
+{
+  if (lanes == null) {
+    return false;
+  }
+  final int laneCount=getLaneCount();
+  final int laneSize=calculateLaneSize(this,laneCount);
+  return (lanes.getOrientation() == getOrientation() && lanes.getCount() == laneCount && lanes.getLaneSize() == laneSize);
+}

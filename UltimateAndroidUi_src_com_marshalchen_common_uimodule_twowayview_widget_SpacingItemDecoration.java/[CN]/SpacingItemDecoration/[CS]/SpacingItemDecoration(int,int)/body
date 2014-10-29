@@ -1,0 +1,3 @@
+{
+  mItemSpacing=new ItemSpacingOffsets(verticalSpacing,horizontalSpacing);
+}

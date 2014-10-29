@@ -1,0 +1,20 @@
+{
+  final int position=getPosition(child);
+  mTempLaneInfo.setUndefined();
+  SpannableItemEntry entry=(SpannableItemEntry)getItemEntryForPosition(position);
+  if (entry != null) {
+    mTempLaneInfo.set(entry.startLane,entry.anchorLane);
+  }
+  if (mTempLaneInfo.isUndefined()) {
+    getLaneForChild(mTempLaneInfo,child,direction);
+  }
+  if (entry == null) {
+    final LayoutParams lp=(LayoutParams)child.getLayoutParams();
+    entry=new SpannableItemEntry(mTempLaneInfo.startLane,mTempLaneInfo.anchorLane,lp.colSpan,lp.rowSpan);
+    setItemEntryForPosition(position,entry);
+  }
+ else {
+    entry.setLane(mTempLaneInfo);
+  }
+  return entry;
+}
