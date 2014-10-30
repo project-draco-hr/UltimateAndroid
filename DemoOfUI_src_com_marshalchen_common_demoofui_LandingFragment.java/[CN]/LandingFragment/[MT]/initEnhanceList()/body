@@ -587,6 +587,12 @@
   map.put("subname","RecyclerViewPlayGround");
   map.put("class","RecyclerViewPlayGroundActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","StickyHeaders");
+  map.put("detail","try");
+  map.put("subname","RecyclerViewStickyHeadersActivity");
+  map.put("class","RecyclerViewStickyHeadersActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -896,6 +902,9 @@ BasicUtils.sendIntent(getActivity(),TwoWayViewActivity.class);
 break;
 case "RecyclerViewPlayGroundActivity":
 BasicUtils.sendIntent(getActivity(),RecyclerViewPlayGroundActivity.class);
+break;
+case "RecyclerViewStickyHeadersActivity":
+BasicUtils.sendIntent(getActivity(),RecyclerViewStickyHeadersActivity.class);
 break;
 }
 }
