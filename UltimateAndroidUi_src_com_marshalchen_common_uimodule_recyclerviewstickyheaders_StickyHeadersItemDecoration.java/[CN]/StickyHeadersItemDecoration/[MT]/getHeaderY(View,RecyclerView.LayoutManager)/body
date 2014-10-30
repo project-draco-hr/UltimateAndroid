@@ -1,0 +1,3 @@
+{
+  return lm.getDecoratedTop(item) < 0 ? 0 : lm.getDecoratedTop(item);
+}

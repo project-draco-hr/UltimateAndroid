@@ -1,0 +1,5 @@
+{
+  this.headersAdapter=adapter;
+  this.overlay=overlay;
+  return this;
+}
