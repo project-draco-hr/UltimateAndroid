@@ -1,0 +1,3 @@
+{
+  headerViewHolder.letter.setText(items.get(position).subSequence(0,1));
+}

@@ -1,0 +1,9 @@
+{
+  Iterator<Long> iterator=headers.keySet().iterator();
+  while (iterator.hasNext()) {
+    long itemId=iterator.next();
+    if (parent.findViewHolderForItemId(itemId) == null) {
+      iterator.remove();
+    }
+  }
+}

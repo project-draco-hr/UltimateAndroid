@@ -1,0 +1,8 @@
+{
+  addedItems.clear();
+  for (  Map.Entry<String,Boolean> entry : items.entrySet()) {
+    if (entry.getValue()) {
+      addedItems.add(entry.getKey());
+    }
+  }
+}
