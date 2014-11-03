@@ -6,13 +6,13 @@ switch (mScaleType) {
 case CENTER:
     mBorderRect.set(mBounds);
   mBorderRect.inset((mBorderWidth) / 2,(mBorderWidth) / 2);
-mShaderMatrix.set(null);
+mShaderMatrix.reset();
 mShaderMatrix.setTranslate((int)((mBorderRect.width() - mBitmapWidth) * 0.5f + 0.5f),(int)((mBorderRect.height() - mBitmapHeight) * 0.5f + 0.5f));
 break;
 case CENTER_CROP:
 mBorderRect.set(mBounds);
 mBorderRect.inset((mBorderWidth) / 2,(mBorderWidth) / 2);
-mShaderMatrix.set(null);
+mShaderMatrix.reset();
 dx=0;
 dy=0;
 if (mBitmapWidth * mBorderRect.height() > mBorderRect.width() * mBitmapHeight) {
@@ -27,7 +27,7 @@ mShaderMatrix.setScale(scale,scale);
 mShaderMatrix.postTranslate((int)(dx + 0.5f) + mBorderWidth,(int)(dy + 0.5f) + mBorderWidth);
 break;
 case CENTER_INSIDE:
-mShaderMatrix.set(null);
+mShaderMatrix.reset();
 if (mBitmapWidth <= mBounds.width() && mBitmapHeight <= mBounds.height()) {
 scale=1.0f;
 }
@@ -68,7 +68,7 @@ break;
 case FIT_XY:
 mBorderRect.set(mBounds);
 mBorderRect.inset((mBorderWidth) / 2,(mBorderWidth) / 2);
-mShaderMatrix.set(null);
+mShaderMatrix.reset();
 mShaderMatrix.setRectToRect(mBitmapRect,mBorderRect,Matrix.ScaleToFit.FILL);
 break;
 }
