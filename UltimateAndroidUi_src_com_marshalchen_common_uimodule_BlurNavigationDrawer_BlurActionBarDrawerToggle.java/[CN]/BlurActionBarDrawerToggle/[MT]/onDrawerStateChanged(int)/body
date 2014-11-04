@@ -1,0 +1,6 @@
+{
+  super.onDrawerStateChanged(newState);
+  if (newState == DrawerLayout.STATE_IDLE && !isOpening) {
+    handleRecycle();
+  }
+}

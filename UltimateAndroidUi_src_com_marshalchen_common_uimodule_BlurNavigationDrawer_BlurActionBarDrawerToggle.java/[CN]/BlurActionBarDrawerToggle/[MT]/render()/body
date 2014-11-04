@@ -1,0 +1,10 @@
+{
+  if (prepareToRender) {
+    prepareToRender=false;
+    Bitmap bitmap=loadBitmapFromView(mDrawerLayout);
+    bitmap=scaleBitmap(bitmap);
+    bitmap=Blur.fastblur(context,bitmap,mBlurRadius,false);
+    mBlurredImageView.setVisibility(View.VISIBLE);
+    mBlurredImageView.setImageBitmap(bitmap);
+  }
+}
