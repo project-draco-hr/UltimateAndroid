@@ -1,0 +1,6 @@
+{
+  if (getDialog() != null) {
+    getDialog().setDismissMessage(null);
+  }
+  super.onDestroyView();
+}
