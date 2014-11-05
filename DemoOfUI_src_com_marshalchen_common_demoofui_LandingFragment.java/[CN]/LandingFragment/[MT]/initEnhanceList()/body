@@ -516,7 +516,7 @@
   map.put("class","DrawableActivity");
   enhanceList.add(map);
   map=new HashMap<>();
-  map.put("name","AndroidWeekView");
+  map.put("name","WeekView");
   map.put("detail","try");
   map.put("subname","AndroidWeekView");
   map.put("class","AndroidWeekViewActivity");
@@ -564,7 +564,7 @@
   map.put("class","RecyclerViewItemAnimatorActivity");
   enhanceList.add(map);
   map=new HashMap<>();
-  map.put("name","PullToZoomActivity");
+  map.put("name","PullToZoom");
   map.put("detail","try");
   map.put("subname","PullToZoomActivity");
   map.put("class","PullToZoomActivity");
@@ -598,6 +598,12 @@
   map.put("detail","try");
   map.put("subname","BlurNavigationDrawerActivity");
   map.put("class","BlurNavigationDrawerActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","BlurDialog");
+  map.put("detail","try");
+  map.put("subname","BlurDialogActivity");
+  map.put("class","BlurDialogActivity");
   enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
@@ -917,6 +923,9 @@ BasicUtils.sendIntent(getActivity(),RoundedImageViewActivity.class);
 break;
 case "BlurNavigationDrawerActivity":
 BasicUtils.sendIntent(getActivity(),BlurNavigationDrawerActivity.class);
+break;
+case "BlurDialogActivity":
+BasicUtils.sendIntent(getActivity(),BlurDialogActivity.class);
 break;
 }
 }

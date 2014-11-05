@@ -1,0 +1,15 @@
+{
+switch (v.getId()) {
+case R.id.button:
+    SampleDialogFragment fragment=new SampleDialogFragment();
+  Bundle args=new Bundle();
+args.putInt(SupportBlurDialogFragment.BUNDLE_KEY_BLUR_RADIUS,mBlurRadiusSeekbar.getProgress());
+args.putFloat(SupportBlurDialogFragment.BUNDLE_KEY_DOWN_SCALE_FACTOR,mDownScaleFactorSeekbar.getProgress());
+fragment.setArguments(args);
+fragment.debug(mDebugMode.isChecked());
+fragment.show(getFragmentManager(),"blur_sample");
+break;
+default :
+break;
+}
+}
