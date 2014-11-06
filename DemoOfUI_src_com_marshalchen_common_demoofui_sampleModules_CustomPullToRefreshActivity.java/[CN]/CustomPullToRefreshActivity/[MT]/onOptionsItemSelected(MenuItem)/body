@@ -1,0 +1,15 @@
+{
+  int id=item.getItemId();
+switch (id) {
+case R.id.action_circles:
+    layout.setRefreshStyle(PullRefreshLayout.STYLE_CIRCLES);
+  return true;
+case R.id.action_water_drop:
+layout.setRefreshStyle(PullRefreshLayout.STYLE_WATER_DROP);
+return true;
+case R.id.action_ring:
+layout.setRefreshStyle(PullRefreshLayout.STYLE_RING);
+return true;
+}
+return super.onOptionsItemSelected(item);
+}

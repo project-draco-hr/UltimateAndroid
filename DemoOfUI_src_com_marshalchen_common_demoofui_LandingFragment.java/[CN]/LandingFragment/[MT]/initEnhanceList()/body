@@ -605,6 +605,12 @@
   map.put("subname","BlurDialogActivity");
   map.put("class","BlurDialogActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","CustomSwipe");
+  map.put("detail","try");
+  map.put("subname","CustomPullToRefreshActivity");
+  map.put("class","CustomPullToRefreshActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -926,6 +932,9 @@ BasicUtils.sendIntent(getActivity(),BlurNavigationDrawerActivity.class);
 break;
 case "BlurDialogActivity":
 BasicUtils.sendIntent(getActivity(),BlurDialogActivity.class);
+break;
+case "CustomPullToRefreshActivity":
+BasicUtils.sendIntent(getActivity(),CustomPullToRefreshActivity.class);
 break;
 }
 }
