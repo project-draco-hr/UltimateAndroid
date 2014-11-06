@@ -1,0 +1,6 @@
+{
+  if (scale != mArrowScale) {
+    mArrowScale=scale;
+    invalidateSelf();
+  }
+}

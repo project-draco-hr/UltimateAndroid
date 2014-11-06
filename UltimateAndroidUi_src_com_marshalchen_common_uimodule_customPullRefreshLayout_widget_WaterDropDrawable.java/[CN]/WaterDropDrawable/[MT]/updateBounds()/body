@@ -1,0 +1,14 @@
+{
+  int height=mHeight;
+  int width=mWidth;
+  if (height > getRefreshLayout().getFinalOffset()) {
+    height=getRefreshLayout().getFinalOffset();
+  }
+  final float percent=height / (float)getRefreshLayout().getFinalOffset();
+  int offsetX=(int)(width / 2 * percent);
+  int offsetY=0;
+  p1.set(offsetX,offsetY);
+  p2.set(width - offsetX,offsetY);
+  p3.set(width / 2 - height,height);
+  p4.set(width / 2 + height,height);
+}

@@ -1,0 +1,9 @@
+{
+  mRefreshView.bringToFront();
+  mTarget.offsetTopAndBottom(offset);
+  mRefreshDrawable.offsetTopAndBottom(offset);
+  mCurrentOffsetTop=mTarget.getTop();
+  if (requiresUpdate && android.os.Build.VERSION.SDK_INT < 11) {
+    invalidate();
+  }
+}

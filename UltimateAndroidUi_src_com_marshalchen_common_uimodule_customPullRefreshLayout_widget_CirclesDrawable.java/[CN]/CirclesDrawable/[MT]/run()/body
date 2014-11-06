@@ -1,0 +1,9 @@
+{
+  mLevel+=80;
+  if (mLevel > MAX_LEVEL)   mLevel=0;
+  if (isRunning) {
+    mHandler.postDelayed(this,20);
+    updateLevel(mLevel);
+    invalidateSelf();
+  }
+}

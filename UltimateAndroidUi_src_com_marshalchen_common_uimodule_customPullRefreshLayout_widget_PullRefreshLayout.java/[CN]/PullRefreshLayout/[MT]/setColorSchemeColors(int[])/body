@@ -1,0 +1,4 @@
+{
+  mColorSchemeColors=colorSchemeColors;
+  mRefreshDrawable.setColorSchemeColors(colorSchemeColors);
+}
