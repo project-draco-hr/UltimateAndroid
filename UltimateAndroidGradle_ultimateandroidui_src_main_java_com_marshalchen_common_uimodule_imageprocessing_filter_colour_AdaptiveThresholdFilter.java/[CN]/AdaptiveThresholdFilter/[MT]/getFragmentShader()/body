@@ -1,0 +1,3 @@
+{
+  return "precision mediump float;\n" + "uniform sampler2D " + UNIFORM_TEXTURE0 + ";\n"+ "uniform sampler2D "+ UNIFORM_TEXTUREBASE+ 1+ ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "void main(){\n"+ "   vec4 luminance = texture2D("+ UNIFORM_TEXTURE0+ ","+ VARYING_TEXCOORD+ ");\n"+ "   vec4 blur = texture2D("+ UNIFORM_TEXTUREBASE+ 1+ ","+ VARYING_TEXCOORD+ ");\n"+ "   gl_FragColor = vec4(vec3(step(blur - 0.05, luminance)), 1.0);\n"+ "}\n";
+}

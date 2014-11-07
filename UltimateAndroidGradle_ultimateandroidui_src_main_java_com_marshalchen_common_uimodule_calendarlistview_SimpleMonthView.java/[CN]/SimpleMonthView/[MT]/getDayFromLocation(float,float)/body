@@ -1,0 +1,10 @@
+{
+  int padding=mPadding;
+  if ((x < padding) || (x > mWidth - mPadding)) {
+    return null;
+  }
+  int yDay=(int)(y - MONTH_HEADER_SIZE) / mRowHeight;
+  int day=1 + ((int)((x - padding) * mNumDays / (mWidth - padding - mPadding)) - findDayOffset()) + yDay * mNumDays;
+  if (mMonth > 11 || mMonth < 0 || CalendarUtils.getDaysInMonth(mMonth,mYear) < day || day < 1)   return null;
+  return new SimpleMonthAdapter.CalendarDay(mYear,mMonth,day);
+}

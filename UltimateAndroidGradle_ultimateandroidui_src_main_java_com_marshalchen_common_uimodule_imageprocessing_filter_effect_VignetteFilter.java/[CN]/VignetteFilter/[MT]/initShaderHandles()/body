@@ -1,0 +1,7 @@
+{
+  super.initShaderHandles();
+  centerHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_CENTER);
+  colourHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_COLOUR);
+  startHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_START);
+  endHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_END);
+}

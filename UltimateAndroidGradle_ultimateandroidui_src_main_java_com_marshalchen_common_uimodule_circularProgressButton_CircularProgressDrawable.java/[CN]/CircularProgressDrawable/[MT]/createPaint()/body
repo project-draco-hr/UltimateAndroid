@@ -1,0 +1,10 @@
+{
+  if (mPaint == null) {
+    mPaint=new Paint();
+    mPaint.setAntiAlias(true);
+    mPaint.setStyle(Paint.Style.STROKE);
+    mPaint.setStrokeWidth(mStrokeWidth);
+    mPaint.setColor(mStrokeColor);
+  }
+  return mPaint;
+}

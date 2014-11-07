@@ -1,0 +1,3 @@
+{
+  super(new float[]{intensity * -2,-intensity,0f,-intensity,1f,intensity,0f,intensity,intensity * 2},3,3);
+}

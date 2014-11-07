@@ -1,0 +1,4 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1fv(filterHandle,filterSize,filter,0);
+}

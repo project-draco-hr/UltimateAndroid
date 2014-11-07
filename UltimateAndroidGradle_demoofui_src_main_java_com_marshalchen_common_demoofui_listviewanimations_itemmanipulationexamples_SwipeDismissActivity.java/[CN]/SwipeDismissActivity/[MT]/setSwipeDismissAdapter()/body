@@ -1,0 +1,5 @@
+{
+  SwipeDismissAdapter adapter=new SwipeDismissAdapter(mAdapter,this);
+  adapter.setAbsListView(getListView());
+  getListView().setAdapter(adapter);
+}

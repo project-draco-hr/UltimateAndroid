@@ -1,0 +1,6 @@
+{
+  String teamName=teamListAdapter.getItem(position);
+  Intent intent=new Intent(this,TeamDetails.class);
+  intent.putExtra("teamName",teamName);
+  startActivity(intent);
+}

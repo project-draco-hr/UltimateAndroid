@@ -1,0 +1,4 @@
+{
+  mStartTrim=startTrim;
+  invalidateSelf();
+}

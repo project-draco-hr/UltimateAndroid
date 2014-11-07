@@ -1,0 +1,5 @@
+{
+  super.initShaderHandles();
+  fractionalSizeHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_FRACTIONAL_SIZE);
+  centerHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_CENTER);
+}

@@ -1,0 +1,5 @@
+{
+  if (mSignatureBitmap != null) {
+    canvas.drawBitmap(mSignatureBitmap,0,0,mPaint);
+  }
+}

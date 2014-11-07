@@ -1,0 +1,5 @@
+{
+  prepareAnimateAdd(holder);
+  mPendingAdditions.add(holder);
+  return true;
+}

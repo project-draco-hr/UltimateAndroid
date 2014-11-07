@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.crop_activity);
+  resultView=(ImageView)findViewById(R.id.result_image);
+}

@@ -1,0 +1,7 @@
+{
+  float than=ratio + dp * 0.3f;
+  rect=new RectF();
+  rect.set(than,than,getWidth() - than,getHeight() - than);
+  scale=(getWidth() - than * 2) / brWidth;
+  invalidate();
+}

@@ -1,0 +1,22 @@
+{
+  if (mGetter != null) {
+    try {
+      return (V)mGetter.invoke(object,(Object[])null);
+    }
+ catch (    IllegalAccessException e) {
+      throw new AssertionError();
+    }
+catch (    InvocationTargetException e) {
+      throw new RuntimeException(e.getCause());
+    }
+  }
+ else   if (mField != null) {
+    try {
+      return (V)mField.get(object);
+    }
+ catch (    IllegalAccessException e) {
+      throw new AssertionError();
+    }
+  }
+  throw new AssertionError();
+}

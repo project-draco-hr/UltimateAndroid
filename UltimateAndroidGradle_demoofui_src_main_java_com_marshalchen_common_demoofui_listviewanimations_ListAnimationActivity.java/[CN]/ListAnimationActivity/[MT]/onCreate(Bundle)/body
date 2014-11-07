@@ -1,0 +1,12 @@
+{
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+    getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+  }
+  if (Build.VERSION.SDK_INT > Build.VERSION_CODES.HONEYCOMB) {
+    getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+    getActionBar().hide();
+  }
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.list_anim_activity_main);
+  bindService(new Intent("com.android.vending.billing.InAppBillingService.BIND"),mServiceConn,Context.BIND_AUTO_CREATE);
+}

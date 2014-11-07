@@ -1,0 +1,4 @@
+{
+  this.adapter=adapter;
+  adapter.registerDataSetObserver(observer);
+}

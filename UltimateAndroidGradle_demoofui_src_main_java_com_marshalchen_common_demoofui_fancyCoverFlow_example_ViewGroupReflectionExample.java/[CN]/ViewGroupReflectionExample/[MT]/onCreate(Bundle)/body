@@ -1,0 +1,9 @@
+{
+  super.onCreate(savedInstanceState);
+  this.setContentView(R.layout.fancy_cover_flow_layout_inflate_example);
+  FancyCoverFlow fancyCoverFlow=(FancyCoverFlow)findViewById(R.id.fancyCoverFlow);
+  fancyCoverFlow.setReflectionEnabled(true);
+  fancyCoverFlow.setReflectionRatio(0.3f);
+  fancyCoverFlow.setReflectionGap(0);
+  fancyCoverFlow.setAdapter(new ViewGroupExampleAdapter());
+}

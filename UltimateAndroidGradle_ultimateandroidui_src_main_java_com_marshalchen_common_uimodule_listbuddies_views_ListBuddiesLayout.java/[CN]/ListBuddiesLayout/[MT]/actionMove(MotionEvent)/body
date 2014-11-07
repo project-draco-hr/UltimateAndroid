@@ -1,0 +1,3 @@
+{
+  cancelClick(event.getY());
+}

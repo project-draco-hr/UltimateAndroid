@@ -1,0 +1,3 @@
+{
+  return "ExtendableListView.ListSavedState{" + Integer.toHexString(System.identityHashCode(this)) + " selectedId="+ selectedId+ " firstId="+ firstId+ " viewTop="+ viewTop+ " position="+ position+ " height="+ height+ "}";
+}

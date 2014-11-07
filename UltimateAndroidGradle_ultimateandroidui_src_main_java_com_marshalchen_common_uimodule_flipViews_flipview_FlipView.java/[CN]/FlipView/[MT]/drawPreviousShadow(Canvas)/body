@@ -1,0 +1,8 @@
+{
+  final float degreesFlipped=getDegreesFlipped();
+  if (degreesFlipped > 90) {
+    final int alpha=(int)(((degreesFlipped - 90) / 90f) * MAX_SHADOW_ALPHA);
+    mShadowPaint.setAlpha(alpha);
+    canvas.drawPaint(mShadowPaint);
+  }
+}

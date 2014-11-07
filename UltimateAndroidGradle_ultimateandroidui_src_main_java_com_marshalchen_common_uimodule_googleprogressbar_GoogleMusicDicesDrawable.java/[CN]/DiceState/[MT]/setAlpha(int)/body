@@ -1,0 +1,5 @@
+{
+  mPaint.setAlpha(alpha);
+  mPaintShadow.setAlpha(alpha);
+  mPaintCircle.setAlpha(alpha);
+}

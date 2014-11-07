@@ -1,0 +1,8 @@
+{
+  mCallback=callback;
+  mPaint.setStrokeCap(Paint.Cap.SQUARE);
+  mPaint.setAntiAlias(true);
+  mPaint.setStyle(Style.STROKE);
+  mArrowPaint.setStyle(Style.FILL);
+  mArrowPaint.setAntiAlias(true);
+}

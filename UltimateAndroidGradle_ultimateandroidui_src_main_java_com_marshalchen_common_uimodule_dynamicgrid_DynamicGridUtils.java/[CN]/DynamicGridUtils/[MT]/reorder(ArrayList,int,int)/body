@@ -1,0 +1,4 @@
+{
+  Object obj=list.remove(indexFrom);
+  list.add(indexTwo,obj);
+}

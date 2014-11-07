@@ -1,0 +1,10 @@
+{
+  if (gamma < 0) {
+    gamma=0;
+  }
+  this.gamma=gamma;
+  this.minIn=minIn;
+  this.minOut=minOut;
+  this.maxIn=maxIn;
+  this.maxOut=maxOut;
+}

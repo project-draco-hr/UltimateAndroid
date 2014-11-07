@@ -1,0 +1,3 @@
+{
+  return R.layout.drag_sort_listview_list_item_bg_handle;
+}

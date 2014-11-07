@@ -1,0 +1,18 @@
+{
+  if (textView == null) {
+    throw new NullPointerException("The textView must not be null");
+  }
+  CharSequence text=!TextUtils.isEmpty(textView.getText()) ? textView.getText() : "";
+  if (text.length() > 0 && text.subSequence(text.length() - 1,text.length()).equals("???")) {
+    text=text.subSequence(0,text.length() - 1);
+  }
+  if (text.length() < 3 || !TextUtils.equals(text.subSequence(text.length() - 3,text.length()),"...")) {
+    text=new SpannableStringBuilder(text).append("...");
+  }
+  this.text=text;
+  this.wave=true;
+  this.textView=textView;
+  this.startPos=this.text.length() - 3;
+  this.endPos=this.text.length();
+  return this;
+}

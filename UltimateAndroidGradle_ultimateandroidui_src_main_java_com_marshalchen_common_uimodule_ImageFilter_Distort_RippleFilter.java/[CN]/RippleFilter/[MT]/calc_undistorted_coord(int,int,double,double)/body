@@ -1,0 +1,7 @@
+{
+  double w=clone.getWidth();
+  un_x=(x + w + shift_amount(y)) % w;
+  un_x=Function.FClampDouble(un_x,0.0,w - 1);
+  un_y=y;
+  return new double[]{un_x,un_y};
+}

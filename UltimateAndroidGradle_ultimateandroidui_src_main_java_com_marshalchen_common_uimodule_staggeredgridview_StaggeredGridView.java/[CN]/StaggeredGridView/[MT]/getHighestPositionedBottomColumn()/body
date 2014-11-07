@@ -1,0 +1,12 @@
+{
+  int columnFound=0;
+  int highestPositionedBottom=Integer.MAX_VALUE;
+  for (int i=0; i < mColumnCount; i++) {
+    int bottom=mColumnBottoms[i];
+    if (bottom < highestPositionedBottom) {
+      highestPositionedBottom=bottom;
+      columnFound=i;
+    }
+  }
+  return columnFound;
+}

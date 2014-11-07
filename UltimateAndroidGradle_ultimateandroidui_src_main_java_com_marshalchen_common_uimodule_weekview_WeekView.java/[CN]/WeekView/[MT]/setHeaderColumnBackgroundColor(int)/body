@@ -1,0 +1,4 @@
+{
+  mHeaderColumnBackgroundColor=headerColumnBackgroundColor;
+  invalidate();
+}

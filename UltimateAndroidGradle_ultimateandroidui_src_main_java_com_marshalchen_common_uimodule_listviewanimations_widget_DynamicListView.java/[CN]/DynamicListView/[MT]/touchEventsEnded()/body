@@ -1,0 +1,44 @@
+{
+  final View mobileView=getViewForId(mMobileItemId);
+  if (mCellIsMobile || mIsWaitingForScrollFinish) {
+    mCellIsMobile=false;
+    mIsWaitingForScrollFinish=false;
+    mIsMobileScrolling=false;
+    mActivePointerId=INVALID_POINTER_ID;
+    setTranscriptMode(mOriginalTranscriptMode);
+    if (mScrollState != OnScrollListener.SCROLL_STATE_IDLE) {
+      mIsWaitingForScrollFinish=true;
+      return;
+    }
+    mHoverCellCurrentBounds.offsetTo(mHoverCellOriginalBounds.left,mobileView.getTop());
+    ObjectAnimator hoverViewAnimator=ObjectAnimator.ofObject(mHoverCell,"bounds",sBoundEvaluator,mHoverCellCurrentBounds);
+    hoverViewAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+      @Override public void onAnimationUpdate(      ValueAnimator valueAnimator){
+        invalidate();
+      }
+    }
+);
+    hoverViewAnimator.addListener(new AnimatorListenerAdapter(){
+      @Override public void onAnimationStart(      Animator animation){
+        setEnabled(false);
+      }
+      @Override public void onAnimationEnd(      Animator animation){
+        mAboveItemId=INVALID_ID;
+        mMobileItemId=INVALID_ID;
+        mBelowItemId=INVALID_ID;
+        mobileView.setVisibility(VISIBLE);
+        mHoverCell=null;
+        setEnabled(true);
+        invalidate();
+        if (mOnItemMovedListener != null) {
+          mOnItemMovedListener.onItemMoved(mLastMovedToIndex - getHeaderViewsCount());
+        }
+      }
+    }
+);
+    hoverViewAnimator.start();
+  }
+ else {
+    touchEventsCancelled();
+  }
+}

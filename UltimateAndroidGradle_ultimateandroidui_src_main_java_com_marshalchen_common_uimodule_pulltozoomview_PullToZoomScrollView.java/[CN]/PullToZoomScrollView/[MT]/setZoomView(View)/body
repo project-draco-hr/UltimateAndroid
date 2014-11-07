@@ -1,0 +1,14 @@
+{
+  if (mZoomContainer != null && view != null) {
+    this.mZoomView=view;
+    mZoomContainer.removeAllViews();
+    mZoomContainer.addView(mZoomView);
+    if (mHeaderContainer != null) {
+      mHeaderContainer.removeAllViews();
+      mHeaderContainer.addView(mZoomContainer);
+      if (mHeadView != null) {
+        mHeaderContainer.addView(mHeadView);
+      }
+    }
+  }
+}

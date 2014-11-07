@@ -1,0 +1,3 @@
+View hoverView
+int childId
+Animator animator

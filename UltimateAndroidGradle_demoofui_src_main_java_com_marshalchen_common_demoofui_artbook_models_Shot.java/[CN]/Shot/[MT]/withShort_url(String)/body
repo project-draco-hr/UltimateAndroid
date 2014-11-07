@@ -1,0 +1,4 @@
+{
+  this.short_url=short_url;
+  return this;
+}

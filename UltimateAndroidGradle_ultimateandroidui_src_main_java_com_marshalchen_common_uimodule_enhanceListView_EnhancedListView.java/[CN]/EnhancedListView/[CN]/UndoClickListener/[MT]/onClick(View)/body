@@ -1,0 +1,31 @@
+{
+  if (!mUndoActions.isEmpty()) {
+switch (mUndoStyle) {
+case SINGLE_POPUP:
+      mUndoActions.get(0).undo();
+    mUndoActions.clear();
+  break;
+case COLLAPSED_POPUP:
+Collections.reverse(mUndoActions);
+for (Undoable undo : mUndoActions) {
+undo.undo();
+}
+mUndoActions.clear();
+break;
+case MULTILEVEL_POPUP:
+mUndoActions.get(mUndoActions.size() - 1).undo();
+mUndoActions.remove(mUndoActions.size() - 1);
+break;
+}
+}
+if (mUndoActions.isEmpty()) {
+if (mUndoPopup.isShowing()) {
+mUndoPopup.dismiss();
+}
+}
+ else {
+changePopupText();
+changeButtonLabel();
+}
+mValidDelayedMsgId++;
+}

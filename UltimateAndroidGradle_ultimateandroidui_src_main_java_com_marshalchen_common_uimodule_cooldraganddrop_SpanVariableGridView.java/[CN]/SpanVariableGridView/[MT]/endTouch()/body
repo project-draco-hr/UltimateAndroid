@@ -1,0 +1,5 @@
+{
+  resetLongClickTransition();
+  removeCallbacks(mLongPressRunnable);
+  mTouchState=TOUCH_STATE_RESTING;
+}

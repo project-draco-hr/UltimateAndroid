@@ -1,0 +1,20 @@
+{
+  super.onCreate(savedInstanceState);
+  setTheme(R.style.LandingTheme);
+  ActionBar actionBar=getSupportActionBar();
+  actionBar.setDisplayHomeAsUpEnabled(true);
+  setContentView(R.layout.smooth_progress_bar_activity);
+  ButterKnife.inject(this);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar,300);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.invisiablViewHandler,0,smoothProgressBar,2000);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar1,2300);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.invisiablViewHandler,0,smoothProgressBar1,4000);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar2,4300);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.invisiablViewHandler,0,smoothProgressBar2,6000);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar3,6300);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.invisiablViewHandler,0,smoothProgressBar3,8000);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar,8300);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar1,8300);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar2,8300);
+  HandlerUtils.sendMessageHandlerDelay(HandlerUtils.visiablViewHandler,0,smoothProgressBar3,8300);
+}

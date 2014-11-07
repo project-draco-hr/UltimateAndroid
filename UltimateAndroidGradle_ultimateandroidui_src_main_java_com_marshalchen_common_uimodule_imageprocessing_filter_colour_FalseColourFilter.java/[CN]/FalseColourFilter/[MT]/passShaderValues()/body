@@ -1,0 +1,5 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform3f(shadowColourHandle,shadowColour[0],shadowColour[1],shadowColour[2]);
+  GLES20.glUniform3f(highlightColourHandle,highlightColour[0],highlightColour[1],highlightColour[2]);
+}

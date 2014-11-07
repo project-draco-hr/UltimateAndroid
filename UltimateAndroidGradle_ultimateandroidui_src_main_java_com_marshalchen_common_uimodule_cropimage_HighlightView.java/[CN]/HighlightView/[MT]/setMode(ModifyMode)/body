@@ -1,0 +1,6 @@
+{
+  if (mode != modifyMode) {
+    modifyMode=mode;
+    viewContext.invalidate();
+  }
+}

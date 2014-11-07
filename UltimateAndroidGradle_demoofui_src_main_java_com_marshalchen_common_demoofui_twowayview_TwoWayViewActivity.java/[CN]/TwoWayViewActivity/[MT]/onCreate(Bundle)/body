@@ -1,0 +1,16 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.two_way_view_activity_main);
+  ActionBar actionBar=getSupportActionBar();
+  actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+  actionBar.setDisplayShowTitleEnabled(false);
+  actionBar.setDisplayShowHomeEnabled(false);
+  mSelectedLayoutId=DEFAULT_LAYOUT;
+  if (savedInstanceState != null) {
+    mSelectedLayoutId=savedInstanceState.getInt(ARG_SELECTED_LAYOUT_ID);
+  }
+  addLayoutTab(actionBar,R.layout.two_way_view_layout_list,R.drawable.two_way_view_ic_list,"list");
+  addLayoutTab(actionBar,R.layout.two_way_view_layout_grid,R.drawable.two_way_view_ic_grid,"grid");
+  addLayoutTab(actionBar,R.layout.two_way_view_layout_staggered_grid,R.drawable.two_way_view_ic_staggered,"staggered");
+  addLayoutTab(actionBar,R.layout.two_way_view_layout_spannable_grid,R.drawable.two_way_view_ic_spannable,"spannable");
+}

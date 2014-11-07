@@ -1,0 +1,19 @@
+{
+  long eventTime=event.getEventTime();
+  if (mLastEventTime == eventTime)   return mLastEventResult;
+  mLastEventTime=eventTime;
+  if (event.getActionMasked() == MotionEvent.ACTION_UP && mIsScrollDetected) {
+    mIsScrollDetected=false;
+    scrollToNearestPosition();
+  }
+  if (getCount() > 0) {
+    MotionEvent eventCopy=MotionEvent.obtain(event);
+    eventCopy.offsetLocation(0,getTranslationY());
+    mLastEventResult=mGestureDetector.onTouchEvent(eventCopy);
+    eventCopy.recycle();
+  }
+ else {
+    mLastEventResult=false;
+  }
+  return mLastEventResult;
+}

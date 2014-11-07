@@ -1,0 +1,5 @@
+{
+  if (sIsLogEnabled) {
+    Log.i(tag,getContent(getCurrentStackTraceElement()) + ">" + msg);
+  }
+}

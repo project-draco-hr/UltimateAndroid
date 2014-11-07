@@ -1,0 +1,6 @@
+{
+  super.onDestroy();
+  if (mServiceConn != null) {
+    unbindService(mServiceConn);
+  }
+}

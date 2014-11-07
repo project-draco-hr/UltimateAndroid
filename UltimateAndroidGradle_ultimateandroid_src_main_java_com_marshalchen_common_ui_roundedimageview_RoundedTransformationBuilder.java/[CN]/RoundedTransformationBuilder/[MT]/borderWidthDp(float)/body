@@ -1,0 +1,4 @@
+{
+  mBorderWidth=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,widthDp,mDisplayMetrics);
+  return this;
+}

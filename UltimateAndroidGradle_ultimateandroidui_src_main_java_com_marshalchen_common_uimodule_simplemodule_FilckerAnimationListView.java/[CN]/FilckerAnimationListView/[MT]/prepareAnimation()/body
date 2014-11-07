@@ -1,0 +1,24 @@
+{
+  yMap.clear();
+  positionMap.clear();
+  beforeVisible.clear();
+  afterVisible.clear();
+  adapter.setMayNotify(false);
+  final int childCount=getChildCount();
+  final int firstVisiblePosition=getFirstVisiblePosition();
+  for (int i=0; i < childCount; i++) {
+    final View child=getChildAt(i);
+    final long id=adapter.getItemId(firstVisiblePosition + i);
+    yMap.put(id,ViewHelper.getY(child));
+    positionMap.put(id,firstVisiblePosition + i);
+  }
+  for (int i=0; i < firstVisiblePosition; i++) {
+    final long id=adapter.getItemId(i);
+    beforeVisible.add(id);
+  }
+  final int count=adapter.getCount();
+  for (int i=firstVisiblePosition + childCount; i < count; i++) {
+    final long id=adapter.getItemId(i);
+    afterVisible.add(id);
+  }
+}

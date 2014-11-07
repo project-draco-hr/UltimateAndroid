@@ -1,0 +1,6 @@
+{
+  if (mIsVertical) {
+    return 0;
+  }
+  return scrollBy(dx,recycler,state);
+}

@@ -1,0 +1,9 @@
+{
+  super.onDetachedFromWindow();
+  if (mPager != null) {
+    updateAdapter(mPager.getAdapter(),null);
+    mPager.setInternalPageChangeListener(null);
+    mPager.setOnAdapterChangeListener(null);
+    mPager=null;
+  }
+}

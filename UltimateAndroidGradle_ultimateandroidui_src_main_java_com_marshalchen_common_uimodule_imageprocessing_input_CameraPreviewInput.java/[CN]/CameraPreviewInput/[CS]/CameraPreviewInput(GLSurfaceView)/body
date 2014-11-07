@@ -1,0 +1,5 @@
+{
+  super();
+  this.camera=createCamera();
+  this.view=view;
+}

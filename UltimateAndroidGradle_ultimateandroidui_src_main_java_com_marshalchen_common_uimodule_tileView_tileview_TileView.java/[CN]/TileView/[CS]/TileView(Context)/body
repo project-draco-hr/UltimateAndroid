@@ -1,0 +1,18 @@
+{
+  super(context);
+  sampleManager=new SampleManager(context,detailManager);
+  addView(sampleManager);
+  tileManager=new TileManager(context,detailManager);
+  addView(tileManager);
+  pathManager=new PathManager(context,detailManager);
+  addView(pathManager);
+  markerManager=new MarkerManager(context,detailManager);
+  addView(markerManager);
+  calloutManager=new CalloutManager(context,detailManager);
+  addView(calloutManager);
+  detailManager.addDetailLevelEventListener(detailLevelEventListener);
+  tileManager.setTileRenderListener(renderListener);
+  addZoomPanListener(zoomPanListener);
+  addGestureListener(gestureListener);
+  requestRender();
+}

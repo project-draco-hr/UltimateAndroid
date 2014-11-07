@@ -1,0 +1,15 @@
+{
+switch (position) {
+case 0:
+    startActivity(new Intent(this,AnimationSampleActivity.class));
+  break;
+case 1:
+startActivity(new Intent(this,AnimationSampleActivity.class));
+break;
+case 2:
+startActivity(new Intent(this,SingleShotActivity.class));
+break;
+case 3:
+startActivity(new Intent(this,MemoryManagementTesting.class));
+}
+}

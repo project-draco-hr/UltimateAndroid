@@ -1,0 +1,8 @@
+{
+  final boolean isVertical=(orientation == Orientation.VERTICAL);
+  if (this.mIsVertical == isVertical) {
+    return;
+  }
+  this.mIsVertical=isVertical;
+  requestLayout();
+}

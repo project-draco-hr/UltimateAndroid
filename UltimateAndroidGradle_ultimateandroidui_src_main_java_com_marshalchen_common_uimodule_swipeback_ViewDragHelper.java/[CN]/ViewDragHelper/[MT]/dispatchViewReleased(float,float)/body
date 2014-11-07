@@ -1,0 +1,8 @@
+{
+  mReleaseInProgress=true;
+  mCallback.onViewReleased(mCapturedView,xvel,yvel);
+  mReleaseInProgress=false;
+  if (mDragState == STATE_DRAGGING) {
+    setDragState(STATE_IDLE);
+  }
+}

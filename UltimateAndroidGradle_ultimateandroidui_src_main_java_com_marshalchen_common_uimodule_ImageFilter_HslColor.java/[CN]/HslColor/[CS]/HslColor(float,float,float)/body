@@ -1,0 +1,5 @@
+{
+  this.h=h;
+  this.s=s;
+  this.l=l;
+}

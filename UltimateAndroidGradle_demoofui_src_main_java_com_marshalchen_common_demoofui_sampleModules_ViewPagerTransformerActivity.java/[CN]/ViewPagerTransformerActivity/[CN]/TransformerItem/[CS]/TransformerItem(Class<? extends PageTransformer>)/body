@@ -1,0 +1,4 @@
+{
+  this.clazz=clazz;
+  title=clazz.getSimpleName();
+}

@@ -1,0 +1,8 @@
+{
+  final int paddingLeft=mLeftHolderWidth;
+  final int childCount=getChildCount();
+  for (int i=0; i < childCount; i++) {
+    Rect frame=computeChildFrame(mExpanded,paddingLeft,i,mChildGap,mChildSize);
+    getChildAt(i).layout(frame.left,frame.top,frame.right,frame.bottom);
+  }
+}

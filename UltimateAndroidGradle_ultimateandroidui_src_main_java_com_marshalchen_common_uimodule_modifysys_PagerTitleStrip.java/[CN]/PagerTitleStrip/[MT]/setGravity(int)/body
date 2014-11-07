@@ -1,0 +1,4 @@
+{
+  mGravity=gravity;
+  requestLayout();
+}

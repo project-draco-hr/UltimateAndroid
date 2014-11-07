@@ -1,0 +1,8 @@
+{
+  List<MeetingStats> meetingStats=new ArrayList<MeetingStats>();
+  List<Meeting> meetings=findAllMeetings(context);
+  for (  Meeting meeting : meetings) {
+    meetingStats.add(meeting.getMeetingStats());
+  }
+  return MeetingStats.getAverageStats(meetingStats);
+}

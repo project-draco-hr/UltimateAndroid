@@ -1,0 +1,5 @@
+{
+  if (mGapView != null && mGapColor != ATTR_NOT_SET) {
+    mGapView.setBackgroundColor(mGapColor);
+  }
+}

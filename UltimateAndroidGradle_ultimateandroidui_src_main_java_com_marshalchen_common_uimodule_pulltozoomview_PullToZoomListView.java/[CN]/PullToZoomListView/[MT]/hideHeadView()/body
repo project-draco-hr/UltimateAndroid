@@ -1,0 +1,6 @@
+{
+  if (mHeaderView != null && !isHideHeader) {
+    isHideHeader=true;
+    removeHeaderView(mHeaderContainer);
+  }
+}

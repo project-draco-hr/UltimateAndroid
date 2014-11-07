@@ -1,0 +1,3 @@
+{
+  return new ColorDrawable(a.getColor(R.styleable.SelectorOptions_selectorColor,android.R.color.darker_gray));
+}

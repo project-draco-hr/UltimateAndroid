@@ -1,0 +1,9 @@
+{
+  if (mBitmap != null) {
+    final Rect bitmapRect=ImageViewUtil.getBitmapRectCenterInside(mBitmap,this);
+    mCropOverlayView.setBitmapRect(bitmapRect);
+  }
+ else {
+    mCropOverlayView.setBitmapRect(EMPTY_RECT);
+  }
+}

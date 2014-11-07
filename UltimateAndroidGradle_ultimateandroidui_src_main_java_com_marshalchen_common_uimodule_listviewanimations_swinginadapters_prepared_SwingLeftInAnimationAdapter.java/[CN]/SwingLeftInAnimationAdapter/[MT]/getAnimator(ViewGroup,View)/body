@@ -1,0 +1,3 @@
+{
+  return ObjectAnimator.ofFloat(view,TRANSLATION_X,0 - parent.getWidth(),0);
+}

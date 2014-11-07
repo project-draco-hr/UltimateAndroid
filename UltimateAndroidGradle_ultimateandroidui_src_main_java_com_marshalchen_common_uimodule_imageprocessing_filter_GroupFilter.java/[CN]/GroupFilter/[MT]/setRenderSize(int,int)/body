@@ -1,0 +1,5 @@
+{
+  for (  BasicFilter filter : filters) {
+    filter.setRenderSize(width,height);
+  }
+}

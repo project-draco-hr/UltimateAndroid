@@ -1,0 +1,4 @@
+{
+  mOriginalY=mRecyclerView.getLayoutManager().getDecoratedTop(holder.itemView);
+  mDeltaY=mRecyclerView.getHeight() - mOriginalY;
+}

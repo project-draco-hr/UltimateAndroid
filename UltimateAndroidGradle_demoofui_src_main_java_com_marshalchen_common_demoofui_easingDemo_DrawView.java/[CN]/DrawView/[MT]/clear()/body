@@ -1,0 +1,5 @@
+{
+  path.reset();
+  start=false;
+  invalidate();
+}

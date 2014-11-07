@@ -1,0 +1,4 @@
+{
+  setRenderer(pipeline);
+  setRenderMode(RENDERMODE_WHEN_DIRTY);
+}

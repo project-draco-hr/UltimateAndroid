@@ -1,0 +1,5 @@
+{
+  removeAllViews();
+  LayoutParams params=new LayoutParams(w,h,Gravity.CENTER_HORIZONTAL);
+  addView(view,params);
+}

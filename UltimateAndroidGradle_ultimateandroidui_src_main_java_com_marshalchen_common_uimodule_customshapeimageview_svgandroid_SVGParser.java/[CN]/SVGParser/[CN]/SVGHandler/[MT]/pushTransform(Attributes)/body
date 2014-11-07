@@ -1,0 +1,9 @@
+{
+  final String transform=getStringAttr("transform",atts);
+  pushed=transform != null;
+  if (pushed) {
+    final Matrix matrix=parseTransform(transform);
+    canvas.save();
+    canvas.concat(matrix);
+  }
+}

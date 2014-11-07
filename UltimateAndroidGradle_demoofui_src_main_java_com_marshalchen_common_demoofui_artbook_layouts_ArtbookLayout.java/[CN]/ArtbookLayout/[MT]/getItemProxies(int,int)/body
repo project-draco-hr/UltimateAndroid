@@ -1,0 +1,13 @@
+{
+  Rect viewport=new Rect(viewPortLeft,viewPortTop,viewPortLeft + width,viewPortTop + height);
+  HashMap<Object,FreeFlowItem> ret=new HashMap<Object,FreeFlowItem>();
+  Iterator<Entry<Object,FreeFlowItem>> it=map.entrySet().iterator();
+  while (it.hasNext()) {
+    Entry<Object,FreeFlowItem> pairs=it.next();
+    FreeFlowItem p=(FreeFlowItem)pairs.getValue();
+    if (Rect.intersects(p.frame,viewport)) {
+      ret.put(pairs.getKey(),p);
+    }
+  }
+  return ret;
+}

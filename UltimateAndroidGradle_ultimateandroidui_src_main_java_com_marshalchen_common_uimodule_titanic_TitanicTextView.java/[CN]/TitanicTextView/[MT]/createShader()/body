@@ -1,0 +1,15 @@
+{
+  if (wave == null) {
+    wave=getResources().getDrawable(R.drawable.titanic_wave_black);
+  }
+  int waveW=wave.getIntrinsicWidth();
+  int waveH=wave.getIntrinsicHeight();
+  Bitmap b=Bitmap.createBitmap(waveW,waveH,Bitmap.Config.ARGB_8888);
+  Canvas c=new Canvas(b);
+  c.drawColor(getCurrentTextColor());
+  wave.setBounds(0,0,waveW,waveH);
+  wave.draw(c);
+  shader=new BitmapShader(b,Shader.TileMode.REPEAT,Shader.TileMode.CLAMP);
+  getPaint().setShader(shader);
+  offsetY=(getHeight() - waveH) / 2;
+}

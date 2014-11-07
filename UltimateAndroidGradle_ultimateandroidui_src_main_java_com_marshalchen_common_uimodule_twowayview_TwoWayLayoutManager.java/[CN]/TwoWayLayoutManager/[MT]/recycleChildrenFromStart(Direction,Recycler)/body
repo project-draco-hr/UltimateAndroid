@@ -1,0 +1,19 @@
+{
+  final int childCount=getChildCount();
+  final int childrenStart=getStartWithPadding();
+  int detachedCount=0;
+  for (int i=0; i < childCount; i++) {
+    final View child=getChildAt(i);
+    final int childEnd=getChildEnd(child);
+    if (childEnd >= childrenStart) {
+      break;
+    }
+    detachedCount++;
+    detachChild(child,direction);
+  }
+  while (--detachedCount >= 0) {
+    final View child=getChildAt(0);
+    removeAndRecycleView(child,recycler);
+    updateLayoutEdgesFromRemovedChild(child,direction);
+  }
+}

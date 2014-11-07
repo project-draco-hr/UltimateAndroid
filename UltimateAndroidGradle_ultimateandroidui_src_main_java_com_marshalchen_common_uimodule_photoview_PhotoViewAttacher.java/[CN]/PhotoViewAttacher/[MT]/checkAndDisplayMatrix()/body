@@ -1,0 +1,5 @@
+{
+  if (checkMatrixBounds()) {
+    setImageViewMatrix(getDrawMatrix());
+  }
+}

@@ -1,0 +1,5 @@
+{
+  Keyframe.FloatKeyframe kfClone=new Keyframe.FloatKeyframe(getFraction(),mValue);
+  kfClone.setInterpolator(getInterpolator());
+  return kfClone;
+}

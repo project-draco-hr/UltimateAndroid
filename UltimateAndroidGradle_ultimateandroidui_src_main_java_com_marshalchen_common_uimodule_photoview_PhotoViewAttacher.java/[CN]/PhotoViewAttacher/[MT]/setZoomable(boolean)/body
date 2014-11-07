@@ -1,0 +1,4 @@
+{
+  mZoomEnabled=zoomable;
+  update();
+}

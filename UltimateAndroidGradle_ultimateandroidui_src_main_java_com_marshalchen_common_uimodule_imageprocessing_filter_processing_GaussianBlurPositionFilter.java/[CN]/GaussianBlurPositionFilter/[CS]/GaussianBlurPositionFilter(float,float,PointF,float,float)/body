@@ -1,0 +1,11 @@
+{
+  super(2);
+  this.blurSize=excludedBlurSize;
+  this.aspectRatio=aspectRatio;
+  this.excludedCirclePoint=excludedCirclePoint;
+  this.excludedCircleRadius=excludedCircleRadius;
+  blur=new GaussianBlurFilter(blurSize);
+  blur.addTarget(this);
+  registerInitialFilter(blur);
+  registerTerminalFilter(blur);
+}

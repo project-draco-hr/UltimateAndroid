@@ -1,0 +1,10 @@
+{
+  boolean isMeasuringGridViewItem=getAbsListView() instanceof GridView && parent.getHeight() == 0;
+  if (position > mLastAnimatedPosition && mShouldAnimate && !isMeasuringGridViewItem) {
+    if (mFirstAnimatedPosition == -1) {
+      mFirstAnimatedPosition=position;
+    }
+    animateView(parent,view);
+    mLastAnimatedPosition=position;
+  }
+}

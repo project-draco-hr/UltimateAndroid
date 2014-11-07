@@ -1,0 +1,11 @@
+{
+switch (item.getItemId()) {
+case R.id.delete_team_from_details:
+    Logger.d("Displaying the delete team dialog box");
+  showDialog(CONFIRM_DELETE_TEAM_DIALOG);
+return true;
+default :
+Logger.e("Unknown menu item selected");
+return false;
+}
+}

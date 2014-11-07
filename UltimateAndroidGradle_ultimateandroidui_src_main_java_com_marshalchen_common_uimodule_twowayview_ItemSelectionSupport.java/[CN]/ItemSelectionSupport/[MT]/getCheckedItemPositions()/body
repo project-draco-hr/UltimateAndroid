@@ -1,0 +1,6 @@
+{
+  if (mChoiceMode != ChoiceMode.NONE) {
+    return mCheckedStates;
+  }
+  return null;
+}

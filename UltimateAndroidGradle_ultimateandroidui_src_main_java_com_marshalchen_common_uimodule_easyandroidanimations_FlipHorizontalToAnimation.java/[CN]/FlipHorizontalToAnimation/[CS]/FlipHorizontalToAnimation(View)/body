@@ -1,0 +1,9 @@
+{
+  this.view=view;
+  flipToView=null;
+  pivot=PIVOT_CENTER;
+  direction=DIRECTION_RIGHT;
+  interpolator=new AccelerateDecelerateInterpolator();
+  duration=DURATION_LONG;
+  listener=null;
+}

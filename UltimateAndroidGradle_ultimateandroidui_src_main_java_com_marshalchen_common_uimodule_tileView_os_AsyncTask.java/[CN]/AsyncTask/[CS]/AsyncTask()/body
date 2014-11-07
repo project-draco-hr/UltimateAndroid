@@ -1,0 +1,31 @@
+{
+  mWorker=new WorkerRunnable<Params,Result>(){
+    public Result call() throws Exception {
+      mTaskInvoked.set(true);
+      Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+      return postResult(doInBackground(mParams));
+    }
+  }
+;
+  mFuture=new FutureTask<Result>(mWorker){
+    @Override protected void done(){
+      try {
+        final Result result=get();
+        postResultIfNotInvoked(result);
+      }
+ catch (      InterruptedException e) {
+        android.util.Log.w(LOG_TAG,e);
+      }
+catch (      ExecutionException e) {
+        throw new RuntimeException("An error occured while executing doInBackground()",e.getCause());
+      }
+catch (      CancellationException e) {
+        postResultIfNotInvoked(null);
+      }
+catch (      Throwable t) {
+        throw new RuntimeException("An error occured while executing " + "doInBackground()",t);
+      }
+    }
+  }
+;
+}

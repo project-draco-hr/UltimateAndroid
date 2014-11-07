@@ -1,0 +1,9 @@
+{
+  for (int x=a_x; x < a_x + squareSize; x++) {
+    for (int y=a_y; y < a_y + squareSize; y++) {
+      if (x < imageIn.getWidth() && y < imageIn.getHeight()) {
+        imageIn.setPixelColor(x,y,a_rgb);
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{
+  return position > mDivPos ? position - 1 : position;
+}

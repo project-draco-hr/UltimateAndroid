@@ -1,0 +1,14 @@
+{
+  if (DBG)   Log.d(TAG,"offsetChildrenTopAndBottom: " + offset + " column:"+ column);
+  final int count=getChildCount();
+  for (int i=0; i < count; i++) {
+    final View v=getChildAt(i);
+    if (v != null && v.getLayoutParams() != null && v.getLayoutParams() instanceof GridLayoutParams) {
+      GridLayoutParams lp=(GridLayoutParams)v.getLayoutParams();
+      if (lp.column == column) {
+        v.offsetTopAndBottom(offset);
+      }
+    }
+  }
+  offsetColumnTopAndBottom(offset,column);
+}

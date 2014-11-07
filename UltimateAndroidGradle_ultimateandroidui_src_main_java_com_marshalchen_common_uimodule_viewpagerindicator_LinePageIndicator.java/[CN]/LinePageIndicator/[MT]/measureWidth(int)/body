@@ -1,0 +1,16 @@
+{
+  float result;
+  int specMode=MeasureSpec.getMode(measureSpec);
+  int specSize=MeasureSpec.getSize(measureSpec);
+  if ((specMode == MeasureSpec.EXACTLY) || (mViewPager == null)) {
+    result=specSize;
+  }
+ else {
+    final int count=mViewPager.getAdapter().getCount();
+    result=getPaddingLeft() + getPaddingRight() + (count * mLineWidth)+ ((count - 1) * mGapWidth);
+    if (specMode == MeasureSpec.AT_MOST) {
+      result=Math.min(result,specSize);
+    }
+  }
+  return (int)FloatMath.ceil(result);
+}

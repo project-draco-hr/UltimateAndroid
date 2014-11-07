@@ -1,0 +1,3 @@
+Rect outRect
+int itemPosition
+RecyclerView parent

@@ -1,0 +1,4 @@
+{
+  this.mSpannable=mSpannable;
+  mTextLength=mSpannable.length();
+}

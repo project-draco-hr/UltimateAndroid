@@ -1,0 +1,4 @@
+{
+  if (mWebView.canGoBack())   mWebView.goBack();
+ else   super.onBackPressed();
+}

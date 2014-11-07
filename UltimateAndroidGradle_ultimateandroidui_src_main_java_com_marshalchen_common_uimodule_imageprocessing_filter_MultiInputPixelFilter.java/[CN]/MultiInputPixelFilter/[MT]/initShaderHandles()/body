@@ -1,0 +1,5 @@
+{
+  super.initShaderHandles();
+  texelWidthHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_TEXELWIDTH);
+  texelHeightHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_TEXELHEIGHT);
+}

@@ -1,0 +1,6 @@
+{
+  TypedArray a=context.obtainStyledAttributes(ATTRS);
+  mDivider=a.getDrawable(0);
+  a.recycle();
+  mInsets=context.getResources().getDimensionPixelSize(R.dimen.card_insets);
+}

@@ -1,0 +1,9 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.stand_up_timer_team_details);
+  team=Team.findByName(getIntent().getStringExtra("teamName"),this);
+  meetingList=new ListView(this);
+  meetingList.setOnItemClickListener(createMeetingListClickListener());
+  registerForContextMenu(meetingList);
+  createTabs();
+}

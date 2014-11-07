@@ -1,0 +1,5 @@
+{
+  throwCustomException(getChildCount());
+  boolean returnValue=super.addViewInLayout(child,index,params,preventRequestLayout);
+  return returnValue;
+}

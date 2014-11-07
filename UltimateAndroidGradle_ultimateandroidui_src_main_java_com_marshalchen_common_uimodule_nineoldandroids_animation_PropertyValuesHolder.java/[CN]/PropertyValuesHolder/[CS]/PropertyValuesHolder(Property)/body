@@ -1,0 +1,6 @@
+{
+  mProperty=property;
+  if (property != null) {
+    mPropertyName=property.getName();
+  }
+}

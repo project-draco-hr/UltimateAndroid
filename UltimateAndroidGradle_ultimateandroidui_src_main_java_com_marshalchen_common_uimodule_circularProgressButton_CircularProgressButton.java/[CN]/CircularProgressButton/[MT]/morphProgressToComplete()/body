@@ -1,0 +1,9 @@
+{
+  MorphingAnimation animation=createProgressMorphing(getHeight(),mCornerRadius,getHeight(),getWidth());
+  animation.setFromColor(mColorProgress);
+  animation.setToColor(getNormalColor(mCompleteColorState));
+  animation.setFromStrokeColor(mColorIndicator);
+  animation.setToStrokeColor(getNormalColor(mCompleteColorState));
+  animation.setListener(mCompleteStateListener);
+  animation.start();
+}

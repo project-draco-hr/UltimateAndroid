@@ -1,0 +1,5 @@
+{
+  if (!(other instanceof Shot))   return false;
+  Shot oShot=(Shot)other;
+  return oShot.image_url.equals(image_url) && (oShot.id == this.id);
+}

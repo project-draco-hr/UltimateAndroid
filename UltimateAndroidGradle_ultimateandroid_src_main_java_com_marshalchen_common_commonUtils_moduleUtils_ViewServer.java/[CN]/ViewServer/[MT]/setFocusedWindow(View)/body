@@ -1,0 +1,10 @@
+{
+  mFocusLock.writeLock().lock();
+  try {
+    mFocusedWindow=view == null ? null : view.getRootView();
+  }
+  finally {
+    mFocusLock.writeLock().unlock();
+  }
+  fireFocusChangedEvent();
+}

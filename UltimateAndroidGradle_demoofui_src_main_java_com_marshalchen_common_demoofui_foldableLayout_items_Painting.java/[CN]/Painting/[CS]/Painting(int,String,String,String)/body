@@ -1,0 +1,6 @@
+{
+  this.imageId=imageId;
+  this.title=title;
+  this.year=year;
+  this.location=location;
+}

@@ -1,0 +1,13 @@
+{
+switch (actionCode) {
+case MotionEvent.ACTION_DOWN:
+    resetState();
+  mPrevEvent=MotionEvent.obtain(event);
+mTimeDelta=0;
+updateStateByEvent(event);
+break;
+case MotionEvent.ACTION_MOVE:
+mGestureInProgress=mListener.onMoveBegin(this);
+break;
+}
+}

@@ -1,0 +1,4 @@
+AssetManager assetMngr
+String svgPath
+int searchColor
+int replaceColor

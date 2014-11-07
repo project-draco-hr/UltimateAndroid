@@ -1,0 +1,16 @@
+{
+  if (null != bytes) {
+    BitmapFactory.Options options=new BitmapFactory.Options();
+    options.inSampleSize=1;
+    Bitmap bitmap=BitmapFactory.decodeByteArray(bytes,0,bytes.length,options);
+    if (null == bitmap) {
+      return null;
+    }
+ else {
+      return bitmap;
+    }
+  }
+ else {
+    return null;
+  }
+}

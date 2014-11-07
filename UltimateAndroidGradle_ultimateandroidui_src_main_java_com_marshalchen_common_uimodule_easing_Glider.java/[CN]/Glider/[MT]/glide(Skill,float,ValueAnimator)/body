@@ -1,0 +1,5 @@
+{
+  BaseEasingMethod t=skill.getMethod(duration);
+  animator.setEvaluator(t);
+  return animator;
+}

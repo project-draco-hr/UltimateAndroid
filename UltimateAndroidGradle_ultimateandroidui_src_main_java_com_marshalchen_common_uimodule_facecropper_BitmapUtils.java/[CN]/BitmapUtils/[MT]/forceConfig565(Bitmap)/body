@@ -1,0 +1,14 @@
+{
+  Bitmap convertedBitmap=original;
+  if (original.getConfig() != Bitmap.Config.RGB_565) {
+    convertedBitmap=Bitmap.createBitmap(original.getWidth(),original.getHeight(),Bitmap.Config.RGB_565);
+    Canvas canvas=new Canvas(convertedBitmap);
+    Paint paint=new Paint();
+    paint.setColor(Color.BLACK);
+    canvas.drawBitmap(original,0,0,paint);
+    if (convertedBitmap != original) {
+      original.recycle();
+    }
+  }
+  return convertedBitmap;
+}

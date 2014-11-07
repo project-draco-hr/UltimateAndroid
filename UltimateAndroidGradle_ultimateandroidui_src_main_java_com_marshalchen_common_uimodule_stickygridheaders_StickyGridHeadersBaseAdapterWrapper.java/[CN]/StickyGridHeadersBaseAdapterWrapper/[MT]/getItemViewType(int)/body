@@ -1,0 +1,17 @@
+{
+  Position adapterPosition=translatePosition(position);
+  if (adapterPosition.mPosition == POSITION_HEADER) {
+    return VIEW_TYPE_HEADER;
+  }
+  if (adapterPosition.mPosition == POSITION_FILLER) {
+    return VIEW_TYPE_FILLER;
+  }
+  if (adapterPosition.mPosition == POSITION_HEADER_FILLER) {
+    return VIEW_TYPE_HEADER_FILLER;
+  }
+  int itemViewType=mDelegate.getItemViewType(adapterPosition.mPosition);
+  if (itemViewType == IGNORE_ITEM_VIEW_TYPE) {
+    return itemViewType;
+  }
+  return itemViewType + sNumViewTypes;
+}

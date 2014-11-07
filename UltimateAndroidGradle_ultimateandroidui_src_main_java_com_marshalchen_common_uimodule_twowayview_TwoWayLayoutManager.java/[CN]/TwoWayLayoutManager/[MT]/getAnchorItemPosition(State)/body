@@ -1,0 +1,18 @@
+{
+  final int itemCount=state.getItemCount();
+  int pendingPosition=getPendingScrollPosition();
+  if (pendingPosition != RecyclerView.NO_POSITION) {
+    if (pendingPosition < 0 || pendingPosition >= itemCount) {
+      pendingPosition=RecyclerView.NO_POSITION;
+    }
+  }
+  if (pendingPosition != RecyclerView.NO_POSITION) {
+    return pendingPosition;
+  }
+ else   if (getChildCount() > 0) {
+    return findFirstValidChildPosition(itemCount);
+  }
+ else {
+    return 0;
+  }
+}

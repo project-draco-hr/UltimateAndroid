@@ -1,0 +1,4 @@
+{
+  this.activityClass=activityClass;
+  this.titleResourceId=titleResourceId;
+}

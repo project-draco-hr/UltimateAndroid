@@ -1,0 +1,6 @@
+{
+  if (initializedCropWindow) {
+    initCropWindow(mBitmapRect);
+    invalidate();
+  }
+}

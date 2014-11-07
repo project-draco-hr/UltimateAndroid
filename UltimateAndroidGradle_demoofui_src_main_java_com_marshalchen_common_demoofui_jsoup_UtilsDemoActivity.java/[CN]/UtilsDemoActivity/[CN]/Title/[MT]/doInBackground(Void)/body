@@ -1,0 +1,10 @@
+{
+  try {
+    Document document=Jsoup.connect(url).get();
+    title=document.title();
+  }
+ catch (  IOException e) {
+    e.printStackTrace();
+  }
+  return null;
+}

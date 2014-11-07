@@ -1,0 +1,8 @@
+{
+  mListViewLeft.setOnTouchListener(this);
+  mListViewLeft.setObserver(this);
+  setOnListScrollListener(mListViewLeft,true);
+  mListViewRight.setOnTouchListener(this);
+  mListViewRight.setObserver(this);
+  setOnListScrollListener(mListViewRight,false);
+}

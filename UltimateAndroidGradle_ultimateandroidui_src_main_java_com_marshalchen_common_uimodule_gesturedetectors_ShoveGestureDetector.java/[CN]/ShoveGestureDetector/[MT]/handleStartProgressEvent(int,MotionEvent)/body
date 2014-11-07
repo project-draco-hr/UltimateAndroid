@@ -1,0 +1,28 @@
+{
+switch (actionCode) {
+case MotionEvent.ACTION_POINTER_DOWN:
+    resetState();
+  mPrevEvent=MotionEvent.obtain(event);
+mTimeDelta=0;
+updateStateByEvent(event);
+mSloppyGesture=isSloppyGesture(event);
+if (!mSloppyGesture) {
+mGestureInProgress=mListener.onShoveBegin(this);
+}
+break;
+case MotionEvent.ACTION_MOVE:
+if (!mSloppyGesture) {
+break;
+}
+mSloppyGesture=isSloppyGesture(event);
+if (!mSloppyGesture) {
+mGestureInProgress=mListener.onShoveBegin(this);
+}
+break;
+case MotionEvent.ACTION_POINTER_UP:
+if (!mSloppyGesture) {
+break;
+}
+break;
+}
+}

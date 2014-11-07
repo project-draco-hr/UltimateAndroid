@@ -1,0 +1,8 @@
+{
+  int animationLevel=level == MAX_LEVEL ? 0 : level;
+  int stateForLevel=(animationLevel / 50);
+  float percent=level % 50 / 50f;
+  int startColor=mColorSchemeColors[stateForLevel];
+  int endColor=mColorSchemeColors[(stateForLevel + 1) % mColorSchemeColors.length];
+  mPaint.setColor(evaluate(percent,startColor,endColor));
+}

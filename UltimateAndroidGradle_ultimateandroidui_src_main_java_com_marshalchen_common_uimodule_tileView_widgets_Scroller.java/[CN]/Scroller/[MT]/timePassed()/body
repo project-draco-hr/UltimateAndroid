@@ -1,0 +1,3 @@
+{
+  return (int)(AnimationUtils.currentAnimationTimeMillis() - mStartTime);
+}

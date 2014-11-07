@@ -1,0 +1,15 @@
+{
+  int numberOfParticipants=numParticipants;
+  try {
+    numberOfParticipants=Integer.parseInt(t.getText().toString());
+  }
+ catch (  NumberFormatException e) {
+    Logger.w("Invalid number of participants provided.  Defaulting to previous value.");
+  }
+  if (numberOfParticipants > MAX_ALLOWED_PARTICIPANTS) {
+    return MAX_ALLOWED_PARTICIPANTS;
+  }
+ else {
+    return numberOfParticipants;
+  }
+}

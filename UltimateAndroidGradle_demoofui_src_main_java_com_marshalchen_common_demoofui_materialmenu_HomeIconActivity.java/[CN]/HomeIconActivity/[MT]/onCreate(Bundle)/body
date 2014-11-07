@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  materialMenu=new MaterialMenuIconCompat(this,Color.WHITE,Stroke.THIN);
+  helper.init(getWindow().getDecorView(),materialMenu);
+}

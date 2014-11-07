@@ -1,0 +1,19 @@
+{
+  super.initAttrs(attrs);
+  TypedArray a=getContext().obtainStyledAttributes(attrs,R.styleable.superlistview);
+  try {
+    mSuperListViewMainLayout=a.getResourceId(R.styleable.superlistview_superlv_mainLayoutID,R.layout.super_list_view_view_progress_gridview);
+  }
+  finally {
+    a.recycle();
+  }
+  TypedArray ag=getContext().obtainStyledAttributes(attrs,R.styleable.supergridview);
+  try {
+    mColumns=ag.getInt(R.styleable.supergridview_supergv__columns,1);
+    mVerticalSpacing=(int)ag.getDimension(R.styleable.supergridview_supergv__verticalSpacing,1);
+    mHorizontalSpacing=(int)ag.getDimension(R.styleable.supergridview_supergv__horizontalSpacing,1);
+  }
+  finally {
+    ag.recycle();
+  }
+}

@@ -1,0 +1,17 @@
+{
+  DragEdge edge=getDragEdge();
+  boolean open=true;
+  if (edge == DragEdge.Left) {
+    if (dx < 0)     open=false;
+  }
+ else   if (edge == DragEdge.Right) {
+    if (dx > 0)     open=false;
+  }
+ else   if (edge == DragEdge.Top) {
+    if (dy < 0)     open=false;
+  }
+ else   if (edge == DragEdge.Bottom) {
+    if (dy > 0)     open=false;
+  }
+  dispatchSwipeEvent(surfaceLeft,surfaceTop,open);
+}

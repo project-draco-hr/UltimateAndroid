@@ -1,0 +1,4 @@
+{
+  this.filter=imageFilter;
+  this.activity=activity;
+}

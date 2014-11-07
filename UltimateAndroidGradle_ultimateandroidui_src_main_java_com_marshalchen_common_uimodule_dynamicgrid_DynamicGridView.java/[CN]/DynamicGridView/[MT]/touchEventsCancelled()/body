@@ -1,0 +1,9 @@
+{
+  View mobileView=getViewForId(mMobileItemId);
+  if (mCellIsMobile) {
+    reset(mobileView);
+  }
+  mCellIsMobile=false;
+  mIsMobileScrolling=false;
+  mActivePointerId=INVALID_ID;
+}

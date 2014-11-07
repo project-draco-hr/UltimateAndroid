@@ -1,0 +1,4 @@
+{
+  mTitle.setTextColor(Color.parseColor(colorString));
+  return this;
+}

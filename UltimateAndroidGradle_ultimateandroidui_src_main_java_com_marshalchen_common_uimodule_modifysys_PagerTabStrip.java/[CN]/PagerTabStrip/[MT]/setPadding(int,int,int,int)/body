@@ -1,0 +1,6 @@
+{
+  if (bottom < mMinPaddingBottom) {
+    bottom=mMinPaddingBottom;
+  }
+  super.setPadding(left,top,right,bottom);
+}

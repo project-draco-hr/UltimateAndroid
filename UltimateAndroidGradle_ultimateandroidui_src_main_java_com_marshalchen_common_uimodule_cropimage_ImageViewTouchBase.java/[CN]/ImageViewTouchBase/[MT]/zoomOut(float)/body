@@ -1,0 +1,17 @@
+{
+  if (bitmapDisplayed.getBitmap() == null) {
+    return;
+  }
+  float cx=getWidth() / 2F;
+  float cy=getHeight() / 2F;
+  Matrix tmp=new Matrix(suppMatrix);
+  tmp.postScale(1F / rate,1F / rate,cx,cy);
+  if (getScale(tmp) < 1F) {
+    suppMatrix.setScale(1F,1F,cx,cy);
+  }
+ else {
+    suppMatrix.postScale(1F / rate,1F / rate,cx,cy);
+  }
+  setImageMatrix(getImageViewMatrix());
+  center(true,true);
+}

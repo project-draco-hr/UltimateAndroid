@@ -1,0 +1,4 @@
+{
+  viewContext=context;
+  initStyles(context.getContext());
+}

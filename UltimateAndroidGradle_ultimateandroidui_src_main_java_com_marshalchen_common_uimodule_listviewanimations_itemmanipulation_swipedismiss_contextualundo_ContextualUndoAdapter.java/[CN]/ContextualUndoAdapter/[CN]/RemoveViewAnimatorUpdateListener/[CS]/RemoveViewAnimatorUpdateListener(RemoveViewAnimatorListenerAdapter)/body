@@ -1,0 +1,4 @@
+{
+  mParentAdapter=parentAdapter;
+  mLayoutParams=parentAdapter.mDismissView.getLayoutParams();
+}

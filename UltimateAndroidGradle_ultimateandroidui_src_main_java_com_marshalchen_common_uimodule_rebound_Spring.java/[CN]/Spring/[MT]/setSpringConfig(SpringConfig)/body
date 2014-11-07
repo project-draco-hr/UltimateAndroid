@@ -1,0 +1,7 @@
+{
+  if (springConfig == null) {
+    throw new IllegalArgumentException("springConfig is required");
+  }
+  mSpringConfig=springConfig;
+  return this;
+}

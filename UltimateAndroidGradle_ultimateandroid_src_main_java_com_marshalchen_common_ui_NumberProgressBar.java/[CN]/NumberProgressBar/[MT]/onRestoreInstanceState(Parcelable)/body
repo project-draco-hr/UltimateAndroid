@@ -1,0 +1,17 @@
+{
+  if (state instanceof Bundle) {
+    final Bundle bundle=(Bundle)state;
+    mTextColor=bundle.getInt(INSTANCE_TEXT_COLOR);
+    mTextSize=bundle.getFloat(INSTANCE_TEXT_SIZE);
+    mReachedBarHeight=bundle.getFloat(INSTANCE_REACHED_BAR_HEIGHT);
+    mUnreachedBarHeight=bundle.getFloat(INSTANCE_UNREACHED_BAR_HEIGHT);
+    mReachedBarColor=bundle.getInt(INSTANCE_REACHED_BAR_COLOR);
+    mUnreachedBarColor=bundle.getInt(INSTANCE_UNREACHED_BAR_COLOR);
+    initializePainters();
+    setMax(bundle.getInt(INSTANCE_MAX));
+    setProgress(bundle.getInt(INSTANCE_PROGRESS));
+    super.onRestoreInstanceState(bundle.getParcelable(INSTANCE_STATE));
+    return;
+  }
+  super.onRestoreInstanceState(state);
+}

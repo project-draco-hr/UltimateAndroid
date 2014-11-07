@@ -1,0 +1,15 @@
+{
+  MeetingDAO dao=null;
+  Meeting meeting=null;
+  try {
+    dao=daoFactory.getMeetingDAO(context);
+    meeting=dao.save(this);
+  }
+ catch (  Exception e) {
+    Logger.e(e.getMessage());
+  }
+ finally {
+    dao.close();
+  }
+  return meeting;
+}

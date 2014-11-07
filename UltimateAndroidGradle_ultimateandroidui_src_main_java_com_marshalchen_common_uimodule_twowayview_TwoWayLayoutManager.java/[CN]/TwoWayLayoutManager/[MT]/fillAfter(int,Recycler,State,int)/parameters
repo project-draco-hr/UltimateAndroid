@@ -1,0 +1,4 @@
+int position
+Recycler recycler
+State state
+int extraSpace

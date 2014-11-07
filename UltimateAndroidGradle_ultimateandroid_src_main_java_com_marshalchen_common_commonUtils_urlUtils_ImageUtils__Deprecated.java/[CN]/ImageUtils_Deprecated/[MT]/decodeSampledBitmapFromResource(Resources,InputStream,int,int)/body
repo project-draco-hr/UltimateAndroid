@@ -1,0 +1,8 @@
+{
+  final BitmapFactory.Options options=new BitmapFactory.Options();
+  options.inJustDecodeBounds=true;
+  BitmapFactory.decodeStream(inputStream,null,options);
+  options.inSampleSize=calculateInSampleSize(options,reqWidth,reqHeight);
+  options.inJustDecodeBounds=false;
+  return BitmapFactory.decodeStream(inputStream,null,options);
+}

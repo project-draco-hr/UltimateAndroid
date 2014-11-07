@@ -1,0 +1,18 @@
+{
+  if (h < 0f) {
+    h++;
+  }
+  if (h > 1f) {
+    h--;
+  }
+  if ((6f * h) < 1f) {
+    return (t1 + (((t2 - t1) * 6f) * h));
+  }
+  if ((2f * h) < 1f) {
+    return t2;
+  }
+  if ((3f * h) < 2f) {
+    return (t1 + (((t2 - t1) * (0.6666667f - h)) * 6f));
+  }
+  return t1;
+}

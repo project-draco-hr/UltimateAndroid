@@ -1,0 +1,22 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_menu_toolbar);
+  Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
+  setSupportActionBar(toolbar);
+  toolbar.setNavigationOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      actionBarMenuState=BaseActivityHelper.generateState(actionBarMenuState);
+      materialMenu.animatePressedState(BaseActivityHelper.intToState(actionBarMenuState));
+    }
+  }
+);
+  materialMenu=new MaterialMenuIconToolbar(this,Color.WHITE,Stroke.THIN){
+    @Override public int getToolbarViewId(){
+      return R.id.toolbar;
+    }
+  }
+;
+  materialMenu.setNeverDrawTouch(true);
+  helper=new BaseActivityHelper();
+  helper.init(getWindow().getDecorView(),materialMenu);
+}

@@ -1,0 +1,5 @@
+{
+  this.position=position;
+  this.view=view;
+  this.childView=childView;
+}

@@ -1,0 +1,10 @@
+{
+  if (getChildCount() > 0 && getChildAt(0) instanceof ViewGroup) {
+    ViewGroup viewsHolder=(ViewGroup)getChildAt(0);
+    int numOfParallaxViews=Math.min(this.numOfParallaxViews,viewsHolder.getChildCount());
+    for (int i=0; i < numOfParallaxViews; i++) {
+      ParallaxedView parallaxedView=new ScrollViewParallaxedItem(viewsHolder.getChildAt(i));
+      parallaxedViews.add(parallaxedView);
+    }
+  }
+}

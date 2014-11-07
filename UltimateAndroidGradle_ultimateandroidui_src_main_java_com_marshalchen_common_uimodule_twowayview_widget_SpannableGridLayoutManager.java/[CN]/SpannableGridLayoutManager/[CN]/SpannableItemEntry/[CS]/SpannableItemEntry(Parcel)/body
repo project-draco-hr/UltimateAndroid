@@ -1,0 +1,5 @@
+{
+  super(in);
+  this.colSpan=in.readInt();
+  this.rowSpan=in.readInt();
+}

@@ -1,0 +1,18 @@
+{
+switch (this) {
+case BURGER_ARROW:
+    return IconState.ARROW;
+case BURGER_X:
+  return IconState.X;
+case ARROW_X:
+return IconState.X;
+case ARROW_CHECK:
+return IconState.CHECK;
+case BURGER_CHECK:
+return IconState.CHECK;
+case X_CHECK:
+return IconState.CHECK;
+default :
+return null;
+}
+}

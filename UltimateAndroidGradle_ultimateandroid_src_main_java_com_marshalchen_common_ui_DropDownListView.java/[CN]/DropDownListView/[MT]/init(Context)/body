@@ -1,0 +1,6 @@
+{
+  this.context=context;
+  initDropDownStyle();
+  initOnBottomStyle();
+  super.setOnScrollListener(this);
+}

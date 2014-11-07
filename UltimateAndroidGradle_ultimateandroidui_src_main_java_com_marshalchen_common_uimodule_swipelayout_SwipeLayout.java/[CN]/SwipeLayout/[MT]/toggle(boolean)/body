@@ -1,0 +1,4 @@
+{
+  if (getOpenStatus() == Status.Open)   close(smooth);
+ else   if (getOpenStatus() == Status.Close)   open(smooth);
+}

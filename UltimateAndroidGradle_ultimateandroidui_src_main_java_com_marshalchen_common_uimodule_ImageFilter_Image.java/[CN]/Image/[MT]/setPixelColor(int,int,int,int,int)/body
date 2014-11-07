@@ -1,0 +1,4 @@
+{
+  int rgbcolor=(255 << 24) + (c0 << 16) + (c1 << 8)+ c2;
+  colorArray[((y * image.getWidth() + x))]=rgbcolor;
+}

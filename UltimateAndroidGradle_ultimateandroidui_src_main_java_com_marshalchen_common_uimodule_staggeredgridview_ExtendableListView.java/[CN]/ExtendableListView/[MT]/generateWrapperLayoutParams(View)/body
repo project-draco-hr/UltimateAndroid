@@ -1,0 +1,16 @@
+{
+  LayoutParams layoutParams=null;
+  final ViewGroup.LayoutParams childParams=child.getLayoutParams();
+  if (childParams != null) {
+    if (childParams instanceof LayoutParams) {
+      layoutParams=(LayoutParams)childParams;
+    }
+ else {
+      layoutParams=new LayoutParams(childParams);
+    }
+  }
+  if (layoutParams == null) {
+    layoutParams=generateDefaultLayoutParams();
+  }
+  return layoutParams;
+}

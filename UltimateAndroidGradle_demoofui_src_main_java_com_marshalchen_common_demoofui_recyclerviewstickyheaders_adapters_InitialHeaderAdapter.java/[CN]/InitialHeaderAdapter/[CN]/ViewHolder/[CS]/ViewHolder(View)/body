@@ -1,0 +1,4 @@
+{
+  super(itemView);
+  letter=(TextView)itemView.findViewById(R.id.letter);
+}

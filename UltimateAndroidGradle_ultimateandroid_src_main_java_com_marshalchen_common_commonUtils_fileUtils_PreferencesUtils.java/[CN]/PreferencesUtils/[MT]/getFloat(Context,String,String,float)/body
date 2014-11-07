@@ -1,0 +1,4 @@
+{
+  SharedPreferences settings=context.getSharedPreferences(preferenceName,Context.MODE_PRIVATE);
+  return settings.getFloat(key,defaultValue);
+}

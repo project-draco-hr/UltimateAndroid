@@ -1,0 +1,6 @@
+{
+  this.mContext=context;
+  this.mListItems=listItems;
+  this.mListSectionPos=listSectionPos;
+  mLayoutInflater=(LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+}

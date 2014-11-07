@@ -1,0 +1,4 @@
+{
+  super.setImageResource(resId);
+  getPathHelper().onImageDrawableReset(getDrawable());
+}

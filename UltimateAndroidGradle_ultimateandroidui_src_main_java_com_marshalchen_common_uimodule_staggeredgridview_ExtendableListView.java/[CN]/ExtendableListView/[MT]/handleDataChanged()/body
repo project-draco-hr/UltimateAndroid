@@ -1,0 +1,14 @@
+{
+  super.handleDataChanged();
+  final int count=mItemCount;
+  if (count > 0 && mNeedSync) {
+    mNeedSync=false;
+    mSyncState=null;
+    mLayoutMode=LAYOUT_SYNC;
+    mSyncPosition=Math.min(Math.max(0,mSyncPosition),count - 1);
+    return;
+  }
+  mLayoutMode=LAYOUT_FORCE_TOP;
+  mNeedSync=false;
+  mSyncState=null;
+}

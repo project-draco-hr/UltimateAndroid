@@ -1,0 +1,8 @@
+{
+  if (mPrevLen == -1) {
+    final float pvx=mPrevFingerDiffX;
+    final float pvy=mPrevFingerDiffY;
+    mPrevLen=FloatMath.sqrt(pvx * pvx + pvy * pvy);
+  }
+  return mPrevLen;
+}

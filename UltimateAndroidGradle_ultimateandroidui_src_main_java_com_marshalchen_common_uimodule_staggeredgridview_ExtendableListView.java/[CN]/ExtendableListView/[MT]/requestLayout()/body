@@ -1,0 +1,5 @@
+{
+  if (!mBlockLayoutRequests && !mInLayout) {
+    super.requestLayout();
+  }
+}

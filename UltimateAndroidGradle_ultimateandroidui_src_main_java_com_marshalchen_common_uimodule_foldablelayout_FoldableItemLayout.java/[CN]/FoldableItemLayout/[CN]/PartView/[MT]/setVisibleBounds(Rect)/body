@@ -1,0 +1,4 @@
+{
+  mVisibleBounds=visibleBounds;
+  calculateBitmapBounds();
+}

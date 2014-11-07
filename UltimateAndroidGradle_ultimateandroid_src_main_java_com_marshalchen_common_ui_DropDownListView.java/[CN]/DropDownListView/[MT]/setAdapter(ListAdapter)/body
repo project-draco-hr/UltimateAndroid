@@ -1,0 +1,6 @@
+{
+  super.setAdapter(adapter);
+  if (isDropDownStyle) {
+    setSecondPositionVisible();
+  }
+}

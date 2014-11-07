@@ -1,0 +1,10 @@
+{
+  TextView v=new TextView(getActivity());
+  v.setBackgroundResource(R.color.blue);
+  v.setText("PAGE " + (position + 1));
+  final int padding=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,16,getResources().getDisplayMetrics());
+  v.setPadding(padding,padding,padding,padding);
+  v.setGravity(Gravity.CENTER);
+  container.addView(v,0);
+  return v;
+}

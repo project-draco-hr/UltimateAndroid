@@ -1,0 +1,16 @@
+{
+  super.onViewCreated(view,savedInstanceState);
+  mGridView=(GridView)view.findViewById(R.id.asset_grid);
+  mGridView.setOnItemClickListener(this);
+  mGridView.setAdapter(new StickyGridHeadersSimpleArrayAdapter<String>(getActivity().getApplicationContext(),getResources().getStringArray(R.array.countries),R.layout.stickygridheader_header,R.layout.stickygridheader_item));
+  if (savedInstanceState != null) {
+    mFirstVisible=savedInstanceState.getInt(KEY_LIST_POSITION);
+  }
+  mGridView.setSelection(mFirstVisible);
+  if (savedInstanceState != null && savedInstanceState.containsKey(STATE_ACTIVATED_POSITION)) {
+    setActivatedPosition(savedInstanceState.getInt(STATE_ACTIVATED_POSITION));
+  }
+  ((StickyGridHeadersGridView)mGridView).setOnHeaderClickListener(this);
+  ((StickyGridHeadersGridView)mGridView).setOnHeaderLongClickListener(this);
+  setHasOptionsMenu(true);
+}

@@ -1,0 +1,19 @@
+{
+  list.setOnScrollListener(new AbsListView.OnScrollListener(){
+    @Override public void onScrollStateChanged(    AbsListView view,    int state){
+switch (state) {
+case SCROLL_STATE_IDLE:
+        setListState(true,isLeftList);
+      forceScrollIfNeeded(isOtherListEnable(isLeftList));
+    break;
+case SCROLL_STATE_TOUCH_SCROLL:
+  setListState(false,isLeftList);
+isUserInteracting=true;
+break;
+}
+}
+@Override public void onScroll(AbsListView view,int firstVisibleItem,int visibleItemCount,int totalItemCount){
+}
+}
+);
+}

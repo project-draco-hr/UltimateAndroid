@@ -1,0 +1,3 @@
+{
+  markerManager.setAnchors(anchorX,anchorY);
+}

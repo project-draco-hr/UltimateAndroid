@@ -1,0 +1,6 @@
+{
+  filters.add(filter);
+  filter.addTarget(screen);
+  filter.registerFilterLocation(input);
+  filter.registerFilterLocation(input2);
+}

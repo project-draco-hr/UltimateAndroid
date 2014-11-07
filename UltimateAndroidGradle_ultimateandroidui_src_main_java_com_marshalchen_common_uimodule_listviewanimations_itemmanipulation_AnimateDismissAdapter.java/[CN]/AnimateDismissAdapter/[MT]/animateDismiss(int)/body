@@ -1,0 +1,3 @@
+{
+  animateDismiss(Arrays.asList(position));
+}

@@ -1,0 +1,5 @@
+{
+  StickyHeadersItemDecoration decoration=new StickyHeadersItemDecoration(headersAdapter,recyclerView,overlay);
+  decoration.registerAdapterDataObserver(adapter);
+  return decoration;
+}

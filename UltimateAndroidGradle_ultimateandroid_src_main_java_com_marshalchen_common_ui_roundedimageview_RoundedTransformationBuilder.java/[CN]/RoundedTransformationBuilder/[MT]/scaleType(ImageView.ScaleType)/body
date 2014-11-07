@@ -1,0 +1,4 @@
+{
+  mScaleType=scaleType;
+  return this;
+}

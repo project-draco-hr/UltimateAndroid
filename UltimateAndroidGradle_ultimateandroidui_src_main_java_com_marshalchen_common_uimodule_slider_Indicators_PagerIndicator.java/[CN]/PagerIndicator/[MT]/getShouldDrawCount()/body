@@ -1,0 +1,8 @@
+{
+  if (mPager.getAdapter() instanceof InfinitePagerAdapter) {
+    return ((InfinitePagerAdapter)mPager.getAdapter()).getRealCount();
+  }
+ else {
+    return mPager.getAdapter().getCount();
+  }
+}

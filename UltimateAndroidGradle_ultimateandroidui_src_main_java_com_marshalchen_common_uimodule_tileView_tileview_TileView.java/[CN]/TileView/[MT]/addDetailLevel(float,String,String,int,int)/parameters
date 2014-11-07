@@ -1,0 +1,5 @@
+float detailScale
+String pattern
+String downsample
+int tileWidth
+int tileHeight

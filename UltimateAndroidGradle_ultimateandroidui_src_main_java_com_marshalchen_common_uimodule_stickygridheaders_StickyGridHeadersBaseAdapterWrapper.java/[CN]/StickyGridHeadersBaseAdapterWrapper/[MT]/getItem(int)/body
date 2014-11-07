@@ -1,0 +1,7 @@
+{
+  Position adapterPosition=translatePosition(position);
+  if (adapterPosition.mPosition == POSITION_FILLER || adapterPosition.mPosition == POSITION_HEADER) {
+    return null;
+  }
+  return mDelegate.getItem(adapterPosition.mPosition);
+}

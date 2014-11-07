@@ -1,0 +1,3 @@
+{
+  mImgView.setImageDrawable(drawable);
+}

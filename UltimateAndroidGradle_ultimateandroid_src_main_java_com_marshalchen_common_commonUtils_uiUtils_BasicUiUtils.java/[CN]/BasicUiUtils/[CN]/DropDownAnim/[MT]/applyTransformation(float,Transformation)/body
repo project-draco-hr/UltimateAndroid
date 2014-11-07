@@ -1,0 +1,11 @@
+{
+  int newHeight;
+  if (down) {
+    newHeight=(int)(targetHeight * interpolatedTime);
+  }
+ else {
+    newHeight=(int)(targetHeight * (1 - interpolatedTime));
+  }
+  view.getLayoutParams().height=newHeight;
+  view.requestLayout();
+}

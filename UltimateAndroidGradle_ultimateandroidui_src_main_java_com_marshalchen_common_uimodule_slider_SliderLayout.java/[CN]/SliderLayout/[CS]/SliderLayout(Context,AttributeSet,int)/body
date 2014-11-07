@@ -1,0 +1,40 @@
+{
+  super(context,attrs,defStyle);
+  mContext=context;
+  LayoutInflater.from(context).inflate(R.layout.slider_layout,this,true);
+  final TypedArray attributes=context.getTheme().obtainStyledAttributes(attrs,R.styleable.SliderLayout,defStyle,0);
+  mTransformerSpan=attributes.getInteger(R.styleable.SliderLayout_pager_animation_span,1100);
+  mTransformerId=attributes.getInt(R.styleable.SliderLayout_pager_animation,Transformer.Default.ordinal());
+  mAutoCycle=attributes.getBoolean(R.styleable.SliderLayout_auto_cycle,true);
+  int visibility=attributes.getInt(R.styleable.SliderLayout_indicator_visibility,0);
+  for (  PagerIndicator.IndicatorVisibility v : PagerIndicator.IndicatorVisibility.values()) {
+    if (v.ordinal() == visibility) {
+      mIndicatorVisibility=v;
+      break;
+    }
+  }
+  mSliderAdapter=new SliderAdapter(mContext);
+  PagerAdapter wrappedAdapter=new InfinitePagerAdapter(mSliderAdapter);
+  mViewPager=(InfiniteViewPager)findViewById(R.id.daimajia_slider_viewpager);
+  mViewPager.setAdapter(wrappedAdapter);
+  mViewPager.setOnTouchListener(new OnTouchListener(){
+    @Override public boolean onTouch(    View v,    MotionEvent event){
+      int action=event.getAction();
+switch (action) {
+case MotionEvent.ACTION_UP:
+        recoverCycle();
+      break;
+  }
+  return false;
+}
+}
+);
+attributes.recycle();
+setPresetIndicator(PresetIndicators.Center_Bottom);
+setPresetTransformer(mTransformerId);
+setSliderTransformDuration(mTransformerSpan,null);
+setIndicatorVisibility(mIndicatorVisibility);
+if (mAutoCycle) {
+startAutoCycle();
+}
+}

@@ -1,0 +1,6 @@
+{
+  if (!(listView instanceof ListView)) {
+    throw new IllegalArgumentException("AnimateAdditionAdapter requires a ListView instance!");
+  }
+  super.setAbsListView(listView);
+}

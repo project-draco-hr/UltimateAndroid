@@ -1,0 +1,8 @@
+{
+  super.initShaderHandles();
+  gammaHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_GAMMA);
+  minInHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_MININ);
+  maxInHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_MAXIN);
+  minOutHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_MINOUT);
+  maxOutHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_MAXOUT);
+}

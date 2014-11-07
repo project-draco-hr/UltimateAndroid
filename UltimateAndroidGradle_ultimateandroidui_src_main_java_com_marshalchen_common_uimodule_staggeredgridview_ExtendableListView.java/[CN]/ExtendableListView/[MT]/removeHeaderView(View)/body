@@ -1,0 +1,14 @@
+{
+  if (mHeaderViewInfos.size() > 0) {
+    boolean result=false;
+    if (mAdapter != null && ((HeaderViewListAdapter)mAdapter).removeHeader(v)) {
+      if (mObserver != null) {
+        mObserver.onChanged();
+      }
+      result=true;
+    }
+    removeFixedViewInfo(v,mHeaderViewInfos);
+    return result;
+  }
+  return false;
+}

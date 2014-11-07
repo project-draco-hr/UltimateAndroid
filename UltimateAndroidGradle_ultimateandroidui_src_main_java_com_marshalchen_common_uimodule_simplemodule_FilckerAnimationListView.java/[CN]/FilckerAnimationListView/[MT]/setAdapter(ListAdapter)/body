@@ -1,0 +1,4 @@
+{
+  this.adapter=new AdapterWrapper(adapter);
+  super.setAdapter(this.adapter);
+}

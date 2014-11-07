@@ -1,0 +1,6 @@
+{
+  cal.set(HOUR_OF_DAY,0);
+  cal.set(MINUTE,0);
+  cal.set(SECOND,0);
+  cal.set(MILLISECOND,0);
+}

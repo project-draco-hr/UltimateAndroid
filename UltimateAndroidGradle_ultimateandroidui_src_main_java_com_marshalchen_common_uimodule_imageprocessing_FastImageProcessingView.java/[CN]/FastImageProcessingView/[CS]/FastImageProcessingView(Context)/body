@@ -1,0 +1,5 @@
+{
+  this(context,null);
+  setDebugFlags(GLSurfaceView.DEBUG_CHECK_GL_ERROR | GLSurfaceView.DEBUG_LOG_GL_CALLS);
+  setEGLContextClientVersion(2);
+}

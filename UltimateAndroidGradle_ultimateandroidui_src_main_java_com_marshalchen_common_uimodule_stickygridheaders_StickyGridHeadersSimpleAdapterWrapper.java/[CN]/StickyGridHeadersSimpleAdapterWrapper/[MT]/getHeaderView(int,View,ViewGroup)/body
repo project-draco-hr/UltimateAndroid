@@ -1,0 +1,3 @@
+{
+  return mDelegate.getHeaderView(mHeaders[position].getRefPosition(),convertView,parent);
+}

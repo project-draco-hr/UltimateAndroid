@@ -1,0 +1,4 @@
+{
+  if (hover())   return true;
+ else   return super.onSingleTapConfirmed(e);
+}

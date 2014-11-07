@@ -1,0 +1,18 @@
+{
+  int pos=0;
+switch (meetingLength) {
+case 5:
+    pos=0;
+  break;
+case 10:
+pos=1;
+break;
+case 15:
+pos=2;
+break;
+case 20:
+pos=3;
+break;
+}
+return pos;
+}

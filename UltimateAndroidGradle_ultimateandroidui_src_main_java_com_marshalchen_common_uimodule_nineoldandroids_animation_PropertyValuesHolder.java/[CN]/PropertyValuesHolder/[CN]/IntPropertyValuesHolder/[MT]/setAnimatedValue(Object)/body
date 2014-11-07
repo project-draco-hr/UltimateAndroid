@@ -1,0 +1,22 @@
+{
+  if (mIntProperty != null) {
+    mIntProperty.setValue(target,mIntAnimatedValue);
+    return;
+  }
+  if (mProperty != null) {
+    mProperty.set(target,mIntAnimatedValue);
+    return;
+  }
+  if (mSetter != null) {
+    try {
+      mTmpValueArray[0]=mIntAnimatedValue;
+      mSetter.invoke(target,mTmpValueArray);
+    }
+ catch (    InvocationTargetException e) {
+      Log.e("PropertyValuesHolder",e.toString());
+    }
+catch (    IllegalAccessException e) {
+      Log.e("PropertyValuesHolder",e.toString());
+    }
+  }
+}

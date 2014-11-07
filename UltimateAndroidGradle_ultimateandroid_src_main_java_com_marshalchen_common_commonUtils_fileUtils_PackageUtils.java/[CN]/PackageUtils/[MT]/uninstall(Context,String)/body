@@ -1,0 +1,6 @@
+{
+  if (PackageUtils.isSystemApplication(context) || ShellUtils.checkRootPermission()) {
+    return uninstallSilent(context,packageName);
+  }
+  return uninstallNormal(context,packageName) ? DELETE_SUCCEEDED : DELETE_FAILED_INVALID_PACKAGE;
+}

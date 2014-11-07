@@ -1,0 +1,11 @@
+{
+  if (mAdapter != null) {
+    mAdapter.unregisterDataSetObserver(mObserver);
+  }
+  mAdapter=adapter;
+  if (mAdapter != null) {
+    mAdapter.registerDataSetObserver(mObserver);
+  }
+  removeAllViewsInLayout();
+  requestLayout();
+}

@@ -1,0 +1,58 @@
+{
+  View currentFocused=findFocus();
+  if (currentFocused == this) {
+    currentFocused=null;
+  }
+ else   if (currentFocused != null) {
+    boolean isChild=false;
+    for (ViewParent parent=currentFocused.getParent(); parent instanceof ViewGroup; parent=parent.getParent()) {
+      if (parent == this) {
+        isChild=true;
+        break;
+      }
+    }
+    if (!isChild) {
+      final StringBuilder sb=new StringBuilder();
+      sb.append(currentFocused.getClass().getSimpleName());
+      for (ViewParent parent=currentFocused.getParent(); parent instanceof ViewGroup; parent=parent.getParent()) {
+        sb.append(" => ").append(parent.getClass().getSimpleName());
+      }
+      Log.e(TAG,"arrowScroll tried to find focus based on non-child " + "current focused view " + sb.toString());
+      currentFocused=null;
+    }
+  }
+  boolean handled=false;
+  View nextFocused=FocusFinder.getInstance().findNextFocus(this,currentFocused,direction);
+  if (nextFocused != null && nextFocused != currentFocused) {
+    if (direction == View.FOCUS_LEFT) {
+      final int nextLeft=getChildRectInPagerCoordinates(mTempRect,nextFocused).left;
+      final int currLeft=getChildRectInPagerCoordinates(mTempRect,currentFocused).left;
+      if (currentFocused != null && nextLeft >= currLeft) {
+        handled=pageLeft();
+      }
+ else {
+        handled=nextFocused.requestFocus();
+      }
+    }
+ else     if (direction == View.FOCUS_RIGHT) {
+      final int nextLeft=getChildRectInPagerCoordinates(mTempRect,nextFocused).left;
+      final int currLeft=getChildRectInPagerCoordinates(mTempRect,currentFocused).left;
+      if (currentFocused != null && nextLeft <= currLeft) {
+        handled=pageRight();
+      }
+ else {
+        handled=nextFocused.requestFocus();
+      }
+    }
+  }
+ else   if (direction == FOCUS_LEFT || direction == FOCUS_BACKWARD) {
+    handled=pageLeft();
+  }
+ else   if (direction == FOCUS_RIGHT || direction == FOCUS_FORWARD) {
+    handled=pageRight();
+  }
+  if (handled) {
+    playSoundEffect(SoundEffectConstants.getContantForFocusDirection(direction));
+  }
+  return handled;
+}

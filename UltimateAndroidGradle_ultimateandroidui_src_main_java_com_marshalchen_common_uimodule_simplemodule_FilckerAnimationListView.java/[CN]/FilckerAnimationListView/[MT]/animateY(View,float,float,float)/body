@@ -1,0 +1,8 @@
+{
+  final int duration=getDuration(oldY,newY,durationUnit);
+  final ObjectAnimator anim=ObjectAnimator.ofFloat(AnimatorProxy.wrap(view),"translationY",oldY - newY,0);
+  final int finalDuration=Math.min(Math.max(duration,MIN_ANIM_DURATION),MAX_ANIM_DURATION);
+  anim.setDuration((long)(finalDuration * animationDurationFactor));
+  anim.setInterpolator(translateInterpolater);
+  return anim;
+}

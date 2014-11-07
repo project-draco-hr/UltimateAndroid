@@ -1,0 +1,3 @@
+{
+  animateView(target,type);
+}

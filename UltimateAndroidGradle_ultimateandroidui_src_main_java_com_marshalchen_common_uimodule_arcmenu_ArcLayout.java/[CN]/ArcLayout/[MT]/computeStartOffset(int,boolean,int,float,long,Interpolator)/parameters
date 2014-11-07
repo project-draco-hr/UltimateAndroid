@@ -1,0 +1,6 @@
+int childCount
+boolean expanded
+int index
+float delayPercent
+long duration
+Interpolator interpolator

@@ -1,0 +1,39 @@
+{
+  super.draw(canvas);
+  boolean needsInvalidate=false;
+  final int height=getMeasuredHeight() - getPaddingTop() - getPaddingBottom();
+  final int width=getMeasuredWidth();
+  if (!mLeftEdge.isFinished()) {
+    final int restoreCount=canvas.save();
+    canvas.rotate(270);
+    canvas.translate(-height + getPaddingTop(),0);
+    mLeftEdge.setSize(height,width);
+    needsInvalidate=mLeftEdge.draw(canvas);
+    canvas.restoreToCount(restoreCount);
+  }
+  if (!mTopEdge.isFinished()) {
+    final int restoreCount=canvas.save();
+    mTopEdge.setSize(width,height);
+    needsInvalidate=mTopEdge.draw(canvas);
+    canvas.restoreToCount(restoreCount);
+  }
+  if (!mRightEdge.isFinished()) {
+    final int restoreCount=canvas.save();
+    canvas.rotate(90);
+    canvas.translate(0,-width);
+    mRightEdge.setSize(height,width);
+    needsInvalidate=mRightEdge.draw(canvas);
+    canvas.restoreToCount(restoreCount);
+  }
+  if (!mBottomEdge.isFinished()) {
+    final int restoreCount=canvas.save();
+    canvas.rotate(180);
+    canvas.translate(-width + getPaddingTop(),-height);
+    mBottomEdge.setSize(width,height);
+    needsInvalidate=mBottomEdge.draw(canvas);
+    canvas.restoreToCount(restoreCount);
+  }
+  if (needsInvalidate) {
+    ViewCompat.postInvalidateOnAnimation(this);
+  }
+}

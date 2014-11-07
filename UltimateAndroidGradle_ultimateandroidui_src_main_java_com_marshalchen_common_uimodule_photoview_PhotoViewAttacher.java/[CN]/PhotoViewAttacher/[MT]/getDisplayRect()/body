@@ -1,0 +1,4 @@
+{
+  checkMatrixBounds();
+  return getDisplayRect(getDrawMatrix());
+}

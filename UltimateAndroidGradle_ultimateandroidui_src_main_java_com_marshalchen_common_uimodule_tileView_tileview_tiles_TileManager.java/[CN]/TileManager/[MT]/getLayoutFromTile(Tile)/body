@@ -1,0 +1,7 @@
+{
+  int w=m.getWidth();
+  int h=m.getHeight();
+  int x=m.getLeft();
+  int y=m.getTop();
+  return new FixedLayout.LayoutParams(w,h,x,y);
+}

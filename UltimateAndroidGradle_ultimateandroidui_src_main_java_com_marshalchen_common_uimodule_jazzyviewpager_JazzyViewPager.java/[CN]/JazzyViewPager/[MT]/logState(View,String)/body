@@ -1,0 +1,3 @@
+{
+  Log.v(TAG,title + ": ROT (" + ViewHelper.getRotation(v)+ ", "+ ViewHelper.getRotationX(v)+ ", "+ ViewHelper.getRotationY(v)+ "), TRANS ("+ ViewHelper.getTranslationX(v)+ ", "+ ViewHelper.getTranslationY(v)+ "), SCALE ("+ ViewHelper.getScaleX(v)+ ", "+ ViewHelper.getScaleY(v)+ "), ALPHA "+ ViewHelper.getAlpha(v));
+}

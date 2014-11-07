@@ -1,0 +1,5 @@
+{
+  if (mDecoratedBaseAdapter instanceof Swappable) {
+    ((Swappable)mDecoratedBaseAdapter).swapItems(positionOne,positionTwo);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  Message message=new Message();
+  message.what=what;
+  message.obj=obj;
+  handler.sendMessage(message);
+}

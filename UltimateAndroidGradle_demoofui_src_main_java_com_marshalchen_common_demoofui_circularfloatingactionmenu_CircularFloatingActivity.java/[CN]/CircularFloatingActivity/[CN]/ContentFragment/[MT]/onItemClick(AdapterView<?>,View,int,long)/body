@@ -1,0 +1,16 @@
+{
+switch (position) {
+case 0:
+    startActivity(new Intent(getActivity(),MenuWithFABActivity.class));
+  break;
+case 1:
+startActivity(new Intent(getActivity(),MenuWithCustomActionButtonActivity.class));
+break;
+case 2:
+startActivity(new Intent(getActivity(),MenuWithCustomAnimationActivity.class));
+break;
+case 3:
+startActivity(new Intent(getActivity(),MenuInScrollViewActivity.class));
+break;
+}
+}

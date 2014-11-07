@@ -1,0 +1,5 @@
+{
+  super(context,attrs);
+  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.SelectorOptions,0,0);
+  setSelector(a);
+}

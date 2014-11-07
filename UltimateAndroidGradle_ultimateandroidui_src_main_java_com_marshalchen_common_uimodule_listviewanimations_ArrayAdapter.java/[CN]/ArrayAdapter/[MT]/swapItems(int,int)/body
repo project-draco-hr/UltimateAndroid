@@ -1,0 +1,5 @@
+{
+  T temp=getItem(locationOne);
+  set(locationOne,getItem(locationTwo));
+  set(locationTwo,temp);
+}

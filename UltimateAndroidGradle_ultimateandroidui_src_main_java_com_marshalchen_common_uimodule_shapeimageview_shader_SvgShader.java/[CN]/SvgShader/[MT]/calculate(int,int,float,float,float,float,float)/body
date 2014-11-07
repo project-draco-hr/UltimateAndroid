@@ -1,0 +1,39 @@
+{
+  path.reset();
+  borderPath.reset();
+  pathDimensions[0]=shapePath.getWidth();
+  pathDimensions[1]=shapePath.getHeight();
+  pathMatrix.reset();
+  scale=Math.min(width / pathDimensions[0],height / pathDimensions[1]);
+  translateX=Math.round((width - pathDimensions[0] * scale) * 0.5f);
+  translateY=Math.round((height - pathDimensions[1] * scale) * 0.5f);
+  pathMatrix.setScale(scale,scale);
+  pathMatrix.postTranslate(translateX,translateY);
+  shapePath.transform(pathMatrix,path);
+  path.offset(borderWidth,borderWidth);
+  if (borderWidth > 0) {
+    pathMatrix.reset();
+    float newWidth;
+    float newHeight;
+    float d;
+    if (borderType == BORDER_TYPE_DEFAULT) {
+      newWidth=viewWidth - borderWidth;
+      newHeight=viewHeight - borderWidth;
+      d=borderWidth / 2f;
+    }
+ else {
+      newWidth=viewWidth;
+      newHeight=viewHeight;
+      d=0;
+    }
+    scale=Math.min(newWidth / pathDimensions[0],newHeight / pathDimensions[1]);
+    translateX=Math.round((newWidth - pathDimensions[0] * scale) * 0.5f + d);
+    translateY=Math.round((newHeight - pathDimensions[1] * scale) * 0.5f + d);
+    pathMatrix.setScale(scale,scale);
+    pathMatrix.postTranslate(translateX,translateY);
+    shapePath.transform(pathMatrix,borderPath);
+  }
+  pathMatrix.reset();
+  matrix.invert(pathMatrix);
+  path.transform(pathMatrix);
+}

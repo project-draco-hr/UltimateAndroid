@@ -1,0 +1,5 @@
+Context c
+int resid
+String line1
+String line2
+ScaleType scaleType

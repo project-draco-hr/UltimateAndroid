@@ -1,0 +1,4 @@
+{
+  Intent intent=new Intent(this,GridViewActivity.class);
+  startActivity(intent);
+}

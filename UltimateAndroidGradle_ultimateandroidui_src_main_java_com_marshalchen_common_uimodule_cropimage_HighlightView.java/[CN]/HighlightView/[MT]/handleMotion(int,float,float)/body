@@ -1,0 +1,17 @@
+{
+  Rect r=computeLayout();
+  if (edge == MOVE) {
+    moveBy(dx * (cropRect.width() / r.width()),dy * (cropRect.height() / r.height()));
+  }
+ else {
+    if (((GROW_LEFT_EDGE | GROW_RIGHT_EDGE) & edge) == 0) {
+      dx=0;
+    }
+    if (((GROW_TOP_EDGE | GROW_BOTTOM_EDGE) & edge) == 0) {
+      dy=0;
+    }
+    float xDelta=dx * (cropRect.width() / r.width());
+    float yDelta=dy * (cropRect.height() / r.height());
+    growBy((((edge & GROW_LEFT_EDGE) != 0) ? -1 : 1) * xDelta,(((edge & GROW_TOP_EDGE) != 0) ? -1 : 1) * yDelta);
+  }
+}

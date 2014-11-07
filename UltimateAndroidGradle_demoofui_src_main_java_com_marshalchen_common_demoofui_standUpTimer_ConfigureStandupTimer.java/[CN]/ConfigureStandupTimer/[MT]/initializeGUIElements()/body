@@ -1,0 +1,7 @@
+{
+  loadState();
+  initializeNumberOfParticipants();
+  initializeMeetingLength();
+  initializeTeamNamesSpinner();
+  initializeStartButton();
+}

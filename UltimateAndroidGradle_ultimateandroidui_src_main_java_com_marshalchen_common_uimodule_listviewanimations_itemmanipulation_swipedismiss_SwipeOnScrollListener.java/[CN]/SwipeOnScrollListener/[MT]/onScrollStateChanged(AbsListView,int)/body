@@ -1,0 +1,5 @@
+{
+  if (scrollState != AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
+    mTouchListener.disallowSwipe();
+  }
+}

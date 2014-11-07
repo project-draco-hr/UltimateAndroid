@@ -1,0 +1,3 @@
+{
+  outState.putString(STATE_KEY,currentState.name());
+}

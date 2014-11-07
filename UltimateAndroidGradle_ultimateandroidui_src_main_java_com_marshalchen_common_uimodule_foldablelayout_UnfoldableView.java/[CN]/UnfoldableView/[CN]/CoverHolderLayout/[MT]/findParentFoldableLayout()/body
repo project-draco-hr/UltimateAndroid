@@ -1,0 +1,10 @@
+{
+  ViewGroup parent=this;
+  while (parent != null) {
+    parent=(ViewGroup)parent.getParent();
+    if (parent instanceof FoldableItemLayout) {
+      return (FoldableItemLayout)parent;
+    }
+  }
+  return null;
+}

@@ -1,0 +1,8 @@
+{
+  if (DEBUG) {
+    canvas.drawRGB(10,200,200);
+  }
+  if (!getPathHelper().onDraw(canvas)) {
+    super.onDraw(canvas);
+  }
+}

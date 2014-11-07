@@ -1,0 +1,29 @@
+{
+  lastFirstFinger.set(firstFinger.x,firstFinger.y);
+  lastSecondFinger.set(secondFinger.x,secondFinger.y);
+  firstFingerIsDown=false;
+  secondFingerIsDown=false;
+  for (int i=0; i < event.getPointerCount(); i++) {
+    int id=event.getPointerId(i);
+    int x=(int)event.getX(i);
+    int y=(int)event.getY(i);
+switch (id) {
+case 0:
+      firstFingerIsDown=true;
+    firstFinger.set(x,y);
+  actualPoint.set(x,y);
+break;
+case 1:
+secondFingerIsDown=true;
+secondFinger.set(x,y);
+actualPoint.set(x,y);
+break;
+}
+}
+scrollPosition.set(getScrollX(),getScrollY());
+actualPoint.offset(scrollPosition.x,scrollPosition.y);
+if (velocity == null) {
+velocity=VelocityTracker.obtain();
+}
+velocity.addMovement(event);
+}

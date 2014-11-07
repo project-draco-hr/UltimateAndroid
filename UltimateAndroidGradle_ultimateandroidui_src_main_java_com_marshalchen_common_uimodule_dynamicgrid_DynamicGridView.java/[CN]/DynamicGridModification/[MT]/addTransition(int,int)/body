@@ -1,0 +1,3 @@
+{
+  transitions.add(new Pair<Integer,Integer>(oldPosition,newPosition));
+}

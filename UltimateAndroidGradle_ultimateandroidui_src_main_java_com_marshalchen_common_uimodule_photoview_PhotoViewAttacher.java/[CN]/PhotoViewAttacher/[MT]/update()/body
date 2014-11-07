@@ -1,0 +1,12 @@
+{
+  ImageView imageView=getImageView();
+  if (null != imageView) {
+    if (mZoomEnabled) {
+      setImageViewScaleTypeMatrix(imageView);
+      updateBaseMatrix(imageView.getDrawable());
+    }
+ else {
+      resetMatrix();
+    }
+  }
+}

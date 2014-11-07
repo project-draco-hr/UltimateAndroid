@@ -1,0 +1,8 @@
+{
+  GridItemRecord rec=mPositionData.get(position,null);
+  if (rec == null) {
+    rec=new GridItemRecord();
+    mPositionData.append(position,rec);
+  }
+  return rec;
+}

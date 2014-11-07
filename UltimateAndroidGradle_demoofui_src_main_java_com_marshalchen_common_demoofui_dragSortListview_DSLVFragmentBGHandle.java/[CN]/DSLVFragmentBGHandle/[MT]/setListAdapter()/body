@@ -1,0 +1,6 @@
+{
+  String[] array=getResources().getStringArray(R.array.jazz_artist_names);
+  ArrayList<String> list=new ArrayList<String>(Arrays.asList(array));
+  adapter=new MyAdapter(list);
+  setListAdapter(adapter);
+}

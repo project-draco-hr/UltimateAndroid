@@ -1,0 +1,4 @@
+View left
+View right
+float positionOffset
+int positionOffsetPixels

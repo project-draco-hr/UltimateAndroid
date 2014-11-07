@@ -1,0 +1,4 @@
+{
+  propertyValuesHolder.setEvaluator(skill.getMethod(duration));
+  return propertyValuesHolder;
+}

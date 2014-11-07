@@ -1,0 +1,17 @@
+{
+  if (mCounted) {
+    return mCount;
+  }
+  mCount=0;
+  int numHeaders=mDelegate.getNumHeaders();
+  if (numHeaders == 0) {
+    mCount=mDelegate.getCount();
+    mCounted=true;
+    return mCount;
+  }
+  for (int i=0; i < numHeaders; i++) {
+    mCount+=mDelegate.getCountForHeader(i) + unFilledSpacesInHeaderGroup(i) + mNumColumns;
+  }
+  mCounted=true;
+  return mCount;
+}

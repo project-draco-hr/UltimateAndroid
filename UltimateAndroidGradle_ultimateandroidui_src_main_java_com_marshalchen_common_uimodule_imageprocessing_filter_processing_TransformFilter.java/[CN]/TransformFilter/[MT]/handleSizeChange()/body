@@ -1,0 +1,19 @@
+{
+  super.handleSizeChange();
+  if (ignoreAspect) {
+    if (anchorTopLeft) {
+      setRenderVertices(new float[]{0.0f,0.0f,1.0f,0.0f,0.0f,1.0f,1.0f,1.0f});
+    }
+    loadOrthoMatrix(-1,1,-1,1,-1,1);
+  }
+ else {
+    float normalizedHeight=(float)getHeight() / (float)getWidth();
+    if (anchorTopLeft) {
+      setRenderVertices(new float[]{0.0f,0.0f,1.0f,0.0f,0.0f,normalizedHeight,1.0f,normalizedHeight});
+    }
+ else {
+      setRenderVertices(new float[]{-1.0f,-normalizedHeight,1.0f,-normalizedHeight,-1.0f,normalizedHeight,1.0f,normalizedHeight});
+    }
+    loadOrthoMatrix(-1,1,(-1 * (float)getHeight() / (float)getWidth()),(1 * (float)getHeight() / (float)getWidth()),-1,1);
+  }
+}

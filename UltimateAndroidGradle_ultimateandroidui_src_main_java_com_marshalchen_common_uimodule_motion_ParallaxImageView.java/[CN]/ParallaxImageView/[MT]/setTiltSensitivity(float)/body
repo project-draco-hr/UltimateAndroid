@@ -1,0 +1,3 @@
+{
+  mSensorInterpreter.setTiltSensitivity(sensitivity);
+}

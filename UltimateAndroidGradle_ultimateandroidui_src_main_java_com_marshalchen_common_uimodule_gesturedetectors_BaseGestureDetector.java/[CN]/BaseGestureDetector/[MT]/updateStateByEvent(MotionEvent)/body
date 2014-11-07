@@ -1,0 +1,11 @@
+{
+  final MotionEvent prev=mPrevEvent;
+  if (mCurrEvent != null) {
+    mCurrEvent.recycle();
+    mCurrEvent=null;
+  }
+  mCurrEvent=MotionEvent.obtain(curr);
+  mTimeDelta=curr.getEventTime() - prev.getEventTime();
+  mCurrPressure=curr.getPressure(curr.getActionIndex());
+  mPrevPressure=prev.getPressure(prev.getActionIndex());
+}

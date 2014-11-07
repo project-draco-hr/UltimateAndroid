@@ -1,0 +1,5 @@
+{
+  if (progressiveStopSpeed < 0)   throw new IllegalArgumentException("progressiveStopSpeed must be >= 0");
+  mProgressiveStopSpeed=progressiveStopSpeed;
+  return this;
+}

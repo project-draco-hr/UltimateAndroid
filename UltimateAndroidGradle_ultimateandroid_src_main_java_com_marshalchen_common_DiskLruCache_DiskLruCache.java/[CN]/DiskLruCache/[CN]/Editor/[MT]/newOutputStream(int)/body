@@ -1,0 +1,28 @@
+{
+  if (index < 0 || index >= valueCount) {
+    throw new IllegalArgumentException("Expected index " + index + " to "+ "be greater than 0 and less than the maximum value count "+ "of "+ valueCount);
+  }
+synchronized (DiskLruCache.this) {
+    if (entry.currentEditor != this) {
+      throw new IllegalStateException();
+    }
+    if (!entry.readable) {
+      written[index]=true;
+    }
+    File dirtyFile=entry.getDirtyFile(index);
+    FileOutputStream outputStream;
+    try {
+      outputStream=new FileOutputStream(dirtyFile);
+    }
+ catch (    FileNotFoundException e) {
+      directory.mkdirs();
+      try {
+        outputStream=new FileOutputStream(dirtyFile);
+      }
+ catch (      FileNotFoundException e2) {
+        return NULL_OUTPUT_STREAM;
+      }
+    }
+    return new FaultHidingOutputStream(outputStream);
+  }
+}

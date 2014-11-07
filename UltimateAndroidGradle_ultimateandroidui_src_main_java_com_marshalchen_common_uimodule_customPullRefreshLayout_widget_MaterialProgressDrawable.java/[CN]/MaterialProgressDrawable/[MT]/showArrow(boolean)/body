@@ -1,0 +1,3 @@
+{
+  mRing.setShowArrow(show);
+}

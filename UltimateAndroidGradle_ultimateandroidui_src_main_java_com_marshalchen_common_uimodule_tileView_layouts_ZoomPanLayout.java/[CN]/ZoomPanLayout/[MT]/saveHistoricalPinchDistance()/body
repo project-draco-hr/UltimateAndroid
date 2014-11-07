@@ -1,0 +1,5 @@
+{
+  int dx=firstFinger.x - secondFinger.x;
+  int dy=firstFinger.y - secondFinger.y;
+  pinchStartDistance=Math.sqrt(dx * dx + dy * dy);
+}

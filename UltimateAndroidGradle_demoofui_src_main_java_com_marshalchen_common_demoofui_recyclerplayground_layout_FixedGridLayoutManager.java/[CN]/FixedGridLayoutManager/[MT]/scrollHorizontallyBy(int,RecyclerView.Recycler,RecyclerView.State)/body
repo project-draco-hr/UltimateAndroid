@@ -1,0 +1,50 @@
+{
+  if (getChildCount() == 0) {
+    return 0;
+  }
+  final View topView=getChildAt(0);
+  final View bottomView=getChildAt(mVisibleColumnCount - 1);
+  int viewSpan=getDecoratedRight(bottomView) - getDecoratedLeft(topView);
+  if (viewSpan <= getHorizontalSpace()) {
+    return 0;
+  }
+  int delta;
+  boolean leftBoundReached=getFirstVisibleColumn() == 0;
+  boolean rightBoundReached=getLastVisibleColumn() >= getTotalColumnCount();
+  if (dx > 0) {
+    if (rightBoundReached) {
+      int rightOffset=getHorizontalSpace() - getDecoratedRight(bottomView) + getPaddingRight();
+      delta=Math.max(-dx,rightOffset);
+    }
+ else {
+      delta=-dx;
+    }
+  }
+ else {
+    if (leftBoundReached) {
+      int leftOffset=-getDecoratedLeft(topView) + getPaddingLeft();
+      delta=Math.min(-dx,leftOffset);
+    }
+ else {
+      delta=-dx;
+    }
+  }
+  offsetChildrenHorizontal(delta);
+  if (dx > 0) {
+    if (getDecoratedRight(topView) < 0 && !rightBoundReached) {
+      fillGrid(DIRECTION_END,recycler);
+    }
+ else     if (!rightBoundReached) {
+      fillGrid(DIRECTION_NONE,recycler);
+    }
+  }
+ else {
+    if (getDecoratedLeft(topView) > 0 && !leftBoundReached) {
+      fillGrid(DIRECTION_START,recycler);
+    }
+ else     if (!leftBoundReached) {
+      fillGrid(DIRECTION_NONE,recycler);
+    }
+  }
+  return -delta;
+}

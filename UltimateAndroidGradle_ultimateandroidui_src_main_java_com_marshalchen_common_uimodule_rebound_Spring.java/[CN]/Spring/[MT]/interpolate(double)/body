@@ -1,0 +1,4 @@
+{
+  mCurrentState.position=mCurrentState.position * alpha + mPreviousState.position * (1 - alpha);
+  mCurrentState.velocity=mCurrentState.velocity * alpha + mPreviousState.velocity * (1 - alpha);
+}

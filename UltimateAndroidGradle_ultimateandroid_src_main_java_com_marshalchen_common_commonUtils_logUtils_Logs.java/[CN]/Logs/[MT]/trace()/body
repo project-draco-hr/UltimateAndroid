@@ -1,0 +1,5 @@
+{
+  if (sIsLogEnabled) {
+    Log.d(sApplicationTag,getContent(getCurrentStackTraceElement()));
+  }
+}

@@ -1,0 +1,12 @@
+{
+  if (!mInTouchEvent || mFloatViewManager == null) {
+    return false;
+  }
+  View v=mFloatViewManager.onCreateFloatView(position);
+  if (v == null) {
+    return false;
+  }
+ else {
+    return startDrag(position,v,dragFlags,deltaX,deltaY);
+  }
+}

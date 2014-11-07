@@ -1,0 +1,8 @@
+{
+  TextView tv=(TextView)convertView;
+  if (tv == null) {
+    tv=(TextView)LayoutInflater.from(SwipeDismissActivity.this).inflate(android.R.layout.simple_list_item_1,parent,false);
+  }
+  tv.setText(getItem(position));
+  return tv;
+}

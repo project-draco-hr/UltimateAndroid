@@ -1,0 +1,4 @@
+{
+  mMap.clear();
+  mOrder.clear();
+}

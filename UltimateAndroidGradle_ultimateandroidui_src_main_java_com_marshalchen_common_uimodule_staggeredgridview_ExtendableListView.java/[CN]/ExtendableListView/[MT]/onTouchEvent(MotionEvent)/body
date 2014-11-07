@@ -1,0 +1,32 @@
+{
+  if (!isEnabled()) {
+    return isClickable() || isLongClickable();
+  }
+  initVelocityTrackerIfNotExists();
+  mVelocityTracker.addMovement(event);
+  if (!hasChildren())   return false;
+  boolean handled;
+  final int action=event.getAction() & MotionEventCompat.ACTION_MASK;
+switch (action) {
+case MotionEvent.ACTION_DOWN:
+    handled=onTouchDown(event);
+  break;
+case MotionEvent.ACTION_MOVE:
+handled=onTouchMove(event);
+break;
+case MotionEvent.ACTION_CANCEL:
+handled=onTouchCancel(event);
+break;
+case MotionEvent.ACTION_POINTER_UP:
+handled=onTouchPointerUp(event);
+break;
+case MotionEvent.ACTION_UP:
+handled=onTouchUp(event);
+break;
+default :
+handled=false;
+break;
+}
+notifyTouchMode();
+return handled;
+}

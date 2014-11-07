@@ -1,0 +1,6 @@
+{
+  Intent intent=new Intent();
+  intent.setClass(context,classes);
+  intent.putParcelableArrayListExtra(key,value);
+  context.startActivity(intent);
+}

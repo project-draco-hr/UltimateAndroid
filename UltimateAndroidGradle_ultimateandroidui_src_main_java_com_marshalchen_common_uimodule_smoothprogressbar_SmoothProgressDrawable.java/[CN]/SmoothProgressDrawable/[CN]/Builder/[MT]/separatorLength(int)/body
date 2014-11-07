@@ -1,0 +1,5 @@
+{
+  if (separatorLength < 0)   throw new IllegalArgumentException("SeparatorLength must be >= 0");
+  mStrokeSeparatorLength=separatorLength;
+  return this;
+}

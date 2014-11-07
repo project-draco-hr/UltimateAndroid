@@ -1,0 +1,6 @@
+{
+  mRatio=0.0f;
+  mPathView.setAlpha(0);
+  mPathView.setTranslationY(mPathView.getHeight() / 2);
+  invalidate();
+}

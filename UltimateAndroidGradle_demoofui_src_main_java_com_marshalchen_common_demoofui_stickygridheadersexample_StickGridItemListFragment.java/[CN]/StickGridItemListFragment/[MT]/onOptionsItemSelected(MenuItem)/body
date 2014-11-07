@@ -1,0 +1,23 @@
+{
+switch (item.getItemId()) {
+case R.id.menu_toggle_sticky:
+    item.setChecked(!item.isChecked());
+  ((StickyGridHeadersGridView)mGridView).setAreHeadersSticky(!((StickyGridHeadersGridView)mGridView).areHeadersSticky());
+return true;
+case R.id.menu_use_list_adapter:
+mGridView.setAdapter(new ArrayAdapter<String>(getActivity(),R.layout.stickygridheader_item,getResources().getStringArray(R.array.countries)));
+mMenu.findItem(R.id.menu_use_list_adapter).setVisible(false);
+mMenu.findItem(R.id.menu_use_sticky_adapter).setVisible(true);
+mMenu.findItem(R.id.menu_toggle_sticky).setVisible(false);
+return true;
+case R.id.menu_use_sticky_adapter:
+mGridView.setAdapter(new StickyGridHeadersSimpleArrayAdapter<String>(getActivity().getApplicationContext(),getResources().getStringArray(R.array.countries),R.layout.stickygridheader_header,R.layout.stickygridheader_item));
+mMenu.findItem(R.id.menu_use_list_adapter).setVisible(true);
+mMenu.findItem(R.id.menu_toggle_sticky).setVisible(true);
+mMenu.findItem(R.id.menu_use_sticky_adapter).setVisible(false);
+return true;
+default :
+break;
+}
+return super.onOptionsItemSelected(item);
+}

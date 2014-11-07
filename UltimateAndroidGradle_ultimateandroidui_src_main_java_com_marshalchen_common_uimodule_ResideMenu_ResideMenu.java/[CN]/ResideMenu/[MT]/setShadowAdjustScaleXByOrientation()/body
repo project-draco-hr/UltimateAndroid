@@ -1,0 +1,11 @@
+{
+  int orientation=getResources().getConfiguration().orientation;
+  if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+    shadowAdjustScaleX=0.034f;
+    shadowAdjustScaleY=0.12f;
+  }
+ else   if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+    shadowAdjustScaleX=0.06f;
+    shadowAdjustScaleY=0.07f;
+  }
+}

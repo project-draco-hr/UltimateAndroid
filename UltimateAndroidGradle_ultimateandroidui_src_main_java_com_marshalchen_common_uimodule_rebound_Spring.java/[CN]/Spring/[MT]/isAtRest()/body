@@ -1,0 +1,3 @@
+{
+  return Math.abs(mCurrentState.velocity) <= mRestSpeedThreshold && getDisplacementDistanceForState(mCurrentState) <= mDisplacementFromRestThreshold;
+}

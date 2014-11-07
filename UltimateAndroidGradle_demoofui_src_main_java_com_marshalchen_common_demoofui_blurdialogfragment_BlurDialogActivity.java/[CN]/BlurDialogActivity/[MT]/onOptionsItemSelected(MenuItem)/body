@@ -1,0 +1,8 @@
+{
+  int id=item.getItemId();
+  if (id == R.id.actions_fullscreen) {
+    startActivity(new Intent(this,SampleFullScreenActivity.class));
+    return true;
+  }
+  return super.onOptionsItemSelected(item);
+}

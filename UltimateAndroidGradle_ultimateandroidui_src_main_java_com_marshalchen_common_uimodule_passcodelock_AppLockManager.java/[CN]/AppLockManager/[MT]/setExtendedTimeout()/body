@@ -1,0 +1,4 @@
+{
+  if (currentAppLocker == null)   return;
+  currentAppLocker.setOneTimeTimeout(AbstractAppLock.EXTENDED_TIMEOUT);
+}

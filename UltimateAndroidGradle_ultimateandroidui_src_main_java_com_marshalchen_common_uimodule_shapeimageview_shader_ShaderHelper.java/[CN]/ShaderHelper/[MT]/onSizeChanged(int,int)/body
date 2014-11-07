@@ -1,0 +1,10 @@
+{
+  viewWidth=width;
+  viewHeight=height;
+  if (isSquare()) {
+    viewWidth=viewHeight=Math.min(width,height);
+  }
+  if (shader != null) {
+    calculateDrawableSizes();
+  }
+}

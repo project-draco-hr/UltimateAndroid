@@ -1,0 +1,8 @@
+{
+  View view=mFadingHelper.createView(inflater);
+  if (mArguments != null) {
+    ImageView img=(ImageView)view.findViewById(R.id.image_header);
+    img.setImageResource(mArguments.getInt(ARG_IMAGE_RES));
+  }
+  return view;
+}

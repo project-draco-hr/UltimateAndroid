@@ -1,0 +1,8 @@
+{
+  CardModel model;
+synchronized (mLock) {
+    model=mData.remove(mData.size() - 1);
+  }
+  notifyDataSetChanged();
+  return model;
+}

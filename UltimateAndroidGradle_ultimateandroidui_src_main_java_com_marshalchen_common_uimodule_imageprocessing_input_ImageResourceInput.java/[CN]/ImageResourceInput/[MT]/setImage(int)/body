@@ -1,0 +1,5 @@
+{
+  final BitmapFactory.Options options=new BitmapFactory.Options();
+  options.inScaled=false;
+  loadImage(BitmapFactory.decodeResource(context.getResources(),resourceId,options));
+}

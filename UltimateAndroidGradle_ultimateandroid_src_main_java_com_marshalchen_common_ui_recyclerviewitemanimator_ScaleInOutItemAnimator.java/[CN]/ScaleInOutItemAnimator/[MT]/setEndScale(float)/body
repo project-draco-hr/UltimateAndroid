@@ -1,0 +1,3 @@
+{
+  setEndScale(scaleXY,scaleXY);
+}

@@ -1,0 +1,3 @@
+{
+  return mListItems.size();
+}

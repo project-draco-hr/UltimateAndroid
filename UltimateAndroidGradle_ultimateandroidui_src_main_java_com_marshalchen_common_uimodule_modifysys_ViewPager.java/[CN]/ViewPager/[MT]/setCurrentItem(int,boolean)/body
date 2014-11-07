@@ -1,0 +1,4 @@
+{
+  mPopulatePending=false;
+  setCurrentItemInternal(item,smoothScroll,false);
+}

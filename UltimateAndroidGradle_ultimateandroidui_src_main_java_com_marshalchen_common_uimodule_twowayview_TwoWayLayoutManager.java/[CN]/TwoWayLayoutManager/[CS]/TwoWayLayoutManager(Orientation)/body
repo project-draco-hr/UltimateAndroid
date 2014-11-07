@@ -1,0 +1,3 @@
+{
+  mIsVertical=(orientation == Orientation.VERTICAL);
+}

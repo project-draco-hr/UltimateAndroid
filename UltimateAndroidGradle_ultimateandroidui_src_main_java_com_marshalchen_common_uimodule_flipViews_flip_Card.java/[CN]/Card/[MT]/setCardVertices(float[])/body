@@ -1,0 +1,4 @@
+{
+  this.cardVertices=cardVertices;
+  this.dirty=true;
+}

@@ -1,0 +1,4 @@
+{
+  mSwipeBackLayout.attachToActivity(mActivity);
+  convertActivityFromTranslucent();
+}

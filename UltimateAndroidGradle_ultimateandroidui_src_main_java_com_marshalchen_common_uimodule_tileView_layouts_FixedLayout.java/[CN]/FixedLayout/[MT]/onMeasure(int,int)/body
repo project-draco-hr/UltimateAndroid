@@ -1,0 +1,21 @@
+{
+  measureChildren(widthMeasureSpec,heightMeasureSpec);
+  int w=0;
+  int h=0;
+  int count=getChildCount();
+  for (int i=0; i < count; i++) {
+    View child=getChildAt(i);
+    if (child.getVisibility() != GONE) {
+      LayoutParams lp=(LayoutParams)child.getLayoutParams();
+      int right=lp.x + child.getMeasuredWidth();
+      int bottom=lp.y + child.getMeasuredHeight();
+      w=Math.max(w,right);
+      h=Math.max(h,bottom);
+    }
+  }
+  h=Math.max(h,getSuggestedMinimumHeight());
+  w=Math.max(w,getSuggestedMinimumWidth());
+  w=resolveSize(w,widthMeasureSpec);
+  h=resolveSize(h,heightMeasureSpec);
+  setMeasuredDimension(w,h);
+}

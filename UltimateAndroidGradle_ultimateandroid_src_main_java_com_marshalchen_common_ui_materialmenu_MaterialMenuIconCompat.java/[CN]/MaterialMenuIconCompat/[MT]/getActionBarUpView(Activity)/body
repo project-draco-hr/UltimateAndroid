@@ -1,0 +1,15 @@
+{
+  Resources resources=activity.getResources();
+  View decorView=activity.getWindow().getDecorView();
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+    ViewGroup actionBarView=(ViewGroup)activity.getWindow().getDecorView().findViewById(resources.getIdentifier("android:id/action_bar",null,null));
+    Logs.d("view---" + (actionBarView == null) + "   "+ (decorView == null));
+    View homeView=actionBarView.getChildAt(actionBarView.getChildCount() > 1 ? 1 : 0);
+    return homeView.findViewById(resources.getIdentifier("android:id/up",null,null));
+  }
+ else {
+    ViewGroup actionBarView=(ViewGroup)decorView.findViewById(R.id.action_bar);
+    View homeView=actionBarView.getChildAt(1);
+    return homeView.findViewById(R.id.up);
+  }
+}

@@ -1,0 +1,3 @@
+{
+  mVirtualListCount=mListView.getAdapter().getCount();
+}

@@ -1,0 +1,14 @@
+{
+  try {
+    File file=new File(fileName);
+    byte[] bytes=loadFile(file);
+    byte[] encoded=TripleDES.Base64encodingByte(bytes,0);
+    String encodedString=new String(encoded);
+    return encodedString;
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e,"");
+    return "";
+  }
+}

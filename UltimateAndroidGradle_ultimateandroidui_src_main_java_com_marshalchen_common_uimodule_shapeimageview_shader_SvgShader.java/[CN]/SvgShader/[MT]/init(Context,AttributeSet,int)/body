@@ -1,0 +1,22 @@
+{
+  super.init(context,attrs,defStyle);
+  if (attrs != null) {
+    TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.ShaderImageView,defStyle,0);
+    resId=typedArray.getResourceId(R.styleable.ShaderImageView_ShaderImageViewShape,resId);
+    borderType=typedArray.getInt(R.styleable.ShaderImageView_borderType,borderType);
+    strokeCap=typedArray.getInt(R.styleable.ShaderImageView_strokeCap,strokeCap);
+    strokeJoin=typedArray.getInt(R.styleable.ShaderImageView_strokeJoin,strokeJoin);
+    strokeMiter=typedArray.getDimensionPixelSize(R.styleable.ShaderImageView_strokeMiter,strokeMiter);
+    typedArray.recycle();
+  }
+  if (resId != -1) {
+    shapePath=SvgUtil.readSvg(context,resId);
+  }
+ else {
+    throw new RuntimeException("No resource is defined as shape");
+  }
+  setBorderType(borderType);
+  setStrokeCap(strokeCap);
+  setStrokeJoin(strokeJoin);
+  setStrokeMiter(strokeMiter);
+}

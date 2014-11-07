@@ -1,0 +1,14 @@
+{
+  final int laneCount=lm.getLanes().getCount();
+  if (itemPosition >= laneCount) {
+    return false;
+  }
+  int count=0;
+  for (int i=0; i < itemPosition; i++) {
+    count+=lm.getLaneSpanForPosition(i);
+    if (count >= laneCount) {
+      return false;
+    }
+  }
+  return true;
+}

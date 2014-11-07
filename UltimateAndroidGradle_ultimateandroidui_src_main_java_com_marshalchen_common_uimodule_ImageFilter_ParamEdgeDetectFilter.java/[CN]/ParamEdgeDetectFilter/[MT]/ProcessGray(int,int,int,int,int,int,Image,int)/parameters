@@ -1,0 +1,8 @@
+int k00
+int k01
+int k02
+int k20
+int k21
+int k22
+Image imageIn
+int thresholdSq

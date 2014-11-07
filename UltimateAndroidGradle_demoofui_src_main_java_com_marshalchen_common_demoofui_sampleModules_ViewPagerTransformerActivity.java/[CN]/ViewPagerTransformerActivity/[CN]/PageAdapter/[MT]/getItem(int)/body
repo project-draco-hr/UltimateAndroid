@@ -1,0 +1,7 @@
+{
+  final Bundle bundle=new Bundle();
+  bundle.putInt(PlaceholderFragment.EXTRA_POSITION,position + 1);
+  final PlaceholderFragment fragment=new PlaceholderFragment();
+  fragment.setArguments(bundle);
+  return fragment;
+}

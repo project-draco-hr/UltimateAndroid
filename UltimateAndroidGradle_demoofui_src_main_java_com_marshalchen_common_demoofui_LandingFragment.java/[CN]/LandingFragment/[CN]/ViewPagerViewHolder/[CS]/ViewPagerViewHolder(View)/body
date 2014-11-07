@@ -1,0 +1,3 @@
+{
+  ButterKnife.inject(this,view);
+}

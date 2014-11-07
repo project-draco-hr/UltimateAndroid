@@ -1,0 +1,4 @@
+{
+  View itemView=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_view_sticky_head_list_item,viewGroup,false);
+  return new ViewHolder(itemView,this);
+}

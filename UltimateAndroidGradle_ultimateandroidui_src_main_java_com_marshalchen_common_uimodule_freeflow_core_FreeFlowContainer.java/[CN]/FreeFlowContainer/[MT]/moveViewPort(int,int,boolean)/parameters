@@ -1,0 +1,3 @@
+int left
+int top
+boolean isInFlingMode

@@ -1,0 +1,41 @@
+{
+  int addButtonY=b - t - mAddButton.getMeasuredHeight();
+  int addButtonX=r - l - mAddButton.getMeasuredWidth();
+  if (!isHorizontal)   mAddButton.layout(0,addButtonY,mAddButton.getMeasuredWidth(),addButtonY + mAddButton.getMeasuredHeight());
+ else   mAddButton.layout(addButtonX,0,addButtonX + mAddButton.getMeasuredWidth(),mAddButton.getMeasuredHeight());
+  int bottomY=addButtonY - mButtonSpacing;
+  int bottomX=addButtonX - mButtonSpacing;
+  for (int i=getChildCount() - 1; i >= 0; i--) {
+    final View child=getChildAt(i);
+    if (child == mAddButton)     continue;
+    int childY=bottomY - child.getMeasuredHeight();
+    int childX=bottomX - child.getMeasuredWidth();
+    if (!isHorizontal)     child.layout(0,childY,child.getMeasuredWidth(),childY + child.getMeasuredHeight());
+ else {
+      Logs.d("num---" + child.getMeasuredWidth() + "   "+ child.getMeasuredHeight()+ "   "+ childX+ "   "+ childY);
+      child.layout(childX,0,childX + child.getMeasuredWidth(),child.getMeasuredHeight());
+    }
+    if (!isHorizontal) {
+      float collapsedTranslation=addButtonY - childY;
+      float expandedTranslation=0f;
+      child.setTranslationY(mExpanded ? expandedTranslation : collapsedTranslation);
+      child.setAlpha(mExpanded ? 1f : 0f);
+      LayoutParams params=(LayoutParams)child.getLayoutParams();
+      params.mCollapseY.setFloatValues(expandedTranslation,collapsedTranslation);
+      params.mExpandY.setFloatValues(collapsedTranslation,expandedTranslation);
+      params.setAnimationsTarget(child);
+    }
+ else {
+      float expandedTranslation=addButtonX - childX;
+      float collapsedTranslation=0f;
+      child.setTranslationX(mExpanded ? expandedTranslation : collapsedTranslation);
+      child.setAlpha(mExpanded ? 1f : 0f);
+      LayoutParams params=(LayoutParams)child.getLayoutParams();
+      params.mCollapseX.setFloatValues(collapsedTranslation,expandedTranslation);
+      params.mExpandX.setFloatValues(expandedTranslation,collapsedTranslation);
+      params.setAnimationsTarget(child);
+    }
+    bottomY=childY - mButtonSpacing;
+    bottomX=childX - mButtonSpacing;
+  }
+}

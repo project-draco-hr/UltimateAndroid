@@ -1,0 +1,4 @@
+{
+  this.pattern=Image.LoadImage(activity,resourceId);
+  this.Mixture=Mixture;
+}

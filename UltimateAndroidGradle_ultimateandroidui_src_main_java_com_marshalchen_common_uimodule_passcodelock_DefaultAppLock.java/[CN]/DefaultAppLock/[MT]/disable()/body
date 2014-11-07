@@ -1,0 +1,4 @@
+{
+  if (android.os.Build.VERSION.SDK_INT < 14)   return;
+  currentApp.unregisterActivityLifecycleCallbacks(this);
+}

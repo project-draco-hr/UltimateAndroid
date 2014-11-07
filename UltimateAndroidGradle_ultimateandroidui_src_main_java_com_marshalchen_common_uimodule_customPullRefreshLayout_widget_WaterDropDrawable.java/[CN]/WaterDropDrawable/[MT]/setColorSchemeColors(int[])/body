@@ -1,0 +1,5 @@
+{
+  if (colorSchemeColors == null || colorSchemeColors.length < 4)   throw new InvalidParameterException("The color scheme length must be 4");
+  mPaint.setColor(colorSchemeColors[0]);
+  mColorSchemeColors=colorSchemeColors;
+}

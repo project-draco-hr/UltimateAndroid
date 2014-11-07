@@ -1,0 +1,11 @@
+{
+  if (pos < n) {
+    pos++;
+  }
+  if (pos == n) {
+    return '\0';
+  }
+ else {
+    return s.charAt(pos);
+  }
+}

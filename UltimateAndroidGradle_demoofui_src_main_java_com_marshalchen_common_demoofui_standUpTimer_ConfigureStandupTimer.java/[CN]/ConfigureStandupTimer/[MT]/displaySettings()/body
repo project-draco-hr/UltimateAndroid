@@ -1,0 +1,3 @@
+{
+  startActivity(new Intent(this,Prefs.class));
+}

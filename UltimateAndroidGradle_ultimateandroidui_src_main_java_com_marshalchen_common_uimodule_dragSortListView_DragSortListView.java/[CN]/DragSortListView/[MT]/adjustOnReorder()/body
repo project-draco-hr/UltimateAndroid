@@ -1,0 +1,11 @@
+{
+  final int firstPos=getFirstVisiblePosition();
+  if (mSrcPos < firstPos) {
+    View v=getChildAt(0);
+    int top=0;
+    if (v != null) {
+      top=v.getTop();
+    }
+    setSelectionFromTop(firstPos - 1,top - getPaddingTop());
+  }
+}

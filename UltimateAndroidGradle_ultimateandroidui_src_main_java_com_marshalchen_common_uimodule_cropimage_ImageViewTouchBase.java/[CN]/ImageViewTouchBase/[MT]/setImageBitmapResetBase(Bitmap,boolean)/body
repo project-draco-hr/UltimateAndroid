@@ -1,0 +1,3 @@
+{
+  setImageRotateBitmapResetBase(new RotateBitmap(bitmap,0),resetSupp);
+}

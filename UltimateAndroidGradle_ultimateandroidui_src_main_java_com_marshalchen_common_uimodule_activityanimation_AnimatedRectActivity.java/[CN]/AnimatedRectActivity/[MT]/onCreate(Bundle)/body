@@ -1,0 +1,14 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(layoutResId());
+  FrameLayout activityRoot=(FrameLayout)findViewById(android.R.id.content);
+  View parent=activityRoot.getChildAt(0);
+  mAnimated=new AnimatedRectLayout(this);
+  activityRoot.removeView(parent);
+  activityRoot.addView(mAnimated,parent.getLayoutParams());
+  mAnimated.addView(parent);
+  mAnimationType=getIntent().getIntExtra("animation_type",AnimatedRectLayout.ANIMATION_RANDOM);
+  mAnimated.setAnimationType(mAnimationType);
+  ObjectAnimator animator=ObjectAnimator.ofFloat(mAnimated,ANIMATED_RECT_LAYOUT_FLOAT_PROPERTY,1).setDuration(600);
+  animator.start();
+}

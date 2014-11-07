@@ -1,0 +1,4 @@
+int position
+int dragFlags
+int deltaX
+int deltaY

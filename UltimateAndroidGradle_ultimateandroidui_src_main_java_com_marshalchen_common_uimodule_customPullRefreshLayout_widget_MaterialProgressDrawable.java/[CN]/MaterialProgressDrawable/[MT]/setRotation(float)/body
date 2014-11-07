@@ -1,0 +1,4 @@
+{
+  mRotation=rotation;
+  invalidateSelf();
+}

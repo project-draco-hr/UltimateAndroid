@@ -1,0 +1,4 @@
+{
+  this.factory=factory;
+  this.mAttributeId=attributeId;
+}

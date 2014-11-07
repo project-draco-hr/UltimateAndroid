@@ -1,0 +1,13 @@
+{
+  int nextPage;
+  if (velocity > mMinimumVelocity) {
+    nextPage=getCurrentPageFloor();
+  }
+ else   if (velocity < -mMinimumVelocity) {
+    nextPage=getCurrentPageCeil();
+  }
+ else {
+    nextPage=getCurrentPageRound();
+  }
+  return Math.min(Math.max(nextPage,0),mPageCount - 1);
+}

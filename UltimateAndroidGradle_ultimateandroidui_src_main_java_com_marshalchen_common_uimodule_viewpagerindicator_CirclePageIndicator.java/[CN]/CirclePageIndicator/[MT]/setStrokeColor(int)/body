@@ -1,0 +1,4 @@
+{
+  mPaintStroke.setColor(strokeColor);
+  invalidate();
+}

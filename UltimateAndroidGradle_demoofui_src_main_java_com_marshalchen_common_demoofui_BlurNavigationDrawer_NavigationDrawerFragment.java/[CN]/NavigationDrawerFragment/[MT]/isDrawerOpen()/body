@@ -1,0 +1,3 @@
+{
+  return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
+}

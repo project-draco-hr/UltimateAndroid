@@ -1,0 +1,3 @@
+{
+  return "precision mediump float;\n" + "uniform sampler2D " + UNIFORM_TEXTURE0 + ";\n"+ "uniform sampler2D "+ UNIFORM_TEXTUREBASE+ 1+ ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "uniform float "+ UNIFORM_INTENSITY+ ";\n"+ "void main(){\n"+ "   vec4 sharpImageColor = texture2D("+ UNIFORM_TEXTURE0+ ", "+ VARYING_TEXCOORD+ ");\n"+ "   vec4 blurredImageColor = texture2D("+ UNIFORM_TEXTUREBASE+ 1+ ", "+ VARYING_TEXCOORD+ ");\n"+ "   gl_FragColor = vec4(mix(sharpImageColor.rgb, blurredImageColor.rgb, "+ UNIFORM_INTENSITY+ "), sharpImageColor.a);\n"+ "}\n";
+}

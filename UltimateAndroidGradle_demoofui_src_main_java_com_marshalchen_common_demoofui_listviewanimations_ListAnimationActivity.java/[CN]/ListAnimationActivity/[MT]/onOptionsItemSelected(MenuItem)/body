@@ -1,0 +1,22 @@
+{
+switch (item.getItemId()) {
+case R.id.menu_main_github:
+    Intent intent=new Intent(Intent.ACTION_VIEW);
+  intent.setData(Uri.parse("http://nhaarman.github.io/ListViewAnimations?ref=app"));
+startActivity(intent);
+return true;
+case R.id.menu_main_beer:
+buy("beer");
+return true;
+case R.id.menu_main_beer2:
+buy("beer2");
+return true;
+case R.id.menu_main_beer3:
+buy("beer3");
+return true;
+case R.id.menu_main_beer4:
+buy("beer4");
+return true;
+}
+return super.onOptionsItemSelected(item);
+}

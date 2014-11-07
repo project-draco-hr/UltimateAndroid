@@ -1,0 +1,10 @@
+{
+  long size=new File(frompath).length();
+  BitmapFactory.Options options=new BitmapFactory.Options();
+  options.inSampleSize=(int)Math.sqrt(size / 100 / 1025.0);
+  File tofile=new File(topath);
+  BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(tofile));
+  bitmap=BitmapFactory.decodeFile(frompath,options);
+  bitmap.compress(Bitmap.CompressFormat.JPEG,pix,bos);
+  bos.close();
+}

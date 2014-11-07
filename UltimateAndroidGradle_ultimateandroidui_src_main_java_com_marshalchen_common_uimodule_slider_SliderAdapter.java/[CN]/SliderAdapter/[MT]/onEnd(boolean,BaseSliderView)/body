@@ -1,0 +1,11 @@
+{
+  if (target.isErrorDisappear() == false || result == true) {
+    return;
+  }
+  for (  BaseSliderView slider : mImageContents) {
+    if (slider.equals(target)) {
+      removeSlider(target);
+      break;
+    }
+  }
+}

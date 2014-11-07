@@ -1,0 +1,6 @@
+{
+  TextView textView=(TextView)convertView;
+  if (textView == null)   textView=(TextView)inflater.inflate(R.layout.parallax_scroll_item,null);
+  textView.setText("Item " + position);
+  return textView;
+}

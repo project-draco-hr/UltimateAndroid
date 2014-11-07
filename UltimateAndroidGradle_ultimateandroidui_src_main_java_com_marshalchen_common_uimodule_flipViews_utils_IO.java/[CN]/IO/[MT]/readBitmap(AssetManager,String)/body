@@ -1,0 +1,9 @@
+{
+  try {
+    return readBitmap(manager.open(name));
+  }
+ catch (  IOException e) {
+    AphidLog.e(e,"Failed to read bitmap '%s' from assets",name);
+    return null;
+  }
+}

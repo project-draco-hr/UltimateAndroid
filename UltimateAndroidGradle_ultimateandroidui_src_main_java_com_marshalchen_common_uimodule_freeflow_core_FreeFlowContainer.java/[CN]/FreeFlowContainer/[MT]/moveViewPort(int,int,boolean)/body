@@ -1,0 +1,5 @@
+{
+  viewPortX=left;
+  viewPortY=top;
+  moveViewport(isInFlingMode);
+}

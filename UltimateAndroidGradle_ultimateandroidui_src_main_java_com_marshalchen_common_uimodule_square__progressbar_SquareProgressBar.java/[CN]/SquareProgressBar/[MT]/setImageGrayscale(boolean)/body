@@ -1,0 +1,11 @@
+{
+  this.greyscale=greyscale;
+  if (greyscale) {
+    ColorMatrix matrix=new ColorMatrix();
+    matrix.setSaturation(0);
+    imageView.setColorFilter(new ColorMatrixColorFilter(matrix));
+  }
+ else {
+    imageView.setColorFilter(null);
+  }
+}

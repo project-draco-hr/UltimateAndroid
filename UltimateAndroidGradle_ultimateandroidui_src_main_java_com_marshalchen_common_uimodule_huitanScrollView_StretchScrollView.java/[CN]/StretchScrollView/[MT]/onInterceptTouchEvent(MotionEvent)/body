@@ -1,0 +1,6 @@
+{
+  if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+    mTouchY=ev.getY();
+  }
+  return super.onInterceptTouchEvent(ev);
+}

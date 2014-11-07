@@ -1,0 +1,8 @@
+{
+  if (width != MATCH_PARENT) {
+    width=MATCH_PARENT;
+  }
+  if (height == MATCH_PARENT) {
+    height=WRAP_CONTENT;
+  }
+}

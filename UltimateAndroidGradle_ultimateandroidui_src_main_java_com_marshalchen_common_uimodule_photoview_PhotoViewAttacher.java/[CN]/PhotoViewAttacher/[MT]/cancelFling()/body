@@ -1,0 +1,6 @@
+{
+  if (null != mCurrentFlingRunnable) {
+    mCurrentFlingRunnable.cancelFling();
+    mCurrentFlingRunnable=null;
+  }
+}

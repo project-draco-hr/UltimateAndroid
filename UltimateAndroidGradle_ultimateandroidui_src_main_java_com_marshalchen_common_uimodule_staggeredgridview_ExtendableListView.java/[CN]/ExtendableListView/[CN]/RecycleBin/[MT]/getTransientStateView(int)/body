@@ -1,0 +1,12 @@
+{
+  if (mTransientStateViews == null) {
+    return null;
+  }
+  final int index=mTransientStateViews.indexOfKey(position);
+  if (index < 0) {
+    return null;
+  }
+  final View result=mTransientStateViews.valueAt(index);
+  mTransientStateViews.removeAt(index);
+  return result;
+}

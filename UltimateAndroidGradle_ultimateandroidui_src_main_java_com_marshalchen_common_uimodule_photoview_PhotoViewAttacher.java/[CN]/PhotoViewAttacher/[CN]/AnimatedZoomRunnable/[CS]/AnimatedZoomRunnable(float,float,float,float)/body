@@ -1,0 +1,7 @@
+{
+  mFocalX=focalX;
+  mFocalY=focalY;
+  mStartTime=System.currentTimeMillis();
+  mZoomStart=currentZoom;
+  mZoomEnd=targetZoom;
+}

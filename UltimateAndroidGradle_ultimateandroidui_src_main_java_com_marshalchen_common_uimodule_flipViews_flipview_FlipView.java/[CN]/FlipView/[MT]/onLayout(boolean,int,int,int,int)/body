@@ -1,0 +1,19 @@
+{
+  layoutChildren();
+  mTopRect.top=0;
+  mTopRect.left=0;
+  mTopRect.right=getWidth();
+  mTopRect.bottom=getHeight() / 2;
+  mBottomRect.top=getHeight() / 2;
+  mBottomRect.left=0;
+  mBottomRect.right=getWidth();
+  mBottomRect.bottom=getHeight();
+  mLeftRect.top=0;
+  mLeftRect.left=0;
+  mLeftRect.right=getWidth() / 2;
+  mLeftRect.bottom=getHeight();
+  mRightRect.top=0;
+  mRightRect.left=getWidth() / 2;
+  mRightRect.right=getWidth();
+  mRightRect.bottom=getHeight();
+}

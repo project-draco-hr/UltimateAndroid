@@ -1,0 +1,4 @@
+{
+  gamma=((gamma >= 1) ? gamma : 1);
+  _fInvGamma=1.0 / (gamma / 100.0);
+}

@@ -1,0 +1,5 @@
+{
+  for (  WindowListener listener : mListeners) {
+    listener.focusChanged();
+  }
+}

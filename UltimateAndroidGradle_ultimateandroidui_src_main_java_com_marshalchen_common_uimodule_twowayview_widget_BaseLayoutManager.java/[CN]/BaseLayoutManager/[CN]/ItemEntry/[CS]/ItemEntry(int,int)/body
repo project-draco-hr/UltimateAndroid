@@ -1,0 +1,4 @@
+{
+  this.startLane=startLane;
+  this.anchorLane=anchorLane;
+}

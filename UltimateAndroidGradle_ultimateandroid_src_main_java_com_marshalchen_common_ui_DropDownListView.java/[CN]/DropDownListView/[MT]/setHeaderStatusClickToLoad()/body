@@ -1,0 +1,10 @@
+{
+  if (currentHeaderStatus != HEADER_STATUS_CLICK_TO_LOAD) {
+    resetHeaderPadding();
+    headerImage.clearAnimation();
+    headerImage.setVisibility(View.GONE);
+    headerProgressBar.setVisibility(View.GONE);
+    headerText.setText(headerDefaultText);
+    currentHeaderStatus=HEADER_STATUS_CLICK_TO_LOAD;
+  }
+}

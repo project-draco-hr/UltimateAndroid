@@ -1,0 +1,3 @@
+{
+  shimmerViewHelper.setReflectionColor(reflectionColor);
+}

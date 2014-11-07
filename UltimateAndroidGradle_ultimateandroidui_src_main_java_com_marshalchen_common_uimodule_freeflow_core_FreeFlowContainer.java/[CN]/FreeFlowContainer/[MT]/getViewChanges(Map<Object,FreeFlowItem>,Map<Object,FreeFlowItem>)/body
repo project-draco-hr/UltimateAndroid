@@ -1,0 +1,3 @@
+{
+  return getViewChanges(oldFrames,newFrames,false);
+}

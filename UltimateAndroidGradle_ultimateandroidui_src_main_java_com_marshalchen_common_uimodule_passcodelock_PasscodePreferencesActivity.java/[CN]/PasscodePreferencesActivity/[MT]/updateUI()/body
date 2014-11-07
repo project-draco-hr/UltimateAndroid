@@ -1,0 +1,10 @@
+{
+  if (AppLockManager.getInstance().getCurrentAppLock().isPasswordLocked()) {
+    turnPasscodeOnOff.setTitle("passcode_turn_off");
+    changePasscode.setEnabled(true);
+  }
+ else {
+    turnPasscodeOnOff.setTitle("passcode_turn_on");
+    changePasscode.setEnabled(false);
+  }
+}

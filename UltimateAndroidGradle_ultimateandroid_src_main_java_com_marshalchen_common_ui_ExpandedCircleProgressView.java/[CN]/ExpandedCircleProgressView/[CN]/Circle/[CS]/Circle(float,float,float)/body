@@ -1,0 +1,5 @@
+{
+  this.radius=innerCircleSize;
+  this.centerX=x;
+  this.centerY=y;
+}

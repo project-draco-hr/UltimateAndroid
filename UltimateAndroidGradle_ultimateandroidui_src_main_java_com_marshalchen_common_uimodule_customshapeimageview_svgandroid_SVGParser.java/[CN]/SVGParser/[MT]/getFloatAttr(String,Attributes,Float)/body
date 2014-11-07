@@ -1,0 +1,12 @@
+{
+  String v=getStringAttr(name,attributes);
+  if (v == null) {
+    return defaultValue;
+  }
+ else {
+    if (v.endsWith("px")) {
+      v=v.substring(0,v.length() - 2);
+    }
+    return Float.parseFloat(v);
+  }
+}

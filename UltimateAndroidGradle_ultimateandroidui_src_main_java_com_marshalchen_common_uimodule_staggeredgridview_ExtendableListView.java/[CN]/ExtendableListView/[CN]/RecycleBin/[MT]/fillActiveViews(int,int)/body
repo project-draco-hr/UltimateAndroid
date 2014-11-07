@@ -1,0 +1,14 @@
+{
+  if (mActiveViews.length < childCount) {
+    mActiveViews=new View[childCount];
+  }
+  mFirstActivePosition=firstActivePosition;
+  final View[] activeViews=mActiveViews;
+  for (int i=0; i < childCount; i++) {
+    View child=getChildAt(i);
+    LayoutParams lp=(LayoutParams)child.getLayoutParams();
+    if (lp != null && lp.viewType != ITEM_VIEW_TYPE_HEADER_OR_FOOTER) {
+      activeViews[i]=child;
+    }
+  }
+}

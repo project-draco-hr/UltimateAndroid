@@ -1,0 +1,22 @@
+{
+switch (item.getItemId()) {
+case R.id.action_switch:
+    mCurrentImage++;
+  mCurrentImage%=3;
+setCurrentImage();
+return true;
+case R.id.action_portrait:
+if (mPortraitLock) {
+getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+item.setTitle("action_lock_portrait");
+}
+ else {
+getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+item.setTitle("action_unlock_portrait");
+}
+mPortraitLock=!mPortraitLock;
+return true;
+default :
+return super.onOptionsItemSelected(item);
+}
+}

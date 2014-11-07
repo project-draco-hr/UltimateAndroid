@@ -1,0 +1,13 @@
+{
+  float distance=e1.getY() - e2.getY();
+  if (!mIsScrollDetected && Math.abs(distance) > mMinDistanceBeforeScroll) {
+    mIsScrollDetected=true;
+    mScrollStartRotation=getFoldRotation();
+    mScrollStartDistance=distance;
+  }
+  if (mIsScrollDetected) {
+    float rotation=(2 * (distance - mScrollStartDistance) / getHeight()) * 180f;
+    setFoldRotation(mScrollStartRotation + rotation,true);
+  }
+  return mIsScrollDetected;
+}

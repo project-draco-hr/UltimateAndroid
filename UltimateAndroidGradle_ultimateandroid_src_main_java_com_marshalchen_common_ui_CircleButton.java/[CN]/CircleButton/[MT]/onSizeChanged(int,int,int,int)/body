@@ -1,0 +1,7 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  centerX=w / 2;
+  centerY=h / 2;
+  outerRadius=Math.min(w,h) / 2;
+  pressedRingRadius=outerRadius - pressedRingWidth - pressedRingWidth / 2;
+}

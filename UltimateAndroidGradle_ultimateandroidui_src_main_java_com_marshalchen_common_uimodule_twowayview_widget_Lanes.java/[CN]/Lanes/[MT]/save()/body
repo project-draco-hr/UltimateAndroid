@@ -1,0 +1,5 @@
+{
+  for (int i=0; i < mLanes.length; i++) {
+    mSavedLanes[i].set(mLanes[i]);
+  }
+}

@@ -1,0 +1,4 @@
+{
+  paths.remove(path);
+  invalidate();
+}

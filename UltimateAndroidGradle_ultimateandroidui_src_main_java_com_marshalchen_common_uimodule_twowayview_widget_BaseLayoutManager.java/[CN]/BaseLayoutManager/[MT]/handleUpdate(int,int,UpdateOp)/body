@@ -1,0 +1,21 @@
+{
+  invalidateItemLanesAfter(positionStart);
+switch (cmd) {
+case ADD:
+    offsetForAddition(positionStart,itemCountOrToPosition);
+  break;
+case REMOVE:
+offsetForRemoval(positionStart,itemCountOrToPosition);
+break;
+case MOVE:
+offsetForRemoval(positionStart,1);
+offsetForAddition(itemCountOrToPosition,1);
+break;
+}
+if (positionStart + itemCountOrToPosition <= getFirstVisiblePosition()) {
+return;
+}
+if (positionStart <= getLastVisiblePosition()) {
+requestLayout();
+}
+}

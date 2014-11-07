@@ -1,0 +1,145 @@
+{
+  if (Build.VERSION.SDK_INT < Build.VERSION_CODES.FROYO) {
+    scrollChanged(getFirstVisiblePosition());
+  }
+  boolean drawStickiedHeader=mStickiedHeader != null && mAreHeadersSticky && mStickiedHeader.getVisibility() == View.VISIBLE;
+  int headerHeight=getHeaderHeight();
+  int top=mHeaderBottomPosition - headerHeight;
+  if (drawStickiedHeader && mMaskStickyHeaderRegion) {
+    if (mHeadersIgnorePadding) {
+      mClippingRect.left=0;
+      mClippingRect.right=getWidth();
+    }
+ else {
+      mClippingRect.left=getPaddingLeft();
+      mClippingRect.right=getWidth() - getPaddingRight();
+    }
+    mClippingRect.top=mHeaderBottomPosition;
+    mClippingRect.bottom=getHeight();
+    canvas.save();
+    canvas.clipRect(mClippingRect);
+  }
+  super.dispatchDraw(canvas);
+  List<Integer> headerPositions=new ArrayList<Integer>();
+  int vi=0;
+  for (int i=getFirstVisiblePosition(); i <= getLastVisiblePosition(); ) {
+    long id=getItemIdAtPosition(i);
+    if (id == StickyGridHeadersBaseAdapterWrapper.ID_HEADER) {
+      headerPositions.add(vi);
+    }
+    i+=mNumMeasuredColumns;
+    vi+=mNumMeasuredColumns;
+  }
+  for (int i=0; i < headerPositions.size(); i++) {
+    View frame=getChildAt(headerPositions.get(i));
+    View header;
+    try {
+      header=(View)frame.getTag();
+    }
+ catch (    Exception e) {
+      return;
+    }
+    boolean headerIsStickied=((StickyGridHeadersBaseAdapterWrapper.HeaderFillerView)frame).getHeaderId() == mCurrentHeaderId && frame.getTop() < 0 && mAreHeadersSticky;
+    if (header.getVisibility() != View.VISIBLE || headerIsStickied) {
+      continue;
+    }
+    int widthMeasureSpec;
+    if (mHeadersIgnorePadding) {
+      widthMeasureSpec=MeasureSpec.makeMeasureSpec(getWidth(),MeasureSpec.EXACTLY);
+    }
+ else {
+      widthMeasureSpec=MeasureSpec.makeMeasureSpec(getWidth() - getPaddingLeft() - getPaddingRight(),MeasureSpec.EXACTLY);
+    }
+    int heightMeasureSpec=MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
+    header.measure(MeasureSpec.makeMeasureSpec(0,0),MeasureSpec.makeMeasureSpec(0,0));
+    header.measure(widthMeasureSpec,heightMeasureSpec);
+    if (mHeadersIgnorePadding) {
+      header.layout(getLeft(),0,getRight(),frame.getHeight());
+    }
+ else {
+      header.layout(getLeft() + getPaddingLeft(),0,getRight() - getPaddingRight(),frame.getHeight());
+    }
+    if (mHeadersIgnorePadding) {
+      mClippingRect.left=0;
+      mClippingRect.right=getWidth();
+    }
+ else {
+      mClippingRect.left=getPaddingLeft();
+      mClippingRect.right=getWidth() - getPaddingRight();
+    }
+    mClippingRect.bottom=frame.getBottom();
+    mClippingRect.top=frame.getTop();
+    canvas.save();
+    canvas.clipRect(mClippingRect);
+    if (mHeadersIgnorePadding) {
+      canvas.translate(0,frame.getTop());
+    }
+ else {
+      canvas.translate(getPaddingLeft(),frame.getTop());
+    }
+    header.draw(canvas);
+    canvas.restore();
+  }
+  if (drawStickiedHeader && mMaskStickyHeaderRegion) {
+    canvas.restore();
+  }
+ else   if (!drawStickiedHeader) {
+    return;
+  }
+  int wantedWidth;
+  if (mHeadersIgnorePadding) {
+    wantedWidth=getWidth();
+  }
+ else {
+    wantedWidth=getWidth() - getPaddingLeft() - getPaddingRight();
+  }
+  if (mStickiedHeader.getWidth() != wantedWidth) {
+    int widthMeasureSpec;
+    if (mHeadersIgnorePadding) {
+      widthMeasureSpec=MeasureSpec.makeMeasureSpec(getWidth(),MeasureSpec.EXACTLY);
+    }
+ else {
+      widthMeasureSpec=MeasureSpec.makeMeasureSpec(getWidth() - getPaddingLeft() - getPaddingRight(),MeasureSpec.EXACTLY);
+    }
+    int heightMeasureSpec=MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
+    mStickiedHeader.measure(MeasureSpec.makeMeasureSpec(0,0),MeasureSpec.makeMeasureSpec(0,0));
+    mStickiedHeader.measure(widthMeasureSpec,heightMeasureSpec);
+    if (mHeadersIgnorePadding) {
+      mStickiedHeader.layout(getLeft(),0,getRight(),mStickiedHeader.getHeight());
+    }
+ else {
+      mStickiedHeader.layout(getLeft() + getPaddingLeft(),0,getRight() - getPaddingRight(),mStickiedHeader.getHeight());
+    }
+  }
+  if (mHeadersIgnorePadding) {
+    mClippingRect.left=0;
+    mClippingRect.right=getWidth();
+  }
+ else {
+    mClippingRect.left=getPaddingLeft();
+    mClippingRect.right=getWidth() - getPaddingRight();
+  }
+  mClippingRect.bottom=top + headerHeight;
+  if (mClippingToPadding) {
+    mClippingRect.top=getPaddingTop();
+  }
+ else {
+    mClippingRect.top=0;
+  }
+  canvas.save();
+  canvas.clipRect(mClippingRect);
+  if (mHeadersIgnorePadding) {
+    canvas.translate(0,top);
+  }
+ else {
+    canvas.translate(getPaddingLeft(),top);
+  }
+  if (mHeaderBottomPosition != headerHeight) {
+    canvas.saveLayerAlpha(0,0,canvas.getWidth(),canvas.getHeight(),255 * mHeaderBottomPosition / headerHeight,Canvas.ALL_SAVE_FLAG);
+  }
+  mStickiedHeader.draw(canvas);
+  if (mHeaderBottomPosition != headerHeight) {
+    canvas.restore();
+  }
+  canvas.restore();
+}

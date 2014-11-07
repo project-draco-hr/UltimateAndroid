@@ -1,0 +1,13 @@
+{
+  mAdaptor=new PinnedHeaderAdapter(this,mListItems,mListSectionPos);
+  mListView.setAdapter(mAdaptor);
+  LayoutInflater inflater=(LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+  View pinnedHeaderView=inflater.inflate(R.layout.list_filter_section_row_view,mListView,false);
+  mListView.setPinnedHeaderView(pinnedHeaderView);
+  IndexBarView indexBarView=(IndexBarView)inflater.inflate(R.layout.list_filter_index_bar_view,mListView,false);
+  indexBarView.setData(mListView,mListItems,mListSectionPos);
+  mListView.setIndexBarView(indexBarView);
+  View previewTextView=inflater.inflate(R.layout.list_filter_preview_view,mListView,false);
+  mListView.setPreviewView(previewTextView);
+  mListView.setOnScrollListener(mAdaptor);
+}

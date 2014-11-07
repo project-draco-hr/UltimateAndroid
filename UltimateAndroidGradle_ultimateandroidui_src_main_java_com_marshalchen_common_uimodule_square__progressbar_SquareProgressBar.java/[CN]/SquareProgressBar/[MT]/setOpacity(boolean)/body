@@ -1,0 +1,4 @@
+{
+  this.opacity=opacity;
+  setProgress(bar.getProgress());
+}

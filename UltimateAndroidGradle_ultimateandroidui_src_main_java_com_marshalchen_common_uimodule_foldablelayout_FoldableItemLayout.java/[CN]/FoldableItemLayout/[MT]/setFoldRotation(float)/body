@@ -1,0 +1,14 @@
+{
+  mFoldRotation=rotation;
+  mTopPart.applyFoldRotation(rotation);
+  mBottomPart.applyFoldRotation(rotation);
+  setInTransformation(rotation != 0);
+  if (mIsAutoScaleEnabled) {
+    float viewScale=1.0f;
+    if (mWidth > 0) {
+      float dW=(float)(mHeight * Math.abs(Math.sin(Math.toRadians(rotation)))) * CAMERA_DISTANCE_MAGIC_FACTOR;
+      viewScale=mWidth / (mWidth + dW);
+    }
+    setScale(viewScale);
+  }
+}

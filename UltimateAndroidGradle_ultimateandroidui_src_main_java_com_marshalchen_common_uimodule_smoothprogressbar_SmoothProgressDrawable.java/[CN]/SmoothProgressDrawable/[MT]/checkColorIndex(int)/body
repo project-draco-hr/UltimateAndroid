@@ -1,0 +1,5 @@
+{
+  if (index < 0 || index >= mColors.length) {
+    throw new IllegalArgumentException(String.format("Index %d not valid",index));
+  }
+}

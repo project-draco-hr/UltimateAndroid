@@ -1,0 +1,127 @@
+{
+  if (!mIsFlippingEnabled) {
+    return false;
+  }
+  if (mPageCount < 1) {
+    return false;
+  }
+  if (!mIsFlipping && !mLastTouchAllowed) {
+    return false;
+  }
+  final int action=ev.getAction();
+  if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_OUTSIDE) {
+    mLastTouchAllowed=false;
+  }
+ else {
+    mLastTouchAllowed=true;
+  }
+  trackVelocity(ev);
+switch (action & MotionEvent.ACTION_MASK) {
+case MotionEvent.ACTION_DOWN:
+    if (endScroll() || endPeak()) {
+      mIsFlipping=true;
+    }
+  mLastX=ev.getX();
+mLastY=ev.getY();
+mActivePointerId=MotionEventCompat.getPointerId(ev,0);
+break;
+case MotionEvent.ACTION_MOVE:
+if (!mIsFlipping) {
+final int pointerIndex=MotionEventCompat.findPointerIndex(ev,mActivePointerId);
+if (pointerIndex == -1) {
+mActivePointerId=INVALID_POINTER;
+break;
+}
+final float x=MotionEventCompat.getX(ev,pointerIndex);
+final float xDiff=Math.abs(x - mLastX);
+final float y=MotionEventCompat.getY(ev,pointerIndex);
+final float yDiff=Math.abs(y - mLastY);
+if ((mIsFlippingVertically && yDiff > mTouchSlop && yDiff > xDiff) || (!mIsFlippingVertically && xDiff > mTouchSlop && xDiff > yDiff)) {
+mIsFlipping=true;
+mLastX=x;
+mLastY=y;
+}
+}
+if (mIsFlipping) {
+final int activePointerIndex=MotionEventCompat.findPointerIndex(ev,mActivePointerId);
+if (activePointerIndex == -1) {
+mActivePointerId=INVALID_POINTER;
+break;
+}
+final float x=MotionEventCompat.getX(ev,activePointerIndex);
+final float deltaX=mLastX - x;
+final float y=MotionEventCompat.getY(ev,activePointerIndex);
+final float deltaY=mLastY - y;
+mLastX=x;
+mLastY=y;
+float deltaFlipDistance=0;
+if (mIsFlippingVertically) {
+deltaFlipDistance=deltaY;
+}
+ else {
+deltaFlipDistance=deltaX;
+}
+deltaFlipDistance/=((isFlippingVertically() ? getHeight() : getWidth()) / FLIP_DISTANCE_PER_PAGE);
+setFlipDistance(mFlipDistance + deltaFlipDistance);
+final int minFlipDistance=0;
+final int maxFlipDistance=(mPageCount - 1) * FLIP_DISTANCE_PER_PAGE;
+final boolean isOverFlipping=mFlipDistance < minFlipDistance || mFlipDistance > maxFlipDistance;
+if (isOverFlipping) {
+mIsOverFlipping=true;
+setFlipDistance(mOverFlipper.calculate(mFlipDistance,minFlipDistance,maxFlipDistance));
+if (mOnOverFlipListener != null) {
+float overFlip=mOverFlipper.getTotalOverFlip();
+mOnOverFlipListener.onOverFlip(this,mOverFlipMode,overFlip < 0,Math.abs(overFlip),FLIP_DISTANCE_PER_PAGE);
+}
+}
+ else if (mIsOverFlipping) {
+mIsOverFlipping=false;
+if (mOnOverFlipListener != null) {
+mOnOverFlipListener.onOverFlip(this,mOverFlipMode,false,0,FLIP_DISTANCE_PER_PAGE);
+mOnOverFlipListener.onOverFlip(this,mOverFlipMode,true,0,FLIP_DISTANCE_PER_PAGE);
+}
+}
+}
+break;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+if (mIsFlipping) {
+final VelocityTracker velocityTracker=mVelocityTracker;
+velocityTracker.computeCurrentVelocity(1000,mMaximumVelocity);
+int velocity=0;
+if (isFlippingVertically()) {
+velocity=(int)VelocityTrackerCompat.getYVelocity(velocityTracker,mActivePointerId);
+}
+ else {
+velocity=(int)VelocityTrackerCompat.getXVelocity(velocityTracker,mActivePointerId);
+}
+smoothFlipTo(getNextPage(velocity));
+mActivePointerId=INVALID_POINTER;
+endFlip();
+mOverFlipper.overFlipEnded();
+}
+break;
+case MotionEventCompat.ACTION_POINTER_DOWN:
+{
+final int index=MotionEventCompat.getActionIndex(ev);
+final float x=MotionEventCompat.getX(ev,index);
+final float y=MotionEventCompat.getY(ev,index);
+mLastX=x;
+mLastY=y;
+mActivePointerId=MotionEventCompat.getPointerId(ev,index);
+break;
+}
+case MotionEventCompat.ACTION_POINTER_UP:
+onSecondaryPointerUp(ev);
+final int index=MotionEventCompat.findPointerIndex(ev,mActivePointerId);
+final float x=MotionEventCompat.getX(ev,index);
+final float y=MotionEventCompat.getY(ev,index);
+mLastX=x;
+mLastY=y;
+break;
+}
+if (mActivePointerId == INVALID_POINTER) {
+mLastTouchAllowed=false;
+}
+return true;
+}

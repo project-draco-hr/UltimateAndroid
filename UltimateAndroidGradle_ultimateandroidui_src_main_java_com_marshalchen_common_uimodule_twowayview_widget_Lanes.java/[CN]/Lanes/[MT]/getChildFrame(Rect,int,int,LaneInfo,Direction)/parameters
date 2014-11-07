@@ -1,0 +1,5 @@
+Rect outRect
+int childWidth
+int childHeight
+LaneInfo laneInfo
+Direction direction

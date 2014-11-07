@@ -1,0 +1,8 @@
+{
+  if (rowCount < 1) {
+    rowCount=1;
+  }
+  mRowCount=rowCount;
+  mPageSize=mColCount * mRowCount;
+  requestLayout();
+}

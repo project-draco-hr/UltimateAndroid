@@ -1,0 +1,4 @@
+{
+  this.animationProgress=animationProgress;
+  this.invalidate();
+}

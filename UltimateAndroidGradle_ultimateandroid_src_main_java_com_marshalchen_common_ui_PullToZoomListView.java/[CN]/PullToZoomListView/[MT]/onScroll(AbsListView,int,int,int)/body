@@ -1,0 +1,17 @@
+{
+  Log.d("mmm","onScroll");
+  float f=this.mHeaderHeight - this.mHeaderContainer.getBottom();
+  Log.d("mmm","f|" + f);
+  if ((f > 0.0F) && (f < this.mHeaderHeight)) {
+    Log.d("mmm","1");
+    int i=(int)(0.65D * f);
+    this.mHeaderImage.scrollTo(0,-i);
+  }
+ else   if (this.mHeaderImage.getScrollY() != 0) {
+    Log.d("mmm","2");
+    this.mHeaderImage.scrollTo(0,0);
+  }
+  if (this.mOnScrollListener != null) {
+    this.mOnScrollListener.onScroll(paramAbsListView,paramInt1,paramInt2,paramInt3);
+  }
+}

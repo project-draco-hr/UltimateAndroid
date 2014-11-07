@@ -1,0 +1,13 @@
+{
+  TextView tv=null;
+  if (convertView != null) {
+    tv=(TextView)convertView;
+  }
+ else {
+    tv=new TextView(FreeFlowPhotoGridActivity.this);
+  }
+  tv.setFocusable(false);
+  tv.setBackgroundColor(Color.GRAY);
+  tv.setText("section header" + section);
+  return tv;
+}

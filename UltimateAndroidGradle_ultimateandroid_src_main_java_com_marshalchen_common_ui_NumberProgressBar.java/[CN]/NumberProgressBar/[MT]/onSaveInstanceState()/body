@@ -1,0 +1,13 @@
+{
+  final Bundle bundle=new Bundle();
+  bundle.putParcelable(INSTANCE_STATE,super.onSaveInstanceState());
+  bundle.putInt(INSTANCE_TEXT_COLOR,getTextColor());
+  bundle.putFloat(INSTANCE_TEXT_SIZE,getProgressTextSize());
+  bundle.putFloat(INSTANCE_REACHED_BAR_HEIGHT,getReachedBarHeight());
+  bundle.putFloat(INSTANCE_UNREACHED_BAR_HEIGHT,getUnreachedBarHeight());
+  bundle.putInt(INSTANCE_REACHED_BAR_COLOR,getReachedBarColor());
+  bundle.putInt(INSTANCE_UNREACHED_BAR_COLOR,getUnreachedBarColor());
+  bundle.putInt(INSTANCE_MAX,getMax());
+  bundle.putInt(INSTANCE_PROGRESS,getProgress());
+  return bundle;
+}

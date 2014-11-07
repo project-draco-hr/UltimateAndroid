@@ -1,0 +1,6 @@
+{
+  super(context,layout,c);
+  mTo=to;
+  mOriginalFrom=from;
+  findColumns(c,from);
+}

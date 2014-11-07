@@ -1,0 +1,3 @@
+{
+  return draftees_count;
+}

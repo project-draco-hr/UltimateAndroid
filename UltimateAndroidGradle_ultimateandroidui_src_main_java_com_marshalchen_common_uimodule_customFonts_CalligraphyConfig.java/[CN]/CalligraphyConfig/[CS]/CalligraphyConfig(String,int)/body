@@ -1,0 +1,5 @@
+{
+  this.mFontPath=defaultFontAssetPath;
+  mIsFontSet=!TextUtils.isEmpty(defaultFontAssetPath);
+  mAttrId=attrId != -1 ? attrId : -1;
+}

@@ -1,0 +1,13 @@
+{
+  if (tabCount == 0) {
+    return;
+  }
+  int newScrollX=tabsContainer.getChildAt(position).getLeft() + offset;
+  if (position > 0 || offset > 0) {
+    newScrollX-=scrollOffset;
+  }
+  if (newScrollX != lastScrollX) {
+    lastScrollX=newScrollX;
+    scrollTo(newScrollX,0);
+  }
+}

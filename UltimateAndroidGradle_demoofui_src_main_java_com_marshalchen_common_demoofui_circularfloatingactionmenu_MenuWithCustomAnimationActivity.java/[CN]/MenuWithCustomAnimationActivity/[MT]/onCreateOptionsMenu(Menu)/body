@@ -1,0 +1,4 @@
+{
+  getMenuInflater().inflate(R.menu.circular_floating_menu_menu_with_custom_animation,menu);
+  return true;
+}

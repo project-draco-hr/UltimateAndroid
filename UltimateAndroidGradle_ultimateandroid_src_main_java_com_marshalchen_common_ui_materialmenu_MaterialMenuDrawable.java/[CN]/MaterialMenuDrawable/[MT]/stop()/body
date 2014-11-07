@@ -1,0 +1,9 @@
+{
+  if (isRunning() && transformation.isRunning()) {
+    transformation.end();
+  }
+ else {
+    transformationRunning=false;
+    invalidateSelf();
+  }
+}

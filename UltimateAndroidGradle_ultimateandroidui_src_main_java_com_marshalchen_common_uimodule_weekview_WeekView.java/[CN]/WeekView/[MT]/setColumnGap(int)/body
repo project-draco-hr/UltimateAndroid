@@ -1,0 +1,4 @@
+{
+  mColumnGap=columnGap;
+  invalidate();
+}

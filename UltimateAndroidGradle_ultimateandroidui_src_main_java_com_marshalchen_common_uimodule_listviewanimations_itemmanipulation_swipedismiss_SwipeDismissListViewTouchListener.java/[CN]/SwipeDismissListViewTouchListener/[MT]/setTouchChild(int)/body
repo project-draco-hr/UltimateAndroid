@@ -1,0 +1,6 @@
+{
+  mResIdOfTouchChild=childResId;
+  if (childResId != 0) {
+    setIsParentHorizontalScrollContainer(false);
+  }
+}

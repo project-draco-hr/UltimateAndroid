@@ -1,0 +1,3 @@
+{
+  colorArray[((y * image.getWidth() + x))]=color;
+}

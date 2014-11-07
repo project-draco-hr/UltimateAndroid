@@ -1,0 +1,26 @@
+{
+  if (BasicUtils.judgeNotNull(content)) {
+    return false;
+  }
+  FileWriter fileWriter=null;
+  try {
+    makeDirs(filePath);
+    fileWriter=new FileWriter(filePath,append);
+    fileWriter.write(content);
+    fileWriter.close();
+    return true;
+  }
+ catch (  IOException e) {
+    throw new RuntimeException("IOException occurred. ",e);
+  }
+ finally {
+    if (fileWriter != null) {
+      try {
+        fileWriter.close();
+      }
+ catch (      IOException e) {
+        throw new RuntimeException("IOException occurred. ",e);
+      }
+    }
+  }
+}

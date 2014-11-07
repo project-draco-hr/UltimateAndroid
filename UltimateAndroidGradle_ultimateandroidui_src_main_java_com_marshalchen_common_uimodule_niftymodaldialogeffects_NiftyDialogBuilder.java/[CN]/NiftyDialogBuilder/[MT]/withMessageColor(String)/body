@@ -1,0 +1,4 @@
+{
+  mMessage.setTextColor(Color.parseColor(colorString));
+  return this;
+}

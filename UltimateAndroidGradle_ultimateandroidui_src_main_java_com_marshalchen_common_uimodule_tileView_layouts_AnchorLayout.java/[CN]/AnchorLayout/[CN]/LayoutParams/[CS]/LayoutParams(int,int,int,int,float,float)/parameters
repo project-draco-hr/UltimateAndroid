@@ -1,0 +1,6 @@
+int width
+int height
+int left
+int top
+float aX
+float aY

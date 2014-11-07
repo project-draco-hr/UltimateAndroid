@@ -1,0 +1,8 @@
+{
+  try {
+    return ev.getX(mActivePointerIndex);
+  }
+ catch (  Exception e) {
+    return ev.getX();
+  }
+}

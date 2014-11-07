@@ -1,0 +1,10 @@
+{
+  final float left=Edge.LEFT.getCoordinate();
+  final float top=Edge.TOP.getCoordinate();
+  final float right=Edge.RIGHT.getCoordinate();
+  final float bottom=Edge.BOTTOM.getCoordinate();
+  mPressedHandle=HandleUtil.getPressedHandle(x,y,left,top,right,bottom,mHandleRadius);
+  if (mPressedHandle == null)   return;
+  mTouchOffset=HandleUtil.getOffset(mPressedHandle,x,y,left,top,right,bottom);
+  invalidate();
+}

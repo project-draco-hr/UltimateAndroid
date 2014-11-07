@@ -1,0 +1,14 @@
+{
+  if (hoverView == null)   throw new IllegalStateException("Hover view is null");
+  View child=hoverView.findViewById(resId);
+  if (child == null)   throw new IllegalStateException("Can not find the child view");
+  if (duration < 0)   throw new IllegalArgumentException("Duration can not be less than 0");
+  if (delay < 0)   throw new IllegalArgumentException("Delay can not be less than 0");
+  this.composer=YoYo.with(technique).duration(duration).delay(delay).interpolate(interpolator);
+  this.targetView=child;
+  this.interpolator=interpolator;
+  this.delay=delay;
+  this.duration=duration;
+  this.invisibleWhenDelaying=invisibleWhenDelaying;
+  for (  Animator.AnimatorListener l : listeners)   this.composer.withListener(l);
+}

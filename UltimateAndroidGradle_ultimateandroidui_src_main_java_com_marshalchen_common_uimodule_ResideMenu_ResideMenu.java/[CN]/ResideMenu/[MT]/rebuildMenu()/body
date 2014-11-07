@@ -1,0 +1,6 @@
+{
+  layoutLeftMenu.removeAllViews();
+  layoutRightMenu.removeAllViews();
+  for (int i=0; i < leftMenuItems.size(); i++)   layoutLeftMenu.addView(leftMenuItems.get(i),i);
+  for (int i=0; i < rightMenuItems.size(); i++)   layoutRightMenu.addView(rightMenuItems.get(i),i);
+}

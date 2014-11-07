@@ -1,0 +1,4 @@
+{
+  View topChild=mListView.getChildAt(0);
+  return topChild == null ? 0 : mListView.getFirstVisiblePosition() * topChild.getHeight() - topChild.getTop();
+}

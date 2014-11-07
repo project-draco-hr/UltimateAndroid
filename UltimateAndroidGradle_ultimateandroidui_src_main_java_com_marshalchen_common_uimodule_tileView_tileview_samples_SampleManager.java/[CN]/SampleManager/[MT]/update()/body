@@ -1,0 +1,13 @@
+{
+  DetailLevel detailLevel=detailManager.getCurrentDetailLevel();
+  if (detailLevel != null) {
+    String fileName=detailLevel.getDownsample();
+    if (fileName != null) {
+      if (!fileName.equals(lastFileName)) {
+        bitmap=decoder.decode(fileName,getContext());
+        invalidate();
+      }
+    }
+    lastFileName=fileName;
+  }
+}

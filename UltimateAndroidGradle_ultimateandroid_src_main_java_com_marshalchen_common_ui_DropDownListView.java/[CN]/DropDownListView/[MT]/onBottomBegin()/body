@@ -1,0 +1,9 @@
+{
+  if (isOnBottomStyle) {
+    if (isShowFooterProgressBar) {
+      footerProgressBar.setVisibility(View.VISIBLE);
+    }
+    footerButton.setText(footerLoadingText);
+    footerButton.setEnabled(false);
+  }
+}

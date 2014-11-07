@@ -1,0 +1,9 @@
+{
+  Iterator<?> it=srcFrames.entrySet().iterator();
+  while (it.hasNext()) {
+    Map.Entry<?,?> pairs=(Map.Entry<?,?>)it.next();
+    FreeFlowItem pr=(FreeFlowItem)pairs.getValue();
+    pr=FreeFlowItem.clone(pr);
+    destFrames.put(pairs.getKey(),pr);
+  }
+}

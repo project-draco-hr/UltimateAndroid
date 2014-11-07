@@ -1,0 +1,33 @@
+{
+switch (ev.getAction()) {
+case MotionEvent.ACTION_DOWN:
+    if (contains(ev.getX(),ev.getY())) {
+      mIsIndexing=true;
+      filterListItem(ev.getY());
+      return true;
+    }
+ else {
+      mCurrentSectionPosition=-1;
+      return false;
+    }
+case MotionEvent.ACTION_MOVE:
+  if (mIsIndexing) {
+    if (contains(ev.getX(),ev.getY())) {
+      filterListItem(ev.getY());
+      return true;
+    }
+ else {
+      mCurrentSectionPosition=-1;
+      return false;
+    }
+  }
+break;
+case MotionEvent.ACTION_UP:
+if (mIsIndexing) {
+mIsIndexing=false;
+mCurrentSectionPosition=-1;
+}
+break;
+}
+return false;
+}

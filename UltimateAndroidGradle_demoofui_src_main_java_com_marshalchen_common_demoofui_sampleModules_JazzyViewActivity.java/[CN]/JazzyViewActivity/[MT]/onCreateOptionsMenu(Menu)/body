@@ -1,0 +1,6 @@
+{
+  menu.add("Toggle Fade");
+  String[] effects=this.getResources().getStringArray(R.array.jazzy_effects);
+  for (  String effect : effects)   menu.add(effect);
+  return true;
+}

@@ -1,0 +1,14 @@
+{
+  final float left=Edge.LEFT.getCoordinate();
+  final float top=Edge.TOP.getCoordinate();
+  final float right=Edge.RIGHT.getCoordinate();
+  final float bottom=Edge.BOTTOM.getCoordinate();
+  canvas.drawLine(left - mCornerOffset,top - mCornerExtension,left - mCornerOffset,top + mCornerLength,mCornerPaint);
+  canvas.drawLine(left,top - mCornerOffset,left + mCornerLength,top - mCornerOffset,mCornerPaint);
+  canvas.drawLine(right + mCornerOffset,top - mCornerExtension,right + mCornerOffset,top + mCornerLength,mCornerPaint);
+  canvas.drawLine(right,top - mCornerOffset,right - mCornerLength,top - mCornerOffset,mCornerPaint);
+  canvas.drawLine(left - mCornerOffset,bottom + mCornerExtension,left - mCornerOffset,bottom - mCornerLength,mCornerPaint);
+  canvas.drawLine(left,bottom + mCornerOffset,left + mCornerLength,bottom + mCornerOffset,mCornerPaint);
+  canvas.drawLine(right + mCornerOffset,bottom + mCornerExtension,right + mCornerOffset,bottom - mCornerLength,mCornerPaint);
+  canvas.drawLine(right,bottom + mCornerOffset,right - mCornerLength,bottom + mCornerOffset,mCornerPaint);
+}

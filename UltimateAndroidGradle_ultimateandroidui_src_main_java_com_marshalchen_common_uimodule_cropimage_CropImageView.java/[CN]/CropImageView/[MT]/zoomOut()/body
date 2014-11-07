@@ -1,0 +1,7 @@
+{
+  super.zoomOut();
+  for (  HighlightView hv : highlightViews) {
+    hv.matrix.set(getUnrotatedMatrix());
+    hv.invalidate();
+  }
+}

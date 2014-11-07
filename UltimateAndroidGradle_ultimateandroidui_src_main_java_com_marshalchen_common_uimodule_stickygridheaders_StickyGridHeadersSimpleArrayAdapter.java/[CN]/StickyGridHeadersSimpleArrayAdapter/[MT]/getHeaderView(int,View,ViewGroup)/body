@@ -1,0 +1,22 @@
+{
+  HeaderViewHolder holder;
+  if (convertView == null) {
+    convertView=mInflater.inflate(mHeaderResId,parent,false);
+    holder=new HeaderViewHolder();
+    holder.textView=(TextView)convertView.findViewById(android.R.id.text1);
+    convertView.setTag(holder);
+  }
+ else {
+    holder=(HeaderViewHolder)convertView.getTag();
+  }
+  T item=getItem(position);
+  CharSequence string;
+  if (item instanceof CharSequence) {
+    string=(CharSequence)item;
+  }
+ else {
+    string=item.toString();
+  }
+  holder.textView.setText(string.subSequence(0,1));
+  return convertView;
+}

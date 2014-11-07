@@ -1,0 +1,9 @@
+{
+  ArrayList<Integer> positionsList=new ArrayList<Integer>(positions);
+  Collections.sort(positionsList);
+  int[] dismissPositions=new int[positionsList.size()];
+  for (int i=0; i < positionsList.size(); i++) {
+    dismissPositions[i]=positionsList.get(positionsList.size() - 1 - i);
+  }
+  mCallback.onDismiss(getAbsListView(),dismissPositions);
+}

@@ -1,0 +1,23 @@
+{
+  Rect r=computeLayout();
+  final float hysteresis=20F;
+  int retval=GROW_NONE;
+  boolean verticalCheck=(y >= r.top - hysteresis) && (y < r.bottom + hysteresis);
+  boolean horizCheck=(x >= r.left - hysteresis) && (x < r.right + hysteresis);
+  if ((Math.abs(r.left - x) < hysteresis) && verticalCheck) {
+    retval|=GROW_LEFT_EDGE;
+  }
+  if ((Math.abs(r.right - x) < hysteresis) && verticalCheck) {
+    retval|=GROW_RIGHT_EDGE;
+  }
+  if ((Math.abs(r.top - y) < hysteresis) && horizCheck) {
+    retval|=GROW_TOP_EDGE;
+  }
+  if ((Math.abs(r.bottom - y) < hysteresis) && horizCheck) {
+    retval|=GROW_BOTTOM_EDGE;
+  }
+  if (retval == GROW_NONE && r.contains((int)x,(int)y)) {
+    retval=MOVE;
+  }
+  return retval;
+}

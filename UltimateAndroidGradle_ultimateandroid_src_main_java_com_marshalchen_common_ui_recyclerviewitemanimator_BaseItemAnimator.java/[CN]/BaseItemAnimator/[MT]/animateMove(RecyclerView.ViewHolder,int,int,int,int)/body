@@ -1,0 +1,17 @@
+{
+  final View view=holder.itemView;
+  int deltaX=toX - fromX;
+  int deltaY=toY - fromY;
+  if (deltaX == 0 && deltaY == 0) {
+    dispatchMoveFinished(holder);
+    return false;
+  }
+  if (deltaX != 0) {
+    ViewCompat.setTranslationX(view,-deltaX);
+  }
+  if (deltaY != 0) {
+    ViewCompat.setTranslationY(view,-deltaY);
+  }
+  mPendingMoves.add(new MoveInfo(holder,fromX,fromY,toX,toY));
+  return true;
+}

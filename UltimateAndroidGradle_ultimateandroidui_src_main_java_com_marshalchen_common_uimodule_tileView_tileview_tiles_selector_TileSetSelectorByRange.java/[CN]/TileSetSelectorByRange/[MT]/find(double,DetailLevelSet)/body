@@ -1,0 +1,17 @@
+{
+  int totalLevels=levels.size();
+  int totalSwitches=switchPoint.size();
+  if (totalLevels == 0) {
+    return null;
+  }
+  if (totalLevels != (totalSwitches + 1)) {
+    return null;
+  }
+  for (int index=0; index < totalSwitches; index++) {
+    double thisSwitchPoint=this.switchPoint.get(index);
+    if (scale < thisSwitchPoint) {
+      return levels.get(index);
+    }
+  }
+  return levels.get(totalLevels - 1);
+}

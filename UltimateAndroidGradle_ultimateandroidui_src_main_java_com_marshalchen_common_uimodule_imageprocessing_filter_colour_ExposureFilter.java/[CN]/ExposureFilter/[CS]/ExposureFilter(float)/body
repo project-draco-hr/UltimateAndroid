@@ -1,0 +1,3 @@
+{
+  super((float)Math.pow(2.0,exposure),(float)Math.pow(2.0,exposure),(float)Math.pow(2.0,exposure));
+}

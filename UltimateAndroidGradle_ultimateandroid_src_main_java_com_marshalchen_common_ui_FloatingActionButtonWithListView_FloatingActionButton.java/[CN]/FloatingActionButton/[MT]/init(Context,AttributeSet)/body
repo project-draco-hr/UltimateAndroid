@@ -1,0 +1,11 @@
+{
+  mVisible=true;
+  mColorNormal=getColor(android.R.color.holo_blue_dark);
+  mColorPressed=getColor(android.R.color.holo_blue_light);
+  mType=TYPE_NORMAL;
+  mShadow=true;
+  if (attributeSet != null) {
+    initAttributes(context,attributeSet);
+  }
+  updateBackground();
+}

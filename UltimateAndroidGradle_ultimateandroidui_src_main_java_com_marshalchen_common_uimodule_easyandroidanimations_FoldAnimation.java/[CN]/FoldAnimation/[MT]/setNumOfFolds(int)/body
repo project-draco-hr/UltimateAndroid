@@ -1,0 +1,4 @@
+{
+  this.numOfFolds=numOfFolds;
+  return this;
+}

@@ -1,0 +1,4 @@
+{
+  this.inCb=inCb;
+  this.inCr=inCr;
+}

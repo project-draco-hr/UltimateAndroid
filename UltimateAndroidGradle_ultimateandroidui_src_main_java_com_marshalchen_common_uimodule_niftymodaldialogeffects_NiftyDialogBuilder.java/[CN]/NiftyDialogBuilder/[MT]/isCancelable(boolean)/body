@@ -1,0 +1,5 @@
+{
+  this.isCancelable=cancelable;
+  this.setCancelable(cancelable);
+  return this;
+}

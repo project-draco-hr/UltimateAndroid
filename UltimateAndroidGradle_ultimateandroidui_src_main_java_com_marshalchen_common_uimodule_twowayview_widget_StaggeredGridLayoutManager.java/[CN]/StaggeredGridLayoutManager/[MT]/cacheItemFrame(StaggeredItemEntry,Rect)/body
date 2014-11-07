@@ -1,0 +1,4 @@
+{
+  entry.width=childFrame.right - childFrame.left;
+  entry.height=childFrame.bottom - childFrame.top;
+}

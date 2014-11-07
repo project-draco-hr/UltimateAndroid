@@ -1,0 +1,8 @@
+{
+  if (mTargetChild != null) {
+    mTargetChild.setPressed(false);
+    mTargetChild=null;
+    return true;
+  }
+  return false;
+}

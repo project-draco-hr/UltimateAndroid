@@ -1,0 +1,6 @@
+InputStream in
+Integer searchColor
+Integer replaceColor
+boolean whiteMode
+int targetWidth
+int targetHeight

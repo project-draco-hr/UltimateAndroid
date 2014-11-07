@@ -1,0 +1,12 @@
+{
+  TeamDAO dao=null;
+  try {
+    dao=daoFactory.getTeamDAO(context);
+    return dao.findByName(teamName);
+  }
+  finally {
+    if (dao != null) {
+      dao.close();
+    }
+  }
+}

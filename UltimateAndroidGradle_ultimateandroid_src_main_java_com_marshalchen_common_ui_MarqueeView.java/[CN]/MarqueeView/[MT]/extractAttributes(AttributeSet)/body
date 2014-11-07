@@ -1,0 +1,13 @@
+{
+  if (getContext() == null) {
+    return;
+  }
+  TypedArray a=getContext().obtainStyledAttributes(attrs,R.styleable.MarqueeView);
+  if (a == null) {
+    return;
+  }
+  mSpeed=a.getInteger(R.styleable.MarqueeView_marqueeSpeed,DEFAULT_SPEED);
+  mAnimationPause=a.getInteger(R.styleable.MarqueeView_pause,DEFAULT_ANIMATION_PAUSE);
+  mAutoStart=a.getBoolean(R.styleable.MarqueeView_autoStart,false);
+  a.recycle();
+}

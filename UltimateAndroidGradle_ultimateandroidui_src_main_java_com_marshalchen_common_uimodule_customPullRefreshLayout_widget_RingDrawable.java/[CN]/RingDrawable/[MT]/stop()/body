@@ -1,0 +1,5 @@
+{
+  isRunning=false;
+  mHandler.removeCallbacks(mAnimationTask);
+  mDegress=0;
+}

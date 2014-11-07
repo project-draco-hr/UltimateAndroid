@@ -1,0 +1,6 @@
+{
+  mScrollGestureDetector=new GestureDetector(context,new ScrollGestureDetector());
+  mTouchSlop=ViewConfiguration.get(context).getScaledTouchSlop();
+  setAnchorFactor(0);
+  super.init(context,attrs);
+}

@@ -1,0 +1,9 @@
+{
+  if (mIsDrawToCache) {
+    mCacheCanvas.drawColor(0,PorterDuff.Mode.CLEAR);
+    super.draw(mCacheCanvas);
+  }
+ else {
+    super.draw(canvas);
+  }
+}

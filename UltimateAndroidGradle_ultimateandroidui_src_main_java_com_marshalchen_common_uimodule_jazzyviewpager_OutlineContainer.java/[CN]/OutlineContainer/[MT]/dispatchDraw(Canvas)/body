@@ -1,0 +1,10 @@
+{
+  super.dispatchDraw(canvas);
+  int offset=Util.dpToPx(getResources(),5);
+  if (mOutlinePaint.getColor() != JazzyViewPager.sOutlineColor) {
+    mOutlinePaint.setColor(JazzyViewPager.sOutlineColor);
+  }
+  mOutlinePaint.setAlpha((int)(mAlpha * 255));
+  Rect rect=new Rect(offset,offset,getMeasuredWidth() - offset,getMeasuredHeight() - offset);
+  canvas.drawRect(rect,mOutlinePaint);
+}

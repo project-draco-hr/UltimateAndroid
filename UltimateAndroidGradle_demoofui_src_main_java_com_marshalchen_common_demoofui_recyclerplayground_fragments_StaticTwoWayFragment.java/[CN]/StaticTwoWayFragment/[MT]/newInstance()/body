@@ -1,0 +1,6 @@
+{
+  StaticTwoWayFragment fragment=new StaticTwoWayFragment();
+  Bundle args=new Bundle();
+  fragment.setArguments(args);
+  return fragment;
+}

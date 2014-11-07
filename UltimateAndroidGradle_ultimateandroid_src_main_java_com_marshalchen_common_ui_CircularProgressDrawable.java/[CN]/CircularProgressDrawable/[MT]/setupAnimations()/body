@@ -1,0 +1,24 @@
+{
+  mObjectAnimatorAngle=ObjectAnimator.ofFloat(this,mAngleProperty,360f);
+  mObjectAnimatorAngle.setInterpolator(ANGLE_INTERPOLATOR);
+  mObjectAnimatorAngle.setDuration(ANGLE_ANIMATOR_DURATION);
+  mObjectAnimatorAngle.setRepeatMode(ValueAnimator.RESTART);
+  mObjectAnimatorAngle.setRepeatCount(ValueAnimator.INFINITE);
+  mObjectAnimatorSweep=ObjectAnimator.ofFloat(this,mSweepProperty,360f - MIN_SWEEP_ANGLE * 2);
+  mObjectAnimatorSweep.setInterpolator(SWEEP_INTERPOLATOR);
+  mObjectAnimatorSweep.setDuration(SWEEP_ANIMATOR_DURATION);
+  mObjectAnimatorSweep.setRepeatMode(ValueAnimator.RESTART);
+  mObjectAnimatorSweep.setRepeatCount(ValueAnimator.INFINITE);
+  mObjectAnimatorSweep.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animation){
+    }
+    @Override public void onAnimationEnd(    Animator animation){
+    }
+    @Override public void onAnimationCancel(    Animator animation){
+    }
+    @Override public void onAnimationRepeat(    Animator animation){
+      toggleAppearingMode();
+    }
+  }
+);
+}

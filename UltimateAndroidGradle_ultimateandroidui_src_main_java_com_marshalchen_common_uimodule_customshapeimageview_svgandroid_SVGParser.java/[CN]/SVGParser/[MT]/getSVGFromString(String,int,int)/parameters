@@ -1,0 +1,3 @@
+String svgData
+int searchColor
+int replaceColor

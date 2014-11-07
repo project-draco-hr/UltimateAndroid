@@ -1,0 +1,30 @@
+{
+  if (!isEnabled() || !isEnabledInAdapterView()) {
+    return true;
+  }
+  if (!isSwipeEnabled()) {
+    return false;
+  }
+  for (  SwipeDenier denier : mSwipeDeniers) {
+    if (denier != null && denier.shouldDenySwipe(ev)) {
+      return false;
+    }
+  }
+  int action=ev.getActionMasked();
+switch (action) {
+case MotionEvent.ACTION_DOWN:
+    Status status=getOpenStatus();
+  if (status == Status.Close) {
+    mTouchConsumedByChild=childNeedHandleTouchEvent(getSurfaceView(),ev) != null;
+  }
+ else   if (status == Status.Open) {
+    mTouchConsumedByChild=childNeedHandleTouchEvent(getBottomView(),ev) != null;
+  }
+break;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+mTouchConsumedByChild=false;
+}
+if (mTouchConsumedByChild) return false;
+return mDragHelper.shouldInterceptTouchEvent(ev);
+}

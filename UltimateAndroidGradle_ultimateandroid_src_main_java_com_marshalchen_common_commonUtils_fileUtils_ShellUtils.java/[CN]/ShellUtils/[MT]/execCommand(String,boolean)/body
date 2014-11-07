@@ -1,0 +1,3 @@
+{
+  return execCommand(new String[]{command},isRoot,true);
+}

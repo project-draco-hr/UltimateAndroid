@@ -1,0 +1,15 @@
+{
+  super.onCreate(savedInstanceState);
+  ActionBar actionBar=getSupportActionBar();
+  actionBar.setDisplayHomeAsUpEnabled(true);
+  setContentView(R.layout.flip_view_activity);
+  ButterKnife.inject(this);
+  mAdapter=new FlipAdapter(this);
+  mAdapter.addItemsBefore(5);
+  flipViewListHorizontal.setAdapter(mAdapter);
+  flipViewListHorizontal.peakNext(false);
+  flipViewListHorizontal.setOverFlipMode(OverFlipMode.RUBBER_BAND);
+  flipViewListVertical.setAdapter(mAdapter);
+  flipViewListVertical.peakNext(false);
+  flipViewListVertical.setOverFlipMode(OverFlipMode.RUBBER_BAND);
+}

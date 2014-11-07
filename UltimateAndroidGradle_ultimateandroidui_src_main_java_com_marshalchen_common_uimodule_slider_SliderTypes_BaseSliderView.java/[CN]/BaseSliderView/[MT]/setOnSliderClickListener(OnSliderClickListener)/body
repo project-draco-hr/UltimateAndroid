@@ -1,0 +1,4 @@
+{
+  mOnSliderClickListener=l;
+  return this;
+}

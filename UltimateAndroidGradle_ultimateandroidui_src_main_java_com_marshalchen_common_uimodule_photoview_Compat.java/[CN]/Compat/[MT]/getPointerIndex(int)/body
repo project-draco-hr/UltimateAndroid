@@ -1,0 +1,4 @@
+{
+  if (VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB)   return getPointerIndexHoneyComb(action);
+ else   return getPointerIndexEclair(action);
+}

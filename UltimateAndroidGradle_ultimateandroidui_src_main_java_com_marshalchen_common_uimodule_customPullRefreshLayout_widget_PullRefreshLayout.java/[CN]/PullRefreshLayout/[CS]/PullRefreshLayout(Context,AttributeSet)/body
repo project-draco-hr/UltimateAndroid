@@ -1,0 +1,18 @@
+{
+  super(context,attrs);
+  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.CustomPullRefreshLayout);
+  final int type=a.getInteger(R.styleable.CustomPullRefreshLayout_cprlType,STYLE_CIRCLES);
+  final int colorsId=a.getResourceId(R.styleable.CustomPullRefreshLayout_cprlColors,R.array.google_colors);
+  a.recycle();
+  mDecelerateInterpolator=new DecelerateInterpolator(DECELERATE_INTERPOLATION_FACTOR);
+  mTouchSlop=ViewConfiguration.get(context).getScaledTouchSlop();
+  mMediumAnimationDuration=getResources().getInteger(android.R.integer.config_mediumAnimTime);
+  mSpinnerFinalOffset=mTotalDragDistance=dp2px(DRAG_MAX_DISTANCE);
+  mRefreshView=new ImageView(context);
+  mColorSchemeColors=context.getResources().getIntArray(colorsId);
+  setRefreshStyle(type);
+  mRefreshView.setVisibility(View.GONE);
+  addView(mRefreshView);
+  setWillNotDraw(false);
+  ViewCompat.setChildrenDrawingOrderEnabled(this,true);
+}

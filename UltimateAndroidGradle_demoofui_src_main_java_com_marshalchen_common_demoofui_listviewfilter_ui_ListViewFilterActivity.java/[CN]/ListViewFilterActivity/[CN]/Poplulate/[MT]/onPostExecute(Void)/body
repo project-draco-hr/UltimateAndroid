@@ -1,0 +1,12 @@
+{
+  if (!isCancelled()) {
+    if (mListItems.size() <= 0) {
+      showEmptyText(mListView,mLoadingView,mEmptyView);
+    }
+ else {
+      setListAdaptor();
+      showContent(mListView,mLoadingView,mEmptyView);
+    }
+  }
+  super.onPostExecute(result);
+}

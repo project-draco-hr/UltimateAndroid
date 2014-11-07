@@ -1,0 +1,4 @@
+{
+  mCurrentState.velocity=velocity;
+  return this;
+}

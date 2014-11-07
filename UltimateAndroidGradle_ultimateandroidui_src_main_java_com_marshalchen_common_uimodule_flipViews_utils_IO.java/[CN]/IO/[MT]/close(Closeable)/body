@@ -1,0 +1,10 @@
+{
+  try {
+    if (closeable != null) {
+      closeable.close();
+    }
+  }
+ catch (  IOException e) {
+    AphidLog.w(e,"Failed to close a closable");
+  }
+}

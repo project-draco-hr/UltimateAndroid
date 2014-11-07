@@ -1,0 +1,7 @@
+{
+  if (mDismissCallback == null) {
+    throw new IllegalStateException("You must pass an OnDismissCallback to the list before enabling Swipe to Dismiss.");
+  }
+  mSwipeEnabled=true;
+  return this;
+}

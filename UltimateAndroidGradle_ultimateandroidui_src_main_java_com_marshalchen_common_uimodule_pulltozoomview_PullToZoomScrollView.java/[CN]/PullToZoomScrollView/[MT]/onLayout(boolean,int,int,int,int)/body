@@ -1,0 +1,9 @@
+{
+  super.onLayout(changed,left,top,right,bottom);
+  if (mZoomHeight == 0) {
+    if (mZoomContainer != null) {
+      mZoomHeight=mZoomContainer.getHeight();
+      mZoomWidth=mZoomContainer.getWidth();
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  if (mOnDayClickListener != null && (isPrevDayEnabled || !((calendarDay.month == today.month) && (calendarDay.year == today.year) && calendarDay.day < today.monthDay))) {
+    mOnDayClickListener.onDayClick(this,calendarDay);
+  }
+}

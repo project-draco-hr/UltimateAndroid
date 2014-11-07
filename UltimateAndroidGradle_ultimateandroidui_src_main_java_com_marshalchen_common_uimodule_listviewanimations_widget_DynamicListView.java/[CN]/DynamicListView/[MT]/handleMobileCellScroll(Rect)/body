@@ -1,0 +1,17 @@
+{
+  int offset=computeVerticalScrollOffset();
+  int height=getHeight();
+  int extent=computeVerticalScrollExtent();
+  int range=computeVerticalScrollRange();
+  int hoverViewTop=r.top;
+  int hoverHeight=r.height();
+  if (hoverViewTop <= 0 && offset > 0) {
+    smoothScrollBy(-mSmoothScrollAmountAtEdge,0);
+    return true;
+  }
+  if (hoverViewTop + hoverHeight >= height && (offset + extent) < range) {
+    smoothScrollBy(mSmoothScrollAmountAtEdge,0);
+    return true;
+  }
+  return false;
+}

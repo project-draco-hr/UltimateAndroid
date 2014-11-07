@@ -1,0 +1,3 @@
+{
+  mNext=(Button)findViewById(R.id.next);
+}

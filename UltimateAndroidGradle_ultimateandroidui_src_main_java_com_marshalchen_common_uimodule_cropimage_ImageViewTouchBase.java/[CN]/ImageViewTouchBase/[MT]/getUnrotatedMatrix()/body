@@ -1,0 +1,6 @@
+{
+  Matrix unrotated=new Matrix();
+  getProperBaseMatrix(bitmapDisplayed,unrotated,false);
+  unrotated.postConcat(suppMatrix);
+  return unrotated;
+}

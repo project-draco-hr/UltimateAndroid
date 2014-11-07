@@ -1,0 +1,6 @@
+{
+  isSpinning=false;
+  progress++;
+  if (progress > 360)   progress=0;
+  spinHandler.sendEmptyMessage(0);
+}

@@ -1,0 +1,5 @@
+int heightCount
+int bmpWidth
+int bmpHeight
+int xParts
+int yParts

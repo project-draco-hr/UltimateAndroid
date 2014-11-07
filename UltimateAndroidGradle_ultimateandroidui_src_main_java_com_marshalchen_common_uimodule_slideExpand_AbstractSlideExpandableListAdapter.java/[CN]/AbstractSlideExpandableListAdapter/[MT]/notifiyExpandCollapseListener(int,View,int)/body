@@ -1,0 +1,10 @@
+{
+  if (expandCollapseListener != null) {
+    if (type == ExpandCollapseAnimation.EXPAND) {
+      expandCollapseListener.onExpand(view,position);
+    }
+ else     if (type == ExpandCollapseAnimation.COLLAPSE) {
+      expandCollapseListener.onCollapse(view,position);
+    }
+  }
+}

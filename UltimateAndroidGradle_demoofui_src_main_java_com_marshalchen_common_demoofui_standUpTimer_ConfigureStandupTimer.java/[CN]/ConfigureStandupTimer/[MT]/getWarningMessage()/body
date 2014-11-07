@@ -1,0 +1,8 @@
+{
+  if (Prefs.allowUnlimitedParticipants(this)) {
+    return R.string.valid_num_participants_warning_unlimited;
+  }
+ else {
+    return R.string.valid_num_participants_warning;
+  }
+}

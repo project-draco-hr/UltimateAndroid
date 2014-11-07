@@ -1,0 +1,12 @@
+{
+  super.onLayout(changed,left,top,right,bottom);
+  if (bitmapDisplayed.getBitmap() != null) {
+    for (    HighlightView hv : highlightViews) {
+      hv.matrix.set(getUnrotatedMatrix());
+      hv.invalidate();
+      if (hv.hasFocus()) {
+        centerBasedOnHighlightView(hv);
+      }
+    }
+  }
+}

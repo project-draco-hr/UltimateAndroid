@@ -1,0 +1,7 @@
+View child
+Rect relativePosition
+DragEdge edge
+int surfaceLeft
+int surfaceTop
+int surfaceRight
+int surfaceBottom

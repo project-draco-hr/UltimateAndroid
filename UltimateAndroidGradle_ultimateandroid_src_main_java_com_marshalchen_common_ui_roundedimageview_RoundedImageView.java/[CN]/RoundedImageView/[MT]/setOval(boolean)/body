@@ -1,0 +1,6 @@
+{
+  isOval=oval;
+  updateDrawableAttrs();
+  updateBackgroundDrawableAttrs(false);
+  invalidate();
+}

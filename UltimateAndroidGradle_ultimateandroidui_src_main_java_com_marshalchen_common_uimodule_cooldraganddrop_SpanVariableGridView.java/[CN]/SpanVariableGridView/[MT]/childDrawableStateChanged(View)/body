@@ -1,0 +1,4 @@
+{
+  startLongClickTransition(child);
+  super.childDrawableStateChanged(child);
+}

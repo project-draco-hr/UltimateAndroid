@@ -1,0 +1,3 @@
+{
+  return viewIdHitPosition(ev,mDragHandleId);
+}

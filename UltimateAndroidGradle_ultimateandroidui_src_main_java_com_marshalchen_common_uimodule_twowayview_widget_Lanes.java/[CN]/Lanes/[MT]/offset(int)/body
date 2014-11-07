@@ -1,0 +1,6 @@
+{
+  for (int i=0; i < mLanes.length; i++) {
+    offset(i,offset);
+  }
+  invalidateEdges();
+}

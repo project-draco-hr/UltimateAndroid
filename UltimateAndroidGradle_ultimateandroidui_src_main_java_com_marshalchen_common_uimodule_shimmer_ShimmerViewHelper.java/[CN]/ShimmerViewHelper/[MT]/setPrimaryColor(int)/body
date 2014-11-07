@@ -1,0 +1,6 @@
+{
+  this.primaryColor=primaryColor;
+  if (isSetUp) {
+    resetLinearGradient();
+  }
+}

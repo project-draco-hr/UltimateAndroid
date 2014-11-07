@@ -1,0 +1,4 @@
+float currentZoom
+float targetZoom
+float focalX
+float focalY

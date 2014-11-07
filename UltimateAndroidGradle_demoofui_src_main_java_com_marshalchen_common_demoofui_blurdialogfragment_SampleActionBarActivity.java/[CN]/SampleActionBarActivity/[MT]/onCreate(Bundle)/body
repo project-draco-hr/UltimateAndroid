@@ -1,0 +1,11 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.blur_dialog_activity_sample);
+  findViewById(R.id.button).setOnClickListener(this);
+  mBlurRadiusTextView=((TextView)findViewById(R.id.blurRadius));
+  mBlurRadiusSeekbar=((SeekBar)findViewById(R.id.blurRadiusSeekbar));
+  mDownScaleFactorTextView=((TextView)findViewById(R.id.downScalefactor));
+  mDownScaleFactorSeekbar=((SeekBar)findViewById(R.id.downScaleFactorSeekbar));
+  mDebugMode=((CheckBox)findViewById(R.id.debugMode));
+  setUpView();
+}

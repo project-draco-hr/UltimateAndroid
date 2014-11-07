@@ -1,0 +1,4 @@
+{
+  mNumColumns=numColumns;
+  mCounted=false;
+}

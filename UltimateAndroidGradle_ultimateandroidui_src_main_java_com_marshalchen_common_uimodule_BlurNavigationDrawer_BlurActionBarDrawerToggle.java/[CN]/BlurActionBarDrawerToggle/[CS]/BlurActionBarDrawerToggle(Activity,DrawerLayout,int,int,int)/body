@@ -1,0 +1,6 @@
+{
+  super(activity,drawerLayout,drawerImageRes,openDrawerContentDescRes,closeDrawerContentDescRes);
+  this.context=activity.getBaseContext();
+  this.mDrawerLayout=drawerLayout;
+  init();
+}

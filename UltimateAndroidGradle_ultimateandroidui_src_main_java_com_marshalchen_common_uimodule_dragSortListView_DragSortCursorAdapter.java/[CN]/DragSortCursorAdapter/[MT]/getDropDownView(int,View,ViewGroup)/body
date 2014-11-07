@@ -1,0 +1,3 @@
+{
+  return super.getDropDownView(mListMapping.get(position,position),convertView,parent);
+}

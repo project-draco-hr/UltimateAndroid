@@ -1,0 +1,5 @@
+{
+  super(context);
+  this.context=context;
+  init(Color.WHITE);
+}

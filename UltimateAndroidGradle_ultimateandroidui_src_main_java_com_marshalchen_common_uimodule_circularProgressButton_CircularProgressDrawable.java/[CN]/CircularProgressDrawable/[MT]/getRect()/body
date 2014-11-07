@@ -1,0 +1,7 @@
+{
+  if (mRectF == null) {
+    int index=mStrokeWidth / 2;
+    mRectF=new RectF(index,index,getSize() - index,getSize() - index);
+  }
+  return mRectF;
+}

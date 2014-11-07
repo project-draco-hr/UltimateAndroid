@@ -1,0 +1,6 @@
+{
+  if (color != mColorNormal) {
+    mColorNormal=color;
+    updateBackground();
+  }
+}

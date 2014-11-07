@@ -1,0 +1,5 @@
+{
+  this.textureGenerator=generator;
+  this.filterLevel=Math.max(0.0,Math.min(1.0,filterLevel));
+  this.preserveLevel=Math.max(0.0,Math.min(1.0,preserveLevel));
+}

@@ -1,0 +1,16 @@
+{
+  if (oldAdapter != null) {
+    oldAdapter.unregisterDataSetObserver(mPageListener);
+    mWatchingAdapter=null;
+  }
+  if (newAdapter != null) {
+    newAdapter.registerDataSetObserver(mPageListener);
+    mWatchingAdapter=new WeakReference<PagerAdapter>(newAdapter);
+  }
+  if (mPager != null) {
+    mLastKnownCurrentPage=-1;
+    mLastKnownPositionOffset=-1;
+    updateText(mPager.getCurrentItem(),newAdapter);
+    requestLayout();
+  }
+}

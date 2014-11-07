@@ -1,0 +1,12 @@
+{
+  final View child=recycler.getViewForPosition(position);
+  final boolean isItemRemoved=((LayoutParams)child.getLayoutParams()).isItemRemoved();
+  if (!isItemRemoved) {
+    addView(child,(direction == Direction.END ? -1 : 0));
+  }
+  setupChild(child,direction);
+  if (!isItemRemoved) {
+    updateLayoutEdgesFromNewChild(child);
+  }
+  return child;
+}

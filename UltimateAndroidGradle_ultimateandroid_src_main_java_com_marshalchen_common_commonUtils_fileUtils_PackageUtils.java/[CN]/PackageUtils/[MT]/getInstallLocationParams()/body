@@ -1,0 +1,10 @@
+{
+  int location=getInstallLocation();
+switch (location) {
+case APP_INSTALL_INTERNAL:
+    return "-f";
+case APP_INSTALL_EXTERNAL:
+  return "-s";
+}
+return "";
+}

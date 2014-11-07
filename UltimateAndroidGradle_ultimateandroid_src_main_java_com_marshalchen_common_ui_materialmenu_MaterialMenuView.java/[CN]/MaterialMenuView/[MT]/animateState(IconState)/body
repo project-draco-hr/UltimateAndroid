@@ -1,0 +1,4 @@
+{
+  currentState=state;
+  drawable.animateIconState(state,false);
+}

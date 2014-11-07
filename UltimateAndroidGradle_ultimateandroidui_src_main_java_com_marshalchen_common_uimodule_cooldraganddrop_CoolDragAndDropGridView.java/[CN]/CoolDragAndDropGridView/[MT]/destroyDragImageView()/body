@@ -1,0 +1,14 @@
+{
+  if (mDragImageView != null) {
+    mWindowManager.removeView(mDragImageView);
+    BitmapDrawable bitmapDrawable=(BitmapDrawable)mDragImageView.getDrawable();
+    if (bitmapDrawable != null) {
+      final Bitmap bitmap=bitmapDrawable.getBitmap();
+      if (bitmap != null && !bitmap.isRecycled()) {
+        bitmap.recycle();
+      }
+    }
+    mDragImageView.setImageDrawable(null);
+    mDragImageView=null;
+  }
+}

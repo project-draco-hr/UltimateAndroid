@@ -1,0 +1,3 @@
+{
+  return IMAGES.length * MULTIPLY;
+}

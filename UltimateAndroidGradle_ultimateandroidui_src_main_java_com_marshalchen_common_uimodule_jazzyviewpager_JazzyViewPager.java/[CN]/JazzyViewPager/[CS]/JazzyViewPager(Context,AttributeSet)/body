@@ -1,0 +1,17 @@
+{
+  super(context,attrs);
+  setClipChildren(false);
+  TypedArray ta=context.obtainStyledAttributes(attrs,R.styleable.JazzyViewPager);
+  int effect=ta.getInt(R.styleable.JazzyViewPager_style,0);
+  String[] transitions=getResources().getStringArray(R.array.jazzy_effects);
+  setTransitionEffect(TransitionEffect.valueOf(transitions[effect]));
+  setFadeEnabled(ta.getBoolean(R.styleable.JazzyViewPager_fadeEnabled,false));
+  setOutlineEnabled(ta.getBoolean(R.styleable.JazzyViewPager_outlineEnabled,false));
+  setOutlineColor(ta.getColor(R.styleable.JazzyViewPager_outlineColor,Color.WHITE));
+switch (mEffect) {
+case Stack:
+case ZoomOut:
+    setFadeEnabled(true);
+}
+ta.recycle();
+}

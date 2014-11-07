@@ -1,0 +1,16 @@
+{
+  int count=getChildCount();
+  for (int i=0; i < count; i++) {
+    View child=getChildAt(i);
+    if (child.getVisibility() != GONE) {
+      LayoutParams lp=(LayoutParams)child.getLayoutParams();
+      int w=child.getMeasuredWidth();
+      int h=child.getMeasuredHeight();
+      float aX=(lp.anchorX == null) ? anchorX : lp.anchorX;
+      float aY=(lp.anchorY == null) ? anchorY : lp.anchorY;
+      int x=lp.x + (int)(w * aX);
+      int y=lp.y + (int)(h * aY);
+      child.layout(x,y,x + w,y + h);
+    }
+  }
+}

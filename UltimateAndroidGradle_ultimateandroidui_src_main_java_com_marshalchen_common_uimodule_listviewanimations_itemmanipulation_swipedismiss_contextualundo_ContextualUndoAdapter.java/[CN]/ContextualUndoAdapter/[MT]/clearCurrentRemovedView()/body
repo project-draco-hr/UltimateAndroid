@@ -1,0 +1,5 @@
+{
+  mCurrentRemovedView=null;
+  mCurrentRemovedId=-1;
+  mHandler.removeCallbacks(mCountDownRunnable);
+}
