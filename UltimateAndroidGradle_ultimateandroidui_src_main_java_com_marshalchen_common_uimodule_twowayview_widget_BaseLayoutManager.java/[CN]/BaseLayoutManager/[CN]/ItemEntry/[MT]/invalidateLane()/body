@@ -1,0 +1,5 @@
+{
+  startLane=Lanes.NO_LANE;
+  anchorLane=Lanes.NO_LANE;
+  spanMargins=null;
+}

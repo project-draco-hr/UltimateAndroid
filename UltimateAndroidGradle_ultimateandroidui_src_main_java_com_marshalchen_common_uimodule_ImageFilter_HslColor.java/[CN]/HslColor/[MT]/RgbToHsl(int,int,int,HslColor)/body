@@ -1,0 +1,26 @@
+{
+  double r=(rr / 255.0);
+  double g=(gg / 255.0);
+  double b=(bb / 255.0);
+  double min=Math.min(Math.min(r,g),b);
+  double max=Math.max(Math.max(r,g),b);
+  double delta=max - min;
+  hsl.l=(float)(max + min) / 2;
+  if (delta == 0) {
+    hsl.h=0;
+    hsl.s=0.0f;
+  }
+ else {
+    hsl.s=(float)((hsl.l < 0.5) ? (delta / (max + min)) : (delta / (2 - max - min)));
+    double del_r=(((max - r) / 6) + (delta / 2)) / delta;
+    double del_g=(((max - g) / 6) + (delta / 2)) / delta;
+    double del_b=(((max - b) / 6) + (delta / 2)) / delta;
+    double hue;
+    if (r == max)     hue=del_b - del_g;
+ else     if (g == max)     hue=(1.0 / 3) + del_r - del_b;
+ else     hue=(2.0 / 3) + del_g - del_r;
+    if (hue < 0)     hue+=1;
+    if (hue > 1)     hue-=1;
+    hsl.h=(int)(hue * 360);
+  }
+}

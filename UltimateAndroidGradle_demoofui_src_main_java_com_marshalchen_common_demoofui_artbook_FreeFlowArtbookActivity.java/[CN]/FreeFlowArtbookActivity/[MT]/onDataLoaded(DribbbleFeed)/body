@@ -1,0 +1,16 @@
+{
+  Log.d(TAG,"photo: " + feed.getShots().get(0).getImage_teaser_url());
+  adapter.update(feed);
+  container.dataInvalidated();
+  container.setOnItemClickListener(new OnItemClickListener(){
+    @Override public void onItemClick(    AbsLayoutContainer parent,    FreeFlowItem proxy){
+    }
+  }
+);
+  container.addScrollListener(new OnScrollListener(){
+    @Override public void onScroll(    FreeFlowContainer container){
+      Log.d(TAG,"scroll percent " + container.getScrollPercentY());
+    }
+  }
+);
+}

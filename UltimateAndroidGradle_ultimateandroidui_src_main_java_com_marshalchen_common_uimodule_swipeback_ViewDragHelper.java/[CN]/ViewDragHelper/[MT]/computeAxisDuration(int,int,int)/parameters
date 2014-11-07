@@ -1,0 +1,3 @@
+int delta
+int velocity
+int motionRange

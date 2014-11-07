@@ -1,0 +1,5 @@
+{
+  m_length=(nLength >= 1) ? nLength : 1;
+  m_offset_x=(offset_x > 2.0 ? 2.0 : (offset_x < -2.0 ? 0 : offset_x));
+  m_offset_y=(offset_y > 2.0 ? 2.0 : (offset_y < -2.0 ? 0 : offset_y));
+}

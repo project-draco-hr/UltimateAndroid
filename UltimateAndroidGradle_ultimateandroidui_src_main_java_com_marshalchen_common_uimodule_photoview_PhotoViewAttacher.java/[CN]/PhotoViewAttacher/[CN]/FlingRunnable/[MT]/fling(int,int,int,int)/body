@@ -1,0 +1,31 @@
+{
+  final RectF rect=getDisplayRect();
+  if (null == rect) {
+    return;
+  }
+  final int startX=Math.round(-rect.left);
+  final int minX, maxX, minY, maxY;
+  if (viewWidth < rect.width()) {
+    minX=0;
+    maxX=Math.round(rect.width() - viewWidth);
+  }
+ else {
+    minX=maxX=startX;
+  }
+  final int startY=Math.round(-rect.top);
+  if (viewHeight < rect.height()) {
+    minY=0;
+    maxY=Math.round(rect.height() - viewHeight);
+  }
+ else {
+    minY=maxY=startY;
+  }
+  mCurrentX=startX;
+  mCurrentY=startY;
+  if (DEBUG) {
+    LogManager.getLogger().d(LOG_TAG,"fling. StartX:" + startX + " StartY:"+ startY+ " MaxX:"+ maxX+ " MaxY:"+ maxY);
+  }
+  if (startX != maxX || startY != maxY) {
+    mScroller.fling(startX,startY,velocityX,velocityY,minX,maxX,minY,maxY,0,0);
+  }
+}

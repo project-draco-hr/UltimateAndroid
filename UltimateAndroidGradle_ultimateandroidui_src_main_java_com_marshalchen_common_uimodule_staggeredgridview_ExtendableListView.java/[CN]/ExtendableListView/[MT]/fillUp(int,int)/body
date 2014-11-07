@@ -1,0 +1,13 @@
+{
+  if (DBG)   Log.d(TAG,"fillUp - position:" + pos + " nextBottom:"+ nextBottom);
+  View selectedView=null;
+  int end=mClipToPadding ? getListPaddingTop() : 0;
+  while ((nextBottom > end || hasSpaceUp()) && pos >= 0) {
+    makeAndAddView(pos,nextBottom,false,false);
+    pos--;
+    nextBottom=getNextChildUpsBottom(pos);
+    if (DBG)     Log.d(TAG,"fillUp next - position:" + pos + " nextBottom:"+ nextBottom);
+  }
+  mFirstPosition=pos + 1;
+  return selectedView;
+}

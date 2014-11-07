@@ -1,0 +1,4 @@
+{
+  frontCards.abandonTexture();
+  backCards.abandonTexture();
+}

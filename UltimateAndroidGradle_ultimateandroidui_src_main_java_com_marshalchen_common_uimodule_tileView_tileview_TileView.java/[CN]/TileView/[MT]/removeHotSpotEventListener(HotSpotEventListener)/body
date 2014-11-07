@@ -1,0 +1,3 @@
+{
+  hotSpotManager.removeHotSpotEventListener(listener);
+}

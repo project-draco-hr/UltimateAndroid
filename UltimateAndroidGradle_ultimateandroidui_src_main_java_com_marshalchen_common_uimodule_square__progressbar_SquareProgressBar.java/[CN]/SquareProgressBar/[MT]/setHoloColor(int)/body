@@ -1,0 +1,3 @@
+{
+  bar.setColor(getContext().getResources().getColor(androidHoloColor));
+}

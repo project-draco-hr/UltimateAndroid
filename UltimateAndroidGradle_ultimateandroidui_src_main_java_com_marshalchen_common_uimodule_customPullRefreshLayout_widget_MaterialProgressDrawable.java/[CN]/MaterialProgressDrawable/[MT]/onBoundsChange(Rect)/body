@@ -1,0 +1,5 @@
+{
+  super.onBoundsChange(bounds);
+  mWidth=dp2px(40);
+  mHeight=mWidth;
+}

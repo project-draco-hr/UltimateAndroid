@@ -1,0 +1,4 @@
+{
+  mColorSelected=selectedColor;
+  invalidate();
+}

@@ -1,0 +1,5 @@
+{
+  mStarted=true;
+  mChoreographer.removeFrameCallback(mFrameCallback);
+  mChoreographer.postFrameCallback(mFrameCallback);
+}

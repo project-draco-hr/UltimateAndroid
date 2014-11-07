@@ -1,0 +1,32 @@
+{
+  if (BasicUtils.judgeNotNull(contentList)) {
+    return false;
+  }
+  FileWriter fileWriter=null;
+  try {
+    makeDirs(filePath);
+    fileWriter=new FileWriter(filePath,append);
+    int i=0;
+    for (    String line : contentList) {
+      if (i++ > 0) {
+        fileWriter.write("\r\n");
+      }
+      fileWriter.write(line);
+    }
+    fileWriter.close();
+    return true;
+  }
+ catch (  IOException e) {
+    throw new RuntimeException("IOException occurred. ",e);
+  }
+ finally {
+    if (fileWriter != null) {
+      try {
+        fileWriter.close();
+      }
+ catch (      IOException e) {
+        throw new RuntimeException("IOException occurred. ",e);
+      }
+    }
+  }
+}

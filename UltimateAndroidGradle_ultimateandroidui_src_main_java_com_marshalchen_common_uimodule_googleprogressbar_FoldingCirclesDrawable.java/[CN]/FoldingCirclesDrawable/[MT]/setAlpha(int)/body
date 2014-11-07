@@ -1,0 +1,7 @@
+{
+  this.mAlpha=alpha;
+  mFstHalfPaint.setAlpha(alpha);
+  mScndHalfPaint.setAlpha(alpha);
+  int targetAboveAlpha=(ALPHA_ABOVE_DEFAULT * alpha) / ALPHA_OPAQUE;
+  mAbovePaint.setAlpha(targetAboveAlpha);
+}

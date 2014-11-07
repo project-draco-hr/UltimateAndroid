@@ -1,0 +1,12 @@
+{
+  if (getChildCount() > 0) {
+    mDisplayOffset+=dx;
+    int left=mDisplayOffset;
+    for (int i=0; i < getChildCount(); i++) {
+      View child=getChildAt(i);
+      int childWidth=child.getMeasuredWidth();
+      child.layout(left,0,left + childWidth,child.getMeasuredHeight());
+      left+=childWidth + child.getPaddingRight();
+    }
+  }
+}

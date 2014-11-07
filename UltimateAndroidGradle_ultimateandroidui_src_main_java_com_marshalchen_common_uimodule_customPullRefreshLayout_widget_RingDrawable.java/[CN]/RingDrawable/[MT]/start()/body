@@ -1,0 +1,5 @@
+{
+  mLevel=50;
+  isRunning=true;
+  mHandler.post(mAnimationTask);
+}

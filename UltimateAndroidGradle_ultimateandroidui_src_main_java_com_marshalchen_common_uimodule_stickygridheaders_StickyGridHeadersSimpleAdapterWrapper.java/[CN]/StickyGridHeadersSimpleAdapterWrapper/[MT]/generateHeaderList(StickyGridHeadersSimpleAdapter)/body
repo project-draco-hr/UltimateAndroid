@@ -1,0 +1,15 @@
+{
+  Map<Long,HeaderData> mapping=new HashMap<Long,HeaderData>();
+  List<HeaderData> headers=new ArrayList<HeaderData>();
+  for (int i=0; i < adapter.getCount(); i++) {
+    long headerId=adapter.getHeaderId(i);
+    HeaderData headerData=mapping.get(headerId);
+    if (headerData == null) {
+      headerData=new HeaderData(i);
+      headers.add(headerData);
+    }
+    headerData.incrementCount();
+    mapping.put(headerId,headerData);
+  }
+  return headers.toArray(new HeaderData[headers.size()]);
+}

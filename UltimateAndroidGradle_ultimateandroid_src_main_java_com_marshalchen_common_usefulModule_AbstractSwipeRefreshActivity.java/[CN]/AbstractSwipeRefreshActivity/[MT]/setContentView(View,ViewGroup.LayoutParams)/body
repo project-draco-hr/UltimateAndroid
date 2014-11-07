@@ -1,0 +1,4 @@
+{
+  refreshLayout.addView(view,params);
+  initSwipeOptions();
+}

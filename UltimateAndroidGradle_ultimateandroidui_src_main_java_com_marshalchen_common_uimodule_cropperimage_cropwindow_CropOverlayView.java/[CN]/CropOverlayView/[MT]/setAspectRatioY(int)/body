@@ -1,0 +1,11 @@
+{
+  if (aspectRatioY <= 0)   throw new IllegalArgumentException("Cannot set aspect ratio value to a number less than or equal to 0.");
+ else {
+    mAspectRatioY=aspectRatioY;
+    mTargetAspectRatio=((float)mAspectRatioX) / mAspectRatioY;
+    if (initializedCropWindow) {
+      initCropWindow(mBitmapRect);
+      invalidate();
+    }
+  }
+}

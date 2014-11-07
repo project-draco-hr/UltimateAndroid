@@ -1,0 +1,19 @@
+{
+  final Rect childRect=mTmpRect;
+  child.getHitRect(childRect);
+  if ((mEdgeFlag & EDGE_LEFT) != 0) {
+    mShadowLeft.setBounds(childRect.left - mShadowLeft.getIntrinsicWidth(),childRect.top,childRect.left,childRect.bottom);
+    mShadowLeft.setAlpha((int)(mScrimOpacity * FULL_ALPHA));
+    mShadowLeft.draw(canvas);
+  }
+  if ((mEdgeFlag & EDGE_RIGHT) != 0) {
+    mShadowRight.setBounds(childRect.right,childRect.top,childRect.right + mShadowRight.getIntrinsicWidth(),childRect.bottom);
+    mShadowRight.setAlpha((int)(mScrimOpacity * FULL_ALPHA));
+    mShadowRight.draw(canvas);
+  }
+  if ((mEdgeFlag & EDGE_BOTTOM) != 0) {
+    mShadowBottom.setBounds(childRect.left,childRect.bottom,childRect.right,childRect.bottom + mShadowBottom.getIntrinsicHeight());
+    mShadowBottom.setAlpha((int)(mScrimOpacity * FULL_ALPHA));
+    mShadowBottom.draw(canvas);
+  }
+}

@@ -1,0 +1,7 @@
+{
+  if (title != null) {
+    SpannableString ssbTitle=new SpannableString(title);
+    ssbTitle.setSpan(mTitleSpan,0,ssbTitle.length(),0);
+    mTitle=ssbTitle;
+  }
+}

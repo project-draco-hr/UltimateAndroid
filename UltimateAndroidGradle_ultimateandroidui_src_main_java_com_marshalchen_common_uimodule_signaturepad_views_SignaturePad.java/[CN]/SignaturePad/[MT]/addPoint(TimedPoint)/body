@@ -1,0 +1,21 @@
+{
+  mPoints.add(newPoint);
+  if (mPoints.size() > 2) {
+    if (mPoints.size() == 3)     mPoints.add(0,mPoints.get(0));
+    ControlTimedPoints tmp=calculateCurveControlPoints(mPoints.get(0),mPoints.get(1),mPoints.get(2));
+    TimedPoint c2=tmp.c2;
+    tmp=calculateCurveControlPoints(mPoints.get(1),mPoints.get(2),mPoints.get(3));
+    TimedPoint c3=tmp.c1;
+    Bezier curve=new Bezier(mPoints.get(1),c2,c3,mPoints.get(2));
+    TimedPoint startPoint=curve.startPoint;
+    TimedPoint endPoint=curve.endPoint;
+    float velocity=endPoint.velocityFrom(startPoint);
+    velocity=Float.isNaN(velocity) ? 0.0f : velocity;
+    velocity=mVelocityFilterWeight * velocity + (1 - mVelocityFilterWeight) * mLastVelocity;
+    float newWidth=strokeWidth(velocity);
+    addBezier(curve,mLastWidth,newWidth);
+    mLastVelocity=velocity;
+    mLastWidth=newWidth;
+    mPoints.remove(0);
+  }
+}

@@ -1,0 +1,3 @@
+int[][] indexes
+int rectCountInWidth
+int rectCountInHeight

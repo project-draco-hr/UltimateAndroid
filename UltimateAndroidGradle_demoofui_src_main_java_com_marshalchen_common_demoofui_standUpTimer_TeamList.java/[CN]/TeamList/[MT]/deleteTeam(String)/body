@@ -1,0 +1,4 @@
+{
+  Team team=Team.findByName(teamName,this);
+  team.delete(this);
+}

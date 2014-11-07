@@ -1,0 +1,4 @@
+{
+  float decimalShift=(float)Math.pow(10,decimalPlaces);
+  return Math.round(f * decimalShift) / decimalShift;
+}

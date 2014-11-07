@@ -1,0 +1,23 @@
+{
+  final boolean result=super.dispatchTouchEvent(event);
+  if (getChildCount() == 0) {
+    return result;
+  }
+switch (event.getAction()) {
+case MotionEvent.ACTION_DOWN:
+    startTouch(event);
+  break;
+case MotionEvent.ACTION_MOVE:
+break;
+case MotionEvent.ACTION_UP:
+if (mTouchState == TOUCH_STATE_CLICK) {
+clickChildAt();
+}
+endTouch();
+break;
+default :
+endTouch();
+break;
+}
+return result;
+}

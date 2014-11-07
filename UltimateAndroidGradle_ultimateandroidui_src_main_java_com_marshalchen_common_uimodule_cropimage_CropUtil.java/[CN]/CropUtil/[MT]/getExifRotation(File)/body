@@ -1,0 +1,20 @@
+{
+  if (imageFile == null)   return 0;
+  try {
+    ExifInterface exif=new ExifInterface(imageFile.getAbsolutePath());
+switch (exif.getAttributeInt(ExifInterface.TAG_ORIENTATION,ExifInterface.ORIENTATION_UNDEFINED)) {
+case ExifInterface.ORIENTATION_ROTATE_90:
+      return 90;
+case ExifInterface.ORIENTATION_ROTATE_180:
+    return 180;
+case ExifInterface.ORIENTATION_ROTATE_270:
+  return 270;
+default :
+return ExifInterface.ORIENTATION_UNDEFINED;
+}
+}
+ catch (IOException e) {
+Log.e("Error getting Exif data",e);
+return 0;
+}
+}

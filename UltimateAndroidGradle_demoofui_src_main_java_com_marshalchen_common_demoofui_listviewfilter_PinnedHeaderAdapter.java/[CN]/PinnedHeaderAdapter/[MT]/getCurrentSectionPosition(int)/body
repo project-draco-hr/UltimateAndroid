@@ -1,0 +1,4 @@
+{
+  String listChar=mListItems.get(position).toString().substring(0,1).toUpperCase(Locale.getDefault());
+  return mListItems.indexOf(listChar);
+}

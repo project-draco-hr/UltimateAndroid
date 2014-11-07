@@ -1,0 +1,7 @@
+{
+  int colorPressed=getPressedColor(mErrorColorState);
+  StrokeGradientDrawable drawablePressed=createDrawable(colorPressed);
+  mErrorStateDrawable=new StateListDrawable();
+  mErrorStateDrawable.addState(new int[]{android.R.attr.state_pressed},drawablePressed.getGradientDrawable());
+  mErrorStateDrawable.addState(StateSet.WILD_CARD,background.getGradientDrawable());
+}

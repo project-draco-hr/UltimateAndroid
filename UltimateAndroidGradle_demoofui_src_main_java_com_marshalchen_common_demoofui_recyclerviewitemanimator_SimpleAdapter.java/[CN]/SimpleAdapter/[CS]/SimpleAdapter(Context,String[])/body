@@ -1,0 +1,5 @@
+{
+  mContext=context;
+  if (data != null)   mData=new ArrayList<String>(Arrays.asList(data));
+ else   mData=new ArrayList<String>();
+}

@@ -1,0 +1,14 @@
+{
+  post(new Runnable(){
+    @Override public void run(){
+      Logs.d("Scrolling to position %d" + selectedIndex);
+      if (smoothScroll) {
+        smoothScrollToPosition(selectedIndex);
+      }
+ else {
+        setSelection(selectedIndex);
+      }
+    }
+  }
+);
+}

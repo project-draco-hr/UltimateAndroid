@@ -1,0 +1,5 @@
+{
+  if (mRefreshing != refreshing) {
+    setRefreshing(refreshing,false);
+  }
+}

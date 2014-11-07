@@ -1,0 +1,39 @@
+{
+  Drawable d=getDrawable();
+  if (!mPaused && d != null) {
+    if (mDrawableRect.isEmpty()) {
+      updateDrawableBounds();
+    }
+ else     if (!mViewportRect.isEmpty()) {
+      if (mCurrentTrans == null) {
+        startNewTransition();
+      }
+      if (mCurrentTrans.getDestinyRect() != null) {
+        mElapsedTime+=System.currentTimeMillis() - mLastFrameTime;
+        RectF currentRect=mCurrentTrans.getInterpolatedRect(mElapsedTime);
+        float widthScale=mDrawableRect.width() / currentRect.width();
+        float heightScale=mDrawableRect.height() / currentRect.height();
+        float currRectToDrwScale=Math.min(widthScale,heightScale);
+        float currRectToVpScale=mViewportRect.width() / currentRect.width();
+        float totalScale=currRectToDrwScale * currRectToVpScale;
+        float translX=totalScale * (mDrawableRect.centerX() - currentRect.left);
+        float translY=totalScale * (mDrawableRect.centerY() - currentRect.top);
+        mMatrix.reset();
+        mMatrix.postTranslate(-mDrawableRect.width() / 2,-mDrawableRect.height() / 2);
+        mMatrix.postScale(totalScale,totalScale);
+        mMatrix.postTranslate(translX,translY);
+        setImageMatrix(mMatrix);
+        if (mElapsedTime >= mCurrentTrans.getDuration()) {
+          fireTransitionEnd(mCurrentTrans);
+          startNewTransition();
+        }
+      }
+ else {
+        fireTransitionEnd(mCurrentTrans);
+      }
+    }
+    mLastFrameTime=System.currentTimeMillis();
+    postInvalidateDelayed(FRAME_DELAY);
+  }
+  super.onDraw(canvas);
+}

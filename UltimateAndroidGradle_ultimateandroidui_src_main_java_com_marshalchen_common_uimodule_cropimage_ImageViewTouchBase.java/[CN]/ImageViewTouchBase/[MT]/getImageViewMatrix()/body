@@ -1,0 +1,5 @@
+{
+  displayMatrix.set(baseMatrix);
+  displayMatrix.postConcat(suppMatrix);
+  return displayMatrix;
+}

@@ -1,0 +1,4 @@
+{
+  this.dividerColor=dividerColor;
+  invalidate();
+}

@@ -1,0 +1,7 @@
+{
+  if (camera != null) {
+    camera.stopPreview();
+    camera.release();
+    camera=null;
+  }
+}

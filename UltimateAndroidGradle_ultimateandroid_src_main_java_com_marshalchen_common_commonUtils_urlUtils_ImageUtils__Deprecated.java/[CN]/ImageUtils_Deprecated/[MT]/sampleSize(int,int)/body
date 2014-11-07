@@ -1,0 +1,11 @@
+{
+  int result=1;
+  for (int i=0; i < 10; i++) {
+    if (width < target * 2) {
+      break;
+    }
+    width=width / 2;
+    result=result * 2;
+  }
+  return result;
+}

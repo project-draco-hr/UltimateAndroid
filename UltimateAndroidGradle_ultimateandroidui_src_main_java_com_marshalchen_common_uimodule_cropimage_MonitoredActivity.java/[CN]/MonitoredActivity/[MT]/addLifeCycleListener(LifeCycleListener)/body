@@ -1,0 +1,4 @@
+{
+  if (listeners.contains(listener))   return;
+  listeners.add(listener);
+}

@@ -1,0 +1,4 @@
+{
+  if (newOnDoubleTapListener != null)   this.mGestureDetector.setOnDoubleTapListener(newOnDoubleTapListener);
+ else   this.mGestureDetector.setOnDoubleTapListener(new DefaultOnDoubleTapListener(this));
+}

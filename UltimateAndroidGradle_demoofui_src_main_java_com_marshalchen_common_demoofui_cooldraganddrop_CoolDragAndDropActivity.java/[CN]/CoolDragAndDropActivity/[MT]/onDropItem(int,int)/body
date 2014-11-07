@@ -1,0 +1,6 @@
+{
+  if (from != to) {
+    mItems.add(to,mItems.remove(from));
+    mItemAdapter.notifyDataSetChanged();
+  }
+}

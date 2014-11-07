@@ -1,0 +1,18 @@
+{
+  Cursor cursor=null;
+  Team team=null;
+  try {
+    SQLiteDatabase db=getReadableDatabase();
+    cursor=db.query(TEAMS_TABLE_NAME,TEAMS_ALL_COLUMS,_ID + " = ?",new String[]{id.toString()},null,null,null);
+    if (cursor.getCount() == 1) {
+      if (cursor.moveToFirst()) {
+        String name=cursor.getString(1);
+        team=new Team(id,name);
+      }
+    }
+  }
+  finally {
+    closeCursor(cursor);
+  }
+  return team;
+}

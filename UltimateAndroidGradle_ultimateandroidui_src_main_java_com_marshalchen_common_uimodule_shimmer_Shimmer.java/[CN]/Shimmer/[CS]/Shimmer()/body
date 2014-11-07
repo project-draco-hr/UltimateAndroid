@@ -1,0 +1,6 @@
+{
+  repeatCount=DEFAULT_REPEAT_COUNT;
+  duration=DEFAULT_DURATION;
+  startDelay=DEFAULT_START_DELAY;
+  direction=DEFAULT_DIRECTION;
+}

@@ -1,0 +1,4 @@
+{
+  this.dividerPadding=dividerPaddingPx;
+  invalidate();
+}

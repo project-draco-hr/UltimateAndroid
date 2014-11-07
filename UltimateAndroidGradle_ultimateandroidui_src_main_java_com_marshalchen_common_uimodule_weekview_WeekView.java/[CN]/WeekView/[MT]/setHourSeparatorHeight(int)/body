@@ -1,0 +1,4 @@
+{
+  mHourSeparatorHeight=hourSeparatorHeight;
+  invalidate();
+}

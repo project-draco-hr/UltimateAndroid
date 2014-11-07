@@ -1,0 +1,7 @@
+{
+  if (mHeaderView != null) {
+    removeHeaderView(mHeaderContainer);
+  }
+  this.mHeaderView=headerView;
+  updateHeaderView(headerView);
+}

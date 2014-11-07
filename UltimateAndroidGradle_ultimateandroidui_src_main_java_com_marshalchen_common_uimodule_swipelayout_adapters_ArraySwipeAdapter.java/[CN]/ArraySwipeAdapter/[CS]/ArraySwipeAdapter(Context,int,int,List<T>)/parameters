@@ -1,0 +1,4 @@
+Context context
+int resource
+int textViewResourceId
+List<T> objects

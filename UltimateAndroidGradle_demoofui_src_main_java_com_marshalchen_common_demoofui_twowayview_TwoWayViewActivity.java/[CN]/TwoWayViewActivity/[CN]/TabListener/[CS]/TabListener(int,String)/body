@@ -1,0 +1,4 @@
+{
+  mLayoutId=layoutId;
+  mTag=tag;
+}

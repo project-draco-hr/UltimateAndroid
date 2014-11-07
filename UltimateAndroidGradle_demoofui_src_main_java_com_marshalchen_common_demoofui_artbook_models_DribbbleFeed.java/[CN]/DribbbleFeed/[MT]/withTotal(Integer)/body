@@ -1,0 +1,4 @@
+{
+  this.total=total;
+  return this;
+}

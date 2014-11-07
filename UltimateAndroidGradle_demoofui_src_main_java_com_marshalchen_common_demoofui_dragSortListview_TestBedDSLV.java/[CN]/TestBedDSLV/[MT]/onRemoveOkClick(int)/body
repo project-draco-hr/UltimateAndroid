@@ -1,0 +1,6 @@
+{
+  if (removeMode != mRemoveMode) {
+    mRemoveMode=removeMode;
+    getSupportFragmentManager().beginTransaction().replace(R.id.test_bed,getNewDslvFragment(),mTag).commit();
+  }
+}

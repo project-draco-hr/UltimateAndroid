@@ -1,0 +1,4 @@
+{
+  final Date date=cal.getTime();
+  return betweenDates(date,minCal,maxCal);
+}

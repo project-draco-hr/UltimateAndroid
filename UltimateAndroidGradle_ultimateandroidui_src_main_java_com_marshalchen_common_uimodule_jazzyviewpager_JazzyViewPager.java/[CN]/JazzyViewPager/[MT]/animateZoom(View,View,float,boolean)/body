@@ -1,0 +1,20 @@
+{
+  if (mState != State.IDLE) {
+    if (left != null) {
+      manageLayer(left,true);
+      mScale=in ? ZOOM_MAX + (1 - ZOOM_MAX) * (1 - positionOffset) : 1 + ZOOM_MAX - ZOOM_MAX * (1 - positionOffset);
+      ViewHelper.setPivotX(left,left.getMeasuredWidth() * 0.5f);
+      ViewHelper.setPivotY(left,left.getMeasuredHeight() * 0.5f);
+      ViewHelper.setScaleX(left,mScale);
+      ViewHelper.setScaleY(left,mScale);
+    }
+    if (right != null) {
+      manageLayer(right,true);
+      mScale=in ? ZOOM_MAX + (1 - ZOOM_MAX) * positionOffset : 1 + ZOOM_MAX - ZOOM_MAX * positionOffset;
+      ViewHelper.setPivotX(right,right.getMeasuredWidth() * 0.5f);
+      ViewHelper.setPivotY(right,right.getMeasuredHeight() * 0.5f);
+      ViewHelper.setScaleX(right,mScale);
+      ViewHelper.setScaleY(right,mScale);
+    }
+  }
+}

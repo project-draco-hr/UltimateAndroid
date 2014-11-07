@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.panning_view_activity);
+  ButterKnife.inject(this);
+  panningView.startPanning();
+}

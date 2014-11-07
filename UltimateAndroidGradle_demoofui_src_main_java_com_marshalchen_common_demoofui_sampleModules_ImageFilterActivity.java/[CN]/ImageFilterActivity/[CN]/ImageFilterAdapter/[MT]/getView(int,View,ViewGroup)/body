@@ -1,0 +1,11 @@
+{
+  Bitmap bmImg=BitmapFactory.decodeResource(mContext.getResources(),filterArray.get(position).filterID);
+  int width=100;
+  int height=100;
+  bmImg.recycle();
+  ImageView imageview=new ImageView(mContext);
+  imageview.setImageResource(filterArray.get(position).filterID);
+  imageview.setLayoutParams(new Gallery.LayoutParams(width,height));
+  imageview.setScaleType(ImageView.ScaleType.FIT_CENTER);
+  return imageview;
+}

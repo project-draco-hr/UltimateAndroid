@@ -1,0 +1,4 @@
+{
+  this.blurSize=blurSize;
+  this.degree=degree;
+}

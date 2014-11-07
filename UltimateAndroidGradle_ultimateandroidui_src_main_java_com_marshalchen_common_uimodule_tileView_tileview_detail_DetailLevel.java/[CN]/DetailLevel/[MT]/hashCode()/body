@@ -1,0 +1,4 @@
+{
+  long bits=(Double.doubleToLongBits(getScale()) * 43);
+  return (((int)bits) ^ ((int)(bits >> 32)));
+}

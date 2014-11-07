@@ -1,0 +1,13 @@
+{
+  try {
+    Field scroller=ViewPager.class.getDeclaredField("mScroller");
+    scroller.setAccessible(true);
+    Field interpolator=ViewPager.class.getDeclaredField("sInterpolator");
+    interpolator.setAccessible(true);
+    mScroller=new FixSpeedScroller(getContext(),(Interpolator)interpolator.get(null));
+    scroller.set(this,mScroller);
+  }
+ catch (  Exception e) {
+    Logs.e(e,"");
+  }
+}

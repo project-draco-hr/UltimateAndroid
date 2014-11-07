@@ -1,0 +1,9 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  ensureTarget();
+  if (mTarget == null)   return;
+  widthMeasureSpec=MeasureSpec.makeMeasureSpec(getMeasuredWidth() - getPaddingRight() - getPaddingLeft(),MeasureSpec.EXACTLY);
+  heightMeasureSpec=MeasureSpec.makeMeasureSpec(getMeasuredHeight() - getPaddingTop() - getPaddingBottom(),MeasureSpec.EXACTLY);
+  mTarget.measure(widthMeasureSpec,heightMeasureSpec);
+  mRefreshView.measure(widthMeasureSpec,heightMeasureSpec);
+}

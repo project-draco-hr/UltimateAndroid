@@ -1,0 +1,9 @@
+{
+  mNumberOfFolds=Integer.parseInt(parent.getItemAtPosition(pos).toString());
+  if (mDidLoadSpinner) {
+    mDidLoadSpinner=false;
+  }
+ else {
+    mFoldLayout.setNumberOfFolds(mNumberOfFolds);
+  }
+}

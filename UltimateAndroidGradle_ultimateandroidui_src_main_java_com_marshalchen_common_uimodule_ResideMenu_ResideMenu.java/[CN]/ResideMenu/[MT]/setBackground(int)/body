@@ -1,0 +1,3 @@
+{
+  imageViewBackground.setImageResource(imageResrouce);
+}

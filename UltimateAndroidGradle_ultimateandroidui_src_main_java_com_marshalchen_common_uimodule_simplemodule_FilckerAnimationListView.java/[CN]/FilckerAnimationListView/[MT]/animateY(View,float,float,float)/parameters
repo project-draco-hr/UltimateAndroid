@@ -1,0 +1,4 @@
+View view
+float oldY
+float newY
+float durationUnit

@@ -1,0 +1,7 @@
+RotateBitmap rotateBitmap
+Bitmap croppedImage
+Rect r
+int width
+int height
+int outWidth
+int outHeight

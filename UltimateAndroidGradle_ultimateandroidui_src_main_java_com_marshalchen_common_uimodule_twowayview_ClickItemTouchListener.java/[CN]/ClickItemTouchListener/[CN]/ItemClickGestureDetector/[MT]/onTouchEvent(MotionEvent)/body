@@ -1,0 +1,8 @@
+{
+  final boolean handled=super.onTouchEvent(event);
+  final int action=event.getAction() & MotionEventCompat.ACTION_MASK;
+  if (action == MotionEvent.ACTION_UP) {
+    mGestureListener.dispatchSingleTapUpIfNeeded(event);
+  }
+  return handled;
+}

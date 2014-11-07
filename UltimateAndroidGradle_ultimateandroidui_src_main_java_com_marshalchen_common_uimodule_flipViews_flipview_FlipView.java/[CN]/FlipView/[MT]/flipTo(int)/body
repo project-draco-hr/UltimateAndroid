@@ -1,0 +1,7 @@
+{
+  if (page < 0 || page > mPageCount - 1) {
+    throw new IllegalArgumentException("That page does not exist");
+  }
+  endFlip();
+  setFlipDistance(page * FLIP_DISTANCE_PER_PAGE);
+}

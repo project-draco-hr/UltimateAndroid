@@ -1,0 +1,6 @@
+{
+  super(context,0);
+  this.picasso=picasso;
+  this.layout1=layout1;
+  this.layout2=layout2;
+}

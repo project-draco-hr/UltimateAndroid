@@ -1,0 +1,7 @@
+{
+  if (null != imageView && !(imageView instanceof IPhotoView)) {
+    if (!ScaleType.MATRIX.equals(imageView.getScaleType())) {
+      imageView.setScaleType(ScaleType.MATRIX);
+    }
+  }
+}

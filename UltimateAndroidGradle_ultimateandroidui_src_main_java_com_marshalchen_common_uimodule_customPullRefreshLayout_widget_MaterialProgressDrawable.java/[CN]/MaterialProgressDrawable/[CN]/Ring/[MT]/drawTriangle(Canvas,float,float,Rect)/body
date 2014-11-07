@@ -1,0 +1,22 @@
+{
+  if (mShowArrow) {
+    if (mArrow == null) {
+      mArrow=new Path();
+      mArrow.setFillType(Path.FillType.EVEN_ODD);
+    }
+ else {
+      mArrow.reset();
+    }
+    float inset=(int)mStrokeInset / 2 * mArrowScale;
+    float x=(float)(mRingCenterRadius * Math.cos(0) + bounds.exactCenterX());
+    float y=(float)(mRingCenterRadius * Math.sin(0) + bounds.exactCenterY());
+    mArrow.moveTo(0,0);
+    mArrow.lineTo(mArrowWidth * mArrowScale,0);
+    mArrow.lineTo((mArrowWidth * mArrowScale / 2),(mArrowHeight * mArrowScale));
+    mArrow.offset(x - inset,y);
+    mArrow.close();
+    mArrowPaint.setColor(mColors[mColorIndex]);
+    c.rotate(startAngle + sweepAngle - ARROW_OFFSET_ANGLE,bounds.exactCenterX(),bounds.exactCenterY());
+    c.drawPath(mArrow,mArrowPaint);
+  }
+}

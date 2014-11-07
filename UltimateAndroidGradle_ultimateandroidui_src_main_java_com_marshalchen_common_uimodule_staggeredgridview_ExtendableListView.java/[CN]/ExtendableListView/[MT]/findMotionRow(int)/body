@@ -1,0 +1,12 @@
+{
+  int childCount=getChildCount();
+  if (childCount > 0) {
+    for (int i=0; i < childCount; i++) {
+      View v=getChildAt(i);
+      if (y <= v.getBottom()) {
+        return mFirstPosition + i;
+      }
+    }
+  }
+  return INVALID_POSITION;
+}

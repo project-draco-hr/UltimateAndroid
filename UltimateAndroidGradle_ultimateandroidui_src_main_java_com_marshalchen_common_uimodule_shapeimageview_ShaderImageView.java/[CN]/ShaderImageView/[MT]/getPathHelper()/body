@@ -1,0 +1,6 @@
+{
+  if (pathHelper == null) {
+    pathHelper=createImageViewHelper();
+  }
+  return pathHelper;
+}

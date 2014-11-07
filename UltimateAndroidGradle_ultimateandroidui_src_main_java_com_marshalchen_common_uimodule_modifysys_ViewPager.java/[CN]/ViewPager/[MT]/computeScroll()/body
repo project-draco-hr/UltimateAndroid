@@ -1,0 +1,18 @@
+{
+  if (!mScroller.isFinished() && mScroller.computeScrollOffset()) {
+    int oldX=getScrollX();
+    int oldY=getScrollY();
+    int x=mScroller.getCurrX();
+    int y=mScroller.getCurrY();
+    if (oldX != x || oldY != y) {
+      scrollTo(x,y);
+      if (!pageScrolled(x)) {
+        mScroller.abortAnimation();
+        scrollTo(0,y);
+      }
+    }
+    ViewCompat.postInvalidateOnAnimation(this);
+    return;
+  }
+  completeScroll(true);
+}

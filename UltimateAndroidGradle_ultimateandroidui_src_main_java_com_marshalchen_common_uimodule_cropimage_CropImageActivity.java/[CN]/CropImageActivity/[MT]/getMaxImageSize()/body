@@ -1,0 +1,9 @@
+{
+  int textureLimit=getMaxTextureSize();
+  if (textureLimit == 0) {
+    return SIZE_DEFAULT;
+  }
+ else {
+    return Math.min(textureLimit,SIZE_LIMIT);
+  }
+}

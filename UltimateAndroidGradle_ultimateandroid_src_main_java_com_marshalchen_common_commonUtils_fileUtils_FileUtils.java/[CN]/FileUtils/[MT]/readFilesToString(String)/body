@@ -1,0 +1,13 @@
+{
+  File file=new File(fileName);
+  if (!file.exists() || file.isDirectory())   throw new FileNotFoundException();
+  BufferedReader br=new BufferedReader(new FileReader(file));
+  String temp=null;
+  StringBuffer sb=new StringBuffer();
+  temp=br.readLine();
+  while (temp != null) {
+    sb.append(temp + "\n");
+    temp=br.readLine();
+  }
+  return sb.toString();
+}

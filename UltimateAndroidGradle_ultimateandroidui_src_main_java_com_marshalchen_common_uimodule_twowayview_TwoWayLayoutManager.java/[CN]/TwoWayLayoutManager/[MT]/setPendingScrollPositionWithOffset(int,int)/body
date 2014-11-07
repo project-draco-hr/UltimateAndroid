@@ -1,0 +1,4 @@
+{
+  mPendingScrollPosition=position;
+  mPendingScrollOffset=offset;
+}

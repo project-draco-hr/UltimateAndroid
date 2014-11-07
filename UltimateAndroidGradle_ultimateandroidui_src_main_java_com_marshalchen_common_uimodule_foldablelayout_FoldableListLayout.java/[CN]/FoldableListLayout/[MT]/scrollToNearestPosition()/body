@@ -1,0 +1,4 @@
+{
+  float current=getFoldRotation();
+  scrollToPosition((int)((current + 90f) / 180f));
+}

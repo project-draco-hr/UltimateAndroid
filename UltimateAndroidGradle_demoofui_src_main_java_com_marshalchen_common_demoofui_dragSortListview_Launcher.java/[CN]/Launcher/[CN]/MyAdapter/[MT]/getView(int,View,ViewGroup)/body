@@ -1,0 +1,8 @@
+{
+  View v=super.getView(position,convertView,parent);
+  TextView title=(TextView)v.findViewById(R.id.activity_title);
+  TextView desc=(TextView)v.findViewById(R.id.activity_desc);
+  title.setText(mActTitles[position]);
+  desc.setText(mActDescs[position]);
+  return v;
+}

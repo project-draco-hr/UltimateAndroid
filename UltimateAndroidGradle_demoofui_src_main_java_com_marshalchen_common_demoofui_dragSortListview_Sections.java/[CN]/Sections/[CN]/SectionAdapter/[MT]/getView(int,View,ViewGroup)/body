@@ -1,0 +1,21 @@
+{
+  final int type=getItemViewType(position);
+  View v=null;
+  if (convertView != null) {
+    Log.d("mobeta","using convertView");
+    v=convertView;
+  }
+ else   if (type != SECTION_DIV) {
+    Log.d("mobeta","inflating normal item");
+    v=mInflater.inflate(R.layout.drag_sort_listview_list_item_bg_handle,parent,false);
+    v.setBackgroundDrawable(getBGDrawable(type));
+  }
+ else {
+    Log.d("mobeta","inflating section divider");
+    v=mInflater.inflate(R.layout.drag_sort_listview_section_div,parent,false);
+  }
+  if (type != SECTION_DIV) {
+    ((TextView)v).setText(mData.get(dataPosition(position)));
+  }
+  return v;
+}

@@ -1,0 +1,4 @@
+String frompath
+String topath
+Bitmap bitmap
+int pix

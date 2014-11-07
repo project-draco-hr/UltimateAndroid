@@ -1,0 +1,9 @@
+{
+  if (spring == null) {
+    throw new IllegalArgumentException("spring is required");
+  }
+  if (mSpringRegistry.containsKey(spring.getId())) {
+    throw new IllegalArgumentException("spring is already registered");
+  }
+  mSpringRegistry.put(spring.getId(),spring);
+}

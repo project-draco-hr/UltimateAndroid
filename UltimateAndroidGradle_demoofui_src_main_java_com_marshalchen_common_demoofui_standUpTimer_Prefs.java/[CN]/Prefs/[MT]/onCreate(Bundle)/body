@@ -1,0 +1,4 @@
+{
+  super.onCreate(savedInstanceState);
+  addPreferencesFromResource(R.xml.stand_up_timer_settings);
+}

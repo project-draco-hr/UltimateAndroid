@@ -1,0 +1,6 @@
+{
+  if (mDoubleClickListener == null) {
+    performAdapterViewItemClick(e);
+  }
+  return true;
+}

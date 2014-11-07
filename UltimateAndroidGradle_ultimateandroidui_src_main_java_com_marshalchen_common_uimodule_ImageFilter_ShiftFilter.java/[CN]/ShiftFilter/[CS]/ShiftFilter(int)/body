@@ -1,0 +1,3 @@
+{
+  _amount=((amount >= 2) ? amount : 2);
+}

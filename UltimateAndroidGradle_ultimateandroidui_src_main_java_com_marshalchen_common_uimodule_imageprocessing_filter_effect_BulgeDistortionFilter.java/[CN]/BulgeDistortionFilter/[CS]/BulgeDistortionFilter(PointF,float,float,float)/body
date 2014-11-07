@@ -1,0 +1,6 @@
+{
+  this.center=center;
+  this.radius=radius;
+  this.distortionAmount=distortionAmount;
+  this.aspectRatio=aspectRatio;
+}

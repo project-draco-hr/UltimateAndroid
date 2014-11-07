@@ -1,0 +1,15 @@
+{
+  Drawable drawable=null;
+  ProgressType type=ProgressType.values()[typeIndex];
+switch (type) {
+case FOLDING_CIRCLES:
+    drawable=new FoldingCirclesDrawable.Builder(context).colors(getResources().getIntArray(colorsId)).build();
+  break;
+case GOOGLE_MUSIC_DICES:
+drawable=new GoogleMusicDicesDrawable.Builder().build();
+break;
+case NEXUS_ROTATION_CROSS:
+drawable=new NexusRotationCrossDrawable.Builder(context).colors(getResources().getIntArray(colorsId)).build();
+}
+return drawable;
+}

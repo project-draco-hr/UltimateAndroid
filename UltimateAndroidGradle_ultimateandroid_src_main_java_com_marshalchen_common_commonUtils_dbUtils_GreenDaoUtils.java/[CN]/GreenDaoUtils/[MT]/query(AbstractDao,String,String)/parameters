@@ -1,0 +1,3 @@
+AbstractDao dao
+String queryString
+String queryValue

@@ -1,0 +1,3 @@
+{
+  return mEdgeFlag & (EDGE_LEFT | EDGE_RIGHT);
+}

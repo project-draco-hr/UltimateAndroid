@@ -1,0 +1,13 @@
+{
+  ValueAnimator animator=ValueAnimator.ofInt(start,end);
+  animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    final ValueAnimator valueAnimator){
+      int value=(Integer)valueAnimator.getAnimatedValue();
+      LayoutParams layoutParams=view.getLayoutParams();
+      layoutParams.height=value;
+      view.setLayoutParams(layoutParams);
+    }
+  }
+);
+  return animator;
+}

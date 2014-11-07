@@ -1,0 +1,7 @@
+{
+  int startId=(int)getItemId(getCount() - 1);
+  startId++;
+  for (int i=startId; i < items.size(); i++) {
+    mIdMap.put(items.get(i),i);
+  }
+}

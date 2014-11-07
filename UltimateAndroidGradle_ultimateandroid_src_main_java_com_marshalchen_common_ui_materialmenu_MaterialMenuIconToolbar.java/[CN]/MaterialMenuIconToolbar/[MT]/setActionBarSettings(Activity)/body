@@ -1,0 +1,4 @@
+{
+  Toolbar toolbar=(Toolbar)activity.findViewById(getToolbarViewId());
+  toolbar.setNavigationIcon(getDrawable());
+}

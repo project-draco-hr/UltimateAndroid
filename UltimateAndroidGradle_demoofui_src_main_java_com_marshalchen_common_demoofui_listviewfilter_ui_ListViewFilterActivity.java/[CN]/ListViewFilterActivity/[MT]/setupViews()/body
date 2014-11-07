@@ -1,0 +1,7 @@
+{
+  setContentView(R.layout.list_filter_main_act);
+  mSearchView=(EditText)findViewById(R.id.search_view);
+  mLoadingView=(ProgressBar)findViewById(R.id.loading_view);
+  mListView=(PinnedHeaderListView)findViewById(R.id.list_view);
+  mEmptyView=(TextView)findViewById(R.id.empty_view);
+}

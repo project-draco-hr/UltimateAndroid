@@ -1,0 +1,8 @@
+{
+  String ext="";
+  int i=f.lastIndexOf('.');
+  if (i > 0 && i < f.length() - 1) {
+    ext=f.substring(i + 1);
+  }
+  return ext;
+}

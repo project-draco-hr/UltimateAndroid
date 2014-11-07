@@ -1,0 +1,18 @@
+{
+  if (mAdapter != null) {
+    mAdapter.unregisterDataSetObserver(mObserver);
+  }
+  if (mHeaderViewInfos.size() > 0 || mFooterViewInfos.size() > 0) {
+    mAdapter=new HeaderViewListAdapter(mHeaderViewInfos,mFooterViewInfos,adapter);
+  }
+ else {
+    mAdapter=adapter;
+  }
+  mDataChanged=true;
+  mItemCount=mAdapter != null ? mAdapter.getCount() : 0;
+  if (mAdapter != null) {
+    mAdapter.registerDataSetObserver(mObserver);
+    mRecycleBin.setViewTypeCount(mAdapter.getViewTypeCount());
+  }
+  requestLayout();
+}

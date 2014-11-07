@@ -1,0 +1,3 @@
+{
+  return dp * viewContext.getResources().getDisplayMetrics().density;
+}

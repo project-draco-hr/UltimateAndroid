@@ -1,0 +1,24 @@
+{
+  mProgress.setVisibility(View.GONE);
+  if (mEmpty != null && mEmptyId != 0)   mList.setEmptyView(mEmpty);
+  mList.setVisibility(View.VISIBLE);
+  mPtrLayout.setRefreshing(false);
+  adapter.registerDataSetObserver(new DataSetObserver(){
+    @Override public void onChanged(){
+      super.onChanged();
+      mProgress.setVisibility(View.GONE);
+      isLoadingMore=false;
+      mPtrLayout.setRefreshing(false);
+      if (mList.getAdapter().getCount() == 0 && mEmptyId != 0) {
+        mEmpty.setVisibility(View.VISIBLE);
+      }
+ else       if (mEmptyId != 0) {
+        mEmpty.setVisibility(View.GONE);
+      }
+    }
+  }
+);
+  if ((adapter == null || adapter.getCount() == 0) && mEmptyId != 0) {
+    mEmpty.setVisibility(View.VISIBLE);
+  }
+}

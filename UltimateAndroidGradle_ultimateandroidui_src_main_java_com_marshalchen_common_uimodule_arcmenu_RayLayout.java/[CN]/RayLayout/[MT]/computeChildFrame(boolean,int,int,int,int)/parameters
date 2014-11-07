@@ -1,0 +1,5 @@
+boolean expanded
+int paddingLeft
+int childIndex
+int gap
+int size

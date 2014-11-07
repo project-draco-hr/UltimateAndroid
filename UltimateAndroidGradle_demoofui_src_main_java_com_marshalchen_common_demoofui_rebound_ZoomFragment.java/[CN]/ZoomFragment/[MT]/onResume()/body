@@ -1,0 +1,4 @@
+{
+  super.onResume();
+  mScaleSpring.addListener(mSpringListener);
+}

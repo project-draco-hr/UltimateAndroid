@@ -1,0 +1,4 @@
+{
+  mFaceMarginPx=faceMarginPx;
+  mSizeMode=SizeMode.FaceMarginPx;
+}

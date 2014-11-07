@@ -1,0 +1,4 @@
+{
+  this.tabPadding=paddingPx;
+  updateTabStyles();
+}

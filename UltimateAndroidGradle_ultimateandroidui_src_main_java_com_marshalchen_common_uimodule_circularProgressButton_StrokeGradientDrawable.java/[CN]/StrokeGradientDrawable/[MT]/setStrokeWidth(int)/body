@@ -1,0 +1,4 @@
+{
+  mStrokeWidth=strokeWidth;
+  mGradientDrawable.setStroke(strokeWidth,getStrokeColor());
+}

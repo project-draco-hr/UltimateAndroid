@@ -1,0 +1,4 @@
+{
+  super.onFinishInflate();
+  mBaseLayout.moveInflatedChildren(this,3);
+}

@@ -1,0 +1,8 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  layout_width=w;
+  layout_height=h;
+  setupBounds();
+  setupPaints();
+  invalidate();
+}

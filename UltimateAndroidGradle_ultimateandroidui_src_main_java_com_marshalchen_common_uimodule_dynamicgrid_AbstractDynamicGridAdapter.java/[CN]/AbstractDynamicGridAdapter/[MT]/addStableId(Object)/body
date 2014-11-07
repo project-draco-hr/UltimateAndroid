@@ -1,0 +1,5 @@
+{
+  int newId=(int)getItemId(getCount() - 1);
+  newId++;
+  mIdMap.put(item,newId);
+}

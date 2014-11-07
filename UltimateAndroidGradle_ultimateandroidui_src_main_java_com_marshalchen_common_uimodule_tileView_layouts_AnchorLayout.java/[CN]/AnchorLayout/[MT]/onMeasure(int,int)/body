@@ -1,0 +1,25 @@
+{
+  measureChildren(widthMeasureSpec,heightMeasureSpec);
+  int width=0;
+  int height=0;
+  int count=getChildCount();
+  for (int i=0; i < count; i++) {
+    View child=getChildAt(i);
+    if (child.getVisibility() != GONE) {
+      LayoutParams lp=(LayoutParams)child.getLayoutParams();
+      float aX=(lp.anchorX == null) ? anchorX : lp.anchorX;
+      float aY=(lp.anchorY == null) ? anchorY : lp.anchorY;
+      int computedWidth=(int)(child.getMeasuredWidth() * aX);
+      int computedHeight=(int)(child.getMeasuredHeight() * aY);
+      int right=lp.x + computedWidth;
+      int bottom=lp.y + computedHeight;
+      width=Math.max(width,right);
+      height=Math.max(height,bottom);
+    }
+  }
+  height=Math.max(height,getSuggestedMinimumHeight());
+  width=Math.max(width,getSuggestedMinimumWidth());
+  width=resolveSize(width,widthMeasureSpec);
+  height=resolveSize(height,heightMeasureSpec);
+  setMeasuredDimension(width,height);
+}

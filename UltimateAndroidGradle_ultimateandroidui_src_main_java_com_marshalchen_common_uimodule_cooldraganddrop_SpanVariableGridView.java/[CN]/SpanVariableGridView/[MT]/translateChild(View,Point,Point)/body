@@ -1,0 +1,9 @@
+{
+  TranslateAnimation translate=new TranslateAnimation(Animation.ABSOLUTE,-now.x + prev.x,Animation.ABSOLUTE,0,Animation.ABSOLUTE,-now.y + prev.y,Animation.ABSOLUTE,0);
+  translate.setInterpolator(new AccelerateInterpolator(4f));
+  translate.setDuration(350);
+  translate.setFillEnabled(false);
+  translate.setFillAfter(false);
+  v.clearAnimation();
+  v.startAnimation(translate);
+}

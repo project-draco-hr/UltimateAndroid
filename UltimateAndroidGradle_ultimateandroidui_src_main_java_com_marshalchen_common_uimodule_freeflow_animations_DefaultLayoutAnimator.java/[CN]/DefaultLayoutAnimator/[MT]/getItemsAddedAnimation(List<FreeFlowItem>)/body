@@ -1,0 +1,13 @@
+{
+  AnimatorSet appearingSet=new AnimatorSet();
+  ArrayList<Animator> fadeIns=new ArrayList<Animator>();
+  for (  FreeFlowItem proxy : added) {
+    proxy.view.setAlpha(0);
+    fadeIns.add(ObjectAnimator.ofFloat(proxy.view,"alpha",1));
+  }
+  if (animateIndividualCellsSequentially)   appearingSet.playSequentially(fadeIns);
+ else   appearingSet.playTogether(fadeIns);
+  appearingSet.setStartDelay(newCellsAdditionAnimationStartDelay);
+  appearingSet.setDuration(newCellsAdditionAnimationDurationPerCell);
+  return appearingSet;
+}

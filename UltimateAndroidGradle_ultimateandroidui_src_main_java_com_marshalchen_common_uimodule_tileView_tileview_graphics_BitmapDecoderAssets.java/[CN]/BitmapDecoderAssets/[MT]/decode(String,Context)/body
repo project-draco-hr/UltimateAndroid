@@ -1,0 +1,20 @@
+{
+  AssetManager assets=context.getAssets();
+  try {
+    InputStream input=assets.open(fileName);
+    if (input != null) {
+      try {
+        return BitmapFactory.decodeStream(input,null,OPTIONS);
+      }
+ catch (      OutOfMemoryError oom) {
+      }
+catch (      Exception e) {
+      }
+    }
+  }
+ catch (  IOException io) {
+  }
+catch (  Exception e) {
+  }
+  return null;
+}

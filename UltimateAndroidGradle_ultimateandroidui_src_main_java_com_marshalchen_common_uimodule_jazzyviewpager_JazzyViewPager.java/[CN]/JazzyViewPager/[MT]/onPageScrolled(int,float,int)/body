@@ -1,0 +1,55 @@
+{
+  if (mState == State.IDLE && positionOffset > 0) {
+    oldPage=getCurrentItem();
+    mState=position == oldPage ? State.GOING_RIGHT : State.GOING_LEFT;
+  }
+  boolean goingRight=position == oldPage;
+  if (mState == State.GOING_RIGHT && !goingRight)   mState=State.GOING_LEFT;
+ else   if (mState == State.GOING_LEFT && goingRight)   mState=State.GOING_RIGHT;
+  float effectOffset=isSmall(positionOffset) ? 0 : positionOffset;
+  mLeft=findViewFromObject(position);
+  mRight=findViewFromObject(position + 1);
+  if (mFadeEnabled)   animateFade(mLeft,mRight,effectOffset);
+  if (mOutlineEnabled)   animateOutline(mLeft,mRight);
+switch (mEffect) {
+case Standard:
+    break;
+case Tablet:
+  animateTablet(mLeft,mRight,effectOffset);
+break;
+case CubeIn:
+animateCube(mLeft,mRight,effectOffset,true);
+break;
+case CubeOut:
+animateCube(mLeft,mRight,effectOffset,false);
+break;
+case FlipVertical:
+animateFlipVertical(mLeft,mRight,positionOffset,positionOffsetPixels);
+break;
+case FlipHorizontal:
+animateFlipHorizontal(mLeft,mRight,effectOffset,positionOffsetPixels);
+case Stack:
+animateStack(mLeft,mRight,effectOffset,positionOffsetPixels);
+break;
+case ZoomIn:
+animateZoom(mLeft,mRight,effectOffset,true);
+break;
+case ZoomOut:
+animateZoom(mLeft,mRight,effectOffset,false);
+break;
+case RotateUp:
+animateRotate(mLeft,mRight,effectOffset,true);
+break;
+case RotateDown:
+animateRotate(mLeft,mRight,effectOffset,false);
+break;
+case Accordion:
+animateAccordion(mLeft,mRight,effectOffset);
+break;
+}
+super.onPageScrolled(position,positionOffset,positionOffsetPixels);
+if (effectOffset == 0) {
+disableHardwareLayer();
+mState=State.IDLE;
+}
+}

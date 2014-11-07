@@ -1,0 +1,7 @@
+{
+  if (mIsInTransformation == isInTransformation)   return;
+  mIsInTransformation=isInTransformation;
+  mBaseLayout.setDrawToCache(isInTransformation);
+  mTopPart.setVisibility(isInTransformation ? VISIBLE : INVISIBLE);
+  mBottomPart.setVisibility(isInTransformation ? VISIBLE : INVISIBLE);
+}

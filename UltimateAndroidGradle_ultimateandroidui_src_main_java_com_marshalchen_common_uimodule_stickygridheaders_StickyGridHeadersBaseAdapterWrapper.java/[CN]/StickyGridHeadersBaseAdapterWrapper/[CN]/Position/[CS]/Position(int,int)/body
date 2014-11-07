@@ -1,0 +1,4 @@
+{
+  mPosition=position;
+  mHeader=header;
+}

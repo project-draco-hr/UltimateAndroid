@@ -1,0 +1,3 @@
+int positionStart
+int itemCountOrToPosition
+UpdateOp cmd

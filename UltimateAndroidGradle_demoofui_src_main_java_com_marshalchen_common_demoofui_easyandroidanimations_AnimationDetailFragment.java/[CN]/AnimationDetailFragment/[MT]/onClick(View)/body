@@ -1,0 +1,4 @@
+{
+  mPlayView.setVisibility(View.INVISIBLE);
+  doAnimation();
+}

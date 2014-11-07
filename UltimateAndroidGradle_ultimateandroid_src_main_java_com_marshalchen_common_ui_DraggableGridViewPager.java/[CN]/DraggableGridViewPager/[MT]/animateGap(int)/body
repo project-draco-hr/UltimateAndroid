@@ -1,0 +1,34 @@
+{
+  for (int i=0; i < getChildCount(); i++) {
+    View v=getChildAt(i);
+    if (i == mLastDragged) {
+      continue;
+    }
+    int newPos=i;
+    if (mLastDragged < target && i >= mLastDragged + 1 && i <= target) {
+      newPos--;
+    }
+ else     if (target < mLastDragged && i >= target && i < mLastDragged) {
+      newPos++;
+    }
+    int oldPos=i;
+    if (newPositions.get(i) != -1) {
+      oldPos=newPositions.get(i);
+    }
+    if (oldPos == newPos) {
+      continue;
+    }
+    DEBUG_LOG("animateGap from=" + oldPos + ", to="+ newPos);
+    final Rect oldRect=getRectByPosition(oldPos);
+    final Rect newRect=getRectByPosition(newPos);
+    oldRect.offset(-v.getLeft(),-v.getTop());
+    newRect.offset(-v.getLeft(),-v.getTop());
+    TranslateAnimation translate=new TranslateAnimation(oldRect.left,newRect.left,oldRect.top,newRect.top);
+    translate.setDuration(ANIMATION_DURATION);
+    translate.setFillEnabled(true);
+    translate.setFillAfter(true);
+    v.clearAnimation();
+    v.startAnimation(translate);
+    newPositions.set(i,newPos);
+  }
+}

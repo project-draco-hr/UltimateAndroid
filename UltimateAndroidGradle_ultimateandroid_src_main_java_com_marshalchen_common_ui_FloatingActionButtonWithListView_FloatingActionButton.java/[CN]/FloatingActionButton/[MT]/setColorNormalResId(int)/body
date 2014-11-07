@@ -1,0 +1,3 @@
+{
+  setColorNormal(getColor(colorResId));
+}

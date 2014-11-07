@@ -1,0 +1,18 @@
+{
+  setRefreshing(false);
+switch (type) {
+case STYLE_CIRCLES:
+    mRefreshDrawable=new CirclesDrawable(getContext(),this);
+  break;
+case STYLE_WATER_DROP:
+mRefreshDrawable=new WaterDropDrawable(getContext(),this);
+break;
+case STYLE_RING:
+mRefreshDrawable=new RingDrawable(getContext(),this);
+break;
+default :
+throw new InvalidParameterException("Type does not exist");
+}
+mRefreshDrawable.setColorSchemeColors(mColorSchemeColors);
+mRefreshView.setImageDrawable(mRefreshDrawable);
+}

@@ -1,0 +1,3 @@
+{
+  mBlurRadius=radius < 1 ? 1 : radius;
+}

@@ -1,0 +1,5 @@
+{
+  int width=(int)(myBitmap.getWidth() / mDownScaleFactor);
+  int height=(int)(myBitmap.getHeight() / mDownScaleFactor);
+  return Bitmap.createScaledBitmap(myBitmap,width,height,false);
+}

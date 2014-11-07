@@ -1,0 +1,18 @@
+{
+  InputStream is=null;
+  BitmapFactory.Options options=new BitmapFactory.Options();
+  options.inJustDecodeBounds=true;
+  try {
+    is=getContentResolver().openInputStream(bitmapUri);
+    BitmapFactory.decodeStream(is,null,options);
+  }
+  finally {
+    CropUtil.closeSilently(is);
+  }
+  int maxSize=getMaxImageSize();
+  int sampleSize=1;
+  while (options.outHeight / sampleSize > maxSize || options.outWidth / sampleSize > maxSize) {
+    sampleSize=sampleSize << 1;
+  }
+  return sampleSize;
+}

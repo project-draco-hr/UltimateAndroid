@@ -1,0 +1,7 @@
+{
+  if (animatedRange <= 0f || animatedRange > 1f) {
+    throw new IllegalArgumentException("The animated range must be in the (0, 1] range");
+  }
+  this.animRange=animatedRange;
+  return this;
+}

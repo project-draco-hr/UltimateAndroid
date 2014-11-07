@@ -1,0 +1,13 @@
+{
+  if (mIsPanning) {
+    return;
+  }
+  mIsPanning=true;
+  final Runnable panningRunnable=new Runnable(){
+    @Override public void run(){
+      animate_();
+    }
+  }
+;
+  getImageView().post(panningRunnable);
+}

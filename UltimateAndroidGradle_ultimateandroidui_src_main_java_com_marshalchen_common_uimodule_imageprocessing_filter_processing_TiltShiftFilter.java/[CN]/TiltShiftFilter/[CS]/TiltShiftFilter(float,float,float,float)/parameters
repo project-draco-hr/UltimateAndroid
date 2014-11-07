@@ -1,0 +1,4 @@
+float blurSize
+float topFocusLevel
+float bottomFocusLevel
+float focusFallOffRate

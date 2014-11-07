@@ -1,0 +1,12 @@
+{
+  MeetingDAO dao=null;
+  try {
+    dao=daoFactory.getMeetingDAO(context);
+    return dao.findAllByTeam(team);
+  }
+  finally {
+    if (dao != null) {
+      dao.close();
+    }
+  }
+}

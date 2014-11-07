@@ -1,0 +1,3 @@
+{
+  mMinSignificantScroll=view.getContext().getResources().getDimensionPixelOffset(R.dimen.fab_min_significant_scroll);
+}

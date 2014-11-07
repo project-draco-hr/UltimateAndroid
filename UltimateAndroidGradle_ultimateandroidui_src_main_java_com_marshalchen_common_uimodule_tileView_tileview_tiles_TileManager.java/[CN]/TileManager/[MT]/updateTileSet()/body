@@ -1,0 +1,13 @@
+{
+  detailLevelToRender=detailManager.getCurrentDetailLevel();
+  if (detailLevelToRender == null) {
+    return;
+  }
+  if (detailLevelToRender.equals(lastRenderedDetailLevel)) {
+    return;
+  }
+  lastRenderedDetailLevel=detailLevelToRender;
+  currentTileGroup=getCurrentTileGroup();
+  currentTileGroup.setVisibility(View.VISIBLE);
+  currentTileGroup.bringToFront();
+}

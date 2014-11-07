@@ -1,0 +1,3 @@
+{
+  mPoint=new Point(xValue,yValue);
+}

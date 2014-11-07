@@ -1,0 +1,5 @@
+{
+  mDelegate=adapter;
+  adapter.registerDataSetObserver(new DataSetObserverExtension());
+  mHeaders=generateHeaderList(adapter);
+}

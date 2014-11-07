@@ -1,0 +1,11 @@
+{
+  super.setVisibility(visibility);
+switch (visibility) {
+case VISIBLE:
+    resume();
+  break;
+default :
+pause();
+break;
+}
+}

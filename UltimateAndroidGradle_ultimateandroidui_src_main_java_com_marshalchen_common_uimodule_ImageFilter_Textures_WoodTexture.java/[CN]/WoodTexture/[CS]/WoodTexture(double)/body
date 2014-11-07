@@ -1,0 +1,4 @@
+{
+  this.rings=Math.max(3,rings);
+  Reset();
+}

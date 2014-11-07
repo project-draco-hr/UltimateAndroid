@@ -1,0 +1,5 @@
+{
+  textureHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_TEXTURE0);
+  positionHandle=GLES20.glGetAttribLocation(programHandle,ATTRIBUTE_POSITION);
+  texCoordHandle=GLES20.glGetAttribLocation(programHandle,ATTRIBUTE_TEXCOORD);
+}

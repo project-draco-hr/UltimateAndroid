@@ -1,0 +1,16 @@
+{
+  PersistentCookieStore myCookieStore=new PersistentCookieStore(context);
+  if (BasicUtils.judgeNotNull(hashMap)) {
+    Iterator iterator=hashMap.entrySet().iterator();
+    while (iterator.hasNext()) {
+      Map.Entry entry=(Map.Entry)iterator.next();
+      Object key=entry.getKey();
+      Object value=entry.getValue();
+      Cookie cookie=new BasicClientCookie(key.toString(),value.toString());
+      myCookieStore.addCookie(cookie);
+    }
+  }
+  AsyncHttpClient client=new AsyncHttpClient();
+  client.setCookieStore(myCookieStore);
+  client.get(getAbsoluteUrl(url),responseHandler);
+}

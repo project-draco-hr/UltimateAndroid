@@ -1,0 +1,5 @@
+{
+  if (getAdapter() != null && getAdapter().getCount() > 0 && getFirstVisiblePosition() == 0) {
+    setSelection(1);
+  }
+}

@@ -1,0 +1,15 @@
+{
+  int newTopMargin=changingHeaderViewTopMargin(deltaY);
+  if (Math.abs(newTopMargin) >= (mHeaderViewHeight + mFooterViewHeight) && mFooterState != RELEASE_TO_REFRESH) {
+    mFooterTextView.setText(R.string.pull_to_refresh_footer_release_label);
+    mFooterImageView.clearAnimation();
+    mFooterImageView.startAnimation(mFlipAnimation);
+    mFooterState=RELEASE_TO_REFRESH;
+  }
+ else   if (Math.abs(newTopMargin) < (mHeaderViewHeight + mFooterViewHeight)) {
+    mFooterImageView.clearAnimation();
+    mFooterImageView.startAnimation(mFlipAnimation);
+    mFooterTextView.setText(R.string.pull_to_refresh_footer_pull_label);
+    mFooterState=PULL_TO_REFRESH;
+  }
+}

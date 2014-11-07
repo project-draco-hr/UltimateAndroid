@@ -1,0 +1,3 @@
+{
+  this(context,color,stroke,DEFAULT_SCALE,transformDuration,pressedDuration);
+}

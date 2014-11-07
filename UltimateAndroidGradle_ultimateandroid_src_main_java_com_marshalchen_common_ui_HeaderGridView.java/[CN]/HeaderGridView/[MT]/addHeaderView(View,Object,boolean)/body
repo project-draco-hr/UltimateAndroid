@@ -1,0 +1,14 @@
+{
+  FixedViewInfo info=new ListView(getContext()).new FixedViewInfo();
+  info.view=v;
+  info.data=data;
+  info.isSelectable=isSelectable;
+  mHeaderViewInfos.add(info);
+  setupView(v);
+  int topPadding=this.getPaddingTop();
+  if (initialTopPadding == 0) {
+    initialTopPadding=topPadding;
+  }
+  this.setPadding(this.getPaddingLeft(),topPadding + v.getMeasuredHeight(),this.getPaddingRight(),this.getPaddingBottom());
+  this.notifiyChanged();
+}

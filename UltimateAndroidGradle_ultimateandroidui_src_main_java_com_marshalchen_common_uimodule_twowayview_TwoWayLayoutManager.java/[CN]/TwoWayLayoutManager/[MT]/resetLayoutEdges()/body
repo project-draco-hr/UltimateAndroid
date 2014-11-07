@@ -1,0 +1,4 @@
+{
+  mLayoutStart=getStartWithPadding();
+  mLayoutEnd=mLayoutStart;
+}

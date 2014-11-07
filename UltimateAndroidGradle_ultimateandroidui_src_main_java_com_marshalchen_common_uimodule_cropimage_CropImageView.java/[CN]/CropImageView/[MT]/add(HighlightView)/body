@@ -1,0 +1,4 @@
+{
+  highlightViews.add(hv);
+  invalidate();
+}

@@ -1,0 +1,3 @@
+{
+  return mEnabled ? super.onInterceptTouchEvent(arg0) : false;
+}

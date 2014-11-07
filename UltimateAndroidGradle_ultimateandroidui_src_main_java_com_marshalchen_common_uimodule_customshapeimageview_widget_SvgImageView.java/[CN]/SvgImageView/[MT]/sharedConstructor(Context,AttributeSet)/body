@@ -1,0 +1,5 @@
+{
+  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.CustomShapeImageView);
+  mSvgRawResourceId=a.getResourceId(R.styleable.CustomShapeImageView_svg_raw_resource,0);
+  a.recycle();
+}

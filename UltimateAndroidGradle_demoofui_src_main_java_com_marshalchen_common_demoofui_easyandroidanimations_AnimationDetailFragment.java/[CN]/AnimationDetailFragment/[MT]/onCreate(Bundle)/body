@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  if (getArguments().containsKey(ARG_ITEM_ID)) {
+    mItem=DemoItem.ITEM_MAP.get(getArguments().getInt(ARG_ITEM_ID));
+  }
+}

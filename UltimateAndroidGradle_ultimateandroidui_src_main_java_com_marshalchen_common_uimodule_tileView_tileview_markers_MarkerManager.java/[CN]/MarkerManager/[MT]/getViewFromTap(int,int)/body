@@ -1,0 +1,12 @@
+{
+  Iterator<Entry<View,Rect>> iterator=markerMap.entrySet().iterator();
+  while (iterator.hasNext()) {
+    Entry<View,Rect> pairs=iterator.next();
+    Rect rect=(Rect)pairs.getValue();
+    if (rect.contains(x,y)) {
+      View view=(View)pairs.getKey();
+      return view;
+    }
+  }
+  return null;
+}

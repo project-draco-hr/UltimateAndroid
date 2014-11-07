@@ -1,0 +1,4 @@
+{
+  String[] args={"chmod","604",fileName};
+  exec(args);
+}

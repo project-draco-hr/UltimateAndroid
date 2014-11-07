@@ -1,0 +1,25 @@
+{
+  Integer selectedIndex=null;
+  Integer todayIndex=null;
+  Calendar today=Calendar.getInstance(locale);
+  for (int c=0; c < months.size(); c++) {
+    MonthDescriptor month=months.get(c);
+    if (selectedIndex == null) {
+      for (      Calendar selectedCal : selectedCals) {
+        if (sameMonth(selectedCal,month)) {
+          selectedIndex=c;
+          break;
+        }
+      }
+      if (selectedIndex == null && todayIndex == null && sameMonth(today,month)) {
+        todayIndex=c;
+      }
+    }
+  }
+  if (selectedIndex != null) {
+    scrollToSelectedMonth(selectedIndex);
+  }
+ else   if (todayIndex != null) {
+    scrollToSelectedMonth(todayIndex);
+  }
+}

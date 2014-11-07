@@ -1,0 +1,5 @@
+{
+  super(dslv);
+  setDragHandleId(R.id.text);
+  mDslv=dslv;
+}

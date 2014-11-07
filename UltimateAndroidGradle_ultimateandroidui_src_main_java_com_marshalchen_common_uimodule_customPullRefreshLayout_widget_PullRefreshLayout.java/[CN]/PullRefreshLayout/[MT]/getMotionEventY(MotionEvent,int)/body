@@ -1,0 +1,7 @@
+{
+  final int index=MotionEventCompat.findPointerIndex(ev,activePointerId);
+  if (index < 0) {
+    return -1;
+  }
+  return MotionEventCompat.getY(ev,index);
+}

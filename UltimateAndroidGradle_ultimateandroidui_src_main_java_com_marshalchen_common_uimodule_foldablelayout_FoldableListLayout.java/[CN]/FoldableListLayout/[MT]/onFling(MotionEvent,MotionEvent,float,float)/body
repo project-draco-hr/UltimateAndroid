@@ -1,0 +1,7 @@
+{
+  float rotation=getFoldRotation();
+  if (rotation % 180 == 0)   return false;
+  int position=(int)(rotation / 180f);
+  scrollToPosition(velocityY > 0 ? position : position + 1);
+  return true;
+}

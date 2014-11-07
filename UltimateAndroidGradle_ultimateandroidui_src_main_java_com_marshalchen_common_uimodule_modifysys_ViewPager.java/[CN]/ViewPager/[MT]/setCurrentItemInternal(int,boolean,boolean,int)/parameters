@@ -1,0 +1,4 @@
+int item
+boolean smoothScroll
+boolean always
+int velocity

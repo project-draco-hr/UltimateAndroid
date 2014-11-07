@@ -1,0 +1,4 @@
+{
+  GridItemRecord rec=getOrCreateRecord(position);
+  rec.column=column;
+}

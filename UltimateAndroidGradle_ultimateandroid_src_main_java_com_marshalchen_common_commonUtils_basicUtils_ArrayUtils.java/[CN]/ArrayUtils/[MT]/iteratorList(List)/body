@@ -1,0 +1,14 @@
+{
+  Iterator it1=inputList.iterator();
+  while (it1.hasNext()) {
+    int i=0;
+    Iterator it=((HashMap<String,String>)it1.next()).entrySet().iterator();
+    while (it.hasNext()) {
+      i++;
+      Map.Entry entry=(Map.Entry)it.next();
+      Object key=entry.getKey();
+      Object value=entry.getValue();
+      Logs.d("key--" + key + "  value   "+ value+ "\n");
+    }
+  }
+}

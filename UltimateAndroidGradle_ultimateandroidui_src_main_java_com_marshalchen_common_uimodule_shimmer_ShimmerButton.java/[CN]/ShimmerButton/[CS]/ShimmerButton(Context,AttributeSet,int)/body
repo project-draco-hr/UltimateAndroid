@@ -1,0 +1,5 @@
+{
+  super(context,attrs,defStyle);
+  shimmerViewHelper=new ShimmerViewHelper(this,getPaint(),attrs);
+  shimmerViewHelper.setPrimaryColor(getCurrentTextColor());
+}

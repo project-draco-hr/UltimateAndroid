@@ -1,0 +1,9 @@
+{
+  final int radius=mRadius=computeRadius(Math.abs(mToDegrees - mFromDegrees),getChildCount(),mChildSize,mChildPadding,MIN_RADIUS);
+  final int size=radius * 2 + mChildSize + mChildPadding + mLayoutPadding * 2;
+  setMeasuredDimension(size,size);
+  final int count=getChildCount();
+  for (int i=0; i < count; i++) {
+    getChildAt(i).measure(MeasureSpec.makeMeasureSpec(mChildSize,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(mChildSize,MeasureSpec.EXACTLY));
+  }
+}

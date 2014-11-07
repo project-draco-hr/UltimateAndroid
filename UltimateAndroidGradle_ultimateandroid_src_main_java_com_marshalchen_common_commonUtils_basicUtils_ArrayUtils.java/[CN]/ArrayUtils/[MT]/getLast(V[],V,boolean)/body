@@ -1,0 +1,3 @@
+{
+  return getLast(sourceArray,value,null,isCircle);
+}

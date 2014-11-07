@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.stickygridheader_activity_item_list);
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+}

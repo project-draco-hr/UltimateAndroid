@@ -1,0 +1,18 @@
+{
+  int width=original.getWidth();
+  int height=original.getHeight();
+  if (width % 2 == 1) {
+    width++;
+  }
+  if (height % 2 == 1) {
+    height++;
+  }
+  Bitmap fixedBitmap=original;
+  if (width != original.getWidth() || height != original.getHeight()) {
+    fixedBitmap=Bitmap.createScaledBitmap(original,width,height,false);
+  }
+  if (fixedBitmap != original) {
+    original.recycle();
+  }
+  return fixedBitmap;
+}

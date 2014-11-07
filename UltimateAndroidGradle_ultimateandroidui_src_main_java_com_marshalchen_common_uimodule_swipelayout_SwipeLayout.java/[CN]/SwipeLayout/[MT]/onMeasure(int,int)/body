@@ -1,0 +1,5 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  if (mDragEdge == DragEdge.Left || mDragEdge == DragEdge.Right)   mDragDistance=getBottomView().getMeasuredWidth();
+ else   mDragDistance=getBottomView().getMeasuredHeight();
+}

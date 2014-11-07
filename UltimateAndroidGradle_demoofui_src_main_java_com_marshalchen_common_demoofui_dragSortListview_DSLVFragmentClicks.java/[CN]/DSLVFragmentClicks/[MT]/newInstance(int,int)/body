@@ -1,0 +1,8 @@
+{
+  DSLVFragmentClicks f=new DSLVFragmentClicks();
+  Bundle args=new Bundle();
+  args.putInt("headers",headers);
+  args.putInt("footers",footers);
+  f.setArguments(args);
+  return f;
+}

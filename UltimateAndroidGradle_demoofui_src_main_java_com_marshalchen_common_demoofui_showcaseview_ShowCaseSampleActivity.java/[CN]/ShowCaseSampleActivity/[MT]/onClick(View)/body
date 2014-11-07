@@ -1,0 +1,13 @@
+{
+  int viewId=view.getId();
+switch (viewId) {
+case R.id.buttonBlocked:
+    if (sv.isShown()) {
+      sv.setStyle(R.style.CustomShowcaseTheme);
+    }
+ else {
+      sv.show();
+    }
+  break;
+}
+}

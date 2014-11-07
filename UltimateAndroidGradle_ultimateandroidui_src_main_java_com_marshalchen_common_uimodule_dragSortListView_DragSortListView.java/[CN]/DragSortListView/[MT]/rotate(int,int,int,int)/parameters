@@ -1,0 +1,4 @@
+int value
+int offset
+int lowerBound
+int upperBound

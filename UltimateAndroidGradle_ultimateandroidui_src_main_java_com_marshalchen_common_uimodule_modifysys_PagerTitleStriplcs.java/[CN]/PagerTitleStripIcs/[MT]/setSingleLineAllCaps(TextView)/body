@@ -1,0 +1,3 @@
+{
+  text.setTransformationMethod(new SingleLineAllCapsTransform(text.getContext()));
+}

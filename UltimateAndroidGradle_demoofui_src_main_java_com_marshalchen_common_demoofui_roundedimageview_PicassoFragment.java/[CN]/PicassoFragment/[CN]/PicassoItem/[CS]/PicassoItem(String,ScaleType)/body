@@ -1,0 +1,4 @@
+{
+  this.mUrl=url;
+  mScaleType=scaleType;
+}

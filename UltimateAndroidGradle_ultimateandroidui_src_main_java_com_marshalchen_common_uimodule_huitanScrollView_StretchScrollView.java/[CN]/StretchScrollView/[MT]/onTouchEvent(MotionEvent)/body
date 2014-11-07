@@ -1,0 +1,6 @@
+{
+  if (null != mChildRootView) {
+    doTouchEvent(ev);
+  }
+  return super.onTouchEvent(ev);
+}

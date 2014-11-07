@@ -1,0 +1,4 @@
+{
+  super(edge,null);
+  mEdge=edge;
+}

@@ -1,0 +1,4 @@
+{
+  builder=new StringBuilder();
+  formatter=new Formatter(builder);
+}

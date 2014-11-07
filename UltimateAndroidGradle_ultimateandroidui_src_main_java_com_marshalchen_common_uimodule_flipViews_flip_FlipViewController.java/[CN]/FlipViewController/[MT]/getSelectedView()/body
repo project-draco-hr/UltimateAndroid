@@ -1,0 +1,3 @@
+{
+  return (bufferIndex < bufferedViews.size() && bufferIndex >= 0) ? bufferedViews.get(bufferIndex) : null;
+}

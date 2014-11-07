@@ -1,0 +1,13 @@
+{
+  if (mValues == null || mValues.length == 0) {
+    if (mProperty != null) {
+      setValues(PropertyValuesHolder.ofInt(mProperty,values));
+    }
+ else {
+      setValues(PropertyValuesHolder.ofInt(mPropertyName,values));
+    }
+  }
+ else {
+    super.setIntValues(values);
+  }
+}

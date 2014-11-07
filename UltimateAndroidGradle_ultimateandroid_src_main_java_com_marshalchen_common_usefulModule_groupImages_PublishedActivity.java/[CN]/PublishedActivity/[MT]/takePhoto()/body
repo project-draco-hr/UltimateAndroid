@@ -1,0 +1,9 @@
+{
+  Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+  new DateFormat();
+  String name=DateFormat.format("yyyyMMdd_hhmmss",Calendar.getInstance(Locale.CHINA)) + ".jpg";
+  Uri imageUri=Uri.fromFile(new File(PATH,name));
+  path=PATH + "/" + name;
+  intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+  startActivityForResult(intent,TAKE_PICTURE);
+}

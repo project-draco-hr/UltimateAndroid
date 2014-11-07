@@ -1,0 +1,11 @@
+{
+  final boolean wasflipping=mIsFlipping;
+  mIsFlipping=false;
+  mIsUnableToFlip=false;
+  mLastTouchAllowed=false;
+  if (mVelocityTracker != null) {
+    mVelocityTracker.recycle();
+    mVelocityTracker=null;
+  }
+  return wasflipping;
+}

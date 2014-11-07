@@ -1,0 +1,3 @@
+{
+  checkIndeterminateDrawable().setSectionsCount(sectionsCount);
+}

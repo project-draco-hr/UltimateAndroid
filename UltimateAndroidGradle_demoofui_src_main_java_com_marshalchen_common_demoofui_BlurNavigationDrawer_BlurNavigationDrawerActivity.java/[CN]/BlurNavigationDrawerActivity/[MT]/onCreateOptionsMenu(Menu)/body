@@ -1,0 +1,8 @@
+{
+  if (!mNavigationDrawerFragment.isDrawerOpen()) {
+    getMenuInflater().inflate(R.menu.android_hover,menu);
+    restoreActionBar();
+    return true;
+  }
+  return super.onCreateOptionsMenu(menu);
+}

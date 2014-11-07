@@ -1,0 +1,12 @@
+{
+  ViewGroup meetingLengthContainer=(ViewGroup)findViewById(R.id.meeting_length_container);
+  meetingLengthContainer.removeAllViews();
+  View meetingLengthView=null;
+  if (Prefs.allowVariableMeetingLength(this)) {
+    meetingLengthView=createMeetingLengthTextBox();
+  }
+ else {
+    meetingLengthView=createMeetingLengthSpinner();
+  }
+  meetingLengthContainer.addView(meetingLengthView);
+}

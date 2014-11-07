@@ -1,0 +1,23 @@
+{
+  float f2;
+  LayoutParams localLayoutParams;
+  ViewGroup.LayoutParams headLayoutParams;
+  if ((!mIsFinished) && (mScale > 1.0D)) {
+    float f1=((float)SystemClock.currentThreadTimeMillis() - (float)mStartTime) / (float)mDuration;
+    f2=mScale - (mScale - 1.0F) * sInterpolator.getInterpolation(f1);
+    localLayoutParams=(LayoutParams)mZoomContainer.getLayoutParams();
+    headLayoutParams=mHeaderContainer.getLayoutParams();
+    if (f2 > 1.0F) {
+      Log.d(TAG,"f2 > 1.0");
+      localLayoutParams.height=((int)(f2 * mZoomHeight));
+      localLayoutParams.width=((int)(f2 * mZoomWidth));
+      localLayoutParams.gravity=Gravity.CENTER;
+      mZoomContainer.setLayoutParams(localLayoutParams);
+      headLayoutParams.height=((int)(f2 * mZoomHeight));
+      mHeaderContainer.setLayoutParams(headLayoutParams);
+      post(this);
+      return;
+    }
+    mIsFinished=true;
+  }
+}

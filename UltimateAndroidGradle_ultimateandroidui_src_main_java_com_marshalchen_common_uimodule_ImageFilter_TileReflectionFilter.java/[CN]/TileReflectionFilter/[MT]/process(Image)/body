@@ -1,0 +1,63 @@
+{
+{
+    int r, g, b;
+    int width=imageIn.getWidth();
+    int height=imageIn.getHeight();
+    double hw=width / 2.0;
+    double hh=imageIn.getHeight() / 2.0;
+    int ratio=width > height ? height * 32768 / width : width * 32768 / height;
+    int cx=width >> 1;
+    int cy=height >> 1;
+    int max=cx * cx + cy * cy;
+    int min=(int)(max * 0.5);
+    int diff=max - min;
+    for (int x=0; x < width; x++) {
+      for (int y=0; y < height; y++) {
+        if (m_focusType == 1) {
+          int dx=cx - x;
+          int dy=cy - y;
+          if (imageIn.getWidth() > imageIn.getHeight()) {
+            dy=(dy * ratio) >> 14;
+          }
+ else {
+            dx=(dx * ratio) >> 14;
+          }
+          int distSq=dx * dx + dy * dy;
+          if (distSq <= min)           continue;
+        }
+ else         if (m_focusType == 2) {
+          boolean inarray=false;
+          if ((x < m_size) && (y < height - x) && (y >= x))           inarray=true;
+ else           if ((y < m_size) && (x < width - y) && (x >= y))           inarray=true;
+ else           if ((x > width - m_size) && (y >= width - x) && (y < height + x - width))           inarray=true;
+ else           if (y > height - m_size)           inarray=true;
+          if (!inarray)           continue;
+        }
+        int i=(int)(x - hw);
+        int j=(int)(y - hh);
+        b=0;
+        g=0;
+        r=0;
+        for (int mm=0; mm < aasamples; mm++) {
+          double u=i + m_aapt[mm].x;
+          double v=j - m_aapt[mm].y;
+          double s=m_cos * u + m_sin * v;
+          double t=-m_sin * u + m_cos * v;
+          s+=m_curvature * Math.tan(s * m_scale);
+          t+=m_curvature * Math.tan(t * m_scale);
+          u=m_cos * s - m_sin * t;
+          v=m_sin * s + m_cos * t;
+          int xSample=(int)(hw + u);
+          int ySample=(int)(hh + v);
+          xSample=Function.FClamp(xSample,0,width - 1);
+          ySample=Function.FClamp(ySample,0,height - 1);
+          r+=imageIn.getRComponent(xSample,ySample);
+          g+=imageIn.getGComponent(xSample,ySample);
+          b+=imageIn.getBComponent(xSample,ySample);
+        }
+        imageIn.setPixelColor(x,y,Image.SAFECOLOR(r / aasamples),Image.SAFECOLOR(g / aasamples),Image.SAFECOLOR(b / aasamples));
+      }
+    }
+    return imageIn;
+  }
+}

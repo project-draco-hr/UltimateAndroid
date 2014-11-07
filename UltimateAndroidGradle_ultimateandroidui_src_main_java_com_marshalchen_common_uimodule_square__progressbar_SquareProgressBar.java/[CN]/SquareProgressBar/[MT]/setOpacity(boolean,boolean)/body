@@ -1,0 +1,5 @@
+{
+  this.opacity=opacity;
+  this.isFadingOnProgress=isFadingOnProgress;
+  setProgress(bar.getProgress());
+}

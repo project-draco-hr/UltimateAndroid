@@ -1,0 +1,13 @@
+{
+  Animator[] allAnimators=new Animator[childAnimators.length + animators.length + 1];
+  int i;
+  for (i=0; i < animators.length; ++i) {
+    allAnimators[i]=animators[i];
+  }
+  for (  Animator childAnimator : childAnimators) {
+    allAnimators[i]=childAnimator;
+    ++i;
+  }
+  allAnimators[allAnimators.length - 1]=alphaAnimator;
+  return allAnimators;
+}

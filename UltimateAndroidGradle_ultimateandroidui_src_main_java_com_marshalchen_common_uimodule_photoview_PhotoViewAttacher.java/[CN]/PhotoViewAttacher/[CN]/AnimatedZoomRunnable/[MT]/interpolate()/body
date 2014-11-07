@@ -1,0 +1,6 @@
+{
+  float t=1f * (System.currentTimeMillis() - mStartTime) / ZOOM_DURATION;
+  t=Math.min(1f,t);
+  t=sInterpolator.getInterpolation(t);
+  return t;
+}

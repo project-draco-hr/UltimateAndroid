@@ -1,0 +1,3 @@
+RecyclerView recyclerView
+State state
+int position

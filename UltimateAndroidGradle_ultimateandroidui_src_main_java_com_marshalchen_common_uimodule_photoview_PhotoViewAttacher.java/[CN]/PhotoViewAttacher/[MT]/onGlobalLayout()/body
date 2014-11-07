@@ -1,0 +1,21 @@
+{
+  ImageView imageView=getImageView();
+  if (null != imageView) {
+    if (mZoomEnabled) {
+      final int top=imageView.getTop();
+      final int right=imageView.getRight();
+      final int bottom=imageView.getBottom();
+      final int left=imageView.getLeft();
+      if (top != mIvTop || bottom != mIvBottom || left != mIvLeft || right != mIvRight) {
+        updateBaseMatrix(imageView.getDrawable());
+        mIvTop=top;
+        mIvRight=right;
+        mIvBottom=bottom;
+        mIvLeft=left;
+      }
+    }
+ else {
+      updateBaseMatrix(imageView.getDrawable());
+    }
+  }
+}

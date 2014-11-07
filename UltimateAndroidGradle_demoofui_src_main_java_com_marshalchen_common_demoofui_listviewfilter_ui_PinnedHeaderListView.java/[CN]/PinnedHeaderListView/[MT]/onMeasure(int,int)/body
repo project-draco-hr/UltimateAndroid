@@ -1,0 +1,18 @@
+{
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  if (mHeaderView != null) {
+    measureChild(mHeaderView,widthMeasureSpec,heightMeasureSpec);
+    mHeaderViewWidth=mHeaderView.getMeasuredWidth();
+    mHeaderViewHeight=mHeaderView.getMeasuredHeight();
+  }
+  if (mIndexBarView != null && mIndexBarVisibility) {
+    measureChild(mIndexBarView,widthMeasureSpec,heightMeasureSpec);
+    mIndexBarViewWidth=mIndexBarView.getMeasuredWidth();
+    mIndexBarViewHeight=mIndexBarView.getMeasuredHeight();
+  }
+  if (mPreviewTextView != null && mPreviewVisibility) {
+    measureChild(mPreviewTextView,widthMeasureSpec,heightMeasureSpec);
+    mPreviewTextViewWidth=mPreviewTextView.getMeasuredWidth();
+    mPreviewTextViewHeight=mPreviewTextView.getMeasuredHeight();
+  }
+}

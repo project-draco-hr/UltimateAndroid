@@ -1,0 +1,9 @@
+{
+  for (int i=0; i < getChildCount(); i++) {
+    View v=getChildAt(i);
+    if (!(v instanceof OutlineContainer)) {
+      removeView(v);
+      super.addView(wrapChild(v),i);
+    }
+  }
+}

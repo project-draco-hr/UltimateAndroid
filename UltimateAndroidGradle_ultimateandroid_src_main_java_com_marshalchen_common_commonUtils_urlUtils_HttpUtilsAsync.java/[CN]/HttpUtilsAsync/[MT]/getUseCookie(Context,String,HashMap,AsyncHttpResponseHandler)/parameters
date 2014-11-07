@@ -1,0 +1,4 @@
+Context context
+String url
+HashMap hashMap
+AsyncHttpResponseHandler responseHandler

@@ -1,0 +1,27 @@
+{
+switch (actionCode) {
+case MotionEvent.ACTION_POINTER_UP:
+    updateStateByEvent(event);
+  if (!mSloppyGesture) {
+    mListener.onRotateEnd(this);
+  }
+resetState();
+break;
+case MotionEvent.ACTION_CANCEL:
+if (!mSloppyGesture) {
+mListener.onRotateEnd(this);
+}
+resetState();
+break;
+case MotionEvent.ACTION_MOVE:
+updateStateByEvent(event);
+if (mCurrPressure / mPrevPressure > PRESSURE_THRESHOLD) {
+final boolean updatePrevious=mListener.onRotate(this);
+if (updatePrevious) {
+mPrevEvent.recycle();
+mPrevEvent=MotionEvent.obtain(event);
+}
+}
+break;
+}
+}

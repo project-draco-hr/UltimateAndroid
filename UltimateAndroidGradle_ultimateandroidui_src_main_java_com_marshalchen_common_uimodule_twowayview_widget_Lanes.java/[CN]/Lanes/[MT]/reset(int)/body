@@ -1,0 +1,13 @@
+{
+  for (int i=0; i < mLanes.length; i++) {
+    final Rect laneRect=mLanes[i];
+    laneRect.offsetTo(mIsVertical ? laneRect.left : offset,mIsVertical ? offset : laneRect.top);
+    if (mIsVertical) {
+      laneRect.bottom=laneRect.top;
+    }
+ else {
+      laneRect.right=laneRect.left;
+    }
+  }
+  invalidateEdges();
+}

@@ -1,0 +1,7 @@
+{
+  BaseEffects animator=type.getAnimator();
+  if (mDuration != -1) {
+    animator.setDuration(Math.abs(mDuration));
+  }
+  animator.start(mRelativeLayoutView);
+}

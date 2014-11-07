@@ -1,0 +1,4 @@
+{
+  mRunning=true;
+  super.scheduleSelf(what,when);
+}

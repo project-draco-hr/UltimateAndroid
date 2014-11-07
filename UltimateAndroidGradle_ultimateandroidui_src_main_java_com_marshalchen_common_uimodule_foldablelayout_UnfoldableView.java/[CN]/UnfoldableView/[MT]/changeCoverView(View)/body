@@ -1,0 +1,5 @@
+{
+  if (mCoverView == null || mCoverView == coverView)   return;
+  clearCoverViewInternal();
+  setCoverViewInternal(coverView);
+}

@@ -1,0 +1,44 @@
+{
+  if (mFloatViewManager != null) {
+    mTouchLoc.set(mX,mY);
+    mFloatViewManager.onDragFloatView(mFloatView,mFloatLoc,mTouchLoc);
+  }
+  final int floatX=mFloatLoc.x;
+  final int floatY=mFloatLoc.y;
+  int padLeft=getPaddingLeft();
+  if ((mDragFlags & DRAG_POS_X) == 0 && floatX > padLeft) {
+    mFloatLoc.x=padLeft;
+  }
+ else   if ((mDragFlags & DRAG_NEG_X) == 0 && floatX < padLeft) {
+    mFloatLoc.x=padLeft;
+  }
+  final int numHeaders=getHeaderViewsCount();
+  final int numFooters=getFooterViewsCount();
+  final int firstPos=getFirstVisiblePosition();
+  final int lastPos=getLastVisiblePosition();
+  int topLimit=getPaddingTop();
+  if (firstPos < numHeaders) {
+    topLimit=getChildAt(numHeaders - firstPos - 1).getBottom();
+  }
+  if ((mDragFlags & DRAG_NEG_Y) == 0) {
+    if (firstPos <= mSrcPos) {
+      topLimit=Math.max(getChildAt(mSrcPos - firstPos).getTop(),topLimit);
+    }
+  }
+  int bottomLimit=getHeight() - getPaddingBottom();
+  if (lastPos >= getCount() - numFooters - 1) {
+    bottomLimit=getChildAt(getCount() - numFooters - 1- firstPos).getBottom();
+  }
+  if ((mDragFlags & DRAG_POS_Y) == 0) {
+    if (lastPos >= mSrcPos) {
+      bottomLimit=Math.min(getChildAt(mSrcPos - firstPos).getBottom(),bottomLimit);
+    }
+  }
+  if (floatY < topLimit) {
+    mFloatLoc.y=topLimit;
+  }
+ else   if (floatY + mFloatViewHeight > bottomLimit) {
+    mFloatLoc.y=bottomLimit - mFloatViewHeight;
+  }
+  mFloatViewMid=mFloatLoc.y + mFloatViewHeightHalf;
+}

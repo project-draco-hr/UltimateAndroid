@@ -1,0 +1,7 @@
+{
+  SharedPreferences.Editor sharedDate=context.getSharedPreferences(fileName,0).edit();
+  for (  HashMap<String,String> map : list) {
+    sharedDate.putString(map.keySet().toString(),map.get(map.keySet().toString()));
+  }
+  sharedDate.commit();
+}

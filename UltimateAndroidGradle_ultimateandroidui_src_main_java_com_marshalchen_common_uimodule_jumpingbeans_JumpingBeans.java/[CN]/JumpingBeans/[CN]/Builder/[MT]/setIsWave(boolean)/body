@@ -1,0 +1,4 @@
+{
+  this.wave=wave;
+  return this;
+}

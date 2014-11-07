@@ -1,0 +1,5 @@
+{
+synchronized (listLock) {
+    targets.remove(target);
+  }
+}

@@ -1,0 +1,33 @@
+{
+  int numHeaders=mDelegate.getNumHeaders();
+  if (numHeaders == 0) {
+    if (position >= mDelegate.getCount()) {
+      return new Position(POSITION_FILLER,0);
+    }
+    return new Position(position,0);
+  }
+  int adapterPosition=position;
+  int place=position;
+  int i;
+  for (i=0; i < numHeaders; i++) {
+    int sectionCount=mDelegate.getCountForHeader(i);
+    if (place == 0) {
+      return new Position(POSITION_HEADER,i);
+    }
+    place-=mNumColumns;
+    if (place < 0) {
+      return new Position(POSITION_HEADER_FILLER,i);
+    }
+    adapterPosition-=mNumColumns;
+    if (place < sectionCount) {
+      return new Position(adapterPosition,i);
+    }
+    int filler=unFilledSpacesInHeaderGroup(i);
+    adapterPosition-=filler;
+    place-=sectionCount + filler;
+    if (place < 0) {
+      return new Position(POSITION_FILLER,i);
+    }
+  }
+  return new Position(POSITION_FILLER,i);
+}

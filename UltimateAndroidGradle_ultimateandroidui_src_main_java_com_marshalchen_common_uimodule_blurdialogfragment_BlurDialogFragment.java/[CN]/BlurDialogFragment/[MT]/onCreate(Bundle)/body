@@ -1,0 +1,14 @@
+{
+  super.onCreate(savedInstanceState);
+  mBlurEngine=new BlurDialogEngine(getActivity());
+  mBlurEngine.debug(mDebugEnable);
+  Bundle args=getArguments();
+  if (args != null) {
+    if (args.containsKey(BUNDLE_KEY_BLUR_RADIUS)) {
+      mBlurEngine.setBlurRadius(args.getInt(BUNDLE_KEY_BLUR_RADIUS));
+    }
+    if (args.containsKey(BUNDLE_KEY_DOWN_SCALE_FACTOR)) {
+      mBlurEngine.setDownScaleFactor(args.getFloat(BUNDLE_KEY_DOWN_SCALE_FACTOR));
+    }
+  }
+}

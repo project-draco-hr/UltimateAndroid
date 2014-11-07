@@ -1,0 +1,10 @@
+{
+  initColors(colors);
+  mPath=new Path();
+  Paint basePaint=new Paint();
+  basePaint.setAntiAlias(true);
+  mFstHalfPaint=new Paint(basePaint);
+  mScndHalfPaint=new Paint(basePaint);
+  mAbovePaint=new Paint(basePaint);
+  setColorFilter(mColorFilter);
+}

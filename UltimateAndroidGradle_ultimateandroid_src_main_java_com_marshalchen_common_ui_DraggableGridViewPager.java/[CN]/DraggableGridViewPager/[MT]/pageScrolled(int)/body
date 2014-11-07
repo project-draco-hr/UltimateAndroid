@@ -1,0 +1,20 @@
+{
+  if (mPageCount <= 0) {
+    mCalledSuper=false;
+    onPageScrolled(0,0,0);
+    if (!mCalledSuper) {
+      throw new IllegalStateException("onPageScrolled did not call superclass implementation");
+    }
+    return false;
+  }
+  final int width=getWidth();
+  final int currentPage=xpos / width;
+  final int offsetPixels=xpos - currentPage * width;
+  final float pageOffset=(float)offsetPixels / (float)width;
+  mCalledSuper=false;
+  onPageScrolled(currentPage,pageOffset,offsetPixels);
+  if (!mCalledSuper) {
+    throw new IllegalStateException("onPageScrolled did not call superclass implementation");
+  }
+  return true;
+}

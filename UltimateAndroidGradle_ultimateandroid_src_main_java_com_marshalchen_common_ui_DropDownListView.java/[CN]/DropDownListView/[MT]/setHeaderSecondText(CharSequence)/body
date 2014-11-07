@@ -1,0 +1,11 @@
+{
+  if (isDropDownStyle) {
+    if (secondText == null) {
+      headerSecondText.setVisibility(View.GONE);
+    }
+ else {
+      headerSecondText.setVisibility(View.VISIBLE);
+      headerSecondText.setText(secondText);
+    }
+  }
+}

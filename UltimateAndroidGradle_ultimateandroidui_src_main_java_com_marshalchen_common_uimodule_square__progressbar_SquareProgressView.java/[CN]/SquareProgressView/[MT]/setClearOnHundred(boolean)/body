@@ -1,0 +1,4 @@
+{
+  this.clearOnHundred=clearOnHundred;
+  this.invalidate();
+}

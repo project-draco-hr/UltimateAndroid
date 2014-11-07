@@ -1,0 +1,6 @@
+{
+  if (mItemEntries == null || position >= mItemEntries.length) {
+    return null;
+  }
+  return mItemEntries[position];
+}

@@ -1,0 +1,7 @@
+{
+  ObjectAnimator animX=ObjectAnimator.ofFloat(view,"translationX",startX,endX);
+  ObjectAnimator animY=ObjectAnimator.ofFloat(view,"translationY",startY,endY);
+  AnimatorSet animSetXY=new AnimatorSet();
+  animSetXY.playTogether(animX,animY);
+  return animSetXY;
+}

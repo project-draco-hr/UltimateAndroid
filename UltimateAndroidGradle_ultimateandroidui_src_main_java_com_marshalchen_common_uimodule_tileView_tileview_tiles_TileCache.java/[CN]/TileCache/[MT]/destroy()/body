@@ -1,0 +1,15 @@
+{
+  memoryCache.evictAll();
+  memoryCache=null;
+  new Thread(new Runnable(){
+    @Override public void run(){
+      try {
+        diskCache.delete();
+        diskCache=null;
+      }
+ catch (      IOException e) {
+      }
+    }
+  }
+).start();
+}

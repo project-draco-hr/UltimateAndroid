@@ -1,0 +1,34 @@
+{
+  Handle pressedHandle=null;
+  if (HandleUtil.isInCornerTargetZone(x,y,left,top,targetRadius)) {
+    pressedHandle=Handle.TOP_LEFT;
+  }
+ else   if (HandleUtil.isInCornerTargetZone(x,y,right,top,targetRadius)) {
+    pressedHandle=Handle.TOP_RIGHT;
+  }
+ else   if (HandleUtil.isInCornerTargetZone(x,y,left,bottom,targetRadius)) {
+    pressedHandle=Handle.BOTTOM_LEFT;
+  }
+ else   if (HandleUtil.isInCornerTargetZone(x,y,right,bottom,targetRadius)) {
+    pressedHandle=Handle.BOTTOM_RIGHT;
+  }
+ else   if (HandleUtil.isInCenterTargetZone(x,y,left,top,right,bottom) && focusCenter()) {
+    pressedHandle=Handle.CENTER;
+  }
+ else   if (HandleUtil.isInHorizontalTargetZone(x,y,left,right,top,targetRadius)) {
+    pressedHandle=Handle.TOP;
+  }
+ else   if (HandleUtil.isInHorizontalTargetZone(x,y,left,right,bottom,targetRadius)) {
+    pressedHandle=Handle.BOTTOM;
+  }
+ else   if (HandleUtil.isInVerticalTargetZone(x,y,left,top,bottom,targetRadius)) {
+    pressedHandle=Handle.LEFT;
+  }
+ else   if (HandleUtil.isInVerticalTargetZone(x,y,right,top,bottom,targetRadius)) {
+    pressedHandle=Handle.RIGHT;
+  }
+ else   if (HandleUtil.isInCenterTargetZone(x,y,left,top,right,bottom) && !focusCenter()) {
+    pressedHandle=Handle.CENTER;
+  }
+  return pressedHandle;
+}

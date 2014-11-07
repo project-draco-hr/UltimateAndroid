@@ -1,0 +1,6 @@
+{
+  mSpringConfigMap=new HashMap<SpringConfig,String>();
+  if (includeDefaultEntry) {
+    addSpringConfig(SpringConfig.defaultConfig,"default config");
+  }
+}

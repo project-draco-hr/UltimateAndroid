@@ -1,0 +1,11 @@
+{
+  if (!isOpen()) {
+    return;
+  }
+  calculateItemPositions();
+  for (int i=0; i < subActionItems.size(); i++) {
+    final FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(subActionItems.get(i).width,subActionItems.get(i).height,Gravity.TOP | Gravity.LEFT);
+    params.setMargins(subActionItems.get(i).x,subActionItems.get(i).y,0,0);
+    subActionItems.get(i).view.setLayoutParams(params);
+  }
+}

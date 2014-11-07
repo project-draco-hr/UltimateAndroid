@@ -1,0 +1,10 @@
+{
+  super(context,attrs,defStyle);
+  super.setOnScrollListener(this);
+  setVerticalFadingEdgeEnabled(false);
+  if (!mNumColumnsSet) {
+    mNumColumns=AUTO_FIT;
+  }
+  ViewConfiguration vc=ViewConfiguration.get(context);
+  mTouchSlop=vc.getScaledTouchSlop();
+}

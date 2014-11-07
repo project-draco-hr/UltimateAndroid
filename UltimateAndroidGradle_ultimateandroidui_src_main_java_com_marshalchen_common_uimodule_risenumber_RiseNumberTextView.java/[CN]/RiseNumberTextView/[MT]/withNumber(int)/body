@@ -1,0 +1,11 @@
+{
+  this.number=number;
+  numberType=1;
+  if (number > 1000) {
+    fromNumber=number - (float)Math.pow(10,sizeOfInt((int)number) - 2);
+  }
+ else {
+    fromNumber=number / 2;
+  }
+  return this;
+}

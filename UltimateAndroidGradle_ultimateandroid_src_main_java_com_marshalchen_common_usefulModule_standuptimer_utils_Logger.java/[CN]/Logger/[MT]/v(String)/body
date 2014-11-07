@@ -1,0 +1,3 @@
+{
+  Log.v(TAG,message);
+}

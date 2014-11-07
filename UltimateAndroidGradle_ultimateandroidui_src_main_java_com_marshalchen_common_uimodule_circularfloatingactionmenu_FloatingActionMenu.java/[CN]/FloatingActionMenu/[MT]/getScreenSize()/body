@@ -1,0 +1,5 @@
+{
+  Point size=new Point();
+  ((Activity)mainActionView.getContext()).getWindowManager().getDefaultDisplay().getSize(size);
+  return size;
+}

@@ -1,0 +1,11 @@
+{
+  if (seconds <= 0) {
+    return Color.RED;
+  }
+ else   if (seconds <= warningTime) {
+    return Color.YELLOW;
+  }
+ else {
+    return Color.GREEN;
+  }
+}

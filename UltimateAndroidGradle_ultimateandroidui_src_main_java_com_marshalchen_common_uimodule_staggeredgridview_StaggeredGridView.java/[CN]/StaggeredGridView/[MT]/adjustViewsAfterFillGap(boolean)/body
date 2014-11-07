@@ -1,0 +1,6 @@
+{
+  super.adjustViewsAfterFillGap(down);
+  if (!down) {
+    alignTops();
+  }
+}

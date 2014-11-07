@@ -1,0 +1,9 @@
+{
+  if (currentIndividualStatusSeconds > longestStatus) {
+    longestStatus=currentIndividualStatusSeconds;
+  }
+  if (currentIndividualStatusSeconds < quickestStatus) {
+    quickestStatus=currentIndividualStatusSeconds;
+  }
+  currentIndividualStatusSeconds=0;
+}

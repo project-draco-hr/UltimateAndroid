@@ -1,0 +1,5 @@
+{
+  drawArc(c);
+  drawPointer(c);
+  drawArcWhe(c);
+}

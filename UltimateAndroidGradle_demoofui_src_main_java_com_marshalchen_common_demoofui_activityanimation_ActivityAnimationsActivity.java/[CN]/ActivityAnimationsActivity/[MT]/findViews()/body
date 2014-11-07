@@ -1,0 +1,11 @@
+{
+  mRandomAnim=(RadioButton)findViewById(R.id.random_anim);
+  mWaveTlAnim=(RadioButton)findViewById(R.id.wave_tl_anim);
+  mWaveBrAnim=(RadioButton)findViewById(R.id.wave_br_anim);
+  mWaveTrAnim=(RadioButton)findViewById(R.id.wave_tr_anim);
+  mWaveBlAnim=(RadioButton)findViewById(R.id.wave_bl_anim);
+  mNext=(Button)findViewById(R.id.next);
+  mHorizontalDoor=(RadioButton)findViewById(R.id.horizontal_door);
+  mVerticalDoor=(RadioButton)findViewById(R.id.vertical_door);
+  mOpenDoor=(Button)findViewById(R.id.open_door);
+}

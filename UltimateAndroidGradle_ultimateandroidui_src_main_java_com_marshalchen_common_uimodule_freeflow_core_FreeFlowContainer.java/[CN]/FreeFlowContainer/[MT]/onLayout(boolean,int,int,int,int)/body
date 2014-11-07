@@ -1,0 +1,4 @@
+{
+  logLifecycleEvent("onLayout");
+  dispatchLayoutComplete(isAnimatingChanges);
+}

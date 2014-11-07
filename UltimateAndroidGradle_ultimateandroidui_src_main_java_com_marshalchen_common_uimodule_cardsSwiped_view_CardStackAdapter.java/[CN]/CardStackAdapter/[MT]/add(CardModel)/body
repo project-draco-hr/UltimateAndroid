@@ -1,0 +1,6 @@
+{
+synchronized (mLock) {
+    mData.add(item);
+  }
+  notifyDataSetChanged();
+}

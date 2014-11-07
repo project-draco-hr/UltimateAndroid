@@ -1,0 +1,6 @@
+{
+  for (int index=0, size=TAGGED_TREES.size(); index < size; index++) {
+    ((TaggedTree)FOREST.get(TAGGED_TREES.keyAt(index))).tag(tag);
+  }
+  return TREE_OF_SOULS;
+}

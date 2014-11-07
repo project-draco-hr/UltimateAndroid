@@ -1,0 +1,9 @@
+{
+  if (getRealCount() == 0) {
+    return;
+  }
+  int virtualPosition=position % getRealCount();
+  debug("destroyItem: real position: " + position);
+  debug("destroyItem: virtual position: " + virtualPosition);
+  adapter.destroyItem(container,virtualPosition,object);
+}

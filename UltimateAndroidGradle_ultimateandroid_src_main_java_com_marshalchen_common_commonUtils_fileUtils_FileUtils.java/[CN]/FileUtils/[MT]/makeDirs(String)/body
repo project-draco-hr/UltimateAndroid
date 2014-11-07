@@ -1,0 +1,9 @@
+{
+  String folderName=getFolderName(filePath);
+  File folder=new File(folderName);
+  Logs.d(folder.getAbsolutePath() + "   " + folder.exists());
+  if (folder.exists()) {
+    return false;
+  }
+  return (folder.exists() && folder.isDirectory()) ? true : folder.mkdirs();
+}

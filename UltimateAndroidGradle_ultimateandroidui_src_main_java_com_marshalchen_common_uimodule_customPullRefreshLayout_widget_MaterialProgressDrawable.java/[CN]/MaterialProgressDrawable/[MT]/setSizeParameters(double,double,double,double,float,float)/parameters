@@ -1,0 +1,6 @@
+double progressCircleWidth
+double progressCircleHeight
+double centerRadius
+double strokeWidth
+float arrowWidth
+float arrowHeight

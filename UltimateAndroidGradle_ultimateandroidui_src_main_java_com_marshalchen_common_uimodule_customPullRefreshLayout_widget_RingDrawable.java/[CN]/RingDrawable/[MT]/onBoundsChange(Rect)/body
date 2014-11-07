@@ -1,0 +1,7 @@
+{
+  super.onBoundsChange(bounds);
+  mWidth=getRefreshLayout().getFinalOffset();
+  mHeight=mWidth;
+  mBounds=new RectF(bounds.width() / 2 - mWidth / 2,bounds.top,bounds.width() / 2 + mWidth / 2,bounds.top + mHeight);
+  mBounds.inset(dp2px(15),dp2px(15));
+}

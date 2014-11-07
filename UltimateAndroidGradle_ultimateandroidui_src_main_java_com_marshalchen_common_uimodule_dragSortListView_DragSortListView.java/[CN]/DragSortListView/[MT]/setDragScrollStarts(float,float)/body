@@ -1,0 +1,17 @@
+{
+  if (lowerFrac > 0.5f) {
+    mDragDownScrollStartFrac=0.5f;
+  }
+ else {
+    mDragDownScrollStartFrac=lowerFrac;
+  }
+  if (upperFrac > 0.5f) {
+    mDragUpScrollStartFrac=0.5f;
+  }
+ else {
+    mDragUpScrollStartFrac=upperFrac;
+  }
+  if (getHeight() != 0) {
+    updateScrollStarts();
+  }
+}

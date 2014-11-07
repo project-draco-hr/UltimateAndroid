@@ -1,0 +1,4 @@
+{
+  this.bitmap=bitmap;
+  this.rotation=rotation % 360;
+}

@@ -1,0 +1,25 @@
+{
+  refreshDisplayRect();
+  if (mWay == null) {
+    mWay=mIsPortrait ? Way.R2L : Way.B2T;
+  }
+  Log.d(TAG,"mWay : " + mWay);
+  Log.d(TAG,"mDisplayRect : " + mDisplayRect);
+  long remainingDuration=mDuration - mTotalTime;
+  if (mIsPortrait) {
+    if (mWay == Way.R2L) {
+      animate(mDisplayRect.left,mDisplayRect.left - (mDisplayRect.right - getImageViewWidth()),remainingDuration);
+    }
+ else {
+      animate(mDisplayRect.left,0.0f,remainingDuration);
+    }
+  }
+ else {
+    if (mWay == Way.B2T) {
+      animate(mDisplayRect.top,mDisplayRect.top - (mDisplayRect.bottom - getImageViewHeight()),remainingDuration);
+    }
+ else {
+      animate(mDisplayRect.top,0.0f,remainingDuration);
+    }
+  }
+}

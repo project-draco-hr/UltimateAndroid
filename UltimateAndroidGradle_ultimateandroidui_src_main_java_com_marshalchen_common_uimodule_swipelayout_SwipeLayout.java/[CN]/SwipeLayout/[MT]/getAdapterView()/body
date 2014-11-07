@@ -1,0 +1,10 @@
+{
+  ViewParent t=getParent();
+  while (t != null) {
+    if (t instanceof AdapterView) {
+      return (AdapterView)t;
+    }
+    t=t.getParent();
+  }
+  return null;
+}

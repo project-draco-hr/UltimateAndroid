@@ -1,0 +1,6 @@
+{
+  if (colors == null || colors.length == 0)   throw new IllegalArgumentException("Colors cannot be null or empty");
+  mColorsIndex=0;
+  mColors=colors;
+  invalidateSelf();
+}

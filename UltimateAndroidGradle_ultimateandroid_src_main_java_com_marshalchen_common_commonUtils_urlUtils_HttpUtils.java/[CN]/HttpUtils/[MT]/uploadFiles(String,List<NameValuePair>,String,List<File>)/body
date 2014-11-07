@@ -1,0 +1,44 @@
+{
+  String result="";
+  try {
+    DefaultHttpClient mHttpClient;
+    HttpParams params=new BasicHttpParams();
+    params.setParameter(CoreProtocolPNames.PROTOCOL_VERSION,HttpVersion.HTTP_1_1);
+    params.setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT,30000);
+    params.setParameter(CoreConnectionPNames.SO_TIMEOUT,30000);
+    mHttpClient=new DefaultHttpClient(params);
+    HttpPost httpPost=new HttpPost(url);
+    MultipartEntityBuilder entityBuilder=MultipartEntityBuilder.create();
+    entityBuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+    if (BasicUtils.judgeNotNull(paramsList)) {
+      for (      NameValuePair nameValuePair : paramsList) {
+        entityBuilder.addTextBody(nameValuePair.getName(),nameValuePair.getValue(),ContentType.create(HTTP.PLAIN_TEXT_TYPE,HTTP.UTF_8));
+      }
+    }
+    for (    File f : files) {
+      if (f != null && f.exists())       entityBuilder.addBinaryBody(fileParams,f);
+    }
+    HttpEntity entity=entityBuilder.build();
+    httpPost.setEntity(entity);
+    HttpResponse httpResp=mHttpClient.execute(httpPost);
+    if (httpResp.getStatusLine().getStatusCode() == 200) {
+      result=EntityUtils.toString(httpResp.getEntity(),"UTF-8");
+      Logs.d("HttpPost success :");
+      Logs.d(result);
+    }
+ else {
+      Logs.d("HttpPost failed" + "    " + httpResp.getStatusLine().getStatusCode() + "   "+ EntityUtils.toString(httpResp.getEntity(),"UTF-8"));
+      result="HttpPost failed";
+    }
+  }
+ catch (  ConnectTimeoutException e) {
+    result="ConnectTimeoutException";
+    Logs.e("HttpPost overtime:  " + "");
+  }
+catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e,"");
+    result="Exception";
+  }
+  return result;
+}

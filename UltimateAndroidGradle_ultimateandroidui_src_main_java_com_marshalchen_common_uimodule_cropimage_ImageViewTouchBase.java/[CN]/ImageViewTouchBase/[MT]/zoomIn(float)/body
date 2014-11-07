@@ -1,0 +1,12 @@
+{
+  if (getScale() >= maxZoom) {
+    return;
+  }
+  if (bitmapDisplayed.getBitmap() == null) {
+    return;
+  }
+  float cx=getWidth() / 2F;
+  float cy=getHeight() / 2F;
+  suppMatrix.postScale(rate,rate,cx,cy);
+  setImageMatrix(getImageViewMatrix());
+}

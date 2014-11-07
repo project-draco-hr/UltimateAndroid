@@ -1,0 +1,5 @@
+{
+  super.onViewCreated(view,savedInstanceState);
+  ViewGroup vg=(ViewGroup)view;
+  vg.setClipToPadding(false);
+}

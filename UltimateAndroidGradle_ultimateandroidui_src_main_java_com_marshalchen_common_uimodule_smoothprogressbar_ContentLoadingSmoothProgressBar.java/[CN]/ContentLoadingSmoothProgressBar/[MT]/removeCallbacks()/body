@@ -1,0 +1,4 @@
+{
+  removeCallbacks(mDelayedHide);
+  removeCallbacks(mDelayedShow);
+}

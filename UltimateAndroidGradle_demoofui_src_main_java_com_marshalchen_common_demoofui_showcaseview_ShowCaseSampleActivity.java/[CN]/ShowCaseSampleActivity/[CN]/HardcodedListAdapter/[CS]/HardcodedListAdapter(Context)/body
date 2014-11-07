@@ -1,0 +1,3 @@
+{
+  super(context,R.layout.showcase_item_next_thing);
+}

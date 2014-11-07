@@ -1,0 +1,5 @@
+{
+  ViewDualCards tmp=frontCards;
+  frontCards=backCards;
+  backCards=tmp;
+}

@@ -1,0 +1,9 @@
+{
+  super.destroy();
+  if (lookup_texture != 0) {
+    int[] tex=new int[1];
+    tex[0]=lookup_texture;
+    GLES20.glDeleteTextures(1,tex,0);
+    lookup_texture=0;
+  }
+}

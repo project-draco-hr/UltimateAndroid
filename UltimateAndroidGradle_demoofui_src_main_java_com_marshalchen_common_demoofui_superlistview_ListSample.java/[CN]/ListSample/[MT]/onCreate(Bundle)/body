@@ -1,0 +1,37 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.super_list_view_activity_list_sample);
+  ArrayList<String> lst=new ArrayList<String>();
+  mAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,lst);
+  mList=(SuperListview)findViewById(R.id.list);
+  Thread thread=new Thread(new Runnable(){
+    @Override public void run(){
+      try {
+        Thread.sleep(1000);
+      }
+ catch (      InterruptedException e) {
+        e.printStackTrace();
+      }
+      runOnUiThread(new Runnable(){
+        @Override public void run(){
+          mAdapter.add("More stuff1");
+          mAdapter.add("More stuff2");
+          mAdapter.add("More stuff3");
+          mAdapter.add("More stuff4");
+          mAdapter.add("More stuff5");
+          mAdapter.add("More stuff6");
+          mAdapter.add("More stuff7");
+          mAdapter.add("More stuff8");
+          mAdapter.add("More stuff9");
+          mList.setAdapter(mAdapter);
+        }
+      }
+);
+    }
+  }
+);
+  thread.start();
+  mList.setRefreshListener(this);
+  mList.setRefreshingColor(android.R.color.holo_orange_light,android.R.color.holo_blue_light,android.R.color.holo_green_light,android.R.color.holo_red_light);
+  mList.setupMoreListener(this,8);
+}

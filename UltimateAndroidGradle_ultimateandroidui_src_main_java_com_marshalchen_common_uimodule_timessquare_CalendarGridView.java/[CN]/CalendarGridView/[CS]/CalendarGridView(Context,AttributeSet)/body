@@ -1,0 +1,4 @@
+{
+  super(context,attrs);
+  dividerPaint.setColor(getResources().getColor(R.color.calendar_divider));
+}

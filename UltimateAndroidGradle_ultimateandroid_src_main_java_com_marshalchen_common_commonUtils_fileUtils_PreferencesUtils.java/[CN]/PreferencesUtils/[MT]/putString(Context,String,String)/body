@@ -1,0 +1,3 @@
+{
+  return putString(context,PREFERENCE_NAME,key,value);
+}

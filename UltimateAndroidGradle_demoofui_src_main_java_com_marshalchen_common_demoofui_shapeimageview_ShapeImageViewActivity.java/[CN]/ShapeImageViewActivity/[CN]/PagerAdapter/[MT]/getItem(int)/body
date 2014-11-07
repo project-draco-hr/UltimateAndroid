@@ -1,0 +1,25 @@
+{
+  Fragment fragment;
+switch (position) {
+case 0:
+    fragment=SampleBubbleFragment.newInstance(R.layout.shape_image_list_item_shader_bubble_left,R.layout.shape_image_list_item_shader_bubble_right);
+  break;
+case 1:
+fragment=SampleListFragment.newInstance(R.layout.shape_image_list_item_shader_circle);
+break;
+case 2:
+fragment=SampleListFragment.newInstance(R.layout.shape_image_list_item_shader_rounded);
+break;
+case 3:
+fragment=SampleFragment.newInstance(R.layout.shape_image_fragment_all_sample);
+break;
+case 4:
+fragment=SampleFragment.newInstance(R.layout.shape_image_fragment_shader_sample);
+break;
+case 5:
+default :
+fragment=SampleFragment.newInstance(R.layout.shape_image_fragment_porter_sample);
+break;
+}
+return fragment;
+}

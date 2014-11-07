@@ -1,0 +1,13 @@
+{
+  mPopulating=true;
+  Logs.d("drag----" + from + "   "+ to+ "   "+ mAdapter.getCount());
+  if (from != to && isLastItemCouldDrag ? true : to != mAdapter.getCount() - 1) {
+    final View removedChild=getChildAt(from);
+    removedChild.clearAnimation();
+    removeViewInLayout(removedChild);
+    addViewInLayout(removedChild,to,removedChild.getLayoutParams());
+  }
+  mControlHeight=measureChildrens(false);
+  layoutChildrens(to,true);
+  mPopulating=false;
+}

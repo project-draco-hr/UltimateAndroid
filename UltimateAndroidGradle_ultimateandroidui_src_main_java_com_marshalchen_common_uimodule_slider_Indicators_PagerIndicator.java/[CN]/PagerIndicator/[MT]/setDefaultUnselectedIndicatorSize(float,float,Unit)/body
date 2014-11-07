@@ -1,0 +1,12 @@
+{
+  if (mUserSetUnSelectedIndicatorResId == 0) {
+    float w=width;
+    float h=height;
+    if (unit == Unit.DP) {
+      w=pxFromDp(width);
+      h=pxFromDp(height);
+    }
+    mUnSelectedGradientDrawable.setSize((int)w,(int)h);
+    resetDrawable();
+  }
+}

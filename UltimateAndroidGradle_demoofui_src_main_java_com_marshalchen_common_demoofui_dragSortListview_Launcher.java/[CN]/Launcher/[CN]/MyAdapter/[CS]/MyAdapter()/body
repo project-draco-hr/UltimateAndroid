@@ -1,0 +1,3 @@
+{
+  super(Launcher.this,R.layout.drag_sort_listview_launcher_item,R.id.activity_title,mActivities);
+}

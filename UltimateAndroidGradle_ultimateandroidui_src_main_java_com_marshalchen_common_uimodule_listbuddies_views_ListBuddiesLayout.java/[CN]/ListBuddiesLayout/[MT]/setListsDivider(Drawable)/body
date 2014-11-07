@@ -1,0 +1,6 @@
+{
+  if (drawable != null) {
+    mListViewLeft.setDivider(drawable);
+    mListViewRight.setDivider(drawable);
+  }
+}

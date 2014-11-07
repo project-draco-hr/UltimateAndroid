@@ -1,0 +1,4 @@
+{
+  this.shadowColour=shadowColour;
+  this.highlightColour=highlightColour;
+}

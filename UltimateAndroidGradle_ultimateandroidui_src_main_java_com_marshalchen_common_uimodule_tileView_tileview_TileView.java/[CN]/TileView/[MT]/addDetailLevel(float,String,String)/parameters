@@ -1,0 +1,3 @@
+float detailScale
+String pattern
+String downsample

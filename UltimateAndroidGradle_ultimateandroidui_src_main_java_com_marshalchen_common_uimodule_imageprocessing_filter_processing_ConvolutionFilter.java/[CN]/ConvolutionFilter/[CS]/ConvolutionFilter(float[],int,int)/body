@@ -1,0 +1,6 @@
+{
+  super();
+  this.filter=filter;
+  filterBody=createFilterBody(filterWidth,filterHeight);
+  filterSize=filterWidth * filterHeight;
+}

@@ -1,0 +1,4 @@
+{
+  if (DBG)   Log.e(TAG,"getSelectedView() is not supported in ExtendableListView yet");
+  return null;
+}

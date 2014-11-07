@@ -1,0 +1,13 @@
+{
+  ImageView imageView=null;
+  if (reuseableView != null) {
+    imageView=(ImageView)reuseableView;
+  }
+ else {
+    imageView=new ImageView(viewGroup.getContext());
+    imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+    imageView.setLayoutParams(new FancyCoverFlow.LayoutParams(300,400));
+  }
+  imageView.setImageResource(this.getItem(i));
+  return imageView;
+}

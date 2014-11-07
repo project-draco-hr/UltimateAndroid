@@ -1,0 +1,12 @@
+{
+  if (isInEditMode()) {
+    return;
+  }
+  mOriginalWidth=getMeasuredWidth();
+  mOriginalHeight=getMeasuredHeight();
+  if (IS_JBMR2) {
+    mFullBitmap=Bitmap.createBitmap(mOriginalWidth,mOriginalHeight,Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(mFullBitmap);
+    getChildAt(0).draw(canvas);
+  }
+}

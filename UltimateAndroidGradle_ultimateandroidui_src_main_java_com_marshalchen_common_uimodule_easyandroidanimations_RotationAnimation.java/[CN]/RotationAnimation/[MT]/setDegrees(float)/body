@@ -1,0 +1,4 @@
+{
+  this.degrees=degrees;
+  return this;
+}

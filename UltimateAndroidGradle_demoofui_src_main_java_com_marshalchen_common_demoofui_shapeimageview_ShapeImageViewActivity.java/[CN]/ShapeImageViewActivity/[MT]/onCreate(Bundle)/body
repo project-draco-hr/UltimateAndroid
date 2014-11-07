@@ -1,0 +1,9 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.shape_image_activity_sample);
+  getSupportActionBar().hide();
+  ViewPager pager=(ViewPager)findViewById(R.id.pager);
+  pager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
+  PagerSlidingTabStrip tabStrip=(PagerSlidingTabStrip)findViewById(R.id.tabs);
+  tabStrip.setViewPager(pager);
+}

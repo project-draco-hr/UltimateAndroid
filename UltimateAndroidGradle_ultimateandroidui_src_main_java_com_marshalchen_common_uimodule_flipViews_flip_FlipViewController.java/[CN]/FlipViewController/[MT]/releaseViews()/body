@@ -1,0 +1,8 @@
+{
+  for (  View view : bufferedViews) {
+    releaseView(view);
+  }
+  bufferedViews.clear();
+  bufferIndex=-1;
+  adapterIndex=-1;
+}

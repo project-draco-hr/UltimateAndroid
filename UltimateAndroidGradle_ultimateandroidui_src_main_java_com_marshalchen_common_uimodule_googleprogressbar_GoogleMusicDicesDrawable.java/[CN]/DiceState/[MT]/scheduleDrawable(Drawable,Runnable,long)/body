@@ -1,0 +1,6 @@
+{
+  final Callback callback=getCallback();
+  if (callback != null) {
+    callback.scheduleDrawable(this,what,when);
+  }
+}

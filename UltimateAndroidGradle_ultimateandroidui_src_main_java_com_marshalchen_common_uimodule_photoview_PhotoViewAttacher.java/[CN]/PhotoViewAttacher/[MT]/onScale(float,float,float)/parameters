@@ -1,0 +1,3 @@
+float scaleFactor
+float focusX
+float focusY

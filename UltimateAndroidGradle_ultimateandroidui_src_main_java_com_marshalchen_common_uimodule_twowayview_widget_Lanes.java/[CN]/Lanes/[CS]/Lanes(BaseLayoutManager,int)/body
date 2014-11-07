@@ -1,0 +1,21 @@
+{
+  mLayout=layout;
+  mIsVertical=layout.isVertical();
+  mLanes=new Rect[laneCount];
+  mSavedLanes=new Rect[laneCount];
+  for (int i=0; i < laneCount; i++) {
+    mLanes[i]=new Rect();
+    mSavedLanes[i]=new Rect();
+  }
+  mLaneSize=calculateLaneSize(layout,laneCount);
+  final int paddingLeft=layout.getPaddingLeft();
+  final int paddingTop=layout.getPaddingTop();
+  for (int i=0; i < laneCount; i++) {
+    final int laneStart=i * mLaneSize;
+    final int l=paddingLeft + (mIsVertical ? laneStart : 0);
+    final int t=paddingTop + (mIsVertical ? 0 : laneStart);
+    final int r=(mIsVertical ? l + mLaneSize : l);
+    final int b=(mIsVertical ? t : t + mLaneSize);
+    mLanes[i].set(l,t,r,b);
+  }
+}

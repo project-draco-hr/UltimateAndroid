@@ -1,0 +1,6 @@
+{
+  if (texture != null) {
+    texture.postDestroy();
+    texture=null;
+  }
+}

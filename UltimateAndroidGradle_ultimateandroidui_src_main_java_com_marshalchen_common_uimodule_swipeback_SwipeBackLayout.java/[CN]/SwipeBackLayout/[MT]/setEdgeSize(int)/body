@@ -1,0 +1,3 @@
+{
+  mDragHelper.setEdgeSize(size);
+}

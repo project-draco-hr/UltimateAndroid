@@ -1,0 +1,4 @@
+{
+  super.onPostCreate(savedInstanceState);
+  materialMenu.syncState(savedInstanceState);
+}

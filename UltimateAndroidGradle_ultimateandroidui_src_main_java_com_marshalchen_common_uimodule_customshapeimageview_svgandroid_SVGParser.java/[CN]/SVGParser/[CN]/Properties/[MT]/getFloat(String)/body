@@ -1,0 +1,14 @@
+{
+  String v=getAttr(name);
+  if (v == null) {
+    return null;
+  }
+ else {
+    try {
+      return Float.parseFloat(v);
+    }
+ catch (    NumberFormatException nfe) {
+      return null;
+    }
+  }
+}

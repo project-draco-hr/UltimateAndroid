@@ -1,0 +1,3 @@
+{
+  iv_icon.setImageResource(icon);
+}

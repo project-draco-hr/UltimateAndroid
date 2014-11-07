@@ -1,0 +1,12 @@
+{
+  setIfLog();
+  QueryBuilder queryBuilder=dao.queryBuilder();
+  if (isAsc) {
+    queryBuilder=queryBuilder.orderAsc(orderProperty);
+  }
+ else {
+    queryBuilder=queryBuilder.orderDesc(orderProperty);
+  }
+  List indexFavList=queryBuilder.list();
+  return indexFavList;
+}

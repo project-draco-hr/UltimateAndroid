@@ -1,0 +1,10 @@
+{
+  try {
+    CryptoUtils.encryptingContent(context,new File(FileUtils.getCurrentDataPath(context,"test") + "/aaab"),"hehe1".getBytes());
+    CryptoUtils.decryptingContent(context,new File(FileUtils.getCurrentDataPath(context,"test") + "/aaab"),FileUtils.getCurrentDataPath(context,"test") + "/aaabc");
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e,"");
+  }
+}

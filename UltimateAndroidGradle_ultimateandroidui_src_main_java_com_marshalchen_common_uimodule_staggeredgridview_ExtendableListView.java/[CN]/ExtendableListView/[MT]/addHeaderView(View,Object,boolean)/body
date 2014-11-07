@@ -1,0 +1,13 @@
+{
+  if (mAdapter != null && !(mAdapter instanceof HeaderViewListAdapter)) {
+    throw new IllegalStateException("Cannot add header view to list -- setAdapter has already been called.");
+  }
+  FixedViewInfo info=new FixedViewInfo();
+  info.view=v;
+  info.data=data;
+  info.isSelectable=isSelectable;
+  mHeaderViewInfos.add(info);
+  if (mAdapter != null && mObserver != null) {
+    mObserver.onChanged();
+  }
+}

@@ -1,0 +1,6 @@
+{
+  if (mDiscrollveTranslation == -1) {
+    return false;
+  }
+  return (mDiscrollveTranslation & translationMask) == translationMask;
+}

@@ -1,0 +1,13 @@
+{
+  int centerOffsetX=(int)(getWidth() * 0.5f);
+  int centerOffsetY=(int)(getHeight() * 0.5f);
+  Point offset=new Point(centerOffsetX,centerOffsetY);
+  Point scroll=new Point(getScrollX(),getScrollY());
+  scroll.offset(offset.x,offset.y);
+  double deltaScale=s / getScale();
+  int x=(int)(scroll.x * deltaScale) - offset.x;
+  int y=(int)(scroll.y * deltaScale) - offset.y;
+  Point destination=new Point(x,y);
+  setScale(s);
+  scrollToPoint(destination);
+}

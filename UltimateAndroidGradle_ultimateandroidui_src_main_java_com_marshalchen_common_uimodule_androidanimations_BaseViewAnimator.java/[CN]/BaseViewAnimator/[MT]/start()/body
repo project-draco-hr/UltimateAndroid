@@ -1,0 +1,4 @@
+{
+  mAnimatorSet.setDuration(mDuration);
+  mAnimatorSet.start();
+}

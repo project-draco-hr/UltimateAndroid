@@ -1,0 +1,19 @@
+{
+  final int laneCount=getLaneCount();
+  if (laneCount == 0 || getWidth() == 0 || getHeight() == 0 || canUseLanes(mLanes)) {
+    return false;
+  }
+  final Lanes oldLanes=mLanes;
+  mLanes=new Lanes(this,laneCount);
+  requestMoveLayout();
+  if (mItemEntries == null) {
+    mItemEntries=new ItemEntries();
+  }
+  if (oldLanes != null && oldLanes.getOrientation() == mLanes.getOrientation() && oldLanes.getLaneSize() == mLanes.getLaneSize()) {
+    invalidateItemLanesAfter(0);
+  }
+ else {
+    mItemEntries.clear();
+  }
+  return true;
+}

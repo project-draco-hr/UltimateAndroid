@@ -1,0 +1,6 @@
+{
+  mFinished=true;
+  mInterpolator=interpolator;
+  mPpi=context.getResources().getDisplayMetrics().density * 160.0f;
+  mDeceleration=computeDeceleration(ViewConfiguration.getScrollFriction());
+}

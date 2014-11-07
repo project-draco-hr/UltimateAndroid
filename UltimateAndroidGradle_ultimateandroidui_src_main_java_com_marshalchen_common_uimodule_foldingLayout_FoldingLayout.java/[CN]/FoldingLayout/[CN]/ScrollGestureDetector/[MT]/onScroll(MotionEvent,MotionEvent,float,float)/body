@@ -1,0 +1,42 @@
+{
+  int touchSlop=0;
+  float factor;
+  if (mOrientation == Orientation.VERTICAL) {
+    factor=Math.abs((float)(mTranslation) / (float)(that.getHeight()));
+    if (e2.getY() - mParentPositionY <= that.getHeight() && e2.getY() - mParentPositionY >= 0) {
+      if ((e2.getY() - mParentPositionY) > that.getHeight() * getAnchorFactor()) {
+        mTranslation-=(int)distanceY;
+        touchSlop=distanceY < 0 ? -mTouchSlop : mTouchSlop;
+      }
+ else {
+        mTranslation+=(int)distanceY;
+        touchSlop=distanceY < 0 ? mTouchSlop : -mTouchSlop;
+      }
+      mTranslation=mDidNotStartScroll ? mTranslation + touchSlop : mTranslation;
+      if (mTranslation < -that.getHeight()) {
+        mTranslation=-that.getHeight();
+      }
+    }
+  }
+ else {
+    factor=Math.abs(((float)mTranslation) / ((float)that.getWidth()));
+    if (e2.getRawX() > that.getWidth() * getAnchorFactor()) {
+      mTranslation-=(int)distanceX;
+      touchSlop=distanceX < 0 ? -mTouchSlop : mTouchSlop;
+    }
+ else {
+      mTranslation+=(int)distanceX;
+      touchSlop=distanceX < 0 ? mTouchSlop : -mTouchSlop;
+    }
+    mTranslation=mDidNotStartScroll ? mTranslation + touchSlop : mTranslation;
+    if (mTranslation < -that.getWidth()) {
+      mTranslation=-that.getWidth();
+    }
+  }
+  mDidNotStartScroll=false;
+  if (mTranslation > 0) {
+    mTranslation=0;
+  }
+  that.setFoldFactor(factor);
+  return true;
+}

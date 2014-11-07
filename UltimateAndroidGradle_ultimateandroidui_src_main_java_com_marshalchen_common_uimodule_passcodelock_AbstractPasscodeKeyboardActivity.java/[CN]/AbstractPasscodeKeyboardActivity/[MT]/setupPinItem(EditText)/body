@@ -1,0 +1,6 @@
+{
+  item.setInputType(InputType.TYPE_NULL);
+  item.setFilters(filters);
+  item.setOnTouchListener(otl);
+  item.setTransformationMethod(PasswordTransformationMethod.getInstance());
+}

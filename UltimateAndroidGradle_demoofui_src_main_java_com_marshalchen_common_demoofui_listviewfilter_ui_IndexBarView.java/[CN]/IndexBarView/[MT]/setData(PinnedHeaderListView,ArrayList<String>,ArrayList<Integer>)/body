@@ -1,0 +1,10 @@
+{
+  this.mListItems=listItems;
+  this.mListSections=listSections;
+  mIndexBarFilter=listView;
+  mIndexbarMargin=40;
+  mIndexPaint=new Paint();
+  mIndexPaint.setColor(mContext.getResources().getColor(R.color.black));
+  mIndexPaint.setAntiAlias(true);
+  mIndexPaint.setTextSize(20);
+}

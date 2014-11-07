@@ -1,0 +1,4 @@
+{
+  mEmptyView=emptyView;
+  updateEmptyStatus();
+}

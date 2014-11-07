@@ -1,0 +1,9 @@
+{
+  int n=attributes.getLength();
+  for (int i=0; i < n; i++) {
+    if (attributes.getLocalName(i).equals(name)) {
+      return parseNumbers(attributes.getValue(i));
+    }
+  }
+  return null;
+}

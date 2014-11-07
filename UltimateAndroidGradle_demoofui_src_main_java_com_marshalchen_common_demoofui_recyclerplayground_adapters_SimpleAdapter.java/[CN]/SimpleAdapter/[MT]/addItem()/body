@@ -1,0 +1,4 @@
+{
+  mItems.add(1,generateDummyItem());
+  notifyItemInserted(1);
+}

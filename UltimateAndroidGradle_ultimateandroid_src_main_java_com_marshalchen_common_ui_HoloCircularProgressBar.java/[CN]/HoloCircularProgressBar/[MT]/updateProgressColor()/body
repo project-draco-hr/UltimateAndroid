@@ -1,0 +1,11 @@
+{
+  mProgressColorPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mProgressColorPaint.setColor(mProgressColor);
+  mProgressColorPaint.setStyle(Paint.Style.STROKE);
+  mProgressColorPaint.setStrokeWidth(mCircleStrokeWidth);
+  mThumbColorPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mThumbColorPaint.setColor(mProgressColor);
+  mThumbColorPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+  mThumbColorPaint.setStrokeWidth(mCircleStrokeWidth);
+  invalidate();
+}

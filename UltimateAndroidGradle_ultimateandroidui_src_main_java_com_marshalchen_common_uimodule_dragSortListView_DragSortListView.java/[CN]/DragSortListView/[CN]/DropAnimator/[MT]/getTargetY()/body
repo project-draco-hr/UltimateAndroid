@@ -1,0 +1,21 @@
+{
+  final int first=getFirstVisiblePosition();
+  final int otherAdjust=(mItemHeightCollapsed + getDividerHeight()) / 2;
+  View v=getChildAt(mDropPos - first);
+  int targetY=-1;
+  if (v != null) {
+    if (mDropPos == srcPos) {
+      targetY=v.getTop();
+    }
+ else     if (mDropPos < srcPos) {
+      targetY=v.getTop() - otherAdjust;
+    }
+ else {
+      targetY=v.getBottom() + otherAdjust - mFloatViewHeight;
+    }
+  }
+ else {
+    cancel();
+  }
+  return targetY;
+}

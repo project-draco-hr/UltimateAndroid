@@ -1,0 +1,15 @@
+{
+  if (!IS_JBMR2) {
+    if (isSepiaLayerOn) {
+      if (Build.VERSION.SDK_INT >= 17) {
+        view.setLayerType(View.LAYER_TYPE_HARDWARE,null);
+        view.setLayerPaint(mSepiaPaint);
+      }
+    }
+ else {
+      if (Build.VERSION.SDK_INT >= 17) {
+        view.setLayerPaint(mDefaultPaint);
+      }
+    }
+  }
+}

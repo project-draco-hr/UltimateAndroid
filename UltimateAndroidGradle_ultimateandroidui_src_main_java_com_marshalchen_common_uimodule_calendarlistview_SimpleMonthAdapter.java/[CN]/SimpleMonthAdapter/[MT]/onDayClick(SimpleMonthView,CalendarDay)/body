@@ -1,0 +1,5 @@
+{
+  if (calendarDay != null) {
+    onDayTapped(calendarDay);
+  }
+}

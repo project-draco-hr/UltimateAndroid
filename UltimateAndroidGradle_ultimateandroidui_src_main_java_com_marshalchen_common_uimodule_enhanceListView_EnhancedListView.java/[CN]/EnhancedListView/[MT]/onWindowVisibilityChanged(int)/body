@@ -1,0 +1,6 @@
+{
+  super.onWindowVisibilityChanged(visibility);
+  if (visibility != View.VISIBLE) {
+    discardUndo();
+  }
+}

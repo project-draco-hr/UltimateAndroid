@@ -1,0 +1,31 @@
+{
+  c.drawText("?????????????????? " + ratio + "%??????",getWidth() / 2,dp * 2.5f,paint_text);
+  float bmpsize=dp * 1.7f;
+  heightCentre=getHeight() / 5;
+  widthCentre=getWidth() / 2 + bmpsize;
+  float x=0;
+  float y=0;
+  float offsetX=dp * 3.5f;
+  float offsetY=dp * 3.5f;
+  for (int i=0; i < tag[lenght - 1]; i++) {
+    for (int j=0; j < tag.length; j++) {
+      if (i == tag[j]) {
+        y=j * offsetY;
+        x=x - (j * offsetX + offsetX / 2);
+        break;
+      }
+    }
+    rectF.set(widthCentre - bmpsize + x,heightCentre - bmpsize + y,widthCentre + bmpsize + x,heightCentre + bmpsize + y);
+    if (i < than) {
+      bitmap=defaults;
+    }
+    if (i == than) {
+      bitmap=raiseYourhand;
+    }
+    if (i > than) {
+      bitmap=toLetGo;
+    }
+    c.drawBitmap(bitmap,null,rectF,paint);
+    x+=offsetX;
+  }
+}

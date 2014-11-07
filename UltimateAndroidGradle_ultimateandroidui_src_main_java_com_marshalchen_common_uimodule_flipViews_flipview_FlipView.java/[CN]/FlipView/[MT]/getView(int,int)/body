@@ -1,0 +1,11 @@
+{
+  Scrap scrap=mRecycler.getScrapView(index,viewType);
+  View v=null;
+  if (scrap == null || !scrap.valid) {
+    v=mAdapter.getView(index,scrap == null ? null : scrap.v,this);
+  }
+ else {
+    v=scrap.v;
+  }
+  return v;
+}

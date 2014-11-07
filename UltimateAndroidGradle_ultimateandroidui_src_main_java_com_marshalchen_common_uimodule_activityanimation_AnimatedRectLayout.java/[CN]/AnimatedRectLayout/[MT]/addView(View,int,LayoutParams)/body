@@ -1,0 +1,4 @@
+{
+  throwCustomException(getChildCount());
+  super.addView(child,index,params);
+}

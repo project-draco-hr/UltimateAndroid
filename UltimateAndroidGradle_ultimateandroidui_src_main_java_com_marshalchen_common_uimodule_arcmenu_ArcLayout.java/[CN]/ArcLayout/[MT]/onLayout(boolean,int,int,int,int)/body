@@ -1,0 +1,13 @@
+{
+  final int centerX=getWidth() / 2;
+  final int centerY=getHeight() / 2;
+  final int radius=mExpanded ? mRadius : 0;
+  final int childCount=getChildCount();
+  final float perDegrees=(mToDegrees - mFromDegrees) / (childCount - 1);
+  float degrees=mFromDegrees;
+  for (int i=0; i < childCount; i++) {
+    Rect frame=computeChildFrame(centerX,centerY,radius,degrees,mChildSize);
+    degrees+=perDegrees;
+    getChildAt(i).layout(frame.left,frame.top,frame.right,frame.bottom);
+  }
+}

@@ -1,0 +1,36 @@
+{
+  TypedArray a=context.getTheme().obtainStyledAttributes(attrs,R.styleable.ExpandedCircleProgressView,0,0);
+  try {
+    mInnerCircleSize=a.getDimension(R.styleable.ExpandedCircleProgressView_innerCircleSize,0.0f);
+    mOuterCircleSize=a.getDimension(R.styleable.ExpandedCircleProgressView_outerCircleSize,0.0f);
+    mInnerCircleColor=a.getColor(R.styleable.ExpandedCircleProgressView_innerCircleColor,0xff000000);
+    mOuterCircleColor=a.getColor(R.styleable.ExpandedCircleProgressView_outerCircleColor,0xff000000);
+    mProgressCircleColor=a.getColor(R.styleable.ExpandedCircleProgressView_progressCircleColor,0xff000000);
+    mOuterCircleLineWidth=a.getDimension(R.styleable.ExpandedCircleProgressView_outerCircleLineWidth,0.5f);
+    mTextSize=a.getDimension(R.styleable.ExpandedCircleProgressView_textProgressSize,0.0f);
+    mTextProgressColor=a.getColor(R.styleable.ExpandedCircleProgressView_textProgressColor,0xff000000);
+  }
+  finally {
+    a.recycle();
+  }
+  INCRESING_SIZE=(mOuterCircleSize - mInnerCircleSize) / 100;
+  SLEEP_TIME=(int)(INCRESING_SIZE * 1500 / mOuterCircleSize);
+  mProgressCirclePaint=new Paint();
+  mProgressCirclePaint.setColor(mProgressCircleColor);
+  mProgressCirclePaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+  mProgressCirclePaint.setStyle(Paint.Style.FILL);
+  mInnerCirclePaint=new Paint();
+  mInnerCirclePaint.setColor(mInnerCircleColor);
+  mInnerCirclePaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+  mInnerCirclePaint.setStyle(Paint.Style.FILL);
+  mOuterCirclePaint=new Paint();
+  mOuterCirclePaint.setColor(mOuterCircleColor);
+  mOuterCirclePaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+  mOuterCirclePaint.setStrokeWidth(mOuterCircleLineWidth);
+  mOuterCirclePaint.setStyle(Paint.Style.STROKE);
+  mTextPaint=new Paint();
+  mTextPaint.setColor(mTextProgressColor);
+  mTextPaint.setTextAlign(Paint.Align.CENTER);
+  mTextPaint.setTextSize(mTextSize);
+  cancelUpdateTask();
+}

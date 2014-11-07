@@ -1,0 +1,5 @@
+{
+  mButton1.setBackgroundResource(resid);
+  mButton2.setBackgroundResource(resid);
+  return this;
+}

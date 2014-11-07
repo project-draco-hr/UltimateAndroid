@@ -1,0 +1,5 @@
+{
+  if (listener != null) {
+    listener.handleClick((MonthCellDescriptor)v.getTag());
+  }
+}

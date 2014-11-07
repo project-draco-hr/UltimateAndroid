@@ -1,0 +1,8 @@
+{
+  if (mutateBackground) {
+    if (convert) {
+      mBackgroundDrawable=RoundedDrawable.fromDrawable(mBackgroundDrawable);
+    }
+    updateAttrs(mBackgroundDrawable);
+  }
+}

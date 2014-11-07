@@ -1,0 +1,4 @@
+{
+  Bitmap bitmap=BitmapFactory.decodeResource(activity.getResources(),resourceId);
+  return new Image(bitmap);
+}

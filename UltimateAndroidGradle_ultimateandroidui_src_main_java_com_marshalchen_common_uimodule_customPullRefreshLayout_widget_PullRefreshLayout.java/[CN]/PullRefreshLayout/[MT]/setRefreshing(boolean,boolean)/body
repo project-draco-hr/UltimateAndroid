@@ -1,0 +1,13 @@
+{
+  if (mRefreshing != refreshing) {
+    mNotify=notify;
+    ensureTarget();
+    mRefreshing=refreshing;
+    if (mRefreshing) {
+      animateOffsetToCorrectPosition();
+    }
+ else {
+      animateOffsetToStartPosition();
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  if (arg0.getClass() == PasscodeUnlockActivity.class)   return;
+  if ((this.appLockDisabledActivities != null) && Arrays.asList(this.appLockDisabledActivities).contains(arg0.getClass().getName()))   return;
+  lostFocusDate=new Date();
+}

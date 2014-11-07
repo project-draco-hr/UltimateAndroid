@@ -1,0 +1,17 @@
+{
+  for (  MonthCellDescriptor selectedCell : selectedCells) {
+    if (selectedCell.getDate().equals(date)) {
+      selectedCell.setSelected(false);
+      selectedCells.remove(selectedCell);
+      date=null;
+      break;
+    }
+  }
+  for (  Calendar cal : selectedCals) {
+    if (sameDate(cal,selectedCal)) {
+      selectedCals.remove(cal);
+      break;
+    }
+  }
+  return date;
+}

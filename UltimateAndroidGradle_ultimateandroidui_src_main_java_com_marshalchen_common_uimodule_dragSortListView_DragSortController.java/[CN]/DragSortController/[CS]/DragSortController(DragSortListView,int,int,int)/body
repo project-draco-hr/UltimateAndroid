@@ -1,0 +1,3 @@
+{
+  this(dslv,dragHandleId,dragInitMode,removeMode,0);
+}

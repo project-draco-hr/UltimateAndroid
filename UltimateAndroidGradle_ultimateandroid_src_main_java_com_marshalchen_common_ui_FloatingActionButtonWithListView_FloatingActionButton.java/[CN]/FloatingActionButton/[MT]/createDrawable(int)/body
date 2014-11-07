@@ -1,0 +1,14 @@
+{
+  OvalShape ovalShape=new OvalShape();
+  ShapeDrawable shapeDrawable=new ShapeDrawable(ovalShape);
+  shapeDrawable.getPaint().setColor(color);
+  if (mShadow) {
+    LayerDrawable layerDrawable=new LayerDrawable(new Drawable[]{getResources().getDrawable(R.drawable.floating_acition_button_shadow),shapeDrawable});
+    int shadowSize=getDimension(mType == TYPE_NORMAL ? R.dimen.fab_shadow_size : R.dimen.fab_mini_shadow_size);
+    layerDrawable.setLayerInset(1,shadowSize,shadowSize,shadowSize,shadowSize);
+    return layerDrawable;
+  }
+ else {
+    return shapeDrawable;
+  }
+}

@@ -1,0 +1,4 @@
+{
+  isSpinning=true;
+  spinHandler.sendEmptyMessage(0);
+}

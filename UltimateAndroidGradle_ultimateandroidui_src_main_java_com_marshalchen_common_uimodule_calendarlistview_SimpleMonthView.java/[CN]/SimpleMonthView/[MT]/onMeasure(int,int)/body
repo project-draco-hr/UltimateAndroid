@@ -1,0 +1,3 @@
+{
+  setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec),mRowHeight * mNumRows + MONTH_HEADER_SIZE);
+}

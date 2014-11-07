@@ -1,0 +1,6 @@
+{
+  super.onResume();
+  if (usingCamera) {
+    ((CameraPreviewInput)input).onResume();
+  }
+}

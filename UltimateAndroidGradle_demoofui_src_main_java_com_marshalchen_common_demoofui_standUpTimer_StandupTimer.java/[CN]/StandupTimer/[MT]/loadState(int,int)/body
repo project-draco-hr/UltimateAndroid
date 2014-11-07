@@ -1,0 +1,16 @@
+{
+  warningTime=Prefs.getWarningTime(this);
+  SharedPreferences preferences=getPreferences(MODE_PRIVATE);
+  totalParticipants=preferences.getInt(TOTAL_PARTICIPANTS,numParticipants);
+  remainingMeetingSeconds=preferences.getInt(REMAINING_MEETING_SECONDS,(meetingLength * 60));
+  startingIndividualSeconds=preferences.getInt(STARTING_INDIVIDUAL_SECONDS,remainingMeetingSeconds / totalParticipants);
+  remainingIndividualSeconds=preferences.getInt(REMAINING_INDIVIDUAL_SECONDS,startingIndividualSeconds);
+  completedParticipants=preferences.getInt(COMPLETED_PARTICIPANTS,0);
+  currentIndividualStatusSeconds=preferences.getInt(CURRENT_INDIVIDUAL_STATUS_SECONDS,0);
+  meetingStartTime=preferences.getLong(MEETING_START_TIME,System.currentTimeMillis());
+  individualStatusEndTime=preferences.getLong(INDIVIDUAL_STATUS_END_TIME,0);
+  quickestStatus=preferences.getInt(QUICKEST_STATUS,Integer.MAX_VALUE);
+  longestStatus=preferences.getInt(LONGEST_STATUS,0);
+  team=Team.findByName(getIntent().getStringExtra("teamName"),this);
+  individualStatusStartTime=meetingStartTime;
+}

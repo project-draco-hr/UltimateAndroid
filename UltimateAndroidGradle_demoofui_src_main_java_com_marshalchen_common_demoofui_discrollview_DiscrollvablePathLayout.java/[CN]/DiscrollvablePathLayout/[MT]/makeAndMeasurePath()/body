@@ -1,0 +1,10 @@
+{
+  mPath.reset();
+  float translationY=mPathView.getTranslationY();
+  mPath.moveTo(mPathView.getLeft(),mPathView.getTop() + translationY);
+  mPath.lineTo(mPathView.getLeft() + mPathView.getWidth(),mPathView.getTop() + translationY);
+  mPath.lineTo(mPathView.getLeft() + mPathView.getWidth(),mPathView.getTop() + mPathView.getHeight() + translationY);
+  mPath.lineTo(mPathView.getLeft(),mPathView.getTop() + mPathView.getHeight() + translationY);
+  mPath.close();
+  mPathMeasure.setPath(mPath,false);
+}

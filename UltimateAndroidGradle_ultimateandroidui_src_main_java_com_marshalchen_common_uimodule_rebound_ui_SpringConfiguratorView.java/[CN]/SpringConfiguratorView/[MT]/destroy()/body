@@ -1,0 +1,7 @@
+{
+  ViewGroup parent=(ViewGroup)getParent();
+  if (parent != null) {
+    parent.removeView(this);
+  }
+  mRevealerSpring.destroy();
+}

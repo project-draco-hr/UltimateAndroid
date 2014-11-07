@@ -1,0 +1,8 @@
+{
+  super.onMeasure(widthMeasureSpec,MeasureSpec.makeMeasureSpec(getSuggestedMinimumHeight(),MeasureSpec.EXACTLY));
+  final int count=getChildCount();
+  mChildGap=computeChildGap(getMeasuredWidth() - mLeftHolderWidth,count,mChildSize,0);
+  for (int i=0; i < count; i++) {
+    getChildAt(i).measure(MeasureSpec.makeMeasureSpec(mChildSize,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(mChildSize,MeasureSpec.EXACTLY));
+  }
+}

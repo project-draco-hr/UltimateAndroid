@@ -1,0 +1,6 @@
+{
+  if (size != mMaxTextSize) {
+    mMaxTextSize=size;
+    refitText();
+  }
+}

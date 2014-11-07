@@ -1,0 +1,7 @@
+{
+  if (mDrawerLayout != null && isDrawerOpen()) {
+    inflater.inflate(R.menu.android_hover,menu);
+    showGlobalContextActionBar();
+  }
+  super.onCreateOptionsMenu(menu,inflater);
+}

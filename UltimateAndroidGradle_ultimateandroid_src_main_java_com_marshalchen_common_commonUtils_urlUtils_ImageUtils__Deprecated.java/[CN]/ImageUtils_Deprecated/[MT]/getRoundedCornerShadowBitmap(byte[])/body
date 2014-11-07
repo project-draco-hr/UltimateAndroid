@@ -1,0 +1,25 @@
+{
+  if (null != bytes) {
+    BitmapFactory.Options options=new BitmapFactory.Options();
+    options.inSampleSize=2;
+    Bitmap bitmap=BitmapFactory.decodeByteArray(bytes,0,bytes.length,options);
+    Bitmap output=Bitmap.createBitmap(bitmap.getWidth(),bitmap.getHeight(),Config.ARGB_8888);
+    Canvas canvas=new Canvas(output);
+    final Rect rect=new Rect(0,0,bitmap.getWidth(),bitmap.getHeight());
+    final RectF rectF=new RectF(rect);
+    final float roundPx=5;
+    Paint paint=new Paint();
+    paint.setAntiAlias(true);
+    canvas.drawARGB(0,0,0,0);
+    paint.setColor(Color.RED);
+    canvas.drawRoundRect(rectF,roundPx,roundPx,paint);
+    paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+    canvas.drawBitmap(bitmap,rect,rect,paint);
+    bitmap.recycle();
+    bitmap=null;
+    return output;
+  }
+ else {
+    return null;
+  }
+}

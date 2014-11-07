@@ -1,0 +1,9 @@
+{
+  int animationLevel=level == MAX_LEVEL ? 0 : level;
+  int stateForLevel=(int)(animationLevel / MAX_LEVEL_PER_CIRCLE);
+  mCurrentState=ProgressStates.values()[stateForLevel];
+  float percent=level % 2500 / 2500f;
+  int startColor=mColorSchemeColors[stateForLevel];
+  int endColor=mColorSchemeColors[(stateForLevel + 1) % ProgressStates.values().length];
+  mPaint.setColor(evaluate(percent,startColor,endColor));
+}

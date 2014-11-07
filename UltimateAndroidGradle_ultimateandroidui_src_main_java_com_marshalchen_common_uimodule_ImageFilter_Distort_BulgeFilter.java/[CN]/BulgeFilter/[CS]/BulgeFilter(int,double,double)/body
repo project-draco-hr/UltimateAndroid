@@ -1,0 +1,5 @@
+{
+  _amount=amount / 100.0;
+  _offsetX=Function.FClampDouble(offsetX,-1.0,1.0);
+  _offsetY=Function.FClampDouble(offsetY,-1.0,1.0);
+}

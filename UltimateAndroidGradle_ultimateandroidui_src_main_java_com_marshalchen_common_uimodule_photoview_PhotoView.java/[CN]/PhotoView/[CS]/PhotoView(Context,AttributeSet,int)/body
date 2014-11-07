@@ -1,0 +1,9 @@
+{
+  super(context,attr,defStyle);
+  super.setScaleType(ScaleType.MATRIX);
+  mAttacher=new PhotoViewAttacher(this);
+  if (null != mPendingScaleType) {
+    setScaleType(mPendingScaleType);
+    mPendingScaleType=null;
+  }
+}

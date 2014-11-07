@@ -1,0 +1,9 @@
+{
+  RecyclerView.ViewHolder holder=parent.findViewHolderForPosition(positionStart + 1);
+  if (holder != null) {
+    headers.put(holder.getItemId(),null);
+  }
+ else {
+    cleanOffScreenItemsIds();
+  }
+}

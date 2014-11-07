@@ -1,0 +1,8 @@
+{
+  int draggedPos=getPositionForID(itemId);
+  for (int pos=getFirstVisiblePosition(); pos <= getLastVisiblePosition(); pos++) {
+    if (draggedPos != pos) {
+      idList.add(getId(pos));
+    }
+  }
+}

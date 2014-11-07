@@ -1,0 +1,8 @@
+{
+  if (mOrientation == VERTICAL_LIST) {
+    drawVertical(c,parent);
+  }
+ else {
+    drawHorizontal(c,parent);
+  }
+}

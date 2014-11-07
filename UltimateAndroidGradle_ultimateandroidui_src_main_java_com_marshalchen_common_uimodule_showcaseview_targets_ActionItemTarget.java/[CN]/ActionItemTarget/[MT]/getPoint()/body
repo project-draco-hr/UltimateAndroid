@@ -1,0 +1,4 @@
+{
+  setUp();
+  return new ViewTarget(mActionBarWrapper.getActionItem(mItemId)).getPoint();
+}

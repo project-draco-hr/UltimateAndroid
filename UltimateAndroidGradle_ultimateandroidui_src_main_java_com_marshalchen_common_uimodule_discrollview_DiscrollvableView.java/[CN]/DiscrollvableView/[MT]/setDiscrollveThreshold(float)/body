@@ -1,0 +1,6 @@
+{
+  if (discrollveThreshold < 0.0f || discrollveThreshold > 1.0f) {
+    throw new IllegalArgumentException("threshold must be >= 0.0f and <= 1.0f");
+  }
+  mDiscrollveThreshold=discrollveThreshold;
+}

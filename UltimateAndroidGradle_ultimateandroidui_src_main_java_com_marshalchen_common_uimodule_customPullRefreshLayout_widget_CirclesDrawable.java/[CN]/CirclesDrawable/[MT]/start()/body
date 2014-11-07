@@ -1,0 +1,5 @@
+{
+  mLevel=2500;
+  isRunning=true;
+  mHandler.postDelayed(this,10);
+}

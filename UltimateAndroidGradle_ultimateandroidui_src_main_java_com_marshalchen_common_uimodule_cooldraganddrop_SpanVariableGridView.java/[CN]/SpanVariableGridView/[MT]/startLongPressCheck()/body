@@ -1,0 +1,17 @@
+{
+  if (mLongPressRunnable == null) {
+    mLongPressRunnable=new Runnable(){
+      public void run(){
+        if (mTouchState == TOUCH_STATE_CLICK) {
+          final int index=pointToPosition(INVALID_POSITION,mTouchStartX,mTouchStartY);
+          if (index != INVALID_POSITION && index == mTouchStartItemPosition) {
+            longClickChild(index);
+            mTouchState=TOUCH_STATE_LONG_CLICK;
+          }
+        }
+      }
+    }
+;
+  }
+  postDelayed(mLongPressRunnable,ViewConfiguration.getLongPressTimeout());
+}

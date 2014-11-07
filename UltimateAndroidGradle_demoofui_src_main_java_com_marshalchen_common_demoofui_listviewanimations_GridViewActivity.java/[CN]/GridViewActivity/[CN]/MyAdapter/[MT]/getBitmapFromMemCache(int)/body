@@ -1,0 +1,3 @@
+{
+  return mMemoryCache.get(key);
+}

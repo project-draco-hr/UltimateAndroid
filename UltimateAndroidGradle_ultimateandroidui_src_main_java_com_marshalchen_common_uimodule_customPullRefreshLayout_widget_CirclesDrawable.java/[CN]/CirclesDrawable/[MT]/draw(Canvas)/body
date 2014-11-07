@@ -1,0 +1,8 @@
+{
+  if (mCurrentState != null) {
+    canvas.save();
+    canvas.translate(mBounds.width() / 2 - mDrawWidth / 2,mTop);
+    makeCirclesProgress(canvas);
+    canvas.restore();
+  }
+}

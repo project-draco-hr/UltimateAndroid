@@ -1,0 +1,8 @@
+{
+  ErosionFilter erosion=new ErosionFilter(radius);
+  DilationFilter dilation=new DilationFilter(radius);
+  erosion.addTarget(dilation);
+  dilation.addTarget(this);
+  registerInitialFilter(erosion);
+  registerTerminalFilter(dilation);
+}

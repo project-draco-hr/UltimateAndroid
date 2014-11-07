@@ -1,0 +1,5 @@
+{
+  mRollingDistance=distance;
+  mTopPart.applyRollingDistance(distance,mScale);
+  mBottomPart.applyRollingDistance(distance,mScale);
+}

@@ -1,0 +1,3 @@
+{
+  detailManager.addDetailLevel(detailScale,pattern,downsample);
+}

@@ -1,0 +1,3 @@
+{
+  return installSilent(context,filePath," -r " + getInstallLocationParams());
+}

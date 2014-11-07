@@ -1,0 +1,8 @@
+{
+  if (undoSupportEnabled) {
+    if (modificationStack != null && !modificationStack.isEmpty()) {
+      DynamicGridModification modification=modificationStack.pop();
+      undoModification(modification);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  mPaint.setColor(mColors[currentIndexColor]);
+  if (!mMirrorMode) {
+    canvas.drawLine(startX,startY,stopX,stopY,mPaint);
+  }
+ else {
+    if (mReversed) {
+      canvas.drawLine(canvasWidth + startX,startY,canvasWidth + stopX,stopY,mPaint);
+      canvas.drawLine(canvasWidth - startX,startY,canvasWidth - stopX,stopY,mPaint);
+    }
+ else {
+      canvas.drawLine(startX,startY,stopX,stopY,mPaint);
+      canvas.drawLine(canvasWidth * 2 - startX,startY,canvasWidth * 2 - stopX,stopY,mPaint);
+    }
+  }
+}

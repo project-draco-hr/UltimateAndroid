@@ -1,0 +1,6 @@
+{
+  Assert.assertNotNull(view);
+  if (releasedViews.size() < MAX_RELEASED_VIEW_SIZE) {
+    releasedViews.add(view);
+  }
+}

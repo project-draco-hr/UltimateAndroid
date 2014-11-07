@@ -1,0 +1,5 @@
+{
+  AnimationAdapter animAdapter=new SwingBottomInAnimationAdapter(new SwingRightInAnimationAdapter(mAdapter));
+  animAdapter.setAbsListView(getListView());
+  getListView().setAdapter(animAdapter);
+}

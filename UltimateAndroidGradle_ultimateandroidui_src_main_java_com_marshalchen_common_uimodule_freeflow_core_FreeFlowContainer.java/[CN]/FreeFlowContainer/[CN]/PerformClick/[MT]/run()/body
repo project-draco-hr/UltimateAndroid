@@ -1,0 +1,6 @@
+{
+  View view=beginTouchAt.view;
+  if (view != null) {
+    performItemClick(view,beginTouchAt.itemSection,beginTouchAt.itemIndex,mAdapter.getItemId(beginTouchAt.itemSection,beginTouchAt.itemIndex));
+  }
+}

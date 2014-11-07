@@ -1,0 +1,3 @@
+{
+  Log.d("mobeta","mSrcPos=" + mSrcPos + " mFirstExpPos="+ mFirstExpPos+ " mSecondExpPos="+ mSecondExpPos);
+}

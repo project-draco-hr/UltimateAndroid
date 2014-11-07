@@ -1,0 +1,5 @@
+{
+  super(context,attrs);
+  initAttrs(attrs);
+  initView();
+}

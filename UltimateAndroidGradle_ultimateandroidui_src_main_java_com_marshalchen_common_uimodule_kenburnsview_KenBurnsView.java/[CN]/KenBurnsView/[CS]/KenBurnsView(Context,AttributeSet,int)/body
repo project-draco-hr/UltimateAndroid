@@ -1,0 +1,5 @@
+{
+  super(context,attrs,defStyle);
+  mInitialized=true;
+  super.setScaleType(ScaleType.MATRIX);
+}

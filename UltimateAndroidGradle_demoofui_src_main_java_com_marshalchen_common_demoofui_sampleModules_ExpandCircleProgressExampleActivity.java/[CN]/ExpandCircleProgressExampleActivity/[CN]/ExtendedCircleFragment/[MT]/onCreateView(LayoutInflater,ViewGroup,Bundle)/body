@@ -1,0 +1,6 @@
+{
+  View rootView=inflater.inflate(R.layout.expand_circle_progress_fragment_main,container,false);
+  mCircleProgressView=(ExpandedCircleProgressView)rootView.findViewById(R.id.expanded_circle_progress);
+  mHandler.sendEmptyMessageDelayed(0,1000);
+  return rootView;
+}

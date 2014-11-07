@@ -1,0 +1,5 @@
+float minIn
+float maxIn
+float gamma
+float minOut
+float maxOut

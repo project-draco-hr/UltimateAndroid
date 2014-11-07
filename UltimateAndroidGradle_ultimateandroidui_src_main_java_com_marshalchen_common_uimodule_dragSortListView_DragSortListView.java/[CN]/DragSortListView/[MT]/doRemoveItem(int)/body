@@ -1,0 +1,15 @@
+{
+  mDragState=REMOVING;
+  if (mRemoveListener != null) {
+    mRemoveListener.remove(which);
+  }
+  destroyFloatView();
+  adjustOnReorder();
+  clearPositions();
+  if (mInTouchEvent) {
+    mDragState=STOPPED;
+  }
+ else {
+    mDragState=IDLE;
+  }
+}

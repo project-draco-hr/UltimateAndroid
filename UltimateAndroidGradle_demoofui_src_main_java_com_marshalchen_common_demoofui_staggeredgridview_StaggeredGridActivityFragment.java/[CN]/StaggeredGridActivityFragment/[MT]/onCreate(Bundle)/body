@@ -1,0 +1,9 @@
+{
+  super.onCreate(savedInstanceState);
+  setTitle("SGV");
+  final FragmentManager fm=getSupportFragmentManager();
+  if (fm.findFragmentById(android.R.id.content) == null) {
+    final StaggeredGridFragment fragment=new StaggeredGridFragment();
+    fm.beginTransaction().add(android.R.id.content,fragment).commit();
+  }
+}

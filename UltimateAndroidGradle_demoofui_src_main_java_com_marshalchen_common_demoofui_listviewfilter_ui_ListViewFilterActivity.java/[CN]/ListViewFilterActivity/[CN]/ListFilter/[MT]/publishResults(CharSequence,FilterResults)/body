@@ -1,0 +1,5 @@
+{
+  ArrayList<String> filtered=(ArrayList<String>)results.values;
+  setIndexBarViewVisibility(constraint.toString());
+  new Poplulate().execute(filtered);
+}

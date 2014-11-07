@@ -1,0 +1,15 @@
+{
+  super(2);
+  float[] redCurve=getPreparedSpline(red);
+  float[] blueCurve=getPreparedSpline(blue);
+  float[] greenCurve=getPreparedSpline(green);
+  float[] rgbCompositeCurve=getPreparedSpline(rgbComposite);
+  redPart=new int[256];
+  greenPart=new int[256];
+  bluePart=new int[256];
+  for (int i=0; i < 256; i++) {
+    redPart[i]=(int)Math.min(Math.max(i + redCurve[i] + rgbCompositeCurve[i],0),255);
+    greenPart[i]=(int)Math.min(Math.max(i + greenCurve[i] + rgbCompositeCurve[i],0),255);
+    bluePart[i]=(int)Math.min(Math.max(i + blueCurve[i] + rgbCompositeCurve[i],0),255);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  double fromRangeSize=fromHigh - fromLow;
+  double toRangeSize=toHigh - toLow;
+  double valueScale=(value - fromLow) / fromRangeSize;
+  return toLow + (valueScale * toRangeSize);
+}

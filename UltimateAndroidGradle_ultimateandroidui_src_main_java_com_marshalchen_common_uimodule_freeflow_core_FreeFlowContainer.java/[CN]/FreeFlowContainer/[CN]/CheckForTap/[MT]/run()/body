@@ -1,0 +1,26 @@
+{
+  if (mTouchMode == TOUCH_MODE_DOWN) {
+    mTouchMode=TOUCH_MODE_TAP;
+    if (mOnTouchModeChangedListener != null) {
+      mOnTouchModeChangedListener.onTouchModeChanged(mTouchMode);
+    }
+    if (beginTouchAt != null && beginTouchAt.view != null) {
+      beginTouchAt.view.setPressed(true);
+    }
+    refreshDrawableState();
+    final int longPressTimeout=ViewConfiguration.getLongPressTimeout();
+    final boolean longClickable=isLongClickable();
+    if (longClickable) {
+      if (mPendingCheckForLongPress == null) {
+        mPendingCheckForLongPress=new CheckForLongPress();
+      }
+      postDelayed(mPendingCheckForLongPress,longPressTimeout);
+    }
+ else {
+      mTouchMode=TOUCH_MODE_DONE_WAITING;
+      if (mOnTouchModeChangedListener != null) {
+        mOnTouchModeChangedListener.onTouchModeChanged(mTouchMode);
+      }
+    }
+  }
+}

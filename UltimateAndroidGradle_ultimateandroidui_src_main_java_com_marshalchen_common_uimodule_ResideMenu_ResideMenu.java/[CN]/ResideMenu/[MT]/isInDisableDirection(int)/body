@@ -1,0 +1,3 @@
+{
+  return disabledSwipeDirection.contains(direction);
+}

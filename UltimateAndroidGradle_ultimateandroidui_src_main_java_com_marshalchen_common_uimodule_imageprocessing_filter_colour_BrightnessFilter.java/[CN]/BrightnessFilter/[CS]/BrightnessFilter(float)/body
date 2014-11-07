@@ -1,0 +1,3 @@
+{
+  super(new float[]{1f,0f,0f,brightness,0f,1f,0f,brightness,0f,0f,1f,brightness,0f,0f,0f,1f},1.0f);
+}

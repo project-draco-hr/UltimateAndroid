@@ -1,0 +1,12 @@
+{
+  com.google.gson.stream.JsonReader jsonReader=new com.google.gson.stream.JsonReader(reader);
+  List<T> objs=new ArrayList<T>();
+  jsonReader.beginArray();
+  while (jsonReader.hasNext()) {
+    T obj=(new Gson()).fromJson(jsonReader,getPersistentClass());
+    objs.add(obj);
+  }
+  jsonReader.endArray();
+  jsonReader.close();
+  return objs;
+}

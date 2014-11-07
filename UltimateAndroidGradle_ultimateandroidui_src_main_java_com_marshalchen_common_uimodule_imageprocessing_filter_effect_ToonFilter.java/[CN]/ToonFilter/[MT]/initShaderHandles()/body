@@ -1,0 +1,5 @@
+{
+  super.initShaderHandles();
+  thresholdHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_THRESHOLD);
+  quantizationLevelsHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_QUANTIZATION);
+}

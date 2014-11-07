@@ -1,0 +1,4 @@
+{
+  mHeaderOverlayLayoutResId=layoutResId;
+  return (T)this;
+}

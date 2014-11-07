@@ -1,0 +1,3 @@
+{
+  return getArguments().getInt(ARG_LAYOUT_ID);
+}

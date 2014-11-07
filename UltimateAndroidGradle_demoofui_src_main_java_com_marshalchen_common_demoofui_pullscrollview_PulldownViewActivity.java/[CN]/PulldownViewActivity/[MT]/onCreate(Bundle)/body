@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.pull_scroll_view_act_pull_down);
+  initView();
+  showTable();
+}

@@ -1,0 +1,3 @@
+{
+  throwShade(Log.ERROR,formatString(message,args),null);
+}

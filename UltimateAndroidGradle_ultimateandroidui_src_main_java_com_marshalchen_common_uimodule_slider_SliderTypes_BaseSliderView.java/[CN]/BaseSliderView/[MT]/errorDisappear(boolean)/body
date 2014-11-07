@@ -1,0 +1,4 @@
+{
+  mErrorDisappear=disappear;
+  return this;
+}

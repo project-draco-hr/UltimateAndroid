@@ -1,0 +1,7 @@
+{
+  Position adapterPosition=translatePosition(position);
+  if (adapterPosition.mPosition == POSITION_FILLER || adapterPosition.mPosition == POSITION_HEADER) {
+    return false;
+  }
+  return mDelegate.isEnabled(adapterPosition.mPosition);
+}

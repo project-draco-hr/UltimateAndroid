@@ -1,0 +1,4 @@
+{
+  animator.cancel();
+  if (reset)   animator.reset(target);
+}

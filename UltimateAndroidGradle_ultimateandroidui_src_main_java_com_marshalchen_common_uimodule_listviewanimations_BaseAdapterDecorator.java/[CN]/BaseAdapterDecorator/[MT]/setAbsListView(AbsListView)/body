@@ -1,0 +1,11 @@
+{
+  mListView=listView;
+  if (mDecoratedBaseAdapter instanceof ListViewSetter) {
+    ((ListViewSetter)mDecoratedBaseAdapter).setAbsListView(listView);
+  }
+  if (mListView instanceof DynamicListView) {
+    DynamicListView dynListView=(DynamicListView)mListView;
+    dynListView.setIsParentHorizontalScrollContainer(mIsParentHorizontalScrollContainer);
+    dynListView.setDynamicTouchChild(mResIdTouchChild);
+  }
+}

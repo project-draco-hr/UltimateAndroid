@@ -1,0 +1,6 @@
+{
+  mCurrentTrans=mTransGen.generateNextTransition(mDrawableRect,mViewportRect);
+  mElapsedTime=0;
+  mLastFrameTime=System.currentTimeMillis();
+  fireTransitionStart(mCurrentTrans);
+}

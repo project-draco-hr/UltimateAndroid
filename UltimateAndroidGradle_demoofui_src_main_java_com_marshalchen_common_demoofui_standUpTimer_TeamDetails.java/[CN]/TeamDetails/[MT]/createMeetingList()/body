@@ -1,0 +1,10 @@
+{
+  return new TabHost.TabContentFactory(){
+    public View createTabContent(    String tag){
+      meetingListAdapter=createMeetingListAdapter();
+      meetingList.setAdapter(meetingListAdapter);
+      return meetingList;
+    }
+  }
+;
+}

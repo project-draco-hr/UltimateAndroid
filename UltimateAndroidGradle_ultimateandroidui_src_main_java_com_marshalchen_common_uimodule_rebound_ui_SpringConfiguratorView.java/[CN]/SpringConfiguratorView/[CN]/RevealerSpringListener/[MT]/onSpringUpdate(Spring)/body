@@ -1,0 +1,8 @@
+{
+  float val=(float)spring.getCurrentValue();
+  float minTranslate=mRevealPx;
+  float maxTranslate=mStashPx;
+  float range=maxTranslate - minTranslate;
+  float yTranslate=(val * range) + minTranslate;
+  SpringConfiguratorView.this.setTranslationY(yTranslate);
+}

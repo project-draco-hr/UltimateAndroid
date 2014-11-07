@@ -1,0 +1,15 @@
+{
+  ArrayList<HtmlLink> links=mSpanParser.getLinks();
+  for (  HtmlLink link : links) {
+    float tlX=link.xOffset;
+    float tlY=link.yOffset;
+    float brX=link.xOffset + link.width;
+    float brY=link.yOffset + link.height;
+    if (x > tlX && x < brX) {
+      if (y > tlY && y < brY) {
+        onLinkClick(link.url);
+        return;
+      }
+    }
+  }
+}

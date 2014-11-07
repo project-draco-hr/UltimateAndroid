@@ -1,0 +1,4 @@
+{
+  items.put(addedItems.get(position),false);
+  buildAddedItems();
+}

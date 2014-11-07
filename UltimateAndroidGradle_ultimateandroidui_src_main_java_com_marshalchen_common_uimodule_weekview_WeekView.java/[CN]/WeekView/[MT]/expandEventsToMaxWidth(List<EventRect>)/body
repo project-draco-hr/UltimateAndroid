@@ -1,0 +1,39 @@
+{
+  List<List<EventRect>> columns=new ArrayList<List<EventRect>>();
+  columns.add(new ArrayList<EventRect>());
+  for (  EventRect eventRect : collisionGroup) {
+    boolean isPlaced=false;
+    for (    List<EventRect> column : columns) {
+      if (column.size() == 0) {
+        column.add(eventRect);
+        isPlaced=true;
+      }
+ else       if (!isEventsCollide(eventRect.event,column.get(column.size() - 1).event)) {
+        column.add(eventRect);
+        isPlaced=true;
+        break;
+      }
+    }
+    if (!isPlaced) {
+      List<EventRect> newColumn=new ArrayList<EventRect>();
+      newColumn.add(eventRect);
+      columns.add(newColumn);
+    }
+  }
+  int maxRowCount=columns.get(0).size();
+  for (int i=0; i < maxRowCount; i++) {
+    float j=0;
+    for (    List<EventRect> column : columns) {
+      if (column.size() >= i + 1) {
+        EventRect eventRect=column.get(i);
+        eventRect.width=1f / columns.size();
+        eventRect.left=j / columns.size();
+        eventRect.top=eventRect.event.getStartTime().get(Calendar.HOUR_OF_DAY) * 60 + eventRect.event.getStartTime().get(Calendar.MINUTE);
+        eventRect.bottom=eventRect.event.getEndTime().get(Calendar.HOUR_OF_DAY) * 60 + eventRect.event.getEndTime().get(Calendar.MINUTE);
+        ;
+        mEventRects.add(eventRect);
+      }
+      j++;
+    }
+  }
+}

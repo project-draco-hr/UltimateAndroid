@@ -1,0 +1,4 @@
+Context context
+List<T> items
+int headerResId
+int itemResId

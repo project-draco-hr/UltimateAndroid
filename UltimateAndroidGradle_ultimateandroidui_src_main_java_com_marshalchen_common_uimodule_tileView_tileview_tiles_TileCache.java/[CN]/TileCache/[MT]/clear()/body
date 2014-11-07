@@ -1,0 +1,13 @@
+{
+  memoryCache.evictAll();
+  new Thread(new Runnable(){
+    @Override public void run(){
+      try {
+        diskCache.delete();
+      }
+ catch (      IOException e) {
+      }
+    }
+  }
+).start();
+}

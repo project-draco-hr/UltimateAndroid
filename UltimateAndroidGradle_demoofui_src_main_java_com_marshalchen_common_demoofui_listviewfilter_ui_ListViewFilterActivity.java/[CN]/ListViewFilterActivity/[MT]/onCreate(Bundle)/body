@@ -1,0 +1,22 @@
+{
+  super.onCreate(savedInstanceState);
+  setupViews();
+  mItems=new ArrayList<String>(Arrays.asList(ITEMS));
+  mListSectionPos=new ArrayList<Integer>();
+  mListItems=new ArrayList<String>();
+  if (savedInstanceState != null) {
+    mListItems=savedInstanceState.getStringArrayList("mListItems");
+    mListSectionPos=savedInstanceState.getIntegerArrayList("mListSectionPos");
+    if (mListItems != null && mListItems.size() > 0 && mListSectionPos != null && mListSectionPos.size() > 0) {
+      setListAdaptor();
+    }
+    String constraint=savedInstanceState.getString("constraint");
+    if (constraint != null && constraint.length() > 0) {
+      mSearchView.setText(constraint);
+      setIndexBarViewVisibility(constraint);
+    }
+  }
+ else {
+    new Poplulate().execute(mItems);
+  }
+}

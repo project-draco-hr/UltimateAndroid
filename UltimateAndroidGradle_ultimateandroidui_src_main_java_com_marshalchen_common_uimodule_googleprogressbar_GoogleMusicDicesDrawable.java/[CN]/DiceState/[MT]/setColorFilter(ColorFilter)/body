@@ -1,0 +1,5 @@
+{
+  mPaint.setColorFilter(cf);
+  mPaintShadow.setColorFilter(cf);
+  mPaintCircle.setColorFilter(cf);
+}

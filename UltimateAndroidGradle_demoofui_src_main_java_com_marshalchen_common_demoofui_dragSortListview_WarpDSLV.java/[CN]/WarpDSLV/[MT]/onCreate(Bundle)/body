@@ -1,0 +1,12 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.drag_sort_listview_warp_main);
+  DragSortListView lv=(DragSortListView)getListView();
+  lv.setDropListener(onDrop);
+  lv.setRemoveListener(onRemove);
+  lv.setDragScrollProfile(ssProfile);
+  array=getResources().getStringArray(R.array.countries);
+  list=new ArrayList<String>(Arrays.asList(array));
+  adapter=new ArrayAdapter<String>(this,R.layout.drag_sort_listview_list_item_handle_right,R.id.text,list);
+  setListAdapter(adapter);
+}

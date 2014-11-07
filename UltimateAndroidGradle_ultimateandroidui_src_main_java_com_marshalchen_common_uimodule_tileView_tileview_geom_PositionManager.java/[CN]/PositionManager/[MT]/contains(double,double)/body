@@ -1,0 +1,7 @@
+{
+  double minX=Math.min(left,right);
+  double maxX=Math.max(left,right);
+  double minY=Math.min(top,bottom);
+  double maxY=Math.max(top,bottom);
+  return y >= minY && y <= maxY && x >= minX && x <= maxX;
+}

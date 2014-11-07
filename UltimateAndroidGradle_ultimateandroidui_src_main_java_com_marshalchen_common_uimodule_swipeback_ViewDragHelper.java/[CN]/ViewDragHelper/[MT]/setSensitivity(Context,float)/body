@@ -1,0 +1,5 @@
+{
+  float s=Math.max(0f,Math.min(1.0f,sensitivity));
+  ViewConfiguration viewConfiguration=ViewConfiguration.get(context);
+  mTouchSlop=(int)(viewConfiguration.getScaledTouchSlop() * (1 / s));
+}

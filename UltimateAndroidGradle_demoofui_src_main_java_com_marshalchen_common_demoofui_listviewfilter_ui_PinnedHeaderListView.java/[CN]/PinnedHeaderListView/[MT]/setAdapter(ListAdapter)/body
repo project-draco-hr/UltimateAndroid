@@ -1,0 +1,4 @@
+{
+  this.mAdapter=(PinnedHeaderAdapter)adapter;
+  super.setAdapter(adapter);
+}

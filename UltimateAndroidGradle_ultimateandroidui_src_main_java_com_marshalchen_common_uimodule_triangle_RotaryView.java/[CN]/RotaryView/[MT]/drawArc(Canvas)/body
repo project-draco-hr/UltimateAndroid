@@ -1,0 +1,11 @@
+{
+  float start=humidity[0];
+  for (int i=1; i < humidity.length; i++) {
+    paint.setColor(ARC_COLORS[i - 1]);
+    canvas.drawArc(rect,start - discStart,Sweep[i - 1],true,paint);
+    start+=humidity[i];
+    if (Sweep[i - 1] < humidity[i]) {
+      Sweep[i - 1]+=SWEEP_INC[i - 1];
+    }
+  }
+}

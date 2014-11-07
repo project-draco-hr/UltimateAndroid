@@ -1,0 +1,22 @@
+{
+  View listView=v.findViewById(android.R.id.list);
+  if (listView instanceof GridView)   mList=(GridView)listView;
+ else   throw new IllegalArgumentException(listView.getClass().getName());
+  if (mList != null) {
+    getList().setNumColumns(mColumns);
+    getList().setVerticalSpacing(mVerticalSpacing);
+    getList().setHorizontalSpacing(mHorizontalSpacing);
+    getList().setHorizontalSpacing((int)mDividerHeight);
+    getList().setVerticalSpacing((int)mDividerHeight);
+    mList.setClipToPadding(mClipToPadding);
+    mList.setOnScrollListener(this);
+    if (mSelector != 0)     mList.setSelector(mSelector);
+    if (mPadding != -1.0f) {
+      mList.setPadding(mPadding,mPadding,mPadding,mPadding);
+    }
+ else {
+      mList.setPadding(mPaddingLeft,mPaddingTop,mPaddingRight,mPaddingBottom);
+    }
+    mList.setScrollBarStyle(mScrollbarStyle);
+  }
+}

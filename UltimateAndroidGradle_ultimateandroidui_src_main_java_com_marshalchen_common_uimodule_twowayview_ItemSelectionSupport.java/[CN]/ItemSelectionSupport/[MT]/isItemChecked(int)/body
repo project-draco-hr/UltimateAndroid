@@ -1,0 +1,6 @@
+{
+  if (mChoiceMode != ChoiceMode.NONE && mCheckedStates != null) {
+    return mCheckedStates.get(position);
+  }
+  return false;
+}

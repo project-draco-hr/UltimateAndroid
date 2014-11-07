@@ -1,0 +1,16 @@
+{
+  for (  Date date : dates) {
+    validateDate(date);
+    MonthCellWithMonthIndex monthCellWithMonthIndex=getMonthCellWithIndexByDate(date);
+    if (monthCellWithMonthIndex != null) {
+      Calendar newlyHighlightedCal=Calendar.getInstance();
+      newlyHighlightedCal.setTime(date);
+      MonthCellDescriptor cell=monthCellWithMonthIndex.cell;
+      highlightedCells.add(cell);
+      highlightedCals.add(newlyHighlightedCal);
+      cell.setHighlighted(true);
+    }
+  }
+  adapter.notifyDataSetChanged();
+  setAdapter(adapter);
+}

@@ -1,0 +1,10 @@
+{
+  final int size=in.readInt();
+  if (size > 0) {
+    for (int i=0; i < size; i++) {
+      final int key=in.readInt();
+      final boolean value=(in.readInt() == TRUE);
+      put(key,value);
+    }
+  }
+}

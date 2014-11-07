@@ -1,0 +1,9 @@
+{
+  mAnimationStartRunnable=new Runnable(){
+    public void run(){
+      mTextField.startAnimation(mMoveTextOut);
+    }
+  }
+;
+  postDelayed(mAnimationStartRunnable,mAnimationPause);
+}

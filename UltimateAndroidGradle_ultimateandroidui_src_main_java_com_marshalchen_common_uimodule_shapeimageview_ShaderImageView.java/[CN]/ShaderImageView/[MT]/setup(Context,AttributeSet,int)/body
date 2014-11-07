@@ -1,0 +1,3 @@
+{
+  getPathHelper().init(context,attrs,defStyle);
+}

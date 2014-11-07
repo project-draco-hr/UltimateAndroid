@@ -1,0 +1,10 @@
+{
+  webView=new WebView(context);
+  WebSettings wSet=webView.getSettings();
+  wSet.setJavaScriptEnabled(true);
+  wSet.setDomStorageEnabled(true);
+  wSet.setAppCachePath(appCacheDir);
+  wSet.setAllowFileAccess(true);
+  wSet.setAppCacheEnabled(true);
+  return webView;
+}

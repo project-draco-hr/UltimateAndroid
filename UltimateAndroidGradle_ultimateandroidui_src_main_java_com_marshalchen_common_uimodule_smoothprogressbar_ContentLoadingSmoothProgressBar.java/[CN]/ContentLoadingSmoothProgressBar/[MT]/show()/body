@@ -1,0 +1,9 @@
+{
+  mStartTime=-1;
+  mDismissed=false;
+  removeCallbacks(mDelayedHide);
+  if (!mPostedShow) {
+    postDelayed(mDelayedShow,MIN_DELAY);
+    mPostedShow=true;
+  }
+}

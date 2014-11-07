@@ -1,0 +1,6 @@
+{
+  if (mIsRunning)   return;
+  mIsRunning=true;
+  mStartTime=AnimationUtils.currentAnimationTimeMillis();
+  post(mUpdater);
+}

@@ -1,0 +1,16 @@
+{
+  super.onDraw(canvas);
+  drawBackground(canvas,mBitmapRect);
+  if (showGuidelines()) {
+    if (mGuidelines == GUIDELINES_ON) {
+      drawRuleOfThirdsGuidelines(canvas);
+    }
+ else     if (mGuidelines == GUIDELINES_ON_TOUCH) {
+      if (mPressedHandle != null)       drawRuleOfThirdsGuidelines(canvas);
+    }
+ else     if (mGuidelines == GUIDELINES_OFF) {
+    }
+  }
+  canvas.drawRect(Edge.LEFT.getCoordinate(),Edge.TOP.getCoordinate(),Edge.RIGHT.getCoordinate(),Edge.BOTTOM.getCoordinate(),mBorderPaint);
+  drawCorners(canvas);
+}

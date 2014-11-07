@@ -1,0 +1,5 @@
+{
+  if (adapter == null)   throw new IllegalArgumentException("Adapter can not be null");
+  if (!(adapter instanceof SwipeItemMangerInterface))   throw new IllegalArgumentException("adapter should implement the SwipeAdapterInterface");
+  this.mAdapter=adapter;
+}

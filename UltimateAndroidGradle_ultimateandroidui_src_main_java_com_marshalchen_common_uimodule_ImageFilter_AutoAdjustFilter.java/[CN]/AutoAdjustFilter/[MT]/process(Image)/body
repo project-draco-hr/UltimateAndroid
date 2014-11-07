@@ -1,0 +1,8 @@
+{
+  HistogramEqualFilter hee=new HistogramEqualFilter();
+  hee.ContrastIntensity=0.5f;
+  imageIn=hee.process(imageIn);
+  AutoLevelFilter ale=new AutoLevelFilter();
+  ale.Intensity=0.5f;
+  return ale.process(imageIn);
+}

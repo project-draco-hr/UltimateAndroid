@@ -1,0 +1,14 @@
+{
+  canvas.save();
+  Matrix matrix=new Matrix();
+  matrix.preScale(1 - mScale,1,0,mSize / 2);
+  canvas.concat(matrix);
+  drawDiceSide(canvas,mDiceStates[mDiceState].side1,mScale > 0.1f);
+  canvas.restore();
+  canvas.save();
+  matrix=new Matrix();
+  matrix.preScale(mScale,1,mSize,mSize / 2);
+  canvas.concat(matrix);
+  drawDiceSide(canvas,mDiceStates[mDiceState].side2,false);
+  canvas.restore();
+}

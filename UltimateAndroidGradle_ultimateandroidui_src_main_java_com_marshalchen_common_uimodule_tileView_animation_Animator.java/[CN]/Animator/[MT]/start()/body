@@ -1,0 +1,9 @@
+{
+  values.putAll(properties);
+  ellapsed=0;
+  startTime=System.currentTimeMillis();
+  handler.sendEmptyMessage(0);
+  for (  AnimationListener l : listeners) {
+    l.onAnimationStart();
+  }
+}

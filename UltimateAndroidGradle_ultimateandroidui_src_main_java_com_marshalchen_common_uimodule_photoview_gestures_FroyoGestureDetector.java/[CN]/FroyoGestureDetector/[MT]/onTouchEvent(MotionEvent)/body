@@ -1,0 +1,4 @@
+{
+  mDetector.onTouchEvent(ev);
+  return super.onTouchEvent(ev);
+}

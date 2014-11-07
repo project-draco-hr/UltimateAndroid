@@ -1,0 +1,8 @@
+{
+  ByteBuffer buf=ByteBuffer.allocateDirect(v.length * 2);
+  buf.order(ByteOrder.nativeOrder());
+  ShortBuffer buffer=buf.asShortBuffer();
+  buffer.put(v);
+  buffer.position(0);
+  return buffer;
+}

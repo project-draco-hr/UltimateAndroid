@@ -1,0 +1,52 @@
+{
+  Calendar newlySelectedCal=Calendar.getInstance(locale);
+  newlySelectedCal.setTime(date);
+  setMidnight(newlySelectedCal);
+  for (  MonthCellDescriptor selectedCell : selectedCells) {
+    selectedCell.setRangeState(RangeState.NONE);
+  }
+switch (selectionMode) {
+case RANGE:
+    if (selectedCals.size() > 1) {
+      clearOldSelections();
+    }
+ else     if (selectedCals.size() == 1 && newlySelectedCal.before(selectedCals.get(0))) {
+      clearOldSelections();
+    }
+  break;
+case MULTIPLE:
+date=applyMultiSelect(date,newlySelectedCal);
+break;
+case SINGLE:
+clearOldSelections();
+break;
+default :
+throw new IllegalStateException("Unknown selectionMode " + selectionMode);
+}
+if (date != null) {
+if (selectedCells.size() == 0 || !selectedCells.get(0).equals(cell)) {
+selectedCells.add(cell);
+cell.setSelected(true);
+}
+selectedCals.add(newlySelectedCal);
+if (selectionMode == SelectionMode.RANGE && selectedCells.size() > 1) {
+Date start=selectedCells.get(0).getDate();
+Date end=selectedCells.get(1).getDate();
+selectedCells.get(0).setRangeState(MonthCellDescriptor.RangeState.FIRST);
+selectedCells.get(1).setRangeState(MonthCellDescriptor.RangeState.LAST);
+for (List<List<MonthCellDescriptor>> month : cells) {
+for (List<MonthCellDescriptor> week : month) {
+for (MonthCellDescriptor singleCell : week) {
+if (singleCell.getDate().after(start) && singleCell.getDate().before(end) && singleCell.isSelectable()) {
+singleCell.setSelected(true);
+singleCell.setRangeState(MonthCellDescriptor.RangeState.MIDDLE);
+selectedCells.add(singleCell);
+}
+}
+}
+}
+}
+}
+validateAndUpdate();
+return date != null;
+}

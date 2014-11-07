@@ -1,0 +1,3 @@
+{
+  mMoreProgress.setVisibility(View.VISIBLE);
+}

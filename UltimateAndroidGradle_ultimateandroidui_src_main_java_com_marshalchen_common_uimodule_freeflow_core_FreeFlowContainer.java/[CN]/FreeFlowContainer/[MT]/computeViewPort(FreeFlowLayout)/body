@@ -1,0 +1,37 @@
+{
+  if (mLayout == null || frames == null || frames.size() == 0) {
+    viewPortX=0;
+    viewPortY=0;
+    return;
+  }
+  Object data=null;
+  int lowestSection=Integer.MAX_VALUE;
+  int lowestPosition=Integer.MAX_VALUE;
+  for (  FreeFlowItem fd : frames.values()) {
+    if (fd.itemSection < lowestSection || (fd.itemSection == lowestSection && fd.itemIndex < lowestPosition)) {
+      data=fd.data;
+      lowestSection=fd.itemSection;
+      lowestPosition=fd.itemIndex;
+    }
+  }
+  FreeFlowItem freeflowItem=newLayout.getFreeFlowItemForItem(data);
+  freeflowItem=FreeFlowItem.clone(freeflowItem);
+  if (freeflowItem == null) {
+    viewPortX=0;
+    viewPortY=0;
+    return;
+  }
+  Rect vpFrame=freeflowItem.frame;
+  viewPortX=vpFrame.left;
+  viewPortY=vpFrame.top;
+  mScrollableWidth=mLayout.getContentWidth() - getWidth();
+  mScrollableHeight=mLayout.getContentHeight() - getHeight();
+  if (mScrollableWidth < 0) {
+    mScrollableWidth=0;
+  }
+  if (mScrollableHeight < 0) {
+    mScrollableHeight=0;
+  }
+  if (viewPortX > mScrollableWidth)   viewPortX=mScrollableWidth;
+  if (viewPortY > mScrollableHeight)   viewPortY=mScrollableHeight;
+}

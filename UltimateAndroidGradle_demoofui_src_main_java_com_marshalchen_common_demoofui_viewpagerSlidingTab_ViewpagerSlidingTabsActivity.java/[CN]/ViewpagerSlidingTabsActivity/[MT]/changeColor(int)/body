@@ -1,0 +1,30 @@
+{
+  tabs.setIndicatorColor(newColor);
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+    Drawable colorDrawable=new ColorDrawable(newColor);
+    Drawable bottomDrawable=getResources().getDrawable(R.drawable.view_sliding_tab_actionbar_bottom);
+    LayerDrawable ld=new LayerDrawable(new Drawable[]{colorDrawable,bottomDrawable});
+    if (oldBackground == null) {
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        ld.setCallback(drawableCallback);
+      }
+ else {
+        getActionBar().setBackgroundDrawable(ld);
+      }
+    }
+ else {
+      TransitionDrawable td=new TransitionDrawable(new Drawable[]{oldBackground,ld});
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        td.setCallback(drawableCallback);
+      }
+ else {
+        getActionBar().setBackgroundDrawable(td);
+      }
+      td.startTransition(200);
+    }
+    oldBackground=ld;
+    getActionBar().setDisplayShowTitleEnabled(false);
+    getActionBar().setDisplayShowTitleEnabled(true);
+  }
+  currentColor=newColor;
+}

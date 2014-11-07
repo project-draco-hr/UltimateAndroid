@@ -1,0 +1,19 @@
+{
+  final int position=getPosition(child);
+  mTempLaneInfo.setUndefined();
+  StaggeredItemEntry entry=(StaggeredItemEntry)getItemEntryForPosition(position);
+  if (entry != null) {
+    mTempLaneInfo.set(entry.startLane,entry.anchorLane);
+  }
+  if (mTempLaneInfo.isUndefined()) {
+    getLaneForChild(mTempLaneInfo,child,direction);
+  }
+  if (entry == null) {
+    entry=new StaggeredItemEntry(mTempLaneInfo.startLane,mTempLaneInfo.anchorLane,getLaneSpanForChild(child));
+    setItemEntryForPosition(position,entry);
+  }
+ else {
+    entry.setLane(mTempLaneInfo);
+  }
+  return entry;
+}

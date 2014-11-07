@@ -1,0 +1,5 @@
+Context context
+int color
+Stroke stroke
+int transformDuration
+int pressedDuration

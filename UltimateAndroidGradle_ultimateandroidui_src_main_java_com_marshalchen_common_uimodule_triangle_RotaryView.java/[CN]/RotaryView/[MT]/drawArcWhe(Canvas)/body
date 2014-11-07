@@ -1,0 +1,5 @@
+{
+  if (arcBool) {
+    c.drawArc(rectf,-90 + angleWhite,360 - angleWhite,true,paintWhite);
+  }
+}

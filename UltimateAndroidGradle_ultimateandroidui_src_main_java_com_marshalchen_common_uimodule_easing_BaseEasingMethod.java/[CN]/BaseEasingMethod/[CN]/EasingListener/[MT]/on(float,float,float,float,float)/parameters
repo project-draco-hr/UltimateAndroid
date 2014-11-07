@@ -1,0 +1,5 @@
+float time
+float value
+float start
+float end
+float duration

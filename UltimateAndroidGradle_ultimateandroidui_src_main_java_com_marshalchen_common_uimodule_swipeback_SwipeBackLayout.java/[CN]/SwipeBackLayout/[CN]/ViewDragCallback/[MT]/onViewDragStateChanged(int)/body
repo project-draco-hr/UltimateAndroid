@@ -1,0 +1,8 @@
+{
+  super.onViewDragStateChanged(state);
+  if (mListeners != null && !mListeners.isEmpty()) {
+    for (    SwipeListener listener : mListeners) {
+      listener.onScrollStateChange(state,mScrollPercent);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  if (mCheckedStates != null) {
+    mCheckedStates.clear();
+  }
+  if (mCheckedIdStates != null) {
+    mCheckedIdStates.clear();
+  }
+  mCheckedCount=0;
+  updateOnScreenCheckedViews();
+}

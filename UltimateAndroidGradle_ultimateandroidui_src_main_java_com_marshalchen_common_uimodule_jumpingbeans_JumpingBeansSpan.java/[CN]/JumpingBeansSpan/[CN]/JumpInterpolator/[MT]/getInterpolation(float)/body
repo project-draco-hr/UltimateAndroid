@@ -1,0 +1,6 @@
+{
+  if (input <= animRange) {
+    return (float)(Math.cos((input / animRange + 1) * Math.PI) / 2f) + 0.5f;
+  }
+  return 1.0f;
+}

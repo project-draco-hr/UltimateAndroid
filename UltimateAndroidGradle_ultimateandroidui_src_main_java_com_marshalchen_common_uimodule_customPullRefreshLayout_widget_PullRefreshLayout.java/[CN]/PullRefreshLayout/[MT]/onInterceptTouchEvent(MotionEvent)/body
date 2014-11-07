@@ -1,0 +1,40 @@
+{
+  if (!isEnabled() || canChildScrollUp() || mRefreshing) {
+    return false;
+  }
+  final int action=MotionEventCompat.getActionMasked(ev);
+switch (action) {
+case MotionEvent.ACTION_DOWN:
+    setTargetOffsetTop(0,true);
+  mActivePointerId=MotionEventCompat.getPointerId(ev,0);
+mIsBeingDragged=false;
+final float initialMotionY=getMotionEventY(ev,mActivePointerId);
+if (initialMotionY == -1) {
+return false;
+}
+mInitialMotionY=initialMotionY;
+break;
+case MotionEvent.ACTION_MOVE:
+if (mActivePointerId == INVALID_POINTER) {
+return false;
+}
+final float y=getMotionEventY(ev,mActivePointerId);
+if (y == -1) {
+return false;
+}
+final float yDiff=y - mInitialMotionY;
+if (yDiff > mTouchSlop && !mIsBeingDragged) {
+mIsBeingDragged=true;
+}
+break;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+mIsBeingDragged=false;
+mActivePointerId=INVALID_POINTER;
+break;
+case MotionEventCompat.ACTION_POINTER_UP:
+onSecondaryPointerUp(ev);
+break;
+}
+return mIsBeingDragged;
+}

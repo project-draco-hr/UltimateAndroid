@@ -1,0 +1,14 @@
+{
+  if (historicalX < dirtyRect.left) {
+    dirtyRect.left=historicalX;
+  }
+ else   if (historicalX > dirtyRect.right) {
+    dirtyRect.right=historicalX;
+  }
+  if (historicalY < dirtyRect.top) {
+    dirtyRect.top=historicalY;
+  }
+ else   if (historicalY > dirtyRect.bottom) {
+    dirtyRect.bottom=historicalY;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  int i=(paramMotionEvent.getAction()) >> 8;
+  if (paramMotionEvent.getPointerId(i) == mActivePointerId)   if (i != 0) {
+    mLastMotionY=paramMotionEvent.getY(0);
+    mActivePointerId=paramMotionEvent.getPointerId(0);
+  }
+}

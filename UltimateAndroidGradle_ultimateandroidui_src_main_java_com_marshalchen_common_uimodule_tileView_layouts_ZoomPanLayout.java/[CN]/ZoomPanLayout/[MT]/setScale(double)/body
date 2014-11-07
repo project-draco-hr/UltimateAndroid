@@ -1,0 +1,15 @@
+{
+  d=Math.max(d,minScale);
+  d=Math.min(d,maxScale);
+  if (scale != d) {
+    scale=d;
+    scaledWidth=(int)(baseWidth * scale);
+    scaledHeight=(int)(baseHeight * scale);
+    updateClip();
+    postInvalidate();
+    for (    ZoomPanListener listener : zoomPanListeners) {
+      listener.onScaleChanged(scale);
+      listener.onZoomPanEvent();
+    }
+  }
+}

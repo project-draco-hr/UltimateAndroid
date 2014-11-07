@@ -1,0 +1,6 @@
+{
+  if (ratio != mHeightRatio) {
+    mHeightRatio=ratio;
+    requestLayout();
+  }
+}

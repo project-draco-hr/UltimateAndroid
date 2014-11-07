@@ -1,0 +1,4 @@
+{
+  Calendar today=Calendar.getInstance();
+  goToDate(today);
+}

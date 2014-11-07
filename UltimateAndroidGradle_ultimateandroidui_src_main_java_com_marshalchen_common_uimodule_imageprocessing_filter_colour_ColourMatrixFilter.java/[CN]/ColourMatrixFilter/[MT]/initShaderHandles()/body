@@ -1,0 +1,5 @@
+{
+  super.initShaderHandles();
+  colorMatrixHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_COLORMATRIX);
+  intensityHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_INTENSITY);
+}

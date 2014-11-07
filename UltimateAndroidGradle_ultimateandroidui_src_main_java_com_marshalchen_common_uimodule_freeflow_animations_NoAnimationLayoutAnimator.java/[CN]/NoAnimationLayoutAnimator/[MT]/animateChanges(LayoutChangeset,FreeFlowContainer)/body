@@ -1,0 +1,12 @@
+{
+  this.changes=changes;
+  for (  Pair<FreeFlowItem,Rect> item : changes.getMoved()) {
+    Rect r=item.first.frame;
+    View v=item.first.view;
+    int wms=MeasureSpec.makeMeasureSpec(r.right - r.left,MeasureSpec.EXACTLY);
+    int hms=MeasureSpec.makeMeasureSpec(r.bottom - r.top,MeasureSpec.EXACTLY);
+    v.measure(wms,hms);
+    v.layout(r.left,r.top,r.right,r.bottom);
+  }
+  callback.onLayoutChangeAnimationsCompleted(this);
+}

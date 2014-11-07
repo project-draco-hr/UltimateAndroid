@@ -1,0 +1,11 @@
+{
+  if (typeface == null)   return null;
+synchronized (sCachedSpans) {
+    if (!sCachedSpans.containsKey(typeface)) {
+      final CalligraphyTypefaceSpan span=new CalligraphyTypefaceSpan(typeface);
+      sCachedSpans.put(typeface,span);
+      return span;
+    }
+    return sCachedSpans.get(typeface);
+  }
+}
