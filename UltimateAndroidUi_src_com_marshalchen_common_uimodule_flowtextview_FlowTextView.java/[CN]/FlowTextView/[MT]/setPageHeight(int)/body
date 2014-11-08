@@ -1,4 +1,0 @@
-{
-  this.pageHeight=pageHeight;
-  invalidate();
-}

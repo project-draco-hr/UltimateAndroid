@@ -1,6 +1,0 @@
-{
-  super.initShaderHandles();
-  focusFallOffRateHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_FOCUS_FALLOFF);
-  topFocusLevelHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_TOP_FOCUS);
-  bottomFocusLevelHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_BOTTOM_FOCUS);
-}

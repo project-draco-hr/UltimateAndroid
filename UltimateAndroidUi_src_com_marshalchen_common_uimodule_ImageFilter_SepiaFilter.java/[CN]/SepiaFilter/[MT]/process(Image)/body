@@ -1,4 +1,0 @@
-{
-  imageIn=gradientMapFx.process(imageIn);
-  return saturationFx.process(imageIn);
-}

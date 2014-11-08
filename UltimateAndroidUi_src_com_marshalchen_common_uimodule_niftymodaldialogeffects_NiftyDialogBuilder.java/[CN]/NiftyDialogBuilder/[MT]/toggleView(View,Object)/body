@@ -1,8 +1,0 @@
-{
-  if (obj == null) {
-    view.setVisibility(View.GONE);
-  }
- else {
-    view.setVisibility(View.VISIBLE);
-  }
-}

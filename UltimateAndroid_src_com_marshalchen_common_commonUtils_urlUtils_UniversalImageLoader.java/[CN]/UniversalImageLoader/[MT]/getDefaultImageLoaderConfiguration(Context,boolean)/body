@@ -1,8 +1,0 @@
-{
-  ImageLoaderConfiguration.Builder builder=getDefaultImageLoaderConfigurationBuilder(context);
-  if (isWriteLog) {
-    builder.writeDebugLogs();
-  }
-  ImageLoaderConfiguration config=builder.build();
-  return config;
-}

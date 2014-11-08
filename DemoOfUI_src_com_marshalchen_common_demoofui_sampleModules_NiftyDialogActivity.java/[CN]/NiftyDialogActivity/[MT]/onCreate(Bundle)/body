@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.nifty_dialog_activity);
-}

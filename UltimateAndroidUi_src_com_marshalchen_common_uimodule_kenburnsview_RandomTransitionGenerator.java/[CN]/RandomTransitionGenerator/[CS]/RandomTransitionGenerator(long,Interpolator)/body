@@ -1,4 +1,0 @@
-{
-  setTransitionDuration(transitionDuration);
-  setTransitionInterpolator(transitionInterpolator);
-}

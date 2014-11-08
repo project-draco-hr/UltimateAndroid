@@ -1,4 +1,0 @@
-{
-  mArrowWidth=(int)width;
-  mArrowHeight=(int)height;
-}

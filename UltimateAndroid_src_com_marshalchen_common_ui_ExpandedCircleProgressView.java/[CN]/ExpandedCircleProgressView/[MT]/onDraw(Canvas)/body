@@ -1,6 +1,0 @@
-{
-  canvas.drawCircle(mProgressCircle.centerX,mProgressCircle.centerY,mProgressCircle.radius,mProgressCirclePaint);
-  canvas.drawCircle(mInnerCircle.centerX,mInnerCircle.centerY,mInnerCircle.radius,mInnerCirclePaint);
-  canvas.drawCircle(mOuterCircle.centerX,mOuterCircle.centerY,mOuterCircle.radius,mOuterCirclePaint);
-  canvas.drawText(mCurrentProgress,mInnerCircle.centerX,mInnerCircle.centerY,mTextPaint);
-}

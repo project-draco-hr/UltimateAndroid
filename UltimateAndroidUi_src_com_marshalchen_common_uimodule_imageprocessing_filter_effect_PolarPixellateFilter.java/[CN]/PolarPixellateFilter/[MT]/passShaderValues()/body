@@ -1,5 +1,0 @@
-{
-  super.passShaderValues();
-  GLES20.glUniform2f(fractionalSizeHandle,fractionalSize.x,fractionalSize.y);
-  GLES20.glUniform2f(centerHandle,center.x,center.y);
-}

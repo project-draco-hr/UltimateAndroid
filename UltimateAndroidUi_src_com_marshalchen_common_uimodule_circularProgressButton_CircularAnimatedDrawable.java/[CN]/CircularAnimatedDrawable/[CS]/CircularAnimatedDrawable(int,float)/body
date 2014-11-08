@@ -1,9 +1,0 @@
-{
-  mBorderWidth=borderWidth;
-  mPaint=new Paint();
-  mPaint.setAntiAlias(true);
-  mPaint.setStyle(Paint.Style.STROKE);
-  mPaint.setStrokeWidth(borderWidth);
-  mPaint.setColor(color);
-  setupAnimations();
-}

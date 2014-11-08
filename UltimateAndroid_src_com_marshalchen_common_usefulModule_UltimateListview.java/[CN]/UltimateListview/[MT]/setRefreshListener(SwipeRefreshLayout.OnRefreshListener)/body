@@ -1,4 +1,0 @@
-{
-  mSwipeRefreshLayout.setEnabled(true);
-  mSwipeRefreshLayout.setOnRefreshListener(listener);
-}

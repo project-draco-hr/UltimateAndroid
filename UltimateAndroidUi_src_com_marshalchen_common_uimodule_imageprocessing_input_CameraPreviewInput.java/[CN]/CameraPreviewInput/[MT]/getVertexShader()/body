@@ -1,3 +1,0 @@
-{
-  return "uniform mat4 " + UNIFORM_CAM_MATRIX + ";\n"+ "attribute vec4 "+ ATTRIBUTE_POSITION+ ";\n"+ "attribute vec2 "+ ATTRIBUTE_TEXCOORD+ ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "void main() {\n"+ "   vec4 texPos = "+ UNIFORM_CAM_MATRIX+ " * vec4("+ ATTRIBUTE_TEXCOORD+ ", 1, 1);\n"+ "   "+ VARYING_TEXCOORD+ " = texPos.xy;\n"+ "   gl_Position = "+ ATTRIBUTE_POSITION+ ";\n"+ "}\n";
-}

@@ -1,4 +1,0 @@
-{
-  mSuppMatrix.setRotate(degrees % 360);
-  checkAndDisplayMatrix();
-}

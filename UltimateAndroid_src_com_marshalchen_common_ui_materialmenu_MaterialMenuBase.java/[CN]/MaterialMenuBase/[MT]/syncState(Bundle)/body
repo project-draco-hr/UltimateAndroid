@@ -1,9 +1,0 @@
-{
-  if (state != null) {
-    String iconStateName=state.getString(STATE_KEY);
-    if (iconStateName == null) {
-      iconStateName=MaterialMenuDrawable.IconState.BURGER.name();
-    }
-    setState(MaterialMenuDrawable.IconState.valueOf(iconStateName));
-  }
-}

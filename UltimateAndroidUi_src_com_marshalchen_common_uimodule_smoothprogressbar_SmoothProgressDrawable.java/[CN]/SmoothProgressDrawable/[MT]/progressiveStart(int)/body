@@ -1,4 +1,0 @@
-{
-  resetProgressiveStart(index);
-  start();
-}

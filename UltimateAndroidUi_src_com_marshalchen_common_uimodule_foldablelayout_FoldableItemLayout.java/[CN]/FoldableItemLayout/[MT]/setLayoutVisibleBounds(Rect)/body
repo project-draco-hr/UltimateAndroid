@@ -1,4 +1,0 @@
-{
-  mTopPart.setVisibleBounds(visibleBounds);
-  mBottomPart.setVisibleBounds(visibleBounds);
-}

@@ -1,5 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.list_anim_menu_main,menu);
-  menu.findItem(R.id.menu_main_donate).setVisible(mService != null);
-  return super.onCreateOptionsMenu(menu);
-}

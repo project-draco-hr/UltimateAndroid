@@ -1,5 +1,0 @@
-{
-  path.computeBounds(rect,false);
-  doLimits(rect.left,rect.top);
-  doLimits(rect.right,rect.bottom);
-}

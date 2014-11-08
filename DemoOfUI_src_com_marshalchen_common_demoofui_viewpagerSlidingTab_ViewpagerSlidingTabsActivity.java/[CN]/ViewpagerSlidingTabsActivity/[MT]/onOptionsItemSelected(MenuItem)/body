@@ -1,9 +1,0 @@
-{
-switch (item.getItemId()) {
-case R.id.action_contact:
-    QuickContactFragment dialog=new QuickContactFragment();
-  dialog.show(getSupportFragmentManager(),"QuickContactFragment");
-return true;
-}
-return super.onOptionsItemSelected(item);
-}

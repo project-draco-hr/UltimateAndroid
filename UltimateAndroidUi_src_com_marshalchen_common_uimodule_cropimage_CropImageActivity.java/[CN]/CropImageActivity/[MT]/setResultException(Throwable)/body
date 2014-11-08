@@ -1,3 +1,0 @@
-{
-  setResult(Crop.RESULT_ERROR,new Intent().putExtra(Crop.Extra.ERROR,throwable));
-}

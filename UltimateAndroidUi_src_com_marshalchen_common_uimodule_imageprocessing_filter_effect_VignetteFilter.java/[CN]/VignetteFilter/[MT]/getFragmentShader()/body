@@ -1,3 +1,0 @@
-{
-  return "precision mediump float;\n" + "uniform sampler2D " + UNIFORM_TEXTURE0 + ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "uniform vec2 "+ UNIFORM_CENTER+ ";\n"+ "uniform vec3 "+ UNIFORM_COLOUR+ ";\n"+ "uniform float "+ UNIFORM_START+ ";\n"+ "uniform float "+ UNIFORM_END+ ";\n"+ "void main(){\n"+ "	lowp vec4 color = texture2D("+ UNIFORM_TEXTURE0+ ", "+ VARYING_TEXCOORD+ ");\n"+ " 	mediump float d = distance("+ VARYING_TEXCOORD+ ", "+ UNIFORM_CENTER+ ");\n"+ " 	lowp float percent = smoothstep("+ UNIFORM_START+ ", "+ UNIFORM_END+ ", d);\n"+ " 	gl_FragColor = vec4(mix(color.rgb, "+ UNIFORM_COLOUR+ ", percent), color.a);\n"+ "}\n";
-}

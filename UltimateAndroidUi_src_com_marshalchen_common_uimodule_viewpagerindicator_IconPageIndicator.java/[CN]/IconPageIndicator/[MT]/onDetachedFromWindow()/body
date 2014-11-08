@@ -1,6 +1,0 @@
-{
-  super.onDetachedFromWindow();
-  if (mIconSelector != null) {
-    removeCallbacks(mIconSelector);
-  }
-}

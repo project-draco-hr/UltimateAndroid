@@ -1,4 +1,0 @@
-{
-  mCurrentGlobalAngle=currentGlobalAngle;
-  invalidateSelf();
-}

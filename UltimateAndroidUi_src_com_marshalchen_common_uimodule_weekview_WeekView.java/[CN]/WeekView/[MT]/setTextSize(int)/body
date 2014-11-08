@@ -1,7 +1,0 @@
-{
-  mTextSize=textSize;
-  mTodayHeaderTextPaint.setTextSize(mTextSize);
-  mHeaderTextPaint.setTextSize(mTextSize);
-  mTimeTextPaint.setTextSize(mTextSize);
-  invalidate();
-}

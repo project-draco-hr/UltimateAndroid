@@ -1,7 +1,0 @@
-{
-  if (mLayout == null || mAdapter == null)   return 0;
-  float ht=mLayout.getContentHeight();
-  float scrollableHeight=ht - getHeight();
-  if (scrollableHeight == 0)   return 0;
-  return viewPortY / scrollableHeight;
-}

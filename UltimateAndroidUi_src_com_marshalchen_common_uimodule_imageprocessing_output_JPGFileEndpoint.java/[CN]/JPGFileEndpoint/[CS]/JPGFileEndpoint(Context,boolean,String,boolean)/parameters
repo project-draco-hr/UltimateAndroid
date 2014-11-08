@@ -1,4 +1,0 @@
-Context context
-boolean storeToMedia
-String filePath
-boolean increment

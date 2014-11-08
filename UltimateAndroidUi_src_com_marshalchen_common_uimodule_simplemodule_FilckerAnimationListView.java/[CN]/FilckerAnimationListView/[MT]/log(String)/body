@@ -1,3 +1,0 @@
-{
-  Logs.d(getClass().getSimpleName(),msg);
-}

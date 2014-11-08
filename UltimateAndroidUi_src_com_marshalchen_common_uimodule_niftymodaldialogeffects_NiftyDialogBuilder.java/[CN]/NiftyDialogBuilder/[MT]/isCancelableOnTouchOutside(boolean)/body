@@ -1,5 +1,0 @@
-{
-  this.isCancelable=cancelable;
-  this.setCanceledOnTouchOutside(cancelable);
-  return this;
-}

@@ -1,4 +1,0 @@
-{
-  mFooterIndicatorStyle=indicatorStyle;
-  invalidate();
-}

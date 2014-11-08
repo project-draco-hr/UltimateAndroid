@@ -1,4 +1,0 @@
-{
-  _size=((size >= 1) ? size : 1);
-  _depth=depth;
-}

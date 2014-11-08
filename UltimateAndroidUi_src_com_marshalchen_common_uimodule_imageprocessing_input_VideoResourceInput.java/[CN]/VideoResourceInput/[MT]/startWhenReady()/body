@@ -1,8 +1,0 @@
-{
-  if (ready) {
-    player.start();
-  }
- else {
-    startWhenReady=true;
-  }
-}

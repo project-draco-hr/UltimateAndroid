@@ -1,4 +1,0 @@
-{
-  super(fractionalWidth,aspectRatio);
-  this.dotScaling=dotScaling;
-}

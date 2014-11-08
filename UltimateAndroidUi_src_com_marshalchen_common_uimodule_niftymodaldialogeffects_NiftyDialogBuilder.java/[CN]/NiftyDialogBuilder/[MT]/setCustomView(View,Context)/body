@@ -1,7 +1,0 @@
-{
-  if (mFrameLayoutCustomView.getChildCount() > 0) {
-    mFrameLayoutCustomView.removeAllViews();
-  }
-  mFrameLayoutCustomView.addView(view);
-  return this;
-}

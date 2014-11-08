@@ -1,4 +1,0 @@
-{
-  super.onBoundsChange(bounds);
-  measureCircleProgress(bounds.width(),bounds.height());
-}

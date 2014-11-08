@@ -1,9 +1,0 @@
-{
-  ((ViewGroup)activity.getWindow().getDecorView()).addView(showcaseView);
-  if (!showcaseView.hasShot()) {
-    showcaseView.show();
-  }
- else {
-    showcaseView.hideImmediate();
-  }
-}

@@ -1,5 +1,0 @@
-{
-  super(context,0);
-  this.picasso=picasso;
-  this.layout=layout;
-}

@@ -1,5 +1,0 @@
-{
-  inflater.inflate(R.menu.stickygridheader_fragment_item_list,menu);
-  mMenu=menu;
-  menu.findItem(R.id.menu_toggle_sticky).setChecked(((StickyGridHeadersGridView)mGridView).areHeadersSticky());
-}

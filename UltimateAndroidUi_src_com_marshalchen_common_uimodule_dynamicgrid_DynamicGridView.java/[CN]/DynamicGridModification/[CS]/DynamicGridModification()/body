@@ -1,4 +1,0 @@
-{
-  super();
-  this.transitions=new Stack<Pair<Integer,Integer>>();
-}

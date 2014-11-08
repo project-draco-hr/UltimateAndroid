@@ -1,6 +1,0 @@
-{
-  if (!uniformMat3List.containsKey(name)) {
-    reInitialize();
-  }
-  uniformMat3List.put(name,value);
-}

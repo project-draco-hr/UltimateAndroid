@@ -1,6 +1,0 @@
-{
-  if (!uniformFloatArrayList.containsKey(name)) {
-    reInitialize();
-  }
-  uniformFloatArrayList.put(name,value);
-}

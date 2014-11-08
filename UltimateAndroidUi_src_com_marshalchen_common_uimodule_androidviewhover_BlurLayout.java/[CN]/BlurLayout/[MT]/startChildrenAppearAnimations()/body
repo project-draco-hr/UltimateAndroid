@@ -1,7 +1,0 @@
-{
-  for (  Map.Entry<View,ArrayList<AnimationProxy>> entry : mChildAppearAnimators.entrySet()) {
-    for (    AnimationProxy animator : entry.getValue()) {
-      animator.start();
-    }
-  }
-}

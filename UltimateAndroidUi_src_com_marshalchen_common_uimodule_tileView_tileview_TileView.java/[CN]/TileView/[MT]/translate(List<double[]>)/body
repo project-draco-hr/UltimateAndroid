@@ -1,3 +1,0 @@
-{
-  return positionManager.translate(positions);
-}

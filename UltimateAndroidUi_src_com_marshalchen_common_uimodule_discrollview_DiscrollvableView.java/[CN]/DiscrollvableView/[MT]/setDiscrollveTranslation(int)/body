@@ -1,9 +1,0 @@
-{
-  mDiscrollveTranslation=discrollveTranslation;
-  if (isDiscrollveTranslationFrom(TRANSLATION_FROM_BOTTOM) && isDiscrollveTranslationFrom(TRANSLATION_FROM_TOP)) {
-    throw new IllegalArgumentException("cannot translate from bottom and top");
-  }
-  if (isDiscrollveTranslationFrom(TRANSLATION_FROM_LEFT) && isDiscrollveTranslationFrom(TRANSLATION_FROM_RIGHT)) {
-    throw new IllegalArgumentException("cannot translate from left and right");
-  }
-}

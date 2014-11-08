@@ -1,9 +1,0 @@
-{
-  idList.clear();
-  mMobileItemId=INVALID_ID;
-  mobileView.setVisibility(View.VISIBLE);
-  mHoverCell=null;
-  if (!mIsEditMode && isPostHoneycomb() && mWobbleInEditMode)   stopWobble(true);
-  if (mIsEditMode && isPostHoneycomb() && mWobbleInEditMode)   restartWobble();
-  invalidate();
-}

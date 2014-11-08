@@ -1,7 +1,0 @@
-{
-  super.onResume();
-  final TextView textView1=(TextView)findViewById(R.id.jumping_text_1);
-  jumpingBeans1=new JumpingBeans.Builder().appendJumpingDots(textView1).build();
-  final TextView textView2=(TextView)findViewById(R.id.jumping_text_2);
-  jumpingBeans2=new JumpingBeans.Builder().makeTextJump(textView2,0,textView2.getText().toString().indexOf(' ')).setIsWave(false).setLoopDuration(1000).build();
-}

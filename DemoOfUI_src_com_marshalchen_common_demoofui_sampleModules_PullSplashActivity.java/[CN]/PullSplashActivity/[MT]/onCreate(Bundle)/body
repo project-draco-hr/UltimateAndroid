@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.pull_splash_activity);
-}

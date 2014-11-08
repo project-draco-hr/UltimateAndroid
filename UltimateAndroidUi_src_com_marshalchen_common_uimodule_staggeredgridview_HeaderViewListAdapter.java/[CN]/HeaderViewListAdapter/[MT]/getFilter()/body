@@ -1,6 +1,0 @@
-{
-  if (mIsFilterable) {
-    return ((Filterable)mAdapter).getFilter();
-  }
-  return null;
-}

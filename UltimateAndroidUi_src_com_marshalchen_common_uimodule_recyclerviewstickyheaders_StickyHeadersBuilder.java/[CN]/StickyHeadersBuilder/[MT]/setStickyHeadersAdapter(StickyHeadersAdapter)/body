@@ -1,3 +1,0 @@
-{
-  return setStickyHeadersAdapter(adapter,false);
-}

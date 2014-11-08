@@ -1,3 +1,0 @@
-{
-  mPaint.setColor(evaluate(percent,mColorSchemeColors[3],mColorSchemeColors[0]));
-}

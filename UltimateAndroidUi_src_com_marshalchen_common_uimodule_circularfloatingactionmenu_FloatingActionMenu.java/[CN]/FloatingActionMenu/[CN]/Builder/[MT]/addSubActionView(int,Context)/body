@@ -1,6 +1,0 @@
-{
-  LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-  View view=inflater.inflate(resId,null,false);
-  view.measure(View.MeasureSpec.UNSPECIFIED,View.MeasureSpec.UNSPECIFIED);
-  return this.addSubActionView(view,view.getMeasuredWidth(),view.getMeasuredHeight());
-}

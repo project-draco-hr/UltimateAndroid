@@ -1,5 +1,0 @@
-{
-  detachHeader(mStickiedHeader);
-  attachHeader(newStickiedHeader);
-  mStickiedHeader=newStickiedHeader;
-}

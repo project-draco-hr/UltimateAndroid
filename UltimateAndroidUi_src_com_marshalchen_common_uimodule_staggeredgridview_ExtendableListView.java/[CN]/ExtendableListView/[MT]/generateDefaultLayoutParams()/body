@@ -1,3 +1,0 @@
-{
-  return new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT,0);
-}

@@ -1,3 +1,0 @@
-{
-  return (Throwable)result.getSerializableExtra(Extra.ERROR);
-}

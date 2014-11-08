@@ -1,6 +1,0 @@
-{
-  for (int i=0; i < amount; i++) {
-    items.add(new Item());
-  }
-  notifyDataSetChanged();
-}

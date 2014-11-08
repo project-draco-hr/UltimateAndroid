@@ -1,4 +1,0 @@
-{
-  Query query=dao.queryBuilder().where(new WhereCondition.StringCondition(queryString)).build();
-  return query;
-}

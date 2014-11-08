@@ -1,4 +1,0 @@
-{
-  finish();
-  return super.getSupportParentActivityIntent();
-}

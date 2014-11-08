@@ -1,6 +1,0 @@
-{
-  super(context);
-  mColor=color;
-  Resources resources=context.getResources();
-  mResourcesEdgeEffect=new ResourcesEdgeEffect(resources.getAssets(),resources.getDisplayMetrics(),resources.getConfiguration());
-}

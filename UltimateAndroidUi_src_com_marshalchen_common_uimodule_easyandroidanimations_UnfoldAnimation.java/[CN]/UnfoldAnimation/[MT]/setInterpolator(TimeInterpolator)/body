@@ -1,4 +1,0 @@
-{
-  this.interpolator=interpolator;
-  return this;
-}

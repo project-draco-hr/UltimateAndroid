@@ -1,6 +1,0 @@
-{
-  this.startPoint=startPoint;
-  this.control1=control1;
-  this.control2=control2;
-  this.endPoint=endPoint;
-}

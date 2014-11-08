@@ -1,8 +1,0 @@
-{
-  mListViewLeft.post(new Runnable(){
-    @Override public void run(){
-      forceScroll();
-    }
-  }
-);
-}

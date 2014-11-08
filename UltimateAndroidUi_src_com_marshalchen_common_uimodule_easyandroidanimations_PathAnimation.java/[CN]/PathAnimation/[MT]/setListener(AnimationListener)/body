@@ -1,4 +1,0 @@
-{
-  this.listener=listener;
-  return this;
-}

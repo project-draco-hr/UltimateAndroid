@@ -1,4 +1,0 @@
-{
-  mContext=context;
-  mData=new ArrayList<CardModel>(items);
-}

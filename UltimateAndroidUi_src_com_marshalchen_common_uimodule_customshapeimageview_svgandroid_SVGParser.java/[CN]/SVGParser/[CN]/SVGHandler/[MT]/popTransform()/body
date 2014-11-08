@@ -1,5 +1,0 @@
-{
-  if (pushed) {
-    canvas.restore();
-  }
-}

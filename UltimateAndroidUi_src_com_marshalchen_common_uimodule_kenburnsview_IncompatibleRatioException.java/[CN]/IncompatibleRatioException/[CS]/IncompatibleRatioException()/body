@@ -1,3 +1,0 @@
-{
-  super("Can't perform Ken Burns effect on rects with distinct aspect ratios!");
-}

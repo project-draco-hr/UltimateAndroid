@@ -1,4 +1,0 @@
-{
-  int distance=target.getTop() + target.getHeight();
-  getAnimatorAgent().playTogether(ObjectAnimator.ofFloat(target,"alpha",0,1),ObjectAnimator.ofFloat(target,"translationY",-distance,0));
-}

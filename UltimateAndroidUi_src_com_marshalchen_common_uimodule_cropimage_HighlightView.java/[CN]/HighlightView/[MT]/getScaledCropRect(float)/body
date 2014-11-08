@@ -1,3 +1,0 @@
-{
-  return new Rect((int)(cropRect.left * scale),(int)(cropRect.top * scale),(int)(cropRect.right * scale),(int)(cropRect.bottom * scale));
-}

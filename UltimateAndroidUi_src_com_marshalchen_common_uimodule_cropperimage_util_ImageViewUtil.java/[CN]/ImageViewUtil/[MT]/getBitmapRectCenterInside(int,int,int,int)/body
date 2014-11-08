@@ -1,3 +1,0 @@
-{
-  return getBitmapRectCenterInsideHelper(bitmapWidth,bitmapHeight,viewWidth,viewHeight);
-}

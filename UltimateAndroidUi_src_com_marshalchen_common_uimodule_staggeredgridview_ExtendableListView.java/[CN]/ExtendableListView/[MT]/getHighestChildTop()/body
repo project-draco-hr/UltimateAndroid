@@ -1,3 +1,0 @@
-{
-  return hasChildren() ? getChildAt(0).getTop() : 0;
-}

@@ -1,4 +1,0 @@
-String url
-List<NameValuePair> paramsList
-String fileParams
-List<File> files

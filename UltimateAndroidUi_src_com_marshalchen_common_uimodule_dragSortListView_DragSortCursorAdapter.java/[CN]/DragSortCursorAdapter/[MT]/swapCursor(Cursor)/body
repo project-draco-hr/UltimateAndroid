@@ -1,5 +1,0 @@
-{
-  Cursor old=super.swapCursor(newCursor);
-  resetMappings();
-  return old;
-}

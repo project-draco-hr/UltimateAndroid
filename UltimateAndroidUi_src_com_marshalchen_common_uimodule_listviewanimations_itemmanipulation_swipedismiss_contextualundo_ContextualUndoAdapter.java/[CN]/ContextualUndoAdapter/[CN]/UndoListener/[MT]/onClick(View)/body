@@ -1,6 +1,0 @@
-{
-  clearCurrentRemovedView();
-  mContextualUndoView.displayContentView();
-  moveViewOffScreen();
-  animateViewComingBack();
-}

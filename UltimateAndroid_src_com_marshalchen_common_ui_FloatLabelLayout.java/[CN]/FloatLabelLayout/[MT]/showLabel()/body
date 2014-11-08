@@ -1,6 +1,0 @@
-{
-  mLabel.setVisibility(View.VISIBLE);
-  mLabel.setAlpha(0f);
-  mLabel.setTranslationY(mLabel.getHeight());
-  mLabel.animate().alpha(1f).translationY(0f).setDuration(ANIMATION_DURATION).setListener(null).start();
-}

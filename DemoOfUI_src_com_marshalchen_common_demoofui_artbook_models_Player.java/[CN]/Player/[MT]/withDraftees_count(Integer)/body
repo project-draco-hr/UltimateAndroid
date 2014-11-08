@@ -1,4 +1,0 @@
-{
-  this.draftees_count=draftees_count;
-  return this;
-}

@@ -1,5 +1,0 @@
-{
-  if (savedInstanceState != null) {
-    mCurrentRemovedId=savedInstanceState.getLong(EXTRA_ACTIVE_REMOVED_ID,-1);
-  }
-}

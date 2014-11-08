@@ -1,8 +1,0 @@
-{
-  mWrapped.onDestroyActionMode(mode);
-  mChoiceActionMode=null;
-  clearChoices();
-  updateOnScreenCheckedViews();
-  requestLayout();
-  setLongClickable(true);
-}

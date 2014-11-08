@@ -1,7 +1,0 @@
-{
-  scale=context.getResources().getDisplayMetrics().density;
-  size=convertToPixels(72,scale);
-  params=new FrameLayout.LayoutParams(size,size);
-  params.gravity=gravity;
-  this.activity=context;
-}

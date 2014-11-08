@@ -1,4 +1,0 @@
-{
-  animated=false;
-  return this;
-}

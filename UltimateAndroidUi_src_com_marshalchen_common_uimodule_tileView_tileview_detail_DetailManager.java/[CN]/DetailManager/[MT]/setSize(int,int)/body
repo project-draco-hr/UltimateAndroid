@@ -1,5 +1,0 @@
-{
-  width=w;
-  height=h;
-  update(true);
-}

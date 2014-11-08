@@ -1,3 +1,0 @@
-{
-  mOnItemClickListener.onItemClick(parent,view,mAdapter.translatePosition(position).mPosition,id);
-}

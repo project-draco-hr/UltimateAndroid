@@ -1,6 +1,0 @@
-{
-  if (shadow != mShadow) {
-    mShadow=shadow;
-    updateBackground();
-  }
-}

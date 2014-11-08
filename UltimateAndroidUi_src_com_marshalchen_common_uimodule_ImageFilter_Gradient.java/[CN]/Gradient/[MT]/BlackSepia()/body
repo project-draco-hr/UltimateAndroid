@@ -1,6 +1,0 @@
-{
-  List<Integer> colors=new ArrayList<Integer>();
-  colors.add(Color.BLACK);
-  colors.add(TintColors.Sepia());
-  return new Gradient(colors);
-}

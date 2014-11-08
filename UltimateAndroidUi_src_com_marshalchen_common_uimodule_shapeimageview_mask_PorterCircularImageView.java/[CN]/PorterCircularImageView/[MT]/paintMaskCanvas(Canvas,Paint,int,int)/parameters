@@ -1,4 +1,0 @@
-Canvas maskCanvas
-Paint maskPaint
-int width
-int height

@@ -1,5 +1,0 @@
-{
-  super.initShaderHandles();
-  upperThresholdHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_UPPER_THRESHOLD);
-  lowerThresholdHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_LOWER_THRESHOLD);
-}

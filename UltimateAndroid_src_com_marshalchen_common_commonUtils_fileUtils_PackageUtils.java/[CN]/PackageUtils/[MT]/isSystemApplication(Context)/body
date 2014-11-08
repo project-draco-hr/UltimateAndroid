@@ -1,6 +1,0 @@
-{
-  if (context == null) {
-    return false;
-  }
-  return isSystemApplication(context,context.getPackageName());
-}

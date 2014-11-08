@@ -1,4 +1,0 @@
-{
-  imageRect.set(-translateX,-translateY,bitmapWidth + translateX,bitmapHeight + translateY);
-  bitmapRadius=Math.round(radius / scale);
-}

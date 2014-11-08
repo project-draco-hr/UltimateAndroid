@@ -1,3 +1,0 @@
-{
-  return new AnimationProxy(hoverView,resId,technique,duration,delay,invisibleWhenDelaying,interpolator,listeners);
-}

@@ -1,3 +1,0 @@
-{
-  return "precision mediump float;\n" + "uniform sampler2D " + UNIFORM_TEXTURE0 + ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "uniform float "+ UNIFORM_SATURATION+ ";\n"+ "const vec3 luminanceWeighting = vec3(0.2125, 0.7154, 0.0721);\n"+ "void main(){\n"+ "   vec4 color = texture2D("+ UNIFORM_TEXTURE0+ ","+ VARYING_TEXCOORD+ ");\n"+ "   float luminance = dot(color.rgb, luminanceWeighting);\n"+ "   vec3 greyScaleColor = vec3(luminance);\n"+ "   gl_FragColor = vec4(mix(greyScaleColor, color.rgb, "+ UNIFORM_SATURATION+ "), color.a);\n"+ "}\n";
-}

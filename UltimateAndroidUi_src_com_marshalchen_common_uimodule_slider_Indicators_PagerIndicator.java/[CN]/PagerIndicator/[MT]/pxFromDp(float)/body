@@ -1,3 +1,0 @@
-{
-  return dp * this.getContext().getResources().getDisplayMetrics().density;
-}

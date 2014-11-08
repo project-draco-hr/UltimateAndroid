@@ -1,5 +1,0 @@
-{
-  retrieveOriginalScale(holder);
-  ViewCompat.setScaleX(holder.itemView,mInitialScaleX);
-  ViewCompat.setScaleY(holder.itemView,mInitialScaleY);
-}

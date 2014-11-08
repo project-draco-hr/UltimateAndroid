@@ -1,5 +1,0 @@
-Context context
-int layoutResId
-int titleParentResId
-int contentParentResId
-List<T> items

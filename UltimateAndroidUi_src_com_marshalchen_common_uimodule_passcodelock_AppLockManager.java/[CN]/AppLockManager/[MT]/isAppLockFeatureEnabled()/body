@@ -1,5 +1,0 @@
-{
-  if (currentAppLocker == null)   return false;
-  if (currentAppLocker instanceof DefaultAppLock)   return (android.os.Build.VERSION.SDK_INT >= 14);
- else   return true;
-}

@@ -1,4 +1,0 @@
-{
-  mActionDown=false;
-  performClick(list);
-}

@@ -1,5 +1,0 @@
-{
-  this(picture);
-  this.targetWidth=targetWidth;
-  this.targetHeight=targetHeight;
-}

@@ -1,9 +1,0 @@
-{
-  super.init(context,attrs,defStyle);
-  borderPaint.setStrokeWidth(borderWidth * 2);
-  if (attrs != null) {
-    TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.ShaderImageView,defStyle,0);
-    radius=typedArray.getDimensionPixelSize(R.styleable.ShaderImageView_ShaderImageViewRadius,radius);
-    typedArray.recycle();
-  }
-}

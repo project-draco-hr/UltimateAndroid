@@ -1,4 +1,0 @@
-{
-  final int listPadding=getRowPaddingLeft() + getRowPaddingRight();
-  return (gridWidth - listPadding - mItemMargin * (mColumnCount + 1)) / mColumnCount;
-}

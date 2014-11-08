@@ -1,4 +1,0 @@
-BaseAdapter baseAdapter
-float scaleFrom
-long animationDelayMillis
-long animationDurationMillis

@@ -1,6 +1,0 @@
-{
-  this.matrix=matrix;
-  xParts=matrix / 10;
-  yParts=matrix % 10;
-  return this;
-}

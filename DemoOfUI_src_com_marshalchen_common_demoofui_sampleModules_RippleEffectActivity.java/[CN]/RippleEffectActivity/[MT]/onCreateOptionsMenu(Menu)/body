@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.rippleeffect,menu);
-  return true;
-}

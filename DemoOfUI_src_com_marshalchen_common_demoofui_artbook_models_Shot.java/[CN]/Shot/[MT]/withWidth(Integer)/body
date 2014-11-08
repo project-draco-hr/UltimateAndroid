@@ -1,4 +1,0 @@
-{
-  this.width=width;
-  return this;
-}

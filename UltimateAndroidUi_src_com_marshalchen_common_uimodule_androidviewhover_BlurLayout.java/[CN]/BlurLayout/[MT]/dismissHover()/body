@@ -1,6 +1,0 @@
-{
-  if (getHoverStatus() != HOVER_STATUS.APPEARED || !mPlayingAnimators.isEmpty())   return;
-  startBlurImageDisappearAnimator();
-  startHoverDisappearAnimator();
-  startChildrenDisappearAnimations();
-}

@@ -1,6 +1,0 @@
-{
-  p.position=i;
-  p.viewType=mAdapter.getItemViewType(p.position);
-  p.v=getView(p.position,p.viewType);
-  p.valid=true;
-}

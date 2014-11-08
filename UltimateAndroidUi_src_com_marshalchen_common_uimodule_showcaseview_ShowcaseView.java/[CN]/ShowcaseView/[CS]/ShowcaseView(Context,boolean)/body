@@ -1,3 +1,0 @@
-{
-  this(context,null,R.styleable.CustomTheme_showcaseViewStyle,newStyle);
-}

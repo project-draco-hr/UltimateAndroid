@@ -1,5 +1,0 @@
-{
-  if (mEndButton != null) {
-    mEndButton.setText(text);
-  }
-}

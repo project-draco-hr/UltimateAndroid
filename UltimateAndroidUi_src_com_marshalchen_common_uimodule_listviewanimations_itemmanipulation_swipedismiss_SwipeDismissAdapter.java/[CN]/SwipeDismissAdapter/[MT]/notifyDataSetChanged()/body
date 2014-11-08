@@ -1,6 +1,0 @@
-{
-  super.notifyDataSetChanged();
-  if (mSwipeDismissListViewTouchListener != null) {
-    mSwipeDismissListViewTouchListener.notifyDataSetChanged();
-  }
-}

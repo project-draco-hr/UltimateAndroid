@@ -1,5 +1,0 @@
-{
-  super.passShaderValues();
-  GLES20.glUniform1f(fractionalWidthHandle,fractionalWidth);
-  GLES20.glUniform1f(aspectRatioHandle,aspectRatio);
-}

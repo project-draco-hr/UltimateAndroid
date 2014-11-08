@@ -1,3 +1,0 @@
-{
-  this.writer.println(new java.util.Date() + ": " + logMsg);
-}

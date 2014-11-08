@@ -1,3 +1,0 @@
-{
-  updateCropWindow(x,y,imageRect,snapRadius);
-}

@@ -1,4 +1,0 @@
-{
-  setRenderSize(rendererContext.getWidth(),rendererContext.getHeight());
-  super.initWithGLContext();
-}

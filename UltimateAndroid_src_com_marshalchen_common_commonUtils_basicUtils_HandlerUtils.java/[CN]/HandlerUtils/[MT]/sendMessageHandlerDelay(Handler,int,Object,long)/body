@@ -1,6 +1,0 @@
-{
-  Message message=new Message();
-  message.what=what;
-  message.obj=obj;
-  handler.sendMessageDelayed(message,delayTime);
-}

@@ -1,8 +1,0 @@
-{
-  if (item.getItemId() == R.id.action_select) {
-    resultView.setImageDrawable(null);
-    Crop.pickImage(this);
-    return true;
-  }
-  return super.onOptionsItemSelected(item);
-}

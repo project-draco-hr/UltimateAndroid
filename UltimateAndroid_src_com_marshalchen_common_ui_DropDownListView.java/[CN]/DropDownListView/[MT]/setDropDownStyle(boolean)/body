@@ -1,6 +1,0 @@
-{
-  if (this.isDropDownStyle != isDropDownStyle) {
-    this.isDropDownStyle=isDropDownStyle;
-    initDropDownStyle();
-  }
-}

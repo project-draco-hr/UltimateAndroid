@@ -1,5 +1,0 @@
-{
-  Drawable ret=getIndeterminateDrawable();
-  if (ret == null || !(ret instanceof SmoothProgressDrawable))   throw new RuntimeException("The drawable is not a SmoothProgressDrawable");
-  return (SmoothProgressDrawable)ret;
-}

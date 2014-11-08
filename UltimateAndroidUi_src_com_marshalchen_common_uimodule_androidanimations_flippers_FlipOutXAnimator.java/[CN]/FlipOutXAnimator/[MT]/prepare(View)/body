@@ -1,3 +1,0 @@
-{
-  getAnimatorAgent().playTogether(ObjectAnimator.ofFloat(target,"rotationX",0,90),ObjectAnimator.ofFloat(target,"alpha",1,0));
-}

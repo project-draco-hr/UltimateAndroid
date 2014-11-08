@@ -1,3 +1,0 @@
-{
-  return getResources().getDimensionPixelSize(id);
-}

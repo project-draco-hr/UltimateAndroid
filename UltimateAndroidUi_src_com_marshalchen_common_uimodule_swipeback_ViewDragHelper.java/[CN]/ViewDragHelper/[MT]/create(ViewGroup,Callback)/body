@@ -1,3 +1,0 @@
-{
-  return new ViewDragHelper(forParent.getContext(),forParent,cb);
-}

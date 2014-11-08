@@ -1,4 +1,0 @@
-{
-  super.init(context,attrs,defStyle);
-  square=true;
-}

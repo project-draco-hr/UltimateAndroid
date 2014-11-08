@@ -1,9 +1,0 @@
-{
-  super(context,parent);
-  mParent=parent;
-  mResources=context.getResources();
-  mRing=new Ring(mCallback);
-  mRing.setColors(COLORS);
-  updateSizes(DEFAULT);
-  setupAnimators();
-}

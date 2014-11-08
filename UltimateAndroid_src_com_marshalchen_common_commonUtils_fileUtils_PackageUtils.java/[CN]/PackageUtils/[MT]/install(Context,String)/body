@@ -1,6 +1,0 @@
-{
-  if (PackageUtils.isSystemApplication(context) || ShellUtils.checkRootPermission()) {
-    return installSilent(context,filePath);
-  }
-  return installNormal(context,filePath) ? INSTALL_SUCCEEDED : INSTALL_FAILED_INVALID_URI;
-}

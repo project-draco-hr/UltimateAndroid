@@ -1,5 +1,0 @@
-{
-  int[] maxSize=new int[1];
-  GLES10.glGetIntegerv(GLES10.GL_MAX_TEXTURE_SIZE,maxSize,0);
-  return maxSize[0];
-}

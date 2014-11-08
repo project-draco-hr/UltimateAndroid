@@ -1,5 +1,0 @@
-{
-  if (direction == DIRECTION_LEFT)   this.leftMenuItems=menuItems;
- else   this.rightMenuItems=menuItems;
-  rebuildMenu();
-}

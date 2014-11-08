@@ -1,6 +1,0 @@
-{
-  super.onStop();
-  for (  LifeCycleListener listener : listeners) {
-    listener.onActivityStopped(this);
-  }
-}

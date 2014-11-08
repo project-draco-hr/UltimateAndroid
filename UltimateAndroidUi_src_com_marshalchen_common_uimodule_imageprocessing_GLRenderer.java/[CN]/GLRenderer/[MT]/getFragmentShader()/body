@@ -1,3 +1,0 @@
-{
-  return "precision mediump float;\n" + "uniform sampler2D " + UNIFORM_TEXTURE0 + ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "void main(){\n"+ "   gl_FragColor = texture2D("+ UNIFORM_TEXTURE0+ ","+ VARYING_TEXCOORD+ ");\n"+ "}\n";
-}

@@ -1,4 +1,0 @@
-{
-  super.onLayout(paramBoolean,paramInt1,paramInt2,paramInt3,paramInt4);
-  if (this.mHeaderHeight == 0)   this.mHeaderHeight=this.mHeaderContainer.getHeight();
-}

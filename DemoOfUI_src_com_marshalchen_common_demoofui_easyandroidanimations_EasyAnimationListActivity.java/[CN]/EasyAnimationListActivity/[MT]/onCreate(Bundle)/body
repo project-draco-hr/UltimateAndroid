@@ -1,8 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.easy_animation_activity_animation_list);
-  if (findViewById(R.id.animation_detail_container) != null) {
-    mTwoPane=true;
-    ((AnimationListFragment)getFragmentManager().findFragmentById(R.id.animation_list)).setActivateOnItemClick(true);
-  }
-}

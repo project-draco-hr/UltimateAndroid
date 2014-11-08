@@ -1,3 +1,0 @@
-{
-  _amount=LIB_PI / ((amount >= 1) ? amount : 1);
-}

@@ -1,5 +1,0 @@
-{
-  Log.d(TAG,"Loading data");
-  pageIndex++;
-  fetch.load(this,itemsPerPage,pageIndex);
-}

@@ -1,5 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.floating_action_button_activity);
-  FloatActionButton fabButton=new FloatActionButton.Builder(this).withDrawable(getResources().getDrawable(R.drawable.ico_arrow2x)).withButtonColor(Color.WHITE).withGravity(Gravity.CENTER | Gravity.RIGHT).withMargins(0,0,16,16).create();
-}

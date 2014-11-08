@@ -1,4 +1,0 @@
-{
-  double currentValue=mRevealerSpring.getEndValue();
-  mRevealerSpring.setEndValue(currentValue == 1 ? 0 : 1);
-}

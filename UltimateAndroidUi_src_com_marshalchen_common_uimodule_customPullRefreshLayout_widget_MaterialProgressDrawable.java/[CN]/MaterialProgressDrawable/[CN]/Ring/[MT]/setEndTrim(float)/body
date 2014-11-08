@@ -1,4 +1,0 @@
-{
-  mEndTrim=endTrim;
-  invalidateSelf();
-}

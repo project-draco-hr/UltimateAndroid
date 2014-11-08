@@ -1,5 +1,0 @@
-{
-  super.onBoundsChange(bounds);
-  mBounds.set(bounds);
-  updateShaderMatrix();
-}

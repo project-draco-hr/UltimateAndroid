@@ -1,4 +1,0 @@
-{
-  super(in);
-  mExpanded=in.readInt() == 1;
-}

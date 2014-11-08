@@ -1,8 +1,0 @@
-{
-  if (tintButton) {
-    mEndButton.getBackground().setColorFilter(showcaseColor,PorterDuff.Mode.MULTIPLY);
-  }
- else {
-    mEndButton.getBackground().setColorFilter(HOLO_BLUE,PorterDuff.Mode.MULTIPLY);
-  }
-}

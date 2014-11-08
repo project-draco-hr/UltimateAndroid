@@ -1,4 +1,0 @@
-{
-  Image clone=gradientFx.process(imageIn.clone());
-  return blender.Blend(imageIn,clone);
-}

@@ -1,6 +1,0 @@
-{
-  if (mCurrentPosition == -1)   return i;
- else   if (i == childCount - 1)   return mCurrentPosition;
- else   if (i >= mCurrentPosition)   return i + 1;
-  return i;
-}

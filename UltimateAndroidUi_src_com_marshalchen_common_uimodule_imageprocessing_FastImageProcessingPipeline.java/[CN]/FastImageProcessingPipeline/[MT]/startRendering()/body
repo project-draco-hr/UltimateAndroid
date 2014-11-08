@@ -1,5 +1,0 @@
-{
-  if (rootRenderers.size() != 0) {
-    rendering=true;
-  }
-}

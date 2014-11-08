@@ -1,4 +1,0 @@
-{
-  mInitDragDeltaY=mDragDeltaY;
-  mFinalDragDeltaY=mFloatViewHeightHalf;
-}

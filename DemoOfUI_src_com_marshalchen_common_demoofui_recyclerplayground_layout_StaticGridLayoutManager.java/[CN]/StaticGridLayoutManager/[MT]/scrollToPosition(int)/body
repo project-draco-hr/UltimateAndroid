@@ -1,9 +1,0 @@
-{
-  if (position >= getItemCount()) {
-    Log.e(TAG,"Cannot scroll to " + position + ", item count is "+ getItemCount());
-    return;
-  }
-  mForceClearOffsets=true;
-  mFirstVisiblePosition=position;
-  requestLayout();
-}

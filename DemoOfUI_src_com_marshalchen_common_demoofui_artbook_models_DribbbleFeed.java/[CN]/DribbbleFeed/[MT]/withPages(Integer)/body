@@ -1,4 +1,0 @@
-{
-  this.pages=pages;
-  return this;
-}

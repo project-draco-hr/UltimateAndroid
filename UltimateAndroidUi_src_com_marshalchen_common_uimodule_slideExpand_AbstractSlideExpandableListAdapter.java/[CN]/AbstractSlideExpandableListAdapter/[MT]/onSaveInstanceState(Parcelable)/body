@@ -1,6 +1,0 @@
-{
-  SavedState ss=new SavedState(parcelable);
-  ss.lastOpenPosition=this.lastOpenPosition;
-  ss.openItems=this.openItems;
-  return ss;
-}

@@ -1,6 +1,0 @@
-{
-  super.onStart();
-  for (  LifeCycleListener listener : listeners) {
-    listener.onActivityStarted(this);
-  }
-}

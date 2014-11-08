@@ -1,6 +1,0 @@
-{
-  super.onCreateOptionsMenu(menu);
-  MenuInflater inflater=getMenuInflater();
-  inflater.inflate(R.menu.stand_up_timer_teams_options_menu,menu);
-  return true;
-}

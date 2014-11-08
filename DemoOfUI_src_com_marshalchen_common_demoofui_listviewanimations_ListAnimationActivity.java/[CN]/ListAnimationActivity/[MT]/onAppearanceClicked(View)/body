@@ -1,4 +1,0 @@
-{
-  Intent intent=new Intent(this,AppearanceExamplesActivity.class);
-  startActivity(intent);
-}

@@ -1,5 +1,0 @@
-{
-  mWidth=bounds.width();
-  updateBounds();
-  super.onBoundsChange(bounds);
-}

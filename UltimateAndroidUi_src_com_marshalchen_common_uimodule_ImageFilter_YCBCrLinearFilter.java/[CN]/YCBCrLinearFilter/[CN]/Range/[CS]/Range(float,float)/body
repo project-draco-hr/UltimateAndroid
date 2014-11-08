@@ -1,4 +1,0 @@
-{
-  this.Min=min;
-  this.Max=max;
-}

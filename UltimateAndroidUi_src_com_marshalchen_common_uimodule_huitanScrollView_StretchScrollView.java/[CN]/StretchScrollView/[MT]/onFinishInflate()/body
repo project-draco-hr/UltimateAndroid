@@ -1,5 +1,0 @@
-{
-  if (getChildCount() > 0) {
-    mChildRootView=getChildAt(0);
-  }
-}

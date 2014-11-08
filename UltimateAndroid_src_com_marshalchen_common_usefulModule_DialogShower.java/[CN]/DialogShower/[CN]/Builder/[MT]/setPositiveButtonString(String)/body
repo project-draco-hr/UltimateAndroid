@@ -1,4 +1,0 @@
-{
-  dialogShower.setPositiveButtonString(title);
-  return this;
-}

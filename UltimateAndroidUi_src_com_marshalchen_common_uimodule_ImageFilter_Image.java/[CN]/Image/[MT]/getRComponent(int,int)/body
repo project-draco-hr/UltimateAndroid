@@ -1,3 +1,0 @@
-{
-  return (getColorArray()[((y * width + x))] & 0x00FF0000) >>> 16;
-}

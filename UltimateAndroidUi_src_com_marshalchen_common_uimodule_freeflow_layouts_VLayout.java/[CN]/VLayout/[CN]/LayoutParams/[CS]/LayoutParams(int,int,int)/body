@@ -1,5 +1,0 @@
-{
-  this.itemHeight=itemHeight;
-  this.headerWidth=headerWidth;
-  this.headerHeight=headerHeight;
-}

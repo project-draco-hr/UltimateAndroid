@@ -1,9 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.image_filter_activity);
-  imageView=(ImageView)findViewById(R.id.imgfilter);
-  textView=(TextView)findViewById(R.id.runtime);
-  Bitmap bitmap=BitmapFactory.decodeResource(ImageFilterActivity.this.getResources(),R.drawable.image_filter_image);
-  imageView.setImageBitmap(bitmap);
-  LoadImageFilter();
-}

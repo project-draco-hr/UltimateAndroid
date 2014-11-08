@@ -1,6 +1,0 @@
-{
-  ViewConfiguration configuration=ViewConfiguration.get(getContext());
-  touchSlop=configuration.getScaledTouchSlop();
-  this.flipOrientation=orientation;
-  setupSurfaceView(context);
-}

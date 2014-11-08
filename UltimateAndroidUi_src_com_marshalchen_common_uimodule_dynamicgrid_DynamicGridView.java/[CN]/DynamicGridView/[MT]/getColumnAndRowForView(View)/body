@@ -1,7 +1,0 @@
-{
-  int pos=getPositionForView(view);
-  int columns=getColumnCount();
-  int column=pos % columns;
-  int row=pos / columns;
-  return new Point(column,row);
-}

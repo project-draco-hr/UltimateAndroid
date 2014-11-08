@@ -1,4 +1,0 @@
-{
-  this.jumpingBeans=beans;
-  this.textView=new WeakReference<TextView>(textView);
-}

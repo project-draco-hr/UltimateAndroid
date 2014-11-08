@@ -1,4 +1,0 @@
-{
-  mBorderColor=colors;
-  return this;
-}

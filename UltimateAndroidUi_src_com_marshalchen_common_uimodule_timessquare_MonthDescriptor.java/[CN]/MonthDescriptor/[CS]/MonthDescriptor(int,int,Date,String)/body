@@ -1,6 +1,0 @@
-{
-  this.month=month;
-  this.year=year;
-  this.date=date;
-  this.label=label;
-}

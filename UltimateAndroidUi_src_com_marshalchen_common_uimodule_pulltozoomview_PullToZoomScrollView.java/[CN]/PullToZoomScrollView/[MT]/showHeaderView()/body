@@ -1,5 +1,0 @@
-{
-  if (mZoomView != null || mHeadView != null) {
-    mHeaderContainer.setVisibility(VISIBLE);
-  }
-}

@@ -1,6 +1,0 @@
-{
-  if (mFlingRunnable == null) {
-    mFlingRunnable=new FlingRunnable();
-  }
-  mFlingRunnable.start((int)-velocity);
-}

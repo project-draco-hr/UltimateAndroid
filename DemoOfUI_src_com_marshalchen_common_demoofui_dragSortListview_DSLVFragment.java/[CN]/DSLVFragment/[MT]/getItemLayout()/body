@@ -1,8 +1,0 @@
-{
-  if (removeMode == DragSortController.CLICK_REMOVE) {
-    return R.layout.drag_sort_listview_list_item_click_remove;
-  }
- else {
-    return R.layout.drag_sort_listview_list_item_handle_left;
-  }
-}

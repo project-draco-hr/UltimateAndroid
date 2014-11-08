@@ -1,5 +1,0 @@
-{
-  out.writeInt(column);
-  out.writeDouble(heightRatio);
-  out.writeByte((byte)(isHeaderFooter ? 1 : 0));
-}

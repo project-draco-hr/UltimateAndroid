@@ -1,6 +1,0 @@
-{
-  mBaseLayout=new BaseLayout(this);
-  mTopPart=new PartView(this,Gravity.TOP);
-  mBottomPart=new PartView(this,Gravity.BOTTOM);
-  setInTransformation(false);
-}

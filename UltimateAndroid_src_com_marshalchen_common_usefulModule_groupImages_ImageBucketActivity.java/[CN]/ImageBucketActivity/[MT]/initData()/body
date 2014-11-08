@@ -1,4 +1,0 @@
-{
-  dataList=helper.getImagesBucketList(false);
-  bimap=BitmapFactory.decodeResource(getResources(),R.drawable.icon_addpic_unfocused);
-}

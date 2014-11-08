@@ -1,7 +1,0 @@
-{
-  HashSet<Integer> result=new HashSet<Integer>();
-  for (  AtomicInteger i : mActiveIndexes) {
-    result.add(i.get());
-  }
-  return result;
-}

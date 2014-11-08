@@ -1,5 +1,0 @@
-{
-  rendering=false;
-  filtersToDestroy=new ArrayList<GLRenderer>();
-  rootRenderers=new ArrayList<GLRenderer>();
-}

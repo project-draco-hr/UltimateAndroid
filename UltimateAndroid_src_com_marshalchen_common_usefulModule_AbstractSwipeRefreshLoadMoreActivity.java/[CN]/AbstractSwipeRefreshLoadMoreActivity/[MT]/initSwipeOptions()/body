@@ -1,5 +1,0 @@
-{
-  refreshLayout.setOnRefreshListener(this);
-  setAppearance();
-  disableSwipe();
-}

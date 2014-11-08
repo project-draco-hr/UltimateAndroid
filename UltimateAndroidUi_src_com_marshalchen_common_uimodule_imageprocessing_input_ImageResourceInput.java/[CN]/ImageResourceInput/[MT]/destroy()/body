@@ -1,9 +1,0 @@
-{
-  super.destroy();
-  if (texture_in != 0) {
-    int[] tex=new int[1];
-    tex[0]=texture_in;
-    GLES20.glDeleteTextures(1,tex,0);
-  }
-  newBitmap=true;
-}

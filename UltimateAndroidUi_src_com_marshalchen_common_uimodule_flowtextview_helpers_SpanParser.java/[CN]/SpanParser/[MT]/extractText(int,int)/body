@@ -1,5 +1,0 @@
-{
-  if (start < 0)   start=0;
-  if (end > mTextLength - 1)   end=mTextLength - 1;
-  return mSpannable.subSequence(start,end).toString();
-}

@@ -1,3 +1,0 @@
-{
-  getPreferences(MODE_PRIVATE).edit().clear().commit();
-}

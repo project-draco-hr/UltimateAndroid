@@ -1,3 +1,0 @@
-{
-  return apply(context,sentBitmap,DEFAULT_BLUR_RADIUS);
-}

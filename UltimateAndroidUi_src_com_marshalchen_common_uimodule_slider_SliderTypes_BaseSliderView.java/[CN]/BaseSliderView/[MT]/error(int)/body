@@ -1,4 +1,0 @@
-{
-  mErrorPlaceHolderRes=resId;
-  return this;
-}

@@ -1,3 +1,0 @@
-{
-  Log.w(TAG,format(msg,args),err);
-}

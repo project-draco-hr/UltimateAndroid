@@ -1,4 +1,0 @@
-{
-  this.startline=startline;
-  this.invalidate();
-}

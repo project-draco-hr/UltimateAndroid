@@ -1,6 +1,0 @@
-{
-  if (reflectionGap != this.reflectionGap) {
-    this.reflectionGap=reflectionGap;
-    this.remeasureChildren();
-  }
-}

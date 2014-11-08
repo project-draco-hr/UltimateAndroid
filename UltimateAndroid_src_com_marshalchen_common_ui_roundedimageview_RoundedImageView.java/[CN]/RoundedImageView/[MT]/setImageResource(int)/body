@@ -1,8 +1,0 @@
-{
-  if (mResource != resId) {
-    mResource=resId;
-    mDrawable=resolveResource();
-    updateDrawableAttrs();
-    super.setImageDrawable(mDrawable);
-  }
-}

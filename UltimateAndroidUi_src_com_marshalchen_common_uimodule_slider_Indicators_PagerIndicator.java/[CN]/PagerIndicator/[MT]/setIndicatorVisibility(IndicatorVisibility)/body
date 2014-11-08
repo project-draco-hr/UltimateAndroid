@@ -1,9 +1,0 @@
-{
-  if (visibility == IndicatorVisibility.Visible) {
-    setVisibility(View.VISIBLE);
-  }
- else {
-    setVisibility(View.INVISIBLE);
-  }
-  resetDrawable();
-}

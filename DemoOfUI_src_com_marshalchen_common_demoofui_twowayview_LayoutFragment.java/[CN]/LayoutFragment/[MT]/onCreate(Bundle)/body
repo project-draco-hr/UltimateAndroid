@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  mLayoutId=getArguments().getInt(ARG_LAYOUT_ID);
-}

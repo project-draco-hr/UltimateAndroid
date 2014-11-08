@@ -1,3 +1,0 @@
-{
-  return SVGParser.parse(resources.openRawResource(resId),searchColor,replaceColor,false);
-}

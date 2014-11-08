@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  FadingActionBarHelper helper=new FadingActionBarHelper().actionBarBackground(R.drawable.fading_actionbar_ab_background_light).headerLayout(R.layout.fading_actionbar_header_light).contentLayout(R.layout.fading_actionbar_activity_scrollview).lightActionBar(true);
-  setContentView(helper.createView(this));
-  helper.initActionBar(this);
-}

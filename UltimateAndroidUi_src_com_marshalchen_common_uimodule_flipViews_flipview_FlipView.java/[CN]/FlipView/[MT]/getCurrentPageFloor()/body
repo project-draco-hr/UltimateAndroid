@@ -1,3 +1,0 @@
-{
-  return (int)Math.floor(mFlipDistance / FLIP_DISTANCE_PER_PAGE);
-}

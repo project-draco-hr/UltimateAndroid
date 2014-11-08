@@ -1,6 +1,0 @@
-{
-  if (newBitmap) {
-    loadTexture();
-  }
-  super.drawFrame();
-}

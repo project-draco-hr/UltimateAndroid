@@ -1,5 +1,0 @@
-{
-  if (!mInLayout) {
-    super.requestLayout();
-  }
-}

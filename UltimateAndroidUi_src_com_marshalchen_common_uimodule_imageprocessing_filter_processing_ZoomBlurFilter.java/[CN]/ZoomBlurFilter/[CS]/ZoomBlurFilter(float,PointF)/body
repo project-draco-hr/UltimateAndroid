@@ -1,4 +1,0 @@
-{
-  this.blurSize=blurSize;
-  this.blurLocation=blurLocation;
-}

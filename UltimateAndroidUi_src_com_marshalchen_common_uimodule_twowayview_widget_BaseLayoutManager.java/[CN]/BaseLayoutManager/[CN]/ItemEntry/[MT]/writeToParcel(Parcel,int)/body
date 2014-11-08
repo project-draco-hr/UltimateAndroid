@@ -1,9 +1,0 @@
-{
-  out.writeInt(startLane);
-  out.writeInt(anchorLane);
-  final int marginCount=(spanMargins != null ? spanMargins.length : 0);
-  out.writeInt(marginCount);
-  for (int i=0; i < marginCount; i++) {
-    out.writeInt(spanMargins[i]);
-  }
-}

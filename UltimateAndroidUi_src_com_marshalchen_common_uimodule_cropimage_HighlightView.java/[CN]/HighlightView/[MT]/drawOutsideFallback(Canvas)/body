@@ -1,6 +1,0 @@
-{
-  canvas.drawRect(0,0,canvas.getWidth(),drawRect.top,outsidePaint);
-  canvas.drawRect(0,drawRect.bottom,canvas.getWidth(),canvas.getHeight(),outsidePaint);
-  canvas.drawRect(0,drawRect.top,drawRect.left,drawRect.bottom,outsidePaint);
-  canvas.drawRect(drawRect.right,drawRect.top,canvas.getWidth(),drawRect.bottom,outsidePaint);
-}

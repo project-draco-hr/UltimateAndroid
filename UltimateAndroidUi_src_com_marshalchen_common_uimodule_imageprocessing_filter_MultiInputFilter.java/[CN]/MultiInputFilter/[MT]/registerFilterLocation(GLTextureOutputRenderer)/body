@@ -1,5 +1,0 @@
-{
-  if (!filterLocations.contains(filter)) {
-    filterLocations.add(filter);
-  }
-}

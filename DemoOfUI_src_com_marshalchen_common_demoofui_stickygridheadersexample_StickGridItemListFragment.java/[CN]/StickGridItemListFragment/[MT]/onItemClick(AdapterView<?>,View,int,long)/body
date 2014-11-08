@@ -1,3 +1,0 @@
-{
-  mCallbacks.onItemSelected(position);
-}

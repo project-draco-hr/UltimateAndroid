@@ -1,9 +1,0 @@
-{
-  if (bitmap == null)   return 0;
-  if (isOrientationChanged()) {
-    return bitmap.getHeight();
-  }
- else {
-    return bitmap.getWidth();
-  }
-}

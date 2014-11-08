@@ -1,6 +1,0 @@
-{
-  viewPool=new LinkedHashMap<Class,ArrayList<View>>();
-  for (int i=0; i < viewTypes.length; i++) {
-    viewPool.put(viewTypes[i],new ArrayList<View>());
-  }
-}

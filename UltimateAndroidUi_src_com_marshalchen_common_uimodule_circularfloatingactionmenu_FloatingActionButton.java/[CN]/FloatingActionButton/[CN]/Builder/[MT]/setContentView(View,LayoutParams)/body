@@ -1,5 +1,0 @@
-{
-  this.contentView=contentView;
-  this.contentParams=contentParams;
-  return this;
-}

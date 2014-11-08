@@ -1,6 +1,0 @@
-{
-  if (saturation < 0) {
-    saturation=0;
-  }
-  this.saturation=saturation;
-}

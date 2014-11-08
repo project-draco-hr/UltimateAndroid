@@ -1,5 +1,0 @@
-{
-  super(context,c,autoRequery);
-  mLayout=mDropDownLayout=layout;
-  mInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-}

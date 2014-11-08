@@ -1,5 +1,0 @@
-{
-  if (scrollViewMenu != null && scrollViewMenu.getParent() != null) {
-    removeView(scrollViewMenu);
-  }
-}

@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.draw_view_activity);
-}

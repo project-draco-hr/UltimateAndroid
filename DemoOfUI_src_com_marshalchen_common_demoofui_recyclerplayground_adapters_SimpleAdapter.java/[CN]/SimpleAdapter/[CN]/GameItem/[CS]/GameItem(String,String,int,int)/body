@@ -1,6 +1,0 @@
-{
-  this.homeTeam=homeTeam;
-  this.awayTeam=awayTeam;
-  this.homeScore=homeScore;
-  this.awayScore=awayScore;
-}

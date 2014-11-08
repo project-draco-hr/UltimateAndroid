@@ -1,6 +1,0 @@
-{
-  Message message=new Message();
-  message.what=what;
-  message.setData(bundle);
-  handler.sendMessage(message);
-}

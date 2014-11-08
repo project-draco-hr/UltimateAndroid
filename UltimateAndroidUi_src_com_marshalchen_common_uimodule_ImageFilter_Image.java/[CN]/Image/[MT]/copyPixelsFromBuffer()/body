@@ -1,5 +1,0 @@
-{
-  IntBuffer vbb=IntBuffer.wrap(colorArray);
-  destImage.copyPixelsFromBuffer(vbb);
-  vbb.clear();
-}

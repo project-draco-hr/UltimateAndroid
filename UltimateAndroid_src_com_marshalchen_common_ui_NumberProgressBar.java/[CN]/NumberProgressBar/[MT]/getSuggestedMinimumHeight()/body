@@ -1,3 +1,0 @@
-{
-  return Math.max((int)mTextSize,Math.max((int)mReachedBarHeight,(int)mUnreachedBarHeight));
-}

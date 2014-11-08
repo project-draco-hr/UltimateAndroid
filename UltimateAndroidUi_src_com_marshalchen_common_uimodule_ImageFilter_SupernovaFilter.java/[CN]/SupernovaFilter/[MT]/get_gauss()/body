@@ -1,5 +1,0 @@
-{
-  double s=0;
-  for (int i=0; i < 6; i++)   s=s + NoiseFilter.getRandomInt(-255,255) / (double)(RAND_MAX + 1.0);
-  return s / 6.0;
-}

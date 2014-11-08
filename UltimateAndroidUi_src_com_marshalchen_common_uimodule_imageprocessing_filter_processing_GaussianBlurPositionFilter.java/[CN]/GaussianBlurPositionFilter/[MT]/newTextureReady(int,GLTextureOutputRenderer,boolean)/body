@@ -1,9 +1,0 @@
-{
-  if (filterLocations.size() < 2 || !filterLocations.contains(source)) {
-    clearRegisteredFilterLocations();
-    registerFilterLocation(source,0);
-    registerFilterLocation(blur,1);
-    registerInputOutputFilter(source);
-  }
-  super.newTextureReady(texture,source,newData);
-}

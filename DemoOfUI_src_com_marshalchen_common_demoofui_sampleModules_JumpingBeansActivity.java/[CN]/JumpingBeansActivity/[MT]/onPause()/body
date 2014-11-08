@@ -1,5 +1,0 @@
-{
-  super.onPause();
-  jumpingBeans1.stopJumping();
-  jumpingBeans2.stopJumping();
-}

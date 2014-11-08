@@ -1,4 +1,0 @@
-{
-  mOnProgressiveStopEndedListener=onProgressiveStopEndedListener;
-  return this;
-}

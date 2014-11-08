@@ -1,6 +1,0 @@
-{
-  this.initFrequency=initFrequency;
-  this.initAmplitude=initAmplitude;
-  this.persistance=persistance;
-  this.octaves=Math.max(1,octaves);
-}

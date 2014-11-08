@@ -1,4 +1,0 @@
-{
-  super.onResume();
-  if (mParallaxSet)   mBackground.registerSensorManager();
-}

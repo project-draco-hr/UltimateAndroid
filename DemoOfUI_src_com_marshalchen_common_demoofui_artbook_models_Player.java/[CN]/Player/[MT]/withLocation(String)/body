@@ -1,4 +1,0 @@
-{
-  this.location=location;
-  return this;
-}

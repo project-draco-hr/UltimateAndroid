@@ -1,3 +1,0 @@
-{
-  return super.getInterpolation(Math.max(0,(input - 0.5f) * 2.0f));
-}

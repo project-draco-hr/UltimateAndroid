@@ -1,4 +1,0 @@
-{
-  mBitmapPaint.setColorFilter(cf);
-  invalidateSelf();
-}

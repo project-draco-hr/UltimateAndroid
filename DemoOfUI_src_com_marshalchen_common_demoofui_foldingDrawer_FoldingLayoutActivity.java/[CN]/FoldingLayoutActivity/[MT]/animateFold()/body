@@ -1,9 +1,0 @@
-{
-  float foldFactor=mFoldLayout.getFoldFactor();
-  ObjectAnimator animator=ObjectAnimator.ofFloat(mFoldLayout,"foldFactor",foldFactor,1);
-  animator.setRepeatMode(ValueAnimator.REVERSE);
-  animator.setRepeatCount(1);
-  animator.setDuration(FOLD_ANIMATION_DURATION);
-  animator.setInterpolator(new AccelerateInterpolator());
-  animator.start();
-}

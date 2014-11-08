@@ -1,6 +1,0 @@
-{
-  isRendering=true;
-  if (renderListener != null) {
-    renderListener.onRenderStart();
-  }
-}

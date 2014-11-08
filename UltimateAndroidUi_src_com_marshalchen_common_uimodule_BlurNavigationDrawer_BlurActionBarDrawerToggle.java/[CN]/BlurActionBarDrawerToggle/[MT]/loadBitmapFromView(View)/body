@@ -1,6 +1,0 @@
-{
-  Bitmap b=Bitmap.createBitmap(mView.getWidth(),mView.getHeight(),Bitmap.Config.ARGB_8888);
-  Canvas c=new Canvas(b);
-  mView.draw(c);
-  return b;
-}

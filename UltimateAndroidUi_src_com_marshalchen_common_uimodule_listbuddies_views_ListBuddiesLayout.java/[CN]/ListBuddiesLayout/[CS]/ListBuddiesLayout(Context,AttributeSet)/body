@@ -1,6 +1,0 @@
-{
-  super(context,attrs);
-  setListBuddiesAttributes(context,attrs);
-  init(context);
-  applyViewParams();
-}

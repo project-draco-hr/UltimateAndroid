@@ -1,9 +1,0 @@
-{
-  if (isHeaderOrFooter(position)) {
-    return super.getChildLeft(position);
-  }
- else {
-    final int column=getPositionColumn(position);
-    return mColumnLefts[column];
-  }
-}

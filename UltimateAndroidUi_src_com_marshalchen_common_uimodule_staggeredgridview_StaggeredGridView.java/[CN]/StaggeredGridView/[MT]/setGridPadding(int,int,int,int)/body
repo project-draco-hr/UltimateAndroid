@@ -1,6 +1,0 @@
-{
-  mGridPaddingLeft=left;
-  mGridPaddingTop=top;
-  mGridPaddingRight=right;
-  mGridPaddingBottom=bottom;
-}

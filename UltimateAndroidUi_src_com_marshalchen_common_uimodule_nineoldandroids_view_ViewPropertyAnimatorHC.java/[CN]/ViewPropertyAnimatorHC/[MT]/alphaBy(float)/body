@@ -1,4 +1,0 @@
-{
-  animatePropertyBy(ALPHA,value);
-  return this;
-}

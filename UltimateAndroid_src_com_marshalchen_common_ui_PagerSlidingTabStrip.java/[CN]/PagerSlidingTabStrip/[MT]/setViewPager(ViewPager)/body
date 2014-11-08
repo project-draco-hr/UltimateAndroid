@@ -1,8 +1,0 @@
-{
-  this.pager=pager;
-  if (pager.getAdapter() == null) {
-    throw new IllegalStateException("ViewPager does not have adapter instance.");
-  }
-  pager.setOnPageChangeListener(pageListener);
-  notifyDataSetChanged();
-}

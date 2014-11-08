@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  for (  LifeCycleListener listener : listeners) {
-    listener.onActivityCreated(this);
-  }
-}

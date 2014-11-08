@@ -1,3 +1,0 @@
-{
-  return toRoundCorner(toGrayscale(bmpOriginal),pixels);
-}

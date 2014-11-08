@@ -1,5 +1,0 @@
-{
-  iconPaint.setColor(color);
-  circlePaint.setColor(color);
-  invalidateSelf();
-}

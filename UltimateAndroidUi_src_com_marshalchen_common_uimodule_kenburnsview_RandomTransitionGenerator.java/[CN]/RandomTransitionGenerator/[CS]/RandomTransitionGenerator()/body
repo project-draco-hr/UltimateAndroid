@@ -1,3 +1,0 @@
-{
-  this(DEFAULT_TRANSITION_DURATION,new AccelerateDecelerateInterpolator());
-}

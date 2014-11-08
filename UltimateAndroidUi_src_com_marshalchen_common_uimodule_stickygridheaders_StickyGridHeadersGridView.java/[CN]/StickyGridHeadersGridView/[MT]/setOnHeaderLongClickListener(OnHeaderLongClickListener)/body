@@ -1,6 +1,0 @@
-{
-  if (!isLongClickable()) {
-    setLongClickable(true);
-  }
-  mOnHeaderLongClickListener=listener;
-}

@@ -1,3 +1,0 @@
-{
-  return execCommand("echo root",true,false).result == 0;
-}

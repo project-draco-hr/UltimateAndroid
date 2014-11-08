@@ -1,5 +1,0 @@
-{
-  this.context=context;
-  this.showHeaders=showHeaders;
-  setData(headerCount,itemCount);
-}

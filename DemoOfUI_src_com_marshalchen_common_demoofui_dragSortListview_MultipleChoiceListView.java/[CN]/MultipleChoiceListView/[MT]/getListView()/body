@@ -1,3 +1,0 @@
-{
-  return (DragSortListView)super.getListView();
-}

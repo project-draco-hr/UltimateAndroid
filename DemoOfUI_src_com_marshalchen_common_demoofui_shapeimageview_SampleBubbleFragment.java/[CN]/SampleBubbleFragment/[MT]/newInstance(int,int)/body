@@ -1,8 +1,0 @@
-{
-  SampleBubbleFragment fragment=new SampleBubbleFragment();
-  Bundle args=new Bundle();
-  args.putInt(ARG_LAYOUT_1,layout1);
-  args.putInt(ARG_LAYOUT_2,layout2);
-  fragment.setArguments(args);
-  return fragment;
-}

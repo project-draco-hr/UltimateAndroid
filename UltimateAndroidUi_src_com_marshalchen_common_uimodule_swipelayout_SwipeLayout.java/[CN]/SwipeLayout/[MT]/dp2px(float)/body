@@ -1,3 +1,0 @@
-{
-  return (int)(dp * getContext().getResources().getDisplayMetrics().density + 0.5f);
-}

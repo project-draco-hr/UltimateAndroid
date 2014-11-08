@@ -1,4 +1,0 @@
-{
-  mIsEditMode=true;
-  if (isPostHoneycomb() && mWobbleInEditMode)   startWobbleAnimation();
-}

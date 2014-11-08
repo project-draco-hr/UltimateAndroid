@@ -1,4 +1,0 @@
-{
-  this.shots_count=shots_count;
-  return this;
-}

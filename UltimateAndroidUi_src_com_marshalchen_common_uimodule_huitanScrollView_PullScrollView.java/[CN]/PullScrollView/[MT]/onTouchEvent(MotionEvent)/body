@@ -1,6 +1,0 @@
-{
-  if (mContentView != null) {
-    doTouchEvent(ev);
-  }
-  return mEnableTouch || super.onTouchEvent(ev);
-}

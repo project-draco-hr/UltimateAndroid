@@ -1,7 +1,0 @@
-{
-  updateViewport();
-  tileManager.updateTileSet();
-  tileManager.requestRender();
-  sampleManager.update();
-  redraw();
-}

@@ -1,5 +1,0 @@
-{
-  this.id=id;
-  this.level=0;
-  this.sb=new StringBuilder();
-}

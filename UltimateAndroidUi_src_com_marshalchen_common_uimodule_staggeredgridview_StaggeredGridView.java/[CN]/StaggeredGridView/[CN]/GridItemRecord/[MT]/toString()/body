@@ -1,3 +1,0 @@
-{
-  return "GridItemRecord.ListSavedState{" + Integer.toHexString(System.identityHashCode(this)) + " column:"+ column+ " heightRatio:"+ heightRatio+ " isHeaderFooter:"+ isHeaderFooter+ "}";
-}

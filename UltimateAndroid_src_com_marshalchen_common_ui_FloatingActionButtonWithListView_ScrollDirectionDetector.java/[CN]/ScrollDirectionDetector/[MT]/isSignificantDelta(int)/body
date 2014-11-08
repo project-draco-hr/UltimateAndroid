@@ -1,5 +1,0 @@
-{
-  boolean isSignificantDelta=Math.abs(mLastChangeY - newScrollY) > mMinSignificantScroll;
-  if (isSignificantDelta)   mLastChangeY=newScrollY;
-  return isSignificantDelta;
-}

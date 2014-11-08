@@ -1,9 +1,0 @@
-{
-  View v=getViewForId(itemId);
-  if (v == null) {
-    return -1;
-  }
- else {
-    return getPositionForView(v);
-  }
-}

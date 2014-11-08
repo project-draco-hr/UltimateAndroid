@@ -1,3 +1,0 @@
-{
-  return getChildCount() > 0 ? getChildAt(0) : null;
-}

@@ -1,9 +1,0 @@
-{
-  Bitmap newBitmap=Bitmap.createBitmap(bitmap.getWidth(),bitmap.getHeight(),Bitmap.Config.ARGB_8888);
-  Canvas canvas=new Canvas(newBitmap);
-  canvas.drawColor(Color.WHITE);
-  canvas.drawBitmap(bitmap,0,0,null);
-  OutputStream stream=new FileOutputStream(photo);
-  newBitmap.compress(Bitmap.CompressFormat.JPEG,80,stream);
-  stream.close();
-}

@@ -1,8 +1,0 @@
-{
-  View descriptionLayout=view.findViewById(R.id.description_layout);
-  if (descriptionLayout != null) {
-    view.findViewById(R.id.description_layout).setVisibility(View.VISIBLE);
-    new StandUpAnimator().animate(descriptionLayout);
-  }
-  Log.e(TAG,"onCurrentItemDisappear called");
-}

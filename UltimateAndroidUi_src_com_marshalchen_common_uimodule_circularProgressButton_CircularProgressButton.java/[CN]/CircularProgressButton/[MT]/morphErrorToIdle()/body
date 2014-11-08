@@ -1,9 +1,0 @@
-{
-  MorphingAnimation animation=createMorphing();
-  animation.setFromColor(getNormalColor(mErrorColorState));
-  animation.setToColor(getNormalColor(mIdleColorState));
-  animation.setFromStrokeColor(getNormalColor(mErrorColorState));
-  animation.setToStrokeColor(getNormalColor(mIdleColorState));
-  animation.setListener(mIdleStateListener);
-  animation.start();
-}

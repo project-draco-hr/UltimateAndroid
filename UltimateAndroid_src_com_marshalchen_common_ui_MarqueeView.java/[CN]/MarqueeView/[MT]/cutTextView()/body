@@ -1,7 +1,0 @@
-{
-  if (mTextField.getWidth() != getMeasuredWidth()) {
-    ViewGroup.LayoutParams lp=mTextField.getLayoutParams();
-    lp.width=getMeasuredWidth();
-    mTextField.setLayoutParams(lp);
-  }
-}

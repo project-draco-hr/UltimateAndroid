@@ -1,3 +1,0 @@
-{
-  return position < filterArray.size() ? filterArray.get(position).filter : null;
-}

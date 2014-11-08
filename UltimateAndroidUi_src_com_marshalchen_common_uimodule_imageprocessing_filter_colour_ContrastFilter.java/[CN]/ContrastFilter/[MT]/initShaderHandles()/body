@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  contrastHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_CONTRAST);
-}

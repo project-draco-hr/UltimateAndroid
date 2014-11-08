@@ -1,4 +1,0 @@
-{
-  super.draw(canvas);
-  mDrawable.draw(canvas);
-}

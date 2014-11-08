@@ -1,6 +1,0 @@
-{
-  mActionDown=true;
-  toogleListView(list);
-  mLastViewTouchId=list.getId();
-  startClickSelection(event,list,event.getY());
-}

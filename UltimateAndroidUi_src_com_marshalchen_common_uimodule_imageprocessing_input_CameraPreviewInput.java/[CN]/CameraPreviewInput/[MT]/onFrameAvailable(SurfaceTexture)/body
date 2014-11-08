@@ -1,4 +1,0 @@
-{
-  markAsDirty();
-  view.requestRender();
-}

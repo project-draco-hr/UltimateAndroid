@@ -1,3 +1,0 @@
-{
-  setTime(System.currentTimeMillis());
-}

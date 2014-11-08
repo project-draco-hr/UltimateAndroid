@@ -1,4 +1,0 @@
-{
-  super.setOnScrollListener(scrollListener);
-  mOnScrollListener=scrollListener;
-}

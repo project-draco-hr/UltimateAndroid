@@ -1,7 +1,0 @@
-{
-  TranslateAnimation ta=new TranslateAnimation(0,0,offset,offset);
-  ta.setDuration(0);
-  ta.setFillAfter(true);
-  view.setAnimation(ta);
-  ta.start();
-}

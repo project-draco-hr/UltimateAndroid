@@ -1,8 +1,0 @@
-{
-  if (progressButton.getProgress() != getProgress()) {
-    progressButton.setProgress(progressButton.getProgress());
-  }
- else   if (progressButton.isEnabled() != isEnabled()) {
-    progressButton.setEnabled(progressButton.isEnabled());
-  }
-}

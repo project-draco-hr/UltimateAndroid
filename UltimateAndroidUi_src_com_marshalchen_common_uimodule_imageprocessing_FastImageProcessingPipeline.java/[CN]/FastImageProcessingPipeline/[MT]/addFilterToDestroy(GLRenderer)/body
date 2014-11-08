@@ -1,5 +1,0 @@
-{
-synchronized (filtersToDestroy) {
-    filtersToDestroy.add(renderer);
-  }
-}

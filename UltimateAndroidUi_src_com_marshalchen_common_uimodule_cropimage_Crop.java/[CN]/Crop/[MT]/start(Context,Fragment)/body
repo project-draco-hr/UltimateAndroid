@@ -1,3 +1,0 @@
-{
-  fragment.startActivityForResult(getIntent(context),REQUEST_CROP);
-}

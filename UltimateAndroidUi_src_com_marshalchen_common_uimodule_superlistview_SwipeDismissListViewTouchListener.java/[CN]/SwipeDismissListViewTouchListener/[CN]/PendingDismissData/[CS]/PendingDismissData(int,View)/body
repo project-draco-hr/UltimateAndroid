@@ -1,4 +1,0 @@
-{
-  this.position=position;
-  this.view=view;
-}

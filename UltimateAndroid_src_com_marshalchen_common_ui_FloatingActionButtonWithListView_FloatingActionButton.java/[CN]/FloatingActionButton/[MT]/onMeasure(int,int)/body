@@ -1,9 +1,0 @@
-{
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  int size=getDimension(mType == TYPE_NORMAL ? R.dimen.fab_size_normal : R.dimen.fab_size_mini);
-  if (mShadow) {
-    int shadowSize=getDimension(R.dimen.fab_shadow_size);
-    size+=shadowSize * 2;
-  }
-  setMeasuredDimension(size,size);
-}

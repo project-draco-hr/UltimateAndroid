@@ -1,7 +1,0 @@
-{
-  int x=(mWidth + 2 * mPadding) / 2;
-  int y=(MONTH_HEADER_SIZE - MONTH_DAY_LABEL_TEXT_SIZE) / 2 + (MONTH_LABEL_TEXT_SIZE / 3);
-  StringBuilder stringBuilder=new StringBuilder(getMonthAndYearString().toLowerCase());
-  stringBuilder.setCharAt(0,Character.toUpperCase(stringBuilder.charAt(0)));
-  canvas.drawText(stringBuilder.toString(),x,y,mMonthTitlePaint);
-}

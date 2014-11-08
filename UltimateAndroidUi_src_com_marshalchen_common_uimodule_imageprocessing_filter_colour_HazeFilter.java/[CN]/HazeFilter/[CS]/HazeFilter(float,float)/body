@@ -1,4 +1,0 @@
-{
-  this.distance=distance;
-  this.slope=slope;
-}

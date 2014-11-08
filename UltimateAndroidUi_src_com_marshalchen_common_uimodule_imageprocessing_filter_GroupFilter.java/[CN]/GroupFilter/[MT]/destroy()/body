@@ -1,6 +1,0 @@
-{
-  super.destroy();
-  for (  BasicFilter filter : filters) {
-    filter.destroy();
-  }
-}

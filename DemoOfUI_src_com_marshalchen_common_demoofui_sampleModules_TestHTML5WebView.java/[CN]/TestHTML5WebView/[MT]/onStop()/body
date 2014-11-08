@@ -1,4 +1,0 @@
-{
-  super.onStop();
-  mWebView.stopLoading();
-}

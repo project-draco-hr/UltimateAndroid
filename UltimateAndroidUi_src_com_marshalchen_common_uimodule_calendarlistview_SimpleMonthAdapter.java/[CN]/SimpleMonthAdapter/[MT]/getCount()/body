@@ -1,3 +1,0 @@
-{
-  return ((mController.getMaxYear() - calendar.get(Calendar.YEAR)) + 1) * MONTHS_IN_YEAR;
-}

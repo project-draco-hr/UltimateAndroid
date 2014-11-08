@@ -1,4 +1,0 @@
-{
-  this.repeatCount=repeatCount;
-  return this;
-}

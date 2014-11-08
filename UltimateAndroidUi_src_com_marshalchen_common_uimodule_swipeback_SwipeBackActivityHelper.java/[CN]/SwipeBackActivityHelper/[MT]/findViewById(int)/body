@@ -1,6 +1,0 @@
-{
-  if (mSwipeBackLayout != null) {
-    return mSwipeBackLayout.findViewById(id);
-  }
-  return null;
-}

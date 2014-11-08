@@ -1,7 +1,0 @@
-{
-  super.onResume();
-  teamListAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,Team.findAllTeamNames(this));
-  setListAdapter(teamListAdapter);
-  getListView().setTextFilterEnabled(true);
-  getTextEntryView();
-}

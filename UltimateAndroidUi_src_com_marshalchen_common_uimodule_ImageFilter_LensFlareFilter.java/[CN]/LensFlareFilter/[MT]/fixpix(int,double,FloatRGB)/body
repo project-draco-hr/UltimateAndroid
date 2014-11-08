@@ -1,9 +1,0 @@
-{
-  int colorR=(color & 0xFF0000) >> 16;
-  int colorG=(color & 0x00FF00) >> 8;
-  int colorB=color & 0x0000FF;
-  colorR=colorR + (int)((255 - colorR) * procent * colpro.r);
-  colorG=colorG + (int)((255 - colorG) * procent * colpro.g);
-  colorB=colorB + (int)((255 - colorB) * procent * colpro.b);
-  return Color.rgb(colorR,colorG,colorB);
-}

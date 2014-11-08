@@ -1,4 +1,0 @@
-{
-  mEmptyPlaceHolderRes=resId;
-  return this;
-}

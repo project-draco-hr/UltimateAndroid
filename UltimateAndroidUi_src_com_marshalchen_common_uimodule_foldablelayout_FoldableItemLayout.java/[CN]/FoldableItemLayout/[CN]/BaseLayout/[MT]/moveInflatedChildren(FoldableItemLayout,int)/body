@@ -1,8 +1,0 @@
-{
-  while (layout.getChildCount() > firstSkippedItems) {
-    View view=layout.getChildAt(firstSkippedItems);
-    LayoutParams params=(LayoutParams)view.getLayoutParams();
-    layout.removeViewAt(firstSkippedItems);
-    addView(view,params);
-  }
-}

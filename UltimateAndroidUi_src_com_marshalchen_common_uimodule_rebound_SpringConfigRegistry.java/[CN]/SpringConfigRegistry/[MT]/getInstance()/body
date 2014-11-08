@@ -1,6 +1,0 @@
-{
-  if (instance == null) {
-    instance=new SpringConfigRegistry(true);
-  }
-  return instance;
-}

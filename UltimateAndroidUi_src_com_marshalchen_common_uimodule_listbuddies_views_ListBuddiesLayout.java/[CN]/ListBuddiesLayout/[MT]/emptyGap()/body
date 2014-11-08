@@ -1,6 +1,0 @@
-{
-  setLeftListMargin(mGap);
-  if (mGapView != null) {
-    mGapView.setVisibility(View.GONE);
-  }
-}

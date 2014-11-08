@@ -1,5 +1,0 @@
-{
-  if (radius > 0) {
-    mBlurEngine.setBlurRadius(radius);
-  }
-}

@@ -1,6 +1,0 @@
-{
-  super(context,attr,defStyle);
-  readStyleParameters(context,attr);
-  super.setScaleType(ScaleType.MATRIX);
-  mAttacher=new PanningViewAttacher(this,mPanningDurationInMs);
-}

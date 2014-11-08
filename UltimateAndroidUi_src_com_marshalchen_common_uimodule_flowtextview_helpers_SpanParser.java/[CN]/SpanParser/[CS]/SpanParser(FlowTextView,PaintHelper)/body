@@ -1,4 +1,0 @@
-{
-  this.mFlowTextView=flowTextView;
-  this.mPaintHelper=paintHelper;
-}

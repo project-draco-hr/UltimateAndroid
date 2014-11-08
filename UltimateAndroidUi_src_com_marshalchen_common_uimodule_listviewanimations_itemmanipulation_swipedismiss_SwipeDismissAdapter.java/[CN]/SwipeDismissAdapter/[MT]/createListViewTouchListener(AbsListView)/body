@@ -1,3 +1,0 @@
-{
-  return new SwipeDismissListViewTouchListener(listView,mOnDismissCallback,mSwipeOnScrollListener);
-}

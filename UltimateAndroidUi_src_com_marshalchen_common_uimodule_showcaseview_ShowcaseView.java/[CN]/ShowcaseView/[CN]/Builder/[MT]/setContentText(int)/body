@@ -1,3 +1,0 @@
-{
-  return setContentText(activity.getString(resId));
-}

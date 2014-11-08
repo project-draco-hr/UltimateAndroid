@@ -1,7 +1,0 @@
-{
-  if (!mEnable) {
-    return false;
-  }
-  mDragHelper.processTouchEvent(event);
-  return true;
-}

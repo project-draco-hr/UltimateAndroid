@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.pull_to_zoom_activity_pull_to_zoom_scroll_view);
-  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-  scrollView=(PullToZoomScrollView)findViewById(R.id.scroll_view);
-}

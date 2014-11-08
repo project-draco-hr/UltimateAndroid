@@ -1,3 +1,0 @@
-{
-  getActionBar().setDisplayHomeAsUpEnabled(true);
-}

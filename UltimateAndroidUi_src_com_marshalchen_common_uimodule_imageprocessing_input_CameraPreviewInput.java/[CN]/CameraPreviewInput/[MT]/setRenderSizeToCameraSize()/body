@@ -1,5 +1,0 @@
-{
-  Parameters params=camera.getParameters();
-  Size previewSize=params.getPreviewSize();
-  setRenderSize(previewSize.width,previewSize.height);
-}

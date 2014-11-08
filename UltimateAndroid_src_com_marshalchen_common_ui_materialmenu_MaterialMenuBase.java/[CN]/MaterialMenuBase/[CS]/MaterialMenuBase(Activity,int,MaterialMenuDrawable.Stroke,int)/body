@@ -1,3 +1,0 @@
-{
-  this(activity,color,stroke,transformDuration,DEFAULT_PRESSED_DURATION);
-}

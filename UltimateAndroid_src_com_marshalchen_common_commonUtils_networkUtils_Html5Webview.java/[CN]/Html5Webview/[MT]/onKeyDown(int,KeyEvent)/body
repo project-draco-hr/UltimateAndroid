@@ -1,9 +1,0 @@
-{
-  if (keyCode == KeyEvent.KEYCODE_BACK) {
-    if ((mCustomView == null) && canGoBack()) {
-      goBack();
-      return true;
-    }
-  }
-  return super.onKeyDown(keyCode,event);
-}

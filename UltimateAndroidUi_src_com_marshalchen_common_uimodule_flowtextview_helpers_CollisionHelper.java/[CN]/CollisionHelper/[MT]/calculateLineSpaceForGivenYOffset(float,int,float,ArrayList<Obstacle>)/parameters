@@ -1,4 +1,0 @@
-float lineYbottom
-int lineHeight
-float viewWidth
-ArrayList<Obstacle> obstacles

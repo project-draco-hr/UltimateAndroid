@@ -1,4 +1,0 @@
-{
-  stateChangeListener=listener;
-  return this;
-}

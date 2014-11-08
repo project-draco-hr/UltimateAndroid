@@ -1,6 +1,0 @@
-{
-  FixedTwoWayFragment fragment=new FixedTwoWayFragment();
-  Bundle args=new Bundle();
-  fragment.setArguments(args);
-  return fragment;
-}

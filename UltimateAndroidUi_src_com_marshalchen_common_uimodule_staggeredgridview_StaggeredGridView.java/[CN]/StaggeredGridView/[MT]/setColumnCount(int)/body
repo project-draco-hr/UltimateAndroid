@@ -1,6 +1,0 @@
-{
-  mColumnCountPortrait=columnCount;
-  mColumnCountLandscape=columnCount;
-  onSizeChanged(getWidth(),getHeight());
-  requestLayoutChildren();
-}

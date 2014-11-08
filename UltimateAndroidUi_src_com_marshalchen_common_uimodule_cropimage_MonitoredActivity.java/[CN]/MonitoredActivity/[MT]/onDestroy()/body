@@ -1,6 +1,0 @@
-{
-  super.onDestroy();
-  for (  LifeCycleListener listener : listeners) {
-    listener.onActivityDestroyed(this);
-  }
-}

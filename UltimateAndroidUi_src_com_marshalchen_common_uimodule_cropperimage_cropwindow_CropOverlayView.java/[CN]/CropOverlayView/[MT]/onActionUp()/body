@@ -1,5 +1,0 @@
-{
-  if (mPressedHandle == null)   return;
-  mPressedHandle=null;
-  invalidate();
-}

@@ -1,3 +1,0 @@
-{
-  return new double[]{un_x,un_y};
-}

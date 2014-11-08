@@ -1,4 +1,0 @@
-{
-  BitmapDrawable drawable=new BitmapDrawable(res,bitmap);
-  return drawable;
-}

@@ -1,6 +1,0 @@
-{
-  skipWhitespace();
-  float f=parseFloat();
-  skipNumberSeparator();
-  return f;
-}

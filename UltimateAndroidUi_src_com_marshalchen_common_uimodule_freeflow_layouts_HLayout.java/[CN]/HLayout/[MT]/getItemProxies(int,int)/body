@@ -1,9 +1,0 @@
-{
-  LinkedHashMap<Object,FreeFlowItem> desc=new LinkedHashMap<Object,FreeFlowItem>();
-  for (  FreeFlowItem fd : proxies.values()) {
-    if (fd.frame.left + itemWidth > viewPortLeft - cellBufferSize && fd.frame.left < viewPortLeft + width + cellBufferSize) {
-      desc.put(fd.data,fd);
-    }
-  }
-  return desc;
-}

@@ -1,4 +1,0 @@
-{
-  mPopulatePending=false;
-  setCurrentItemInternal(item,!mFirstLayout,false);
-}

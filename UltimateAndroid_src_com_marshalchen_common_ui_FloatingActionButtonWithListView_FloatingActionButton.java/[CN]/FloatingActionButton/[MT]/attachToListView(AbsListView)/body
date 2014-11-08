@@ -1,3 +1,0 @@
-{
-  attachToListView(listView,new FabOnScrollListener());
-}

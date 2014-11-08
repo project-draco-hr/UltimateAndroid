@@ -1,4 +1,0 @@
-{
-  super(context,attrs);
-  setup(context,attrs,0);
-}

@@ -1,4 +1,0 @@
-{
-  initIfNecessary(tp);
-  tp.baselineShift=shift;
-}

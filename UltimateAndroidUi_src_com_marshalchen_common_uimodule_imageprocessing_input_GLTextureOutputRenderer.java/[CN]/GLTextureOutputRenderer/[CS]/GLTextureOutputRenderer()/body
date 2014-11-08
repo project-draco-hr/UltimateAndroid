@@ -1,4 +1,0 @@
-{
-  super();
-  targets=new ArrayList<GLTextureInputRenderer>();
-}

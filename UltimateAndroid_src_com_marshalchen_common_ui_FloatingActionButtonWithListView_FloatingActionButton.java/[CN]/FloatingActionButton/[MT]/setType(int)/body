@@ -1,6 +1,0 @@
-{
-  if (type != mType) {
-    mType=type;
-    updateBackground();
-  }
-}

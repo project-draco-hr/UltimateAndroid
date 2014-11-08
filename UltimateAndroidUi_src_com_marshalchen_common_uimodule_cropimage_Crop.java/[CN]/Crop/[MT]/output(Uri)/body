@@ -1,4 +1,0 @@
-{
-  cropIntent.putExtra(MediaStore.EXTRA_OUTPUT,output);
-  return this;
-}

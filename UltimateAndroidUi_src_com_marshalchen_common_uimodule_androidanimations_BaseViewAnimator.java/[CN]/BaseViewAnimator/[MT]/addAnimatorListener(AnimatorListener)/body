@@ -1,4 +1,0 @@
-{
-  mAnimatorSet.addListener(l);
-  return this;
-}

@@ -1,3 +1,0 @@
-{
-  RgbToHsl(0xff & (color >> 0x10),0xff & (color >> 8),0xff & color,hsl);
-}

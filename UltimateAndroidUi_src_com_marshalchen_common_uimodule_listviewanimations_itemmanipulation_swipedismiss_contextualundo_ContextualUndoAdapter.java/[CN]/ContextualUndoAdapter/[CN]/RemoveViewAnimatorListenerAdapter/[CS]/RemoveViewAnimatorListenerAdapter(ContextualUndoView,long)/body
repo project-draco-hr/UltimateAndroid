@@ -1,5 +1,0 @@
-{
-  mDismissView=dismissView;
-  mDismissViewId=dismissViewId;
-  mOriginalHeight=dismissView.getHeight();
-}

@@ -1,9 +1,0 @@
-{
-  final Bitmap bitmap=Bitmap.createBitmap(mDrawableSize,mDrawableSize,Config.ARGB_8888);
-  final Canvas canvas=new Canvas(bitmap);
-  final Paint paint=new Paint();
-  paint.setAntiAlias(true);
-  paint.setColor(color);
-  canvas.drawOval(circleRect,paint);
-  return new BitmapDrawable(getResources(),bitmap);
-}

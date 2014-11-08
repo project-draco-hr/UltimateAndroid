@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.android_week_view,menu);
-  return true;
-}

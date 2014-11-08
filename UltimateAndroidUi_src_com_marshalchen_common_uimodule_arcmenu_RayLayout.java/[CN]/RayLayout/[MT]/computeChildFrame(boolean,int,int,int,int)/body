@@ -1,4 +1,0 @@
-{
-  final int left=expanded ? (paddingLeft + childIndex * (gap + size) + gap) : ((paddingLeft - size) / 2);
-  return new Rect(left,0,left + size,size);
-}

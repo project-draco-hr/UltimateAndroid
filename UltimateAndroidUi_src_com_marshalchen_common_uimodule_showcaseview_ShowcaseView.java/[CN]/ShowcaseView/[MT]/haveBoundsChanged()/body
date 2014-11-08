@@ -1,3 +1,0 @@
-{
-  return getMeasuredWidth() != bitmapBuffer.getWidth() || getMeasuredHeight() != bitmapBuffer.getHeight();
-}

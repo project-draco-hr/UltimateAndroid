@@ -1,4 +1,0 @@
-{
-  boolean isFirstRow=position < (getHeaderViewsCount() + mColumnCount);
-  return isFirstRow ? mItemMargin : 0;
-}

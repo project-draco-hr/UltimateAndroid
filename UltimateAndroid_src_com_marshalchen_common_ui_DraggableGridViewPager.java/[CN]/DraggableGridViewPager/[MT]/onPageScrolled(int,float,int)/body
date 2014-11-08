@@ -1,6 +1,0 @@
-{
-  if (mOnPageChangeListener != null) {
-    mOnPageChangeListener.onPageScrolled(position,offset,offsetPixels);
-  }
-  mCalledSuper=true;
-}

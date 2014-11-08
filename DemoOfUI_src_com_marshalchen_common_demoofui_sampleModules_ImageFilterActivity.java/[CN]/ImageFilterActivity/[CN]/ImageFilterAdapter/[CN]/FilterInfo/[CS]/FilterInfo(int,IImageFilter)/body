@@ -1,4 +1,0 @@
-{
-  this.filterID=filterID;
-  this.filter=filter;
-}

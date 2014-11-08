@@ -1,9 +1,0 @@
-{
-  while (leftEdge + dx > 0 && mLeftViewIndex >= 0) {
-    View child=mAdapter.getView(mLeftViewIndex,mRemovedViewQueue.poll(),this);
-    addAndMeasureChild(child,0);
-    leftEdge-=child.getMeasuredWidth();
-    mLeftViewIndex--;
-    mDisplayOffset-=child.getMeasuredWidth();
-  }
-}

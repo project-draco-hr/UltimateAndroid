@@ -1,8 +1,0 @@
-{
-  final boolean wasPeaking=mPeakAnim != null;
-  if (mPeakAnim != null) {
-    mPeakAnim.cancel();
-    mPeakAnim=null;
-  }
-  return wasPeaking;
-}

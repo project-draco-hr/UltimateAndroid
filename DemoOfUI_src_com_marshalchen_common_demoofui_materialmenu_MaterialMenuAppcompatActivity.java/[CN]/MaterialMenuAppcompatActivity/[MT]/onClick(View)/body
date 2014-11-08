@@ -1,8 +1,0 @@
-{
-  if (v.getId() == R.id.action_bar_menu) {
-    actionBarMenuState=generateState(actionBarMenuState);
-    materialMenu.animatePressedState(intToState(actionBarMenuState));
-    return;
-  }
-  helper.onClick(v);
-}

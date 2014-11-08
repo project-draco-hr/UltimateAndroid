@@ -1,3 +1,0 @@
-{
-  return getHeight() - getPaddingBottom() - getPaddingTop();
-}

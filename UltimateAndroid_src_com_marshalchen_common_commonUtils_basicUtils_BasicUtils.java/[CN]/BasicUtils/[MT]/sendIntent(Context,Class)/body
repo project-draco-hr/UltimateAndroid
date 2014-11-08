@@ -1,5 +1,0 @@
-{
-  Intent intent=new Intent();
-  intent.setClass(context,classes);
-  context.startActivity(intent);
-}

@@ -1,3 +1,0 @@
-{
-  return inflater.inflate(R.layout.stickygridheader_fragment_item_grid,container,false);
-}

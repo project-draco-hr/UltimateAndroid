@@ -1,3 +1,0 @@
-{
-  insert(Arrays.asList(indexItemPairs));
-}

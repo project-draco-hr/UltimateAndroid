@@ -1,5 +1,0 @@
-{
-  super.initShaderHandles();
-  distanceHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_DISTANCE);
-  slopeHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_SLOPE);
-}

@@ -1,4 +1,0 @@
-{
-  this.view=view;
-  setImage(pathName);
-}

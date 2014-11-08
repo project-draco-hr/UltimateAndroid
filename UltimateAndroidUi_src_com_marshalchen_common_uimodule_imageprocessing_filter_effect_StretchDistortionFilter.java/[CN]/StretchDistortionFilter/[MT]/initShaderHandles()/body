@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  centerHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_CENTER);
-}

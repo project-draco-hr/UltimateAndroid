@@ -1,5 +1,0 @@
-{
-  LayoutInflater inflater=LayoutInflater.from(container.getContext());
-  View root=inflater.inflate(R.layout.recyclerview_playground_view_match_item,container,false);
-  return new VerticalItemHolder(root,this);
-}

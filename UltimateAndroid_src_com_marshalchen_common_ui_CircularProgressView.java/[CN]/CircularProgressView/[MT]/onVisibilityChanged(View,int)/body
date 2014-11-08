@@ -1,9 +1,0 @@
-{
-  super.onVisibilityChanged(changedView,visibility);
-  if (visibility == VISIBLE) {
-    mDrawable.start();
-  }
- else {
-    mDrawable.stop();
-  }
-}

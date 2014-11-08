@@ -1,7 +1,0 @@
-{
-  if (selectedCals == null || selectedCals.size() == 0) {
-    return null;
-  }
-  Collections.sort(selectedCals);
-  return selectedCals.get(selectedCals.size() - 1);
-}

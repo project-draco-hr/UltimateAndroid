@@ -1,4 +1,0 @@
-{
-  this.vertexShader=vertexShader;
-  reInitialize();
-}

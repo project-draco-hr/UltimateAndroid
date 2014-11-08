@@ -1,3 +1,0 @@
-{
-  removeWindow(activity.getWindow().getDecorView());
-}

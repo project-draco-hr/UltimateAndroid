@@ -1,3 +1,0 @@
-{
-  return "FragmentPager.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " position="+ position+ "}";
-}

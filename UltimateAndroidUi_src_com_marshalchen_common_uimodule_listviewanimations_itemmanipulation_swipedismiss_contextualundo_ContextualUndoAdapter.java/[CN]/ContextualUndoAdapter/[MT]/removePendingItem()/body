@@ -1,6 +1,0 @@
-{
-  if (mCurrentRemovedView != null || mCurrentRemovedId >= 0) {
-    new RemoveViewAnimatorListenerAdapter(mCurrentRemovedView,mCurrentRemovedId).onAnimationEnd(null);
-    clearCurrentRemovedView();
-  }
-}

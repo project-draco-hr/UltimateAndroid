@@ -1,3 +1,0 @@
-{
-  Toast.makeText(this,slider.getBundle().get("extra") + "",Toast.LENGTH_SHORT).show();
-}

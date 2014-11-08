@@ -1,9 +1,0 @@
-{
-  if (hasReflection != this.isReflectionEnabled) {
-    this.isReflectionEnabled=hasReflection;
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-      this.setLayerType(hasReflection ? View.LAYER_TYPE_SOFTWARE : View.LAYER_TYPE_HARDWARE,null);
-    }
-    this.remeasureChildren();
-  }
-}

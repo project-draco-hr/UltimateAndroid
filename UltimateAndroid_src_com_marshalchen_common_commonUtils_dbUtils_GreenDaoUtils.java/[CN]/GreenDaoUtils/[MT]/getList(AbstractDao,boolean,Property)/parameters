@@ -1,3 +1,0 @@
-AbstractDao dao
-boolean isAsc
-Property orderProperty

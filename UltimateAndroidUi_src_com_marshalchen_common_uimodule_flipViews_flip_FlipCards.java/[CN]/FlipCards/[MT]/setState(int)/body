@@ -1,6 +1,0 @@
-{
-  if (this.state != state) {
-    this.state=state;
-    animatedFrame=0;
-  }
-}

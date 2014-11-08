@@ -1,4 +1,0 @@
-{
-  View view=inflater.inflate(layout,container,false);
-  return view;
-}

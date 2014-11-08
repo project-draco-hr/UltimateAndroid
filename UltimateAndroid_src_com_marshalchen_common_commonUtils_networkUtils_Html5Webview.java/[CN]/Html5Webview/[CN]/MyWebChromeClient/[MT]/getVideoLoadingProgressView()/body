@@ -1,7 +1,0 @@
-{
-  if (mVideoProgressView == null) {
-    LayoutInflater inflater=LayoutInflater.from(mContext);
-    mVideoProgressView=inflater.inflate(R.layout.video_loading,null);
-  }
-  return mVideoProgressView;
-}

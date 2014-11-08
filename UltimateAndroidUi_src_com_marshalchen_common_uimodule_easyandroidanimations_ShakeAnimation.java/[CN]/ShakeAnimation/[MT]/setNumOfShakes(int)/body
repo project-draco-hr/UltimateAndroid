@@ -1,4 +1,0 @@
-{
-  this.numOfShakes=numOfShakes;
-  return this;
-}

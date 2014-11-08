@@ -1,3 +1,0 @@
-{
-  return section * 1000 + position;
-}

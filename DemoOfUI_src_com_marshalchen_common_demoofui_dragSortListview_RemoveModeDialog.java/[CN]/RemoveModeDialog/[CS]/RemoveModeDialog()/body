@@ -1,4 +1,0 @@
-{
-  super();
-  mRemoveMode=DragSortController.FLING_REMOVE;
-}

@@ -1,5 +1,0 @@
-{
-  if (cursor != null) {
-    cursor.close();
-  }
-}

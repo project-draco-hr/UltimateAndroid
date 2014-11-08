@@ -1,5 +1,0 @@
-{
-  if (factor > 0) {
-    mBlurEngine.setDownScaleFactor(factor);
-  }
-}

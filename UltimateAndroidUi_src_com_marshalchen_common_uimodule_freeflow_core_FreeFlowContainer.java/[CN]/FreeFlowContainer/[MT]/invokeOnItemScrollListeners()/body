@@ -1,5 +1,0 @@
-{
-  for (  OnScrollListener l : scrollListeners) {
-    l.onScroll(this);
-  }
-}

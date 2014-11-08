@@ -1,4 +1,0 @@
-{
-  mIsEditMode=false;
-  if (isPostHoneycomb() && mWobbleInEditMode)   stopWobble(true);
-}

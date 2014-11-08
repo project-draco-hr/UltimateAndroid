@@ -1,8 +1,0 @@
-{
-  ImageView image=(ImageView)mDetailsLayout.findViewById(R.id.details_image);
-  TextView title=(TextView)mDetailsLayout.findViewById(R.id.details_title);
-  TextView description=(TextView)mDetailsLayout.findViewById(R.id.details_text);
-  image.setImageResource(R.drawable.test);
-  Logs.d("isnull   " + (painting != null) + "   "+ (title != null));
-  mUnfoldableView.unfold(coverView,mDetailsLayout);
-}

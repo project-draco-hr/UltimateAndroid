@@ -1,4 +1,0 @@
-{
-  retrieveItemPosition(holder);
-  ViewCompat.setTranslationY(holder.itemView,+mDeltaY);
-}

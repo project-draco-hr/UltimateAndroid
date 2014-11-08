@@ -1,5 +1,0 @@
-{
-  super.handleSizeChange();
-  texelWidth=(float)(blurSize * Math.cos(degree * Math.PI / 180.0)) / (float)getWidth();
-  texelHeight=(float)(blurSize * Math.sin(degree * Math.PI / 180.0)) / (float)getHeight();
-}

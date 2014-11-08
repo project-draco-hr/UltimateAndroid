@@ -1,6 +1,0 @@
-{
-  clearBitmap();
-  shotStateStore.storeShot();
-  mEventListener.onShowcaseViewHide(this);
-  fadeOutShowcase();
-}

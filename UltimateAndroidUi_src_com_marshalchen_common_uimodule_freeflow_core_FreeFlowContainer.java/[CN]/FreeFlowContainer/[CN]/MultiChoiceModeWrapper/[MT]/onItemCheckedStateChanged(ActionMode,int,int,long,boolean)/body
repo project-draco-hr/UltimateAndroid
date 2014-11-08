@@ -1,6 +1,0 @@
-{
-  mWrapped.onItemCheckedStateChanged(mode,section,position,id,checked);
-  if (getCheckedItemCount() == 0) {
-    mode.finish();
-  }
-}

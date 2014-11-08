@@ -1,5 +1,0 @@
-{
-  for (  int position : reverseSortedPositions) {
-    mAdapter.remove(position);
-  }
-}

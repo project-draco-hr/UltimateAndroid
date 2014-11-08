@@ -1,6 +1,0 @@
-{
-  mHeight+=offset;
-  mTop=mHeight - getRefreshLayout().getFinalOffset();
-  updateBounds();
-  invalidateSelf();
-}

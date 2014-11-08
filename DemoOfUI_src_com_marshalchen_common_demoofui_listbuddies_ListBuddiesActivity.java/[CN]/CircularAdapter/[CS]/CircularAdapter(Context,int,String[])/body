@@ -1,5 +1,0 @@
-{
-  mContext=context;
-  mRowHeight=rowHeight;
-  initArray(imagesUrl);
-}

@@ -1,3 +1,0 @@
-{
-  return new ByteArrayInputStream(_copy.toByteArray());
-}

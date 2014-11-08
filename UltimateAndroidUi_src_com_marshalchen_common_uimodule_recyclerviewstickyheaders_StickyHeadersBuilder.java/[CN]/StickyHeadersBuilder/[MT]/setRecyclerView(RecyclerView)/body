@@ -1,4 +1,0 @@
-{
-  this.recyclerView=recyclerView;
-  return this;
-}

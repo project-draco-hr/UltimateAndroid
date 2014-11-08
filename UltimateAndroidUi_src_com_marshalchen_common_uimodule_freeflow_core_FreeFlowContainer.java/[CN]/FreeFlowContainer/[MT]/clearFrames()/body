@@ -1,4 +1,0 @@
-{
-  removeAllViews();
-  frames=null;
-}

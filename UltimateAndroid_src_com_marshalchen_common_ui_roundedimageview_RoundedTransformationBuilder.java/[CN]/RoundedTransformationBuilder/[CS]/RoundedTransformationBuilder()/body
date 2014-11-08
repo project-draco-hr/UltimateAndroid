@@ -1,3 +1,0 @@
-{
-  mDisplayMetrics=Resources.getSystem().getDisplayMetrics();
-}

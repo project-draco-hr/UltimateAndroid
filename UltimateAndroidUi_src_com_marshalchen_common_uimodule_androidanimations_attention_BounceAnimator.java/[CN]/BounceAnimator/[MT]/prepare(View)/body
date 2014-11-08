@@ -1,3 +1,0 @@
-{
-  getAnimatorAgent().playTogether(ObjectAnimator.ofFloat(target,"translationY",0,0,-30,0,-15,0,0));
-}

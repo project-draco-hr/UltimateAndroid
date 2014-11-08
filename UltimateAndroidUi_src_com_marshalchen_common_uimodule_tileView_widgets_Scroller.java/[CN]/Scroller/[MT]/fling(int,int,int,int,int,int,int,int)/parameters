@@ -1,8 +1,0 @@
-int startX
-int startY
-int velocityX
-int velocityY
-int minX
-int maxX
-int minY
-int maxY

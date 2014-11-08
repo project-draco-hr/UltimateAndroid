@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  mAdapter=new MyAdapter(this,getItems());
-  getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-  getSupportActionBar().setListNavigationCallbacks(new AnimSelectionAdapter(),this);
-  getSupportActionBar().setDisplayShowTitleEnabled(false);
-}

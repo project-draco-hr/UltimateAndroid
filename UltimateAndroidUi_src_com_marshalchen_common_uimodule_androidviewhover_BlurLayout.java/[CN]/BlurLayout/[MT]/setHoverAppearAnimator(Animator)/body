@@ -1,6 +1,0 @@
-{
-  mHoverAppearAnimationComposer=null;
-  mHoverAppearAnimator=animator;
-  animator.addListener(mGlobalListener);
-  animator.addListener(mGlobalAppearingAnimators);
-}

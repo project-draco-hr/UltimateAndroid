@@ -1,8 +1,0 @@
-{
-  final int page=position / mPageSize;
-  final int col=(position % mPageSize) % mColCount;
-  final int row=(position % mPageSize) / mColCount;
-  final int left=getWidth() * page + mPaddingLeft + col * (mGridWidth + mGridGap);
-  final int top=mPaddingTop + row * (mGridHeight + mGridGap);
-  return new Rect(left,top,left + mGridWidth,top + mGridHeight);
-}

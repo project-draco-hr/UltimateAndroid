@@ -1,3 +1,0 @@
-{
-  return mDelegate.getView(position,convertView,parent);
-}

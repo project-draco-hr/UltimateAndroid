@@ -1,3 +1,0 @@
-{
-  return SvgToPath.parse(inputStream,true,DPI);
-}

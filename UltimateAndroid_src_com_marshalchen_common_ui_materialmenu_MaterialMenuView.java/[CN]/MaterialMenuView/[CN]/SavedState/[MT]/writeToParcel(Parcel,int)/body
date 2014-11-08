@@ -1,4 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeString(state.name());
-}

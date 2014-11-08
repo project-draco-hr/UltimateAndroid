@@ -1,4 +1,0 @@
-int direction
-int emptyLeft
-int emptyTop
-RecyclerView.Recycler recycler

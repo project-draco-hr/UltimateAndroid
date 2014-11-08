@@ -1,8 +1,0 @@
-{
-  final float lineThicknessPx=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,DEFAULT_CORNER_THICKNESS_DP,context.getResources().getDisplayMetrics());
-  final Paint cornerPaint=new Paint();
-  cornerPaint.setColor(DEFAULT_CORNER_COLOR);
-  cornerPaint.setStrokeWidth(lineThicknessPx);
-  cornerPaint.setStyle(Paint.Style.STROKE);
-  return cornerPaint;
-}

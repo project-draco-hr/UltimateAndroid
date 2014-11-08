@@ -1,8 +1,0 @@
-{
-  TextView tv=(TextView)convertView;
-  if (tv == null) {
-    tv=new TextView(mContext);
-  }
-  tv.setText("111");
-  return tv;
-}

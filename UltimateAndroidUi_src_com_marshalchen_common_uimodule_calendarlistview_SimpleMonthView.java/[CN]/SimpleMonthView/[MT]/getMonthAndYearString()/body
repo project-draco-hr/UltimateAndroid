@@ -1,6 +1,0 @@
-{
-  int flags=DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR | DateUtils.FORMAT_NO_MONTH_DAY;
-  mStringBuilder.setLength(0);
-  long millis=mCalendar.getTimeInMillis();
-  return DateUtils.formatDateRange(getContext(),millis,millis,flags);
-}

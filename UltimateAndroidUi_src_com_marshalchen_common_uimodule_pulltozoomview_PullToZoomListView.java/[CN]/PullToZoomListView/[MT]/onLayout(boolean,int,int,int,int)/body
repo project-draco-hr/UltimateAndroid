@@ -1,6 +1,0 @@
-{
-  super.onLayout(paramBoolean,paramInt1,paramInt2,paramInt3,paramInt4);
-  if (mHeaderHeight == 0 && mHeaderView != null) {
-    mHeaderHeight=mHeaderContainer.getHeight();
-  }
-}

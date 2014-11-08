@@ -1,9 +1,0 @@
-{
-  currentPosition=position;
-  currentPositionOffset=positionOffset;
-  scrollToChild(position,(int)(positionOffset * tabsContainer.getChildAt(position).getWidth()));
-  invalidate();
-  if (delegatePageListener != null) {
-    delegatePageListener.onPageScrolled(position,positionOffset,positionOffsetPixels);
-  }
-}

@@ -1,5 +1,0 @@
-{
-  if (right - left != 0 && bottom - top != 0 && (oldLeft != left || oldTop != top || oldRight != right || oldBottom != bottom) && bottomMenu != null) {
-    bottomMenu.updateItemPositions();
-  }
-}

@@ -1,4 +1,0 @@
-{
-  mScroller.startScroll(mNextX,0,x - mNextX,0);
-  requestLayout();
-}

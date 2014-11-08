@@ -1,6 +1,0 @@
-{
-  this.setBackgroundRed(red);
-  this.setBackgroundGreen(green);
-  this.setBackgroundBlue(blue);
-  this.setBackgroundAlpha(alpha);
-}

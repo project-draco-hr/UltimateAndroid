@@ -1,6 +1,0 @@
-{
-  mDirtyRect.left=Math.min(mLastTouchX,eventX);
-  mDirtyRect.right=Math.max(mLastTouchX,eventX);
-  mDirtyRect.top=Math.min(mLastTouchY,eventY);
-  mDirtyRect.bottom=Math.max(mLastTouchY,eventY);
-}

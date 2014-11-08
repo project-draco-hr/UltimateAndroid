@@ -1,4 +1,0 @@
-{
-  this.shakeDistance=shakeDistance;
-  return this;
-}

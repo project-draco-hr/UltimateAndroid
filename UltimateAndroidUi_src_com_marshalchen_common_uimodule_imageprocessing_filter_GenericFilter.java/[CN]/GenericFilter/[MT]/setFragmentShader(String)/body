@@ -1,4 +1,0 @@
-{
-  this.fragmentShader=fragmentShader;
-  reInitialize();
-}

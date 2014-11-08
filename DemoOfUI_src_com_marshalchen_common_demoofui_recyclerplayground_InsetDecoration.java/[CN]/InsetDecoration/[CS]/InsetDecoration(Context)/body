@@ -1,3 +1,0 @@
-{
-  mInsets=context.getResources().getDimensionPixelSize(R.dimen.card_insets);
-}

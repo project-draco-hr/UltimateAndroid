@@ -1,7 +1,0 @@
-{
-  ViewGroup parent=(ViewGroup)origin.getParent();
-  if (params == null)   params=origin.getLayoutParams();
-  int index=parent.indexOfChild(origin);
-  parent.removeViewAt(index);
-  parent.addView(replacement,index,params);
-}

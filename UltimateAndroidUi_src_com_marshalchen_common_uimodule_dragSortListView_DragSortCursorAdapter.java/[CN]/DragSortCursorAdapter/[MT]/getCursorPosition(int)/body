@@ -1,3 +1,0 @@
-{
-  return mListMapping.get(position,position);
-}

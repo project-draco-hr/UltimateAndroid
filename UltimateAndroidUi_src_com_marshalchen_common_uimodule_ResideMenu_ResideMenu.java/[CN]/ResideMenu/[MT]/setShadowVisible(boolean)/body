@@ -1,4 +1,0 @@
-{
-  if (isVisible)   imageViewShadow.setImageResource(R.drawable.reside_menu_shadow);
- else   imageViewShadow.setImageBitmap(null);
-}

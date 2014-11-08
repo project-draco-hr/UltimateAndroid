@@ -1,3 +1,0 @@
-{
-  return getString(context,PREFERENCE_NAME,key,defaultValue);
-}

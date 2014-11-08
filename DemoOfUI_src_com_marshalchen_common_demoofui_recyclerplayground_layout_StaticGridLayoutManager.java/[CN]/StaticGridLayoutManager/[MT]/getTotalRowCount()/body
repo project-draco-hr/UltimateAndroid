@@ -1,7 +1,0 @@
-{
-  int maxRow=getItemCount() / mTotalColumnCount;
-  if (getItemCount() % mTotalColumnCount != 0) {
-    maxRow++;
-  }
-  return maxRow;
-}

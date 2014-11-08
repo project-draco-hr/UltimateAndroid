@@ -1,7 +1,0 @@
-{
-  Image saturated=saturationFx.process(input.clone());
-  Image blurred=blurFx.process(saturated);
-  input=blender.Blend(saturated,blurred);
-  Image edge=edgeDetectionFx.process(input.clone());
-  return edgeBlender.Blend(input,edge);
-}

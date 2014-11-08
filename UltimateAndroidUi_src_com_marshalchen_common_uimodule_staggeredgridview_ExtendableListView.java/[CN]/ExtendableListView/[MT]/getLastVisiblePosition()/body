@@ -1,3 +1,0 @@
-{
-  return Math.min(mFirstPosition + getChildCount() - 1,mAdapter != null ? mAdapter.getCount() - 1 : 0);
-}

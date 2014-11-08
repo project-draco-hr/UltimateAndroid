@@ -1,3 +1,0 @@
-{
-  return s.getDataCount() / 5 * largeItemSide;
-}

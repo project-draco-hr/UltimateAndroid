@@ -1,6 +1,0 @@
-{
-  if (spanMargins == null) {
-    return 0;
-  }
-  return spanMargins[index];
-}

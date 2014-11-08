@@ -1,6 +1,0 @@
-{
-  logLifecycleEvent("layoutChanged");
-  markLayoutDirty=true;
-  dispatchDataChanged();
-  requestLayout();
-}

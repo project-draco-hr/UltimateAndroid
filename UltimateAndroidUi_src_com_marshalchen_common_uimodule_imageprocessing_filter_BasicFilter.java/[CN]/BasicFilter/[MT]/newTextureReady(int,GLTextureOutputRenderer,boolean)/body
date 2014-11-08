@@ -1,9 +1,0 @@
-{
-  if (newData) {
-    markAsDirty();
-  }
-  texture_in=texture;
-  setWidth(source.getWidth());
-  setHeight(source.getHeight());
-  onDrawFrame();
-}

@@ -1,6 +1,0 @@
-{
-  mAspectRatioX=aspectRatioX;
-  mCropOverlayView.setAspectRatioX(mAspectRatioX);
-  mAspectRatioY=aspectRatioY;
-  mCropOverlayView.setAspectRatioY(mAspectRatioY);
-}

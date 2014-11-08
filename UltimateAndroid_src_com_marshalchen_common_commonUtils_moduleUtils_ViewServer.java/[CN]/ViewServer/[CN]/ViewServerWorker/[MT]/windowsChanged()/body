@@ -1,6 +1,0 @@
-{
-synchronized (mLock) {
-    mNeedWindowListUpdate=true;
-    mLock.notifyAll();
-  }
-}

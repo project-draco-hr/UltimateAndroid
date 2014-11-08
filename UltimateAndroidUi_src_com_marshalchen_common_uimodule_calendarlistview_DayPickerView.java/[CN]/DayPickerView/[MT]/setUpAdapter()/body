@@ -1,6 +1,0 @@
-{
-  if (mAdapter == null) {
-    mAdapter=new SimpleMonthAdapter(getContext(),mController,typedArray);
-  }
-  mAdapter.notifyDataSetChanged();
-}

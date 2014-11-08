@@ -1,5 +1,0 @@
-{
-  View v=super.getView(position,convertView,parent);
-  v.getBackground().setLevel(3000);
-  return v;
-}

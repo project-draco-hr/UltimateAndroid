@@ -1,3 +1,0 @@
-{
-  Log.e("Day Slected",day + " / " + month+ " / "+ year);
-}

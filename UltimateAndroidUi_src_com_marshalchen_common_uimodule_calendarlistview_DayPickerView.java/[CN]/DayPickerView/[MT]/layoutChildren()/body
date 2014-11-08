@@ -1,6 +1,0 @@
-{
-  super.layoutChildren();
-  if (mPerformingScroll) {
-    mPerformingScroll=false;
-  }
-}

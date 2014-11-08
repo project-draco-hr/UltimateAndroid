@@ -1,6 +1,0 @@
-{
-  this.center=center;
-  this.colour=colour;
-  this.start=start;
-  this.end=end;
-}

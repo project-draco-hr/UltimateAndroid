@@ -1,3 +1,0 @@
-{
-  mLanes[lane].offset(mIsVertical ? 0 : offset,mIsVertical ? offset : 0);
-}

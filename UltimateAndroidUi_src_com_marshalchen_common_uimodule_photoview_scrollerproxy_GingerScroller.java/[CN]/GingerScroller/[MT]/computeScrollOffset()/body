@@ -1,7 +1,0 @@
-{
-  if (mFirstScroll) {
-    mScroller.computeScrollOffset();
-    mFirstScroll=false;
-  }
-  return mScroller.computeScrollOffset();
-}

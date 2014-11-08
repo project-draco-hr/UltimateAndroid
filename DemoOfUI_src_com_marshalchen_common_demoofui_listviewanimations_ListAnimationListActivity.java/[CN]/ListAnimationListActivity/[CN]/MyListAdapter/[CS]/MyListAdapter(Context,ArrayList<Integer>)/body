@@ -1,4 +1,0 @@
-{
-  super(items);
-  mContext=context;
-}

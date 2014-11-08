@@ -1,3 +1,0 @@
-{
-  image=(ImageView)convertView.findViewById(R.id.listBuddiesItemImageView);
-}

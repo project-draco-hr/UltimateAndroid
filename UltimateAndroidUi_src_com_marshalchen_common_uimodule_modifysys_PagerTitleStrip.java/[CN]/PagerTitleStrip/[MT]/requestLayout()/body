@@ -1,5 +1,0 @@
-{
-  if (!mUpdatingText) {
-    super.requestLayout();
-  }
-}

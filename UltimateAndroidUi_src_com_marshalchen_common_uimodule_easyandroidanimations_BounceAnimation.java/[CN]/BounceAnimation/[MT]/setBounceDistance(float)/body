@@ -1,4 +1,0 @@
-{
-  this.bounceDistance=bounceDistance;
-  return this;
-}

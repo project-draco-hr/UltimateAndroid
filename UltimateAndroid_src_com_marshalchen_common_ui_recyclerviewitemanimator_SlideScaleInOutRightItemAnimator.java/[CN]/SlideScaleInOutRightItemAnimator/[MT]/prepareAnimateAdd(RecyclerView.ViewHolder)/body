@@ -1,6 +1,0 @@
-{
-  retrieveOriginalScale(holder);
-  ViewCompat.setScaleX(holder.itemView,mInitialScaleX);
-  ViewCompat.setScaleY(holder.itemView,mInitialScaleY);
-  ViewCompat.setTranslationX(holder.itemView,+mRecyclerView.getWidth());
-}

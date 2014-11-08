@@ -1,9 +1,0 @@
-{
-  int n=attributes.getAttributeCount();
-  for (int i=0; i < n; i++) {
-    if (attributes.getAttributeName(i).equals(name)) {
-      return attributes.getAttributeValue(i);
-    }
-  }
-  return null;
-}

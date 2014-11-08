@@ -1,4 +1,0 @@
-{
-  ProgressDialog dialog=ProgressDialog.show(activity,title,message,true,false);
-  new Thread(new BackgroundJob(activity,job,dialog,handler)).start();
-}

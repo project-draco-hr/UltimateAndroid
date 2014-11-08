@@ -1,3 +1,0 @@
-{
-  return (x < mGutterSize && dx > 0) || (x > getWidth() - mGutterSize && dx < 0);
-}

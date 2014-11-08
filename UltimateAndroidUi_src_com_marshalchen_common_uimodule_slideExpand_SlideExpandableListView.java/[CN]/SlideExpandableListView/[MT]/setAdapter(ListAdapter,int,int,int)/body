@@ -1,4 +1,0 @@
-{
-  this.adapter=new SlideExpandableListAdapter(adapter,toggle_button_id,expandable_view_id,expandable_item_id);
-  super.setAdapter(this.adapter);
-}

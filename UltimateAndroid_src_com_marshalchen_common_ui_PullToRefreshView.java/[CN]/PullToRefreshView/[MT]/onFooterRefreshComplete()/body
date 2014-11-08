@@ -1,8 +1,0 @@
-{
-  setHeaderTopMargin(-mHeaderViewHeight);
-  mFooterImageView.setVisibility(View.VISIBLE);
-  mFooterImageView.setImageResource(R.drawable.ico_arrow_grey2x);
-  mFooterTextView.setText(R.string.pull_to_refresh_footer_pull_label);
-  mFooterProgressBar.setVisibility(View.GONE);
-  mFooterState=PULL_TO_REFRESH;
-}

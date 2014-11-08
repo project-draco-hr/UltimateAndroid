@@ -1,5 +1,0 @@
-{
-  if (speed < 0)   throw new IllegalArgumentException("SpeedProgressiveStop must be >= 0");
-  mProgressiveStopSpeed=speed;
-  invalidateSelf();
-}

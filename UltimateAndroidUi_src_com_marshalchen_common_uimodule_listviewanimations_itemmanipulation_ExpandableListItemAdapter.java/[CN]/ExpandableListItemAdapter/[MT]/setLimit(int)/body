@@ -1,5 +1,0 @@
-{
-  mLimit=limit;
-  mExpandedIds.clear();
-  notifyDataSetChanged();
-}

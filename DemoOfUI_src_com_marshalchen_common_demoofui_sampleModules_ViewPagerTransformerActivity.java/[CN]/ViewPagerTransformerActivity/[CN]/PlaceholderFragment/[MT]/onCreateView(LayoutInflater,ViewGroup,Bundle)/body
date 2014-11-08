@@ -1,7 +1,0 @@
-{
-  final int position=getArguments().getInt(EXTRA_POSITION);
-  final TextView textViewPosition=(TextView)inflater.inflate(R.layout.viewpager_transform_fragment,container,false);
-  textViewPosition.setText(Integer.toString(position));
-  textViewPosition.setBackgroundColor(COLORS[position - 1]);
-  return textViewPosition;
-}

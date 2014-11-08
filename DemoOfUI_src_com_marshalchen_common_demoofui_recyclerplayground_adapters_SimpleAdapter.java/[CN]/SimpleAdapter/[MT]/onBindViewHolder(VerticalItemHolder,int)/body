@@ -1,7 +1,0 @@
-{
-  GameItem item=mItems.get(position);
-  itemHolder.setAwayScore(String.valueOf(item.awayScore));
-  itemHolder.setHomeScore(String.valueOf(item.homeScore));
-  itemHolder.setAwayName(item.awayTeam);
-  itemHolder.setHomeName(item.homeTeam);
-}

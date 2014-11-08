@@ -1,5 +1,0 @@
-{
-  if (!shotStateStore.hasShot()) {
-    updateBitmap();
-  }
-}

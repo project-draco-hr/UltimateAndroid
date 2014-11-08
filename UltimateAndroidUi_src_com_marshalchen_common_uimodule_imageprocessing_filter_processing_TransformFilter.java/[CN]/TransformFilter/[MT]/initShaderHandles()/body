@@ -1,5 +1,0 @@
-{
-  super.initShaderHandles();
-  transformMatrixHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_TRANSFORM_MATRIX);
-  orthoMatrixHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_ORTHO_MATRIX);
-}

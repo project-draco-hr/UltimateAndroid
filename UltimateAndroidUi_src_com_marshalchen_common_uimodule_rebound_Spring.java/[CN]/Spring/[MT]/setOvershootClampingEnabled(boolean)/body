@@ -1,4 +1,0 @@
-{
-  mOvershootClampingEnabled=overshootClampingEnabled;
-  return this;
-}

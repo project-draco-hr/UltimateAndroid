@@ -1,7 +1,0 @@
-{
-  mListView=listView;
-  mOnScrollListener=onScrollListener;
-  onScrollListener.setFloatingActionButton(this);
-  onScrollListener.setListView(listView);
-  mListView.setOnScrollListener(onScrollListener);
-}

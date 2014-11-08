@@ -1,9 +1,0 @@
-{
-  if (is != null) {
-    try {
-      is.close();
-    }
- catch (    Throwable ignored) {
-    }
-  }
-}

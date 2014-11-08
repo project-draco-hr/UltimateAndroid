@@ -1,6 +1,0 @@
-{
-  final Bundle bundle=new Bundle();
-  bundle.putParcelable("instanceState",super.onSaveInstanceState());
-  bundle.putInt(DEGREES_ROTATED,mDegreesRotated);
-  return bundle;
-}

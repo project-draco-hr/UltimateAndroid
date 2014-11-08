@@ -1,4 +1,0 @@
-{
-  super.setTextColor(colors);
-  createShader();
-}

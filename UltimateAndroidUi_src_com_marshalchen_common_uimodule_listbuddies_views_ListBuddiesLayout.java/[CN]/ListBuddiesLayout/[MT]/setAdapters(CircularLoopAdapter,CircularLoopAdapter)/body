@@ -1,6 +1,0 @@
-{
-  mListViewLeft.setAdapter(adapter);
-  mListViewRight.setAdapter(adapter2);
-  mListViewLeft.setSelection(Integer.MAX_VALUE / 2);
-  mListViewRight.setSelection(Integer.MAX_VALUE / 2);
-}

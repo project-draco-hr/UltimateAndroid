@@ -1,3 +1,0 @@
-{
-  return colorArray[y * width + x];
-}

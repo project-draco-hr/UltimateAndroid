@@ -1,3 +1,0 @@
-{
-  viewHolder.label.setText(items.get(position));
-}

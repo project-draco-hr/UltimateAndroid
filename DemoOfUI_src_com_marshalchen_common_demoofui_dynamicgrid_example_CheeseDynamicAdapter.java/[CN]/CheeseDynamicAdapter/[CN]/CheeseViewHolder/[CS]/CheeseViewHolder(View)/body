@@ -1,4 +1,0 @@
-{
-  titleText=(TextView)view.findViewById(R.id.dynamic_grid_view_item_title);
-  image=(ImageView)view.findViewById(R.id.dynamic_grid_view_item_img);
-}

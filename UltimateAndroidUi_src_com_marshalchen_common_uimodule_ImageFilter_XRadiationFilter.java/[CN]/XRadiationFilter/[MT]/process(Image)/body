@@ -1,5 +1,0 @@
-{
-  imageIn=this.gradientMapFx.process(imageIn);
-  imageIn=this.blender.Blend(imageIn,imageIn);
-  return imageIn;
-}

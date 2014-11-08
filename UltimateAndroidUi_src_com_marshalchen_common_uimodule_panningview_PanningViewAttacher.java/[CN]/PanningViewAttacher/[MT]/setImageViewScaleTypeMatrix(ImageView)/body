@@ -1,5 +1,0 @@
-{
-  if (null != imageView && !(imageView instanceof PanningView)) {
-    imageView.setScaleType(ImageView.ScaleType.MATRIX);
-  }
-}

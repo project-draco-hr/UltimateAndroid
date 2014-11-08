@@ -1,8 +1,0 @@
-{
-  AnimationProxy executor=AnimationProxy.build(hoverView,resId,technique,duration,delay,invisibleWhenDelaying,interpolator,listeners);
-  View child=executor.getTarget();
-  if (mChildDisappearAnimators.containsKey(child) == false)   mChildDisappearAnimators.put(child,new ArrayList<AnimationProxy>());
-  executor.withListener(mGlobalListener);
-  executor.withListener(mGlobalDisappearAnimators);
-  mChildDisappearAnimators.get(child).add(executor);
-}

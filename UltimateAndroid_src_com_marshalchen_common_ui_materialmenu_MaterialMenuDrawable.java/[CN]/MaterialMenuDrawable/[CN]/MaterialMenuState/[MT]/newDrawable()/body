@@ -1,6 +1,0 @@
-{
-  MaterialMenuDrawable drawable=new MaterialMenuDrawable(circlePaint.getColor(),stroke,transformation.getDuration(),pressedCircle.getDuration(),width,height,iconWidth,circleRadius,strokeWidth,dip1);
-  drawable.setIconState(animatingIconState != null ? animatingIconState : currentIconState);
-  drawable.setRTLEnabled(rtlEnabled);
-  return drawable;
-}

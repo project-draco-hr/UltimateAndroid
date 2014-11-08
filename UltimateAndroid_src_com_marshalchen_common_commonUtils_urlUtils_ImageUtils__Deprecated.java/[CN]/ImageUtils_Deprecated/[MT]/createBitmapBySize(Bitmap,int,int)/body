@@ -1,3 +1,0 @@
-{
-  return Bitmap.createScaledBitmap(bitmap,width,height,true);
-}

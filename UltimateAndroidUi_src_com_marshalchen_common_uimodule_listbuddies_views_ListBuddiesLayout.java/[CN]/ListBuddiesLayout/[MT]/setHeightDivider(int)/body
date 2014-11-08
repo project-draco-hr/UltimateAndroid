@@ -1,6 +1,0 @@
-{
-  if (dividerHeight > ATTR_NOT_SET) {
-    mListViewLeft.setDividerHeight(dividerHeight);
-    mListViewRight.setDividerHeight(dividerHeight);
-  }
-}

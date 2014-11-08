@@ -1,4 +1,0 @@
-{
-  mUseRemoveVelocity=true;
-  return stopDrag(remove,velocityX);
-}

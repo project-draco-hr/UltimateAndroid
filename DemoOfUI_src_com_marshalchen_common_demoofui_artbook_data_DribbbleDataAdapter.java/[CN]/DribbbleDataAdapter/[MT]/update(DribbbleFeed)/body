@@ -1,6 +1,0 @@
-{
-  for (  Object o : feed.getShots()) {
-    section.getData().add(o);
-  }
-  Log.d(TAG,"Data updated to: " + section.getDataCount());
-}

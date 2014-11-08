@@ -1,4 +1,0 @@
-{
-  this.theme=theme;
-  return this;
-}

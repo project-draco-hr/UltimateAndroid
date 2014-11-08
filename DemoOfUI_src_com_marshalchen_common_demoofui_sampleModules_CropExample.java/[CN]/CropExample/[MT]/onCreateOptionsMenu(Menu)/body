@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.crop_activity,menu);
-  return super.onCreateOptionsMenu(menu);
-}

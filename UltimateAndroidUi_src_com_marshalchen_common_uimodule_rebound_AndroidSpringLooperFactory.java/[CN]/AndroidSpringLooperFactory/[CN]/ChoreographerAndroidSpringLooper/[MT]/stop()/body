@@ -1,4 +1,0 @@
-{
-  mStarted=false;
-  mChoreographer.removeFrameCallback(mFrameCallback);
-}

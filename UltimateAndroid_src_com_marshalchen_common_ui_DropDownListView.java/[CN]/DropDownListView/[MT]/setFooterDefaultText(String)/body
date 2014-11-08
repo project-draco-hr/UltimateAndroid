@@ -1,6 +1,0 @@
-{
-  this.footerDefaultText=footerDefaultText;
-  if (footerButton != null && footerButton.isEnabled()) {
-    footerButton.setText(footerDefaultText);
-  }
-}

@@ -1,5 +1,0 @@
-{
-  mItems.clear();
-  mItems.addAll(generateDummyData(count));
-  notifyDataSetChanged();
-}

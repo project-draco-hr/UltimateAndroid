@@ -1,3 +1,0 @@
-{
-  return "StaggeredGridView.GridListSavedState{" + Integer.toHexString(System.identityHashCode(this)) + "}";
-}

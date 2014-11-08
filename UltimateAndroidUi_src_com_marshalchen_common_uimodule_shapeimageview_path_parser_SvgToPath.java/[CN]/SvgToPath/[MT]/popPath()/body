@@ -1,5 +1,0 @@
-{
-  Path poppedPath=pathStack.pop();
-  this.path=pathStack.peek();
-  return poppedPath;
-}

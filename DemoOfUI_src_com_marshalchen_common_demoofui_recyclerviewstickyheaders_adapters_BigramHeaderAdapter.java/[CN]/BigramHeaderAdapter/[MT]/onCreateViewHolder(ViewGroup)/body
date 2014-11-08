@@ -1,4 +1,0 @@
-{
-  View itemView=LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_sticky_head_top_header,parent,false);
-  return new ViewHolder(itemView);
-}

@@ -1,6 +1,0 @@
-{
-  if (!uniformMat4List.containsKey(name)) {
-    reInitialize();
-  }
-  uniformMat4List.put(name,value);
-}

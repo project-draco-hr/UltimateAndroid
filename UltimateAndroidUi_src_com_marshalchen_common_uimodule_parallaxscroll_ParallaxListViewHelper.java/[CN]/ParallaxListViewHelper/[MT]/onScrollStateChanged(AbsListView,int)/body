@@ -1,3 +1,0 @@
-{
-  if (this.listener != null)   this.listener.onScrollStateChanged(view,scrollState);
-}

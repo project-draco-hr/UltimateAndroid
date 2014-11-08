@@ -1,4 +1,0 @@
-{
-  super.onActivityCreated(savedInstanceState);
-  setHasOptionsMenu(true);
-}

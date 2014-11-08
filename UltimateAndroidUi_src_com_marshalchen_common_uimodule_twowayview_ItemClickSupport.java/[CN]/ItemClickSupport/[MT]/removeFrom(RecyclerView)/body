@@ -1,8 +1,0 @@
-{
-  final ItemClickSupport itemClickSupport=from(recyclerView);
-  if (itemClickSupport == null) {
-    return;
-  }
-  recyclerView.removeOnItemTouchListener(itemClickSupport.mTouchListener);
-  recyclerView.setTag(R.id.twowayview_item_click_support,null);
-}

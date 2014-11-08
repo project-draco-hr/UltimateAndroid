@@ -1,4 +1,0 @@
-{
-  super.onSaveInstanceState(outState);
-  outState.putInt(STATE_SELECTED_POSITION,mCurrentSelectedPosition);
-}

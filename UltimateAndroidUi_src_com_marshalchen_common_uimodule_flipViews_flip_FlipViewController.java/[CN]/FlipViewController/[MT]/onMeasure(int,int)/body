@@ -1,7 +1,0 @@
-{
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  for (  View child : bufferedViews) {
-    child.measure(widthMeasureSpec,heightMeasureSpec);
-  }
-  surfaceView.measure(widthMeasureSpec,heightMeasureSpec);
-}

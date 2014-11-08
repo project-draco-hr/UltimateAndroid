@@ -1,3 +1,0 @@
-{
-  this(nSquareSize,nCurvature,45,(byte)0);
-}

@@ -1,9 +1,0 @@
-{
-  float intencity=0;
-  if (gravity == Gravity.TOP) {
-    if (rotation > -90 && rotation < 0) {
-      intencity=-rotation / 90f;
-    }
-  }
-  return intencity;
-}

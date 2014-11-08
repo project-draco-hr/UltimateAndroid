@@ -1,6 +1,0 @@
-{
-  canvas.save();
-  canvas.rotate(mDegress,mBounds.centerX(),mBounds.centerY());
-  drawRing(canvas);
-  canvas.restore();
-}

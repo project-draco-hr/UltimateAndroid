@@ -1,3 +1,0 @@
-{
-  return (lastOpenPosition != -1) ? true : false;
-}

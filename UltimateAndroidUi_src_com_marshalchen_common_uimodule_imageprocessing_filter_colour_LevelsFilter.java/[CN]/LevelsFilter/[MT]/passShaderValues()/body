@@ -1,8 +1,0 @@
-{
-  super.passShaderValues();
-  GLES20.glUniform1f(gammaHandle,gamma);
-  GLES20.glUniform1f(minInHandle,minIn);
-  GLES20.glUniform1f(maxInHandle,maxIn);
-  GLES20.glUniform1f(minOutHandle,minOut);
-  GLES20.glUniform1f(maxOutHandle,maxOut);
-}

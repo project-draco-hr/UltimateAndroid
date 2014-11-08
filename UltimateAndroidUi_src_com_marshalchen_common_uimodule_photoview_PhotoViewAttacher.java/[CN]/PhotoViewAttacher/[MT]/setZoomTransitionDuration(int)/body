@@ -1,4 +1,0 @@
-{
-  if (milliseconds < 0)   milliseconds=DEFAULT_ZOOM_DURATION;
-  this.ZOOM_DURATION=milliseconds;
-}

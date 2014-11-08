@@ -1,3 +1,0 @@
-{
-  return new HslColor(this.h + ((c2.h - this.h) * amount),this.s + ((c2.s - this.s) * amount),this.l + ((c2.l - this.l) * amount));
-}

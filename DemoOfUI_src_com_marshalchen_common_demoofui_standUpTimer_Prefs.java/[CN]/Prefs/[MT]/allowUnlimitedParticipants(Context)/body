@@ -1,3 +1,0 @@
-{
-  return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(UNLIMITED_PARTICIPANTS,UNLIMITED_PARTICIPANTS_DEFAULT);
-}

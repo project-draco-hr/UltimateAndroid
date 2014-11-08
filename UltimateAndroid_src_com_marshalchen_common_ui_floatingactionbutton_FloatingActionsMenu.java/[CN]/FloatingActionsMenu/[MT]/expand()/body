@@ -1,7 +1,0 @@
-{
-  if (!mExpanded) {
-    mExpanded=true;
-    mCollapseAnimation.cancel();
-    mExpandAnimation.start();
-  }
-}

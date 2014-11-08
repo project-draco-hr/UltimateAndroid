@@ -1,3 +1,0 @@
-{
-  return getInt(context,PREFERENCE_NAME,key,defaultValue);
-}

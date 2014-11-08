@@ -1,8 +1,0 @@
-{
-  try {
-    out.write(oneByte);
-  }
- catch (  IOException e) {
-    hasErrors=true;
-  }
-}

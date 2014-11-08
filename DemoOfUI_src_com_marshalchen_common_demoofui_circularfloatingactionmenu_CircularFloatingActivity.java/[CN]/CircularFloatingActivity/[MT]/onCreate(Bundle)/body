@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.circular_floating_menu_activity_demo);
-  if (savedInstanceState == null) {
-    getFragmentManager().beginTransaction().add(R.id.container,new ContentFragment()).commit();
-  }
-}

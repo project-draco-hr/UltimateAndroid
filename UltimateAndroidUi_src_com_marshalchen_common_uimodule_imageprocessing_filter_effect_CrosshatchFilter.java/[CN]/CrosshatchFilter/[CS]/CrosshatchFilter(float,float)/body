@@ -1,4 +1,0 @@
-{
-  this.crossHatchSpacing=crossHatchSpacing;
-  this.lineWidth=lineWidth;
-}

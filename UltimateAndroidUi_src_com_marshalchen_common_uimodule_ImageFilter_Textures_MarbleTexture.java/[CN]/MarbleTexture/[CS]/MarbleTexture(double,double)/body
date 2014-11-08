@@ -1,5 +1,0 @@
-{
-  this.xPeriod=Math.max(2.0,xPeriod);
-  this.yPeriod=Math.max(2.0,yPeriod);
-  Reset();
-}

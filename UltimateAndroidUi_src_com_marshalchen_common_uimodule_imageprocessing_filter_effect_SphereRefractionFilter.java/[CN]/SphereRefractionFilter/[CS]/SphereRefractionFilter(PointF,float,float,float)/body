@@ -1,3 +1,0 @@
-{
-  super(center,radius,refractiveIndex,aspectRatio);
-}

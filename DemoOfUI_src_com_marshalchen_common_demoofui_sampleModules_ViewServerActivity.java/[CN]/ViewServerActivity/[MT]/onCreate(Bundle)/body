@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.view_server_activity);
-  if (getIntent().getExtras() != null)   mCounter=getIntent().getExtras().getInt("counter");
-  ((TextView)findViewById(R.id.viewServerActivityLabel)).setText("Activity #" + (mCounter + 1));
-  ViewServer.get(this).addWindow(this);
-}

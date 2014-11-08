@@ -1,6 +1,0 @@
-{
-  mResource=0;
-  mDrawable=RoundedDrawable.fromBitmap(bm);
-  updateDrawableAttrs();
-  super.setImageDrawable(mDrawable);
-}

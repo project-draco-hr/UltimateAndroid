@@ -1,7 +1,0 @@
-{
-  Logger.d("Deleting meeting for " + meeting.getTeam().getName() + " with a date/time of '"+ meeting.getDateTime()+ "'");
-  if (meeting.getId() != null) {
-    SQLiteDatabase db=getWritableDatabase();
-    db.delete(MEETINGS_TABLE_NAME,_ID + " = ?",new String[]{meeting.getId().toString()});
-  }
-}

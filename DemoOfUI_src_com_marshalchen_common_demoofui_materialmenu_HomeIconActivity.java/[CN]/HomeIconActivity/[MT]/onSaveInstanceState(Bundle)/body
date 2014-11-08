@@ -1,4 +1,0 @@
-{
-  materialMenu.onSaveInstanceState(outState);
-  super.onSaveInstanceState(outState);
-}

@@ -1,5 +1,0 @@
-{
-  ((ImageView)floatView).setImageDrawable(null);
-  mFloatBitmap.recycle();
-  mFloatBitmap=null;
-}

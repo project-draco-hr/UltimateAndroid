@@ -1,4 +1,0 @@
-{
-  mArcLayout.addView(item);
-  item.setOnClickListener(getItemClickListener(listener));
-}

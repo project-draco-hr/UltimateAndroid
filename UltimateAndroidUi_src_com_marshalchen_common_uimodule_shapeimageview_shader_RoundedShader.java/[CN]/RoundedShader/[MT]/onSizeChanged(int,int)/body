@@ -1,4 +1,0 @@
-{
-  super.onSizeChanged(width,height);
-  borderRect.set(borderWidth,borderWidth,viewWidth - borderWidth,viewHeight - borderWidth);
-}

@@ -1,7 +1,0 @@
-View child
-int position
-boolean flowDown
-int childrenLeft
-int childTop
-int childRight
-int childBottom

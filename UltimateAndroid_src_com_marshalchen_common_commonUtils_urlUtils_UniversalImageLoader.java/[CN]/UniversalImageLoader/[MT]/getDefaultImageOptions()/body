@@ -1,4 +1,0 @@
-{
-  DisplayImageOptions options=getDefaultImageOptionsBuilder().build();
-  return options;
-}

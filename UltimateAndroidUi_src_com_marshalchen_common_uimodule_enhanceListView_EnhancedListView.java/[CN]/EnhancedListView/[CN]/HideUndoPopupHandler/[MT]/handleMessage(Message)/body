@@ -1,5 +1,0 @@
-{
-  if (msg.what == mValidDelayedMsgId) {
-    discardUndo();
-  }
-}

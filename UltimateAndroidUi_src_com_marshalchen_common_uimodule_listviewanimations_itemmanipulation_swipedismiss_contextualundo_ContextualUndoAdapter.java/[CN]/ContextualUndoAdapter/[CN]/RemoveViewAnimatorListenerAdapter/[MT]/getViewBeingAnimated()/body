@@ -1,9 +1,0 @@
-{
-  ContextualUndoView newDismissView=getCurrentRemovedView(mDismissView,mDismissViewId);
-  if (newDismissView != mDismissView) {
-    restoreViewPosition(mDismissView);
-    restoreViewDimension(mDismissView);
-    mDismissView=newDismissView;
-  }
-  return mDismissView;
-}

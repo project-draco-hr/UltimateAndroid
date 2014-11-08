@@ -1,3 +1,0 @@
-{
-  return c * (float)Math.sin(t / d * (Math.PI / 2)) + b;
-}

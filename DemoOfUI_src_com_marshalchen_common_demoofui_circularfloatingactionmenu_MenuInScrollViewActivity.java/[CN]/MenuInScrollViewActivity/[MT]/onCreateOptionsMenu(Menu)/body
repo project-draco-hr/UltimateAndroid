@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.circular_floating_menu_menu_in_scroll_view,menu);
-  return true;
-}

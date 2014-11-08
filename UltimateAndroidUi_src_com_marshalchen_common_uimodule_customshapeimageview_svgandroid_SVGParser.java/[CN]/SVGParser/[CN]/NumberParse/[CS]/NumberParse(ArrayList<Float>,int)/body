@@ -1,4 +1,0 @@
-{
-  this.numbers=numbers;
-  this.nextCmd=nextCmd;
-}

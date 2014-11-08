@@ -1,3 +1,0 @@
-{
-  child.layout(childrenLeft,childTop,childRight,childBottom);
-}

@@ -1,3 +1,0 @@
-{
-  throw new RuntimeException("Unexpected char '" + c + "'.");
-}

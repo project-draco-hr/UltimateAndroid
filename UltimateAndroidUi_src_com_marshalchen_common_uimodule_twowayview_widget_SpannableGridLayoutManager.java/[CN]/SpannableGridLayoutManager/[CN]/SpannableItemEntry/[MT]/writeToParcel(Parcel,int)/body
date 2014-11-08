@@ -1,5 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeInt(colSpan);
-  out.writeInt(rowSpan);
-}

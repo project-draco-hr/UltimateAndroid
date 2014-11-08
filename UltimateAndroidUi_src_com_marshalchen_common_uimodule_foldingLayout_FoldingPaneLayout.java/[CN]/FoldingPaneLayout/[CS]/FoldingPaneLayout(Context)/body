@@ -1,4 +1,0 @@
-{
-  this(context,null);
-  foldingNavigationLayout=new BaseFoldingLayout(getContext());
-}

@@ -1,3 +1,0 @@
-{
-  return lp.mDiscrollveAlpha || lp.mDiscrollveTranslation != -1 || lp.mDiscrollveScaleX || lp.mDiscrollveScaleY || (lp.mDiscrollveFromBgColor != -1 && lp.mDiscrollveToBgColor != -1);
-}

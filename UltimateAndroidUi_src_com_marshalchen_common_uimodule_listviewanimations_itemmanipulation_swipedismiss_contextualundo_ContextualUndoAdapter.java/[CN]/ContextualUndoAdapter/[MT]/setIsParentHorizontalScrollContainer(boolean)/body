@@ -1,6 +1,0 @@
-{
-  super.setIsParentHorizontalScrollContainer(isParentHorizontalScrollContainer);
-  if (mContextualUndoListViewTouchListener != null) {
-    mContextualUndoListViewTouchListener.setIsParentHorizontalScrollContainer(isParentHorizontalScrollContainer);
-  }
-}

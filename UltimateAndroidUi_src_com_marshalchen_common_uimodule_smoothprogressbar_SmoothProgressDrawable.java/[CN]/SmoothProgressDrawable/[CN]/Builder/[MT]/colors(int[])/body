@@ -1,5 +1,0 @@
-{
-  if (colors == null || colors.length == 0)   throw new IllegalArgumentException("Your color array must not be empty");
-  mColors=colors;
-  return this;
-}

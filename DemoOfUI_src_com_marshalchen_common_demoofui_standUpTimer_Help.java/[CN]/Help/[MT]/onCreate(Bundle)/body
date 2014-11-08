@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.stand_up_timer_help);
-  View okButton=findViewById(R.id.help_ok);
-  okButton.setOnClickListener(this);
-}

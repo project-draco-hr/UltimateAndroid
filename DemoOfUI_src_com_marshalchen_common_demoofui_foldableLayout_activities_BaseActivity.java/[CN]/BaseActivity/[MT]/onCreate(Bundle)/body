@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  if (getActionBar() != null)   getActionBar().setDisplayHomeAsUpEnabled(true);
-}

@@ -1,5 +1,0 @@
-{
-  setStatsTabContent();
-  meetingListAdapter=createMeetingListAdapter();
-  meetingList.setAdapter(meetingListAdapter);
-}

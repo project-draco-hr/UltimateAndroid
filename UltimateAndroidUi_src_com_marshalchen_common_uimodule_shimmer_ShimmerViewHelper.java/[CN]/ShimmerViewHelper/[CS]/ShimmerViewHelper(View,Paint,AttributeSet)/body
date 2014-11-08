@@ -1,5 +1,0 @@
-{
-  this.view=view;
-  this.paint=paint;
-  init(attributeSet);
-}

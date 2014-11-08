@@ -1,3 +1,0 @@
-{
-  outState.putLong(EXTRA_ACTIVE_REMOVED_ID,mCurrentRemovedId);
-}

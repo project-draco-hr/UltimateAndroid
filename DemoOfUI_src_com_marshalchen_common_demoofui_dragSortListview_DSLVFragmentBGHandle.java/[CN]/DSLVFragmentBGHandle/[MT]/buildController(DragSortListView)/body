@@ -1,4 +1,0 @@
-{
-  MyDSController c=new MyDSController(dslv);
-  return c;
-}

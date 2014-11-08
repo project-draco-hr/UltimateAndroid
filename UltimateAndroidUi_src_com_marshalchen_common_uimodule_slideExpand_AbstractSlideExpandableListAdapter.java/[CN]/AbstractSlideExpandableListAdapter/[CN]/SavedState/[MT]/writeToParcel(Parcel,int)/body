@@ -1,5 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeInt(lastOpenPosition);
-  writeBitSet(out,openItems);
-}

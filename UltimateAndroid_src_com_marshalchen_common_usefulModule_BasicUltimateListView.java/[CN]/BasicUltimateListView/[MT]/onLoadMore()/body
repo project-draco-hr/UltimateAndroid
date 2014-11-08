@@ -1,4 +1,0 @@
-{
-  onLoadMoreListener.loadMore();
-  isLoading=false;
-}

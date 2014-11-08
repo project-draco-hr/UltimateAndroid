@@ -1,4 +1,0 @@
-{
-  super.onPostCreate(savedInstanceState);
-  helper.refreshDrawerState();
-}

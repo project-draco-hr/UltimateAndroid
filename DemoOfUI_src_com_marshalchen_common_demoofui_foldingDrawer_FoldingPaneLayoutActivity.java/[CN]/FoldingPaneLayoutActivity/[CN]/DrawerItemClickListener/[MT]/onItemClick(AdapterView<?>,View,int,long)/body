@@ -1,5 +1,0 @@
-{
-  if (mPaneLayout.isOpen()) {
-    selectItem(position);
-  }
-}

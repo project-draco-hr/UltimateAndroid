@@ -1,5 +1,0 @@
-{
-  mBorderColor=colors != null ? colors : ColorStateList.valueOf(0);
-  mBorderPaint.setColor(mBorderColor.getColorForState(getState(),DEFAULT_BORDER_COLOR));
-  return this;
-}

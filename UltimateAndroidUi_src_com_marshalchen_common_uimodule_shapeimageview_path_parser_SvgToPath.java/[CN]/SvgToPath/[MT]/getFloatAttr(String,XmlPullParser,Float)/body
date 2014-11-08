@@ -1,4 +1,0 @@
-{
-  Float result=ParseUtil.convertUnits(name,attributes,dpi,width,height);
-  return result == null ? defaultValue : result;
-}

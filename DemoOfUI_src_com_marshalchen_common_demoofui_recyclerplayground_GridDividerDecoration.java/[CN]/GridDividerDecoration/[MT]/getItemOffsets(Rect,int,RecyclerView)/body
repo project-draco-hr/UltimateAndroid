@@ -1,3 +1,0 @@
-{
-  outRect.set(mInsets,mInsets,mInsets,mInsets);
-}

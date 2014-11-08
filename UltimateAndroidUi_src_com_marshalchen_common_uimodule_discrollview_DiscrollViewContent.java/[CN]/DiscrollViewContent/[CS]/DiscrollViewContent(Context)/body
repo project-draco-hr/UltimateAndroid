@@ -1,4 +1,0 @@
-{
-  super(context);
-  setOrientation(VERTICAL);
-}

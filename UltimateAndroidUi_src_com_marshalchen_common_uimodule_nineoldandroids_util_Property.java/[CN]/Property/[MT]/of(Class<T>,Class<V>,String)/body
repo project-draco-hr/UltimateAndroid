@@ -1,3 +1,0 @@
-{
-  return new ReflectiveProperty<T,V>(hostType,valueType,name);
-}

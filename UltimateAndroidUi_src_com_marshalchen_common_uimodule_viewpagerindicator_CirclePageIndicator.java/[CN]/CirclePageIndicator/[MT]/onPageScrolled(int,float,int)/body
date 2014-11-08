@@ -1,8 +1,0 @@
-{
-  mCurrentPage=position;
-  mPageOffset=positionOffset;
-  invalidate();
-  if (mListener != null) {
-    mListener.onPageScrolled(position,positionOffset,positionOffsetPixels);
-  }
-}

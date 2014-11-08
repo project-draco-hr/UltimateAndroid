@@ -1,4 +1,0 @@
-{
-  this.resId=resId;
-  this.borderType=borderType;
-}

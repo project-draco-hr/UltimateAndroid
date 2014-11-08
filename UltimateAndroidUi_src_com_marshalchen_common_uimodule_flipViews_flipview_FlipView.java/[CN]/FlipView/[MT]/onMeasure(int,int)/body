@@ -1,6 +1,0 @@
-{
-  int width=getDefaultSize(0,widthMeasureSpec);
-  int height=getDefaultSize(0,heightMeasureSpec);
-  measureChildren(widthMeasureSpec,heightMeasureSpec);
-  setMeasuredDimension(width,height);
-}

@@ -1,8 +1,0 @@
-{
-  super(items);
-  mContext=context;
-  mViewLayoutResId=layoutResId;
-  mTitleParentResId=titleParentResId;
-  mContentParentResId=contentParentResId;
-  mExpandedIds=new ArrayList<Long>();
-}

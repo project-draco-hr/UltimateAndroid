@@ -1,9 +1,0 @@
-{
-  super(s);
-  fillpaint=new Paint(this.getPaint());
-  fillpaint.setColor(fill);
-  strokepaint=new Paint(fillpaint);
-  strokepaint.setStyle(Paint.Style.STROKE);
-  strokepaint.setStrokeWidth(2);
-  strokepaint.setColor(stroke);
-}

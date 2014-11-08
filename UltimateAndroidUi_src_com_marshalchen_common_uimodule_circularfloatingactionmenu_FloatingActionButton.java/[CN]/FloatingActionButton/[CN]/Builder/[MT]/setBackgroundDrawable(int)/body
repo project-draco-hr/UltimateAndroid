@@ -1,3 +1,0 @@
-{
-  return setBackgroundDrawable(activity.getResources().getDrawable(drawableId));
-}

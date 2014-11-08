@@ -1,4 +1,0 @@
-{
-  mCornerRadius=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,radiusDp,mDisplayMetrics);
-  return this;
-}

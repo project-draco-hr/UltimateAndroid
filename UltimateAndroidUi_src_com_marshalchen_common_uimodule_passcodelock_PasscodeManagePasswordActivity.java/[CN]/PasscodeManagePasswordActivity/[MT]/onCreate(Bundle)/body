@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  Bundle extras=getIntent().getExtras();
-  if (extras != null) {
-    type=extras.getInt("type",-1);
-  }
-}

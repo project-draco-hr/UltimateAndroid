@@ -1,9 +1,0 @@
-{
-  mPoints=new ArrayList<TimedPoint>();
-  mLastVelocity=0;
-  mLastWidth=(mMinWidth + mMaxWidth) / 2;
-  mPath.reset();
-  mSignatureBitmap=null;
-  setIsEmpty(true);
-  invalidate();
-}

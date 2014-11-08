@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  if (getArguments() != null) {
-    layout=getArguments().getInt(ARG_LAYOUT);
-  }
-}

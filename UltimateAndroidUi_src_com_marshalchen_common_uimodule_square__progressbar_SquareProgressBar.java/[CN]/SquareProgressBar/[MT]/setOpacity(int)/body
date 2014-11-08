@@ -1,3 +1,0 @@
-{
-  imageView.setAlpha((int)(2.55 * progress));
-}

@@ -1,5 +1,0 @@
-{
-  ViewHelper.setPivotX(view,position > 0 ? 0 : view.getWidth());
-  ViewHelper.setPivotY(view,0);
-  ViewHelper.setRotation(view,-90f * position);
-}

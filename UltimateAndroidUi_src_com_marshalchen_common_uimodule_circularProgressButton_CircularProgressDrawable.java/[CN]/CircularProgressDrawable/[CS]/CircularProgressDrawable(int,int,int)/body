@@ -1,7 +1,0 @@
-{
-  mSize=size;
-  mStrokeWidth=strokeWidth;
-  mStrokeColor=strokeColor;
-  mStartAngle=-90;
-  mSweepAngle=0;
-}

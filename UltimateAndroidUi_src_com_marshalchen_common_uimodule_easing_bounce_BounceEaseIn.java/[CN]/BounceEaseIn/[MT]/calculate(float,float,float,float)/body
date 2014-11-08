@@ -1,3 +1,0 @@
-{
-  return c - mBounceEaseOut.calculate(d - t,0,c,d) + b;
-}

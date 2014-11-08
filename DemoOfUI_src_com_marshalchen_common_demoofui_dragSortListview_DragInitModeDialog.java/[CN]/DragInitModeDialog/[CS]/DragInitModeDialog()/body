@@ -1,4 +1,0 @@
-{
-  super();
-  mDragInitMode=DragSortController.ON_DOWN;
-}

@@ -1,3 +1,0 @@
-{
-  viewHolder.mTextView.setText(mArray[i]);
-}

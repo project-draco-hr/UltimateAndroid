@@ -1,3 +1,0 @@
-{
-  if (typedArray.getBoolean(R.styleable.DayPickerView_currentDaySelected,false))   onDayTapped(new CalendarDay(System.currentTimeMillis()));
-}

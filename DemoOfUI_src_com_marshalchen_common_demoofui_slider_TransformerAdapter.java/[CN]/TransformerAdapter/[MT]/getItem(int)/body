@@ -1,3 +1,0 @@
-{
-  return SliderLayout.Transformer.values()[position].toString();
-}

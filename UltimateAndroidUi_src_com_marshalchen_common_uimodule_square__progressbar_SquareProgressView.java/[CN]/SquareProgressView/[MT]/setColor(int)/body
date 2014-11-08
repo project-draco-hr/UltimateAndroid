@@ -1,4 +1,0 @@
-{
-  progressBarPaint.setColor(color);
-  this.invalidate();
-}

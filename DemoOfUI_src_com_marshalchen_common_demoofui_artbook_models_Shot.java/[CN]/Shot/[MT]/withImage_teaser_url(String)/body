@@ -1,4 +1,0 @@
-{
-  this.image_teaser_url=image_teaser_url;
-  return this;
-}

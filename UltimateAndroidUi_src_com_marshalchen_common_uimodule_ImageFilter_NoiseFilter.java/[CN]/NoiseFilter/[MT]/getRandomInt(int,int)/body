@@ -1,5 +1,0 @@
-{
-  int min=Math.min(a,b);
-  int max=Math.max(a,b);
-  return min + (int)(Math.random() * (max - min + 1));
-}

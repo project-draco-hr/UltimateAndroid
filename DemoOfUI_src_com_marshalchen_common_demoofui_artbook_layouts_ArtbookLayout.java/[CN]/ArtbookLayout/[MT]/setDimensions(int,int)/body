@@ -1,5 +1,0 @@
-{
-  super.setDimensions(measuredWidth,measuredHeight);
-  largeItemSide=measuredWidth / 2;
-  regularItemSide=measuredWidth / 4;
-}

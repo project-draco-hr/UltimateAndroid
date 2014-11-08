@@ -1,9 +1,0 @@
-{
-  if (mIndicator != null) {
-    mIndicator.destroySelf();
-  }
-  mIndicator=indicator;
-  mIndicator.setIndicatorVisibility(mIndicatorVisibility);
-  mIndicator.setViewPager(mViewPager);
-  mIndicator.redraw();
-}

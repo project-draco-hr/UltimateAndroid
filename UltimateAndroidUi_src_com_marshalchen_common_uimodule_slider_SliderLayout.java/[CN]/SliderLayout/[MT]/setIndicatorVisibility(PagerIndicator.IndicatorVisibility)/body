@@ -1,6 +1,0 @@
-{
-  if (mIndicator == null) {
-    return;
-  }
-  mIndicator.setIndicatorVisibility(visibility);
-}

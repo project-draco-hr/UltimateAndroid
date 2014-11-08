@@ -1,6 +1,0 @@
-{
-  ViewGroup.LayoutParams lp;
-  lp=view.getLayoutParams();
-  lp.height=mOriginalHeight;
-  view.setLayoutParams(lp);
-}

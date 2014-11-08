@@ -1,7 +1,0 @@
-Activity activity
-LayoutParams layoutParams
-int theme
-Drawable backgroundDrawable
-int position
-View contentView
-FrameLayout.LayoutParams contentParams

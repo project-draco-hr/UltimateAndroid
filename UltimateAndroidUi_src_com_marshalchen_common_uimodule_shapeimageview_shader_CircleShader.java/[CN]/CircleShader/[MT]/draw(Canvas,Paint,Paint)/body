@@ -1,7 +1,0 @@
-{
-  canvas.drawCircle(center,center,borderRadius,borderPaint);
-  canvas.save();
-  canvas.concat(matrix);
-  canvas.drawCircle(bitmapCenterX,bitmapCenterY,bitmapRadius,imagePaint);
-  canvas.restore();
-}

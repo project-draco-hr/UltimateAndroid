@@ -1,5 +1,0 @@
-{
-  mStartingStartTrim=mStartTrim;
-  mStartingEndTrim=mEndTrim;
-  mStartingRotation=mRotation;
-}

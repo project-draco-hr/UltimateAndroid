@@ -1,6 +1,0 @@
-{
-  if (mAdapter != null)   mAdapter.unregisterDataSetObserver(mDataObserver);
-  mAdapter=adapter;
-  if (mAdapter != null)   mAdapter.registerDataSetObserver(mDataObserver);
-  updateAdapterData();
-}

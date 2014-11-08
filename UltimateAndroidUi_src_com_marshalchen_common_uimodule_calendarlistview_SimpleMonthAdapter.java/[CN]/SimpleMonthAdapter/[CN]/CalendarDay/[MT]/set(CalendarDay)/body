@@ -1,5 +1,0 @@
-{
-  year=calendarDay.year;
-  month=calendarDay.month;
-  day=calendarDay.day;
-}

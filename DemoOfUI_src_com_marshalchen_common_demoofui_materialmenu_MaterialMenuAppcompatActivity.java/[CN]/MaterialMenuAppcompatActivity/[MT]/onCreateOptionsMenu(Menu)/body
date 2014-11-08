@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.material_menu_custom_view,menu);
-  return true;
-}

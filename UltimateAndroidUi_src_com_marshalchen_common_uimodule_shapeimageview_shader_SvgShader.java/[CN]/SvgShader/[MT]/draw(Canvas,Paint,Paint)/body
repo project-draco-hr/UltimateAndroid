@@ -1,7 +1,0 @@
-{
-  canvas.save();
-  canvas.drawPath(borderPath,borderPaint);
-  canvas.concat(matrix);
-  canvas.drawPath(path,imagePaint);
-  canvas.restore();
-}

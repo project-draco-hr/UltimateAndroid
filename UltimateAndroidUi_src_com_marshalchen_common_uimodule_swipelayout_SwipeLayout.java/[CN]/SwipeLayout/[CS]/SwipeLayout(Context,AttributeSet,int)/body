@@ -1,9 +1,0 @@
-{
-  super(context,attrs,defStyle);
-  mDragHelper=ViewDragHelper.create(this,mDragHelperCallback);
-  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.SwipeLayout);
-  int ordinal=a.getInt(R.styleable.SwipeLayout_drag_edge,DragEdge.Right.ordinal());
-  mDragEdge=DragEdge.values()[ordinal];
-  ordinal=a.getInt(R.styleable.SwipeLayout_show_mode,ShowMode.PullOut.ordinal());
-  mShowMode=ShowMode.values()[ordinal];
-}

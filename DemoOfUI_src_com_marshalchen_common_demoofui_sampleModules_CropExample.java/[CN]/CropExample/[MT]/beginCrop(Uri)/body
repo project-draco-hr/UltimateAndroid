@@ -1,4 +1,0 @@
-{
-  Uri outputUri=Uri.fromFile(new File(getCacheDir(),"cropped"));
-  new Crop(source).output(outputUri).asSquare().start(this);
-}

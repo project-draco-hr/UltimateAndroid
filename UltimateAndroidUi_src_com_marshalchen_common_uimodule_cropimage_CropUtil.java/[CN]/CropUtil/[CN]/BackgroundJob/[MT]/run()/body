@@ -1,8 +1,0 @@
-{
-  try {
-    mJob.run();
-  }
-  finally {
-    mHandler.post(mCleanupRunner);
-  }
-}

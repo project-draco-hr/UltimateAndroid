@@ -1,6 +1,0 @@
-{
-  interpolator=null;
-  duration=0;
-  combinableList=new ArrayList<Combinable>();
-  listener=null;
-}

@@ -1,4 +1,0 @@
-{
-  final Matrix matrix=(pMatrix == null) ? IDENTITY_MATRIX : pMatrix;
-  matrixStack.push(matrix);
-}

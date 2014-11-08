@@ -1,3 +1,0 @@
-{
-  if (mOnLayoutListeners != null)   mOnLayoutListeners.remove(l);
-}

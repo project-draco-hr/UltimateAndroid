@@ -1,3 +1,0 @@
-{
-  if (!scrollListeners.contains(listener))   scrollListeners.add(listener);
-}

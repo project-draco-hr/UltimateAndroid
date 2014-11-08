@@ -1,5 +1,0 @@
-{
-  int xInt=(int)x;
-  double xFrac=x - xInt;
-  return CosineInterpolate(Noise(xInt),Noise(xInt + 1),xFrac);
-}

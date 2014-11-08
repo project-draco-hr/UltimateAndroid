@@ -1,4 +1,0 @@
-{
-  double f=(1 - Math.cos(a * Math.PI)) * 0.5;
-  return x1 * (1 - f) + x2 * f;
-}

@@ -1,3 +1,0 @@
-{
-  headerViewHolder.title.setText(items.get(position).subSequence(0,2));
-}

@@ -1,4 +1,0 @@
-{
-  this.lastOffset=0;
-  this.view=new WeakReference<View>(view);
-}

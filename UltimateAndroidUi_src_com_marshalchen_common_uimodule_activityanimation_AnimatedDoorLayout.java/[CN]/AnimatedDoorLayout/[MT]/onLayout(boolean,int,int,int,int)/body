@@ -1,5 +1,0 @@
-{
-  View child=getChildAt(0);
-  child.layout(0,0,child.getMeasuredWidth(),child.getMeasuredHeight());
-  updateDoor();
-}

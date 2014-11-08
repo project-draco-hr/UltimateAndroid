@@ -1,8 +1,0 @@
-{
-  int xMiddle=drawRect.left + ((drawRect.right - drawRect.left) / 2);
-  int yMiddle=drawRect.top + ((drawRect.bottom - drawRect.top) / 2);
-  canvas.drawCircle(drawRect.left,yMiddle,handleRadius,handlePaint);
-  canvas.drawCircle(xMiddle,drawRect.top,handleRadius,handlePaint);
-  canvas.drawCircle(drawRect.right,yMiddle,handleRadius,handlePaint);
-  canvas.drawCircle(xMiddle,drawRect.bottom,handleRadius,handlePaint);
-}

@@ -1,7 +1,0 @@
-{
-  if (waveCharOffset < 0) {
-    throw new IllegalArgumentException("The wave char offset must be non-negative");
-  }
-  this.waveCharDelay=waveCharOffset;
-  return this;
-}

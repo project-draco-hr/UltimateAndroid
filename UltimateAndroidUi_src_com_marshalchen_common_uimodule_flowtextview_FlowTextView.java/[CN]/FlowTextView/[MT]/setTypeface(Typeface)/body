@@ -1,6 +1,0 @@
-{
-  this.typeFace=type;
-  mTextPaint.setTypeface(typeFace);
-  mLinkPaint.setTypeface(typeFace);
-  invalidate();
-}

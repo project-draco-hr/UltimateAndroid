@@ -1,4 +1,0 @@
-{
-  writer.println(new java.util.Date() + ": ");
-  ex.printStackTrace(writer);
-}

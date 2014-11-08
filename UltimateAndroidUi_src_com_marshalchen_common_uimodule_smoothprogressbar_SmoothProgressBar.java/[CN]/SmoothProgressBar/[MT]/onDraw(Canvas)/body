@@ -1,6 +1,0 @@
-{
-  super.onDraw(canvas);
-  if (isIndeterminate() && getIndeterminateDrawable() instanceof SmoothProgressDrawable && !((SmoothProgressDrawable)getIndeterminateDrawable()).isRunning()) {
-    getIndeterminateDrawable().draw(canvas);
-  }
-}

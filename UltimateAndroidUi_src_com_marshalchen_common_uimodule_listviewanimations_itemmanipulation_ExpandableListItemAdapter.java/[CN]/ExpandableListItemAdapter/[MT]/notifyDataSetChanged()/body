@@ -1,9 +1,0 @@
-{
-  super.notifyDataSetChanged();
-  Set<Long> removedIds=new HashSet<Long>(mExpandedIds);
-  for (int i=0; i < getCount(); ++i) {
-    long id=getItemId(i);
-    removedIds.remove(id);
-  }
-  mExpandedIds.removeAll(removedIds);
-}

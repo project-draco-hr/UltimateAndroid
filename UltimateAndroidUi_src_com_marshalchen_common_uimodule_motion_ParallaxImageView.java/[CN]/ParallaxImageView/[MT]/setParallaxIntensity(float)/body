@@ -1,5 +1,0 @@
-{
-  if (parallaxIntensity < 1)   throw new IllegalArgumentException("Parallax effect must have a intensity of 1.0 or greater");
-  mParallaxIntensity=parallaxIntensity;
-  configureMatrix();
-}

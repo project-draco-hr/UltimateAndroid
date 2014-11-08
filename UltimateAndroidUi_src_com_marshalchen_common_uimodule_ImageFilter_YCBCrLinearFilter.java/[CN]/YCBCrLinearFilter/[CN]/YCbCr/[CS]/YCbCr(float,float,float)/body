@@ -1,5 +1,0 @@
-{
-  this.Y=Math.max(0.0f,Math.min(1.0f,y));
-  this.Cb=Math.max(-0.5f,Math.min(0.5f,cb));
-  this.Cr=Math.max(-0.5f,Math.min(0.5f,cr));
-}

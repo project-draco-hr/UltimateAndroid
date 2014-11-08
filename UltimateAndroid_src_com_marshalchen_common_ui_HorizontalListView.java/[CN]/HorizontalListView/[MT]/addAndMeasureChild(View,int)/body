@@ -1,8 +1,0 @@
-{
-  LayoutParams params=child.getLayoutParams();
-  if (params == null) {
-    params=new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT);
-  }
-  addViewInLayout(child,viewPos,params,true);
-  child.measure(MeasureSpec.makeMeasureSpec(getWidth(),MeasureSpec.AT_MOST),MeasureSpec.makeMeasureSpec(getHeight(),MeasureSpec.AT_MOST));
-}

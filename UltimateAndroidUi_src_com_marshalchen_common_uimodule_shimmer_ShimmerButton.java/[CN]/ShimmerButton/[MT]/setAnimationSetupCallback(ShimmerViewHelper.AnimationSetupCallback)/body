@@ -1,3 +1,0 @@
-{
-  shimmerViewHelper.setAnimationSetupCallback(callback);
-}

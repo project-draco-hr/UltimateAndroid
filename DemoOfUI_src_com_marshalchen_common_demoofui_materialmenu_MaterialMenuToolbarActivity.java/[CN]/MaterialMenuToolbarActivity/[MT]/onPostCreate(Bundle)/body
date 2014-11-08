@@ -1,5 +1,0 @@
-{
-  super.onPostCreate(savedInstanceState);
-  helper.refreshDrawerState();
-  materialMenu.syncState(savedInstanceState);
-}

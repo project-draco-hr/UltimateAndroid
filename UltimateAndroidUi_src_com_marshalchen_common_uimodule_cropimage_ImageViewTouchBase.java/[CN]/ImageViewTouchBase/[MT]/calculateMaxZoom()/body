@@ -1,8 +1,0 @@
-{
-  if (bitmapDisplayed.getBitmap() == null) {
-    return 1F;
-  }
-  float fw=(float)bitmapDisplayed.getWidth() / (float)thisWidth;
-  float fh=(float)bitmapDisplayed.getHeight() / (float)thisHeight;
-  return Math.max(fw,fh) * 4;
-}

@@ -1,6 +1,0 @@
-{
-  this.parent=viewGroup;
-  view=wrapped.getView(position,view,viewGroup);
-  enableFor(view,position);
-  return view;
-}

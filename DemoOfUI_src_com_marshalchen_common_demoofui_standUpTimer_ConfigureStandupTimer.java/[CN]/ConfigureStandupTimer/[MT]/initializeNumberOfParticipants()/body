@@ -1,4 +1,0 @@
-{
-  TextView t=(TextView)findViewById(R.id.num_participants);
-  t.setText(Integer.toString(numParticipants));
-}

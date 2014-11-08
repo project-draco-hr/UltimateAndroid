@@ -1,5 +1,0 @@
-{
-  if (a_value < 0)   return 0;
-  if (a_value > 255)   return 255;
-  return a_value;
-}

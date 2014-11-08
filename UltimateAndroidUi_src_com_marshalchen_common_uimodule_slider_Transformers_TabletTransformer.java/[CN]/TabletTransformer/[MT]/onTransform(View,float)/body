@@ -1,7 +1,0 @@
-{
-  final float rotation=(position < 0 ? 30f : -30f) * Math.abs(position);
-  ViewHelper.setTranslationX(view,getOffsetXForRotation(rotation,view.getWidth(),view.getHeight()));
-  ViewHelper.setPivotX(view,view.getWidth() * 0.5f);
-  ViewHelper.setPivotY(view,0);
-  ViewHelper.setRotationY(view,rotation);
-}

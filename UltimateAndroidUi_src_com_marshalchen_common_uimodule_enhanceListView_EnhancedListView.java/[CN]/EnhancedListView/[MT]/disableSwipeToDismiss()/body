@@ -1,4 +1,0 @@
-{
-  mSwipeEnabled=false;
-  return this;
-}

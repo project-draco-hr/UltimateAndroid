@@ -1,8 +1,0 @@
-{
-  final float lineThicknessPx=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,DEFAULT_LINE_THICKNESS_DP,context.getResources().getDisplayMetrics());
-  final Paint borderPaint=new Paint();
-  borderPaint.setColor(Color.parseColor(SEMI_TRANSPARENT));
-  borderPaint.setStrokeWidth(lineThicknessPx);
-  borderPaint.setStyle(Paint.Style.STROKE);
-  return borderPaint;
-}

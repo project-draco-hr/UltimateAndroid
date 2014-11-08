@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.pull_scroll_view_act_stretch);
-  mMainLayout=(TableLayout)findViewById(R.id.table_layout);
-  showTable();
-}

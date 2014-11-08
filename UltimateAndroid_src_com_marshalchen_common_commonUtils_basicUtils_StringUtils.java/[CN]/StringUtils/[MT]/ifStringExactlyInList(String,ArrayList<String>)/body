@@ -1,8 +1,0 @@
-{
-  if (BasicUtils.judgeNotNull(s) && BasicUtils.judgeNotNull(arrayList)) {
-    for (    String str : arrayList) {
-      if (str.equals(s))       return true;
-    }
-  }
-  return false;
-}

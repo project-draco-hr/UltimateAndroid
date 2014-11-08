@@ -1,9 +1,0 @@
-{
-  if (mGapColor != ATTR_NOT_SET) {
-    createGap();
-    setGapColor();
-  }
- else {
-    emptyGap();
-  }
-}

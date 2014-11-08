@@ -1,3 +1,0 @@
-{
-  if (duration > 100)   mBlurDuration=duration;
-}

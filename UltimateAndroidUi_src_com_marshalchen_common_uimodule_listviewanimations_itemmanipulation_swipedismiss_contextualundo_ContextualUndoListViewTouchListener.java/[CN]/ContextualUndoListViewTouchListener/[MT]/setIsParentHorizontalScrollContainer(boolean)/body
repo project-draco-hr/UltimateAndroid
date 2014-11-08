@@ -1,3 +1,0 @@
-{
-  mIsParentHorizontalScrollContainer=mResIdOfTouchChild == 0 && isParentHorizontalScrollContainer;
-}

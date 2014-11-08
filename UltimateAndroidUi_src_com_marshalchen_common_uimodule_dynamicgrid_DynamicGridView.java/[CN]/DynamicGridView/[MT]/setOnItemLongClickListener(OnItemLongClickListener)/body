@@ -1,4 +1,0 @@
-{
-  mUserLongClickListener=listener;
-  super.setOnItemLongClickListener(mLocalLongClickListener);
-}

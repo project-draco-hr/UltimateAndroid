@@ -1,6 +1,0 @@
-{
-  super.onPause();
-  if (usingCamera) {
-    ((CameraPreviewInput)input).onPause();
-  }
-}

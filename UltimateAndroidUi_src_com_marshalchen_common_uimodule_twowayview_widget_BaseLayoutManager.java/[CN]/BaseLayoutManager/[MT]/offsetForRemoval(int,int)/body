@@ -1,5 +1,0 @@
-{
-  if (mItemEntries != null) {
-    mItemEntries.offsetForRemoval(positionStart,itemCount);
-  }
-}

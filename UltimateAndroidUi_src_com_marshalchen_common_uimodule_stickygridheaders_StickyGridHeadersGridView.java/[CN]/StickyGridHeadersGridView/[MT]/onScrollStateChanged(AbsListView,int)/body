@@ -1,6 +1,0 @@
-{
-  if (mScrollListener != null) {
-    mScrollListener.onScrollStateChanged(view,scrollState);
-  }
-  mScrollState=scrollState;
-}

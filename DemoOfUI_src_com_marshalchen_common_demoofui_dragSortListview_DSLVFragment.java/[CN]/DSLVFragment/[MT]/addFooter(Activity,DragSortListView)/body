@@ -1,7 +1,0 @@
-{
-  LayoutInflater inflater=activity.getLayoutInflater();
-  int count=dslv.getFooterViewsCount();
-  TextView footer=(TextView)inflater.inflate(R.layout.drag_sort_listview_header_footer,null);
-  footer.setText("Footer #" + (count + 1));
-  dslv.addFooterView(footer,null,false);
-}

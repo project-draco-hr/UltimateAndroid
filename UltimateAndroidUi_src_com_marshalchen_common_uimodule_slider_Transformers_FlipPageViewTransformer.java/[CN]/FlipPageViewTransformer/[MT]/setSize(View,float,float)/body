@@ -1,4 +1,0 @@
-{
-  ViewHelper.setScaleX(view,(position != 0 && position != 1) ? percentage : 1);
-  ViewHelper.setScaleY(view,(position != 0 && position != 1) ? percentage : 1);
-}

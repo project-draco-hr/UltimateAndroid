@@ -1,5 +1,0 @@
-{
-  if (mOnScrollListener != null) {
-    mOnScrollListener.onScroll(this,mFirstPosition,getChildCount(),mItemCount);
-  }
-}

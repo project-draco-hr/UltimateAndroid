@@ -1,5 +1,0 @@
-{
-  this.view=view;
-  this.targetHeight=targetHeight;
-  this.down=down;
-}

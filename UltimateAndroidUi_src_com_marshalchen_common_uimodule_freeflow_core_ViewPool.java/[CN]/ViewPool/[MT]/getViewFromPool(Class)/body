@@ -1,4 +1,0 @@
-{
-  if (viewPool.get(viewType) == null || viewPool.get(viewType).size() == 0)   return null;
-  return viewPool.get(viewType).remove(0);
-}

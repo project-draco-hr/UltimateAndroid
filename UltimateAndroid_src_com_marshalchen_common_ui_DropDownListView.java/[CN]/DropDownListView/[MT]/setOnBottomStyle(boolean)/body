@@ -1,6 +1,0 @@
-{
-  if (this.isOnBottomStyle != isOnBottomStyle) {
-    this.isOnBottomStyle=isOnBottomStyle;
-    initOnBottomStyle();
-  }
-}

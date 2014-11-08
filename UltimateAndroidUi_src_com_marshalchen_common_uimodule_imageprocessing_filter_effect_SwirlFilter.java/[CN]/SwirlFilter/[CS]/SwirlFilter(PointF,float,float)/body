@@ -1,5 +1,0 @@
-{
-  this.center=center;
-  this.radius=radius;
-  this.angle=angle;
-}

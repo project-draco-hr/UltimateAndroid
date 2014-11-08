@@ -1,6 +1,0 @@
-{
-  final float width=right - left;
-  final float height=bottom - top;
-  final float aspectRatio=width / height;
-  return aspectRatio;
-}

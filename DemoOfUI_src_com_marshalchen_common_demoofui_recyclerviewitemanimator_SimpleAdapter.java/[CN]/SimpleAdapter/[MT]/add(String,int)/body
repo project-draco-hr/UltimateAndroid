@@ -1,5 +1,0 @@
-{
-  position=position == LAST_POSITION ? getItemCount() : position;
-  mData.add(position,s);
-  notifyItemInserted(position);
-}

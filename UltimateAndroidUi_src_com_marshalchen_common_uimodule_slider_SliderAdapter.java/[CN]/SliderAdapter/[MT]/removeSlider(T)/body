@@ -1,6 +1,0 @@
-{
-  if (mImageContents.contains(slider)) {
-    mImageContents.remove(slider);
-    notifyDataSetChanged();
-  }
-}

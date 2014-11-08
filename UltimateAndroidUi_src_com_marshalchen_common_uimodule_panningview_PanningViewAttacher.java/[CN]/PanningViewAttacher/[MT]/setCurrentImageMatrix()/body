@@ -1,5 +1,0 @@
-{
-  getImageView().setImageMatrix(mMatrix);
-  getImageView().invalidate();
-  getImageView().requestLayout();
-}

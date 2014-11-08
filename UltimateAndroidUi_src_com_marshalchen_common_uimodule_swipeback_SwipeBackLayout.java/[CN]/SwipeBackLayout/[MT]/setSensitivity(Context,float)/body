@@ -1,3 +1,0 @@
-{
-  mDragHelper.setSensitivity(context,sensitivity);
-}

@@ -1,7 +1,0 @@
-{
-  super.postTranslate(deltaX,deltaY);
-  for (  HighlightView hv : highlightViews) {
-    hv.matrix.postTranslate(deltaX,deltaY);
-    hv.invalidate();
-  }
-}

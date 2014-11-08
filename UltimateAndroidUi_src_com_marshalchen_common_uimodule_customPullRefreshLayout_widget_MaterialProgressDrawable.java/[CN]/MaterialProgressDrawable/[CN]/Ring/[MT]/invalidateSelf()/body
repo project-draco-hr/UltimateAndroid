@@ -1,3 +1,0 @@
-{
-  mCallback.invalidateDrawable(null);
-}

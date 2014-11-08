@@ -1,4 +1,0 @@
-{
-  handleUpdate(positionStart,itemCount,UpdateOp.UPDATE);
-  super.onItemsUpdated(recyclerView,positionStart,itemCount);
-}

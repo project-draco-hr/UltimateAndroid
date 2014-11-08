@@ -1,5 +1,0 @@
-{
-  Bitmap bitmap=Bitmap.createBitmap(bitmapWidth,bitmapHeight,Bitmap.Config.ARGB_8888);
-  view.draw(new Canvas(bitmap));
-  return bitmap;
-}

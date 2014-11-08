@@ -1,3 +1,0 @@
-{
-  mOriginalY=mRecyclerView.getLayoutManager().getDecoratedBottom(holder.itemView);
-}

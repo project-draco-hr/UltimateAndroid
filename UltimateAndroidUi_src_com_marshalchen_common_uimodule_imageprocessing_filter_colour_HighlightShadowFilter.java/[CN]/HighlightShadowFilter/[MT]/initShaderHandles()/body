@@ -1,5 +1,0 @@
-{
-  super.initShaderHandles();
-  highlightHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_HIGHLIGHT);
-  shadowHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_SHADOW);
-}

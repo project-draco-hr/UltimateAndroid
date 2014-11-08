@@ -1,9 +1,0 @@
-{
-  if (calendar == null) {
-    calendar=Calendar.getInstance();
-  }
-  calendar.setTimeInMillis(timeInMillis);
-  month=this.calendar.get(Calendar.MONTH);
-  year=this.calendar.get(Calendar.YEAR);
-  day=this.calendar.get(Calendar.DAY_OF_MONTH);
-}

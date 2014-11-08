@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  this.setListAdapter(new ExampleAdapter());
-}

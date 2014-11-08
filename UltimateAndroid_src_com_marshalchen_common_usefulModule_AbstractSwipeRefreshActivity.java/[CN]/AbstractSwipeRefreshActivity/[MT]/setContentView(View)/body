@@ -1,3 +1,0 @@
-{
-  setContentView(view,view.getLayoutParams());
-}

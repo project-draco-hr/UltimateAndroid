@@ -1,5 +1,0 @@
-AbsLayoutContainer parent
-View view
-int sectionIndex
-int positionInSection
-long id

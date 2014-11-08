@@ -1,4 +1,0 @@
-{
-  if (_sinType > 0)   return _amplitude * Math.sin(nPos * 2 * LIB_PI / _waveLength);
- else   return Math.floor(_amplitude * (Math.abs((((nPos % _waveLength) / (double)_waveLength) * 4) - 2) - 1));
-}

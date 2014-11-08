@@ -1,7 +1,0 @@
-{
-  if (android.os.Build.VERSION.SDK_INT < 14)   return;
-  if (isPasswordLocked()) {
-    currentApp.unregisterActivityLifecycleCallbacks(this);
-    currentApp.registerActivityLifecycleCallbacks(this);
-  }
-}

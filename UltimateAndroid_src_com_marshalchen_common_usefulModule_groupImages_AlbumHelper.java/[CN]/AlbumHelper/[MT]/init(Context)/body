@@ -1,6 +1,0 @@
-{
-  if (this.context == null) {
-    this.context=context;
-    cr=context.getContentResolver();
-  }
-}

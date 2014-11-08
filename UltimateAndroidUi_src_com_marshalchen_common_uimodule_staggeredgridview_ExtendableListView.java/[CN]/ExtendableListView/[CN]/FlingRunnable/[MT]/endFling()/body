@@ -1,7 +1,0 @@
-{
-  mLastFlingY=0;
-  mTouchMode=TOUCH_MODE_IDLE;
-  reportScrollStateChange(OnScrollListener.SCROLL_STATE_IDLE);
-  removeCallbacks(this);
-  mScroller.forceFinished(true);
-}

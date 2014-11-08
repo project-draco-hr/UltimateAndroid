@@ -1,5 +1,0 @@
-{
-  this.personDataProvider=personDataProvider;
-  this.items=personDataProvider.getItems();
-  setHasStableIds(true);
-}

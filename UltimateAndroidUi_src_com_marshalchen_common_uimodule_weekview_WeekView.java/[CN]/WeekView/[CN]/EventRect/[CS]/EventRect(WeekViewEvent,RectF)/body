@@ -1,4 +1,0 @@
-{
-  this.event=event;
-  this.rectF=rectF;
-}

@@ -1,6 +1,0 @@
-{
-  super.onBoundsChange(bounds);
-  mWidth=dp2px(40);
-  mHeight=mWidth;
-  mBounds=new RectF(bounds.width() / 2 - mWidth / 2,bounds.top,bounds.width() / 2 + mWidth / 2,bounds.top + mHeight);
-}

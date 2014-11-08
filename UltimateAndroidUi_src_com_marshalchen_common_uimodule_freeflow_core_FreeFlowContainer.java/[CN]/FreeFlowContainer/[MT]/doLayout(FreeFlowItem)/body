@@ -1,5 +1,0 @@
-{
-  View view=freeflowItem.view;
-  Rect frame=freeflowItem.frame;
-  view.layout(frame.left - viewPortX,frame.top - viewPortY,frame.right - viewPortX,frame.bottom - viewPortY);
-}

@@ -1,7 +1,0 @@
-{
-  gradientMapFx=new GradientMapFilter(Gradient.BlackSepia());
-  gradientMapFx.ContrastFactor=0.2f;
-  gradientMapFx.BrightnessFactor=0.1f;
-  saturationFx=new SaturationModifyFilter();
-  saturationFx.SaturationFactor=-0.6f;
-}

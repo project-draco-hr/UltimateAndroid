@@ -1,5 +1,0 @@
-{
-  ObjectAnimator scaleX=ObjectAnimator.ofFloat(view,SCALE_X,mScaleFrom,1f);
-  ObjectAnimator scaleY=ObjectAnimator.ofFloat(view,SCALE_Y,mScaleFrom,1f);
-  return new ObjectAnimator[]{scaleX,scaleY};
-}

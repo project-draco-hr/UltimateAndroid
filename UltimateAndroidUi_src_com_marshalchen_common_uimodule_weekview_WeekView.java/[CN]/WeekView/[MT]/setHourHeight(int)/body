@@ -1,4 +1,0 @@
-{
-  mHourHeight=hourHeight;
-  invalidate();
-}

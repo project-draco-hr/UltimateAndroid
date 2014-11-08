@@ -1,7 +1,0 @@
-{
-  if (mGenerateBackgroundUsingColors) {
-    mBackgroundDrawableWhenHidden=SmoothProgressBarUtils.generateDrawableWithColors(mColors,mStrokeWidth);
-  }
-  SmoothProgressDrawable ret=new SmoothProgressDrawable(mInterpolator,mSectionsCount,mStrokeSeparatorLength,mColors,mStrokeWidth,mSpeed,mProgressiveStartSpeed,mProgressiveStopSpeed,mReversed,mMirrorMode,mOnProgressiveStopEndedListener,mProgressiveStartActivated,mBackgroundDrawableWhenHidden);
-  return ret;
-}

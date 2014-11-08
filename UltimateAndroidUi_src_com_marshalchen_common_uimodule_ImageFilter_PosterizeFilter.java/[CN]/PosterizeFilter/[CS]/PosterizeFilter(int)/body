@@ -1,3 +1,0 @@
-{
-  _level=((nLevel >= 2) ? nLevel : 2);
-}

@@ -1,7 +1,0 @@
-{
-  super.onDrawerSlide(drawerView,slideOffset);
-  if (slideOffset == 0.f)   isOpening=false;
- else   isOpening=true;
-  render();
-  setAlpha(mBlurredImageView,slideOffset,100);
-}

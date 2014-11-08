@@ -1,6 +1,0 @@
-{
-  if (created) {
-    cards.reloadTexture(frontIndex,frontView,backIndex,backView);
-    flipViewController.getSurfaceView().requestRender();
-  }
-}

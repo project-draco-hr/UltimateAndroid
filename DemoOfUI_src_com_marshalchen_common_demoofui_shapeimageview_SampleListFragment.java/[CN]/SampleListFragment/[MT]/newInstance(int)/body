@@ -1,7 +1,0 @@
-{
-  SampleListFragment fragment=new SampleListFragment();
-  Bundle args=new Bundle();
-  args.putInt(ARG_LAYOUT,layout);
-  fragment.setArguments(args);
-  return fragment;
-}

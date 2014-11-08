@@ -1,4 +1,0 @@
-{
-  this.progress=progress;
-  this.invalidate();
-}

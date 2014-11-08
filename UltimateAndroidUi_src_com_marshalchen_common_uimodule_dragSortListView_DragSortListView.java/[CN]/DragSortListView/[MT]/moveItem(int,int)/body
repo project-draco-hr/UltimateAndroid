@@ -1,8 +1,0 @@
-{
-  if (mDropListener != null) {
-    final int count=getInputAdapter().getCount();
-    if (from >= 0 && from < count && to >= 0 && to < count) {
-      mDropListener.drop(from,to);
-    }
-  }
-}

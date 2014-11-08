@@ -1,3 +1,0 @@
-{
-  return judgeNotNull(string,new String[0]);
-}

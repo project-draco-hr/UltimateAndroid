@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  distanceNormalizationHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_DISTANCE_NORMALIZATION);
-}

@@ -1,4 +1,0 @@
-{
-  TweenHandler handler=TweenHandler.getInstance();
-  handler.removeTween(this);
-}

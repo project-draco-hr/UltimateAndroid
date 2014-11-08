@@ -1,6 +1,0 @@
-{
-  if (bitmap != null) {
-    bitmap.recycle();
-    bitmap=null;
-  }
-}

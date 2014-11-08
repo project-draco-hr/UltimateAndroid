@@ -1,3 +1,0 @@
-{
-  return null != imageView && null != imageView.getDrawable();
-}

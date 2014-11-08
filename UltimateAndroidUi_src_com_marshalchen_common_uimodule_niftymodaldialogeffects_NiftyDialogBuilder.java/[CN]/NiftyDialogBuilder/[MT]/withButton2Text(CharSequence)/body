@@ -1,5 +1,0 @@
-{
-  mButton2.setVisibility(View.VISIBLE);
-  mButton2.setText(text);
-  return this;
-}

@@ -1,3 +1,0 @@
-{
-  return new ChoreographerAndroidSpringLooper(Choreographer.getInstance());
-}

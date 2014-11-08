@@ -1,8 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.android_week_view_activity);
-  mWeekView=(WeekView)findViewById(R.id.weekView);
-  mWeekView.setOnEventClickListener(this);
-  mWeekView.setMonthChangeListener(this);
-  mWeekView.setEventLongPressListener(this);
-}

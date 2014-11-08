@@ -1,6 +1,0 @@
-{
-  super.dispatchDraw(canvas);
-  if (mHoverCell != null) {
-    mHoverCell.draw(canvas);
-  }
-}

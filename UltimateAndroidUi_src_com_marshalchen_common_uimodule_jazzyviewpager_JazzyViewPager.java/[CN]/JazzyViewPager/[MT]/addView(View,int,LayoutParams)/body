@@ -1,3 +1,0 @@
-{
-  super.addView(wrapChild(child),index,params);
-}

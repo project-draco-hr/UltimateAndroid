@@ -1,5 +1,0 @@
-{
-  mProgressBackgroundColor=color;
-  updateMarkerColor();
-  updateBackgroundColor();
-}

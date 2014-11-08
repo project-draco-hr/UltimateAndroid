@@ -1,5 +1,0 @@
-{
-  cropIntent.putExtra(Extra.MAX_X,width);
-  cropIntent.putExtra(Extra.MAX_Y,height);
-  return this;
-}

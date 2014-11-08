@@ -1,7 +1,0 @@
-{
-  final int count=getChildCount();
-  if (count == 0) {
-    return 0;
-  }
-  return count > 0 ? getChildAt(0).getTop() : 0;
-}

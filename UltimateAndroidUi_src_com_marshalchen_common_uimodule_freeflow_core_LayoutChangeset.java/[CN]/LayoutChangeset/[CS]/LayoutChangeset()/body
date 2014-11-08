@@ -1,5 +1,0 @@
-{
-  moved=new ArrayList<Pair<FreeFlowItem,Rect>>();
-  removed=new ArrayList<FreeFlowItem>();
-  added=new ArrayList<FreeFlowItem>();
-}

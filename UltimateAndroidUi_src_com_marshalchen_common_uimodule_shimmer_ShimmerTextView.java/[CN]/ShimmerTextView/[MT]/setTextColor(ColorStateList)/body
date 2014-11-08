@@ -1,6 +1,0 @@
-{
-  super.setTextColor(colors);
-  if (shimmerViewHelper != null) {
-    shimmerViewHelper.setPrimaryColor(getCurrentTextColor());
-  }
-}

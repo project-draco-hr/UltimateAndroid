@@ -1,7 +1,0 @@
-{
-  if (touchFeedbackDrawable != null) {
-    touchFeedbackDrawable.setState(getDrawableState());
-    invalidate();
-  }
-  super.drawableStateChanged();
-}

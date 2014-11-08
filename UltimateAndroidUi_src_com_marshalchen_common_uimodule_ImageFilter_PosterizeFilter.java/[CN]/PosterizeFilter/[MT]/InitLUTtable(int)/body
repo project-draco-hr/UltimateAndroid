@@ -1,5 +1,0 @@
-{
-  double d=255.0 / (_level - 1.0);
-  int n=(int)(LUTIndex / d + 0.5);
-  return Function.FClamp0255(d * n);
-}

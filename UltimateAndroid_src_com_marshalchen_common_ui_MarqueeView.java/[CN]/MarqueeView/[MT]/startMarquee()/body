@@ -1,7 +1,0 @@
-{
-  if (mMarqueeNeeded) {
-    startTextFieldAnimation();
-  }
-  mCancelled=false;
-  mStarted=true;
-}

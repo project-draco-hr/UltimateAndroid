@@ -1,8 +1,0 @@
-{
-  try {
-    out.close();
-  }
- catch (  IOException e) {
-    hasErrors=true;
-  }
-}

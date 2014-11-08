@@ -1,5 +1,0 @@
-{
-  boolean result=mItems.remove(object);
-  notifyDataSetChanged();
-  return result;
-}

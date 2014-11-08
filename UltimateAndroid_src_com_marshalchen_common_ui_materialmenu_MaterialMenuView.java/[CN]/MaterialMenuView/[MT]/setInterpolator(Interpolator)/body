@@ -1,3 +1,0 @@
-{
-  drawable.setInterpolator(interpolator);
-}

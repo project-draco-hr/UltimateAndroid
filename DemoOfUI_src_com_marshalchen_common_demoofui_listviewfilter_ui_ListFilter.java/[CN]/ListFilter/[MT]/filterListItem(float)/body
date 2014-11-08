@@ -1,9 +1,0 @@
-{
-  mSideIndexY=sideIndexY;
-  mCurrentSectionPosition=(int)(((mSideIndexY) - getTop() - mIndexbarMargin) / ((getMeasuredHeight() - (2 * mIndexbarMargin)) / mListSections.size()));
-  if (mCurrentSectionPosition >= 0 && mCurrentSectionPosition < mListSections.size()) {
-    int position=mListSections.get(mCurrentSectionPosition);
-    String previewText=mListItems.get(position);
-    mIndexBarFilter.filterList(mSideIndexY,position,previewText);
-  }
-}

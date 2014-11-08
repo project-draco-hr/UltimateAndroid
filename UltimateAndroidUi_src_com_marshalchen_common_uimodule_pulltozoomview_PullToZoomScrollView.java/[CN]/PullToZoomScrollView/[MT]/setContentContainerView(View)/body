@@ -1,7 +1,0 @@
-{
-  if (mContentContainer != null) {
-    mContentContainer.removeAllViews();
-    mContentView=view;
-    mContentContainer.addView(view);
-  }
-}

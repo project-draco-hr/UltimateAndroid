@@ -1,9 +1,0 @@
-{
-  if (event.getAction() == MotionEvent.ACTION_UP) {
-    SimpleMonthAdapter.CalendarDay calendarDay=getDayFromLocation(event.getX(),event.getY());
-    if (calendarDay != null) {
-      onDayClick(calendarDay);
-    }
-  }
-  return true;
-}

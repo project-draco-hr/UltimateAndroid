@@ -1,5 +1,0 @@
-{
-  DecimalFormat df=new DecimalFormat(formatAs);
-  String str2=df.format(Integer.parseInt(str));
-  return str2;
-}

@@ -1,5 +1,0 @@
-InputStream svgData
-int searchColor
-int replaceColor
-int targetWidth
-int targetHeight

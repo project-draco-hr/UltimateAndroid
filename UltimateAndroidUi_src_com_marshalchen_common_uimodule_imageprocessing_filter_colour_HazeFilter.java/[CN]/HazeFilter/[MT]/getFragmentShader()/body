@@ -1,3 +1,0 @@
-{
-  return "precision mediump float;\n" + "uniform sampler2D " + UNIFORM_TEXTURE0 + ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "uniform float "+ UNIFORM_DISTANCE+ ";\n"+ "uniform float "+ UNIFORM_SLOPE+ ";\n"+ "void main(){\n"+ "   float d = "+ VARYING_TEXCOORD+ ".y * "+ UNIFORM_SLOPE+ " + "+ UNIFORM_DISTANCE+ ";\n"+ "   vec4 color = vec4(d);\n"+ "   vec4 c = texture2D("+ UNIFORM_TEXTURE0+ ","+ VARYING_TEXCOORD+ ");\n"+ "   vec4 result = (c - color) / (1.0-d);\n"+ "   gl_FragColor = vec4(result.rgb, c.a);\n"+ "}\n";
-}

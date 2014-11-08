@@ -1,6 +1,0 @@
-{
-  if (disallowIntercept) {
-    recycleVelocityTracker();
-  }
-  super.requestDisallowInterceptTouchEvent(disallowIntercept);
-}

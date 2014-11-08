@@ -1,7 +1,0 @@
-{
-  HeaderFillerView headerFillerView=(HeaderFillerView)convertView;
-  if (headerFillerView == null) {
-    headerFillerView=new HeaderFillerView(mContext);
-  }
-  return headerFillerView;
-}

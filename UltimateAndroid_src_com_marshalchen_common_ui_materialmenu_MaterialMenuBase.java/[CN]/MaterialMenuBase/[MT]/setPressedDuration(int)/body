@@ -1,3 +1,0 @@
-{
-  getDrawable().setPressedDuration(duration);
-}

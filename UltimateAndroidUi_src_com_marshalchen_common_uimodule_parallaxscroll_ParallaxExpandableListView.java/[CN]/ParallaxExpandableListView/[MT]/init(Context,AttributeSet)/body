@@ -1,4 +1,0 @@
-{
-  helper=new ParallaxListViewHelper(context,attrs,this);
-  super.setOnScrollListener(helper);
-}

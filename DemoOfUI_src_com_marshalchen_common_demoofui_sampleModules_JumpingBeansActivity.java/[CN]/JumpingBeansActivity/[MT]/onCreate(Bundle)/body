@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.jumping_beans_activity_main);
-}

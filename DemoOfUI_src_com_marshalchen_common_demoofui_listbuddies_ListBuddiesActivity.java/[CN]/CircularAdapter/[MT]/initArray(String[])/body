@@ -1,4 +1,0 @@
-{
-  mItems.clear();
-  Collections.addAll(mItems,imageUrls);
-}

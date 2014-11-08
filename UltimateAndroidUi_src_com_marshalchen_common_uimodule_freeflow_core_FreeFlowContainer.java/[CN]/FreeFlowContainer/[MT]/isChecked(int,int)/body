@@ -1,9 +1,0 @@
-{
-  for (int i=0; i < mCheckStates.size(); i++) {
-    IndexPath p=mCheckStates.keyAt(i);
-    if (p.section == sectionIndex && p.positionInSection == positionInSection) {
-      return true;
-    }
-  }
-  return false;
-}

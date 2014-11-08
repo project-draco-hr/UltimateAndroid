@@ -1,5 +1,0 @@
-{
-  for (  EasingListener l : ls) {
-    mListeners.add(l);
-  }
-}

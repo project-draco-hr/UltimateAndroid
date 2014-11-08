@@ -1,5 +1,0 @@
-{
-  super(context);
-  this.context=context;
-  init();
-}

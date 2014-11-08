@@ -1,3 +1,0 @@
-{
-  return SVGParser.parse(svgData,0,0,false);
-}

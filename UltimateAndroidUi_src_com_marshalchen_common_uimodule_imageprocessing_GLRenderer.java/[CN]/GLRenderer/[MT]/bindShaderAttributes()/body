@@ -1,4 +1,0 @@
-{
-  GLES20.glBindAttribLocation(programHandle,0,ATTRIBUTE_POSITION);
-  GLES20.glBindAttribLocation(programHandle,1,ATTRIBUTE_TEXCOORD);
-}

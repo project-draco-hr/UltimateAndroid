@@ -1,5 +1,0 @@
-{
-  ContextualUndoAdapter adapter=new ContextualUndoAdapter(mAdapter,R.layout.list_anim_undo_row,R.id.undo_row_undobutton,3000,this);
-  adapter.setAbsListView(getListView());
-  getListView().setAdapter(adapter);
-}

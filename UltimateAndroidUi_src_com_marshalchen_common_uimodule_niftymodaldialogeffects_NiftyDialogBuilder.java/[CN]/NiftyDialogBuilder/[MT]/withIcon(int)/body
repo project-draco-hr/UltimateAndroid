@@ -1,4 +1,0 @@
-{
-  mIcon.setImageResource(drawableResId);
-  return this;
-}

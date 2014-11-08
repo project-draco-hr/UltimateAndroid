@@ -1,4 +1,0 @@
-{
-  super.addHeaderView(v);
-  helper.addParallaxedHeaderView(v);
-}

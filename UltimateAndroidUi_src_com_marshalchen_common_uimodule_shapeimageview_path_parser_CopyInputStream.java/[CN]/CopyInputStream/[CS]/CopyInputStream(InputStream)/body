@@ -1,9 +1,0 @@
-{
-  _is=is;
-  try {
-    copy();
-  }
- catch (  IOException ex) {
-    Log.w(TAG,"IOException in CopyInputStream " + ex.toString());
-  }
-}

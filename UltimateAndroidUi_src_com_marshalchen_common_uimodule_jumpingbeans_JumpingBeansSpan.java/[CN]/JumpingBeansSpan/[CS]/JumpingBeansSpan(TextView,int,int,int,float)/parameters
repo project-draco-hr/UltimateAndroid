@@ -1,5 +1,0 @@
-TextView textView
-int loopDuration
-int position
-int waveCharOffset
-float animatedRange

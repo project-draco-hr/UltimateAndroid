@@ -1,4 +1,0 @@
-{
-  mLists.remove(position);
-  notifyDataSetChanged();
-}

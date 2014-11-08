@@ -1,4 +1,0 @@
-{
-  if (getHoverStatus() == HOVER_STATUS.DISAPPEARED)   showHover();
- else   if (getHoverStatus() == HOVER_STATUS.APPEARED)   dismissHover();
-}

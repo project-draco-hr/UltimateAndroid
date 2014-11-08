@@ -1,4 +1,0 @@
-{
-  mPaint.setColorFilter(filter);
-  invalidateSelf();
-}

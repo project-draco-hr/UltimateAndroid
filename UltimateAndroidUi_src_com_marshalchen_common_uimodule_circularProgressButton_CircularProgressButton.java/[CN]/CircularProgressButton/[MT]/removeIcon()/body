@@ -1,4 +1,0 @@
-{
-  setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
-  setPadding(0,0,0,0);
-}

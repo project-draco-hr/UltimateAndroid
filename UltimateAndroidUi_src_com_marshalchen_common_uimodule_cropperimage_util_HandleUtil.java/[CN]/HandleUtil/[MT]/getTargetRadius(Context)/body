@@ -1,4 +1,0 @@
-{
-  final float targetRadius=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,TARGET_RADIUS_DP,context.getResources().getDisplayMetrics());
-  return targetRadius;
-}

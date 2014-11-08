@@ -1,4 +1,0 @@
-{
-  ViewHelper.setPivotX(view,view.getMeasuredWidth() / 2.0f);
-  ViewHelper.setPivotY(view,view.getMeasuredHeight() / 2.0f);
-}

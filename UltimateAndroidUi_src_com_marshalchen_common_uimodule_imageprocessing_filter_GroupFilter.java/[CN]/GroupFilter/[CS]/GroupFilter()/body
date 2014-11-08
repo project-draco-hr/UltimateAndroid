@@ -1,5 +1,0 @@
-{
-  initialFilters=new ArrayList<BasicFilter>();
-  terminalFilters=new ArrayList<BasicFilter>();
-  filters=new ArrayList<BasicFilter>();
-}

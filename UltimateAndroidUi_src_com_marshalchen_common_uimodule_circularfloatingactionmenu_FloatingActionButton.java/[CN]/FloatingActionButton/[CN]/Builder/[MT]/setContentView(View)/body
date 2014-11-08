@@ -1,3 +1,0 @@
-{
-  return setContentView(contentView,null);
-}

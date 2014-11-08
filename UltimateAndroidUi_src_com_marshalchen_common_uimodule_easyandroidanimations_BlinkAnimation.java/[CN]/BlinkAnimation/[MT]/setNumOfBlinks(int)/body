@@ -1,4 +1,0 @@
-{
-  this.numOfBlinks=numOfBlinks;
-  return this;
-}

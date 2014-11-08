@@ -1,8 +1,0 @@
-{
-  if (mode == Mode.Multiple) {
-    return new ArrayList<Integer>(mOpenPositions);
-  }
- else {
-    return Arrays.asList(mOpenPosition);
-  }
-}

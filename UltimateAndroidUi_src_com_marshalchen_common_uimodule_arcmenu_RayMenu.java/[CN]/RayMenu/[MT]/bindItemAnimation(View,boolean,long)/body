@@ -1,5 +1,0 @@
-{
-  Animation animation=createItemDisapperAnimation(duration,isClicked);
-  child.setAnimation(animation);
-  return animation;
-}

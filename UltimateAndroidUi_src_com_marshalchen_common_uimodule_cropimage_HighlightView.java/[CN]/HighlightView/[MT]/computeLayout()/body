@@ -1,5 +1,0 @@
-{
-  RectF r=new RectF(cropRect.left,cropRect.top,cropRect.right,cropRect.bottom);
-  matrix.mapRect(r);
-  return new Rect(Math.round(r.left),Math.round(r.top),Math.round(r.right),Math.round(r.bottom));
-}

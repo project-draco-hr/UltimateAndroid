@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.rebound_activity);
-  mSwipeBackLayout=getSwipeBackLayout();
-  mSwipeBackLayout.setEnabled(true);
-  mSwipeBackLayout.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_ALL);
-}

@@ -1,6 +1,0 @@
-{
-  if (getRealAdapter() != null) {
-    getRealAdapter().removeSliderAt(position);
-    mViewPager.setCurrentItem(mViewPager.getCurrentItem(),false);
-  }
-}

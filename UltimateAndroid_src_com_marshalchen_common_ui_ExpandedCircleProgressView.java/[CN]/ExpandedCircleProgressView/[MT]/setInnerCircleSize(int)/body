@@ -1,4 +1,0 @@
-{
-  mInnerCircleSize=size;
-  INCRESING_SIZE=(mOuterCircleSize - mInnerCircleSize) / 100;
-}

@@ -1,5 +1,0 @@
-{
-  mShouldAnimate=true;
-  mFirstAnimatedPosition=position - 1;
-  mLastAnimatedPosition=position - 1;
-}

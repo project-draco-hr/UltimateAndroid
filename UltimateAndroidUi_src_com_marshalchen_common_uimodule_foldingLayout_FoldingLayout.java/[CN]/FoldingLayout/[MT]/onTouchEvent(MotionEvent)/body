@@ -1,3 +1,0 @@
-{
-  return mScrollGestureDetector.onTouchEvent(me);
-}

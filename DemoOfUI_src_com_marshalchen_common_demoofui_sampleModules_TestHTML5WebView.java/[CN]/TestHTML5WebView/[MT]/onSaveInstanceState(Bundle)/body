@@ -1,4 +1,0 @@
-{
-  super.onSaveInstanceState(outState);
-  mWebView.saveState(outState);
-}

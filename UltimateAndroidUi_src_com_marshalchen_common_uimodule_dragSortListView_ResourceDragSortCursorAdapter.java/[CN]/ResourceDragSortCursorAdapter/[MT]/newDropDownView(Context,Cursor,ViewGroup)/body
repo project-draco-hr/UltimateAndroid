@@ -1,3 +1,0 @@
-{
-  return mInflater.inflate(mDropDownLayout,parent,false);
-}

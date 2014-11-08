@@ -1,4 +1,0 @@
-{
-  super(itemView);
-  mTextView=(TextView)itemView;
-}

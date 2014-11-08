@@ -1,8 +1,0 @@
-{
-  techniques=animationComposer.techniques;
-  duration=animationComposer.duration;
-  delay=animationComposer.delay;
-  interpolator=animationComposer.interpolator;
-  callbacks=animationComposer.callbacks;
-  target=animationComposer.target;
-}

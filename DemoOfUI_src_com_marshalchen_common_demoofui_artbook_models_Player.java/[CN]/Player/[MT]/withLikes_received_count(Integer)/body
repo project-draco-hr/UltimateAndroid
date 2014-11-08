@@ -1,4 +1,0 @@
-{
-  this.likes_received_count=likes_received_count;
-  return this;
-}

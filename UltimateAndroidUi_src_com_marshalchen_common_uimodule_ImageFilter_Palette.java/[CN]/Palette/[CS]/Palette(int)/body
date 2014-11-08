@@ -1,6 +1,0 @@
-{
-  this.Length=length;
-  this.Red=new int[length];
-  this.Green=new int[length];
-  this.Blue=new int[length];
-}

@@ -1,4 +1,0 @@
-{
-  this.followers_count=followers_count;
-  return this;
-}

@@ -1,4 +1,0 @@
-{
-  stopWobble(false);
-  startWobbleAnimation();
-}

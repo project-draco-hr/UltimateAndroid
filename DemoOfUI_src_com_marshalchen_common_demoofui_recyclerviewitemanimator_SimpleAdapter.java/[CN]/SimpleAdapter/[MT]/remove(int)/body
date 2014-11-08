@@ -1,7 +1,0 @@
-{
-  if (position == LAST_POSITION && getItemCount() > 0)   position=getItemCount() - 1;
-  if (position > LAST_POSITION && position < getItemCount()) {
-    mData.remove(position);
-    notifyItemRemoved(position);
-  }
-}

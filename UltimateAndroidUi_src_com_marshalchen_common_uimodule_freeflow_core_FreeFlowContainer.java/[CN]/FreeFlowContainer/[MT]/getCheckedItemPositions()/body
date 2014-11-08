@@ -1,7 +1,0 @@
-{
-  ArrayList<IndexPath> checked=new ArrayList<IndexPath>();
-  for (int i=0; i < mCheckStates.size(); i++) {
-    checked.add(mCheckStates.keyAt(i));
-  }
-  return checked;
-}

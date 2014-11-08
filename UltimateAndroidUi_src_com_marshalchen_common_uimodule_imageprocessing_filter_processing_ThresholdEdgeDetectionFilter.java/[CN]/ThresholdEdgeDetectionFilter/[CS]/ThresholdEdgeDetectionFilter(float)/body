@@ -1,9 +1,0 @@
-{
-  super(1);
-  this.threshold=threshold;
-  GreyScaleFilter grey=new GreyScaleFilter();
-  grey.addTarget(this);
-  registerInitialFilter(grey);
-  registerTerminalFilter(grey);
-  registerFilterLocation(grey);
-}

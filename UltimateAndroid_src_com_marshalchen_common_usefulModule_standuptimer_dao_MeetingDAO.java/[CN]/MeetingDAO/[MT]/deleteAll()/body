@@ -1,5 +1,0 @@
-{
-  Logger.d("Deleting all meetings");
-  SQLiteDatabase db=getWritableDatabase();
-  db.delete(MEETINGS_TABLE_NAME,null,null);
-}

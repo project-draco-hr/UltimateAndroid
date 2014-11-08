@@ -1,5 +1,0 @@
-{
-  Gson gson=new Gson();
-  Object object=gson.fromJson(jsonString,Object.class);
-  return object;
-}

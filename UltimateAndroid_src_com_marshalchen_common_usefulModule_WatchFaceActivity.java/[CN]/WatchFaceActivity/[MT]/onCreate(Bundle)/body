@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  displayManager=(DisplayManager)getSystemService(Context.DISPLAY_SERVICE);
-}

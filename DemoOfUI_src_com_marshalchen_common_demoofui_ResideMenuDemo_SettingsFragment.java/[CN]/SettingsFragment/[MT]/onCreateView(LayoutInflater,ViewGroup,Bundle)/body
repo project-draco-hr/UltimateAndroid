@@ -1,3 +1,0 @@
-{
-  return inflater.inflate(R.layout.resize_menu_settings,container,false);
-}

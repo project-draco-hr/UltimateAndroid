@@ -1,4 +1,0 @@
-{
-  materialMenuState.changingConfigurations=getChangingConfigurations();
-  return materialMenuState;
-}

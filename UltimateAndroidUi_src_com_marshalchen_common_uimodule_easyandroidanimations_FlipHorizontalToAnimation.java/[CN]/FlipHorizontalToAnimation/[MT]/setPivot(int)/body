@@ -1,4 +1,0 @@
-{
-  this.pivot=pivot;
-  return this;
-}

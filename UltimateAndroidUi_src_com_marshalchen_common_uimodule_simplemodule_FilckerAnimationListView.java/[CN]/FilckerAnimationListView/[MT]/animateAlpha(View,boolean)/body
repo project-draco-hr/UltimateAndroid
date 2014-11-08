@@ -1,5 +1,0 @@
-{
-  final ObjectAnimator anim=ObjectAnimator.ofFloat(view,"alpha",fadeIn ? new float[]{0f,1f} : new float[]{1f,0f});
-  anim.setDuration((long)(ALPHA_ANIM_DURATION * animationDurationFactor));
-  return anim;
-}

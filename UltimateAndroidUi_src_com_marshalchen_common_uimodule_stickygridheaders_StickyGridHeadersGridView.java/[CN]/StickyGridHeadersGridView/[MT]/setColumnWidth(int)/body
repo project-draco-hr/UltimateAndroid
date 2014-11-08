@@ -1,4 +1,0 @@
-{
-  super.setColumnWidth(columnWidth);
-  mColumnWidth=columnWidth;
-}

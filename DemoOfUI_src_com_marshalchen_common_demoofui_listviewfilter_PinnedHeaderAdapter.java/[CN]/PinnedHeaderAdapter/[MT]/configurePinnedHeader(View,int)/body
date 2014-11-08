@@ -1,5 +1,0 @@
-{
-  TextView header=(TextView)v;
-  mCurrentSectionPosition=getCurrentSectionPosition(position);
-  header.setText(mListItems.get(mCurrentSectionPosition));
-}

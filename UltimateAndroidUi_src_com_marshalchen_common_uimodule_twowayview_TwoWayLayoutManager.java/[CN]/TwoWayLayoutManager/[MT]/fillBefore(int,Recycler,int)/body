@@ -1,7 +1,0 @@
-{
-  final int limit=getStartWithPadding() - extraSpace;
-  while (canAddMoreViews(Direction.START,limit) && position >= 0) {
-    makeAndAddView(position,Direction.START,recycler);
-    position--;
-  }
-}

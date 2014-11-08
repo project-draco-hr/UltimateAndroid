@@ -1,5 +1,0 @@
-{
-  reset(target);
-  prepare(target);
-  start();
-}

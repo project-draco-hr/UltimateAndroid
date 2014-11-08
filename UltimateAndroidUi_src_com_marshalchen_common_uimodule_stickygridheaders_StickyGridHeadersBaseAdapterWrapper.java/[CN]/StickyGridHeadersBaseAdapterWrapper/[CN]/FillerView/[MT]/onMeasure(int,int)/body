@@ -1,4 +1,0 @@
-{
-  heightMeasureSpec=MeasureSpec.makeMeasureSpec(mMeasureTarget.getMeasuredHeight(),MeasureSpec.EXACTLY);
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-}

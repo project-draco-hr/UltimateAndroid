@@ -1,9 +1,0 @@
-{
-  index=Math.max(0,Math.min(index,getCount() - 1));
-  float rotation=index * 180f;
-  float current=getFoldRotation();
-  long duration=(long)Math.abs(ANIMATION_DURATION_PER_ITEM * (rotation - current) / 180f);
-  mAnimator.cancel();
-  mAnimator.setFloatValues(current,rotation);
-  mAnimator.setDuration(duration).start();
-}

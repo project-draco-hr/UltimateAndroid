@@ -1,3 +1,0 @@
-{
-  if (viewPool.containsKey(view.getClass()))   viewPool.get(view.getClass()).add(view);
-}

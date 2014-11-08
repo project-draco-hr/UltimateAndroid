@@ -1,5 +1,0 @@
-{
-  if (delegatePageListener != null) {
-    delegatePageListener.onPageSelected(position);
-  }
-}

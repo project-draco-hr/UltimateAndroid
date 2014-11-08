@@ -1,5 +1,0 @@
-{
-  super.passShaderValues();
-  GLES20.glUniform1f(highlightHandle,highlight);
-  GLES20.glUniform1f(shadowHandle,shadow);
-}

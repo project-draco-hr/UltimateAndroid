@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  this.setContentView(R.layout.fancy_cover_flow_layout_inflate_example);
-  FancyCoverFlow fancyCoverFlow=(FancyCoverFlow)findViewById(R.id.fancyCoverFlow);
-  fancyCoverFlow.setAdapter(new FancyCoverFlowSampleAdapter());
-}

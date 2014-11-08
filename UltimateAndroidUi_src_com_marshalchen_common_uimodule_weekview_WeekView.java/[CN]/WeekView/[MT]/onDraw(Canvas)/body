@@ -1,7 +1,0 @@
-{
-  super.onDraw(canvas);
-  drawHeaderRowAndEvents(canvas);
-  drawTimeColumnAndAxes(canvas);
-  canvas.drawRect(0,0,mTimeTextWidth + mHeaderColumnPadding * 2,mHeaderTextHeight + mHeaderRowPadding * 2,mHeaderBackgroundPaint);
-  canvas.drawRect(mHeaderColumnWidth,mHeaderTextHeight + mHeaderRowPadding * 2,getWidth(),mHeaderRowPadding * 2 + mHeaderTextHeight + mHeaderMarginBottom + mTimeTextHeight / 2 - mHourSeparatorHeight / 2,mHeaderColumnBackgroundPaint);
-}

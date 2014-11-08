@@ -1,3 +1,0 @@
-{
-  return calcItemHeight(position,getChildHeight(position,item,invalidChildHeight));
-}

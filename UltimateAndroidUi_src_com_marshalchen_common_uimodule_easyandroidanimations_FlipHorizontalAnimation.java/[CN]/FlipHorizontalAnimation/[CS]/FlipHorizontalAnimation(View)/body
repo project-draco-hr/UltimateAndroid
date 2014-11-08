@@ -1,8 +1,0 @@
-{
-  this.view=view;
-  degrees=360;
-  pivot=PIVOT_CENTER;
-  interpolator=new AccelerateDecelerateInterpolator();
-  duration=DURATION_LONG;
-  listener=null;
-}

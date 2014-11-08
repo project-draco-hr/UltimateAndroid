@@ -1,5 +1,0 @@
-{
-  final int id=mCurrentItemId++;
-  mItems.add(position,id);
-  notifyItemInserted(position);
-}

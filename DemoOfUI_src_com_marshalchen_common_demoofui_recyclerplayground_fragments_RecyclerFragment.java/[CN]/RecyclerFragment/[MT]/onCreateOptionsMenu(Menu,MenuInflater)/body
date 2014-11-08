@@ -1,3 +1,0 @@
-{
-  inflater.inflate(R.menu.recyclerview_playground_grid_options,menu);
-}

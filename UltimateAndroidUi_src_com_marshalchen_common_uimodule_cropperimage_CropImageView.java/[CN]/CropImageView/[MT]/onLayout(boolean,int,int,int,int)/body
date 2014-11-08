@@ -1,9 +1,0 @@
-{
-  super.onLayout(changed,l,t,r,b);
-  if (mLayoutWidth > 0 && mLayoutHeight > 0) {
-    final ViewGroup.LayoutParams origparams=this.getLayoutParams();
-    origparams.width=mLayoutWidth;
-    origparams.height=mLayoutHeight;
-    setLayoutParams(origparams);
-  }
-}

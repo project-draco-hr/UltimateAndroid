@@ -1,3 +1,0 @@
-{
-  return ease.compute(ellapsed,0,1,duration);
-}

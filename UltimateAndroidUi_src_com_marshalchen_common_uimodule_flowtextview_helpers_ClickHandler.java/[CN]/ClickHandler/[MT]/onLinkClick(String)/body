@@ -1,3 +1,0 @@
-{
-  if (mOnLinkClickListener != null)   mOnLinkClickListener.onLinkClick(url);
-}

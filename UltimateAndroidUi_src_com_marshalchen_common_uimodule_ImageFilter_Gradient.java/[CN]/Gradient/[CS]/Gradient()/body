@@ -1,6 +1,0 @@
-{
-  List<Integer> list=new ArrayList<Integer>();
-  list.add(Color.BLACK);
-  list.add(Color.WHITE);
-  this.MapColors=list;
-}

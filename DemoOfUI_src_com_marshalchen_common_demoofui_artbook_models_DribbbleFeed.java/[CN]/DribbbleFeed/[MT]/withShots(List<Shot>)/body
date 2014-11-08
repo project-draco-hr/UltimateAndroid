@@ -1,4 +1,0 @@
-{
-  this.shots=shots;
-  return this;
-}

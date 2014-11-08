@@ -1,9 +1,0 @@
-{
-  setOrientation(VERTICAL);
-  mTitleViewGroup=new FrameLayout(getContext());
-  mTitleViewGroup.setId(DEFAULTTITLEPARENTRESID);
-  addView(mTitleViewGroup);
-  mContentViewGroup=new FrameLayout(getContext());
-  mContentViewGroup.setId(DEFAULTCONTENTPARENTRESID);
-  addView(mContentViewGroup);
-}

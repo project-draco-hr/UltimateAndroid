@@ -1,3 +1,0 @@
-{
-  return result.getParcelableExtra(MediaStore.EXTRA_OUTPUT);
-}

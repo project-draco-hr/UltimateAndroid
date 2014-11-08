@@ -1,7 +1,0 @@
-{
-  super.onAdapterChanged(oldAdapter,newAdapter);
-  final ItemSelectionSupport itemSelectionSupport=ItemSelectionSupport.from(mRecyclerView);
-  if (oldAdapter != null && itemSelectionSupport != null) {
-    itemSelectionSupport.clearChoices();
-  }
-}

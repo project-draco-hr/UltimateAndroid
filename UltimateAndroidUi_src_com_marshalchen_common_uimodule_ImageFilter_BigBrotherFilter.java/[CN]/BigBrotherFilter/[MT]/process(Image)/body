@@ -1,8 +1,0 @@
-{
-  for (int x=0; x < imageIn.getWidth(); x+=DOT_AREA) {
-    for (int y=0; y < imageIn.getHeight(); y+=DOT_AREA) {
-      drawTone(x,y,imageIn);
-    }
-  }
-  return imageIn;
-}

@@ -1,4 +1,0 @@
-{
-  super(context);
-  this.mContext=context;
-}

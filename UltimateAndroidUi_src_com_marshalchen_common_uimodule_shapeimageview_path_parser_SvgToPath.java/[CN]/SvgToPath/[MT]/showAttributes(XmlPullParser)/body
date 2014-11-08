@@ -1,7 +1,0 @@
-{
-  String result="";
-  for (int i=0; i < a.getAttributeCount(); i++) {
-    result+=" " + a.getAttributeName(i) + "='"+ a.getAttributeValue(i)+ "'";
-  }
-  return result;
-}

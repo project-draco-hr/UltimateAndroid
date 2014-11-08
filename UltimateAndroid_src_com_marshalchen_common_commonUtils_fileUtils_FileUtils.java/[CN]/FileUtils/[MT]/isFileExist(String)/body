@@ -1,7 +1,0 @@
-{
-  if (StringUtils.isBlank(filePath)) {
-    return false;
-  }
-  File file=new File(filePath);
-  return (file.exists() && file.isFile());
-}

@@ -1,4 +1,0 @@
-{
-  mHourSeparatorColor=hourSeparatorColor;
-  invalidate();
-}

@@ -1,4 +1,0 @@
-{
-  super(paramContext,paramAttributeSet);
-  init(paramContext);
-}

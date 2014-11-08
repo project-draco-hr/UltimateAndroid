@@ -1,5 +1,0 @@
-{
-  drawMonthTitle(canvas);
-  drawMonthDayLabels(canvas);
-  drawMonthNums(canvas);
-}

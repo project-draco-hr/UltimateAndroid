@@ -1,8 +1,0 @@
-{
-  super(in);
-  selectedId=in.readLong();
-  firstId=in.readLong();
-  viewTop=in.readInt();
-  position=in.readInt();
-  height=in.readInt();
-}

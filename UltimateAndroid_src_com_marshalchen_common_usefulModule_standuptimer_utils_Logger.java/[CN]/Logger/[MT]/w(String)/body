@@ -1,3 +1,0 @@
-{
-  Log.w(TAG,message);
-}

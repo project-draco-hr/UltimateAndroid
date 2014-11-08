@@ -1,6 +1,0 @@
-{
-  super(context);
-  setOrientation(Orientations.Orientation.Disordered);
-  setGravity(Gravity.CENTER);
-  init();
-}

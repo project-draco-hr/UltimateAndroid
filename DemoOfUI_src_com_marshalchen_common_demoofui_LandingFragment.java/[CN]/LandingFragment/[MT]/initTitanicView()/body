@@ -1,5 +1,0 @@
-{
-  titanic=new Titanic();
-  titanic.start(titanicTextView);
-  titanicTextView.setTypeface(Typefaces.get(getActivity(),"Satisfy-Regular.ttf"));
-}

@@ -1,4 +1,0 @@
-{
-  setDefaultSelectedIndicatorSize(width,height,unit);
-  setDefaultUnselectedIndicatorSize(width,height,unit);
-}

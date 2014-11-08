@@ -1,5 +1,0 @@
-{
-  super.initShaderHandles();
-  crossHatchSpacingHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_CROSS_HATCH_SPACING);
-  lineWidthHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_LINE_WIDTH);
-}

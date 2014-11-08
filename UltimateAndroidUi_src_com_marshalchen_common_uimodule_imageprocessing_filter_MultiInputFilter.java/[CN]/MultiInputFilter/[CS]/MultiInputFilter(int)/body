@@ -1,8 +1,0 @@
-{
-  super();
-  this.numOfInputs=numOfInputs;
-  textureHandle=new int[numOfInputs - 1];
-  texture=new int[numOfInputs - 1];
-  texturesReceived=new ArrayList<GLTextureOutputRenderer>(numOfInputs);
-  filterLocations=new ArrayList<GLTextureOutputRenderer>(numOfInputs);
-}

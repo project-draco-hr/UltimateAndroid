@@ -1,3 +1,0 @@
-{
-  return "minDate: " + minDate + "\nmaxDate: "+ maxDate;
-}

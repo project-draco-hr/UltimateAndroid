@@ -1,9 +1,0 @@
-{
-  super(layout.getContext());
-  int matchParent=ViewGroup.LayoutParams.MATCH_PARENT;
-  LayoutParams params=new LayoutParams(matchParent,matchParent);
-  layout.addView(this,params);
-  this.setBackgroundDrawable(layout.getBackground());
-  layout.setBackgroundDrawable(null);
-  setWillNotDraw(false);
-}

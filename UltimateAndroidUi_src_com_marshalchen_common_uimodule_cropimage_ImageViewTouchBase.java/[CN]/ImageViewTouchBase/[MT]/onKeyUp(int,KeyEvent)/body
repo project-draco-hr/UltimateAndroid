@@ -1,9 +1,0 @@
-{
-  if (keyCode == KeyEvent.KEYCODE_BACK && event.isTracking() && !event.isCanceled()) {
-    if (getScale() > 1.0f) {
-      zoomTo(1.0f);
-      return true;
-    }
-  }
-  return super.onKeyUp(keyCode,event);
-}

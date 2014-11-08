@@ -1,4 +1,0 @@
-{
-  double diffRadians=Math.atan2(mPrevFingerDiffY,mPrevFingerDiffX) - Math.atan2(mCurrFingerDiffY,mCurrFingerDiffX);
-  return (float)(diffRadians * 180 / Math.PI);
-}

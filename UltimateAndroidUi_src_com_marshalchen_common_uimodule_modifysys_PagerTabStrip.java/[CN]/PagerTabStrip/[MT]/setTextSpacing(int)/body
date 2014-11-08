@@ -1,6 +1,0 @@
-{
-  if (textSpacing < mMinTextSpacing) {
-    textSpacing=mMinTextSpacing;
-  }
-  super.setTextSpacing(textSpacing);
-}

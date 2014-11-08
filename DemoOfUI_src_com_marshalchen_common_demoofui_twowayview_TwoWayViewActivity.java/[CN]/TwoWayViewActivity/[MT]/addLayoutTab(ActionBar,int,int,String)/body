@@ -1,4 +1,0 @@
-{
-  ActionBar.Tab tab=actionBar.newTab().setText("").setIcon(iconId).setTabListener(new TabListener(layoutId,tag));
-  actionBar.addTab(tab,layoutId == mSelectedLayoutId);
-}

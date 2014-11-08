@@ -1,9 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.square_progress_bar_activity);
-  ButterKnife.inject(this);
-  squareProgressBar.setImage(R.drawable.test);
-  squareProgressBar.setProgress(40.0);
-  squareProgressBar.setColorRGB(154,11,41);
-  squareProgressBar.setWidth(6);
-}

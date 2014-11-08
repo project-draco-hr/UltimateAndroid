@@ -1,7 +1,0 @@
-{
-  final int childCount=getChildCount();
-  if (childCount == 0) {
-    return 0;
-  }
-  return getPosition(getChildAt(childCount - 1));
-}

@@ -1,5 +1,0 @@
-{
-  if (sIsLogEnabled) {
-    Log.i(sApplicationTag,getContent(getCurrentStackTraceElement()) + ">" + msg);
-  }
-}

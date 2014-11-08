@@ -1,5 +1,0 @@
-{
-  if (!preventLayout) {
-    super.requestLayout();
-  }
-}

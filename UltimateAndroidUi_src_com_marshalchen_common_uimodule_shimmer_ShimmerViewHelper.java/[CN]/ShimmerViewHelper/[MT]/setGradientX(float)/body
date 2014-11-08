@@ -1,4 +1,0 @@
-{
-  this.gradientX=gradientX;
-  view.invalidate();
-}

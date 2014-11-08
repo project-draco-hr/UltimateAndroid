@@ -1,6 +1,0 @@
-{
-  mInitialScaleX=scaleX;
-  mInitialScaleY=scaleY;
-  mEndScaleX=scaleX;
-  mEndScaleY=scaleY;
-}

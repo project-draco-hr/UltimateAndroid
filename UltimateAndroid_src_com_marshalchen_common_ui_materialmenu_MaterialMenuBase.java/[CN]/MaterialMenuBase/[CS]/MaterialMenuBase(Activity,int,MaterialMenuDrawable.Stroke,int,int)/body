@@ -1,7 +1,0 @@
-{
-  drawable=new MaterialMenuDrawable(activity,color,stroke,DEFAULT_SCALE,transformDuration,pressedDuration);
-  setActionBarSettings(activity);
-  if (providesActionBar()) {
-    setupActionBar(activity);
-  }
-}

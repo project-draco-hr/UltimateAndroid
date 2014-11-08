@@ -1,8 +1,0 @@
-{
-  if (mSensorManager == null)   return;
-  mSensorManager.unregisterListener(this);
-  mSensorManager=null;
-  if (resetTranslation) {
-    setTranslate(0,0);
-  }
-}

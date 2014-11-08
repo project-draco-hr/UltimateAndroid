@@ -1,4 +1,0 @@
-{
-  this.cell=cell;
-  this.monthIndex=monthIndex;
-}

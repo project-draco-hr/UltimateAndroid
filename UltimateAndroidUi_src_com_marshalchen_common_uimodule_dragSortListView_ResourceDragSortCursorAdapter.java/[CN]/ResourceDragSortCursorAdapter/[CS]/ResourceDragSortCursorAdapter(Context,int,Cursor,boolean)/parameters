@@ -1,4 +1,0 @@
-Context context
-int layout
-Cursor c
-boolean autoRequery

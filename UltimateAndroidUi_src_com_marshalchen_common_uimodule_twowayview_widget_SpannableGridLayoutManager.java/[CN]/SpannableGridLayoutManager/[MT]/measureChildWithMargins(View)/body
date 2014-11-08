@@ -1,5 +1,0 @@
-{
-  mMeasuring=true;
-  measureChildWithMargins(child,getWidthUsed(child),getHeightUsed(child));
-  mMeasuring=false;
-}

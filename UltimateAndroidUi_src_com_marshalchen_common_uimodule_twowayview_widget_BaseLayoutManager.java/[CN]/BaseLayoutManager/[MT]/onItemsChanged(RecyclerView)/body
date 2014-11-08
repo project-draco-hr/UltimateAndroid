@@ -1,4 +1,0 @@
-{
-  clearItemEntries();
-  super.onItemsChanged(recyclerView);
-}

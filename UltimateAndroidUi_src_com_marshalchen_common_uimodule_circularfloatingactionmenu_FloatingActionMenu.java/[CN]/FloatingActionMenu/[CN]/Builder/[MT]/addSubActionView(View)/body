@@ -1,3 +1,0 @@
-{
-  return this.addSubActionView(subActionView,0,0);
-}

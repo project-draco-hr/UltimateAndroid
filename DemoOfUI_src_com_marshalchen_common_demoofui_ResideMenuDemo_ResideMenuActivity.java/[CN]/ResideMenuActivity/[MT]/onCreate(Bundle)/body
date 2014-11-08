@@ -1,7 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.resize_menu_main);
-  mContext=this;
-  setUpMenu();
-  changeFragment(new HomeFragment());
-}

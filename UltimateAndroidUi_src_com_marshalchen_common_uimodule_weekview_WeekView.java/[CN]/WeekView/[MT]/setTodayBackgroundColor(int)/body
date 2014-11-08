@@ -1,4 +1,0 @@
-{
-  mTodayBackgroundColor=todayBackgroundColor;
-  invalidate();
-}

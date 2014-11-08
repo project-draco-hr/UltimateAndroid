@@ -1,7 +1,0 @@
-{
-  super(context,layout);
-  mPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
-  mPaint.setStyle(Paint.Style.STROKE);
-  mPaint.setStrokeWidth(dp2px(3));
-  mPath=new Path();
-}

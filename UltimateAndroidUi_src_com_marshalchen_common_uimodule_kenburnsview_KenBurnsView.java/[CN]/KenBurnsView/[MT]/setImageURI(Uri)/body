@@ -1,4 +1,0 @@
-{
-  super.setImageURI(uri);
-  handleImageChange();
-}

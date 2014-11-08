@@ -1,6 +1,0 @@
-{
-  super.setBackgroundDrawable(d);
-  if (!mDrawFullUnderlineSet) {
-    mDrawFullUnderline=d == null;
-  }
-}

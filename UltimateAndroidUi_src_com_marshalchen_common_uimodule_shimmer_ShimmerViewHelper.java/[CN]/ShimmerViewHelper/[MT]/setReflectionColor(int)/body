@@ -1,6 +1,0 @@
-{
-  this.reflectionColor=reflectionColor;
-  if (isSetUp) {
-    resetLinearGradient();
-  }
-}

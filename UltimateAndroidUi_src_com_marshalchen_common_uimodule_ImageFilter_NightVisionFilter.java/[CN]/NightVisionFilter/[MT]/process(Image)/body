@@ -1,6 +1,0 @@
-{
-  imageIn=noisefx.process(imageIn);
-  imageIn=gradientFx.process(imageIn);
-  imageIn=vignetteFx.process(imageIn);
-  return imageIn;
-}

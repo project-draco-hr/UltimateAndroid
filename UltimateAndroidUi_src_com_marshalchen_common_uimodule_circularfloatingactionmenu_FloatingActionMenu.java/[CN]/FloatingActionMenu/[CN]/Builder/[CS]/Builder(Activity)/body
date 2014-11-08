@@ -1,8 +1,0 @@
-{
-  subActionItems=new ArrayList<Item>();
-  radius=activity.getResources().getDimensionPixelSize(R.dimen.action_menu_radius);
-  startAngle=180;
-  endAngle=270;
-  animationHandler=new DefaultAnimationHandler();
-  animated=true;
-}

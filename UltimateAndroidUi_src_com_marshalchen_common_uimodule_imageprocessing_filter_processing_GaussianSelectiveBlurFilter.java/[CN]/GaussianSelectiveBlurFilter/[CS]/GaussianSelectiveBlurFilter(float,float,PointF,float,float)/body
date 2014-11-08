@@ -1,3 +1,0 @@
-{
-  super(blurSize,aspectRatio,excludedCirclePoint,excludedCircleRadius,excludedBlurSize);
-}

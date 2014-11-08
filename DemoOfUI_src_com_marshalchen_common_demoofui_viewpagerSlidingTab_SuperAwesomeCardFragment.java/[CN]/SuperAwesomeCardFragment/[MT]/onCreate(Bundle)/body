@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  position=getArguments().getInt(ARG_POSITION);
-}

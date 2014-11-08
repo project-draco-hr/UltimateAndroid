@@ -1,8 +1,0 @@
-{
-  double procent=1 - FHypot(r.xp - x,r.yp - y) / r.size;
-  if (procent > 0) {
-    procent*=procent;
-    color=fixpix(color,procent,r.ccol);
-  }
-  return color;
-}

@@ -1,8 +1,0 @@
-{
-  super();
-  this.content=content;
-  this.start=start;
-  this.end=end;
-  this.xOffset=xOffset;
-  this.paint=paint;
-}

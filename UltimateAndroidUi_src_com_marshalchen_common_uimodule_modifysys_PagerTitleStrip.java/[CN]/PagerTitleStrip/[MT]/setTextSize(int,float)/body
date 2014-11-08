@@ -1,5 +1,0 @@
-{
-  mPrevText.setTextSize(unit,size);
-  mCurrText.setTextSize(unit,size);
-  mNextText.setTextSize(unit,size);
-}

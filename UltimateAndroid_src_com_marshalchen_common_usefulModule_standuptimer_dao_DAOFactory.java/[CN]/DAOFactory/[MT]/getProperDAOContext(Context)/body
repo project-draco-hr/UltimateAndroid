@@ -1,8 +1,0 @@
-{
-  if (globalContext != null) {
-    return globalContext;
-  }
- else {
-    return context;
-  }
-}

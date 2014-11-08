@@ -1,9 +1,0 @@
-{
-  if (reflectionRatio <= 0 || reflectionRatio > 0.5f) {
-    throw new IllegalArgumentException("reflectionRatio may only be in the interval (0, 0.5]");
-  }
-  this.reflectionRatio=reflectionRatio;
-  if (this.getAdapter() != null) {
-    ((FancyCoverFlowAdapter)this.getAdapter()).notifyDataSetChanged();
-  }
-}

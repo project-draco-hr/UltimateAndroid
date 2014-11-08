@@ -1,8 +1,0 @@
-{
-  super.setNumColumns(numColumns);
-  mNumColumnsSet=true;
-  this.mNumColumns=numColumns;
-  if (numColumns != AUTO_FIT && mAdapter != null) {
-    mAdapter.setNumColumns(numColumns);
-  }
-}

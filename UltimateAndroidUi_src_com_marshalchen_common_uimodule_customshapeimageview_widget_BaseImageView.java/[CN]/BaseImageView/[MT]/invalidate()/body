@@ -1,7 +1,0 @@
-{
-  mWeakBitmap=null;
-  if (mMaskBitmap != null) {
-    mMaskBitmap.recycle();
-  }
-  super.invalidate();
-}

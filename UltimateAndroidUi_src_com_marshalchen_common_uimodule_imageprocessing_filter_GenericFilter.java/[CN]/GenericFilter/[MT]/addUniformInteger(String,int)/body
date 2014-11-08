@@ -1,6 +1,0 @@
-{
-  if (!uniformIntList.containsKey(name)) {
-    reInitialize();
-  }
-  uniformIntList.put(name,value);
-}

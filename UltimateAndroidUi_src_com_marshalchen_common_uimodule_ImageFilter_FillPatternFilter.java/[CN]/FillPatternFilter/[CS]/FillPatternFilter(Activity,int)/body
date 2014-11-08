@@ -1,3 +1,0 @@
-{
-  this.pattern=Image.LoadImage(activity,resourceId);
-}

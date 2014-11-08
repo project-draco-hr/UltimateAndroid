@@ -1,6 +1,0 @@
-{
-  if (mImageContents.size() < position) {
-    mImageContents.remove(position);
-    notifyDataSetChanged();
-  }
-}

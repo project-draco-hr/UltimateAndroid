@@ -1,4 +1,0 @@
-{
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  configureMatrix();
-}

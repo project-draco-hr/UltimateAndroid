@@ -1,4 +1,0 @@
-{
-  super.onDismiss(dialog);
-  mBlurEngine.onDismiss();
-}

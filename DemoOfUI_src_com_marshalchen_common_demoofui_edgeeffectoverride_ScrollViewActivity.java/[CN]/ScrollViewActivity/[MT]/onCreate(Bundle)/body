@@ -1,4 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.edge_effect_scrollview_layout);
-}

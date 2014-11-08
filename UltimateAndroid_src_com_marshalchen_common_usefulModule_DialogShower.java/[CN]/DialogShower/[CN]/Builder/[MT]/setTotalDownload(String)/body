@@ -1,4 +1,0 @@
-{
-  dialogShower.setTotalDownload(title);
-  return this;
-}

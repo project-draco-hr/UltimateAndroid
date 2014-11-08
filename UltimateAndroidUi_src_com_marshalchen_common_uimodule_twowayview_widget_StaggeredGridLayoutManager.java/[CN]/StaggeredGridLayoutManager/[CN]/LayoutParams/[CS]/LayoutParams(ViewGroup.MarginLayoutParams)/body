@@ -1,4 +1,0 @@
-{
-  super(other);
-  init(other);
-}

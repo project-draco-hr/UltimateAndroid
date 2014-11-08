@@ -1,3 +1,0 @@
-{
-  this.HueFactor=Math.max(0,Math.min(359,HueFactor));
-}

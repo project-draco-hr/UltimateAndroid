@@ -1,6 +1,0 @@
-{
-  this.mColorFilter=cf;
-  mFstHalfPaint.setColorFilter(cf);
-  mScndHalfPaint.setColorFilter(cf);
-  mAbovePaint.setColorFilter(cf);
-}

@@ -1,8 +1,0 @@
-{
-  if (isHeaderOrFooter(position)) {
-    layoutGridHeaderFooter(child,position,flowDown,childrenLeft,childTop,childRight,childBottom);
-  }
- else {
-    layoutGridChild(child,position,flowDown,childrenLeft,childRight);
-  }
-}

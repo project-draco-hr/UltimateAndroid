@@ -1,8 +1,0 @@
-{
-  View rootView=inflater.inflate(R.layout.motion_fragment_parallax,container,false);
-  if (rootView == null)   return null;
-  mBackground=(ParallaxImageView)rootView.findViewById(android.R.id.background);
-  mSeekBar=(SeekBar)rootView.findViewById(android.R.id.progress);
-  setCurrentImage();
-  return rootView;
-}

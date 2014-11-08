@@ -1,7 +1,0 @@
-{
-  mFixAspectRatio=fixAspectRatio;
-  if (initializedCropWindow) {
-    initCropWindow(mBitmapRect);
-    invalidate();
-  }
-}

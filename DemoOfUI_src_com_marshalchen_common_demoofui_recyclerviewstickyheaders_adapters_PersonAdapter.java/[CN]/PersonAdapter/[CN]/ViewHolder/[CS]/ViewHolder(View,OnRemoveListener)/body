@@ -1,6 +1,0 @@
-{
-  super(itemView);
-  this.label=(TextView)itemView.findViewById(R.id.name);
-  this.listener=listener;
-  itemView.setOnClickListener(this);
-}

@@ -1,5 +1,0 @@
-{
-  this.x=x;
-  this.y=y;
-  this.timestamp=System.currentTimeMillis();
-}

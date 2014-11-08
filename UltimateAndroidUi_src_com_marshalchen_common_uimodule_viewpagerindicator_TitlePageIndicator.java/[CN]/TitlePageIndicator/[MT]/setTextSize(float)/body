@@ -1,4 +1,0 @@
-{
-  mPaintText.setTextSize(textSize);
-  invalidate();
-}

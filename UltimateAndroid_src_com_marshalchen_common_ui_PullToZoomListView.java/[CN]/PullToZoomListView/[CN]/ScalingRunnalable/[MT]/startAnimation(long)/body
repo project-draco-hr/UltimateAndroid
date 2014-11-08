@@ -1,7 +1,0 @@
-{
-  this.mStartTime=SystemClock.currentThreadTimeMillis();
-  this.mDuration=paramLong;
-  this.mScale=((float)(PullToZoomListView.this.mHeaderContainer.getBottom()) / PullToZoomListView.this.mHeaderHeight);
-  this.mIsFinished=false;
-  PullToZoomListView.this.post(this);
-}

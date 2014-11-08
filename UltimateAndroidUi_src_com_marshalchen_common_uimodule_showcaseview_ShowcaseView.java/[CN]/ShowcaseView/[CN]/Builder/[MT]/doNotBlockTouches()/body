@@ -1,4 +1,0 @@
-{
-  showcaseView.setBlocksTouches(false);
-  return this;
-}

@@ -1,4 +1,0 @@
-{
-  mProgress=progress;
-  invalidate();
-}

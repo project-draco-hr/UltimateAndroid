@@ -1,4 +1,0 @@
-{
-  mContext=context;
-  this.mBundle=new Bundle();
-}

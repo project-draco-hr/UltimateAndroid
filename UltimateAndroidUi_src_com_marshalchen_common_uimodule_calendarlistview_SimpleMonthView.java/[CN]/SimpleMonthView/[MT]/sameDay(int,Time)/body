@@ -1,3 +1,0 @@
-{
-  return (mYear == time.year) && (mMonth == time.month) && (monthDay == time.monthDay);
-}

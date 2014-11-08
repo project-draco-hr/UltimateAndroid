@@ -1,8 +1,0 @@
-{
-  contrastFx.BrightnessFactor=0.05f;
-  contrastFx.ContrastFactor=0.5f;
-  blender.Mixture=0.5f;
-  blender.Mode=BlendMode.Multiply;
-  vignetteFx.Size=0.6f;
-  noiseFx.Intensity=0.02f;
-}

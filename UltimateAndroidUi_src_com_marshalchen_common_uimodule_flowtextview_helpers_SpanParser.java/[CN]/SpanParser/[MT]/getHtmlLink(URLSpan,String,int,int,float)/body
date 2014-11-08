@@ -1,5 +1,0 @@
-{
-  HtmlLink obj=new HtmlLink(content,start,end,thisXOffset,mFlowTextView.getLinkPaint(),span.getURL());
-  mLinks.add(obj);
-  return obj;
-}

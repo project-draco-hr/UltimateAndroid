@@ -1,7 +1,0 @@
-{
-  imageView.clear();
-  if (rotateBitmap != null) {
-    rotateBitmap.recycle();
-  }
-  System.gc();
-}

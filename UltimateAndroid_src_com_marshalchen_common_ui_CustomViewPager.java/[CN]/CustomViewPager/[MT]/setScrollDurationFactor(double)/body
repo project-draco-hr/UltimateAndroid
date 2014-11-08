@@ -1,3 +1,0 @@
-{
-  mScroller.setScrollDurationFactor(scrollFactor);
-}

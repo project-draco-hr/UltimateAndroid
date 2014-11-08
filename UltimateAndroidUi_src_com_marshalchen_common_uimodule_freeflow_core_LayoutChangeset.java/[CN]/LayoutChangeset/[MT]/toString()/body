@@ -1,3 +1,0 @@
-{
-  return "Added: " + added.size() + ","+ "Removed: "+ removed.size()+ ","+ "Moved: "+ moved.size();
-}

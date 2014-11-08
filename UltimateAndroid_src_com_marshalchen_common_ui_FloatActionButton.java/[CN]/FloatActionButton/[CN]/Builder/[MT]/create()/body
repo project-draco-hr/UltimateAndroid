@@ -1,9 +1,0 @@
-{
-  final FloatActionButton button=new FloatActionButton(activity);
-  button.setFloatingActionButtonColor(this.color);
-  button.setFloatingActionButtonDrawable(this.drawable);
-  params.gravity=this.gravity;
-  ViewGroup root=(ViewGroup)activity.findViewById(android.R.id.content);
-  root.addView(button,params);
-  return button;
-}

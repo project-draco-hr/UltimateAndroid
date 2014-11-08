@@ -1,5 +1,0 @@
-{
-  paint.setTextSize(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,size,displayMetrics));
-  StaticLayout layout=new StaticLayout(text,paint,(int)width,Layout.Alignment.ALIGN_NORMAL,1.0f,0.0f,true);
-  return layout.getLineCount();
-}

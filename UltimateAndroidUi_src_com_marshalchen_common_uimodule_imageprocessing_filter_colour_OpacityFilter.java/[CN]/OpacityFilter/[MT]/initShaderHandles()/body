@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  opacityHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_OPACITY);
-}

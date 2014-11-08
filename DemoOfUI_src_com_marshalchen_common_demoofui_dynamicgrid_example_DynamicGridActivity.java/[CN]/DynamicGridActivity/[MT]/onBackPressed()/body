@@ -1,8 +1,0 @@
-{
-  if (gridView.isEditMode()) {
-    gridView.stopEditMode();
-  }
- else {
-    super.onBackPressed();
-  }
-}

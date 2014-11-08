@@ -1,3 +1,0 @@
-{
-  return getChildAt(getChildCount() / 2);
-}

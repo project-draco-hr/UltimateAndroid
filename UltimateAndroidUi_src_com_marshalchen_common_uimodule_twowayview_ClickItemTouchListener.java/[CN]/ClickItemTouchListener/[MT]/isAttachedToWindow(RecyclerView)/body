@@ -1,8 +1,0 @@
-{
-  if (Build.VERSION.SDK_INT >= 19) {
-    return hostView.isAttachedToWindow();
-  }
- else {
-    return (hostView.getHandler() != null);
-  }
-}

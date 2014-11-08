@@ -1,7 +1,0 @@
-{
-  if (mContent != null) {
-    this.removeView(mContent);
-  }
-  mContent=v;
-  addView(mContent);
-}

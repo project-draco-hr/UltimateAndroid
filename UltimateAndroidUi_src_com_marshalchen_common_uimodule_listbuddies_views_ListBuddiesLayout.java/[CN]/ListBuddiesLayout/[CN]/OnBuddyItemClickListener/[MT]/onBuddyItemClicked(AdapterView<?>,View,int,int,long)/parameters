@@ -1,5 +1,0 @@
-AdapterView<?> parent
-View view
-int buddy
-int position
-long id

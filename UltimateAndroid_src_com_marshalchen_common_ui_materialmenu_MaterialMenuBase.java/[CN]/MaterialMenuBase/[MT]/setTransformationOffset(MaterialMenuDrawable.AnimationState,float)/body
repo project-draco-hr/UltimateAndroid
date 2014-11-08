@@ -1,3 +1,0 @@
-{
-  currentState=getDrawable().setTransformationOffset(animationState,value);
-}

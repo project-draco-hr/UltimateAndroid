@@ -1,5 +1,0 @@
-{
-  this.context=context;
-  this.view=view;
-  setImage(resourceId);
-}

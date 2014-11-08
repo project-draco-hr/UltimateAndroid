@@ -1,3 +1,0 @@
-{
-  return degree * (float)Math.PI / 180f;
-}

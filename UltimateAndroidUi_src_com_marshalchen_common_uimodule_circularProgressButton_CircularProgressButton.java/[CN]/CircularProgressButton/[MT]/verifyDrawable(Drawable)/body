@@ -1,3 +1,0 @@
-{
-  return who == mAnimatedDrawable || super.verifyDrawable(who);
-}

@@ -1,8 +1,0 @@
-{
-  Rect rect=new Rect();
-  for (  View v : ignoredViews) {
-    v.getGlobalVisibleRect(rect);
-    if (rect.contains((int)ev.getX(),(int)ev.getY()))     return true;
-  }
-  return false;
-}

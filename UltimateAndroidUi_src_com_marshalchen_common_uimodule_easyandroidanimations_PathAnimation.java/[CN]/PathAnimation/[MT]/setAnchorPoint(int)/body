@@ -1,4 +1,0 @@
-{
-  this.anchorPoint=anchorPoint;
-  return this;
-}

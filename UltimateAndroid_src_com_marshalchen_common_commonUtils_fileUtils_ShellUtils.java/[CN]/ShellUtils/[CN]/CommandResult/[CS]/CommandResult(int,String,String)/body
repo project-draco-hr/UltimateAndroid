@@ -1,5 +1,0 @@
-{
-  this.result=result;
-  this.successMsg=successMsg;
-  this.errorMsg=errorMsg;
-}

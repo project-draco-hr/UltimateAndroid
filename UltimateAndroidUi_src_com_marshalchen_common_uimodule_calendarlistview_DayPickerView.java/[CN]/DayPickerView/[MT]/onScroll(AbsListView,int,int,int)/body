@@ -1,9 +1,0 @@
-{
-  SimpleMonthView child=(SimpleMonthView)view.getChildAt(0);
-  if (child == null) {
-    return;
-  }
-  long currScroll=view.getFirstVisiblePosition() * child.getHeight() - child.getBottom();
-  mPreviousScrollPosition=currScroll;
-  mPreviousScrollState=mCurrentScrollState;
-}

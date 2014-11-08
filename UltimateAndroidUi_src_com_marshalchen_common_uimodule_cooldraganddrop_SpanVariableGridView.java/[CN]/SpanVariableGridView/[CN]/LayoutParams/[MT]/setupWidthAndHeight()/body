@@ -1,8 +1,0 @@
-{
-  if (this.width != MATCH_PARENT) {
-    this.width=MATCH_PARENT;
-  }
-  if (this.height == MATCH_PARENT) {
-    this.height=WRAP_CONTENT;
-  }
-}

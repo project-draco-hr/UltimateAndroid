@@ -1,3 +1,0 @@
-{
-  ((AlertDialog)dialog).setMessage(this.getString(getWarningMessage()));
-}

@@ -1,4 +1,0 @@
-{
-  mOriginalScaleX=holder.itemView.getScaleX();
-  mOriginalScaleY=holder.itemView.getScaleY();
-}

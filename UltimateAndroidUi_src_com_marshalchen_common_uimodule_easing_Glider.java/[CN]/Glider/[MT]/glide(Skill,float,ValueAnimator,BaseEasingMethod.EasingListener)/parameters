@@ -1,4 +1,0 @@
-Skill skill
-float duration
-ValueAnimator animator
-BaseEasingMethod.EasingListener listeners

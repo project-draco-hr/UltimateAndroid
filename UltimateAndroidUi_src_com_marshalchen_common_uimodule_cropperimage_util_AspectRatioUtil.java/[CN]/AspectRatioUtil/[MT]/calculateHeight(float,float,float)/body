@@ -1,5 +1,0 @@
-{
-  final float width=right - left;
-  final float height=width / targetAspectRatio;
-  return height;
-}

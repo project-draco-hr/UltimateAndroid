@@ -1,4 +1,0 @@
-{
-  super.setPadding(left,top,right,bottom);
-  adjustDrawablePadding();
-}

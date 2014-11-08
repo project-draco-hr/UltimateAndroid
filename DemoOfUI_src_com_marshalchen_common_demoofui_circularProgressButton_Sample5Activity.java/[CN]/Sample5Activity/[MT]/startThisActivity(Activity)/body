@@ -1,3 +1,0 @@
-{
-  activity.startActivity(new Intent(activity,Sample5Activity.class));
-}

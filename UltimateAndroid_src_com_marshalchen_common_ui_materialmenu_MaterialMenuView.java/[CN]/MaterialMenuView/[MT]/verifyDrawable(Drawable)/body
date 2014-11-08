@@ -1,3 +1,0 @@
-{
-  return who == drawable || super.verifyDrawable(who);
-}

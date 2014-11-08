@@ -1,4 +1,0 @@
-{
-  drawVertical(c,parent);
-  drawHorizontal(c,parent);
-}

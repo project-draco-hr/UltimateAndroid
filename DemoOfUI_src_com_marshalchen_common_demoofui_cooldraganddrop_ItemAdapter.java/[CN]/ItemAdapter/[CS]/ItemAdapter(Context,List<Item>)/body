@@ -1,5 +1,0 @@
-{
-  super(context,R.layout.cooldrag_drop_item,plugins);
-  mContext=context;
-  mLayoutInflater=LayoutInflater.from(context);
-}

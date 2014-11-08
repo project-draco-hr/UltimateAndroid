@@ -1,5 +1,0 @@
-{
-  AsyncHttpClient client=new AsyncHttpClient();
-  client.setTimeout(TIME_OUT);
-  client.get(getAbsoluteUrl(url),params,responseHandler);
-}

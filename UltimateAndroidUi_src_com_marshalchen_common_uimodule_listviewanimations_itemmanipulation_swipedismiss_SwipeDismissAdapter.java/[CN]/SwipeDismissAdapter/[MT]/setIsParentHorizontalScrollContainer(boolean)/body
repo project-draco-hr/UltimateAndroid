@@ -1,6 +1,0 @@
-{
-  super.setIsParentHorizontalScrollContainer(isParentHorizontalScrollContainer);
-  if (mSwipeDismissListViewTouchListener != null) {
-    mSwipeDismissListViewTouchListener.setIsParentHorizontalScrollContainer(isParentHorizontalScrollContainer);
-  }
-}

@@ -1,3 +1,0 @@
-{
-  ((Activity)mContext).setTitle(title);
-}

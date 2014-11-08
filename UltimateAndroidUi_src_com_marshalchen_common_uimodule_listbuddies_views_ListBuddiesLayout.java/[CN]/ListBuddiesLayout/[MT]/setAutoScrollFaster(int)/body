@@ -1,5 +1,0 @@
-{
-  isAutoScrollLeftListFaster=option == 1;
-  calibrateSpeed();
-  return this;
-}

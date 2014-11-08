@@ -1,8 +1,0 @@
-{
-  if (Build.VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN) {
-    setBackground(drawable);
-  }
- else {
-    setBackgroundDrawable(drawable);
-  }
-}

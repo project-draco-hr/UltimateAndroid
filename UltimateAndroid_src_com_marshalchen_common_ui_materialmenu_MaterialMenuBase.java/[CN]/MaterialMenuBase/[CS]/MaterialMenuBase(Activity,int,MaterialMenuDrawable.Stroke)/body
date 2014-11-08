@@ -1,3 +1,0 @@
-{
-  this(activity,color,stroke,DEFAULT_TRANSFORM_DURATION,DEFAULT_PRESSED_DURATION);
-}

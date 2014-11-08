@@ -1,5 +1,0 @@
-{
-  if (childBottom > mColumnBottoms[column]) {
-    mColumnBottoms[column]=childBottom;
-  }
-}

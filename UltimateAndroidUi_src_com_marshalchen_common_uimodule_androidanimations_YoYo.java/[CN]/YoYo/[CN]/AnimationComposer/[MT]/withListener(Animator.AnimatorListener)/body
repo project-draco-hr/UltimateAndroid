@@ -1,4 +1,0 @@
-{
-  callbacks.add(listener);
-  return this;
-}

@@ -1,3 +1,0 @@
-{
-  Arrays.fill(mColumnTops,getPaddingTop() + mGridPaddingTop);
-}

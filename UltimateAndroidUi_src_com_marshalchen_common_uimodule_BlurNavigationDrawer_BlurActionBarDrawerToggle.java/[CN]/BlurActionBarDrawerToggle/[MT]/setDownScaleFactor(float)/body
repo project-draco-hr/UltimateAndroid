@@ -1,3 +1,0 @@
-{
-  mDownScaleFactor=downScaleFactor < 1 ? 1 : downScaleFactor;
-}

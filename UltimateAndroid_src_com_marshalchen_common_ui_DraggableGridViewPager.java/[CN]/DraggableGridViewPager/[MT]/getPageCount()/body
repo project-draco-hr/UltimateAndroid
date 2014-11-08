@@ -1,3 +1,0 @@
-{
-  return (getChildCount() + mPageSize - 1) / mPageSize;
-}

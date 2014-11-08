@@ -1,4 +1,0 @@
-{
-  final float scale=getResources().getDisplayMetrics().scaledDensity;
-  return sp * scale;
-}

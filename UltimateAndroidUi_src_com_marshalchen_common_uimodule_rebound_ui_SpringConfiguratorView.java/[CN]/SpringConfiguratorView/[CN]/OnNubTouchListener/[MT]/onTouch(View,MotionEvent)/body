@@ -1,6 +1,0 @@
-{
-  if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-    togglePosition();
-  }
-  return true;
-}

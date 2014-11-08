@@ -1,3 +1,0 @@
-{
-  this(baseAdapter,onDismissCallback,new SwipeOnScrollListener());
-}

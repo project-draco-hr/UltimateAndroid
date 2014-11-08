@@ -1,5 +1,0 @@
-{
-  canvas.drawCircle(centerX,centerY,pressedRingRadius + animationProgress,focusPaint);
-  canvas.drawCircle(centerX,centerY,outerRadius - pressedRingWidth,circlePaint);
-  super.onDraw(canvas);
-}

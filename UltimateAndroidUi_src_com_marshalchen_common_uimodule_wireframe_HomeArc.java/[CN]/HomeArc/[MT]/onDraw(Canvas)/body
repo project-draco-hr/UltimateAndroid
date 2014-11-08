@@ -1,6 +1,0 @@
-{
-  super.onDraw(c);
-  c.drawArc(rectf,-90,360,false,paint_black);
-  c.drawArc(rectf,-90,arc_y,false,paint_white);
-  c.drawText("" + score_text,tb * 9.7f,tb * 11.0f,paint_white);
-}

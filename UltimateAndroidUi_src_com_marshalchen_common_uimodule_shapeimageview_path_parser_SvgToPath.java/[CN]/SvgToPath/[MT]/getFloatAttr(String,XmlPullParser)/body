@@ -1,3 +1,0 @@
-{
-  return getFloatAttr(name,attributes,null);
-}

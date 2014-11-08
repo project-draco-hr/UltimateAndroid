@@ -1,4 +1,0 @@
-{
-  DisplayMetrics metrics=context.getResources().getDisplayMetrics();
-  return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dipValue,metrics);
-}

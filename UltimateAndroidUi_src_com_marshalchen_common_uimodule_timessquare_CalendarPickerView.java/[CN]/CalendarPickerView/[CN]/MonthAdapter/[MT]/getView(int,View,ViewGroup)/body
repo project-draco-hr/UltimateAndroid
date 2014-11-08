@@ -1,8 +1,0 @@
-{
-  MonthView monthView=(MonthView)convertView;
-  if (monthView == null) {
-    monthView=MonthView.create(parent,inflater,weekdayNameFormat,listener,today,dividerColor,dayBackgroundResId,dayTextColorResId,titleTextColor,headerTextColor);
-  }
-  monthView.init(months.get(position),cells.get(position),displayOnly);
-  return monthView;
-}

@@ -1,7 +1,0 @@
-{
-  mBitmap=bitmap;
-  mImageView.setImageBitmap(mBitmap);
-  if (mCropOverlayView != null) {
-    mCropOverlayView.resetCropOverlayView();
-  }
-}

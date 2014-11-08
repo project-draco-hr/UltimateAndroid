@@ -1,4 +1,0 @@
-{
-  mDivider.setBackgroundColor(Color.parseColor(colorString));
-  return this;
-}

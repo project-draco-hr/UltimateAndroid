@@ -1,6 +1,0 @@
-{
-  super(2);
-  this.colour=colour;
-  this.threshold=threshold;
-  this.smoothing=smoothing;
-}

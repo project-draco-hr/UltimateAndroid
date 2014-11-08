@@ -1,3 +1,0 @@
-{
-  return mOnItemLongClickListener.onItemLongClick(parent,view,mAdapter.translatePosition(position).mPosition,id);
-}

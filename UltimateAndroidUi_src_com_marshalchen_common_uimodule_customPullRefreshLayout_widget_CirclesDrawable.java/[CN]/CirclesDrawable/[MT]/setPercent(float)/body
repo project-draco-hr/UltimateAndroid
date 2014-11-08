@@ -1,4 +1,0 @@
-{
-  int level=(int)(2500 * percent);
-  updateLevel(level);
-}

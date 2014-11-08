@@ -1,4 +1,0 @@
-{
-  retrieveItemHeight(holder);
-  ViewCompat.setTranslationY(holder.itemView,-mOriginalY);
-}

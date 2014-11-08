@@ -1,9 +1,0 @@
-{
-  if (mHeaderView != null) {
-    mStartTime=SystemClock.currentThreadTimeMillis();
-    mDuration=paramLong;
-    mScale=((float)(mHeaderContainer.getBottom()) / mHeaderHeight);
-    mIsFinished=false;
-    post(this);
-  }
-}

@@ -1,5 +1,0 @@
-{
-  if (interpolator == null)   throw new IllegalArgumentException("Interpolator cannot be null");
-  mInterpolator=interpolator;
-  invalidateSelf();
-}

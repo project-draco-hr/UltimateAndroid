@@ -1,7 +1,0 @@
-{
-  if (direction != ANIMATION_DIRECTION_LTR && direction != ANIMATION_DIRECTION_RTL) {
-    throw new IllegalArgumentException("The animation direction must be either ANIMATION_DIRECTION_LTR or ANIMATION_DIRECTION_RTL");
-  }
-  this.direction=direction;
-  return this;
-}

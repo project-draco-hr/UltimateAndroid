@@ -1,8 +1,0 @@
-{
-  if (mBlurredBackgroundView != null) {
-    mBlurredBackgroundView.setVisibility(View.GONE);
-    mBlurredBackgroundView=null;
-  }
-  mBluringTask.cancel(true);
-  mBluringTask=null;
-}

@@ -1,9 +1,0 @@
-{
-  if (keyCode == KeyEvent.KEYCODE_BACK) {
-    if (mWebView.inCustomView()) {
-      mWebView.hideCustomView();
-      return true;
-    }
-  }
-  return super.onKeyDown(keyCode,event);
-}

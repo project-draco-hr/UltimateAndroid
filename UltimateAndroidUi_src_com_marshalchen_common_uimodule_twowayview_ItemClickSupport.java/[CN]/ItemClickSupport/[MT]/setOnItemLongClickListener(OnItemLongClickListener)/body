@@ -1,6 +1,0 @@
-{
-  if (!mRecyclerView.isLongClickable()) {
-    mRecyclerView.setLongClickable(true);
-  }
-  mItemLongClickListener=listener;
-}

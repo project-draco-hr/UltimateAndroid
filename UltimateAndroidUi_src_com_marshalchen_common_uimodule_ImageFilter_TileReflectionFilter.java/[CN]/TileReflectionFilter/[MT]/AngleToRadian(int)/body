@@ -1,3 +1,0 @@
-{
-  return IImageFilter.LIB_PI * nAngle / 180.0;
-}

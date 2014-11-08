@@ -1,3 +1,0 @@
-{
-  ((ViewGroup)getActivityContentView()).addView(this,layoutParams);
-}

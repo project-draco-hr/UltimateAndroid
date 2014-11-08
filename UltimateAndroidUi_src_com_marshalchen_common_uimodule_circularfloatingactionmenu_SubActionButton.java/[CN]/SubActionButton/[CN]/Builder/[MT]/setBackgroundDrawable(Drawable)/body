@@ -1,4 +1,0 @@
-{
-  this.backgroundDrawable=backgroundDrawable;
-  return this;
-}

@@ -1,3 +1,0 @@
-{
-  return isCompatWith(Build.VERSION_CODES.HONEYCOMB);
-}

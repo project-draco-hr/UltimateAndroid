@@ -1,4 +1,0 @@
-{
-  this.numOfBounces=numOfBounces;
-  return this;
-}

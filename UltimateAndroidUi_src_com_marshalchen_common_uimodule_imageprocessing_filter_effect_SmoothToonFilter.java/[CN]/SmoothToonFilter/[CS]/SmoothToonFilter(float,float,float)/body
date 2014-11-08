@@ -1,8 +1,0 @@
-{
-  GaussianBlurFilter blur=new GaussianBlurFilter(blurSize);
-  ToonFilter toon=new ToonFilter(threshold,quantizationLevels);
-  blur.addTarget(toon);
-  toon.addTarget(this);
-  registerInitialFilter(blur);
-  registerTerminalFilter(toon);
-}

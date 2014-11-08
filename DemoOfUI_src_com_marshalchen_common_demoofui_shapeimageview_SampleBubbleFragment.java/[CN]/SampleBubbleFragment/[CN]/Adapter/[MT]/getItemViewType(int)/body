@@ -1,8 +1,0 @@
-{
-  if (position % MESSAGES.length == 4) {
-    return 1;
-  }
- else {
-    return 0;
-  }
-}

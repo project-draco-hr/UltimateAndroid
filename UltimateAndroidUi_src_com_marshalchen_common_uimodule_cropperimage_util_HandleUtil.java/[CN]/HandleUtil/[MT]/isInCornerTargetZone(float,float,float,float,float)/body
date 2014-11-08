@@ -1,6 +1,0 @@
-{
-  if (Math.abs(x - handleX) <= targetRadius && Math.abs(y - handleY) <= targetRadius) {
-    return true;
-  }
-  return false;
-}

@@ -1,5 +1,0 @@
-{
-  if (apiUtils.isCompatWithHoneycomb()) {
-    view.setAlpha(ALPHA_DIM_VALUE);
-  }
-}

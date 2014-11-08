@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  matrixHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_CAM_MATRIX);
-}

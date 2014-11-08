@@ -1,6 +1,0 @@
-{
-  this(context);
-  setImageResource(resourceId);
-  mShape=shape;
-  mSvgRawResourceId=svgRawResourceId;
-}

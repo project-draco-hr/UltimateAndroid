@@ -1,3 +1,0 @@
-{
-  mAttacher.setAllowParentInterceptOnEdge(allow);
-}

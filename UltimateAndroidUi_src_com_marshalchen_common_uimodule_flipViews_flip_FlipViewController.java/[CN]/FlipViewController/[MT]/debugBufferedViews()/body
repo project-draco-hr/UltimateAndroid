@@ -1,5 +1,0 @@
-{
-  if (AphidLog.ENABLE_DEBUG) {
-    AphidLog.d("bufferedViews: %s; buffer index %d, adapter index %d",bufferedViews,bufferIndex,adapterIndex);
-  }
-}

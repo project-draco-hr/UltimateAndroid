@@ -1,6 +1,0 @@
-{
-  int count=canvas.save();
-  canvas.clipRect(fromX,(int)((canvas.getHeight() - mStrokeWidth) / 2),toX,(int)((canvas.getHeight() + mStrokeWidth) / 2));
-  mBackgroundDrawable.draw(canvas);
-  canvas.restoreToCount(count);
-}

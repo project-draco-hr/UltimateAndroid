@@ -1,4 +1,0 @@
-{
-  this.center=center;
-  this.fractionalSize=fractionalSize;
-}

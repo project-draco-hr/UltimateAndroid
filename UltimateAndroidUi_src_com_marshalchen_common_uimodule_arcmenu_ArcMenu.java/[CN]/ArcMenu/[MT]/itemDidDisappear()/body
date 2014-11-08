@@ -1,8 +1,0 @@
-{
-  final int itemCount=mArcLayout.getChildCount();
-  for (int i=0; i < itemCount; i++) {
-    View item=mArcLayout.getChildAt(i);
-    item.clearAnimation();
-  }
-  mArcLayout.switchState(false);
-}

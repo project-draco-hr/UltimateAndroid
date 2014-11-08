@@ -1,4 +1,0 @@
-Rect outRect
-View view
-RecyclerView parent
-RecyclerView.State state

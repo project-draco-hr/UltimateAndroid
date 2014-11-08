@@ -1,5 +1,0 @@
-{
-  boolean handled=super.dispatchTouchEvent(ev);
-  handled|=mGesture.onTouchEvent(ev);
-  return handled;
-}

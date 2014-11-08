@@ -1,6 +1,0 @@
-{
-  _direct=direct;
-  _width=(width >= 2) ? width : 2;
-  _opacity=Function.FClamp(opacity,1,100);
-  _color=blindColor;
-}

@@ -1,3 +1,0 @@
-{
-  Toast.makeText(getActivity(),"Clicked: " + position + ", index "+ mList.indexOfChild(view),Toast.LENGTH_SHORT).show();
-}

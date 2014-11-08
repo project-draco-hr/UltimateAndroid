@@ -1,9 +1,0 @@
-{
-  if (isDropDownStyle) {
-    setHeaderStatusClickToLoad();
-    if (headerLayout.getBottom() > 0) {
-      invalidateViews();
-      setSecondPositionVisible();
-    }
-  }
-}

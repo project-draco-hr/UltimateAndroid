@@ -1,7 +1,0 @@
-{
-  if (!isRunning()) {
-    mPlayingState=RUNNING;
-    if (numberType == 1)     runInt();
- else     runFloat();
-  }
-}

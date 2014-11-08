@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  hueAdjustHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_HUEADJUST);
-}

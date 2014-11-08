@@ -1,4 +1,0 @@
-{
-  invalidated=true;
-  super.invalidate();
-}

@@ -1,3 +1,0 @@
-{
-  return getWidth() - getPaddingRight() - getPaddingLeft();
-}

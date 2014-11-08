@@ -1,3 +1,0 @@
-{
-  return -c * (float)Math.cos(t / d * (Math.PI / 2)) + c + b;
-}

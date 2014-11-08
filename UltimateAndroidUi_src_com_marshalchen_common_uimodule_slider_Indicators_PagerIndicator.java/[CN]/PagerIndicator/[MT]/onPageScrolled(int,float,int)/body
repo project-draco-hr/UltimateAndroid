@@ -1,7 +1,0 @@
-{
-  if (mItemCount == 0) {
-    return;
-  }
-  int n=position % mItemCount;
-  setItemAsSelected(n - 1);
-}

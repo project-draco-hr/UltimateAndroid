@@ -1,6 +1,0 @@
-{
-  if (x > left && x < right && y > top && y < bottom) {
-    return true;
-  }
-  return false;
-}

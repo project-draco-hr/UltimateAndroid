@@ -1,5 +1,0 @@
-{
-  mRecyclerView=recyclerView;
-  mTouchListener=new TouchListener(recyclerView);
-  recyclerView.addOnItemTouchListener(mTouchListener);
-}

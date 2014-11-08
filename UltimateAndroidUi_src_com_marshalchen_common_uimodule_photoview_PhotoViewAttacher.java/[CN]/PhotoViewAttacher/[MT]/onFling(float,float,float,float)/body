@@ -1,9 +1,0 @@
-{
-  if (DEBUG) {
-    LogManager.getLogger().d(LOG_TAG,"onFling. sX: " + startX + " sY: "+ startY+ " Vx: "+ velocityX+ " Vy: "+ velocityY);
-  }
-  ImageView imageView=getImageView();
-  mCurrentFlingRunnable=new FlingRunnable(imageView.getContext());
-  mCurrentFlingRunnable.fling(getImageViewWidth(imageView),getImageViewHeight(imageView),(int)velocityX,(int)velocityY);
-  imageView.post(mCurrentFlingRunnable);
-}

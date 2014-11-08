@@ -1,9 +1,0 @@
-{
-  this.setOnItemClickListener(new OnItemClickListener(){
-    @Override public void onItemClick(    AdapterView<?> adapterView,    View view,    int i,    long l){
-      SlideExpandableListAdapter adapter=(SlideExpandableListAdapter)getAdapter();
-      adapter.getExpandToggleButton(view).performClick();
-    }
-  }
-);
-}

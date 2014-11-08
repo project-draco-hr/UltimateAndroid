@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.pull_to_zoom_list_view,menu);
-  return true;
-}

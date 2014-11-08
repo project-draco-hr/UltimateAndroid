@@ -1,7 +1,0 @@
-{
-  Logger.i("Key pressed: " + keyCode);
-  if (keyCode == KeyEvent.KEYCODE_BACK) {
-    shutdownTimer();
-  }
-  return super.onKeyDown(keyCode,keyEvent);
-}

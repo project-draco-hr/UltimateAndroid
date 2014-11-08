@@ -1,5 +1,0 @@
-{
-  mFlipView=v;
-  mTopEdgeEffect=new EdgeEffectCompat(v.getContext());
-  mBottomEdgeEffect=new EdgeEffectCompat(v.getContext());
-}

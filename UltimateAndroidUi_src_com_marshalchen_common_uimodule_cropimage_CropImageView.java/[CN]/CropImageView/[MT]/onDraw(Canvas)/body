@@ -1,6 +1,0 @@
-{
-  super.onDraw(canvas);
-  for (  HighlightView mHighlightView : highlightViews) {
-    mHighlightView.draw(canvas);
-  }
-}

@@ -1,3 +1,0 @@
-{
-  setCornerRadius(getResources().getDimension(resId));
-}

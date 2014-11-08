@@ -1,7 +1,0 @@
-{
-  LayoutInflater inflater=activity.getLayoutInflater();
-  int count=dslv.getHeaderViewsCount();
-  TextView header=(TextView)inflater.inflate(R.layout.drag_sort_listview_header_footer,null);
-  header.setText("Header #" + (count + 1));
-  dslv.addHeaderView(header,null,false);
-}

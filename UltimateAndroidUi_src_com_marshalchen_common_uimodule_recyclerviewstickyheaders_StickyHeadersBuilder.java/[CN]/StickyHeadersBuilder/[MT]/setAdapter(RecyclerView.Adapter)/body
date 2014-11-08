@@ -1,7 +1,0 @@
-{
-  if (!adapter.hasStableIds()) {
-    throw new IllegalArgumentException("Adapter must have stable ids");
-  }
-  this.adapter=adapter;
-  return this;
-}

@@ -1,3 +1,0 @@
-{
-  return new SpringSystem(new SpringClock(),AndroidSpringLooperFactory.createSpringLooper());
-}

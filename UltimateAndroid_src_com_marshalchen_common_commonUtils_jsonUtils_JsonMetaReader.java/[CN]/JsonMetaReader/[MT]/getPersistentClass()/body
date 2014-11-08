@@ -1,6 +1,0 @@
-{
-  if (persistentClass == null) {
-    this.persistentClass=(Class<T>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-  }
-  return persistentClass;
-}

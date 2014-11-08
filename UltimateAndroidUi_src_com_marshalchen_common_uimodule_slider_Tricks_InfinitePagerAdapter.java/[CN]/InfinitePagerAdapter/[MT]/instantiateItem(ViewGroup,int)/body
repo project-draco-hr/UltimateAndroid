@@ -1,9 +1,0 @@
-{
-  if (getRealCount() == 0) {
-    return null;
-  }
-  int virtualPosition=position % getRealCount();
-  debug("instantiateItem: real position: " + position);
-  debug("instantiateItem: virtual position: " + virtualPosition);
-  return adapter.instantiateItem(container,virtualPosition);
-}

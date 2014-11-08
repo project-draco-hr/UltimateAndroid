@@ -1,4 +1,0 @@
-{
-  this.indicatorColor=indicatorColor;
-  invalidate();
-}

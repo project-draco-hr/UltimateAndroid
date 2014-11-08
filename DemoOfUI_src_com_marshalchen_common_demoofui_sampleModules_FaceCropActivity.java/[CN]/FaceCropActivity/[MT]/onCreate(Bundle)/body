@@ -1,9 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.face_crop_activity);
-  ButterKnife.inject(this);
-  mFaceCropper=new FaceCropper(1f);
-  mFaceCropper.setFaceMinSize(0);
-  faceCropImageView.setImageResource(R.drawable.test_back);
-  faceCropImageViewCroped.setImageBitmap(mFaceCropper.cropFace(this,R.drawable.test_back));
-}

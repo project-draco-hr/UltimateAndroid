@@ -1,6 +1,0 @@
-{
-  if (duration < 0) {
-    throw new IllegalArgumentException("Duration is less than zero");
-  }
-  animationDuration=duration;
-}

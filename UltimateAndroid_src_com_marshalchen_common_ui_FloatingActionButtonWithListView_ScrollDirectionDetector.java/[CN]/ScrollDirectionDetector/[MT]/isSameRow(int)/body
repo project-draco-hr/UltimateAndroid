@@ -1,5 +1,0 @@
-{
-  boolean rowsChanged=firstVisibleItem == mPreviousFirstVisibleItem;
-  mPreviousFirstVisibleItem=firstVisibleItem;
-  return rowsChanged;
-}

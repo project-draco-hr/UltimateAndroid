@@ -1,7 +1,0 @@
-{
-  View child=findViewById(childId);
-  if (child != null) {
-    mRevealListeners.remove(child);
-    mShowEntirely.remove(child);
-  }
-}

@@ -1,9 +1,0 @@
-{
-  float min=humidity[0];
-  for (int i=1; i < humidity.length; i++) {
-    if (humidity[i] < min) {
-      min=humidity[i];
-    }
-  }
-  return min;
-}

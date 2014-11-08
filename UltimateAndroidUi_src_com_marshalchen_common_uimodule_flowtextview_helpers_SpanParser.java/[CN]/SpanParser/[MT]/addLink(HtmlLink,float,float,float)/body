@@ -1,6 +1,0 @@
-{
-  thisLink.yOffset=yOffset - 20;
-  thisLink.width=width;
-  thisLink.height=height + 20;
-  mLinks.add(thisLink);
-}

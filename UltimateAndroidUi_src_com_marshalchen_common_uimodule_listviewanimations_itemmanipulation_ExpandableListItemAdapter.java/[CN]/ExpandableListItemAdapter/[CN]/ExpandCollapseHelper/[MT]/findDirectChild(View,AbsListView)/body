@@ -1,9 +1,0 @@
-{
-  View result=view;
-  View parent=(View)result.getParent();
-  while (parent != listView) {
-    result=parent;
-    parent=(View)result.getParent();
-  }
-  return result;
-}

@@ -1,5 +1,0 @@
-{
-  mOuterCircleSize=size;
-  INCRESING_SIZE=(mOuterCircleSize - mInnerCircleSize) / 100;
-  SLEEP_TIME=(int)(INCRESING_SIZE * 1500 / mOuterCircleSize);
-}

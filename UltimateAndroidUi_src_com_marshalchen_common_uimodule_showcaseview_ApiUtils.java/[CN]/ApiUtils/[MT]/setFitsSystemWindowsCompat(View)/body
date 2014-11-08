@@ -1,5 +1,0 @@
-{
-  if (isCompatWith(Build.VERSION_CODES.ICE_CREAM_SANDWICH)) {
-    view.setFitsSystemWindows(true);
-  }
-}

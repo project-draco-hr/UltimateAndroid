@@ -1,5 +1,0 @@
-{
-  mEventTextSize=eventTextSize;
-  mEventTextPaint.setTextSize(mEventTextSize);
-  invalidate();
-}

@@ -1,5 +1,0 @@
-{
-  _waveLength=((waveLength >= 1) ? waveLength : 1);
-  _amplitude=((amplitude >= 1) ? amplitude : 1);
-  _sinType=(sinType ? 1 : 0);
-}

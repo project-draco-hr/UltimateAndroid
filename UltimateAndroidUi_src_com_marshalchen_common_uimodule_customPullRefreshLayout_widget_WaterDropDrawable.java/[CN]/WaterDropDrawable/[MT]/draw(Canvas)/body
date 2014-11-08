@@ -1,9 +1,0 @@
-{
-  canvas.save();
-  canvas.translate(0,mTop > 0 ? mTop : 0);
-  mPath.reset();
-  mPath.moveTo(p1.x,p1.y);
-  mPath.cubicTo(p3.x,p3.y,p4.x,p4.y,p2.x,p2.y);
-  canvas.drawPath(mPath,mPaint);
-  canvas.restore();
-}

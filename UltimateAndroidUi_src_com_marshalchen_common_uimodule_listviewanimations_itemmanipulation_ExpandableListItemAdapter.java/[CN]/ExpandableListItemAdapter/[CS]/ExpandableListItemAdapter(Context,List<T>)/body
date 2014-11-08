@@ -1,7 +1,0 @@
-{
-  super(items);
-  mContext=context;
-  mTitleParentResId=DEFAULTTITLEPARENTRESID;
-  mContentParentResId=DEFAULTCONTENTPARENTRESID;
-  mExpandedIds=new ArrayList<Long>();
-}

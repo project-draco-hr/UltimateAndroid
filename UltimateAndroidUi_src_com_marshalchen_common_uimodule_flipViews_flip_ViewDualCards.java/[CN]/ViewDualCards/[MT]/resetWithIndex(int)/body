@@ -1,6 +1,0 @@
-{
-  this.index=index;
-  viewRef=null;
-  recycleScreenshot();
-  recycleTexture();
-}

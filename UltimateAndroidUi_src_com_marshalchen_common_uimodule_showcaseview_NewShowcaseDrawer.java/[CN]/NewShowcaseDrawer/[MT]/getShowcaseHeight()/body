@@ -1,3 +1,0 @@
-{
-  return (int)(outerRadius * 2);
-}

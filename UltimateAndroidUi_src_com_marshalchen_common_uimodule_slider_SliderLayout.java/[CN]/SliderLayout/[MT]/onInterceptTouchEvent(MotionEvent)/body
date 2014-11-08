@@ -1,9 +1,0 @@
-{
-  int action=ev.getAction();
-switch (action) {
-case MotionEvent.ACTION_DOWN:
-    pauseAutoCycle();
-  break;
-}
-return false;
-}

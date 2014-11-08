@@ -1,3 +1,0 @@
-{
-  canvas.drawText(thisLineStr,xOffset,yOffset,paint);
-}

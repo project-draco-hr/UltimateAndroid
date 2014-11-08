@@ -1,6 +1,0 @@
-{
-  this.mNumberOfVisibleDays=numberOfVisibleDays;
-  mCurrentOrigin.x=0;
-  mCurrentOrigin.y=0;
-  invalidate();
-}

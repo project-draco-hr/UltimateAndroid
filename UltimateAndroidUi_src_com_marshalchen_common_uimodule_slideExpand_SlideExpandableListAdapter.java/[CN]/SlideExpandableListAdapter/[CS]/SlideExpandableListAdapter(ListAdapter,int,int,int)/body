@@ -1,6 +1,0 @@
-{
-  super(wrapped);
-  this.toggle_button_id=toggle_button_id;
-  this.expandable_view_id=expandable_view_id;
-  this.expandable_item_id=expandable_item_id;
-}

@@ -1,5 +1,0 @@
-{
-  float radius=Math.min(width,height) / 2f;
-  rect.set(0,0,width,height);
-  maskCanvas.drawCircle(rect.centerX(),rect.centerY(),radius,maskPaint);
-}

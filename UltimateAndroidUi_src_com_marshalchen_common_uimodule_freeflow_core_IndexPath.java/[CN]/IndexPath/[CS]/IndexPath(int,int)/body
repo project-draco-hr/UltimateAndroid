@@ -1,4 +1,0 @@
-{
-  this.section=section;
-  this.positionInSection=position;
-}

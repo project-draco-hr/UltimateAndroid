@@ -1,4 +1,0 @@
-{
-  mShowMode=mode;
-  requestLayout();
-}

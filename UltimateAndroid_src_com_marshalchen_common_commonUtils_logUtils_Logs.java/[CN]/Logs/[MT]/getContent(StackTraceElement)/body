@@ -1,3 +1,0 @@
-{
-  return String.format(TAG_CONTENT_PRINT,sApplicationTag,trace.getClassName(),trace.getMethodName(),trace.getLineNumber());
-}

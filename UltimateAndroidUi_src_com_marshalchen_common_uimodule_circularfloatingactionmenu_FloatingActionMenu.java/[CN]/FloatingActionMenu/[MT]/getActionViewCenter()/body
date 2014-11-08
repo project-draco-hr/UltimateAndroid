@@ -1,6 +1,0 @@
-{
-  Point point=getActionViewCoordinates();
-  point.x+=mainActionView.getMeasuredWidth() / 2;
-  point.y+=mainActionView.getMeasuredHeight() / 2;
-  return point;
-}

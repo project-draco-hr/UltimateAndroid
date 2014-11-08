@@ -1,3 +1,0 @@
-{
-  return TITLE_RES_IDS.length;
-}

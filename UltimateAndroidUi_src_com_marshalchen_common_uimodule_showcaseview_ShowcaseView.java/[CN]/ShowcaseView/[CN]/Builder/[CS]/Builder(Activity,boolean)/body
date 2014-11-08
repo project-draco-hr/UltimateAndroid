@@ -1,5 +1,0 @@
-{
-  this.activity=activity;
-  this.showcaseView=new ShowcaseView(activity,useNewStyle);
-  this.showcaseView.setTarget(Target.NONE);
-}

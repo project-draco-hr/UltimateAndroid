@@ -1,4 +1,0 @@
-{
-  this.anchorFactor=anchorFactor;
-  return this;
-}

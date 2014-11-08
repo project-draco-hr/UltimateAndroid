@@ -1,8 +1,0 @@
-{
-  Object localObject=this.mHeaderContainer.getLayoutParams();
-  if (localObject == null)   localObject=new LayoutParams(paramInt1,paramInt2);
-  ((ViewGroup.LayoutParams)localObject).width=paramInt1;
-  ((ViewGroup.LayoutParams)localObject).height=paramInt2;
-  this.mHeaderContainer.setLayoutParams((ViewGroup.LayoutParams)localObject);
-  this.mHeaderHeight=paramInt2;
-}

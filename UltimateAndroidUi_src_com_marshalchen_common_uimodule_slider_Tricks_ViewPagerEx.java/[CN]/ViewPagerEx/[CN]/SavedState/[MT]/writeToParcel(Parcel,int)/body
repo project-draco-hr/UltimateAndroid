@@ -1,5 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeInt(position);
-  out.writeParcelable(adapterState,flags);
-}

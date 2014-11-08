@@ -1,5 +1,0 @@
-{
-  mInterpolatorSet=true;
-  mInterpolator=interpolator;
-  return this;
-}

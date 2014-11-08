@@ -1,4 +1,0 @@
-{
-  TextView t=(TextView)convertView.findViewById(R.id.position);
-  t.setText((position + 1) + ".");
-}

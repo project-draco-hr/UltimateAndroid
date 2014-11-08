@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.android_hover,menu);
-  return true;
-}

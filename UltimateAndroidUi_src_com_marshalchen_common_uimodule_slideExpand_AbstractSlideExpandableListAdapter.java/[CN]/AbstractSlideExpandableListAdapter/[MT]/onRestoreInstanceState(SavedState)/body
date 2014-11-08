@@ -1,6 +1,0 @@
-{
-  if (state != null) {
-    this.lastOpenPosition=state.lastOpenPosition;
-    this.openItems=state.openItems;
-  }
-}

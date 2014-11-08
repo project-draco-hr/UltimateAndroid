@@ -1,8 +1,0 @@
-{
-  if (isOpen(position)) {
-    v.open(false,false);
-  }
- else {
-    v.close(false,false);
-  }
-}

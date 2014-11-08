@@ -1,7 +1,0 @@
-{
-  View descriptionLayout=current.findViewById(R.id.description_layout);
-  if (descriptionLayout != null) {
-    current.findViewById(R.id.description_layout).setVisibility(View.INVISIBLE);
-  }
-  Log.e(TAG,"onPrepareCurrentItemLeaveScreen called");
-}

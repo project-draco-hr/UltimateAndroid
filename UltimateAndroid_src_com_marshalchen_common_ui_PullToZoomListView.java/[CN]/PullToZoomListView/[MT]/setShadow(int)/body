@@ -1,3 +1,0 @@
-{
-  this.mShadow.setBackgroundResource(paramInt);
-}

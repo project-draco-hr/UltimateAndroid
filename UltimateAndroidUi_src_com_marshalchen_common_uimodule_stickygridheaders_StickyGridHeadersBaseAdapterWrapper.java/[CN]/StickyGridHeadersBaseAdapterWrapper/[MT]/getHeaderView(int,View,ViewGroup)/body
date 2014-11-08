@@ -1,6 +1,0 @@
-{
-  if (mDelegate.getNumHeaders() == 0) {
-    return null;
-  }
-  return mDelegate.getHeaderView(translatePosition(position).mHeader,convertView,parent);
-}

@@ -1,6 +1,0 @@
-{
-  super();
-  SharedPreferences settings=PreferenceManager.getDefaultSharedPreferences(currentApp);
-  this.settings=settings;
-  this.currentApp=currentApp;
-}

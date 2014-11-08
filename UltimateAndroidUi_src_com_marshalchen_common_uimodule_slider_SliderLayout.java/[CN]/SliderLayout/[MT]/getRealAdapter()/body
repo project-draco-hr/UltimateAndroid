@@ -1,7 +1,0 @@
-{
-  PagerAdapter adapter=mViewPager.getAdapter();
-  if (adapter != null) {
-    return ((InfinitePagerAdapter)adapter).getRealAdapter();
-  }
-  return null;
-}

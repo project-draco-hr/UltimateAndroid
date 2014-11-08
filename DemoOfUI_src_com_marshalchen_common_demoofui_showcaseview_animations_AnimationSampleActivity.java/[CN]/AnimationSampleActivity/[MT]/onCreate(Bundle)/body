@@ -1,9 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.showcase_activity_animation);
-  textView1=(TextView)findViewById(R.id.textView);
-  textView2=(TextView)findViewById(R.id.textView2);
-  textView3=(TextView)findViewById(R.id.textView3);
-  showcaseView=new ShowcaseView.Builder(this).setTarget(new ViewTarget(findViewById(R.id.textView))).setOnClickListener(this).build();
-  showcaseView.setButtonText("next");
-}

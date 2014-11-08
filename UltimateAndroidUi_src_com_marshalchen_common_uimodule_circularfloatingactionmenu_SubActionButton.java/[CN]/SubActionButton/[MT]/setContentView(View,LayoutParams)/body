@@ -1,9 +1,0 @@
-{
-  if (params == null) {
-    params=new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,Gravity.CENTER);
-    final int margin=getResources().getDimensionPixelSize(R.dimen.sub_action_button_content_margin);
-    params.setMargins(margin,margin,margin,margin);
-  }
-  contentView.setClickable(false);
-  this.addView(contentView,params);
-}

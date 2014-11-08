@@ -1,3 +1,0 @@
-{
-  adapter.restoreState(bundle,classLoader);
-}

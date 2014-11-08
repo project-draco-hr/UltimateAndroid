@@ -1,5 +1,0 @@
-{
-  mPath.reset();
-  mPath.arcTo(mBounds,270,mAngle,true);
-  canvas.drawPath(mPath,mPaint);
-}

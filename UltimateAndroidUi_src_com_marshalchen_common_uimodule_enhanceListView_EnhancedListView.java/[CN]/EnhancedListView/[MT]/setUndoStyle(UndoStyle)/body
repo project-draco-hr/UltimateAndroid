@@ -1,4 +1,0 @@
-{
-  mUndoStyle=undoStyle;
-  return this;
-}

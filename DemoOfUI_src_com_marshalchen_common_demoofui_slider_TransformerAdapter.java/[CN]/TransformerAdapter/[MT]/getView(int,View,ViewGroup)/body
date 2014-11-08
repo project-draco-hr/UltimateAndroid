@@ -1,5 +1,0 @@
-{
-  TextView t=(TextView)LayoutInflater.from(mContext).inflate(R.layout.slider_item,null);
-  t.setText(getItem(position).toString());
-  return t;
-}

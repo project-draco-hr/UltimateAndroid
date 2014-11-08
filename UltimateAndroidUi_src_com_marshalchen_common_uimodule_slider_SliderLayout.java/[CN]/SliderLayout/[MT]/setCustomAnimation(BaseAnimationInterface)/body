@@ -1,6 +1,0 @@
-{
-  mCustomAnimation=animation;
-  if (mViewPagerTransformer != null) {
-    mViewPagerTransformer.setCustomAnimationInterface(mCustomAnimation);
-  }
-}

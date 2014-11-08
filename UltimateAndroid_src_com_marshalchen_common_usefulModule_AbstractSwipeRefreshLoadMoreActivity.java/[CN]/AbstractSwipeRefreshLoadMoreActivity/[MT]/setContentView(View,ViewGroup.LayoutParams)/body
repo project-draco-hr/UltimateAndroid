@@ -1,4 +1,0 @@
-{
-  swipeReaLayout.addView(view,params);
-  initSwipeOptions();
-}

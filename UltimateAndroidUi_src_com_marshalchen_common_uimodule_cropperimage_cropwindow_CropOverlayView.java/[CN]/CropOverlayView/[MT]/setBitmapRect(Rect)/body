@@ -1,4 +1,0 @@
-{
-  mBitmapRect=bitmapRect;
-  initCropWindow(mBitmapRect);
-}

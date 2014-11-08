@@ -1,4 +1,0 @@
-{
-  super(2);
-  this.mixPercent=mixPercent;
-}

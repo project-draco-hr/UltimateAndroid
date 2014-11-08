@@ -1,6 +1,0 @@
-{
-  initValue(activity);
-  setShadowAdjustScaleXByOrientation();
-  viewDecor.addView(this,0);
-  setViewPadding();
-}

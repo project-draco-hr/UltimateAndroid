@@ -1,5 +1,0 @@
-{
-  toggleView(mLinearLayoutMsgView,textResId);
-  mMessage.setText(textResId);
-  return this;
-}

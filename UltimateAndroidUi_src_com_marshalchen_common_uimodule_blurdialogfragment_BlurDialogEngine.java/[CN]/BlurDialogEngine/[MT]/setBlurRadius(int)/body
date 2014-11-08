@@ -1,8 +1,0 @@
-{
-  if (radius >= 0) {
-    mBlurRadius=radius;
-  }
- else {
-    mBlurRadius=0;
-  }
-}

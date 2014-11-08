@@ -1,4 +1,0 @@
-{
-  isRunning=true;
-  mHandler.post(mAnimationTask);
-}

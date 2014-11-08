@@ -1,4 +1,0 @@
-{
-  showcaseView.overrideButtonClick(onClickListener);
-  return this;
-}

@@ -1,3 +1,0 @@
-{
-  return rect.width() / rect.height();
-}

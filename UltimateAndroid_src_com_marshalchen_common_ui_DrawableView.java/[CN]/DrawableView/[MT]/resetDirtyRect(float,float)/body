@@ -1,6 +1,0 @@
-{
-  dirtyRect.left=Math.min(lastTouchX,eventX);
-  dirtyRect.right=Math.max(lastTouchX,eventX);
-  dirtyRect.top=Math.min(lastTouchY,eventY);
-  dirtyRect.bottom=Math.max(lastTouchY,eventY);
-}

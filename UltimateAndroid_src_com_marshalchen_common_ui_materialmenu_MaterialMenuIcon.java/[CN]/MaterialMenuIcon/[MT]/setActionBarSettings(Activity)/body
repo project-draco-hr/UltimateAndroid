@@ -1,7 +1,0 @@
-{
-  ActionBar actionBar=activity.getActionBar();
-  actionBar.setDisplayShowHomeEnabled(true);
-  actionBar.setHomeButtonEnabled(true);
-  actionBar.setDisplayHomeAsUpEnabled(false);
-  actionBar.setIcon(getDrawable());
-}

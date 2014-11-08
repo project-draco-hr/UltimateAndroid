@@ -1,5 +1,0 @@
-{
-  this.mController=mController;
-  setUpAdapter();
-  setAdapter(mAdapter);
-}

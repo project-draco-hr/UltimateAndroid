@@ -1,3 +1,0 @@
-{
-  return SVGParser.parse(resources.openRawResource(resId),0,0,false);
-}

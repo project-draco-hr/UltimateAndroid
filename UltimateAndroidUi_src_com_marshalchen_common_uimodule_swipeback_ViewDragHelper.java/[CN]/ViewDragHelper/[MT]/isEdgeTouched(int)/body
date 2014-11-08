@@ -1,9 +1,0 @@
-{
-  final int count=mInitialEdgeTouched.length;
-  for (int i=0; i < count; i++) {
-    if (isEdgeTouched(edges,i)) {
-      return true;
-    }
-  }
-  return false;
-}

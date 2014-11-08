@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.custom_shape_image_view_activity);
-  GridView gridView=(GridView)findViewById(R.id.gridview);
-  gridView.setAdapter(new SvgImagesAdapter(this));
-}

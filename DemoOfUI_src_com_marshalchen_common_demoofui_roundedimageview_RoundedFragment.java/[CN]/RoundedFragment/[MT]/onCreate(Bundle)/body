@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  if (getArguments() != null) {
-    isOval=getArguments().getBoolean(ARG_IS_OVAL);
-  }
-}

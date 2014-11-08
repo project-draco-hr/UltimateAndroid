@@ -1,3 +1,0 @@
-{
-  measureChildWithMargins(child,getWidthUsed(child),getHeightUsed(child));
-}

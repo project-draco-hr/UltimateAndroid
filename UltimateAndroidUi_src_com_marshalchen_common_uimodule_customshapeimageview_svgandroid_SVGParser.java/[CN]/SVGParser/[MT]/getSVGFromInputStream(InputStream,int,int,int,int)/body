@@ -1,3 +1,0 @@
-{
-  return SVGParser.parse(svgData,searchColor,replaceColor,false,targetWidth,targetHeight);
-}

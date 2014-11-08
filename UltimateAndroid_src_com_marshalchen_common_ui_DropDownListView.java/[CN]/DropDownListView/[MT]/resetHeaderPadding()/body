@@ -1,3 +1,0 @@
-{
-  headerLayout.setPadding(headerLayout.getPaddingLeft(),headerOriginalTopPadding,headerLayout.getPaddingRight(),headerLayout.getPaddingBottom());
-}

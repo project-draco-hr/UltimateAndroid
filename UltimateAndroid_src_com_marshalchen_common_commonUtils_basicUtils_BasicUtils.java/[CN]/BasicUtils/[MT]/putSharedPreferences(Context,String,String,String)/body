@@ -1,5 +1,0 @@
-{
-  SharedPreferences.Editor sharedDate=context.getSharedPreferences(fileName,0).edit();
-  sharedDate.putString(parameterName,parameterValue);
-  sharedDate.commit();
-}

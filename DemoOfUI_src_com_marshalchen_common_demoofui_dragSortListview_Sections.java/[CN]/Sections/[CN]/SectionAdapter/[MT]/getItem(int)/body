@@ -1,8 +1,0 @@
-{
-  if (position == mDivPos) {
-    return "Something";
-  }
- else {
-    return mData.get(dataPosition(position));
-  }
-}

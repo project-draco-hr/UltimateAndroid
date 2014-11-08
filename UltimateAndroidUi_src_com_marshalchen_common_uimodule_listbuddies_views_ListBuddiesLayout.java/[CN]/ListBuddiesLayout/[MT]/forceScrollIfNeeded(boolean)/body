@@ -1,8 +1,0 @@
-{
-  if (isUserInteracting && isListEnabled) {
-    isUserInteracting=false;
-    if (!mActionDown) {
-      forceScroll();
-    }
-  }
-}

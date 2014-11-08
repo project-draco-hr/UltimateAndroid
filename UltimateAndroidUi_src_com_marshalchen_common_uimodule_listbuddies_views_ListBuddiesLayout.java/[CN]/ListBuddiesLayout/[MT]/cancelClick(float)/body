@@ -1,6 +1,0 @@
-{
-  if (mDownView != null && (Math.abs(mDownEventY - eventY) > CANCEL_CLICK_LIMIT)) {
-    mDownView.setPressed(false);
-    mDownView=null;
-  }
-}

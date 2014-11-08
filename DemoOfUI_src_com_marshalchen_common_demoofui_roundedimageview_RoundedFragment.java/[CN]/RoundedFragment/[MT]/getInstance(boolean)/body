@@ -1,7 +1,0 @@
-{
-  RoundedFragment f=new RoundedFragment();
-  Bundle args=new Bundle();
-  args.putBoolean(ARG_IS_OVAL,isOval);
-  f.setArguments(args);
-  return f;
-}

@@ -1,5 +1,0 @@
-{
-synchronized (mLock) {
-    return mData.get(mData.size() - 1 - position);
-  }
-}

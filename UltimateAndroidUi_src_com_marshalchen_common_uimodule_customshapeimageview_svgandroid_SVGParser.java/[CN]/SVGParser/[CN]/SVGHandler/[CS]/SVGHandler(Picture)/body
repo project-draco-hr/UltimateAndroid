@@ -1,5 +1,0 @@
-{
-  this.picture=picture;
-  paint=new Paint();
-  paint.setAntiAlias(true);
-}

@@ -1,6 +1,0 @@
-{
-  if (mDisableEdgeEffects && Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
-    return 0.0f;
-  }
-  return super.getBottomFadingEdgeStrength();
-}

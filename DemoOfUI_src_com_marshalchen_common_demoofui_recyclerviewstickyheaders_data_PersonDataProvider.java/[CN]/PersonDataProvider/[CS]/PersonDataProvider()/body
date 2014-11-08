@@ -1,9 +1,0 @@
-{
-  this.items=new LinkedHashMap<String,Boolean>();
-  this.addedItems=new ArrayList<String>();
-  for (int i=1; i < persons.length; i+=2) {
-    items.put(persons[i - 1],true);
-    items.put(persons[i],false);
-  }
-  buildAddedItems();
-}

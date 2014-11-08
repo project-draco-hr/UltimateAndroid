@@ -1,4 +1,0 @@
-{
-  BitmapDrawable bitmapDrawable=(BitmapDrawable)drawable;
-  return bitmapDrawable.getBitmap();
-}

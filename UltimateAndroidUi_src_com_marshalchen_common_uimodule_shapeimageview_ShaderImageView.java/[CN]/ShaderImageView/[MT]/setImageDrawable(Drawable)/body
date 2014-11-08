@@ -1,4 +1,0 @@
-{
-  super.setImageDrawable(drawable);
-  getPathHelper().onImageDrawableReset(getDrawable());
-}

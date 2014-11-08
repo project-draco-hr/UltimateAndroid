@@ -1,4 +1,0 @@
-{
-  pressedAnimator.setFloatValues(animationProgress,pressedRingWidth);
-  pressedAnimator.start();
-}

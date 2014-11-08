@@ -1,5 +1,0 @@
-{
-  if (animator != null) {
-    animator.cancel();
-  }
-}

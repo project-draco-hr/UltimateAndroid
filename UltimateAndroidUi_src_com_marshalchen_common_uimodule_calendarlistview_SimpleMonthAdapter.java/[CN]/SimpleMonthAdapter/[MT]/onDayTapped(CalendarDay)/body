@@ -1,4 +1,0 @@
-{
-  mController.onDayOfMonthSelected(calendarDay.year,calendarDay.month,calendarDay.day);
-  setSelectedDay(calendarDay);
-}

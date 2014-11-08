@@ -1,5 +1,0 @@
-{
-  super.passShaderValues();
-  GLES20.glUniform1f(blurSizeHandle,blurSize);
-  GLES20.glUniform2f(blurLocationHandle,blurLocation.x,blurLocation.y);
-}

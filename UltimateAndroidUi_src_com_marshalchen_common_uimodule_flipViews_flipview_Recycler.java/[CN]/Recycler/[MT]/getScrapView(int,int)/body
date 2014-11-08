@@ -1,9 +1,0 @@
-{
-  if (viewTypeCount == 1) {
-    return retrieveFromScrap(currentScraps,position);
-  }
- else   if (viewType >= 0 && viewType < scraps.length) {
-    return retrieveFromScrap(scraps[viewType],position);
-  }
-  return null;
-}

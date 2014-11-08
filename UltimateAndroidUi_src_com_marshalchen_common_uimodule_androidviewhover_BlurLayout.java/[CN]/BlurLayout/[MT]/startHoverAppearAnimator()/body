@@ -1,4 +1,0 @@
-{
-  if (mHoverAppearAnimator != null)   mHoverAppearAnimator.start();
-  if (mHoverAppearAnimationComposer != null)   mHoverAppearAnimationComposer.playOn(mHoverView);
-}

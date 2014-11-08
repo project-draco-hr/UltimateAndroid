@@ -1,5 +1,0 @@
-{
-  mHorizontalEdge=horizontalEdge;
-  mVerticalEdge=verticalEdge;
-  mActiveEdges=new EdgePair(mHorizontalEdge,mVerticalEdge);
-}

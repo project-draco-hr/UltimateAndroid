@@ -1,5 +1,0 @@
-float numParticipants
-float individualStatusLength
-float meetingLength
-float quickestStatus
-float longestStatus

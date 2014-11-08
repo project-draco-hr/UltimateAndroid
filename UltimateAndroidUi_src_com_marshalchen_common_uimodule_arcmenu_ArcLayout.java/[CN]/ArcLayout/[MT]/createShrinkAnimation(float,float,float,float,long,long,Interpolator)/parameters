@@ -1,7 +1,0 @@
-float fromXDelta
-float toXDelta
-float fromYDelta
-float toYDelta
-long startOffset
-long duration
-Interpolator interpolator

@@ -1,9 +1,0 @@
-{
-  if (mActiveIndexes.isEmpty() && mPendingItemsToInsert.isEmpty()) {
-    mActiveIndexes.add(new AtomicInteger(index));
-    mInsertable.add(index,item);
-  }
- else {
-    mPendingItemsToInsert.add(new Pair<Integer,T>(index,item));
-  }
-}

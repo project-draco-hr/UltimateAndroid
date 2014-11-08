@@ -1,3 +1,0 @@
-{
-  materialMenuView.setTransformationDuration(400 + progress);
-}

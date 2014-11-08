@@ -1,4 +1,0 @@
-{
-  View startButton=findViewById(R.id.start_button);
-  startButton.setOnClickListener(this);
-}

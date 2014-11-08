@@ -1,8 +1,0 @@
-{
-  if (shotStateStore.hasShot()) {
-    return;
-  }
-  showcaseX=x;
-  showcaseY=y;
-  invalidate();
-}

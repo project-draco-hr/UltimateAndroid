@@ -1,4 +1,0 @@
-{
-  ensureSignatureBitmap();
-  return mSignatureBitmap;
-}

@@ -1,9 +1,0 @@
-{
-  if (parallaxedView != null) {
-    if (listView.getChildCount() > 0) {
-      int top=-listView.getChildAt(0).getTop();
-      float factor=parallaxFactor;
-      parallaxedView.setOffset((float)top / factor);
-    }
-  }
-}

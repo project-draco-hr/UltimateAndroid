@@ -1,5 +1,0 @@
-{
-  boolean scrollUp=newScrollY > mPreviousScrollY;
-  mPreviousScrollY=newScrollY;
-  return scrollUp;
-}

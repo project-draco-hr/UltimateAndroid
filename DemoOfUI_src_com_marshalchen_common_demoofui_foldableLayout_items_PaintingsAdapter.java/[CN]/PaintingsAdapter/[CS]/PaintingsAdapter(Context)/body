@@ -1,4 +1,0 @@
-{
-  super();
-  mContext=context;
-}

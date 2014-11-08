@@ -1,9 +1,0 @@
-{
-  super(baseAdapter);
-  BaseAdapter rootAdapter=getRootAdapter();
-  if (!(rootAdapter instanceof Insertable)) {
-    throw new IllegalArgumentException("BaseAdapter should implement Insertable!");
-  }
-  mInsertable=(Insertable<T>)rootAdapter;
-  mInsertQueue=new InsertQueue<T>(mInsertable);
-}

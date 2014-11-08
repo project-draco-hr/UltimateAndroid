@@ -1,7 +1,0 @@
-{
-  super(context);
-  LayoutInflater mInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-  mInflater.inflate(R.layout.square_progress_bar_view,this,true);
-  bar=(SquareProgressView)findViewById(R.id.squareProgressBar1);
-  bar.bringToFront();
-}

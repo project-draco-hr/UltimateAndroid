@@ -1,4 +1,0 @@
-{
-  super.setClipToPadding(clipToPadding);
-  mClipToPadding=clipToPadding;
-}

@@ -1,4 +1,0 @@
-{
-  materialButtonState=generateState(materialButtonState);
-  materialMenuView.animatePressedState(intToState(materialButtonState));
-}

@@ -1,8 +1,0 @@
-{
-  mGreenView1.setTranslationY(mGreenView1TranslationY * (1 - ratio));
-  if (ratio >= 0.5f) {
-    ratio=(ratio - 0.5f) / 0.5f;
-    mGreenView1.setTextColor((Integer)mArgbEvaluator.evaluate(ratio,mBlackColor,mGreenColor));
-    setBackgroundColor((Integer)mArgbEvaluator.evaluate(ratio,mGreenColor,mBlackColor));
-  }
-}

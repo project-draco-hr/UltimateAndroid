@@ -1,5 +1,0 @@
-{
-  imageIn=this.noiseFx.process(this.blurFx.process(imageIn));
-  imageIn=this.gradientFx.process(imageIn);
-  return this.vignetteFx.process(imageIn);
-}

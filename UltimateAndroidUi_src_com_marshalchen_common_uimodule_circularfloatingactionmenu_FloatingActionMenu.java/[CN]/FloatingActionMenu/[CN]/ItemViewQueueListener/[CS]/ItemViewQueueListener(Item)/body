@@ -1,4 +1,0 @@
-{
-  this.item=item;
-  this.tries=0;
-}

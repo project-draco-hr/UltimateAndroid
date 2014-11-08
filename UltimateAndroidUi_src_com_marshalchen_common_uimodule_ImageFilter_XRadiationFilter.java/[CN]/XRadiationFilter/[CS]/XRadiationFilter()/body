@@ -1,8 +1,0 @@
-{
-  List<Integer> colors=new ArrayList<Integer>();
-  colors.add(TintColors.LightCyan());
-  colors.add(Color.BLACK);
-  gradientMapFx.Map=new Gradient(colors);
-  blender.Mode=BlendMode.ColorBurn;
-  blender.Mixture=0.8f;
-}

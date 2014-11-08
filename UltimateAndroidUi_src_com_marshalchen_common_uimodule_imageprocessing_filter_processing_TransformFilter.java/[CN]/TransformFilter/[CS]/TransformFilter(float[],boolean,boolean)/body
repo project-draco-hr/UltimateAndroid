@@ -1,5 +1,0 @@
-{
-  this.transformMatrix=transformMatrix;
-  this.ignoreAspect=ignoreAspect;
-  this.anchorTopLeft=anchorTopLeft;
-}

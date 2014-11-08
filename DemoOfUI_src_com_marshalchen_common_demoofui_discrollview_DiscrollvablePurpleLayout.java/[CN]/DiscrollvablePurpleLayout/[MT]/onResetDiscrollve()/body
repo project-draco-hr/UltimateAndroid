@@ -1,6 +1,0 @@
-{
-  mPurpleView1.setAlpha(0);
-  mPurpleView2.setAlpha(0);
-  mPurpleView1.setTranslationX(mPurpleView1TranslationX);
-  mPurpleView2.setTranslationX(mPurpleView2TranslationX);
-}

@@ -1,6 +1,0 @@
-{
-  final ViewHolder vh=ViewHolder.getViewHolder(child);
-  if (vh != null && mCurrentRemovedId > 0 && vh.mItemId == mCurrentRemovedId) {
-    mCurrentRemovedView=(ContextualUndoView)child;
-  }
-}

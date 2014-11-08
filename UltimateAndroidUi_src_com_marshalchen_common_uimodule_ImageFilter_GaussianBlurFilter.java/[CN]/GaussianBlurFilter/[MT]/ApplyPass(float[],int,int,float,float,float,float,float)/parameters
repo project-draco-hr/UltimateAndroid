@@ -1,8 +1,0 @@
-float[] pixels
-int width
-int height
-float b0
-float b1
-float b2
-float b3
-float b

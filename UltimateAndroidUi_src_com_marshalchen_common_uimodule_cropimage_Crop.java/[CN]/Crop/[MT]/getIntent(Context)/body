@@ -1,4 +1,0 @@
-{
-  cropIntent.setClass(context,CropImageActivity.class);
-  return cropIntent;
-}

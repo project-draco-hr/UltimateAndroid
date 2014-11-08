@@ -1,4 +1,0 @@
-int canvasW
-int canvasH
-ShowcaseView showcaseView
-boolean shouldCentreText

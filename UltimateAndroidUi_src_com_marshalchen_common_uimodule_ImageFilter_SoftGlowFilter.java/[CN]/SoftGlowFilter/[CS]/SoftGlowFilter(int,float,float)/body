@@ -1,5 +1,0 @@
-{
-  contrastFx.BrightnessFactor=nBrightness;
-  contrastFx.ContrastFactor=nContrast;
-  gaussianBlurFx.Sigma=nSigma;
-}

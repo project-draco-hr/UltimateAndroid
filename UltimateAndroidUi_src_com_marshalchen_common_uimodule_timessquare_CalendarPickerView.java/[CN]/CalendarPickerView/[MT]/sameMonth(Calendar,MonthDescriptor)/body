@@ -1,3 +1,0 @@
-{
-  return (cal.get(MONTH) == month.getMonth() && cal.get(YEAR) == month.getYear());
-}

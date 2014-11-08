@@ -1,5 +1,0 @@
-{
-  if (mOnItemClickListener != null) {
-    mOnItemClickListener.onItemClick(null,itemHolder.itemView,itemHolder.getPosition(),itemHolder.getItemId());
-  }
-}

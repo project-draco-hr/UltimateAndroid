@@ -1,5 +1,0 @@
-{
-  if (mIsDrawToCache == drawToCache)   return;
-  mIsDrawToCache=drawToCache;
-  invalidate();
-}

@@ -1,6 +1,0 @@
-{
-  if (length != LENGTH_LONG && length != LENGTH_SHORT) {
-    throw new IllegalArgumentException("length parameter must be either LENGTH_LONG or LENGTH_SHORT");
-  }
-  this.mDayNameLength=length;
-}

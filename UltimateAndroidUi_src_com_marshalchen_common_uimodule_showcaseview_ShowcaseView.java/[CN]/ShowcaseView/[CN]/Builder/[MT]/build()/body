@@ -1,4 +1,0 @@
-{
-  insertShowcaseView(showcaseView,activity);
-  return showcaseView;
-}

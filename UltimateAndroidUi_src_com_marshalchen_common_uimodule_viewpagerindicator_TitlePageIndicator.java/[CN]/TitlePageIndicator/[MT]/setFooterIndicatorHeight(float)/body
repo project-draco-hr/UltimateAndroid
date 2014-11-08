@@ -1,4 +1,0 @@
-{
-  mFooterIndicatorHeight=footerTriangleHeight;
-  invalidate();
-}

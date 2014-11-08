@@ -1,5 +1,0 @@
-{
-  mDragStartMode=dragStartMode;
-  DSLVFragment f=(DSLVFragment)getSupportFragmentManager().findFragmentByTag(mTag);
-  f.getController().setDragInitMode(dragStartMode);
-}

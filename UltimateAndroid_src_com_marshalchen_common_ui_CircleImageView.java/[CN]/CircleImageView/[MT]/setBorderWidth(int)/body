@@ -1,7 +1,0 @@
-{
-  if (borderWidth == mBorderWidth) {
-    return;
-  }
-  mBorderWidth=borderWidth;
-  setup();
-}

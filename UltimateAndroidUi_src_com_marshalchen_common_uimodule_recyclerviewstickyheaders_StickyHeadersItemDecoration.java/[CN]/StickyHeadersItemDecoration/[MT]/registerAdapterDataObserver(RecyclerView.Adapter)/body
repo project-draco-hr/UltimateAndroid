@@ -1,3 +1,0 @@
-{
-  adapter.registerAdapterDataObserver(adapterDataObserver);
-}

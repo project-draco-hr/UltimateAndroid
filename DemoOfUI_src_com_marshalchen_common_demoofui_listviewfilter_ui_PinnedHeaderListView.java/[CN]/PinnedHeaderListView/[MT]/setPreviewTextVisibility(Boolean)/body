@@ -1,8 +1,0 @@
-{
-  if (isVisible) {
-    mPreviewVisibility=true;
-  }
- else {
-    mPreviewVisibility=false;
-  }
-}

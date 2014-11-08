@@ -1,7 +1,0 @@
-{
-  int totalHeaderHeight=0;
-  for (  FixedViewInfo h : mHeaderViewInfos) {
-    totalHeaderHeight+=h.view.getMeasuredHeight();
-  }
-  return totalHeaderHeight;
-}

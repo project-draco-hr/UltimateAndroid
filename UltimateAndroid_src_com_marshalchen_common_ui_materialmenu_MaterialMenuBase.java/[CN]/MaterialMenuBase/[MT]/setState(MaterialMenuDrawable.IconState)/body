@@ -1,4 +1,0 @@
-{
-  currentState=state;
-  getDrawable().setIconState(state);
-}

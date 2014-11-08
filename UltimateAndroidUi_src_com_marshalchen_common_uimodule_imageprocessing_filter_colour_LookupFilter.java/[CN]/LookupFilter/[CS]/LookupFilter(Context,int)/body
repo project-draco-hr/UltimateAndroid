@@ -1,6 +1,0 @@
-{
-  super(2);
-  final BitmapFactory.Options options=new BitmapFactory.Options();
-  options.inScaled=false;
-  lookupBitmap=BitmapFactory.decodeResource(context.getResources(),id,options);
-}

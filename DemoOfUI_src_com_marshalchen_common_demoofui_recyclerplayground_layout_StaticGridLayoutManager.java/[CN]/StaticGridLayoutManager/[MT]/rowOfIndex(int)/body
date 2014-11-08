@@ -1,4 +1,0 @@
-{
-  int position=positionOfIndex(childIndex);
-  return position / getTotalColumnCount();
-}

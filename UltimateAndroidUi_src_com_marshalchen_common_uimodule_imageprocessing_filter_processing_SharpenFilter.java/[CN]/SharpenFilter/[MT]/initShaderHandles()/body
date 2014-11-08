@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  sharpenAmountHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_SHARPEN_AMOUNT);
-}

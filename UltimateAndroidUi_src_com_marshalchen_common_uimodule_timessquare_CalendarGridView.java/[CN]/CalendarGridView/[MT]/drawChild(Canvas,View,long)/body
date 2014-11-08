@@ -1,6 +1,0 @@
-{
-  final boolean retVal=super.drawChild(canvas,child,drawingTime);
-  final int bottom=child.getBottom() - 1;
-  canvas.drawLine(child.getLeft(),bottom,child.getRight() - 2,bottom,dividerPaint);
-  return retVal;
-}

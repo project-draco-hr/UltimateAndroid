@@ -1,6 +1,0 @@
-{
-  if (mListeners == null) {
-    return;
-  }
-  mListeners.remove(listener);
-}

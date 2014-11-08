@@ -1,4 +1,0 @@
-{
-  super(in);
-  state=IconState.valueOf(in.readString());
-}

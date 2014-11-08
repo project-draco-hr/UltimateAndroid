@@ -1,4 +1,0 @@
-{
-  mCornerRadius=radiusPx;
-  return this;
-}

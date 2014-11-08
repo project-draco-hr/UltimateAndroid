@@ -1,5 +1,0 @@
-{
-  if (!isMainThread()) {
-    throw new RuntimeException("Main thread assertion failed");
-  }
-}

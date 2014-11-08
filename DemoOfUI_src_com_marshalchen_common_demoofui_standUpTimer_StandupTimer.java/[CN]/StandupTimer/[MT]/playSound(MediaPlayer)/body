@@ -1,4 +1,0 @@
-{
-  mp.seekTo(0);
-  mp.start();
-}

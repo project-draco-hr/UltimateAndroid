@@ -1,5 +1,0 @@
-{
-  super(context,attrs);
-  init(context);
-  extractAttributes(attrs);
-}

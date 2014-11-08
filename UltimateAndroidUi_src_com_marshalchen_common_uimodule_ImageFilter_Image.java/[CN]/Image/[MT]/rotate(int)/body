@@ -1,8 +1,0 @@
-{
-  Matrix mtx=new Matrix();
-  mtx.postRotate(rotateDegrees);
-  image=Bitmap.createBitmap(image,0,0,width,height,mtx,true);
-  width=image.getWidth();
-  height=image.getHeight();
-  updateColorArray();
-}

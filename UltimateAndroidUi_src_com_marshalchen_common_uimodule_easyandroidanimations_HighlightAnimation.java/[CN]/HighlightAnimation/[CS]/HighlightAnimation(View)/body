@@ -1,7 +1,0 @@
-{
-  this.view=view;
-  color=Color.YELLOW;
-  interpolator=new AccelerateDecelerateInterpolator();
-  duration=DURATION_LONG;
-  listener=null;
-}

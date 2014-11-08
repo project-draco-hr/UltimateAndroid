@@ -1,4 +1,0 @@
-{
-  mHeaderColumnPadding=headerColumnPadding;
-  invalidate();
-}

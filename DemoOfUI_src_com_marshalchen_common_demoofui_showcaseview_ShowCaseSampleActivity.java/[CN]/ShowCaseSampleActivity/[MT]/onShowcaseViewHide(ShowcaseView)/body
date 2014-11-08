@@ -1,6 +1,0 @@
-{
-  if (apiUtils.isCompatWithHoneycomb()) {
-    listView.setAlpha(1f);
-  }
-  buttonBlocked.setText("button_show");
-}

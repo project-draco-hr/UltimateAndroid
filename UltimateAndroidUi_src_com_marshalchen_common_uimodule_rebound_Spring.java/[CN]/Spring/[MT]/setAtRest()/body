@@ -1,6 +1,0 @@
-{
-  mEndValue=mCurrentState.position;
-  mTempState.position=mCurrentState.position;
-  mCurrentState.velocity=0;
-  return this;
-}

@@ -1,6 +1,0 @@
-{
-  Parcelable superState=super.onSaveInstanceState();
-  SavedState savedState=new SavedState(superState);
-  savedState.curItem=mCurItem;
-  return savedState;
-}

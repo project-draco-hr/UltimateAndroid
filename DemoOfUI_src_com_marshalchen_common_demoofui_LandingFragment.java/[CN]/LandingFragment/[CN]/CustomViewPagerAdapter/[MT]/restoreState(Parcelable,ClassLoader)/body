@@ -1,3 +1,0 @@
-{
-  super.restoreState(state,loader);
-}

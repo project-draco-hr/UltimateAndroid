@@ -1,5 +1,0 @@
-{
-  super.dismiss();
-  mButton1.setVisibility(View.GONE);
-  mButton2.setVisibility(View.GONE);
-}

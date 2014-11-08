@@ -1,5 +1,0 @@
-{
-  if (mCurrentState != null) {
-    makeCirclesProgress(canvas);
-  }
-}

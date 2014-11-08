@@ -1,3 +1,0 @@
-{
-  return getBoolean(context,key,false);
-}

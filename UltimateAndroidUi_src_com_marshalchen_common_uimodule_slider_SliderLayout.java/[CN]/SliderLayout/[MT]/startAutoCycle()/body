@@ -1,3 +1,0 @@
-{
-  startAutoCycle(1000,mSliderDuration,mAutoRecover);
-}

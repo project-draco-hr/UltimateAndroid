@@ -1,8 +1,0 @@
-{
-  String[] result=new String[activitiesInfo.size()];
-  int i=0;
-  for (  ActivityInfo info : activitiesInfo) {
-    result[i++]=getString(info.titleResourceId);
-  }
-  return result;
-}

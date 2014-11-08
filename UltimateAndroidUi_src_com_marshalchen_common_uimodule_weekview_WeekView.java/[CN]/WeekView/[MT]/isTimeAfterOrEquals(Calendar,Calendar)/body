@@ -1,3 +1,0 @@
-{
-  return !(time1 == null || time2 == null) && time1.getTimeInMillis() >= time2.getTimeInMillis();
-}

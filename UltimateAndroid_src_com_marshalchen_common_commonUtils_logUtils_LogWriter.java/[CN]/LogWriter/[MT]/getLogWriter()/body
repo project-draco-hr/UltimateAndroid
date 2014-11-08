@@ -1,6 +1,0 @@
-{
-  if (logWriter == null) {
-    logWriter=new LogWriter();
-  }
-  return logWriter;
-}

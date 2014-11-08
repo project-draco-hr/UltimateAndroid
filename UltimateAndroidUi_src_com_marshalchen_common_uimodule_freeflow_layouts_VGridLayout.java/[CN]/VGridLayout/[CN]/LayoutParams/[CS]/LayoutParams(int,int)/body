@@ -1,4 +1,0 @@
-{
-  this.itemWidth=itemWidth;
-  this.itemHeight=itemHeight;
-}

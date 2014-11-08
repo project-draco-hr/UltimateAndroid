@@ -1,4 +1,0 @@
-{
-  this.drawable=drawable;
-  return this;
-}

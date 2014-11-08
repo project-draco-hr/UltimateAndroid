@@ -1,4 +1,0 @@
-{
-  mRing.setStartTrim(startAngle);
-  mRing.setEndTrim(endAngle);
-}

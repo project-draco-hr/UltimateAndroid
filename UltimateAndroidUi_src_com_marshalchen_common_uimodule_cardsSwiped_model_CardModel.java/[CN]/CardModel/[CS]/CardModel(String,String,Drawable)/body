@@ -1,5 +1,0 @@
-{
-  this.title=title;
-  this.description=description;
-  this.cardImageDrawable=cardImage;
-}

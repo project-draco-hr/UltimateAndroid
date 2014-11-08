@@ -1,6 +1,0 @@
-{
-  this.controller=controller;
-  frontCards=new ViewDualCards(orientationVertical);
-  backCards=new ViewDualCards(orientationVertical);
-  this.orientationVertical=orientationVertical;
-}

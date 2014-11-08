@@ -1,6 +1,0 @@
-float x
-float y
-float handleXStart
-float handleXEnd
-float handleY
-float targetRadius

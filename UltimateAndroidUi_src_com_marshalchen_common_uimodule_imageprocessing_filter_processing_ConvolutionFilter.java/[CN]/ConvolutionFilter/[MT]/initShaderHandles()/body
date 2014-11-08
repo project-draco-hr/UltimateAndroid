@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  filterHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_FILTER);
-}

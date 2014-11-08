@@ -1,4 +1,0 @@
-{
-  getMenuInflater().inflate(R.menu.recycler,menu);
-  return true;
-}

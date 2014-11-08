@@ -1,5 +1,0 @@
-{
-  super(in);
-  lastOpenPosition=in.readInt();
-  openItems=readBitSet(in);
-}

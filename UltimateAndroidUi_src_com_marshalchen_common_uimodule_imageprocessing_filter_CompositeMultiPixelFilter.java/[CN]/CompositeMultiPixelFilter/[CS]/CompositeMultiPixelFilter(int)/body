@@ -1,7 +1,0 @@
-{
-  super(numOfInputs);
-  initialFilters=new ArrayList<BasicFilter>();
-  terminalFilters=new ArrayList<GLTextureOutputRenderer>();
-  inputOutputFilters=new ArrayList<GLTextureOutputRenderer>();
-  filters=new ArrayList<GLTextureOutputRenderer>();
-}

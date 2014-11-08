@@ -1,4 +1,0 @@
-{
-  postTranslate(dx,dy);
-  setImageMatrix(getImageViewMatrix());
-}

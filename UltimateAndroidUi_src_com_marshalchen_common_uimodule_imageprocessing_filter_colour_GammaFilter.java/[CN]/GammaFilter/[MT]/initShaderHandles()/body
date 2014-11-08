@@ -1,4 +1,0 @@
-{
-  super.initShaderHandles();
-  gammaHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_GAMMA);
-}

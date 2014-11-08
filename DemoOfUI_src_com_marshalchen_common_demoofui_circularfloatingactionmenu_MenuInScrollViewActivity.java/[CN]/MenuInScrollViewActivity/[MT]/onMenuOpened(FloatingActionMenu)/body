@@ -1,6 +1,0 @@
-{
-  for (  FloatingActionMenu iMenu : menus) {
-    iMenu.close(true);
-  }
-  currentMenu=menu;
-}

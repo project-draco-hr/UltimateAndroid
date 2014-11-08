@@ -1,3 +1,0 @@
-{
-  out.writeInt(b ? 1 : 0);
-}

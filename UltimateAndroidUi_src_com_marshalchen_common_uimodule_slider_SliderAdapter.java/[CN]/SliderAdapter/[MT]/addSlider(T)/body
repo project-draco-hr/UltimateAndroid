@@ -1,5 +1,0 @@
-{
-  slider.setOnImageLoadListener(this);
-  mImageContents.add(slider);
-  notifyDataSetChanged();
-}

@@ -1,6 +1,0 @@
-{
-  if (currentHeaderStatus != HEADER_STATUS_LOADING && isDropDownStyle && onDropDownListener != null) {
-    onDropDownBegin();
-    onDropDownListener.onDropDown();
-  }
-}

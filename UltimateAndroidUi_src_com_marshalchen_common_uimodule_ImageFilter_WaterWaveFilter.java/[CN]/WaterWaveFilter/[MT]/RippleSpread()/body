@@ -1,9 +1,0 @@
-{
-  for (int i=width; i < width * height - width; i++) {
-    buf2[i]=(short)(((buf1[i - 1] + buf1[i + 1] + buf1[i - width]+ buf1[i + width]) >> 1) - buf2[i]);
-    buf2[i]-=buf2[i] >> 5;
-  }
-  short[] tmp=buf1;
-  buf1=buf2;
-  buf2=tmp;
-}

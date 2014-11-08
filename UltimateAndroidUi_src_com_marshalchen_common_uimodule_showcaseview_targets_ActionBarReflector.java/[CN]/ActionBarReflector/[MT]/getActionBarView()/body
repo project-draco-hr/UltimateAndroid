@@ -1,3 +1,0 @@
-{
-  return getHomeButton().getParent().getParent();
-}

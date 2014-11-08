@@ -1,7 +1,0 @@
-{
-  this.view=view;
-  this.width=width;
-  this.height=height;
-  x=0;
-  y=0;
-}

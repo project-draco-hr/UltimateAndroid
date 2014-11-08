@@ -1,8 +1,0 @@
-{
-  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-    return v.isAttachedToWindow();
-  }
- else {
-    return v.getParent() != null;
-  }
-}

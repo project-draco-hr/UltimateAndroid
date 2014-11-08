@@ -1,4 +1,0 @@
-{
-  LayoutParams lp=(LayoutParams)child.getLayoutParams();
-  return lp.span;
-}

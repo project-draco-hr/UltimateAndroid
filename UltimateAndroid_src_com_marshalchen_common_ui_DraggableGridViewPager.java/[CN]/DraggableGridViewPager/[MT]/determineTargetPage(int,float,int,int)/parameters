@@ -1,4 +1,0 @@
-int currentPage
-float pageOffset
-int velocity
-int deltaX

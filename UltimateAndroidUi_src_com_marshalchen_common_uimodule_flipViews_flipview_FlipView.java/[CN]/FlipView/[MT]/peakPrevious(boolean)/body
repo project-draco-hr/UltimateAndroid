@@ -1,5 +1,0 @@
-{
-  if (mCurrentPageIndex > 0) {
-    peak(false,once);
-  }
-}

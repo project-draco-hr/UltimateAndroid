@@ -1,4 +1,0 @@
-{
-  if (isCircular)   circularParallax();
- else   headerParallax();
-}

@@ -1,3 +1,0 @@
-{
-  this.headerData=new StringHolder(sectionTitle);
-}

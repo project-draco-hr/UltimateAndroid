@@ -1,4 +1,0 @@
-{
-  shape.draw(canvas,fillpaint);
-  canvas.drawLine(0,shape.getHeight(),shape.getWidth(),shape.getHeight(),strokepaint);
-}

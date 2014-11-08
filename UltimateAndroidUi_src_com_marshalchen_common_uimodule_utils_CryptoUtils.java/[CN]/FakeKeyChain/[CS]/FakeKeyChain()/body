@@ -1,5 +1,0 @@
-{
-  Arrays.fill(mKey,(byte)KEY_BYTES);
-  Arrays.fill(mIV,(byte)IV_BYTES);
-  Arrays.fill(mMacKey,(byte)MAC_KEY_BYTES);
-}

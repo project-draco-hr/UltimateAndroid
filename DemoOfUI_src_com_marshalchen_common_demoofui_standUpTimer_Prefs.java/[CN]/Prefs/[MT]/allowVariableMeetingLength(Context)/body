@@ -1,3 +1,0 @@
-{
-  return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(VARIABLE_MEETING_LENGTH,VARIABLE_MEETING_LENGTH_DEFAULT);
-}

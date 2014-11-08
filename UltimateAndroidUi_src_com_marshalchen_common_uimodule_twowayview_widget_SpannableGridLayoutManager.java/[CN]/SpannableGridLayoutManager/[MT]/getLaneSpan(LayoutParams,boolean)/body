@@ -1,3 +1,0 @@
-{
-  return (isVertical ? lp.colSpan : lp.rowSpan);
-}

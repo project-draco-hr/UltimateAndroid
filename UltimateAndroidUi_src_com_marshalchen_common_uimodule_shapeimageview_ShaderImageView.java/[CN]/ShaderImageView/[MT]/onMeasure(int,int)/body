@@ -1,9 +1,0 @@
-{
-  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  if (getPathHelper().isSquare()) {
-    int width=getMeasuredWidth();
-    int height=getMeasuredHeight();
-    int dimen=Math.min(width,height);
-    setMeasuredDimension(dimen,dimen);
-  }
-}

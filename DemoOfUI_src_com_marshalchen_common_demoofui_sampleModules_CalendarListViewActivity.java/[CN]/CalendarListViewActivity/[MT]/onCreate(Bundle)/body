@@ -1,6 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.calendar_list_view_activity);
-  dayPickerView=(DayPickerView)findViewById(R.id.pickerView);
-  dayPickerView.setmController(this);
-}

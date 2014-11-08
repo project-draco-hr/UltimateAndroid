@@ -1,3 +1,0 @@
-{
-  this.direction=drawerLayout.isDrawerOpen(Gravity.START);
-}

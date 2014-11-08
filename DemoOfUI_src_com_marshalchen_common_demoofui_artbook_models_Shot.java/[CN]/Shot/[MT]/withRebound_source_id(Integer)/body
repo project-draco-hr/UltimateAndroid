@@ -1,4 +1,0 @@
-{
-  this.rebound_source_id=rebound_source_id;
-  return this;
-}

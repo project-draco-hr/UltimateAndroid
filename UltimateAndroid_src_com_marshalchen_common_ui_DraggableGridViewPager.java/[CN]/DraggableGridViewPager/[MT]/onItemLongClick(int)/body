@@ -1,7 +1,0 @@
-{
-  DEBUG_LOG("onItemLongClick position=" + position);
-  if (mOnItemLongClickListener != null) {
-    return mOnItemLongClickListener.onItemLongClick(null,getChildAt(position),position,position / mColCount);
-  }
-  return false;
-}
