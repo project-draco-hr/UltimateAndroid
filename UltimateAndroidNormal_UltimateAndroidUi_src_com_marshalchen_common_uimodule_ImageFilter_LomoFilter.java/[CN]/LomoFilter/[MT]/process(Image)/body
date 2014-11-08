@@ -1,0 +1,8 @@
+{
+  Image tempImg=contrastFx.process(imageIn);
+  tempImg=noiseFx.process(tempImg);
+  imageIn=gradientMapFx.process(tempImg);
+  imageIn=blender.Blend(imageIn,tempImg);
+  imageIn=vignetteFx.process(imageIn);
+  return imageIn;
+}

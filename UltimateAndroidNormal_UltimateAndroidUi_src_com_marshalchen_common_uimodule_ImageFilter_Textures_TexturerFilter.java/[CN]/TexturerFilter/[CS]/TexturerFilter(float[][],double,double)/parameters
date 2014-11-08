@@ -1,0 +1,3 @@
+float[][] texture
+double filterLevel
+double preserveLevel

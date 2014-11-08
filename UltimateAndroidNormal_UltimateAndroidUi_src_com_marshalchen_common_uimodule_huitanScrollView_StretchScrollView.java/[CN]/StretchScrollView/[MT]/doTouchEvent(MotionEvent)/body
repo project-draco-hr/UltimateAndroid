@@ -1,0 +1,27 @@
+{
+  int action=ev.getAction();
+switch (action) {
+case MotionEvent.ACTION_UP:
+    mScrollY=mChildRootView.getScrollY();
+  if (mScrollY != 0) {
+    mTouchStop=true;
+    mScrollDy=(int)(mScrollY / 10.0f);
+    mHandler.sendEmptyMessage(MSG_REST_POSITION);
+  }
+break;
+case MotionEvent.ACTION_MOVE:
+float nowY=ev.getY();
+int deltaY=(int)(mTouchY - nowY);
+mTouchY=nowY;
+if (isNeedMove()) {
+int offset=mChildRootView.getScrollY();
+if (offset < MAX_SCROLL_HEIGHT && offset > -MAX_SCROLL_HEIGHT) {
+mChildRootView.scrollBy(0,(int)(deltaY * SCROLL_RATIO));
+mTouchStop=false;
+}
+}
+break;
+default :
+break;
+}
+}

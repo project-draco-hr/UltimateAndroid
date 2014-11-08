@@ -1,0 +1,5 @@
+{
+  setIfLog();
+  List indexFavList=dao.queryBuilder().list();
+  return indexFavList;
+}

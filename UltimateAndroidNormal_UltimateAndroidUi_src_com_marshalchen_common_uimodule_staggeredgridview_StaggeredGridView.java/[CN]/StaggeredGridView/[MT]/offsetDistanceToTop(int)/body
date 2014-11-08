@@ -1,0 +1,4 @@
+{
+  mDistanceToTop+=offset;
+  if (DBG)   Log.d(TAG,"offset mDistanceToTop:" + mDistanceToTop);
+}

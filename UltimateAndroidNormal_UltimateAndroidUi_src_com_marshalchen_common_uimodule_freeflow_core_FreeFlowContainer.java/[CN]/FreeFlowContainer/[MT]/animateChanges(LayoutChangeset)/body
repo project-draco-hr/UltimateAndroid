@@ -1,0 +1,16 @@
+{
+  logLifecycleEvent("animating changes: " + changeSet.toString());
+  if (changeSet.added.size() == 0 && changeSet.removed.size() == 0 && changeSet.moved.size() == 0) {
+    return;
+  }
+  for (  FreeFlowItem freeflowItem : changeSet.getAdded()) {
+    addAndMeasureViewIfNeeded(freeflowItem);
+    doLayout(freeflowItem);
+  }
+  if (isAnimatingChanges) {
+    layoutAnimator.cancel();
+  }
+  isAnimatingChanges=true;
+  dispatchAnimationsStarting();
+  layoutAnimator.animateChanges(changeSet,this);
+}

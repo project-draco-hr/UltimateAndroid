@@ -1,0 +1,11 @@
+{
+  if (mListSections != null && mListSections.size() > 1) {
+    float sectionHeight=(getMeasuredHeight() - 2 * mIndexbarMargin) / mListSections.size();
+    float paddingTop=(sectionHeight - (mIndexPaint.descent() - mIndexPaint.ascent())) / 2;
+    for (int i=0; i < mListSections.size(); i++) {
+      float paddingLeft=(getMeasuredWidth() - mIndexPaint.measureText(getSectionText(mListSections.get(i)))) / 2;
+      canvas.drawText(getSectionText(mListSections.get(i)),paddingLeft,mIndexbarMargin + (sectionHeight * i) + paddingTop+ mIndexPaint.descent(),mIndexPaint);
+    }
+  }
+  super.onDraw(canvas);
+}

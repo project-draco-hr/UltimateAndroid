@@ -1,0 +1,11 @@
+{
+  AdapterContextMenuInfo info=(AdapterContextMenuInfo)item.getMenuInfo();
+switch (item.getItemId()) {
+case R.id.delete_meeting:
+    positionOfMeetingToDelete=info.position;
+  showDialog(CONFIRM_DELETE_MEETING_DIALOG);
+return true;
+default :
+return super.onContextItemSelected(item);
+}
+}

@@ -1,0 +1,24 @@
+{
+  if (headerPosition == MATCHED_STICKIED_HEADER) {
+    return e;
+  }
+  long downTime=e.getDownTime();
+  long eventTime=e.getEventTime();
+  int action=e.getAction();
+  int pointerCount=e.getPointerCount();
+  int[] pointerIds=getPointerIds(e);
+  MotionEvent.PointerCoords[] pointerCoords=getPointerCoords(e);
+  int metaState=e.getMetaState();
+  float xPrecision=e.getXPrecision();
+  float yPrecision=e.getYPrecision();
+  int deviceId=e.getDeviceId();
+  int edgeFlags=e.getEdgeFlags();
+  int source=e.getSource();
+  int flags=e.getFlags();
+  View headerHolder=getChildAt(headerPosition);
+  for (int i=0; i < pointerCount; i++) {
+    pointerCoords[i].y-=headerHolder.getTop();
+  }
+  MotionEvent n=MotionEvent.obtain(downTime,eventTime,action,pointerCount,pointerIds,pointerCoords,metaState,xPrecision,yPrecision,deviceId,edgeFlags,source,flags);
+  return n;
+}

@@ -1,0 +1,6 @@
+{
+  mDelegate=adapter;
+  if (adapter != null) {
+    adapter.registerDataSetObserver(mDataSetObserver);
+  }
+}

@@ -1,0 +1,7 @@
+{
+  mPaint=new Paint();
+  mPaint.setStyle(Paint.Style.STROKE);
+  mPaint.setStrokeWidth(5.0f);
+  mPaint.setAntiAlias(true);
+  mPaint.setColor(Color.argb(180,255,255,255));
+}

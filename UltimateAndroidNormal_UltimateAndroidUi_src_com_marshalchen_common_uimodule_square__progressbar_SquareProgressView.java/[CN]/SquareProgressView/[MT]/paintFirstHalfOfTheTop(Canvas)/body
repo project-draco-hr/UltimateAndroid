@@ -1,0 +1,6 @@
+{
+  Path path=new Path();
+  path.moveTo(canvas.getWidth() / 2,strokewidth / 2);
+  path.lineTo(canvas.getWidth() + strokewidth,strokewidth / 2);
+  canvas.drawPath(path,progressBarPaint);
+}

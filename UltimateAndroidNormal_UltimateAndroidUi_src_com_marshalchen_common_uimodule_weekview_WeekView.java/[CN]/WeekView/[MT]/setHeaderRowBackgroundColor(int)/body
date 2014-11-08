@@ -1,0 +1,4 @@
+{
+  mHeaderRowBackgroundColor=headerRowBackgroundColor;
+  invalidate();
+}

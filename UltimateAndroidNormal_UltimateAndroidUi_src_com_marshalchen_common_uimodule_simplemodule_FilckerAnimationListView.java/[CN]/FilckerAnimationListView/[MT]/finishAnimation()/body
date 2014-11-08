@@ -1,0 +1,6 @@
+{
+  adapter.setMayNotify(true);
+  animating=false;
+  setEnabled(true);
+  manipulatePending();
+}

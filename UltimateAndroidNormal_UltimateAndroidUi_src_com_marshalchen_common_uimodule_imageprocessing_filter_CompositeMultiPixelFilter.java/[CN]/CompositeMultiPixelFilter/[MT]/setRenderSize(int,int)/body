@@ -1,0 +1,6 @@
+{
+  for (  GLTextureOutputRenderer filter : filters) {
+    filter.setRenderSize(width,height);
+  }
+  super.setRenderSize(width,height);
+}

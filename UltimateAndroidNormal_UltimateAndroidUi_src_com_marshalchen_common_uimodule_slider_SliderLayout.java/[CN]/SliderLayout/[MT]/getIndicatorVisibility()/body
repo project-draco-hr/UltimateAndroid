@@ -1,0 +1,6 @@
+{
+  if (mIndicator == null) {
+    return mIndicator.getIndicatorVisibility();
+  }
+  return PagerIndicator.IndicatorVisibility.Invisible;
+}

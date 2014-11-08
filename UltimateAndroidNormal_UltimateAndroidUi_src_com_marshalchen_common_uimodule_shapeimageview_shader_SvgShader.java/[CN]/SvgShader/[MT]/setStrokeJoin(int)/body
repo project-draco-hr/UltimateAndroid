@@ -1,0 +1,17 @@
+{
+  this.strokeJoin=strokeJoin;
+switch (strokeJoin) {
+case STROKE_JOIN_BEVEL:
+    borderPaint.setStrokeJoin(Paint.Join.BEVEL);
+  break;
+case STROKE_JOIN_MITER:
+borderPaint.setStrokeJoin(Paint.Join.MITER);
+break;
+case STROKE_JOIN_ROUND:
+borderPaint.setStrokeJoin(Paint.Join.ROUND);
+break;
+case STROKE_CAP_DEFAULT:
+default :
+break;
+}
+}

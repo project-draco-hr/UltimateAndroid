@@ -1,0 +1,10 @@
+{
+  ItemClickSupport itemClickSupport=from(recyclerView);
+  if (itemClickSupport == null) {
+    itemClickSupport=new ItemClickSupport(recyclerView);
+    recyclerView.setTag(R.id.twowayview_item_click_support,itemClickSupport);
+  }
+ else {
+  }
+  return itemClickSupport;
+}

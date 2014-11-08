@@ -1,0 +1,5 @@
+{
+  Spring spring=new Spring(this);
+  registerSpring(spring);
+  return spring;
+}

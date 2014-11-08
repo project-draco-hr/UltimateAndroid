@@ -1,0 +1,4 @@
+BaseAdapter baseAdapter
+int undoLayoutId
+int undoActionId
+DeleteItemCallback deleteItemCallback

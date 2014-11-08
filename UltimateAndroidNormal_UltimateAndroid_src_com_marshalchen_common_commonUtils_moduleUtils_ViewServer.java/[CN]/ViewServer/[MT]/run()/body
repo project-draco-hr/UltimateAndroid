@@ -1,0 +1,27 @@
+{
+  try {
+    mServer=new ServerSocket(mPort,VIEW_SERVER_MAX_CONNECTIONS,InetAddress.getLocalHost());
+  }
+ catch (  Exception e) {
+    Log.w(LOG_TAG,"Starting ServerSocket error: ",e);
+  }
+  while (mServer != null && Thread.currentThread() == mThread) {
+    try {
+      Socket client=mServer.accept();
+      if (mThreadPool != null) {
+        mThreadPool.submit(new ViewServerWorker(client));
+      }
+ else {
+        try {
+          client.close();
+        }
+ catch (        IOException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+ catch (    Exception e) {
+      Log.w(LOG_TAG,"Connection error: ",e);
+    }
+  }
+}

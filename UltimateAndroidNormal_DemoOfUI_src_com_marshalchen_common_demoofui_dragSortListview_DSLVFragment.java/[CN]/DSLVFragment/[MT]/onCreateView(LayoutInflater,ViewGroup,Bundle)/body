@@ -1,0 +1,8 @@
+{
+  mDslv=(DragSortListView)inflater.inflate(getLayout(),container,false);
+  mController=buildController(mDslv);
+  mDslv.setFloatViewManager(mController);
+  mDslv.setOnTouchListener(mController);
+  mDslv.setDragEnabled(dragEnabled);
+  return mDslv;
+}

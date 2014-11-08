@@ -1,0 +1,17 @@
+{
+  double ellapsed=System.currentTimeMillis() - tween.getStartTime();
+  ellapsed=Math.min(ellapsed,tween.getDuration());
+  tween.setEllapsed(ellapsed);
+  double progress=tween.getProgress();
+  double eased=tween.getEasedProgress();
+  for (  TweenListener l : tween.getTweenListeners()) {
+    l.onTweenProgress(progress,eased);
+  }
+  boolean complete=ellapsed >= tween.getDuration();
+  if (complete) {
+    for (    TweenListener l : tween.getTweenListeners()) {
+      l.onTweenComplete();
+    }
+  }
+  return complete;
+}

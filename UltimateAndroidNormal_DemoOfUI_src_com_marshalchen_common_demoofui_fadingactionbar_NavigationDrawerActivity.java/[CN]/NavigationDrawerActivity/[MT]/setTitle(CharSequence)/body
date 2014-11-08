@@ -1,0 +1,4 @@
+{
+  mTitle=title;
+  getActionBar().setTitle(mTitle);
+}

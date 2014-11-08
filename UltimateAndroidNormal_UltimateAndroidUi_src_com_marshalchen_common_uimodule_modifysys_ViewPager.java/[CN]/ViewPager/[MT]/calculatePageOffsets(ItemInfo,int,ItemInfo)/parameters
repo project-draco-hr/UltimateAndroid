@@ -1,0 +1,3 @@
+ItemInfo curItem
+int curIndex
+ItemInfo oldCurInfo

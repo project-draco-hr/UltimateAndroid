@@ -1,0 +1,13 @@
+{
+  uniformHandleList=new HashMap<String,Integer>();
+  uniformIntList=new HashMap<String,Integer>();
+  uniformFloatList=new HashMap<String,Float>();
+  uniformVec2List=new HashMap<String,PointF>();
+  uniformVec3List=new HashMap<String,float[]>();
+  uniformVec4List=new HashMap<String,float[]>();
+  uniformMat3List=new HashMap<String,float[]>();
+  uniformMat4List=new HashMap<String,float[]>();
+  uniformFloatArrayList=new HashMap<String,float[]>();
+  setFragmentShader(super.getFragmentShader());
+  setVertexShader(super.getVertexShader());
+}

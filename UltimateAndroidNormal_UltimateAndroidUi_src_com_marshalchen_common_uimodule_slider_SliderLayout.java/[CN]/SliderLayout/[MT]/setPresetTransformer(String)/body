@@ -1,0 +1,8 @@
+{
+  for (  Transformer t : Transformer.values()) {
+    if (t.equals(transformerName)) {
+      setPresetTransformer(t);
+      return;
+    }
+  }
+}

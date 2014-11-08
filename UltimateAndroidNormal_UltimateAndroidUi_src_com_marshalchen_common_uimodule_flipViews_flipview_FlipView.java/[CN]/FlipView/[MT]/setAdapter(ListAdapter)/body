@@ -1,0 +1,17 @@
+{
+  if (mAdapter != null) {
+    mAdapter.unregisterDataSetObserver(dataSetObserver);
+  }
+  removeAllViews();
+  mAdapter=adapter;
+  mPageCount=adapter == null ? 0 : mAdapter.getCount();
+  if (adapter != null) {
+    mAdapter.registerDataSetObserver(dataSetObserver);
+    mRecycler.setViewTypeCount(mAdapter.getViewTypeCount());
+    mRecycler.invalidateScraps();
+  }
+  mCurrentPageIndex=INVALID_PAGE_POSITION;
+  mFlipDistance=INVALID_FLIP_DISTANCE;
+  setFlipDistance(0);
+  updateEmptyStatus();
+}

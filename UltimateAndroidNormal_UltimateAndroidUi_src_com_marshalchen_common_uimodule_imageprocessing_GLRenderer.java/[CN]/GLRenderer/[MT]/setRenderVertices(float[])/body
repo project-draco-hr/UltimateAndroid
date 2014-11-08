@@ -1,0 +1,4 @@
+{
+  renderVertices=ByteBuffer.allocateDirect(vertices.length * 4).order(ByteOrder.nativeOrder()).asFloatBuffer();
+  renderVertices.put(vertices).position(0);
+}

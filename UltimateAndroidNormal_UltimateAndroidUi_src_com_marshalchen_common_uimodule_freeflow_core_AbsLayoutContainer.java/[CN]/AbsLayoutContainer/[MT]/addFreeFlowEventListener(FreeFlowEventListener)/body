@@ -1,0 +1,4 @@
+{
+  if (listeners.indexOf(listener) != -1)   return;
+  listeners.add(listener);
+}

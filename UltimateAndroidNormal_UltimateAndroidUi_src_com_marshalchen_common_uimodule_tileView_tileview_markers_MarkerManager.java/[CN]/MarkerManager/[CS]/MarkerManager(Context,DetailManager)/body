@@ -1,0 +1,5 @@
+{
+  super(context);
+  detailManager=zm;
+  detailManager.addDetailLevelEventListener(this);
+}

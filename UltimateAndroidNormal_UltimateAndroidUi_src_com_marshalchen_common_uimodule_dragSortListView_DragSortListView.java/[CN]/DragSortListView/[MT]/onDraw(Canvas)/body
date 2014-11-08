@@ -1,0 +1,6 @@
+{
+  super.onDraw(canvas);
+  if (mTrackDragSort) {
+    mDragSortTracker.appendState();
+  }
+}

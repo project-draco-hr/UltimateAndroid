@@ -1,0 +1,7 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform2f(centerHandle,center.x,center.y);
+  GLES20.glUniform3f(colourHandle,colour[0],colour[1],colour[2]);
+  GLES20.glUniform1f(startHandle,start);
+  GLES20.glUniform1f(endHandle,end);
+}

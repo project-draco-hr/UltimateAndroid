@@ -1,0 +1,3 @@
+{
+  ((CalendarRowView)getChildAt(0)).setCellTextColor(color);
+}

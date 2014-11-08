@@ -1,0 +1,6 @@
+{
+  super(in);
+  this.span=in.readInt();
+  this.width=in.readInt();
+  this.height=in.readInt();
+}

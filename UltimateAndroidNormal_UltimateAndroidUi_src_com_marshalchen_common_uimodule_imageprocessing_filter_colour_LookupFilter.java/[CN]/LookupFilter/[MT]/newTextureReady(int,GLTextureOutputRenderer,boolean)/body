@@ -1,0 +1,12 @@
+{
+  if (filterLocations.size() < 2 || !source.equals(filterLocations.get(0))) {
+    clearRegisteredFilterLocations();
+    registerFilterLocation(source,0);
+    registerFilterLocation(this,1);
+  }
+  if (lookup_texture == 0) {
+    lookup_texture=ImageHelper.bitmapToTexture(lookupBitmap);
+  }
+  super.newTextureReady(lookup_texture,this,newData);
+  super.newTextureReady(texture,source,newData);
+}

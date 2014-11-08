@@ -1,0 +1,3 @@
+{
+  return inflater.inflate(R.layout.staggered_grid_view_activity_sgv,container,false);
+}

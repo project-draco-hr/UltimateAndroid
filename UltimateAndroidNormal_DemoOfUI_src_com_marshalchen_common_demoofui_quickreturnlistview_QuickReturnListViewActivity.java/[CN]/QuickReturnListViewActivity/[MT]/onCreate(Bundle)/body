@@ -1,0 +1,47 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.quick_return_listview_activity_main);
+  PagerAdapter adapter=new FragmentStatePagerAdapter(getSupportFragmentManager()){
+    @Override public Fragment getItem(    int position){
+switch (position) {
+case 0:
+        return new DefaultFragment();
+case 1:
+      return new AnimationFragment();
+case 2:
+    return new BottomFragment();
+}
+return null;
+}
+@Override public int getCount(){
+return 3;
+}
+@Override public CharSequence getPageTitle(int position){
+switch (position) {
+case 0:
+  return "default_fragment";
+case 1:
+return "animation_fragment";
+case 2:
+return "footer_fragment";
+}
+return null;
+}
+}
+;
+mPager=(ViewPager)findViewById(R.id.pager);
+mPager.setAdapter(adapter);
+mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+@Override public void onPageSelected(int position){
+getActionBar().setSelectedNavigationItem(position);
+}
+}
+);
+mPager.setPageMargin(20);
+getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+for (int position=0; position < adapter.getCount(); position++) {
+getActionBar().addTab(getActionBar().newTab().setText(adapter.getPageTitle(position)).setTabListener(this));
+}
+getActionBar().setDisplayShowHomeEnabled(false);
+getActionBar().setDisplayShowTitleEnabled(false);
+}

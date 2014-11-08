@@ -1,0 +1,71 @@
+{
+  super.onActivityCreated(savedInstanceState);
+  mListView=(QuickReturnListView)getListView();
+  mQuickReturnView.setText("Default");
+  mListView.addHeaderView(mHeader);
+  String[] array=new String[]{"Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android","Android"};
+  setListAdapter(new ArrayAdapter<String>(getActivity(),R.layout.quick_return_listview_list_item,R.id.text1,array));
+  mListView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
+    @Override public void onGlobalLayout(){
+      mQuickReturnHeight=mQuickReturnView.getHeight();
+      mListView.computeScrollY();
+      mCachedVerticalScrollRange=mListView.getListHeight();
+    }
+  }
+);
+  mListView.setOnScrollListener(new OnScrollListener(){
+    @SuppressLint("NewApi") @Override public void onScroll(    AbsListView view,    int firstVisibleItem,    int visibleItemCount,    int totalItemCount){
+      mScrollY=0;
+      int translationY=0;
+      if (mListView.scrollYIsComputed()) {
+        mScrollY=mListView.getComputedScrollY();
+      }
+      int rawY=mPlaceHolder.getTop() - Math.min(mCachedVerticalScrollRange - mListView.getHeight(),mScrollY);
+switch (mState) {
+case STATE_OFFSCREEN:
+        if (rawY <= mMinRawY) {
+          mMinRawY=rawY;
+        }
+ else {
+          mState=STATE_RETURNING;
+        }
+      translationY=rawY;
+    break;
+case STATE_ONSCREEN:
+  if (rawY < -mQuickReturnHeight) {
+    mState=STATE_OFFSCREEN;
+    mMinRawY=rawY;
+  }
+translationY=rawY;
+break;
+case STATE_RETURNING:
+translationY=(rawY - mMinRawY) - mQuickReturnHeight;
+if (translationY > 0) {
+translationY=0;
+mMinRawY=rawY - mQuickReturnHeight;
+}
+if (rawY > 0) {
+mState=STATE_ONSCREEN;
+translationY=rawY;
+}
+if (translationY < -mQuickReturnHeight) {
+mState=STATE_OFFSCREEN;
+mMinRawY=rawY;
+}
+break;
+}
+if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.HONEYCOMB) {
+anim=new TranslateAnimation(0,0,translationY,translationY);
+anim.setFillAfter(true);
+anim.setDuration(0);
+mQuickReturnView.startAnimation(anim);
+}
+ else {
+mQuickReturnView.setTranslationY(translationY);
+}
+}
+@Override public void onScrollStateChanged(AbsListView view,int scrollState){
+}
+}
+);
+}

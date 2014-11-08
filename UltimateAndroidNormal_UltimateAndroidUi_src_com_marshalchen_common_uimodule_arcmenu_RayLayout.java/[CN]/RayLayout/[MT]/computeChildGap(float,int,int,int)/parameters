@@ -1,0 +1,4 @@
+float width
+int childCount
+int childSize
+int minGap

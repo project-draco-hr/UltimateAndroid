@@ -1,0 +1,3 @@
+{
+  ((ContextWrapperEdgeEffect)getContext()).setEdgeEffectColor(edgeEffectColor);
+}

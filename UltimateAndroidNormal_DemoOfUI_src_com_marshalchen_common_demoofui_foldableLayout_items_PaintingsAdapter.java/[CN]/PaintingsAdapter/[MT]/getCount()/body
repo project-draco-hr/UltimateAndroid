@@ -1,0 +1,3 @@
+{
+  return Arrays.asList(Painting.getAllPaintings(mContext.getResources())).size();
+}

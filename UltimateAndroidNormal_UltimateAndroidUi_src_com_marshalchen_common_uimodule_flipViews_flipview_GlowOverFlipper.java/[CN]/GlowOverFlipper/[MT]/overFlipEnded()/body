@@ -1,0 +1,5 @@
+{
+  mTopEdgeEffect.onRelease();
+  mBottomEdgeEffect.onRelease();
+  mTotalOverFlip=0;
+}

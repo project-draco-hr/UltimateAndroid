@@ -1,0 +1,6 @@
+{
+  mHoverDisappearAnimationComposer=null;
+  mHoverDisappearAnimator=animator;
+  mHoverDisappearAnimator.addListener(mGlobalListener);
+  mHoverDisappearAnimator.addListener(mGlobalDisappearAnimators);
+}

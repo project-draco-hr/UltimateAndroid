@@ -1,0 +1,9 @@
+{
+  int position=getPositionForId(itemId);
+  ListAdapter adapter=getAdapter();
+  if (!adapter.hasStableIds()) {
+    throw new IllegalStateException("Adapter doesn't have stable ids! Make sure your adapter has stable ids, and override hasStableIds() to return true.");
+  }
+  mAboveItemId=position - 1 >= 0 ? adapter.getItemId(position - 1) : INVALID_ROW_ID;
+  mBelowItemId=position + 1 < adapter.getCount() ? adapter.getItemId(position + 1) : INVALID_ROW_ID;
+}

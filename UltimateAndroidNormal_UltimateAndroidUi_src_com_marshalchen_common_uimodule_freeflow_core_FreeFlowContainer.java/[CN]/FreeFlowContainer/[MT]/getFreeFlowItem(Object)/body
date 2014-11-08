@@ -1,0 +1,8 @@
+{
+  for (  FreeFlowItem item : frames.values()) {
+    if (item.data.equals(dataItem)) {
+      return item;
+    }
+  }
+  return null;
+}

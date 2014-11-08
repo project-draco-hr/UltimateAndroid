@@ -1,0 +1,5 @@
+{
+  if (mCurrentRemovedView != null) {
+    performRemovalIfNecessary();
+  }
+}

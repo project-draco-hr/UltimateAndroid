@@ -1,0 +1,4 @@
+{
+  if (getCircularCount() == 0)   return 0;
+  return position % getCircularCount();
+}

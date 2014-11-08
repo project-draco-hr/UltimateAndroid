@@ -1,0 +1,4 @@
+{
+  final float scale=getResources().getDisplayMetrics().density;
+  return dp * scale + 0.5f;
+}

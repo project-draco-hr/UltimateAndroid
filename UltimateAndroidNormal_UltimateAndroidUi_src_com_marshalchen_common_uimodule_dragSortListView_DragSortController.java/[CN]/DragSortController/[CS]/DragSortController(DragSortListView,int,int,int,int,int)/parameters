@@ -1,0 +1,6 @@
+DragSortListView dslv
+int dragHandleId
+int dragInitMode
+int removeMode
+int clickRemoveId
+int flingHandleId

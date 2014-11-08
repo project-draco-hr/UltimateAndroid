@@ -1,0 +1,4 @@
+{
+  if (itemsAdapter == null)   return 0;
+  return height;
+}

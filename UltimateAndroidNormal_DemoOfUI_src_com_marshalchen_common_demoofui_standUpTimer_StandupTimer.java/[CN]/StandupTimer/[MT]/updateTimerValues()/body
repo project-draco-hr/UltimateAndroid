@@ -1,0 +1,20 @@
+{
+  currentIndividualStatusSeconds++;
+  if (remainingIndividualSeconds > 0) {
+    remainingIndividualSeconds--;
+    if (remainingIndividualSeconds == warningTime) {
+      Logger.d("Playing the bell sound");
+      if (Prefs.playSounds(this)) {
+        playWarningSound();
+      }
+    }
+ else     if (remainingIndividualSeconds == 0) {
+      Logger.d("Playing the airhorn sound");
+      if (Prefs.playSounds(this)) {
+        playFinishedSound();
+      }
+    }
+  }
+  if (remainingMeetingSeconds > 0)   remainingMeetingSeconds--;
+  updateDisplayHandler.sendEmptyMessage(0);
+}

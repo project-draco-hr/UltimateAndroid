@@ -1,0 +1,6 @@
+{
+  BaseSliderView b=mImageContents.get(position);
+  View v=b.getView();
+  container.addView(v);
+  return v;
+}

@@ -1,0 +1,5 @@
+{
+  HotSpot hotSpot=addHotSpot(positions);
+  hotSpot.setHotSpotEventListener(listener);
+  return hotSpot;
+}

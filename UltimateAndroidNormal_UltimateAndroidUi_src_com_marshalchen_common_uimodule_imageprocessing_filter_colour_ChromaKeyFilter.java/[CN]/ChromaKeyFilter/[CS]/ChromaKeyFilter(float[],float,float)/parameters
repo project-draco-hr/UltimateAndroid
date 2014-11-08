@@ -1,0 +1,3 @@
+float[] colour
+float threshold
+float smoothing

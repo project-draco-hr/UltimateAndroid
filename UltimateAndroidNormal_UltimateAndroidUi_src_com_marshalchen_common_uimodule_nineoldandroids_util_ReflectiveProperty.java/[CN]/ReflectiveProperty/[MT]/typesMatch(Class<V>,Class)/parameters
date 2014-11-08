@@ -1,0 +1,2 @@
+Class<V> valueType
+Class getterType

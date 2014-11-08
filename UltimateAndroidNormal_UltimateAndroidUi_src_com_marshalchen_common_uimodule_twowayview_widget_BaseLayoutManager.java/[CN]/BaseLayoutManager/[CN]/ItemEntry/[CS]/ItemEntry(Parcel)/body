@@ -1,0 +1,11 @@
+{
+  startLane=in.readInt();
+  anchorLane=in.readInt();
+  final int marginCount=in.readInt();
+  if (marginCount > 0) {
+    spanMargins=new int[marginCount];
+    for (int i=0; i < marginCount; i++) {
+      spanMargins[i]=in.readInt();
+    }
+  }
+}

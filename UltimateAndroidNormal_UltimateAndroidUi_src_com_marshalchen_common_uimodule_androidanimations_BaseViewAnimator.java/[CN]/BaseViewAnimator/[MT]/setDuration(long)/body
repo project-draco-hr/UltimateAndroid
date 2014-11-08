@@ -1,0 +1,4 @@
+{
+  mDuration=duration;
+  return this;
+}

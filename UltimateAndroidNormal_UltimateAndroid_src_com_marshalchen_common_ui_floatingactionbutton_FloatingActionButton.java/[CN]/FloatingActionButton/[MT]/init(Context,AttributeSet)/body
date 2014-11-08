@@ -1,0 +1,14 @@
+{
+  mColorNormal=getColor(android.R.color.holo_blue_dark);
+  mColorPressed=getColor(android.R.color.holo_blue_light);
+  mIcon=0;
+  mSize=SIZE_NORMAL;
+  if (attributeSet != null) {
+    initAttributes(context,attributeSet);
+  }
+  mCircleSize=getDimension(mSize == SIZE_NORMAL ? R.dimen.fab_size_normal : R.dimen.fab_size_mini);
+  mShadowRadius=getDimension(R.dimen.fab_shadow_radius);
+  mShadowOffset=getDimension(R.dimen.fab_shadow_offset);
+  mDrawableSize=(int)(mCircleSize + 2 * mShadowRadius);
+  updateBackground();
+}

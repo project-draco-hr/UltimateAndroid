@@ -1,0 +1,4 @@
+{
+  GridItemRecord rec=mPositionData.get(position,null);
+  return rec != null ? rec.column : -1;
+}

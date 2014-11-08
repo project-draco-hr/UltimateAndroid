@@ -1,0 +1,6 @@
+{
+  if (bitmapBuffer != null && !bitmapBuffer.isRecycled()) {
+    bitmapBuffer.recycle();
+    bitmapBuffer=null;
+  }
+}

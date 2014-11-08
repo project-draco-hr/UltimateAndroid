@@ -1,0 +1,24 @@
+{
+  String constraintStr=constraint.toString().toLowerCase(Locale.getDefault());
+  FilterResults result=new FilterResults();
+  if (constraint != null && constraint.toString().length() > 0) {
+    ArrayList<String> filterItems=new ArrayList<String>();
+synchronized (this) {
+      for (int i=0; i < mItems.size(); i++) {
+        String item=mItems.get(i);
+        if (item.toLowerCase(Locale.getDefault()).startsWith(constraintStr)) {
+          filterItems.add(item);
+        }
+      }
+      result.count=filterItems.size();
+      result.values=filterItems;
+    }
+  }
+ else {
+synchronized (this) {
+      result.count=mItems.size();
+      result.values=mItems;
+    }
+  }
+  return result;
+}

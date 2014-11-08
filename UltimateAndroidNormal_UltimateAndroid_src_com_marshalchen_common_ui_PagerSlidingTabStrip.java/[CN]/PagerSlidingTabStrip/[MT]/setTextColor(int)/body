@@ -1,0 +1,4 @@
+{
+  this.tabTextColor=textColor;
+  updateTabStyles();
+}

@@ -1,0 +1,15 @@
+{
+  while (pos < n) {
+    char c=s.charAt(pos);
+switch (c) {
+case ' ':
+case ',':
+case '\n':
+case '\t':
+      advance();
+    break;
+default :
+  return;
+}
+}
+}

@@ -1,0 +1,4 @@
+int bitmapWidth
+int bitmapHeight
+int viewWidth
+int viewHeight

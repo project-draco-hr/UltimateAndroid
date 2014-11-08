@@ -1,0 +1,22 @@
+{
+  int backgroundColor=styled.getColor(R.styleable.ShowcaseView_sv_backgroundColor,Color.argb(128,80,80,80));
+  int showcaseColor=styled.getColor(R.styleable.ShowcaseView_sv_showcaseColor,HOLO_BLUE);
+  String buttonText=styled.getString(R.styleable.ShowcaseView_sv_buttonText);
+  if (TextUtils.isEmpty(buttonText)) {
+    buttonText="ok";
+  }
+  boolean tintButton=styled.getBoolean(R.styleable.ShowcaseView_sv_tintButtonColor,true);
+  int titleTextAppearance=styled.getResourceId(R.styleable.ShowcaseView_sv_titleTextAppearance,R.style.TextAppearance_ShowcaseView_Title);
+  int detailTextAppearance=styled.getResourceId(R.styleable.ShowcaseView_sv_detailTextAppearance,R.style.TextAppearance_ShowcaseView_Detail);
+  styled.recycle();
+  showcaseDrawer.setShowcaseColour(showcaseColor);
+  showcaseDrawer.setBackgroundColour(backgroundColor);
+  tintButton(showcaseColor,tintButton);
+  mEndButton.setText(buttonText);
+  textDrawer.setTitleStyling(titleTextAppearance);
+  textDrawer.setDetailStyling(detailTextAppearance);
+  hasAlteredText=true;
+  if (invalidate) {
+    invalidate();
+  }
+}

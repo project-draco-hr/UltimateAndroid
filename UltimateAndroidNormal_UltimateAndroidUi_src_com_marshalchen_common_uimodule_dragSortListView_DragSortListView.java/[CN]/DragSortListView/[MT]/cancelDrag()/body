@@ -1,0 +1,14 @@
+{
+  if (mDragState == DRAGGING) {
+    mDragScroller.stopScrolling(true);
+    destroyFloatView();
+    clearPositions();
+    adjustAllItems();
+    if (mInTouchEvent) {
+      mDragState=STOPPED;
+    }
+ else {
+      mDragState=IDLE;
+    }
+  }
+}

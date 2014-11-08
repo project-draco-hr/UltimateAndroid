@@ -1,0 +1,11 @@
+{
+  if (this.undoSupportEnabled != undoSupportEnabled) {
+    if (undoSupportEnabled) {
+      this.modificationStack=new Stack<DynamicGridModification>();
+    }
+ else {
+      this.modificationStack=null;
+    }
+  }
+  this.undoSupportEnabled=undoSupportEnabled;
+}

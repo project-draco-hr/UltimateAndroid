@@ -1,0 +1,5 @@
+{
+  bitmapCenterX=Math.round(bitmapWidth / 2f);
+  bitmapCenterY=Math.round(bitmapHeight / 2f);
+  bitmapRadius=Math.round(width / scale / 2f + 0.5f);
+}

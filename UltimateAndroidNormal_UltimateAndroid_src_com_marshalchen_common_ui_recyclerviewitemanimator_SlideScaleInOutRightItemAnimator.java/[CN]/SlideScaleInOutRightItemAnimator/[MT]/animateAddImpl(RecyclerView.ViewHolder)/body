@@ -1,0 +1,18 @@
+{
+  final View view=holder.itemView;
+  ViewCompat.animate(view).cancel();
+  ViewCompat.animate(view).scaleX(mOriginalScaleX).scaleY(mOriginalScaleY).translationX(0).setDuration(getAddDuration()).setListener(new VpaListenerAdapter(){
+    @Override public void onAnimationCancel(    View view){
+      ViewCompat.setTranslationX(view,0);
+      ViewCompat.setScaleX(view,mOriginalScaleX);
+      ViewCompat.setScaleY(view,mOriginalScaleY);
+    }
+    @Override public void onAnimationEnd(    View view){
+      dispatchAddFinished(holder);
+      mAddAnimations.remove(holder);
+      dispatchFinishedWhenDone();
+    }
+  }
+).start();
+  mAddAnimations.add(holder);
+}

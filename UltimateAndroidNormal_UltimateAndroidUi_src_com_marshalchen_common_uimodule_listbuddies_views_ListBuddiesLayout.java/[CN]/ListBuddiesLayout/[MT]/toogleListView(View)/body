@@ -1,0 +1,12 @@
+{
+  if (mLastViewTouchId != v.getId()) {
+    if (mLastViewTouchId == mListViewLeft.getId()) {
+      isLeftListEnabled=true;
+      isRightListEnabled=false;
+    }
+ else {
+      isLeftListEnabled=false;
+      isRightListEnabled=true;
+    }
+  }
+}

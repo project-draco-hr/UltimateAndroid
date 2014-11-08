@@ -1,0 +1,5 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(texelWidthHandle,texelWidth);
+  GLES20.glUniform1f(texelHeightHandle,texelHeight);
+}

@@ -1,0 +1,8 @@
+{
+  if (!API_11)   return;
+  View v;
+  for (int i=0; i < getChildCount(); i++) {
+    v=getChildAt(i);
+    if (v.getLayerType() != View.LAYER_TYPE_NONE)     v.setLayerType(View.LAYER_TYPE_NONE,null);
+  }
+}

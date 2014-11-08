@@ -1,0 +1,38 @@
+{
+  View view=View.inflate(mContext,R.layout.group_item_popupwindows,null);
+  view.startAnimation(AnimationUtils.loadAnimation(mContext,R.anim.abc_fade_in));
+  LinearLayout ll_popup=(LinearLayout)view.findViewById(R.id.ll_popup);
+  ll_popup.startAnimation(AnimationUtils.loadAnimation(mContext,R.anim.slide_up_short));
+  setWidth(LayoutParams.FILL_PARENT);
+  setHeight(LayoutParams.FILL_PARENT);
+  setBackgroundDrawable(null);
+  setFocusable(true);
+  setOutsideTouchable(true);
+  setContentView(view);
+  showAtLocation(parent,Gravity.BOTTOM,0,0);
+  update();
+  Button bt1=(Button)view.findViewById(R.id.item_popupwindows_camera);
+  Button bt2=(Button)view.findViewById(R.id.item_popupwindows_Photo);
+  Button bt3=(Button)view.findViewById(R.id.item_popupwindows_cancel);
+  bt1.setOnClickListener(new OnClickListener(){
+    public void onClick(    View v){
+      takePhoto();
+      dismiss();
+    }
+  }
+);
+  bt2.setOnClickListener(new OnClickListener(){
+    public void onClick(    View v){
+      Intent intent=new Intent(PublishedActivity.this,ImageBucketActivity.class);
+      startActivity(intent);
+      dismiss();
+    }
+  }
+);
+  bt3.setOnClickListener(new OnClickListener(){
+    public void onClick(    View v){
+      dismiss();
+    }
+  }
+);
+}

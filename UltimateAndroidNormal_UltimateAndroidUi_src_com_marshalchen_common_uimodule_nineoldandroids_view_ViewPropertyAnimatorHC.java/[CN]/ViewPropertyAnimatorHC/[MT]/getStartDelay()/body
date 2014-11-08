@@ -1,0 +1,8 @@
+{
+  if (mStartDelaySet) {
+    return mStartDelay;
+  }
+ else {
+    return 0;
+  }
+}

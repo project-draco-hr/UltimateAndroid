@@ -1,0 +1,4 @@
+{
+  super.onAttach(activity);
+  ((BlurNavigationDrawerActivity)activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
+}

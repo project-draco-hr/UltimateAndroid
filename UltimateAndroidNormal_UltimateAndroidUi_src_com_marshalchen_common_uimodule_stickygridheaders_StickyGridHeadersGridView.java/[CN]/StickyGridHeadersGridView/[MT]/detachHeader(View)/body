@@ -1,0 +1,22 @@
+{
+  if (header == null) {
+    return;
+  }
+  try {
+    Method method=View.class.getDeclaredMethod("dispatchDetachedFromWindow");
+    method.setAccessible(true);
+    method.invoke(header);
+  }
+ catch (  NoSuchMethodException e) {
+    throw new RuntimePlatformSupportException(e);
+  }
+catch (  IllegalArgumentException e) {
+    throw new RuntimePlatformSupportException(e);
+  }
+catch (  IllegalAccessException e) {
+    throw new RuntimePlatformSupportException(e);
+  }
+catch (  InvocationTargetException e) {
+    throw new RuntimePlatformSupportException(e);
+  }
+}

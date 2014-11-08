@@ -1,0 +1,4 @@
+{
+  shouldDraw=should;
+  invalidate();
+}

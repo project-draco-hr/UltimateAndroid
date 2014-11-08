@@ -1,0 +1,8 @@
+{
+  Drawable drawable=getResources().getDrawable(icon);
+  if (drawable != null) {
+    int padding=(getWidth() / 2) - (drawable.getIntrinsicWidth() / 2);
+    setCompoundDrawablesWithIntrinsicBounds(icon,0,0,0);
+    setPadding(padding,0,0,0);
+  }
+}

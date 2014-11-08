@@ -1,0 +1,9 @@
+{
+  final View v=getChildAt(mDragPosition);
+  destroyDragImageView();
+  mDragImageView=createDragImageView(v,x,y);
+  v.setVisibility(View.INVISIBLE);
+  if (mDragAndDropListener != null) {
+    mDragAndDropListener.onDragItem(mDragPosition);
+  }
+}

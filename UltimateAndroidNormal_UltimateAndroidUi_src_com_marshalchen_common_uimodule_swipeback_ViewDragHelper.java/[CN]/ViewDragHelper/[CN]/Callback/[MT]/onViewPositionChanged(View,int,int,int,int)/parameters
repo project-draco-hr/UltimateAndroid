@@ -1,0 +1,5 @@
+View changedView
+int left
+int top
+int dx
+int dy

@@ -1,0 +1,12 @@
+{
+  mPos=position;
+  View v=mAdapter.getView(position,null,mDslv);
+  if (position < mDivPos) {
+    v.setBackgroundDrawable(getResources().getDrawable(R.drawable.drag_sort_listview_bg_handle_section1));
+  }
+ else {
+    v.setBackgroundDrawable(getResources().getDrawable(R.drawable.drag_sort_listview_bg_handle_section2));
+  }
+  v.getBackground().setLevel(10000);
+  return v;
+}

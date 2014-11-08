@@ -1,0 +1,11 @@
+{
+  dp=getResources().getDimension(R.dimen.triangle_dp);
+  bitmapScale=BitmapFactory.decodeResource(getResources(),R.drawable.triangle_icon_round_calibration);
+  brWidth=bitmapScale.getWidth();
+  brHeight=bitmapScale.getHeight();
+  WidthCenter=getWidth() / 2;
+  HeightCenter=getHeight() / 2;
+  zoom(0f);
+  rectf=new RectF();
+  rectf.set(dp * 0.1f,dp * 0.1f,getWidth() - dp * 0.1f,getHeight() - dp * 0.1f);
+}

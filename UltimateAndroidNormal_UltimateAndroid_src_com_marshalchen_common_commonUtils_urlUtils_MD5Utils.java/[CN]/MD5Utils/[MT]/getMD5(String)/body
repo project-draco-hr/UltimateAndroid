@@ -1,0 +1,11 @@
+{
+  try {
+    MessageDigest digest=MessageDigest.getInstance("MD5");
+    digest.update(content.getBytes());
+    return getHashString(digest);
+  }
+ catch (  NoSuchAlgorithmException e) {
+    e.printStackTrace();
+  }
+  return null;
+}

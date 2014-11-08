@@ -1,0 +1,10 @@
+{
+  mTop+=offset;
+  mOffsetTop+=offset;
+  float offsetTop=mOffsetTop;
+  if (mOffsetTop > getRefreshLayout().getFinalOffset()) {
+    offsetTop=getRefreshLayout().getFinalOffset();
+  }
+  mAngle=360 * (offsetTop / getRefreshLayout().getFinalOffset());
+  invalidateSelf();
+}

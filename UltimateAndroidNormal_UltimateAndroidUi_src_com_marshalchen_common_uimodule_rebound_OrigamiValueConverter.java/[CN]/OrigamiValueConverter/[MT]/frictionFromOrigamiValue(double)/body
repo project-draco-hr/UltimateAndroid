@@ -1,0 +1,3 @@
+{
+  return oValue == 0 ? 0 : (oValue - 8.0) * 3.0 + 25.0;
+}

@@ -1,0 +1,9 @@
+{
+  final int action=MotionEventCompat.getActionMasked(event);
+switch (action) {
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+    return false;
+}
+return super.onTouch(v,event);
+}

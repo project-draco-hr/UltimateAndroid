@@ -1,0 +1,7 @@
+{
+  super.dispatchDraw(canvas);
+  if (touchFeedbackDrawable != null) {
+    touchFeedbackDrawable.setBounds(0,0,getWidth(),getHeight());
+    touchFeedbackDrawable.draw(canvas);
+  }
+}

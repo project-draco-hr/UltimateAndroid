@@ -1,0 +1,7 @@
+{
+  Rect bounds=new Rect();
+  CharSequence title=getTitle(index);
+  bounds.right=(int)paint.measureText(title,0,title.length());
+  bounds.bottom=(int)(paint.descent() - paint.ascent());
+  return bounds;
+}

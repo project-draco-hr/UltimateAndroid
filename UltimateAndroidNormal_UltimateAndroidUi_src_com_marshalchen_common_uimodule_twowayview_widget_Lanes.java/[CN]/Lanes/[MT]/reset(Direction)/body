@@ -1,0 +1,22 @@
+{
+  for (int i=0; i < mLanes.length; i++) {
+    final Rect laneRect=mLanes[i];
+    if (mIsVertical) {
+      if (direction == Direction.START) {
+        laneRect.bottom=laneRect.top;
+      }
+ else {
+        laneRect.top=laneRect.bottom;
+      }
+    }
+ else {
+      if (direction == Direction.START) {
+        laneRect.right=laneRect.left;
+      }
+ else {
+        laneRect.left=laneRect.right;
+      }
+    }
+  }
+  invalidateEdges();
+}

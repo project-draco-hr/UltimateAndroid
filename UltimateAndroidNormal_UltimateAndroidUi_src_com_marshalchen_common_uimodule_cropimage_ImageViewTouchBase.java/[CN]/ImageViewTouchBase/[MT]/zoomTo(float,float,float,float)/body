@@ -1,0 +1,17 @@
+{
+  final float incrementPerMs=(scale - getScale()) / durationMs;
+  final float oldScale=getScale();
+  final long startTime=System.currentTimeMillis();
+  handler.post(new Runnable(){
+    public void run(){
+      long now=System.currentTimeMillis();
+      float currentMs=Math.min(durationMs,now - startTime);
+      float target=oldScale + (incrementPerMs * currentMs);
+      zoomTo(target,centerX,centerY);
+      if (currentMs < durationMs) {
+        handler.post(this);
+      }
+    }
+  }
+);
+}

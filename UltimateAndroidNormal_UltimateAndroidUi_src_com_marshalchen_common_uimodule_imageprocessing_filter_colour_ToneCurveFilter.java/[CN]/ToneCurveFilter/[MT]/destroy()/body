@@ -1,0 +1,7 @@
+{
+  super.destroy();
+  if (splineTexture != null && splineTexture[0] != 0) {
+    GLES20.glDeleteTextures(1,splineTexture,0);
+    splineTexture=null;
+  }
+}

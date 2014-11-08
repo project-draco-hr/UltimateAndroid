@@ -1,0 +1,6 @@
+{
+  LayoutParams lp=v.getLayoutParams();
+  lp.width=scaledWidth;
+  lp.height=scaledHeight;
+  v.setLayoutParams(lp);
+}

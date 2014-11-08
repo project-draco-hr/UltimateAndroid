@@ -1,0 +1,32 @@
+{
+  if (mPageCount < 1) {
+    mFlipDistance=0;
+    mCurrentPageIndex=INVALID_PAGE_POSITION;
+    mCurrentPageId=-1;
+    recycleActiveViews();
+    return;
+  }
+  if (flipDistance == mFlipDistance) {
+    return;
+  }
+  mFlipDistance=flipDistance;
+  final int currentPageIndex=(int)Math.round(mFlipDistance / FLIP_DISTANCE_PER_PAGE);
+  if (mCurrentPageIndex != currentPageIndex) {
+    mCurrentPageIndex=currentPageIndex;
+    mCurrentPageId=mAdapter.getItemId(mCurrentPageIndex);
+    recycleActiveViews();
+    if (mCurrentPageIndex > 0) {
+      fillPageForIndex(mPreviousPage,mCurrentPageIndex - 1);
+      addView(mPreviousPage.v);
+    }
+    if (mCurrentPageIndex >= 0 && mCurrentPageIndex < mPageCount) {
+      fillPageForIndex(mCurrentPage,mCurrentPageIndex);
+      addView(mCurrentPage.v);
+    }
+    if (mCurrentPageIndex < mPageCount - 1) {
+      fillPageForIndex(mNextPage,mCurrentPageIndex + 1);
+      addView(mNextPage.v);
+    }
+  }
+  invalidate();
+}

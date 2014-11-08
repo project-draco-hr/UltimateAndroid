@@ -1,0 +1,6 @@
+{
+  if (mDrawerLayout != null && isDrawerOpen()) {
+    showGlobalContextActionBar();
+  }
+  super.onCreateOptionsMenu(menu,inflater);
+}

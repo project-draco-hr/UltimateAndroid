@@ -1,0 +1,9 @@
+{
+  super.onDraw(canvas);
+  float l=0;
+  float t=getHeight() - getPaddingBottom() - dipToPixels(getContext(),217);
+  float r=getWidth() - getPaddingRight();
+  float b=getHeight() - dipToPixels(getContext(),60);
+  canvas.drawRect(l,t,r,b,mLinePaint);
+  canvas.drawPath(path,mLinePaint);
+}

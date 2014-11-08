@@ -1,0 +1,6 @@
+{
+  Display display=activity.getWindowManager().getDefaultDisplay();
+  Point size=new Point();
+  display.getSize(size);
+  return size;
+}

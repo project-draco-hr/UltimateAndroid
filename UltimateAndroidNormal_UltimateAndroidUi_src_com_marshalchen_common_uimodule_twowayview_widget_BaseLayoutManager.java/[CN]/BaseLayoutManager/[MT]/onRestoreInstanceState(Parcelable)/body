@@ -1,0 +1,8 @@
+{
+  final LanedSavedState ss=(LanedSavedState)state;
+  if (ss.lanes != null && ss.laneSize > 0) {
+    mLanesToRestore=new Lanes(this,ss.orientation,ss.lanes,ss.laneSize);
+    mItemEntriesToRestore=ss.itemEntries;
+  }
+  super.onRestoreInstanceState(ss.getSuperState());
+}

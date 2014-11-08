@@ -1,0 +1,12 @@
+{
+  if (contentView != null && contentView.getMeasuredHeight() <= getScrollY() + getHeight()) {
+    if (onBorderListener != null) {
+      onBorderListener.onBottom();
+    }
+  }
+ else   if (getScrollY() == 0) {
+    if (onBorderListener != null) {
+      onBorderListener.onTop();
+    }
+  }
+}

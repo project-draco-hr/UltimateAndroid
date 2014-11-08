@@ -1,0 +1,15 @@
+{
+  try {
+    Bundle buyIntentBundle=mService.getBuyIntent(3,getPackageName(),sku,"inapp","bGoa+V7g/ysDXvKwqq+JTFn4uQZbPiQJo4pf9RzJ");
+    PendingIntent pendingIntent=buyIntentBundle.getParcelable("BUY_INTENT");
+    if (pendingIntent != null) {
+      startIntentSenderForResult(pendingIntent.getIntentSender(),1001,new Intent(),0,0,0);
+    }
+  }
+ catch (  RemoteException e) {
+    e.printStackTrace();
+  }
+catch (  SendIntentException e) {
+    e.printStackTrace();
+  }
+}

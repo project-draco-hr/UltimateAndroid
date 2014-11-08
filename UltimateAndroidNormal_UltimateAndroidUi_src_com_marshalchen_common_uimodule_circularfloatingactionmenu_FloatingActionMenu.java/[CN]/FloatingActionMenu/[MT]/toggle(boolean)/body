@@ -1,0 +1,8 @@
+{
+  if (open) {
+    close(animated);
+  }
+ else {
+    open(animated);
+  }
+}

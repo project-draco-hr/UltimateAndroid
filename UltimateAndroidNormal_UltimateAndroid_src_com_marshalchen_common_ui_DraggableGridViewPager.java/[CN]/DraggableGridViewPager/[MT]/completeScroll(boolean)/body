@@ -1,0 +1,19 @@
+{
+  if (mScrollState == SCROLL_STATE_SETTLING) {
+    setScrollingCacheEnabled(false);
+    mScroller.abortAnimation();
+    int oldX=getScrollX();
+    int oldY=getScrollY();
+    int x=mScroller.getCurrX();
+    int y=mScroller.getCurrY();
+    if (oldX != x || oldY != y) {
+      scrollTo(x,y);
+    }
+    if (postEvents) {
+      ViewCompat.postOnAnimation(this,mEndScrollRunnable);
+    }
+ else {
+      mEndScrollRunnable.run();
+    }
+  }
+}

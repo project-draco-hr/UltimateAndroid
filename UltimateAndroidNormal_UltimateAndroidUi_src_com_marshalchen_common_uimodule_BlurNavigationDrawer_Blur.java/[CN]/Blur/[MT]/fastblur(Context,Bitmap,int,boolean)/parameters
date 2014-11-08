@@ -1,0 +1,4 @@
+Context context
+Bitmap sentBitmap
+int radius
+boolean canReuseInBitmap

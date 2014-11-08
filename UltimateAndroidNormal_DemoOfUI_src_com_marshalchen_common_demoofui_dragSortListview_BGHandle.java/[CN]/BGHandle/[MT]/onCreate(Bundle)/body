@@ -1,0 +1,4 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.drag_sort_listview_bg_handle_main);
+}

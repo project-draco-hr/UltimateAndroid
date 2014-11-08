@@ -1,0 +1,33 @@
+{
+  Logs.d("Initializing MonthView (%d) for %s",System.identityHashCode(this),month);
+  long start=System.currentTimeMillis();
+  title.setText(month.getLabel());
+  final int numRows=cells.size();
+  grid.setNumRows(numRows);
+  for (int i=0; i < 6; i++) {
+    CalendarRowView weekRow=(CalendarRowView)grid.getChildAt(i + 1);
+    weekRow.setListener(listener);
+    if (i < numRows) {
+      weekRow.setVisibility(VISIBLE);
+      List<MonthCellDescriptor> week=cells.get(i);
+      for (int c=0; c < week.size(); c++) {
+        MonthCellDescriptor cell=week.get(c);
+        CalendarCellView cellView=(CalendarCellView)weekRow.getChildAt(c);
+        cellView.setText(Integer.toString(cell.getValue()));
+        cellView.setEnabled(cell.isCurrentMonth());
+        cellView.setClickable(!displayOnly);
+        cellView.setSelectable(cell.isSelectable());
+        cellView.setSelected(cell.isSelected());
+        cellView.setCurrentMonth(cell.isCurrentMonth());
+        cellView.setToday(cell.isToday());
+        cellView.setRangeState(cell.getRangeState());
+        cellView.setHighlighted(cell.isHighlighted());
+        cellView.setTag(cell);
+      }
+    }
+ else {
+      weekRow.setVisibility(GONE);
+    }
+  }
+  Logs.d("MonthView.init took %d ms",System.currentTimeMillis() - start);
+}

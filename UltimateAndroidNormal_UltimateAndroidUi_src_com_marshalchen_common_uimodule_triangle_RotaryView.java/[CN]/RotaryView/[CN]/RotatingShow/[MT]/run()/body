@@ -1,0 +1,15 @@
+{
+  while (true) {
+    try {
+      Thread.sleep(6);
+      if (angleWhite == 360) {
+        break;
+      }
+      angleWhite+=5;
+      postInvalidate();
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+  }
+}

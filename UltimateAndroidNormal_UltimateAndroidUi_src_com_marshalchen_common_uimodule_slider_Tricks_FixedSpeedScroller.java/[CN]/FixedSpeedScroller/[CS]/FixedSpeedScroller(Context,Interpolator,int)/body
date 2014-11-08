@@ -1,0 +1,4 @@
+{
+  this(context,interpolator);
+  mDuration=period;
+}

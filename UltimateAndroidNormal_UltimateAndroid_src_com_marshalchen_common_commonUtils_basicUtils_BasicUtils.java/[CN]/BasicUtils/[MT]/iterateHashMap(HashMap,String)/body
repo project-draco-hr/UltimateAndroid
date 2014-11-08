@@ -1,0 +1,8 @@
+{
+  Iterator iterator=hashMap.entrySet().iterator();
+  Logs.d(classAndMethodName);
+  while (iterator.hasNext()) {
+    Object obj=iterator.next();
+    Logs.d(obj.toString());
+  }
+}

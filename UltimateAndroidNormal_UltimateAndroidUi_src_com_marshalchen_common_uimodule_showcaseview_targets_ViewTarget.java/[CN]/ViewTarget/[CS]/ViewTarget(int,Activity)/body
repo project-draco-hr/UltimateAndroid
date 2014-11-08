@@ -1,0 +1,3 @@
+{
+  mView=activity.findViewById(viewId);
+}

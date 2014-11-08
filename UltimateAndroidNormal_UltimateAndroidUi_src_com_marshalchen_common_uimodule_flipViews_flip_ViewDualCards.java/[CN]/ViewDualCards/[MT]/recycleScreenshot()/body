@@ -1,0 +1,4 @@
+{
+  UI.recycleBitmap(screenshot);
+  screenshot=null;
+}

@@ -1,0 +1,4 @@
+{
+  addAllStableId(items);
+  this.mItems.addAll(items);
+}

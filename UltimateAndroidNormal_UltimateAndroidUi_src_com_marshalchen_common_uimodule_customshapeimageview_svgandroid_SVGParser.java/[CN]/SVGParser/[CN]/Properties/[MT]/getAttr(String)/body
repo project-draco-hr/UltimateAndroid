@@ -1,0 +1,10 @@
+{
+  String v=null;
+  if (styles != null) {
+    v=styles.getStyle(name);
+  }
+  if (v == null) {
+    v=getStringAttr(name,atts);
+  }
+  return v;
+}

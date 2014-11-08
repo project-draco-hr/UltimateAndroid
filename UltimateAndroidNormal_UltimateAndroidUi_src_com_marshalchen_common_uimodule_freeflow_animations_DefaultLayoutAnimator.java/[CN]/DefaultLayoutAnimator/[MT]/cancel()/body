@@ -1,0 +1,12 @@
+{
+  if (disappearingSet != null)   disappearingSet.cancel();
+  if (appearingSet != null)   appearingSet.cancel();
+  if (movingSet != null)   movingSet.cancel();
+  for (  FreeFlowItem item : changeSet.getAdded()) {
+    item.view.setAlpha(1f);
+  }
+  for (  FreeFlowItem item : changeSet.getRemoved()) {
+    item.view.setAlpha(1f);
+  }
+  mIsRunning=false;
+}

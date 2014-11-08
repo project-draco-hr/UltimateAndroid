@@ -1,0 +1,20 @@
+{
+  try {
+    final int dotIndex=name.indexOf('.');
+    if (dotIndex == -1) {
+      name="com.marshalchen.common.uimodule.twowayview.widget." + name;
+    }
+ else     if (dotIndex == 0) {
+      final String packageName=context.getPackageName();
+      name=packageName + "." + name;
+    }
+    Class<? extends TwoWayLayoutManager> clazz=context.getClassLoader().loadClass(name).asSubclass(TwoWayLayoutManager.class);
+    Constructor<? extends TwoWayLayoutManager> constructor=clazz.getConstructor(sConstructorSignature);
+    sConstructorArgs[0]=context;
+    sConstructorArgs[1]=attrs;
+    setLayoutManager(constructor.newInstance(sConstructorArgs));
+  }
+ catch (  Exception e) {
+    throw new IllegalStateException("Could not load TwoWayLayoutManager from " + "class: " + name,e);
+  }
+}

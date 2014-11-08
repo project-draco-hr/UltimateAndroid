@@ -1,0 +1,13 @@
+{
+  int res=super.dragHandleHitPosition(ev);
+  if (res == mDivPos) {
+    return DragSortController.MISS;
+  }
+  int width=mDslv.getWidth();
+  if ((int)ev.getX() < width / 3) {
+    return res;
+  }
+ else {
+    return DragSortController.MISS;
+  }
+}

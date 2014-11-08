@@ -1,0 +1,4 @@
+int width
+int height
+int oldw
+int oldh

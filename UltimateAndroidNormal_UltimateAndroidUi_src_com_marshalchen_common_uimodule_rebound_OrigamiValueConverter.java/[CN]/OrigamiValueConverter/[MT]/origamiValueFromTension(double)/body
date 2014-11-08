@@ -1,0 +1,3 @@
+{
+  return tension == 0 ? 0 : (tension - 194.0) / 3.62 + 30.0;
+}

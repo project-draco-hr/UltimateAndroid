@@ -1,0 +1,4 @@
+{
+  initialFilters.add(filter);
+  registerFilter(filter);
+}

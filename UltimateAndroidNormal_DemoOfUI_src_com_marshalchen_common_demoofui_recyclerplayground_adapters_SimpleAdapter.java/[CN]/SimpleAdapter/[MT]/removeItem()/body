@@ -1,0 +1,5 @@
+{
+  if (mItems.isEmpty())   return;
+  mItems.remove(0);
+  notifyItemRemoved(0);
+}

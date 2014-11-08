@@ -1,0 +1,9 @@
+{
+  if (lastUpdated != null) {
+    mHeaderUpdateTextView.setVisibility(View.GONE);
+    mHeaderUpdateTextView.setText(lastUpdated);
+  }
+ else {
+    mHeaderUpdateTextView.setVisibility(View.GONE);
+  }
+}

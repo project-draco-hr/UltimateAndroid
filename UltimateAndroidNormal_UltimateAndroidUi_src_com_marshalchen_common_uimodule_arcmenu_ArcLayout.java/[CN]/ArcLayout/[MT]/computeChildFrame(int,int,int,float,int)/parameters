@@ -1,0 +1,5 @@
+int centerX
+int centerY
+int radius
+float degrees
+int size

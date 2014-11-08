@@ -1,0 +1,8 @@
+{
+  if (Build.VERSION.SDK_INT >= 16) {
+    setBackground(drawable);
+  }
+ else {
+    setBackgroundDrawable(drawable);
+  }
+}

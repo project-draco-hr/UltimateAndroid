@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.list_buddies_activity);
+  ListBuddiesLayout listBuddies=(ListBuddiesLayout)findViewById(R.id.listbuddies);
+  CircularAdapter adapter=new CircularAdapter(this,150,imageUrls_left);
+  CircularAdapter adapter2=new CircularAdapter(this,150,imageUrls_right);
+  listBuddies.setAdapters(adapter,adapter2);
+}

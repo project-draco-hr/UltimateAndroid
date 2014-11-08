@@ -1,0 +1,22 @@
+{
+  try {
+    long start=System.currentTimeMillis();
+    SAXParserFactory spf=SAXParserFactory.newInstance();
+    SAXParser sp=spf.newSAXParser();
+    XMLReader xr=sp.getXMLReader();
+    final Picture picture=new Picture();
+    SVGHandler handler=new SVGHandler(picture,targetWidth,targetHeight);
+    handler.setColorSwap(searchColor,replaceColor);
+    handler.setWhiteMode(whiteMode);
+    xr.setContentHandler(handler);
+    xr.parse(new InputSource(in));
+    SVG result=new SVG(picture,handler.bounds);
+    if (!Float.isInfinite(handler.limits.top)) {
+      result.setLimits(handler.limits);
+    }
+    return result;
+  }
+ catch (  Exception e) {
+    throw new SVGParseException(e);
+  }
+}

@@ -1,0 +1,4 @@
+{
+  mShouldSwipeCallback=shouldSwipeCallback;
+  return this;
+}

@@ -1,0 +1,13 @@
+{
+  if (attrs != null) {
+    TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.ShaderImageView,defStyle,0);
+    borderColor=typedArray.getColor(R.styleable.ShaderImageView_borderColor,borderColor);
+    borderWidth=typedArray.getDimensionPixelSize(R.styleable.ShaderImageView_borderWidth,borderWidth);
+    borderAlpha=typedArray.getFloat(R.styleable.ShaderImageView_borderAlpha,borderAlpha);
+    square=typedArray.getBoolean(R.styleable.ShaderImageView_square,square);
+    typedArray.recycle();
+  }
+  borderPaint.setColor(borderColor);
+  borderPaint.setAlpha(Float.valueOf(borderAlpha * ALPHA_MAX).intValue());
+  borderPaint.setStrokeWidth(borderWidth);
+}

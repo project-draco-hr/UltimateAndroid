@@ -1,0 +1,20 @@
+{
+  paint=new Paint();
+  paint.setAntiAlias(true);
+  paint.setStyle(Paint.Style.FILL_AND_STROKE);
+  paintWhite=new Paint();
+  paintWhite.setAntiAlias(true);
+  paintWhite.setColor(0xffffffff);
+  paintWhite.setStyle(Paint.Style.FILL_AND_STROKE);
+  bitmapRefreshPaint=new Paint();
+  bitmapRefreshPaint.setAntiAlias(true);
+  setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+  this.getViewTreeObserver().addOnPreDrawListener(new OnPreDrawListener(){
+    public boolean onPreDraw(){
+      Init();
+      getViewTreeObserver().removeOnPreDrawListener(this);
+      return false;
+    }
+  }
+);
+}

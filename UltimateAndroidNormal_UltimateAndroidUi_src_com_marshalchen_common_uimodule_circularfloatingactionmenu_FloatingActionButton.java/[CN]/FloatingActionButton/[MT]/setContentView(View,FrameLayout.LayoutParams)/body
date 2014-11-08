@@ -1,0 +1,15 @@
+{
+  this.contentView=contentView;
+  FrameLayout.LayoutParams params;
+  if (contentParams == null) {
+    params=new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,Gravity.CENTER);
+    final int margin=getResources().getDimensionPixelSize(R.dimen.action_button_content_margin);
+    params.setMargins(margin,margin,margin,margin);
+  }
+ else {
+    params=contentParams;
+  }
+  params.gravity=Gravity.CENTER;
+  contentView.setClickable(false);
+  this.addView(contentView,params);
+}

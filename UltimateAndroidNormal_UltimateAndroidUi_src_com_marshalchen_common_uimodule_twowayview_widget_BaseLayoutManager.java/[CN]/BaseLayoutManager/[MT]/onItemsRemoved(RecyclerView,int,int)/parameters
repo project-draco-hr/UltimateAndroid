@@ -1,0 +1,3 @@
+RecyclerView recyclerView
+int positionStart
+int itemCount

@@ -1,0 +1,11 @@
+{
+  _pt=pt;
+  _radius=BoundParam1(radius);
+  _count=BoundParam1(count);
+  _spoke=new double[BoundParam1(count)];
+  _spokecolor=new int[BoundParam1(count)];
+  for (int i=0; i < _count; i++) {
+    _spoke[i]=get_gauss();
+    _spokecolor[i]=cr;
+  }
+}

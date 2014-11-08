@@ -1,0 +1,3 @@
+{
+  return "MonthDescriptor{" + "label='" + label + '\''+ ", month="+ month+ ", year="+ year+ '}';
+}

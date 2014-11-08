@@ -1,0 +1,30 @@
+{
+  LayoutParams sv1lp=new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
+  sv1lp.gravity=Gravity.CENTER_HORIZONTAL;
+  mScrollView=new ScrollView(context);
+  mTextField=(TextView)getChildAt(0);
+  removeView(mTextField);
+  mScrollView.addView(mTextField,new ScrollView.LayoutParams(TEXTVIEW_VIRTUAL_WIDTH,LayoutParams.WRAP_CONTENT));
+  mTextField.addTextChangedListener(new TextWatcher(){
+    @Override public void beforeTextChanged(    CharSequence charSequence,    int i,    int i2,    int i3){
+    }
+    @Override public void onTextChanged(    CharSequence charSequence,    int i,    int i2,    int i3){
+    }
+    @Override public void afterTextChanged(    Editable editable){
+      final boolean continueAnimation=mStarted;
+      reset();
+      prepareAnimation();
+      cutTextView();
+      post(new Runnable(){
+        @Override public void run(){
+          if (continueAnimation) {
+            startMarquee();
+          }
+        }
+      }
+);
+    }
+  }
+);
+  addView(mScrollView,sv1lp);
+}

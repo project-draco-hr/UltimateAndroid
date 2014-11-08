@@ -1,0 +1,10 @@
+{
+  if (id[0] != 0) {
+    gl.glDeleteTextures(1,id,0);
+    if (AphidLog.ENABLE_DEBUG) {
+      AphidLog.d("Destroy texture: %d",id[0]);
+    }
+  }
+  id[0]=0;
+  destroyed=true;
+}

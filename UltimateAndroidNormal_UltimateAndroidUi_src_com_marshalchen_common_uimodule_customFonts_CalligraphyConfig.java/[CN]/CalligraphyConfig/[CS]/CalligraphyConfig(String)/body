@@ -1,0 +1,3 @@
+{
+  this(defaultFontAssetPath,-1);
+}

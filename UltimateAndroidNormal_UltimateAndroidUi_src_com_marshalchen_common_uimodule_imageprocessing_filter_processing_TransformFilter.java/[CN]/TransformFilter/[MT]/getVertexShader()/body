@@ -1,0 +1,3 @@
+{
+  return "attribute vec4 " + ATTRIBUTE_POSITION + ";\n"+ "attribute vec2 "+ ATTRIBUTE_TEXCOORD+ ";\n"+ "uniform mat4 "+ UNIFORM_ORTHO_MATRIX+ ";\n"+ "uniform mat4 "+ UNIFORM_TRANSFORM_MATRIX+ ";\n"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "void main() {\n"+ "  "+ VARYING_TEXCOORD+ " = "+ ATTRIBUTE_TEXCOORD+ ";\n"+ "   gl_Position = "+ UNIFORM_TRANSFORM_MATRIX+ " * vec4("+ ATTRIBUTE_POSITION+ ".xyz, 1.0) * "+ UNIFORM_ORTHO_MATRIX+ ";\n"+ "}\n";
+}

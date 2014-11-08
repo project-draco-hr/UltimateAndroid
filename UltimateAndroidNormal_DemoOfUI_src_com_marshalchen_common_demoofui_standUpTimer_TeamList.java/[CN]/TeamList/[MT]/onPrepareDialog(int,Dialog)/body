@@ -1,0 +1,4 @@
+{
+  EditText collectedTextView=(EditText)getTextEntryView().findViewById(R.id.collected_text);
+  collectedTextView.setText("");
+}

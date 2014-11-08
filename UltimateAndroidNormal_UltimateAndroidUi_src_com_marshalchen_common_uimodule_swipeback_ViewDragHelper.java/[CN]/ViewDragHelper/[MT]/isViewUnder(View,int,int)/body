@@ -1,0 +1,6 @@
+{
+  if (view == null) {
+    return false;
+  }
+  return x >= view.getLeft() && x < view.getRight() && y >= view.getTop() && y < view.getBottom();
+}

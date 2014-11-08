@@ -1,0 +1,4 @@
+{
+  final int lane=(position % getLaneCount());
+  outInfo.set(lane,lane);
+}

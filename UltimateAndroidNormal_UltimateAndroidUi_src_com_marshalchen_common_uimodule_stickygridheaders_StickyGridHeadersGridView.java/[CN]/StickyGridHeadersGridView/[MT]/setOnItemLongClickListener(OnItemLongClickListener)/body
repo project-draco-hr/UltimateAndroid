@@ -1,0 +1,4 @@
+{
+  this.mOnItemLongClickListener=listener;
+  super.setOnItemLongClickListener(this);
+}

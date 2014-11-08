@@ -1,0 +1,10 @@
+{
+  return new DialogInterface.OnClickListener(){
+    public void onClick(    DialogInterface dialog,    int id){
+      String teamName=teamListAdapter.getItem(positionOfTeamToDelete);
+      deleteTeam(teamName);
+      teamListAdapter.remove(teamName);
+    }
+  }
+;
+}

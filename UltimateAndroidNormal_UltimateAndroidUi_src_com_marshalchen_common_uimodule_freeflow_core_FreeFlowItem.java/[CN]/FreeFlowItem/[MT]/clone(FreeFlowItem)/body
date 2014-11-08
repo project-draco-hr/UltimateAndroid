@@ -1,0 +1,12 @@
+{
+  if (desc == null)   return null;
+  FreeFlowItem fd=new FreeFlowItem();
+  fd.itemIndex=desc.itemIndex;
+  fd.itemSection=desc.itemSection;
+  fd.data=desc.data;
+  fd.frame=new Rect(desc.frame);
+  fd.isHeader=desc.isHeader;
+  fd.view=desc.view;
+  fd.extras=desc.extras;
+  return fd;
+}

@@ -1,0 +1,3 @@
+{
+  return Math.max(super.getMinHeight(),mMinStripHeight);
+}

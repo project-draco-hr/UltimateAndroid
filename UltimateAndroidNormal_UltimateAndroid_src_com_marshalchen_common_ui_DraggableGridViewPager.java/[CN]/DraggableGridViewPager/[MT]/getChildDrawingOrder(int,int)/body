@@ -1,0 +1,12 @@
+{
+  if (mLastDragged == -1) {
+    return i;
+  }
+ else   if (i == childCount - 1) {
+    return mLastDragged;
+  }
+ else   if (i >= mLastDragged) {
+    return i + 1;
+  }
+  return i;
+}

@@ -1,0 +1,8 @@
+{
+  Point point=new Point();
+  double factorX=(x - left) / offsetWidth;
+  point.x=(int)(0.5 + (pixelWidth * factorX));
+  double factorY=(y - top) / offsetHeight;
+  point.y=(int)(0.5 + (pixelHeight * factorY));
+  return point;
+}

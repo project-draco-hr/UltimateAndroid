@@ -1,0 +1,7 @@
+{
+  if (mChildSize == size || size < 0) {
+    return;
+  }
+  mChildSize=size;
+  requestLayout();
+}

@@ -1,0 +1,3 @@
+List<ViewHolder> scrapList
+Direction direction
+int position

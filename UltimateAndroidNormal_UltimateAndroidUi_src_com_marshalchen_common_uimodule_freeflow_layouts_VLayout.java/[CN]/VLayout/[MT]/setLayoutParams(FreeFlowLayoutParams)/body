@@ -1,0 +1,10 @@
+{
+  if (params.equals(this.layoutParams)) {
+    return;
+  }
+  LayoutParams lp=(LayoutParams)params;
+  this.itemHeight=lp.itemHeight;
+  this.headerWidth=lp.headerWidth;
+  this.headerHeight=lp.headerHeight;
+  cellBufferSize=bufferCount * cellBufferSize;
+}

@@ -1,0 +1,7 @@
+{
+  mMarkerColorPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  mMarkerColorPaint.setColor(mProgressBackgroundColor);
+  mMarkerColorPaint.setStyle(Paint.Style.STROKE);
+  mMarkerColorPaint.setStrokeWidth(mCircleStrokeWidth / 2);
+  invalidate();
+}

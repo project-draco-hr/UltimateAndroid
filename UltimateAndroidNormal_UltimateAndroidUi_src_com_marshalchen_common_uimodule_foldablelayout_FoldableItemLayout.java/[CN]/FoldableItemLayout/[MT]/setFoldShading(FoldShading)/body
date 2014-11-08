@@ -1,0 +1,4 @@
+{
+  mTopPart.setFoldShading(shading);
+  mBottomPart.setFoldShading(shading);
+}

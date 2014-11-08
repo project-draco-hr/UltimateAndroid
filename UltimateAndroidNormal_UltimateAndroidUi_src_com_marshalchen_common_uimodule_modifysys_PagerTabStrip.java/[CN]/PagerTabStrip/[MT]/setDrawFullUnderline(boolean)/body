@@ -1,0 +1,5 @@
+{
+  mDrawFullUnderline=drawFull;
+  mDrawFullUnderlineSet=true;
+  invalidate();
+}

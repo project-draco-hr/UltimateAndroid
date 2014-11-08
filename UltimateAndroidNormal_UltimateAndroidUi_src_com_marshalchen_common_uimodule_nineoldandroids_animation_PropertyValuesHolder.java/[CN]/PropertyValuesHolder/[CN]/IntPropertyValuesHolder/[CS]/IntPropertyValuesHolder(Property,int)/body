@@ -1,0 +1,7 @@
+{
+  super(property);
+  setIntValues(values);
+  if (property instanceof IntProperty) {
+    mIntProperty=(IntProperty)mProperty;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  mActivity=activity;
+  mDialog=dialog;
+  mJob=job;
+  mActivity.addLifeCycleListener(this);
+  mHandler=handler;
+}

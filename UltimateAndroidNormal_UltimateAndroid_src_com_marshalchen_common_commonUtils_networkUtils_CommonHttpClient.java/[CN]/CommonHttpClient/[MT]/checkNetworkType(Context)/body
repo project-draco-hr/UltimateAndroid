@@ -1,0 +1,27 @@
+{
+  try {
+    final ConnectivityManager connectivityManager=(ConnectivityManager)mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+    final NetworkInfo networkInfo=connectivityManager.getActiveNetworkInfo();
+    if (networkInfo == null || !networkInfo.isAvailable()) {
+      Logs.i("","=====================>?????????");
+      return TYPE_NET_WORK_DISABLED;
+    }
+ else {
+      int netType=networkInfo.getType();
+      if (netType == ConnectivityManager.TYPE_WIFI) {
+        Logs.i("","=====================>wifi??????");
+        return TYPE_WIFI_NET;
+      }
+ else       if (netType == ConnectivityManager.TYPE_MOBILE) {
+        return TYPE_MOBILE;
+      }
+    }
+  }
+ catch (  Exception ex) {
+    ex.printStackTrace();
+    Logs.e(ex);
+    return TYPE_MOBILE;
+  }
+  Logs.e("no-----if");
+  return TYPE_MOBILE;
+}

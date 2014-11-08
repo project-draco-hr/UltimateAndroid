@@ -1,0 +1,3 @@
+{
+  mPaint.setAlpha(alpha);
+}

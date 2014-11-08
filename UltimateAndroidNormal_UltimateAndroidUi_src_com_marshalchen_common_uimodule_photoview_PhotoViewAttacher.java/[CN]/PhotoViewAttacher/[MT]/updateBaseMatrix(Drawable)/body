@@ -1,0 +1,47 @@
+{
+  ImageView imageView=getImageView();
+  if (null == imageView || null == d) {
+    return;
+  }
+  final float viewWidth=getImageViewWidth(imageView);
+  final float viewHeight=getImageViewHeight(imageView);
+  final int drawableWidth=d.getIntrinsicWidth();
+  final int drawableHeight=d.getIntrinsicHeight();
+  mBaseMatrix.reset();
+  final float widthScale=viewWidth / drawableWidth;
+  final float heightScale=viewHeight / drawableHeight;
+  if (mScaleType == ScaleType.CENTER) {
+    mBaseMatrix.postTranslate((viewWidth - drawableWidth) / 2F,(viewHeight - drawableHeight) / 2F);
+  }
+ else   if (mScaleType == ScaleType.CENTER_CROP) {
+    float scale=Math.max(widthScale,heightScale);
+    mBaseMatrix.postScale(scale,scale);
+    mBaseMatrix.postTranslate((viewWidth - drawableWidth * scale) / 2F,(viewHeight - drawableHeight * scale) / 2F);
+  }
+ else   if (mScaleType == ScaleType.CENTER_INSIDE) {
+    float scale=Math.min(1.0f,Math.min(widthScale,heightScale));
+    mBaseMatrix.postScale(scale,scale);
+    mBaseMatrix.postTranslate((viewWidth - drawableWidth * scale) / 2F,(viewHeight - drawableHeight * scale) / 2F);
+  }
+ else {
+    RectF mTempSrc=new RectF(0,0,drawableWidth,drawableHeight);
+    RectF mTempDst=new RectF(0,0,viewWidth,viewHeight);
+switch (mScaleType) {
+case FIT_CENTER:
+      mBaseMatrix.setRectToRect(mTempSrc,mTempDst,ScaleToFit.CENTER);
+    break;
+case FIT_START:
+  mBaseMatrix.setRectToRect(mTempSrc,mTempDst,ScaleToFit.START);
+break;
+case FIT_END:
+mBaseMatrix.setRectToRect(mTempSrc,mTempDst,ScaleToFit.END);
+break;
+case FIT_XY:
+mBaseMatrix.setRectToRect(mTempSrc,mTempDst,ScaleToFit.FILL);
+break;
+default :
+break;
+}
+}
+resetMatrix();
+}

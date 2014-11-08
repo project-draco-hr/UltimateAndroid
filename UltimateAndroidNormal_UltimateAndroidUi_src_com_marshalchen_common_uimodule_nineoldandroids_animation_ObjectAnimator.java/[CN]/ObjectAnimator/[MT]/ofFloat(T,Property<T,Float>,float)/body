@@ -1,0 +1,5 @@
+{
+  ObjectAnimator anim=new ObjectAnimator(target,property);
+  anim.setFloatValues(values);
+  return anim;
+}

@@ -1,0 +1,7 @@
+{
+  if (mUpdateTask != null)   mUpdateTask.cancel(true);
+  if (progress > MAX_PROGRESS)   return;
+  int size=(int)(progress * INCRESING_SIZE + mInnerCircleSize);
+  mUpdateTask=new ProgressUpdateTask();
+  mUpdateTask.execute(progress,size);
+}

@@ -1,0 +1,3 @@
+{
+  return (added.size() == 0 && removed.size() == 0 && moved.size() == 0);
+}

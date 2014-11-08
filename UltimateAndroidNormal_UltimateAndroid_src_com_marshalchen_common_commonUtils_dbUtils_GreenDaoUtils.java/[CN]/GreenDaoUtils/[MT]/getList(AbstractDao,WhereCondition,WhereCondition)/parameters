@@ -1,0 +1,3 @@
+AbstractDao dao
+WhereCondition cond
+WhereCondition condMore

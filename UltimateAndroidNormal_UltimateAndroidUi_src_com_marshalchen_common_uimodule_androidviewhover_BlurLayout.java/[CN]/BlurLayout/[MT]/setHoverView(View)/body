@@ -1,0 +1,11 @@
+{
+  mHoverView=hover;
+  if (mHoverView == null)   return;
+  if (mHoverAppearAnimator != null)   mHoverAppearAnimator.setTarget(mHoverView);
+  mHoverView.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View v){
+      dismissHover();
+    }
+  }
+);
+}

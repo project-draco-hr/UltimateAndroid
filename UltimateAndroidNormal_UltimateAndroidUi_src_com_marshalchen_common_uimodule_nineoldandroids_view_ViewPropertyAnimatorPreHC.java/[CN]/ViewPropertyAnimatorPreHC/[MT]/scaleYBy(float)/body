@@ -1,0 +1,4 @@
+{
+  animatePropertyBy(SCALE_Y,value);
+  return this;
+}

@@ -1,0 +1,11 @@
+{
+  if (null == scaleType) {
+    return false;
+  }
+switch (scaleType) {
+case MATRIX:
+    throw new IllegalArgumentException(scaleType.name() + " is not supported in PhotoView");
+default :
+  return true;
+}
+}

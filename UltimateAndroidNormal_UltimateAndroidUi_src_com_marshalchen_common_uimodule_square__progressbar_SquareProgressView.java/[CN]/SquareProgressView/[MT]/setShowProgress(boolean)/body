@@ -1,0 +1,4 @@
+{
+  this.showProgress=showProgress;
+  this.invalidate();
+}

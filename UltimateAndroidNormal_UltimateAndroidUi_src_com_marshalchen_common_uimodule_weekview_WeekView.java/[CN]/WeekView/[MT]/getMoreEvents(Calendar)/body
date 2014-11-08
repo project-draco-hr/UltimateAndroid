@@ -1,0 +1,58 @@
+{
+  deleteFarMonths(day);
+  if (mEventRects == null)   mEventRects=new ArrayList<EventRect>();
+  if (mMonthChangeListener == null && !isInEditMode())   throw new IllegalStateException("You must provide a MonthChangeListener");
+  if (mRefreshEvents) {
+    mEventRects.clear();
+    mFetchedMonths=new int[3];
+  }
+  int previousMonth=(day.get(Calendar.MONTH) == 0 ? 12 : day.get(Calendar.MONTH));
+  int nextMonth=(day.get(Calendar.MONTH) + 2 == 13 ? 1 : day.get(Calendar.MONTH) + 2);
+  int[] lastFetchedMonth=mFetchedMonths.clone();
+  if (mFetchedMonths[0] < 1 || mFetchedMonths[0] != previousMonth || mRefreshEvents) {
+    if (!containsValue(lastFetchedMonth,previousMonth) && !isInEditMode()) {
+      List<WeekViewEvent> events=mMonthChangeListener.onMonthChange((previousMonth == 12) ? day.get(Calendar.YEAR) - 1 : day.get(Calendar.YEAR),previousMonth);
+      sortEvents(events);
+      for (      WeekViewEvent event : events) {
+        mEventRects.add(new EventRect(event,null));
+      }
+    }
+    mFetchedMonths[0]=previousMonth;
+  }
+  if (mFetchedMonths[1] < 1 || mFetchedMonths[1] != day.get(Calendar.MONTH) + 1 || mRefreshEvents) {
+    if (!containsValue(lastFetchedMonth,day.get(Calendar.MONTH) + 1) && !isInEditMode()) {
+      List<WeekViewEvent> events=mMonthChangeListener.onMonthChange(day.get(Calendar.YEAR),day.get(Calendar.MONTH) + 1);
+      sortEvents(events);
+      for (      WeekViewEvent event : events) {
+        mEventRects.add(new EventRect(event,null));
+      }
+    }
+    mFetchedMonths[1]=day.get(Calendar.MONTH) + 1;
+  }
+  if (mFetchedMonths[2] < 1 || mFetchedMonths[2] != nextMonth || mRefreshEvents) {
+    if (!containsValue(lastFetchedMonth,nextMonth) && !isInEditMode()) {
+      List<WeekViewEvent> events=mMonthChangeListener.onMonthChange(nextMonth == 1 ? day.get(Calendar.YEAR) + 1 : day.get(Calendar.YEAR),nextMonth);
+      sortEvents(events);
+      for (      WeekViewEvent event : events) {
+        mEventRects.add(new EventRect(event,null));
+      }
+    }
+    mFetchedMonths[2]=nextMonth;
+  }
+  ArrayList<EventRect> tempEvents=new ArrayList<EventRect>(mEventRects);
+  mEventRects=new ArrayList<EventRect>();
+  Calendar dayCounter=(Calendar)day.clone();
+  dayCounter.add(Calendar.MONTH,-1);
+  dayCounter.set(Calendar.DAY_OF_MONTH,1);
+  Calendar maxDay=(Calendar)day.clone();
+  maxDay.add(Calendar.MONTH,1);
+  maxDay.set(Calendar.DAY_OF_MONTH,maxDay.getActualMaximum(Calendar.DAY_OF_MONTH));
+  while (dayCounter.getTimeInMillis() <= maxDay.getTimeInMillis()) {
+    ArrayList<EventRect> eventRects=new ArrayList<EventRect>();
+    for (    EventRect eventRect : tempEvents) {
+      if (isSameDay(eventRect.event.getStartTime(),dayCounter))       eventRects.add(eventRect);
+    }
+    computePositionOfEvents(eventRects);
+    dayCounter.add(Calendar.DATE,1);
+  }
+}

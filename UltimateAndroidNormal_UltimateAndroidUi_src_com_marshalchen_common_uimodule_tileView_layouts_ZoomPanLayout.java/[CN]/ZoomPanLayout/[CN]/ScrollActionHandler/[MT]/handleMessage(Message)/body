@@ -1,0 +1,6 @@
+{
+  ZoomPanLayout zoomPanLayout=reference.get();
+  if (zoomPanLayout != null) {
+    zoomPanLayout.handleScrollerAction();
+  }
+}

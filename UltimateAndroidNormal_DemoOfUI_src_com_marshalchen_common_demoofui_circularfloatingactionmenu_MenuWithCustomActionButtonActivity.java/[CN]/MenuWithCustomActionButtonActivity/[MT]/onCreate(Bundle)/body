@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.circular_floating_menu_activity_menu_with_custom_action_button);
+  if (savedInstanceState == null) {
+    getFragmentManager().beginTransaction().add(R.id.container,new CustomButtonDemoFragment()).commit();
+  }
+}

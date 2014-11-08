@@ -1,0 +1,43 @@
+{
+  if (mDragState != IDLE || !mInTouchEvent || mFloatView != null || floatView == null || !mDragEnabled) {
+    return false;
+  }
+  if (getParent() != null) {
+    getParent().requestDisallowInterceptTouchEvent(true);
+  }
+  int pos=position + getHeaderViewsCount();
+  mFirstExpPos=pos;
+  mSecondExpPos=pos;
+  mSrcPos=pos;
+  mFloatPos=pos;
+  mDragState=DRAGGING;
+  mDragFlags=0;
+  mDragFlags|=dragFlags;
+  mFloatView=floatView;
+  measureFloatView();
+  mDragDeltaX=deltaX;
+  mDragDeltaY=deltaY;
+  mDragStartY=mY;
+  mFloatLoc.x=mX - mDragDeltaX;
+  mFloatLoc.y=mY - mDragDeltaY;
+  final View srcItem=getChildAt(mSrcPos - getFirstVisiblePosition());
+  if (srcItem != null) {
+    srcItem.setVisibility(View.INVISIBLE);
+  }
+  if (mTrackDragSort) {
+    mDragSortTracker.startTracking();
+  }
+switch (mCancelMethod) {
+case ON_TOUCH_EVENT:
+    super.onTouchEvent(mCancelEvent);
+  break;
+case ON_INTERCEPT_TOUCH_EVENT:
+super.onInterceptTouchEvent(mCancelEvent);
+break;
+}
+requestLayout();
+if (mLiftAnimator != null) {
+mLiftAnimator.start();
+}
+return true;
+}

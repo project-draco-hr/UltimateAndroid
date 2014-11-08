@@ -1,0 +1,4 @@
+{
+  this.drawable=drawable;
+  this.title=title;
+}

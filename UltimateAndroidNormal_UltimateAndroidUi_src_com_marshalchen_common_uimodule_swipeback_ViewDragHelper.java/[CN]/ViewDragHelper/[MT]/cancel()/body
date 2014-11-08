@@ -1,0 +1,8 @@
+{
+  mActivePointerId=INVALID_POINTER;
+  clearMotionHistory();
+  if (mVelocityTracker != null) {
+    mVelocityTracker.recycle();
+    mVelocityTracker=null;
+  }
+}

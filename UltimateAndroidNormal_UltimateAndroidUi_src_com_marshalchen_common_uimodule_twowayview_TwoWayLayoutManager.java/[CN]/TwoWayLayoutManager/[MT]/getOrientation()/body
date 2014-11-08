@@ -1,0 +1,3 @@
+{
+  return (mIsVertical ? Orientation.VERTICAL : Orientation.HORIZONTAL);
+}

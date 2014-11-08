@@ -1,0 +1,4 @@
+{
+  combinableList.add(combinable);
+  return this;
+}

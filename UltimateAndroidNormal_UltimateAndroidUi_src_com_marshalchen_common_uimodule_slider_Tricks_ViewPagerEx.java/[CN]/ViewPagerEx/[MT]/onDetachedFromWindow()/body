@@ -1,0 +1,4 @@
+{
+  removeCallbacks(mEndScrollRunnable);
+  super.onDetachedFromWindow();
+}

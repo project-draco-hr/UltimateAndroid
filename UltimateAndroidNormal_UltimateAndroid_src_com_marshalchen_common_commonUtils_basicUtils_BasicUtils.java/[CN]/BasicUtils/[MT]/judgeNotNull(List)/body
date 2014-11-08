@@ -1,0 +1,3 @@
+{
+  return judgeNotNull(list,null);
+}

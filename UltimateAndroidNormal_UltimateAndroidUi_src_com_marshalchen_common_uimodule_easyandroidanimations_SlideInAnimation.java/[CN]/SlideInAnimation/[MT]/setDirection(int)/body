@@ -1,0 +1,4 @@
+{
+  this.direction=direction;
+  return this;
+}

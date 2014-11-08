@@ -1,0 +1,3 @@
+{
+  return Color.rgb(Image.SAFECOLOR((int)(r * 255)),Image.SAFECOLOR((int)(g * 255)),Image.SAFECOLOR((int)(b * 255)));
+}

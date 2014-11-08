@@ -1,0 +1,11 @@
+{
+  setScrollDirectionListener(new ScrollDirectionListener(){
+    @Override public void onScrollDown(){
+      mFloatingActionButton.show();
+    }
+    @Override public void onScrollUp(){
+      mFloatingActionButton.hide();
+    }
+  }
+);
+}

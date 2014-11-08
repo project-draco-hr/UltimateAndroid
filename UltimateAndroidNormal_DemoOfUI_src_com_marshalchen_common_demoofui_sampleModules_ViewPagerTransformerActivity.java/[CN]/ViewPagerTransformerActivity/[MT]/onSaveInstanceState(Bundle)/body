@@ -1,0 +1,4 @@
+{
+  outState.putInt(KEY_SELECTED_CLASS,mSelectedItem);
+  outState.putInt(KEY_SELECTED_PAGE,mPager.getCurrentItem());
+}

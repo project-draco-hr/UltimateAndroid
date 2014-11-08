@@ -1,0 +1,14 @@
+{
+  final float scaleX=canvas.getWidth() / imageWidth;
+  final float scaleY=canvas.getHeight() / imageHeight;
+  if (scaleX > scaleY) {
+    final float dx=((scaleX - scaleY) * imageWidth) / 2;
+    canvas.translate(dx,0);
+    canvas.scale(scaleY,scaleY);
+  }
+ else {
+    final float dy=((scaleY - scaleX) * imageHeight) / 2;
+    canvas.translate(0,dy);
+    canvas.scale(scaleX,scaleX);
+  }
+}

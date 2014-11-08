@@ -1,0 +1,21 @@
+{
+  if (!texturesReceived.contains(source)) {
+    texturesReceived.add(source);
+    if (newData) {
+      markAsDirty();
+    }
+  }
+  int pos=filterLocations.lastIndexOf(source);
+  if (pos == 0) {
+    texture_in=texture;
+  }
+ else {
+    this.texture[pos - 1]=texture;
+  }
+  if (texturesReceived.size() == numOfInputs) {
+    setWidth(source.getWidth());
+    setHeight(source.getHeight());
+    onDrawFrame();
+    texturesReceived.clear();
+  }
+}

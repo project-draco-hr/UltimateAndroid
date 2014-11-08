@@ -1,0 +1,4 @@
+{
+  super.onFinishInflate();
+  fnum=new DecimalFormat("##0.00");
+}

@@ -1,0 +1,6 @@
+{
+  if (!isUserInteracting || mSpeed == 0) {
+    findViewClicked(event,eventY,list);
+    setSelectorPressed(list);
+  }
+}

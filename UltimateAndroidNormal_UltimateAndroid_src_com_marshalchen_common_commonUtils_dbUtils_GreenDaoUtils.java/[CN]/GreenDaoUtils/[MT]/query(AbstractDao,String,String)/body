@@ -1,0 +1,4 @@
+{
+  Query query=dao.queryRawCreate(queryString,queryValue);
+  return query;
+}

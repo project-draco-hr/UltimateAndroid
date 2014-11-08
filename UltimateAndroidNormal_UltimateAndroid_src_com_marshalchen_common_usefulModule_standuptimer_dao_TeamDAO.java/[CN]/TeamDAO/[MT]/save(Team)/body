@@ -1,0 +1,9 @@
+{
+  SQLiteDatabase db=getWritableDatabase();
+  if (team.getId() != null) {
+    return updateExistingTeam(db,team);
+  }
+ else {
+    return createNewTeam(db,team);
+  }
+}

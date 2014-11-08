@@ -1,0 +1,4 @@
+{
+  mHeaders=generateHeaderList(mDelegate);
+  notifyDataSetChanged();
+}

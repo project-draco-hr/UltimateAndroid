@@ -1,0 +1,25 @@
+{
+  if (mFirstPosition == getHeaderViewsCount()) {
+    int[] nonHeaderTops=getHighestNonHeaderTops();
+    boolean isAligned=true;
+    int highestColumn=-1;
+    int highestTop=Integer.MAX_VALUE;
+    for (int i=0; i < nonHeaderTops.length; i++) {
+      if (isAligned && i > 0 && nonHeaderTops[i] != highestTop) {
+        isAligned=false;
+      }
+      if (nonHeaderTops[i] < highestTop) {
+        highestTop=nonHeaderTops[i];
+        highestColumn=i;
+      }
+    }
+    if (isAligned)     return;
+    for (int i=0; i < nonHeaderTops.length; i++) {
+      if (i != highestColumn) {
+        int offset=highestTop - nonHeaderTops[i];
+        offsetChildrenTopAndBottom(offset,i);
+      }
+    }
+    invalidate();
+  }
+}

@@ -1,0 +1,7 @@
+{
+  if (details != null) {
+    SpannableString ssbDetail=new SpannableString(details);
+    ssbDetail.setSpan(mDetailSpan,0,ssbDetail.length(),0);
+    mDetails=ssbDetail;
+  }
+}

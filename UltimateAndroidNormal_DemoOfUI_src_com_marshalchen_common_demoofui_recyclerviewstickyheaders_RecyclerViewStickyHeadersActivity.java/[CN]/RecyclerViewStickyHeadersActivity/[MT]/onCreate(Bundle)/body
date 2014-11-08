@@ -1,0 +1,46 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.recycler_view_sticky_head_activity_main);
+  toolbar=(Toolbar)findViewById(R.id.toolbar);
+  list=(RecyclerView)findViewById(R.id.list);
+  samplesSpinner=(Spinner)findViewById(R.id.samples_spinner);
+  list.setLayoutManager(new LinearLayoutManager(RecyclerViewStickyHeadersActivity.this,LinearLayoutManager.VERTICAL,false));
+  personDataProvider=new PersonDataProvider();
+  personAdapter=new PersonAdapter(personDataProvider);
+  top=new StickyHeadersBuilder().setAdapter(personAdapter).setRecyclerView(list).setStickyHeadersAdapter(new BigramHeaderAdapter(personDataProvider.getItems())).build();
+  overlay=new StickyHeadersBuilder().setAdapter(personAdapter).setRecyclerView(list).setStickyHeadersAdapter(new InitialHeaderAdapter(personDataProvider.getItems()),true).build();
+  toolbar.inflateMenu(R.menu.recycler_view_stick_header);
+  toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
+    @Override public boolean onMenuItemClick(    MenuItem item){
+      if (item.getItemId() == R.id.add_item) {
+        int addedPosition=personDataProvider.insertAfter(list.getChildPosition(list.getChildAt(0)));
+        personAdapter.notifyItemInserted(addedPosition);
+        return true;
+      }
+ else       if (item.getItemId() == R.id.github) {
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://github.com/eowise/recyclerview-stickyheaders/"));
+        startActivity(browserIntent);
+        return true;
+      }
+      return false;
+    }
+  }
+);
+  samplesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+    @Override public void onItemSelected(    AdapterView<?> adapterView,    View view,    int i,    long l){
+      if (i == 0) {
+        list.setAdapter(personAdapter);
+        list.removeItemDecoration(overlay);
+        list.addItemDecoration(top);
+      }
+ else {
+        list.setAdapter(personAdapter);
+        list.removeItemDecoration(top);
+        list.addItemDecoration(overlay);
+      }
+    }
+    @Override public void onNothingSelected(    AdapterView<?> adapterView){
+    }
+  }
+);
+}

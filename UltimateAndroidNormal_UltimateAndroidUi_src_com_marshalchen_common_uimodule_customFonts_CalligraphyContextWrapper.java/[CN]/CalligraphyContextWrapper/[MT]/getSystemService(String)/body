@@ -1,0 +1,9 @@
+{
+  if (LAYOUT_INFLATER_SERVICE.equals(name)) {
+    if (mInflater == null) {
+      mInflater=new CalligraphyLayoutInflater(LayoutInflater.from(getBaseContext()),this,mAttributeId);
+    }
+    return mInflater;
+  }
+  return super.getSystemService(name);
+}

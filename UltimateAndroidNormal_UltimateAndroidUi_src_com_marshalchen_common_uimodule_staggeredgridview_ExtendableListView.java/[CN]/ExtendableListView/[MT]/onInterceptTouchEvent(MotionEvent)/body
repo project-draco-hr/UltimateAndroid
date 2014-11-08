@@ -1,0 +1,63 @@
+{
+  int action=ev.getAction();
+  if (!mIsAttached) {
+    return false;
+  }
+switch (action & MotionEvent.ACTION_MASK) {
+case MotionEvent.ACTION_DOWN:
+{
+      int touchMode=mTouchMode;
+      final int x=(int)ev.getX();
+      final int y=(int)ev.getY();
+      mActivePointerId=ev.getPointerId(0);
+      int motionPosition=findMotionRow(y);
+      if (touchMode != TOUCH_MODE_FLINGING && motionPosition >= 0) {
+        mMotionX=x;
+        mMotionY=y;
+        mMotionPosition=motionPosition;
+        mTouchMode=TOUCH_MODE_DOWN;
+      }
+      mLastY=Integer.MIN_VALUE;
+      initOrResetVelocityTracker();
+      mVelocityTracker.addMovement(ev);
+      if (touchMode == TOUCH_MODE_FLINGING) {
+        return true;
+      }
+      break;
+    }
+case MotionEvent.ACTION_MOVE:
+{
+switch (mTouchMode) {
+case TOUCH_MODE_DOWN:
+      int pointerIndex=ev.findPointerIndex(mActivePointerId);
+    if (pointerIndex == -1) {
+      pointerIndex=0;
+      mActivePointerId=ev.getPointerId(pointerIndex);
+    }
+  final int y=(int)ev.getY(pointerIndex);
+initVelocityTrackerIfNotExists();
+mVelocityTracker.addMovement(ev);
+if (startScrollIfNeeded(y)) {
+return true;
+}
+break;
+}
+break;
+}
+case MotionEvent.ACTION_CANCEL:
+case MotionEvent.ACTION_UP:
+{
+mTouchMode=TOUCH_MODE_IDLE;
+mActivePointerId=INVALID_POINTER;
+recycleVelocityTracker();
+reportScrollStateChange(OnScrollListener.SCROLL_STATE_IDLE);
+break;
+}
+case MotionEvent.ACTION_POINTER_UP:
+{
+onSecondaryPointerUp(ev);
+break;
+}
+}
+return false;
+}

@@ -1,0 +1,7 @@
+{
+  Image clone=imageIn.clone();
+  imageIn=gradient.process(imageIn);
+  ImageBlender blender=new ImageBlender();
+  blender.Mode=BlendMode.Multiply;
+  return saturationFx.process(blender.Blend(clone,imageIn));
+}

@@ -1,0 +1,6 @@
+{
+  if (input == null) {
+    return null;
+  }
+  return readString(new InputStreamReader(input,UTF_8));
+}

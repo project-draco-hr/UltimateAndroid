@@ -1,0 +1,6 @@
+{
+  if (isSupportedScaleType(scaleType) && scaleType != mScaleType) {
+    mScaleType=scaleType;
+    update();
+  }
+}

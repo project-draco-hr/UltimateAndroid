@@ -1,0 +1,6 @@
+{
+  if (recyclerView == null) {
+    return null;
+  }
+  return (ItemSelectionSupport)recyclerView.getTag(R.id.twowayview_item_selection_support);
+}

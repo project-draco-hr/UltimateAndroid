@@ -1,0 +1,8 @@
+{
+  if (view instanceof OutlineContainer) {
+    return ((OutlineContainer)view).getChildAt(0) == obj;
+  }
+ else {
+    return view == obj;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  if (currentHeaderStatus != HEADER_STATUS_RELEASE_TO_LOAD) {
+    headerImage.setVisibility(View.VISIBLE);
+    headerImage.clearAnimation();
+    headerImage.startAnimation(flipAnimation);
+    headerProgressBar.setVisibility(View.GONE);
+    headerText.setText(headerReleaseText);
+    currentHeaderStatus=HEADER_STATUS_RELEASE_TO_LOAD;
+  }
+}

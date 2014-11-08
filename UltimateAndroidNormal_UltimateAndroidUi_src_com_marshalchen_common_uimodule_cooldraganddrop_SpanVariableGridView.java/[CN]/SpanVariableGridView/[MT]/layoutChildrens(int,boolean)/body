@@ -1,0 +1,37 @@
+{
+  int row=0;
+  int rowHeight=0;
+  int fullHeight=mItemMargin;
+  int width=getMeasuredWidth() - 2 * mItemMargin;
+  final int colWidth=(width - (mColCount - 1) * mItemMargin) / mColCount;
+  Rect draggedChildRect=null;
+  for (int position=0; position < mAdapter.getCount(); position++) {
+    final View childView=getChildAt(position);
+    final Point prev=new Point(childView.getLeft(),childView.getTop());
+    final LayoutParams lp=(LayoutParams)childView.getLayoutParams();
+    final int column=lp.column;
+    if (row != lp.row) {
+      fullHeight+=(rowHeight + mItemMargin);
+      rowHeight=0;
+    }
+    rowHeight=Math.max(rowHeight,childView.getMeasuredHeight());
+    row=lp.row;
+    final int width_=column == LayoutParams.ALL_COLUMNS ? width : (lp.span * (colWidth + mItemMargin) - mItemMargin);
+    final int left_=mItemMargin + (column == LayoutParams.ALL_COLUMNS ? 0 : column * (colWidth + mItemMargin));
+    final int top_=fullHeight;
+    final int right_=left_ + width_;
+    final int bottom_=top_ + childView.getMeasuredHeight();
+    measureChildren(childView,width_,lp.height);
+    if (position != draggedChild) {
+      final Point now=new Point(left_,top_);
+      childView.layout(left_,top_,right_,bottom_);
+      if (animate) {
+        translateChild(childView,prev,now);
+      }
+    }
+ else {
+      draggedChildRect=new Rect(left_,top_,right_,bottom_);
+    }
+  }
+  return draggedChildRect;
+}

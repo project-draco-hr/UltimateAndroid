@@ -1,0 +1,35 @@
+{
+  final int itemCount=adapter != null ? adapter.getCount() : 0;
+  mUpdatingText=true;
+  CharSequence text=null;
+  if (currentItem >= 1 && adapter != null) {
+    text=adapter.getPageTitle(currentItem - 1);
+  }
+  Logs.d("text---" + text + "   "+ currentItem);
+  mPrevText.setText(text);
+  if (currentItem == 1) {
+    if (text != null)     mPrevText.setText(changeSpanString(text.toString(),0,2));
+  }
+  mCurrText.setText(adapter != null && currentItem < itemCount ? changeSpanString(adapter.getPageTitle(currentItem).toString(),currentItem,1) : null);
+  text=null;
+  if (currentItem + 1 < itemCount && adapter != null) {
+    text=adapter.getPageTitle(currentItem + 1);
+  }
+  Logs.d("text---" + text + "   "+ currentItem);
+  mNextText.setText(text);
+  if (currentItem == 0) {
+    if (text != null)     mNextText.setText(changeSpanString(text.toString(),1,2));
+  }
+  final int width=getWidth() - getPaddingLeft() - getPaddingRight();
+  final int childHeight=getHeight() - getPaddingTop() - getPaddingBottom();
+  final int childWidthSpec=MeasureSpec.makeMeasureSpec((int)(width * 0.8f),MeasureSpec.AT_MOST);
+  final int childHeightSpec=MeasureSpec.makeMeasureSpec(childHeight,MeasureSpec.AT_MOST);
+  mPrevText.measure(childWidthSpec,childHeightSpec);
+  mCurrText.measure(childWidthSpec,childHeightSpec);
+  mNextText.measure(childWidthSpec,childHeightSpec);
+  mLastKnownCurrentPage=currentItem;
+  if (!mUpdatingPositions) {
+    updateTextPositions(currentItem,mLastKnownPositionOffset,false);
+  }
+  mUpdatingText=false;
+}

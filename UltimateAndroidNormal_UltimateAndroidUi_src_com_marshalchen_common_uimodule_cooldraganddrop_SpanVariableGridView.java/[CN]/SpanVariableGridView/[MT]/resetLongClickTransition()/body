@@ -1,0 +1,6 @@
+{
+  if (mItemTransitionDrawable != null) {
+    mItemTransitionDrawable.resetTransition();
+    mItemTransitionDrawable=null;
+  }
+}

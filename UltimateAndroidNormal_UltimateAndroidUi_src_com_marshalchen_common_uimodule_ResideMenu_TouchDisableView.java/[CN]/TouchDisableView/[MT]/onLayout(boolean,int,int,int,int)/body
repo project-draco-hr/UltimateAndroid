@@ -1,0 +1,5 @@
+{
+  final int width=r - l;
+  final int height=b - t;
+  mContent.layout(0,0,width,height);
+}

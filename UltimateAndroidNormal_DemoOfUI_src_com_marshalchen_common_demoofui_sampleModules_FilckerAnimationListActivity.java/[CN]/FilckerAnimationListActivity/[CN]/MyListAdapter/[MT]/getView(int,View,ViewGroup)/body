@@ -1,0 +1,8 @@
+{
+  TextView tv=(TextView)convertView;
+  if (tv == null) {
+    tv=(TextView)LayoutInflater.from(mContext).inflate(R.layout.list_anim_list_row,parent,false);
+  }
+  tv.setText("This is row number " + getItem(position));
+  return tv;
+}

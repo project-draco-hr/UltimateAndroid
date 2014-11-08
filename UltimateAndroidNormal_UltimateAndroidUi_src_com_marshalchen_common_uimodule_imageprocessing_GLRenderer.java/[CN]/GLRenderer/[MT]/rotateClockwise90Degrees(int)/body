@@ -1,0 +1,9 @@
+{
+  curRotation+=numOfTimes;
+  curRotation=curRotation % 4;
+  if (numOfTimes % 2 == 1) {
+    int temp=width;
+    width=height;
+    height=temp;
+  }
+}

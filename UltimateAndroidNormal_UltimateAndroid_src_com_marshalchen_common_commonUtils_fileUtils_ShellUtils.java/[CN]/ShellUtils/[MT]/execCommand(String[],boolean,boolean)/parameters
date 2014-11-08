@@ -1,0 +1,3 @@
+String[] commands
+boolean isRoot
+boolean isNeedResultMsg

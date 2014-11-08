@@ -1,0 +1,7 @@
+{
+  double deltaScale=scale / historicalScale;
+  int x=(int)(pinchStartScroll.x * deltaScale) - pinchStartOffset.x;
+  int y=(int)(pinchStartScroll.y * deltaScale) - pinchStartOffset.y;
+  destinationScroll.set(x,y);
+  scrollToPoint(destinationScroll);
+}

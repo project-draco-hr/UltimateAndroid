@@ -1,0 +1,11 @@
+{
+  if (getCount() == 0 || position < 0 || mListSectionPos.indexOf(position) != -1) {
+    return PINNED_HEADER_GONE;
+  }
+  mCurrentSectionPosition=getCurrentSectionPosition(position);
+  mNextSectionPostion=getNextSectionPosition(mCurrentSectionPosition);
+  if (mNextSectionPostion != -1 && position == mNextSectionPostion - 1) {
+    return PINNED_HEADER_PUSHED_UP;
+  }
+  return PINNED_HEADER_VISIBLE;
+}

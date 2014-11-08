@@ -1,0 +1,6 @@
+{
+  ViewConfiguration viewConfiguration=ViewConfiguration.get(getContext());
+  mFlingSlop=viewConfiguration.getScaledMinimumFlingVelocity();
+  mTouchSlop=viewConfiguration.getScaledTouchSlop();
+  mGestureDetector=new GestureDetector(getContext(),new GestureListener());
+}

@@ -1,0 +1,3 @@
+{
+  addChildAppearAnimator(hoverView,resId,technique,duration,delay,hiddenWhenDelaying,interpolator,new Animator.AnimatorListener[]{});
+}

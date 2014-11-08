@@ -1,0 +1,3 @@
+{
+  return parse(in,searchColor,replaceColor,whiteMode,0,0);
+}

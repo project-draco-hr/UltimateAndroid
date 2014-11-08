@@ -1,0 +1,10 @@
+{
+  if (isMainThread()) {
+    return call.call();
+  }
+ else {
+    FutureTask<T> task=new FutureTask<T>(call);
+    getHandler().post(task);
+    return task.get();
+  }
+}

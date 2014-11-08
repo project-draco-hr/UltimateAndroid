@@ -1,0 +1,3 @@
+{
+  return views_count;
+}

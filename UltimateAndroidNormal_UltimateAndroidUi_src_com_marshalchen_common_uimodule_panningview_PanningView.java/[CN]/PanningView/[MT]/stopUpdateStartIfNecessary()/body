@@ -1,0 +1,10 @@
+{
+  if (null != mAttacher) {
+    boolean wasPanning=mAttacher.isPanning();
+    mAttacher.stopPanning();
+    mAttacher.update();
+    if (wasPanning) {
+      mAttacher.startPanning();
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  setTitle(mPlanetTitles[position]);
+  mDrawerLayout.closeDrawer(mDrawerList);
+}

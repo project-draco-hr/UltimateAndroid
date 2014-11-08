@@ -1,0 +1,4 @@
+{
+  super.dispatchTouchEvent(ev);
+  return getCount() > 0;
+}

@@ -1,0 +1,8 @@
+{
+  if (duration >= 500) {
+    mSliderDuration=duration;
+    if (mAutoCycle && mCycling) {
+      startAutoCycle();
+    }
+  }
+}

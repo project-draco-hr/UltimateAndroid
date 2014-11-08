@@ -1,0 +1,5 @@
+{
+  --colorIndex;
+  if (colorIndex < 0)   colorIndex=mColors.length - 1;
+  return colorIndex;
+}

@@ -1,0 +1,4 @@
+{
+  mPaintStroke.setStrokeWidth(strokeWidth);
+  invalidate();
+}

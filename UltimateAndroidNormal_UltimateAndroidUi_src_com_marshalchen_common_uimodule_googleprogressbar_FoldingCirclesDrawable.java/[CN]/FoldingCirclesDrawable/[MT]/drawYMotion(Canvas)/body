@@ -1,0 +1,7 @@
+{
+  canvas.drawArc(mOval,0,-180,true,mFstHalfPaint);
+  canvas.drawArc(mOval,-180,-180,true,mScndHalfPaint);
+  mPath.reset();
+  mPath.moveTo(0,mHalf);
+  mPath.cubicTo(0,mAxisValue,mDiameter,mAxisValue,mDiameter,mHalf);
+}

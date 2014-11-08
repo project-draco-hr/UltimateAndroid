@@ -1,0 +1,14 @@
+{
+  super.onDraw(canvas);
+  final int height=getHeight();
+  final int bottom=height;
+  final int left=mCurrText.getLeft() - mTabPadding;
+  final int right=mCurrText.getRight() + mTabPadding;
+  final int top=bottom - mIndicatorHeight;
+  mTabPaint.setColor(mTabAlpha << 24 | (mIndicatorColor & 0xFFFFFF));
+  canvas.drawRect(left,top,right,bottom,mTabPaint);
+  if (mDrawFullUnderline) {
+    mTabPaint.setColor(0xFF << 24 | (mIndicatorColor & 0xFFFFFF));
+    canvas.drawRect(getPaddingLeft(),height - mFullUnderlineHeight,getWidth() - getPaddingRight(),height,mTabPaint);
+  }
+}

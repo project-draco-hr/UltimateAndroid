@@ -1,0 +1,4 @@
+{
+  showcaseView.setStyle(theme);
+  return this;
+}

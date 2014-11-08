@@ -1,0 +1,7 @@
+{
+  TileManager tileManager=reference.get();
+  if (tileManager != null) {
+    tileManager.invalidate();
+    tileManager.postInvalidate();
+  }
+}

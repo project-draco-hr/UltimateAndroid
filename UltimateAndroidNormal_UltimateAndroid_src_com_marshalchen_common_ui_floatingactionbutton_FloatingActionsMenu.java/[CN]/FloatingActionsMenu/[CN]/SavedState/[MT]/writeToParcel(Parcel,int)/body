@@ -1,0 +1,4 @@
+{
+  super.writeToParcel(out,flags);
+  out.writeInt(mExpanded ? 1 : 0);
+}

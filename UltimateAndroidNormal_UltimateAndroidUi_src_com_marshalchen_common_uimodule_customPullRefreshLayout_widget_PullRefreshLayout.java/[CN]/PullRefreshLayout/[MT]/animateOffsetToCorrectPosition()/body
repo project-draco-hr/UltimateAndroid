@@ -1,0 +1,9 @@
+{
+  mFrom=mCurrentOffsetTop;
+  mAnimateToCorrectPosition.reset();
+  mAnimateToCorrectPosition.setDuration(mMediumAnimationDuration);
+  mAnimateToCorrectPosition.setInterpolator(mDecelerateInterpolator);
+  mAnimateToCorrectPosition.setAnimationListener(mRefreshListener);
+  mRefreshView.clearAnimation();
+  mRefreshView.startAnimation(mAnimateToCorrectPosition);
+}

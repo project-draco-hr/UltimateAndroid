@@ -1,0 +1,4 @@
+{
+  super.onDestroy();
+  if (mCircleProgressView != null)   mCircleProgressView.cancelUpdateTask();
+}

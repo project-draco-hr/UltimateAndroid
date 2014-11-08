@@ -1,0 +1,4 @@
+{
+  mPtrLayout.setEnabled(true);
+  mPtrLayout.setOnRefreshListener(listener);
+}

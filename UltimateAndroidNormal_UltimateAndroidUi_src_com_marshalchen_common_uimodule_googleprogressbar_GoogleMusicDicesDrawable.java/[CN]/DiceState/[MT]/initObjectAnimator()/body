@@ -1,0 +1,19 @@
+{
+  final ObjectAnimator objectAnimator=ObjectAnimator.ofFloat(this,"scale",0,1);
+  objectAnimator.setInterpolator(ACCELERATE_INTERPOLATOR);
+  objectAnimator.setDuration(ANIMATION_DURATION);
+  objectAnimator.setStartDelay(ANIMATION_START_DELAY);
+  objectAnimator.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      mScale=0;
+      mDiceState++;
+      if (mDiceState == mDiceStates.length) {
+        mDiceState=0;
+      }
+      mDiceRotation=mDiceRotation.invert();
+      objectAnimator.start();
+    }
+  }
+);
+  objectAnimator.start();
+}

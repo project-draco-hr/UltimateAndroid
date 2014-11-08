@@ -1,0 +1,9 @@
+{
+  Drawable d=getDrawable();
+  if (d != null) {
+    if (mDrawableRect == null) {
+      mDrawableRect=new RectF();
+    }
+    mDrawableRect.set(0,0,d.getIntrinsicWidth(),d.getIntrinsicHeight());
+  }
+}

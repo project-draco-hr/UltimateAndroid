@@ -1,0 +1,7 @@
+{
+  if (colors == null || colors.length != 4) {
+    throw new IllegalArgumentException("Your color array must contains 4 values");
+  }
+  mColors=colors;
+  return this;
+}

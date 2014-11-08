@@ -1,0 +1,22 @@
+{
+  super(context);
+  this.setOrientation(VERTICAL);
+  this.setWeightSum(5);
+  this.imageView=new ImageView(context);
+  this.button=new Button(context);
+  LayoutParams layoutParams=new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+  this.imageView.setLayoutParams(layoutParams);
+  this.button.setLayoutParams(layoutParams);
+  this.imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+  this.imageView.setAdjustViewBounds(true);
+  this.button.setText("Goto GitHub");
+  this.button.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View view){
+      Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://davidschreiber.github.com/FancyCoverFlow"));
+      view.getContext().startActivity(i);
+    }
+  }
+);
+  this.addView(this.imageView);
+  this.addView(this.button);
+}

@@ -1,0 +1,22 @@
+{
+  if (frameBuffer == null) {
+    if (getWidth() != 0 && getHeight() != 0) {
+      initFBO();
+    }
+ else {
+      return;
+    }
+  }
+  boolean newData=false;
+  if (dirty) {
+    newData=true;
+    GLES20.glBindFramebuffer(GLES20.GL_FRAMEBUFFER,frameBuffer[0]);
+    super.drawFrame();
+    GLES20.glBindFramebuffer(GLES20.GL_FRAMEBUFFER,0);
+  }
+synchronized (listLock) {
+    for (    GLTextureInputRenderer target : targets) {
+      target.newTextureReady(texture_out[0],this,newData);
+    }
+  }
+}

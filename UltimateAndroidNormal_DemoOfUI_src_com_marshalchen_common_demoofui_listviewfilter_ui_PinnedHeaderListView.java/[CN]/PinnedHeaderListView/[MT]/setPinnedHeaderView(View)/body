@@ -1,0 +1,6 @@
+{
+  this.mHeaderView=headerView;
+  if (mHeaderView != null) {
+    setFadingEdgeLength(0);
+  }
+}

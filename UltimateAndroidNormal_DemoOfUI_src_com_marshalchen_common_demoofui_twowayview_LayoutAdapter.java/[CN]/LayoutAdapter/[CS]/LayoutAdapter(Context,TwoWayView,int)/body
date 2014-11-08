@@ -1,0 +1,9 @@
+{
+  mContext=context;
+  mItems=new ArrayList<Integer>(COUNT);
+  for (int i=0; i < COUNT; i++) {
+    addItem(i);
+  }
+  mRecyclerView=recyclerView;
+  mLayoutId=layoutId;
+}

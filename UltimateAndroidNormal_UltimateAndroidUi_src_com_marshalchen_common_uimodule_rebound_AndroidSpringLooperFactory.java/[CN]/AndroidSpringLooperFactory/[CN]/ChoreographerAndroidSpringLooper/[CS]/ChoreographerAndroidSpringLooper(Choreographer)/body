@@ -1,0 +1,13 @@
+{
+  mChoreographer=choreographer;
+  mFrameCallback=new Choreographer.FrameCallback(){
+    @Override public void doFrame(    long frameTimeNanos){
+      if (!mStarted || mSpringSystem == null) {
+        return;
+      }
+      mSpringSystem.loop();
+      mChoreographer.postFrameCallback(mFrameCallback);
+    }
+  }
+;
+}

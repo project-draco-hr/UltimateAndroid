@@ -1,0 +1,6 @@
+{
+  if (orientation != mOrientation) {
+    mOrientation=orientation;
+    updateFold();
+  }
+}

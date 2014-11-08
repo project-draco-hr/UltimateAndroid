@@ -1,0 +1,8 @@
+{
+  super.onBoundsChange(bounds);
+  mDrawWidth=dp2px(40);
+  mDrawHeight=mDrawWidth;
+  mTop=-mDrawHeight - (getRefreshLayout().getFinalOffset() - mDrawHeight) / 2;
+  mBounds=bounds;
+  measureCircleProgress(mDrawWidth,mDrawHeight);
+}

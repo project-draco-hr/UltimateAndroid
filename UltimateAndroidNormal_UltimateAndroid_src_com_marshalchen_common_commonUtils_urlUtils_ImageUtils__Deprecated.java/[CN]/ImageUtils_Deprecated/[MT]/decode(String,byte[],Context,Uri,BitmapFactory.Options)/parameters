@@ -1,0 +1,5 @@
+String path
+byte[] data
+Context context
+Uri uri
+BitmapFactory.Options options

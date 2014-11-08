@@ -1,0 +1,5 @@
+{
+  ++colorIndex;
+  if (colorIndex >= mColors.length)   colorIndex=0;
+  return colorIndex;
+}

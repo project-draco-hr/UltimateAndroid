@@ -1,0 +1,8 @@
+{
+  if (undoSupportEnabled) {
+    if (modificationStack != null && !modificationStack.isEmpty()) {
+      return true;
+    }
+  }
+  return false;
+}

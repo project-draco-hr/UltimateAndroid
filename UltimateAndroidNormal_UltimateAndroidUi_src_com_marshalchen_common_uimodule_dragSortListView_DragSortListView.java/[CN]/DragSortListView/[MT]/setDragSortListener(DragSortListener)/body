@@ -1,0 +1,5 @@
+{
+  setDropListener(l);
+  setDragListener(l);
+  setRemoveListener(l);
+}

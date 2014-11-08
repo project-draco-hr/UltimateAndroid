@@ -1,0 +1,15 @@
+{
+  if (mDoubleClickListener != null) {
+    View target;
+    ViewGroup bottom=getBottomView();
+    ViewGroup surface=getSurfaceView();
+    if (e.getX() > bottom.getLeft() && e.getX() < bottom.getRight() && e.getY() > bottom.getTop() && e.getY() < bottom.getBottom()) {
+      target=bottom;
+    }
+ else {
+      target=surface;
+    }
+    mDoubleClickListener.onDoubleClick(SwipeLayout.this,target == surface);
+  }
+  return true;
+}

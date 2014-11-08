@@ -1,0 +1,6 @@
+{
+  if (getItemCount() < mTotalColumnCount) {
+    return getItemCount();
+  }
+  return mTotalColumnCount;
+}

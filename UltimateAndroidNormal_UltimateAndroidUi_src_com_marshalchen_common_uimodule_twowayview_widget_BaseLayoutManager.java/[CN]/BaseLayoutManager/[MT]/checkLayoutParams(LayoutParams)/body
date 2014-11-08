@@ -1,0 +1,8 @@
+{
+  if (isVertical()) {
+    return (lp.width == LayoutParams.MATCH_PARENT);
+  }
+ else {
+    return (lp.height == LayoutParams.MATCH_PARENT);
+  }
+}

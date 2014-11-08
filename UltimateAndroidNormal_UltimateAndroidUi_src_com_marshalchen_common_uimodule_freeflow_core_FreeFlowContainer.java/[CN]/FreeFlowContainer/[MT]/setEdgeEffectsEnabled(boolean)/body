@@ -1,0 +1,15 @@
+{
+  mEdgeEffectsEnabled=val;
+  if (val) {
+    Context context=getContext();
+    setWillNotDraw(false);
+    mLeftEdge=new EdgeEffect(context);
+    mRightEdge=new EdgeEffect(context);
+    mTopEdge=new EdgeEffect(context);
+    mBottomEdge=new EdgeEffect(context);
+  }
+ else {
+    setWillNotDraw(true);
+    mLeftEdge=mRightEdge=mTopEdge=mBottomEdge=null;
+  }
+}

@@ -1,0 +1,4 @@
+{
+  if (mOnLayoutListeners == null)   mOnLayoutListeners=new ArrayList<OnLayout>();
+  mOnLayoutListeners.add(l);
+}

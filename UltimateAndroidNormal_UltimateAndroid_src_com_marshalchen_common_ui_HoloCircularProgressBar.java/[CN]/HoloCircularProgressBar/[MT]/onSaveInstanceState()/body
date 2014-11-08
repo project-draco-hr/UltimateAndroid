@@ -1,0 +1,9 @@
+{
+  final Bundle bundle=new Bundle();
+  bundle.putParcelable(INSTANCE_STATE_SAVEDSTATE,super.onSaveInstanceState());
+  bundle.putFloat(INSTANCE_STATE_PROGRESS,mProgress);
+  bundle.putFloat(INSTANCE_STATE_MARKER_PROGRESS,mMarkerProgress);
+  bundle.putInt(INSTANCE_STATE_PROGRESS_COLOR,mProgressColor);
+  bundle.putInt(INSTANCE_STATE_PROGRESS_BACKGROUND_COLOR,mProgressBackgroundColor);
+  return bundle;
+}

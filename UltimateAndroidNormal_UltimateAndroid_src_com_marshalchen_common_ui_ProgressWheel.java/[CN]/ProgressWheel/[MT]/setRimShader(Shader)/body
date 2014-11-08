@@ -1,0 +1,3 @@
+{
+  this.rimPaint.setShader(shader);
+}

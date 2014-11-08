@@ -1,0 +1,4 @@
+{
+  handleUpdate(from,to,UpdateOp.MOVE);
+  super.onItemsMoved(recyclerView,from,to,itemCount);
+}

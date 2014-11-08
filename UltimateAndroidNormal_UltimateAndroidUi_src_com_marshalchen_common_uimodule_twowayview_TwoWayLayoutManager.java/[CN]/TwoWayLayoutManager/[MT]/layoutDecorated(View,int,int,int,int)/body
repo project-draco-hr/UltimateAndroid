@@ -1,0 +1,4 @@
+{
+  final MarginLayoutParams lp=(MarginLayoutParams)child.getLayoutParams();
+  super.layoutDecorated(child,left + lp.leftMargin,top + lp.topMargin,right - lp.rightMargin,bottom - lp.bottomMargin);
+}

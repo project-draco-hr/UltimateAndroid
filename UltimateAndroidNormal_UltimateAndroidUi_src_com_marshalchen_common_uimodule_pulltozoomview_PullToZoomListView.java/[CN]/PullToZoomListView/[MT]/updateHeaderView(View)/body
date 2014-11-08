@@ -1,0 +1,9 @@
+{
+  if (headerView != null) {
+    mHeaderContainer.removeAllViews();
+    mHeaderContainer.addView(mHeaderView);
+    setHeaderViewSize(mScreenWidth,(int)(9.0F * (mScreenWidth / 16.0F)));
+    mHeaderHeight=mHeaderContainer.getHeight();
+    addHeaderView(mHeaderContainer);
+  }
+}

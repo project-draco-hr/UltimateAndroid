@@ -1,0 +1,7 @@
+{
+  Canvas bufferCanvas=new Canvas(buffer);
+  eraserPaint.setAlpha(ALPHA_60_PERCENT);
+  bufferCanvas.drawCircle(x,y,outerRadius,eraserPaint);
+  eraserPaint.setAlpha(0);
+  bufferCanvas.drawCircle(x,y,innerRadius,eraserPaint);
+}

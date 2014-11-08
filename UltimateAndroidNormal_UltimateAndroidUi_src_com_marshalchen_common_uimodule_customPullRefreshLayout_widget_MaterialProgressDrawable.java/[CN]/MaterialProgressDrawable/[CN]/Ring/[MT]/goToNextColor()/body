@@ -1,0 +1,3 @@
+{
+  mColorIndex=(mColorIndex + 1) % (mColors.length);
+}

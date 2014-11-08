@@ -1,0 +1,35 @@
+{
+  final Adapter adapter=mRecyclerView.getAdapter();
+  if (mChoiceMode == ChoiceMode.NONE || adapter == null || !adapter.hasStableIds()) {
+    return;
+  }
+  final int itemCount=adapter.getItemCount();
+  mCheckedStates.clear();
+  for (int checkedIndex=0; checkedIndex < mCheckedIdStates.size(); checkedIndex++) {
+    final long currentId=mCheckedIdStates.keyAt(checkedIndex);
+    final int currentPosition=mCheckedIdStates.valueAt(checkedIndex);
+    final long newPositionId=adapter.getItemId(currentPosition);
+    if (currentId != newPositionId) {
+      final int start=Math.max(0,currentPosition - CHECK_POSITION_SEARCH_DISTANCE);
+      final int end=Math.min(currentPosition + CHECK_POSITION_SEARCH_DISTANCE,itemCount);
+      boolean found=false;
+      for (int searchPos=start; searchPos < end; searchPos++) {
+        final long searchId=adapter.getItemId(searchPos);
+        if (currentId == searchId) {
+          found=true;
+          mCheckedStates.put(searchPos,true);
+          mCheckedIdStates.setValueAt(checkedIndex,searchPos);
+          break;
+        }
+      }
+      if (!found) {
+        mCheckedIdStates.delete(currentId);
+        mCheckedCount--;
+        checkedIndex--;
+      }
+    }
+ else {
+      mCheckedStates.put(currentPosition,true);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  super(context,attrs);
+  addView(mPrevText=new TextView(context));
+  addView(mCurrText=new TextView(context));
+  addView(mNextText=new TextView(context));
+  final TypedArray a=context.obtainStyledAttributes(attrs,ATTRS);
+  final int textAppearance=a.getResourceId(0,0);
+  if (textAppearance != 0) {
+    mPrevText.setTextAppearance(context,textAppearance);
+    mCurrText.setTextAppearance(context,textAppearance);
+    mNextText.setTextAppearance(context,textAppearance);
+  }
+  final int textSize=a.getDimensionPixelSize(1,0);
+  if (textSize != 0) {
+    setTextSize(TypedValue.COMPLEX_UNIT_PX,textSize);
+  }
+  if (a.hasValue(2)) {
+    final int textColor=a.getColor(2,0);
+    mPrevText.setTextColor(textColor);
+    mCurrText.setTextColor(textColor);
+    mNextText.setTextColor(textColor);
+  }
+  mGravity=a.getInteger(3,Gravity.CENTER);
+  a.recycle();
+  mTextColor=mCurrText.getTextColors().getDefaultColor();
+  setNonPrimaryAlpha(SIDE_ALPHA);
+  mPrevText.setEllipsize(TruncateAt.END);
+  mCurrText.setEllipsize(TruncateAt.END);
+  mNextText.setEllipsize(TruncateAt.END);
+  boolean allCaps=false;
+  if (textAppearance != 0) {
+    final TypedArray ta=context.obtainStyledAttributes(textAppearance,TEXT_ATTRS);
+    allCaps=ta.getBoolean(0,false);
+    ta.recycle();
+  }
+  if (allCaps) {
+    setSingleLineAllCaps(mPrevText);
+    setSingleLineAllCaps(mCurrText);
+    setSingleLineAllCaps(mNextText);
+  }
+ else {
+    mPrevText.setSingleLine();
+    mCurrText.setSingleLine();
+    mNextText.setSingleLine();
+  }
+  final float density=context.getResources().getDisplayMetrics().density;
+  mScaledTextSpacing=(int)(TEXT_SPACING * density);
+}

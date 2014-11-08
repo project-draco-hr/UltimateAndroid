@@ -1,0 +1,5 @@
+Activity activity
+DrawerLayout drawerLayout
+int drawerImageRes
+int openDrawerContentDescRes
+int closeDrawerContentDescRes

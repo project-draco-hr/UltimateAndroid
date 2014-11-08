@@ -1,0 +1,6 @@
+{
+  super.onScrollChanged(l,t,oldl,oldt);
+  View title=getChildAt(0);
+  if (title != null)   title.offsetLeftAndRight(l - title.getLeft());
+  if (mOnScrollChangedCallback != null)   mOnScrollChangedCallback.onScroll(l,t);
+}

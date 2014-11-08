@@ -1,0 +1,11 @@
+{
+  int startPos=-mScrollOfsset;
+  int saveCount=canvas.save();
+  for (  FixedViewInfo header : mHeaderViewInfos) {
+    View view=header.view;
+    canvas.translate(0,startPos);
+    startPos=view.getMeasuredHeight();
+    view.draw(canvas);
+  }
+  canvas.restoreToCount(saveCount);
+}

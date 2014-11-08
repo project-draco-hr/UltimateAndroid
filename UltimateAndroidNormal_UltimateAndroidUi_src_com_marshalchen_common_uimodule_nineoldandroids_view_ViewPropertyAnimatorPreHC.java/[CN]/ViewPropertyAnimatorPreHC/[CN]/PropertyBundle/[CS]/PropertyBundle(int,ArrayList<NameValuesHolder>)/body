@@ -1,0 +1,4 @@
+{
+  mPropertyMask=propertyMask;
+  mNameValuesHolder=nameValuesHolder;
+}

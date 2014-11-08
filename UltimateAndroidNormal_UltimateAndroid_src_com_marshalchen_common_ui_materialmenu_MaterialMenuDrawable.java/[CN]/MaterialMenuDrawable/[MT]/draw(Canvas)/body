@@ -1,0 +1,15 @@
+{
+  final float ratio=transformationValue <= 1 ? transformationValue : 2 - transformationValue;
+  if (rtlEnabled) {
+    canvas.save();
+    canvas.scale(-1,1,0,0);
+    canvas.translate(-getIntrinsicWidth(),0);
+  }
+  drawTopLine(canvas,ratio);
+  drawMiddleLine(canvas,ratio);
+  drawBottomLine(canvas,ratio);
+  if (rtlEnabled) {
+    canvas.restore();
+  }
+  if (drawTouchCircle)   drawTouchCircle(canvas);
+}

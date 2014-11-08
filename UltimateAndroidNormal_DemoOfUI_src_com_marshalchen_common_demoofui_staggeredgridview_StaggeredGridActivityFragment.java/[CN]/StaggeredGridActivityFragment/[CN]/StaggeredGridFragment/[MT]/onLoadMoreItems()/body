@@ -1,0 +1,9 @@
+{
+  final ArrayList<String> sampleData=SampleData.generateSampleData();
+  for (  String data : sampleData) {
+    mAdapter.add(data);
+  }
+  mData.addAll(sampleData);
+  mAdapter.notifyDataSetChanged();
+  mHasRequestedMore=false;
+}

@@ -1,0 +1,10 @@
+{
+  final int firstPosition=getFirstVisiblePosition();
+  final View firstChild=findViewByPosition(firstPosition);
+  if (firstChild != null) {
+    setPendingScrollPositionWithOffset(firstPosition,getChildStart(firstChild));
+  }
+ else {
+    setPendingScrollPositionWithOffset(RecyclerView.NO_POSITION,0);
+  }
+}

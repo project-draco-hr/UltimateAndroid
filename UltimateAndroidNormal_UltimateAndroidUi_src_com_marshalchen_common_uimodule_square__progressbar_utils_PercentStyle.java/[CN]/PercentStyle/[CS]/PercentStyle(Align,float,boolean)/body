@@ -1,0 +1,6 @@
+{
+  super();
+  this.align=align;
+  this.textSize=textSize;
+  this.percentSign=percentSign;
+}

@@ -1,0 +1,3 @@
+{
+  return ((CircularLoopAdapter)list.getAdapter()).getCircularPosition(position);
+}

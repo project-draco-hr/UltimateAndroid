@@ -1,0 +1,47 @@
+{
+  if (maintainAspectRatio) {
+    if (dx != 0) {
+      dy=dx / initialAspectRatio;
+    }
+ else     if (dy != 0) {
+      dx=dy * initialAspectRatio;
+    }
+  }
+  RectF r=new RectF(cropRect);
+  if (dx > 0F && r.width() + 2 * dx > imageRect.width()) {
+    dx=(imageRect.width() - r.width()) / 2F;
+    if (maintainAspectRatio) {
+      dy=dx / initialAspectRatio;
+    }
+  }
+  if (dy > 0F && r.height() + 2 * dy > imageRect.height()) {
+    dy=(imageRect.height() - r.height()) / 2F;
+    if (maintainAspectRatio) {
+      dx=dy * initialAspectRatio;
+    }
+  }
+  r.inset(-dx,-dy);
+  final float widthCap=25F;
+  if (r.width() < widthCap) {
+    r.inset(-(widthCap - r.width()) / 2F,0F);
+  }
+  float heightCap=maintainAspectRatio ? (widthCap / initialAspectRatio) : widthCap;
+  if (r.height() < heightCap) {
+    r.inset(0F,-(heightCap - r.height()) / 2F);
+  }
+  if (r.left < imageRect.left) {
+    r.offset(imageRect.left - r.left,0F);
+  }
+ else   if (r.right > imageRect.right) {
+    r.offset(-(r.right - imageRect.right),0F);
+  }
+  if (r.top < imageRect.top) {
+    r.offset(0F,imageRect.top - r.top);
+  }
+ else   if (r.bottom > imageRect.bottom) {
+    r.offset(0F,-(r.bottom - imageRect.bottom));
+  }
+  cropRect.set(r);
+  drawRect=computeLayout();
+  viewContext.invalidate();
+}

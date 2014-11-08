@@ -1,0 +1,5 @@
+{
+  mColumnCountPortrait=columnCountPortrait;
+  onSizeChanged(getWidth(),getHeight());
+  requestLayoutChildren();
+}

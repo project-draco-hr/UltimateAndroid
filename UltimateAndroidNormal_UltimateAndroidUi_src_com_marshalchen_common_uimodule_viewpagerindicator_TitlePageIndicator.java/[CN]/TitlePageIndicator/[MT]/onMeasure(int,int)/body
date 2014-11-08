@@ -1,0 +1,18 @@
+{
+  final int measuredWidth=MeasureSpec.getSize(widthMeasureSpec);
+  float height;
+  final int heightSpecMode=MeasureSpec.getMode(heightMeasureSpec);
+  if (heightSpecMode == MeasureSpec.EXACTLY) {
+    height=MeasureSpec.getSize(heightMeasureSpec);
+  }
+ else {
+    mBounds.setEmpty();
+    mBounds.bottom=(int)(mPaintText.descent() - mPaintText.ascent());
+    height=mBounds.bottom - mBounds.top + mFooterLineHeight + mFooterPadding + mTopPadding;
+    if (mFooterIndicatorStyle != IndicatorStyle.None) {
+      height+=mFooterIndicatorHeight;
+    }
+  }
+  final int measuredHeight=(int)height;
+  setMeasuredDimension(measuredWidth,measuredHeight);
+}

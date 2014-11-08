@@ -1,0 +1,3 @@
+{
+  return (sourceArray == null || sourceArray.length == 0);
+}

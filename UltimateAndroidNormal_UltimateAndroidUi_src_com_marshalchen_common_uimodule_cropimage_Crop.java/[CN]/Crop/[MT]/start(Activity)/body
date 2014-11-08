@@ -1,0 +1,3 @@
+{
+  activity.startActivityForResult(getIntent(activity),REQUEST_CROP);
+}

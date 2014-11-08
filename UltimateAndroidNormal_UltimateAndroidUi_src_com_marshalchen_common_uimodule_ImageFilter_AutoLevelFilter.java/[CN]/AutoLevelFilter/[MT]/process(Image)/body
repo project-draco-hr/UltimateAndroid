@@ -1,0 +1,56 @@
+{
+  int[][] h=new int[3][256];
+  int[] array=new int[3];
+  int[] rgb=new int[]{255,255,255};
+  int[] bb=new int[256];
+  int[] gg=new int[256];
+  int[] rr=new int[256];
+  int intensity=(int)(this.Intensity * 255f);
+  int intensity_invert=255 - intensity;
+  for (int x=0; x < imageIn.getWidth() - 1; x++) {
+    for (int y=0; y < imageIn.getHeight() - 1; y++) {
+      h[0][imageIn.getRComponent(x,y)]++;
+      h[1][imageIn.getGComponent(x,y)]++;
+      h[2][imageIn.getBComponent(x,y)]++;
+    }
+  }
+  int[] percentileColor=GetPercentileColor(h,0.005f);
+  int[] meanColor=GetMeanColor(h);
+  int[] hi=GetPercentileColor(h,0.995f);
+  float[] gamma=ComputeGamma(percentileColor,meanColor,hi);
+  for (int i=0; i < 3; i++) {
+    for (int j=0; j < 256; j++) {
+      int[] arr=new int[3];
+      for (int n=0; n < 3; n++) {
+        float percent=j - percentileColor[n];
+        if (percent < 0f) {
+          arr[n]=array[n];
+        }
+ else         if ((percent + percentileColor[n]) >= hi[n]) {
+          arr[n]=rgb[n];
+        }
+ else {
+          double adjust=array[n] + ((rgb[n] - array[n]) * Math.pow((double)(percent / ((float)(hi[n] - percentileColor[n]))),(double)gamma[n]));
+          arr[n]=(adjust > 255.0) ? ((int)255.0) : ((adjust < 0.0) ? ((int)0.0) : ((int)adjust));
+        }
+      }
+      rr[j]=arr[0];
+      gg[j]=arr[1];
+      bb[j]=arr[2];
+    }
+  }
+  Image clone=imageIn.clone();
+  int r, g, b;
+  for (int x=0; x < imageIn.getWidth() - 1; x++) {
+    for (int y=0; y < imageIn.getHeight() - 1; y++) {
+      r=clone.getRComponent(x,y);
+      g=clone.getGComponent(x,y);
+      b=clone.getBComponent(x,y);
+      r=(r * intensity_invert + rr[r] * intensity) >> 8;
+      g=(g * intensity_invert + gg[g] * intensity) >> 8;
+      b=(b * intensity_invert + bb[b] * intensity) >> 8;
+      imageIn.setPixelColor(x,y,r,g,b);
+    }
+  }
+  return imageIn;
+}

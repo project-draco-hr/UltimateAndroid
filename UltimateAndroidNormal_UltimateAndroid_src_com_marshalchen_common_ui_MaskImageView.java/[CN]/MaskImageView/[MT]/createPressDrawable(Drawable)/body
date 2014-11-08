@@ -1,0 +1,8 @@
+{
+  Bitmap bitmap=((BitmapDrawable)d).getBitmap().copy(Bitmap.Config.ARGB_8888,true);
+  Paint paint=new Paint();
+  paint.setColor(0x60000000);
+  RectF rect=new RectF(0,0,bitmap.getWidth(),bitmap.getHeight());
+  new Canvas(bitmap).drawRoundRect(rect,4,4,paint);
+  return new BitmapDrawable(getContext().getResources(),bitmap);
+}

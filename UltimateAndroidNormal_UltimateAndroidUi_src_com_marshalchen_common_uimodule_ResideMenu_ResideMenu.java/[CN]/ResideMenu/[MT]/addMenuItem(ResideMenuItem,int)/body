@@ -1,0 +1,10 @@
+{
+  if (direction == DIRECTION_LEFT) {
+    this.leftMenuItems.add(menuItem);
+    layoutLeftMenu.addView(menuItem);
+  }
+ else {
+    this.rightMenuItems.add(menuItem);
+    layoutRightMenu.addView(menuItem);
+  }
+}

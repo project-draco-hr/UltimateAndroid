@@ -1,0 +1,5 @@
+{
+  super.setImageResource(resId);
+  mBitmap=getBitmapFromDrawable(getDrawable());
+  setup();
+}

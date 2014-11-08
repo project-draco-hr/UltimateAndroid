@@ -1,0 +1,3 @@
+{
+  return drawTopEdgeEffect(c) | drawBottomEdgeEffect(c);
+}

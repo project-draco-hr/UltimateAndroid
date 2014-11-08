@@ -1,0 +1,4 @@
+{
+  this.mOnItemClickListener=listener;
+  super.setOnItemClickListener(this);
+}

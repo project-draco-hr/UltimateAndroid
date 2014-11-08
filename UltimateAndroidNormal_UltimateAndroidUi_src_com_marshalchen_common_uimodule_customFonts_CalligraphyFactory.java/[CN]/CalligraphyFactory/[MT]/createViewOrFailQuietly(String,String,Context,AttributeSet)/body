@@ -1,0 +1,8 @@
+{
+  try {
+    return LayoutInflater.from(context).createView(name,prefix,attrs);
+  }
+ catch (  Exception ignore) {
+    return null;
+  }
+}

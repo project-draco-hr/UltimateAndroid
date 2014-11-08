@@ -1,0 +1,15 @@
+{
+  float[][] numArray=new float[3][3];
+  numArray[0][0]=0;
+  numArray[0][1]=0;
+  numArray[0][2]=0;
+  numArray[1][0]=0;
+  numArray[1][1]=1;
+  numArray[1][2]=0;
+  numArray[2][0]=0;
+  numArray[2][1]=0;
+  numArray[2][2]=0.4f;
+  this.kernel=numArray;
+  this.factor=1;
+  this.offset=1;
+}

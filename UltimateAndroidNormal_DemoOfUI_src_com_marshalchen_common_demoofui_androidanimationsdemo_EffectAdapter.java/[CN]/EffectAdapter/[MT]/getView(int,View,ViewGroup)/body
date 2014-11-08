@@ -1,0 +1,10 @@
+{
+  View v=LayoutInflater.from(mContext).inflate(R.layout.android_animations_item,null,false);
+  TextView t=(TextView)v.findViewById(R.id.list_item_text);
+  Object o=getItem(position);
+  int start=o.getClass().getName().lastIndexOf(".") + 1;
+  String name=o.getClass().getName().substring(start);
+  t.setText(name);
+  v.setTag(Techniques.values()[position]);
+  return v;
+}

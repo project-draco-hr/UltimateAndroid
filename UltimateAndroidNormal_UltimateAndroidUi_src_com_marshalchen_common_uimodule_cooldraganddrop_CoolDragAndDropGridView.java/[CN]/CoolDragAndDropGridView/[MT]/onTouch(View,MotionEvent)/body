@@ -1,0 +1,22 @@
+{
+  if (mDragPosition != AdapterView.INVALID_POSITION && mDragImageView != null) {
+    final int x=(int)event.getX();
+    final int y=(int)event.getY();
+switch (event.getAction()) {
+case MotionEvent.ACTION_MOVE:
+      mDragOffsetX=(int)(event.getRawX() - x);
+    mDragOffsetY=(int)(event.getRawY() - y);
+  onDrag(x,y);
+break;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+onDrop();
+resetLongClickTransition();
+getParent().requestDisallowInterceptTouchEvent(false);
+return false;
+default :
+}
+return true;
+}
+return false;
+}

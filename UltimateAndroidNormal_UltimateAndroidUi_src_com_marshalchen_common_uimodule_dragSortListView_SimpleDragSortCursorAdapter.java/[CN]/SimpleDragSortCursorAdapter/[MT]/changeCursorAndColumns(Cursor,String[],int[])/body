@@ -1,0 +1,6 @@
+{
+  mOriginalFrom=from;
+  mTo=to;
+  findColumns(c,mOriginalFrom);
+  super.changeCursor(c);
+}

@@ -1,0 +1,6 @@
+{
+  super.setBackgroundResource(resId);
+  if (!mDrawFullUnderlineSet) {
+    mDrawFullUnderline=resId == 0;
+  }
+}

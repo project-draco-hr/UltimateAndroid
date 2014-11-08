@@ -1,0 +1,19 @@
+{
+  int count=getChildCount();
+  if (count < 3) {
+    throw new IllegalArgumentException("this layout must contain 3 child views,and AdapterView or ScrollView must in the second position!");
+  }
+  View view=null;
+  for (int i=0; i < count - 1; ++i) {
+    view=getChildAt(i);
+    if (view instanceof AdapterView<?>) {
+      mAdapterView=(AdapterView<?>)view;
+    }
+    if (view instanceof ScrollView) {
+      mScrollView=(ScrollView)view;
+    }
+  }
+  if (mAdapterView == null && mScrollView == null) {
+    throw new IllegalArgumentException("must contain a AdapterView or ScrollView in this layout!");
+  }
+}

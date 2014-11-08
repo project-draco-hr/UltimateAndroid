@@ -1,0 +1,10 @@
+{
+  ObjectAnimator animator=ObjectAnimator.ofFloat(view,X,view.getMeasuredWidth());
+  animator.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    final Animator animator){
+      onViewSwiped(((ContextualUndoView)view).getItemId(),dismissPosition);
+    }
+  }
+);
+  animator.start();
+}

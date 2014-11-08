@@ -1,0 +1,17 @@
+{
+  boolean applyFixes=theDialog != null && theDialog.isShowing();
+  if (applyFixes) {
+    Logs.d("Config change: unfix the dimens so I'll get remeasured!");
+    dialogView.unfixDialogDimens();
+  }
+  super.onConfigurationChanged(newConfig);
+  if (applyFixes) {
+    dialogView.post(new Runnable(){
+      @Override public void run(){
+        Logs.d("Config change done: re-fix the dimens!");
+        dialogView.fixDialogDimens();
+      }
+    }
+);
+  }
+}

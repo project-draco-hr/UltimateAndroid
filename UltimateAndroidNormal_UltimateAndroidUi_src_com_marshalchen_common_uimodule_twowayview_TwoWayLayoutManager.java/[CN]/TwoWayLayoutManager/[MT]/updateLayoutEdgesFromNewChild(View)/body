@@ -1,0 +1,10 @@
+{
+  final int childStart=getChildStart(newChild);
+  if (childStart < mLayoutStart) {
+    mLayoutStart=childStart;
+  }
+  final int childEnd=getChildEnd(newChild);
+  if (childEnd > mLayoutEnd) {
+    mLayoutEnd=childEnd;
+  }
+}

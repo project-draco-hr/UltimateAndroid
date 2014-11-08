@@ -1,0 +1,6 @@
+{
+  int drawableSize=mIsPortrait ? getDrawableIntrinsicHeight() : getDrawableIntrinsicWidth();
+  int imageViewSize=mIsPortrait ? getImageViewHeight() : getImageViewWidth();
+  float scaleFactor=(float)imageViewSize / (float)drawableSize;
+  mMatrix.postScale(scaleFactor,scaleFactor);
+}

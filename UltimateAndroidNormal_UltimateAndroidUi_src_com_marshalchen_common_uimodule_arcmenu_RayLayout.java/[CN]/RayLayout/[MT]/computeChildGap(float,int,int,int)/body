@@ -1,0 +1,3 @@
+{
+  return Math.max((int)(width / childCount - childSize),minGap);
+}

@@ -1,0 +1,5 @@
+{
+  targetAngle=(int)(angle * 2.4f);
+  thread=new Thread(this);
+  thread.start();
+}

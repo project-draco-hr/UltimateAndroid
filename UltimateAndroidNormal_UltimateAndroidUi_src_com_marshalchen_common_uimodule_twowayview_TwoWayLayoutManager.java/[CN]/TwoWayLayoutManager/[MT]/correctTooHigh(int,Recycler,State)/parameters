@@ -1,0 +1,3 @@
+int childCount
+Recycler recycler
+State state

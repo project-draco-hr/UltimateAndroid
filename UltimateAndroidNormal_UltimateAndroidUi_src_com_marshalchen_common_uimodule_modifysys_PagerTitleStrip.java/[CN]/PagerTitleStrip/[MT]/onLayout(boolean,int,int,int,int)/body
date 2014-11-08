@@ -1,0 +1,6 @@
+{
+  if (mPager != null) {
+    final float offset=mLastKnownPositionOffset >= 0 ? mLastKnownPositionOffset : 0;
+    updateTextPositions(mLastKnownCurrentPage,offset,true);
+  }
+}

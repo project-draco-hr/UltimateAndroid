@@ -1,0 +1,4 @@
+{
+  if (null == imageView)   return 0;
+  return imageView.getHeight() - imageView.getPaddingTop() - imageView.getPaddingBottom();
+}

@@ -1,0 +1,4 @@
+{
+  imageRect.set(0,0,0,0);
+  bitmapRadius=0;
+}

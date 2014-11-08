@@ -1,0 +1,4 @@
+String DATABASE_PATH
+String dbName
+Context context
+int resource

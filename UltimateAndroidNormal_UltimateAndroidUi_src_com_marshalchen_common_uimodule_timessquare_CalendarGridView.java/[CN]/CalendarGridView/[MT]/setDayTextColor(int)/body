@@ -1,0 +1,6 @@
+{
+  for (int i=0; i < getChildCount(); i++) {
+    ColorStateList colors=getResources().getColorStateList(resId);
+    ((CalendarRowView)getChildAt(i)).setCellTextColor(colors);
+  }
+}

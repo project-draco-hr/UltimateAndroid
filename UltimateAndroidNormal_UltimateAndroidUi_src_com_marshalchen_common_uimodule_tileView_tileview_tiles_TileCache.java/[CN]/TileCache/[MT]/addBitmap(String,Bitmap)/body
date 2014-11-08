@@ -1,0 +1,4 @@
+{
+  addBitmapToMemoryCache(key,bitmap);
+  addBitmapToDiskCache(key,bitmap);
+}

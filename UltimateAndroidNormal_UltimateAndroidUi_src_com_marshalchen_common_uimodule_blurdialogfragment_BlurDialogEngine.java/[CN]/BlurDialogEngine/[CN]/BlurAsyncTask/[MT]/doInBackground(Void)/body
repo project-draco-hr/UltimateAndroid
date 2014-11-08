@@ -1,0 +1,7 @@
+{
+  blur(mBackground,mBackgroundView);
+  mBackground.recycle();
+  mBackgroundView.destroyDrawingCache();
+  mBackgroundView.setDrawingCacheEnabled(false);
+  return null;
+}

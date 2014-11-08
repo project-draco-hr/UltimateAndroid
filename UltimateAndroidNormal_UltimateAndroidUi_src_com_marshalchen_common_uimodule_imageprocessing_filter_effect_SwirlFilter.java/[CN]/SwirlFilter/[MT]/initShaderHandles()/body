@@ -1,0 +1,6 @@
+{
+  super.initShaderHandles();
+  centerHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_CENTER);
+  radiusHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_RADIUS);
+  angleHandle=GLES20.glGetUniformLocation(programHandle,UNIFORM_ANGLE);
+}

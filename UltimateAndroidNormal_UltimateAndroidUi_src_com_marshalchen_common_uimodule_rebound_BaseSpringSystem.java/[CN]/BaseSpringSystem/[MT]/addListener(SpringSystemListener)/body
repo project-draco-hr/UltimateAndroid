@@ -1,0 +1,6 @@
+{
+  if (newListener == null) {
+    throw new IllegalArgumentException("newListener is required");
+  }
+  mListeners.addListener(newListener);
+}

@@ -1,0 +1,8 @@
+{
+  mStartValue=currentValue;
+  mCurrentState.position=currentValue;
+  for (  SpringListener listener : mListeners) {
+    listener.onSpringUpdate(this);
+  }
+  return this;
+}

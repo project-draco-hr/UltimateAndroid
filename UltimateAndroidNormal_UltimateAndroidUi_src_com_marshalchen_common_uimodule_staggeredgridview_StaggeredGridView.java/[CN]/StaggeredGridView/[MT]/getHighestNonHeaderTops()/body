@@ -1,0 +1,16 @@
+{
+  int[] nonHeaderTops=new int[mColumnCount];
+  int childCount=getChildCount();
+  if (childCount > 0) {
+    for (int i=0; i < childCount; i++) {
+      View child=getChildAt(i);
+      if (child != null && child.getLayoutParams() != null && child.getLayoutParams() instanceof GridLayoutParams) {
+        GridLayoutParams lp=(GridLayoutParams)child.getLayoutParams();
+        if (lp.viewType != ITEM_VIEW_TYPE_HEADER_OR_FOOTER && child.getTop() < nonHeaderTops[lp.column]) {
+          nonHeaderTops[lp.column]=child.getTop();
+        }
+      }
+    }
+  }
+  return nonHeaderTops;
+}

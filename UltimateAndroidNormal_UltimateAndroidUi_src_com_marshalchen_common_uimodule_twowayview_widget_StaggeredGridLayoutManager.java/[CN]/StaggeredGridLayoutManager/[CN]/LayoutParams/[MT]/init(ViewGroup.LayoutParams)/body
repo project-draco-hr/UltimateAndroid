@@ -1,0 +1,9 @@
+{
+  if (other instanceof LayoutParams) {
+    final LayoutParams lp=(LayoutParams)other;
+    span=lp.span;
+  }
+ else {
+    span=DEFAULT_SPAN;
+  }
+}

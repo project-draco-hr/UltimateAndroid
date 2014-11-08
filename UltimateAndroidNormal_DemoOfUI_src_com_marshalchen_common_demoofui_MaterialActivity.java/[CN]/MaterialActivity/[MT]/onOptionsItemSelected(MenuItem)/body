@@ -1,0 +1,9 @@
+{
+  Logs.d("item---" + item.getItemId());
+switch (item.getItemId()) {
+case android.R.id.home:
+    mDrawerLayout.openDrawer(Gravity.START);
+  return true;
+}
+return super.onOptionsItemSelected(item);
+}

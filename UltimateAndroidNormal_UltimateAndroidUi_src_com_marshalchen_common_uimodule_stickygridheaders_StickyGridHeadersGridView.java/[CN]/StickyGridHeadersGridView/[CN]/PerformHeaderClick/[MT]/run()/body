@@ -1,0 +1,9 @@
+{
+  if (mDataChanged)   return;
+  if (mAdapter != null && mAdapter.getCount() > 0 && mClickMotionPosition != INVALID_POSITION && mClickMotionPosition < mAdapter.getCount() && sameWindow()) {
+    final View view=getHeaderAt(mClickMotionPosition);
+    if (view != null) {
+      performHeaderClick(view,headerViewPositionToId(mClickMotionPosition));
+    }
+  }
+}

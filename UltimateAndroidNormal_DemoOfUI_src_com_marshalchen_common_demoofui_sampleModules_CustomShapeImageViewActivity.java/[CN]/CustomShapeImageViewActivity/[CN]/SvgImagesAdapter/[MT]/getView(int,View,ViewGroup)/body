@@ -1,0 +1,3 @@
+{
+  return new CustomShapeSquareImageView(mContext,R.drawable.test,CustomShapeImageView.Shape.SVG,getItem(i));
+}

@@ -1,0 +1,8 @@
+{
+  if (state.hasTargetScrollPosition()) {
+    return getTotalSpace();
+  }
+ else {
+    return 0;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  final int childCount=getChildCount();
+  if (childCount == 0 || state.isPreLayout() || !supportsPredictiveItemAnimations()) {
+    return;
+  }
+  final List<ViewHolder> scrapList=recycler.getScrapList();
+  fillFromScrapList(scrapList,Direction.START);
+  fillFromScrapList(scrapList,Direction.END);
+}

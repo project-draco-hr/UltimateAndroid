@@ -1,0 +1,7 @@
+{
+  if (wakeLock != null && wakeLock.isHeld()) {
+    Logger.d("Releasing wake lock");
+    wakeLock.release();
+    wakeLock=null;
+  }
+}

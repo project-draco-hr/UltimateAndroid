@@ -1,0 +1,5 @@
+{
+  mPaused=false;
+  mLastFrameTime=System.currentTimeMillis();
+  invalidate();
+}

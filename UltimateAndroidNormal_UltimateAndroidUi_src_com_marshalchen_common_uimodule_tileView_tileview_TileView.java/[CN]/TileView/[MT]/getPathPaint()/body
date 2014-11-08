@@ -1,0 +1,3 @@
+{
+  return pathManager.getPaint();
+}

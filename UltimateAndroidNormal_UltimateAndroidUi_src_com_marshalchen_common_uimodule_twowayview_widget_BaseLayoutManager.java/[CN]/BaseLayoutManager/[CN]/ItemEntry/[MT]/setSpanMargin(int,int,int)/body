@@ -1,0 +1,6 @@
+{
+  if (spanMargins == null) {
+    spanMargins=new int[span];
+  }
+  spanMargins[index]=margin;
+}

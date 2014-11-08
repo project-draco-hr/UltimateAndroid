@@ -1,0 +1,11 @@
+{
+  TextPaint paint=mPaintHelper.getPaintFromHeap();
+  paint.setTypeface(Typeface.defaultFromStyle(span.getStyle()));
+  paint.setTextSize(mFlowTextView.getTextsize());
+  paint.setColor(mFlowTextView.getColor());
+  span.updateDrawState(paint);
+  span.updateMeasureState(paint);
+  HtmlObject obj=new HtmlObject(content,start,end,thisXOffset,paint);
+  obj.recycle=true;
+  return obj;
+}

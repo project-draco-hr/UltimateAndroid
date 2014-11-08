@@ -1,0 +1,4 @@
+int itemWidth
+int itemHeight
+int headerWidth
+int headerHeight

@@ -1,0 +1,4 @@
+{
+  mBorderWidth=widthPx;
+  return this;
+}

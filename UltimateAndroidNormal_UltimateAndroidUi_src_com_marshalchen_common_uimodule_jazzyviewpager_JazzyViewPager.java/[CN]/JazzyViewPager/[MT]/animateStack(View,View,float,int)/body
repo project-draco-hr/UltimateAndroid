@@ -1,0 +1,15 @@
+{
+  if (mState != State.IDLE) {
+    if (right != null) {
+      manageLayer(right,true);
+      mScale=(1 - SCALE_MAX) * positionOffset + SCALE_MAX;
+      mTrans=-getWidth() - getPageMargin() + positionOffsetPixels;
+      ViewHelper.setScaleX(right,mScale);
+      ViewHelper.setScaleY(right,mScale);
+      ViewHelper.setTranslationX(right,mTrans);
+    }
+    if (left != null) {
+      left.bringToFront();
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  TextView tv=null;
+  if (convertView != null) {
+    tv=(TextView)convertView;
+  }
+ else {
+    tv=new TextView(context);
+  }
+  tv.setFocusable(false);
+  tv.setBackgroundColor(Color.GRAY);
+  tv.setLayoutParams(new LayoutParams(300,headerHeight));
+  tv.setText("section header" + section);
+  return tv;
+}

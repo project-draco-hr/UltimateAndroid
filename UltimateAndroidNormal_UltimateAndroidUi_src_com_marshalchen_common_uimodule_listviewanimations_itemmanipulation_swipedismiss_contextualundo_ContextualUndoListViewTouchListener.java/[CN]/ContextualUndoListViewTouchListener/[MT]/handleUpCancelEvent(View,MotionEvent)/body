@@ -1,0 +1,42 @@
+{
+  mDisallowSwipe=false;
+  if (mVelocityTracker == null) {
+    return false;
+  }
+  float deltaX=motionEvent.getRawX() - mDownX;
+  mVelocityTracker.addMovement(motionEvent);
+  mVelocityTracker.computeCurrentVelocity(1000);
+  float velocityX=Math.abs(mVelocityTracker.getXVelocity());
+  float velocityY=Math.abs(mVelocityTracker.getYVelocity());
+  boolean dismiss=false;
+  boolean dismissRight=false;
+  final float absDeltaX=Math.abs(deltaX);
+  if (absDeltaX > mViewWidth / 2) {
+    dismiss=true;
+    dismissRight=deltaX > 0;
+  }
+ else   if (mMinFlingVelocity <= velocityX && velocityX <= mMaxFlingVelocity && velocityY < velocityX && absDeltaX > mSlop) {
+    dismiss=true;
+    dismissRight=mVelocityTracker.getXVelocity() > 0;
+  }
+  if (dismiss) {
+    final long itemId=((ContextualUndoView)mDownView).getItemId();
+    final int downPosition=mDownPosition;
+    animate(mDownView).translationX(dismissRight ? mViewWidth : -mViewWidth).alpha(0).setDuration(mAnimationTime).setListener(new AnimatorListenerAdapter(){
+      @Override public void onAnimationEnd(      final Animator animation){
+        mCallback.onViewSwiped(itemId,downPosition);
+      }
+    }
+);
+  }
+ else {
+    animate(mDownView).translationX(0).alpha(1).setDuration(mAnimationTime).setListener(null);
+  }
+  mVelocityTracker.recycle();
+  mVelocityTracker=null;
+  mDownX=0;
+  mDownView=null;
+  mDownPosition=AdapterView.INVALID_POSITION;
+  mSwiping=false;
+  return false;
+}

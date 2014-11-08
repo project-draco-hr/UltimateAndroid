@@ -1,0 +1,16 @@
+{
+  if (mCycleTask != null) {
+    mCycleTask.cancel();
+  }
+  if (mCycleTimer != null) {
+    mCycleTimer.cancel();
+  }
+  if (mResumingTimer != null) {
+    mResumingTimer.cancel();
+  }
+  if (mResumingTask != null) {
+    mResumingTask.cancel();
+  }
+  mAutoCycle=false;
+  mCycling=false;
+}

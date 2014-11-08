@@ -1,0 +1,58 @@
+{
+  final boolean isSelected=false;
+  final boolean updateChildSelected=isSelected != child.isSelected();
+  final int mode=mTouchMode;
+  final boolean isPressed=mode > TOUCH_MODE_DOWN && mode < TOUCH_MODE_SCROLLING && mMotionPosition == position;
+  final boolean updateChildPressed=isPressed != child.isPressed();
+  final boolean needToMeasure=!recycled || updateChildSelected || child.isLayoutRequested();
+  int itemViewType=mAdapter.getItemViewType(position);
+  LayoutParams layoutParams;
+  if (itemViewType == ITEM_VIEW_TYPE_HEADER_OR_FOOTER) {
+    layoutParams=generateWrapperLayoutParams(child);
+  }
+ else {
+    layoutParams=generateChildLayoutParams(child);
+  }
+  layoutParams.viewType=itemViewType;
+  layoutParams.position=position;
+  if (recycled || (layoutParams.recycledHeaderFooter && layoutParams.viewType == AdapterView.ITEM_VIEW_TYPE_HEADER_OR_FOOTER)) {
+    if (DBG)     Log.d(TAG,"setupChild attachViewToParent position:" + position);
+    attachViewToParent(child,flowDown ? -1 : 0,layoutParams);
+  }
+ else {
+    if (DBG)     Log.d(TAG,"setupChild addViewInLayout position:" + position);
+    if (layoutParams.viewType == AdapterView.ITEM_VIEW_TYPE_HEADER_OR_FOOTER) {
+      layoutParams.recycledHeaderFooter=true;
+    }
+    addViewInLayout(child,flowDown ? -1 : 0,layoutParams,true);
+  }
+  if (updateChildSelected) {
+    child.setSelected(isSelected);
+  }
+  if (updateChildPressed) {
+    child.setPressed(isPressed);
+  }
+  if (needToMeasure) {
+    if (DBG)     Log.d(TAG,"setupChild onMeasureChild position:" + position);
+    onMeasureChild(child,layoutParams);
+  }
+ else {
+    if (DBG)     Log.d(TAG,"setupChild cleanupLayoutState position:" + position);
+    cleanupLayoutState(child);
+  }
+  final int w=child.getMeasuredWidth();
+  final int h=child.getMeasuredHeight();
+  final int childTop=flowDown ? y : y - h;
+  if (DBG) {
+    Log.d(TAG,"setupChild position:" + position + " h:"+ h+ " w:"+ w);
+  }
+  final int childrenLeft=getChildLeft(position);
+  if (needToMeasure) {
+    final int childRight=childrenLeft + w;
+    final int childBottom=childTop + h;
+    onLayoutChild(child,position,flowDown,childrenLeft,childTop,childRight,childBottom);
+  }
+ else {
+    onOffsetChild(child,position,flowDown,childrenLeft,childTop);
+  }
+}

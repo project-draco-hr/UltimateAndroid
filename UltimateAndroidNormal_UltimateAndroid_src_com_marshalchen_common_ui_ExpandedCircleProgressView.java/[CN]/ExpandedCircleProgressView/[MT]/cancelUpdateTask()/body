@@ -1,0 +1,3 @@
+{
+  if (mUpdateTask != null)   mUpdateTask.cancel(true);
+}

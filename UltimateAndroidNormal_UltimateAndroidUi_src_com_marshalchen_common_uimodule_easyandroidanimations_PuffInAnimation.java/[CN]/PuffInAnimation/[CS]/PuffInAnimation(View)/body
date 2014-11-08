@@ -1,0 +1,6 @@
+{
+  this.view=view;
+  interpolator=new AccelerateDecelerateInterpolator();
+  duration=DURATION_LONG;
+  listener=null;
+}

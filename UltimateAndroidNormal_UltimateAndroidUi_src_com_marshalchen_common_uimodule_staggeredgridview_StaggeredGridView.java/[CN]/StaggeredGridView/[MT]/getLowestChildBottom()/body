@@ -1,0 +1,7 @@
+{
+  final int lastPosition=mFirstPosition + (getChildCount() - 1);
+  if (isHeaderOrFooter(lastPosition)) {
+    return super.getLowestChildBottom();
+  }
+  return getLowestPositionedBottom();
+}

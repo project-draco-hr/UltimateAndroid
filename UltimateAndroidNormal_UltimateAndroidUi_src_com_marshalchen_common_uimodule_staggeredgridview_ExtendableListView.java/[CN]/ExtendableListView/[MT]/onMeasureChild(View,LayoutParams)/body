@@ -1,0 +1,12 @@
+{
+  int childWidthSpec=ViewGroup.getChildMeasureSpec(mWidthMeasureSpec,getListPaddingLeft() + getListPaddingRight(),layoutParams.width);
+  int lpHeight=layoutParams.height;
+  int childHeightSpec;
+  if (lpHeight > 0) {
+    childHeightSpec=MeasureSpec.makeMeasureSpec(lpHeight,MeasureSpec.EXACTLY);
+  }
+ else {
+    childHeightSpec=MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
+  }
+  child.measure(childWidthSpec,childHeightSpec);
+}

@@ -1,0 +1,22 @@
+{
+  final int index=MotionEventCompat.findPointerIndex(event,mActivePointerId);
+  if (index < 0) {
+    Log.e(TAG,"onTouchMove could not find pointer with id " + mActivePointerId + " - did ExtendableListView receive an inconsistent "+ "event stream?");
+    return false;
+  }
+  final int y=(int)MotionEventCompat.getY(event,index);
+  if (mDataChanged) {
+    layoutChildren();
+  }
+switch (mTouchMode) {
+case TOUCH_MODE_DOWN:
+case TOUCH_MODE_TAP:
+case TOUCH_MODE_DONE_WAITING:
+    startScrollIfNeeded(y);
+  break;
+case TOUCH_MODE_SCROLLING:
+scrollIfNeeded(y);
+break;
+}
+return true;
+}

@@ -1,0 +1,7 @@
+{
+  StringBuffer sb=new StringBuffer();
+  String hex=null;
+  hex=TripleDES.Base64encoding(data,0);
+  sb.append(hex);
+  return sb.toString();
+}

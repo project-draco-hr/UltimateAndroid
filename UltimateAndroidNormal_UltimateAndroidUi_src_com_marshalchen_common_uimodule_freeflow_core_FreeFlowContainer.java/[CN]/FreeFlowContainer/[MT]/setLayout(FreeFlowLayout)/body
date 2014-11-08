@@ -1,0 +1,18 @@
+{
+  if (newLayout == mLayout || newLayout == null) {
+    return;
+  }
+  stopScrolling();
+  oldLayout=mLayout;
+  mLayout=newLayout;
+  shouldRecalculateScrollWhenComputingLayout=true;
+  if (mAdapter != null) {
+    mLayout.setAdapter(mAdapter);
+  }
+  dispatchLayoutChanging(oldLayout,newLayout);
+  markLayoutDirty=true;
+  viewPortX=0;
+  viewPortY=0;
+  logLifecycleEvent("Setting layout");
+  requestLayout();
+}

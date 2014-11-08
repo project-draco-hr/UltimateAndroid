@@ -1,0 +1,49 @@
+{
+  final ViewGroup parentView=(ViewGroup)view.getParent();
+  final FrameLayout slideInFrame=new FrameLayout(view.getContext());
+  final int positionView=parentView.indexOfChild(view);
+  slideInFrame.setLayoutParams(view.getLayoutParams());
+  slideInFrame.setClipChildren(true);
+  parentView.removeView(view);
+  slideInFrame.addView(view);
+  parentView.addView(slideInFrame,positionView);
+  ObjectAnimator slideInAnim=null;
+  float viewWidth=view.getWidth(), viewHeight=view.getHeight();
+switch (direction) {
+case DIRECTION_LEFT:
+    view.setTranslationX(-viewWidth);
+  slideInAnim=ObjectAnimator.ofFloat(view,View.TRANSLATION_X,slideInFrame.getX());
+break;
+case DIRECTION_RIGHT:
+view.setTranslationX(viewWidth);
+slideInAnim=ObjectAnimator.ofFloat(view,View.TRANSLATION_X,slideInFrame.getX());
+break;
+case DIRECTION_UP:
+view.setTranslationY(-viewHeight);
+slideInAnim=ObjectAnimator.ofFloat(view,View.TRANSLATION_Y,slideInFrame.getY());
+break;
+case DIRECTION_DOWN:
+view.setTranslationY(viewHeight);
+slideInAnim=ObjectAnimator.ofFloat(view,View.TRANSLATION_Y,slideInFrame.getY());
+break;
+default :
+break;
+}
+slideInAnim.setInterpolator(interpolator);
+slideInAnim.setDuration(duration);
+slideInAnim.addListener(new AnimatorListenerAdapter(){
+@Override public void onAnimationStart(Animator animation){
+view.setVisibility(View.VISIBLE);
+}
+@Override public void onAnimationEnd(Animator animation){
+slideInFrame.removeAllViews();
+view.setLayoutParams(slideInFrame.getLayoutParams());
+parentView.addView(view,positionView);
+if (getListener() != null) {
+getListener().onAnimationEnd(SlideInUnderneathAnimation.this);
+}
+}
+}
+);
+slideInAnim.start();
+}

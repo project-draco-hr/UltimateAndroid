@@ -1,0 +1,8 @@
+{
+  animationFactory.fadeInView(this,fadeInMillis,new AnimationFactory.AnimationStartListener(){
+    @Override public void onAnimationStart(){
+      setVisibility(View.VISIBLE);
+    }
+  }
+);
+}

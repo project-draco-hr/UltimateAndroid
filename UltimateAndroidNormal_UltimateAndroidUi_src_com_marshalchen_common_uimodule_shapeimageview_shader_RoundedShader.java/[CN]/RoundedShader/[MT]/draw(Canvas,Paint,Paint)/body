@@ -1,0 +1,7 @@
+{
+  canvas.drawRoundRect(borderRect,radius,radius,borderPaint);
+  canvas.save();
+  canvas.concat(matrix);
+  canvas.drawRoundRect(imageRect,bitmapRadius,bitmapRadius,imagePaint);
+  canvas.restore();
+}

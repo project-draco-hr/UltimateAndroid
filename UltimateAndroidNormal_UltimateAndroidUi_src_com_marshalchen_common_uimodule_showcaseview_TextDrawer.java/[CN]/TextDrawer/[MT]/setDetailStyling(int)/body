@@ -1,0 +1,4 @@
+{
+  mDetailSpan=new TextAppearanceSpan(this.context,styleId);
+  setContentText(mDetails);
+}

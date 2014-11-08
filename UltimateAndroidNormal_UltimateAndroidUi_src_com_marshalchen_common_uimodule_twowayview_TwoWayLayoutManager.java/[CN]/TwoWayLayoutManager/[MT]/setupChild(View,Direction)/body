@@ -1,0 +1,9 @@
+{
+  final ItemSelectionSupport itemSelection=ItemSelectionSupport.from(mRecyclerView);
+  if (itemSelection != null) {
+    final int position=getPosition(child);
+    itemSelection.setViewChecked(child,itemSelection.isItemChecked(position));
+  }
+  measureChild(child,direction);
+  layoutChild(child,direction);
+}

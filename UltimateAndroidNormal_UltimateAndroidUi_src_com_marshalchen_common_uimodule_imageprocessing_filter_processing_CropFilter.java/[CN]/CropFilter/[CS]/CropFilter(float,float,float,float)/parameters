@@ -1,0 +1,4 @@
+float minX
+float minY
+float maxX
+float maxY

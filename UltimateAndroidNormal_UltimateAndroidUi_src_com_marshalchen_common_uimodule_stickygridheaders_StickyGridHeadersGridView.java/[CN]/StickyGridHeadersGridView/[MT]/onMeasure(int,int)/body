@@ -1,0 +1,34 @@
+{
+  if (mNumColumns == AUTO_FIT) {
+    int numFittedColumns;
+    if (mColumnWidth > 0) {
+      int gridWidth=Math.max(MeasureSpec.getSize(widthMeasureSpec) - getPaddingLeft() - getPaddingRight(),0);
+      numFittedColumns=gridWidth / mColumnWidth;
+      if (numFittedColumns > 0) {
+        while (numFittedColumns != 1) {
+          if (numFittedColumns * mColumnWidth + (numFittedColumns - 1) * mHorizontalSpacing > gridWidth) {
+            numFittedColumns--;
+          }
+ else {
+            break;
+          }
+        }
+      }
+ else {
+        numFittedColumns=1;
+      }
+    }
+ else {
+      numFittedColumns=2;
+    }
+    mNumMeasuredColumns=numFittedColumns;
+  }
+ else {
+    mNumMeasuredColumns=mNumColumns;
+  }
+  if (mAdapter != null) {
+    mAdapter.setNumColumns(mNumMeasuredColumns);
+  }
+  measureHeader();
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+}

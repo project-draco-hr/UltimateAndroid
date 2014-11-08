@@ -1,0 +1,62 @@
+{
+  long startMs=System.currentTimeMillis();
+  mBlurredBackgroundLayoutParams=new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT);
+  Bitmap overlay=null;
+  int actionBarHeight=0;
+  try {
+    if (mHoldingActivity instanceof ActionBarActivity) {
+      ActionBar supportActionBar=((ActionBarActivity)mHoldingActivity).getSupportActionBar();
+      if (supportActionBar != null) {
+        actionBarHeight=supportActionBar.getHeight();
+      }
+    }
+ else     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+      android.app.ActionBar actionBar=mHoldingActivity.getActionBar();
+      if (actionBar != null) {
+        actionBarHeight=actionBar.getHeight();
+      }
+    }
+  }
+ catch (  NoClassDefFoundError e) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+      android.app.ActionBar actionBar=mHoldingActivity.getActionBar();
+      if (actionBar != null) {
+        actionBarHeight=actionBar.getHeight();
+      }
+    }
+  }
+  int statusBarHeight=0;
+  if ((mHoldingActivity.getWindow().getAttributes().flags & WindowManager.LayoutParams.FLAG_FULLSCREEN) == 0) {
+    statusBarHeight=getStatusBarHeight();
+  }
+  final int topOffset=actionBarHeight + statusBarHeight;
+  final int bottomOffset=getNavigationBarOffset();
+  Rect srcRect=new Rect(0,actionBarHeight + statusBarHeight,bkg.getWidth(),bkg.getHeight() - bottomOffset);
+  overlay=Bitmap.createBitmap((int)((view.getWidth()) / mDownScaleFactor),(int)((view.getMeasuredHeight() - topOffset - bottomOffset) / mDownScaleFactor),Bitmap.Config.RGB_565);
+  if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB || mHoldingActivity instanceof ActionBarActivity) {
+    mBlurredBackgroundLayoutParams.setMargins(0,actionBarHeight,0,0);
+    mBlurredBackgroundLayoutParams.gravity=Gravity.TOP;
+  }
+  Canvas canvas=new Canvas(overlay);
+  Paint paint=new Paint();
+  paint.setFlags(Paint.FILTER_BITMAP_FLAG);
+  final RectF destRect=new RectF(0,0,overlay.getWidth(),overlay.getHeight());
+  canvas.drawBitmap(bkg,srcRect,destRect,paint);
+  overlay=FastBlurHelper.doBlur(overlay,mBlurRadius,false);
+  if (mDebudEnable) {
+    String blurTime=(System.currentTimeMillis() - startMs) + " ms";
+    Log.d(TAG,"Radius : " + mBlurRadius);
+    Log.d(TAG,"Down Scale Factor : " + mDownScaleFactor);
+    Log.d(TAG,"Blurred achieved in : " + blurTime);
+    Log.d(TAG,"Allocation : " + bkg.getRowBytes() + "ko (screen capture) + "+ overlay.getRowBytes()+ "ko (FastBlur)");
+    Rect bounds=new Rect();
+    Canvas canvas1=new Canvas(overlay);
+    paint.setColor(Color.BLACK);
+    paint.setAntiAlias(true);
+    paint.setTextSize(20.0f);
+    paint.getTextBounds(blurTime,0,blurTime.length(),bounds);
+    canvas1.drawText(blurTime,2,bounds.height(),paint);
+  }
+  mBlurredBackgroundView=new ImageView(mHoldingActivity);
+  mBlurredBackgroundView.setImageDrawable(new BitmapDrawable(mHoldingActivity.getResources(),overlay));
+}

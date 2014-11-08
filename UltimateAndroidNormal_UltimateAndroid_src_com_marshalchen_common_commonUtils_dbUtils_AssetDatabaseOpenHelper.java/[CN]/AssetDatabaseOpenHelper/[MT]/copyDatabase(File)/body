@@ -1,0 +1,5 @@
+{
+  InputStream stream=context.getAssets().open(databaseName);
+  FileUtils.writeFile(dbFile,stream);
+  stream.close();
+}

@@ -1,0 +1,8 @@
+{
+  List<Date> selectedDates=new ArrayList<Date>();
+  for (  MonthCellDescriptor cal : selectedCells) {
+    selectedDates.add(cal.getDate());
+  }
+  Collections.sort(selectedDates);
+  return selectedDates;
+}

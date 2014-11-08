@@ -1,0 +1,3 @@
+BaseLayoutManager lm
+int itemPosition
+int itemCount

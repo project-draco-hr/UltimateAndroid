@@ -1,0 +1,3 @@
+{
+  this.photoViewAttacher=newPhotoViewAttacher;
+}

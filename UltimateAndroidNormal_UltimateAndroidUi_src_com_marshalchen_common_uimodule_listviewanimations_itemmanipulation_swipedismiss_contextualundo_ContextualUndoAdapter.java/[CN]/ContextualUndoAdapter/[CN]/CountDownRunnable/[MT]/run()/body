@@ -1,0 +1,12 @@
+{
+  long millisRemaining=mAutoDeleteDelayMillis - (System.currentTimeMillis() - mDismissStartMillis);
+  if (mCountDownFormatter != null) {
+    mCurrentRemovedView.updateCountDownTimer(mCountDownFormatter.getCountDownString(millisRemaining));
+  }
+  if (millisRemaining <= 0) {
+    performRemovalIfNecessary();
+  }
+ else {
+    mHandler.postDelayed(this,Math.min(millisRemaining,1000));
+  }
+}

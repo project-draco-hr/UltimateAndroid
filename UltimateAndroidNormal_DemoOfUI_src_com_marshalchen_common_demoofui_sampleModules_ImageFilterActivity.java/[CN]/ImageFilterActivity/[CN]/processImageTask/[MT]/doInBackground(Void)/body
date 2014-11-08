@@ -1,0 +1,27 @@
+{
+  Image img=null;
+  try {
+    Bitmap bitmap=BitmapFactory.decodeResource(activity.getResources(),R.drawable.image_filter_image);
+    img=new Image(bitmap);
+    if (filter != null) {
+      img=filter.process(img);
+      img.copyPixelsFromBuffer();
+    }
+    return img.getImage();
+  }
+ catch (  Exception e) {
+    if (img != null && img.destImage.isRecycled()) {
+      img.destImage.recycle();
+      img.destImage=null;
+      System.gc();
+    }
+  }
+ finally {
+    if (img != null && img.image.isRecycled()) {
+      img.image.recycle();
+      img.image=null;
+      System.gc();
+    }
+  }
+  return null;
+}

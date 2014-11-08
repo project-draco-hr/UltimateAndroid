@@ -1,0 +1,204 @@
+{
+switch (mItem.id) {
+case 1:
+    new BlindAnimation(card).animate();
+  break;
+case 2:
+new BlinkAnimation(card).setListener(new AnimationListener(){
+  @Override public void onAnimationEnd(  Animation animation){
+    mPlayView.setVisibility(View.VISIBLE);
+  }
+}
+).animate();
+break;
+case 3:
+new BounceAnimation(card).setNumOfBounces(3).setDuration(Animation.DURATION_SHORT).setListener(new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+).animate();
+break;
+case 4:
+new ExplodeAnimation(card).animate();
+break;
+case 5:
+new FadeInAnimation(card).animate();
+break;
+case 6:
+new FadeOutAnimation(card).animate();
+break;
+case 7:
+new FlipHorizontalAnimation(card).setListener(new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+).animate();
+break;
+case 8:
+new FlipHorizontalToAnimation(card).setFlipToView(card2).setInterpolator(new LinearInterpolator()).animate();
+break;
+case 9:
+new FlipVerticalAnimation(card).setListener(new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+).animate();
+break;
+case 10:
+new FlipVerticalToAnimation(card).setFlipToView(card2).setInterpolator(new LinearInterpolator()).animate();
+break;
+case 11:
+card2.setVisibility(View.VISIBLE);
+new UnfoldAnimation(card).setNumOfFolds(10).setDuration(1000).setOrientation(Orientation.HORIZONTAL).animate();
+break;
+case 12:
+card2.setVisibility(View.VISIBLE);
+new FoldAnimation(card).setNumOfFolds(10).setDuration(1000).setOrientation(Orientation.VERTICAL).animate();
+break;
+case 13:
+new HighlightAnimation(card).setListener(new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+).animate();
+break;
+case 14:
+ArrayList<Point> points=new ArrayList<>();
+points.add(new Point(0,100));
+points.add(new Point(50,0));
+points.add(new Point(100,100));
+points.add(new Point(0,50));
+points.add(new Point(100,50));
+points.add(new Point(0,100));
+points.add(new Point(50,50));
+new PathAnimation(card).setPoints(points).setDuration(2000).setListener(new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+).animate();
+break;
+case 15:
+new PuffInAnimation(card).animate();
+break;
+case 16:
+new PuffOutAnimation(card).animate();
+break;
+case 17:
+new RotationAnimation(card).setPivot(RotationAnimation.PIVOT_TOP_LEFT).setListener(new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+).animate();
+break;
+case 18:
+new ScaleInAnimation(card).animate();
+break;
+case 19:
+new ScaleOutAnimation(card).animate();
+break;
+case 20:
+new ShakeAnimation(card).setNumOfShakes(3).setDuration(Animation.DURATION_SHORT).setListener(new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+).animate();
+break;
+case 21:
+new SlideInAnimation(card).setDirection(Animation.DIRECTION_UP).animate();
+break;
+case 22:
+new SlideInUnderneathAnimation(card).setDirection(Animation.DIRECTION_DOWN).animate();
+break;
+case 23:
+new SlideOutAnimation(card).setDirection(Animation.DIRECTION_LEFT).animate();
+break;
+case 24:
+new SlideOutUnderneathAnimation(card).setDirection(Animation.DIRECTION_RIGHT).animate();
+break;
+case 25:
+new TransferAnimation(card).setDestinationView(target).animate();
+break;
+case 26:
+card.setImageResource(R.drawable.test_back2);
+final AnimationListener explodeAnimListener=new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+card.setVisibility(View.INVISIBLE);
+mPlayView.setVisibility(View.VISIBLE);
+}
+}
+;
+final AnimationListener bounceAnimListener=new AnimationListener(){
+@Override public void onAnimationEnd(Animation animation){
+new ExplodeAnimation(card2).setListener(explodeAnimListener).animate();
+}
+}
+;
+final ParallelAnimatorListener slideFadeInAnimListener=new ParallelAnimatorListener(){
+@Override public void onAnimationEnd(ParallelAnimator parallelAnimator){
+BounceAnimation bounceAnim=new BounceAnimation(card2);
+bounceAnim.setNumOfBounces(10);
+bounceAnim.setListener(bounceAnimListener);
+bounceAnim.animate();
+}
+}
+;
+final ParallelAnimatorListener slideFadeOutAnimListener=new ParallelAnimatorListener(){
+@Override public void onAnimationEnd(ParallelAnimator parallelAnimator){
+ParallelAnimator slideFadeInAnim=new ParallelAnimator();
+slideFadeInAnim.add(new SlideInAnimation(card2).setDirection(Animation.DIRECTION_RIGHT));
+slideFadeInAnim.add(new FadeInAnimation(card2));
+slideFadeInAnim.setDuration(1000);
+slideFadeInAnim.setListener(slideFadeInAnimListener);
+slideFadeInAnim.animate();
+}
+}
+;
+final ParallelAnimatorListener rotatePathAnimListener=new ParallelAnimatorListener(){
+@Override public void onAnimationEnd(ParallelAnimator parallelAnimator){
+ParallelAnimator slideFadeOutAnim=new ParallelAnimator();
+slideFadeOutAnim.add(new SlideOutAnimation(card).setDirection(Animation.DIRECTION_RIGHT));
+slideFadeOutAnim.add(new FadeOutAnimation(card));
+slideFadeOutAnim.setInterpolator(new LinearInterpolator());
+slideFadeOutAnim.setDuration(1000);
+slideFadeOutAnim.setListener(slideFadeOutAnimListener);
+slideFadeOutAnim.animate();
+}
+}
+;
+final ParallelAnimatorListener scaleFlipAnimListener=new ParallelAnimatorListener(){
+@Override public void onAnimationEnd(ParallelAnimator parallelAnimator){
+ArrayList<Point> parallelPoints=new ArrayList<>();
+parallelPoints.add(new Point(50,0));
+parallelPoints.add(new Point(100,50));
+parallelPoints.add(new Point(50,100));
+parallelPoints.add(new Point(0,50));
+parallelPoints.add(new Point(50,50));
+ParallelAnimator rotatePathAnim=new ParallelAnimator();
+rotatePathAnim.add(new PathAnimation(card).setPoints(parallelPoints));
+rotatePathAnim.add(new RotationAnimation(card));
+rotatePathAnim.setInterpolator(new LinearInterpolator());
+rotatePathAnim.setDuration(2000);
+rotatePathAnim.setListener(rotatePathAnimListener);
+rotatePathAnim.animate();
+}
+}
+;
+ParallelAnimator scaleFlipAnim=new ParallelAnimator();
+scaleFlipAnim.add(new ScaleInAnimation(card));
+scaleFlipAnim.add(new FlipHorizontalAnimation(card));
+scaleFlipAnim.add(new FlipVerticalAnimation(card));
+scaleFlipAnim.setDuration(2000);
+scaleFlipAnim.setListener(scaleFlipAnimListener);
+scaleFlipAnim.animate();
+break;
+default :
+break;
+}
+}

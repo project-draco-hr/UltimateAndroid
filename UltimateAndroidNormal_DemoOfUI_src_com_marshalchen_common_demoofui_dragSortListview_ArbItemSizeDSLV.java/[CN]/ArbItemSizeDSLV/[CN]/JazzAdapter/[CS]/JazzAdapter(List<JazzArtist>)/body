@@ -1,0 +1,3 @@
+{
+  super(ArbItemSizeDSLV.this,R.layout.drag_sort_listview_jazz_artist_list_item,R.id.artist_name_textview,artists);
+}

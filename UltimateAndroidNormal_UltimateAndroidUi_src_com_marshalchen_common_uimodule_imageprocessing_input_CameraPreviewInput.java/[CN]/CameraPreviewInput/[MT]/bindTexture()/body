@@ -1,0 +1,4 @@
+{
+  GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+  GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES,texture_in);
+}

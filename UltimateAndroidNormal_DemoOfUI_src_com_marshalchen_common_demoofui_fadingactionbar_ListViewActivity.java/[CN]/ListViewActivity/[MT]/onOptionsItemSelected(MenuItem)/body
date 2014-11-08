@@ -1,0 +1,7 @@
+{
+  if (item.getItemId() == R.id.action_change_dataset) {
+    changeDataset();
+    return true;
+  }
+  return super.onOptionsItemSelected(item);
+}

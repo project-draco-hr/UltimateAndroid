@@ -1,0 +1,4 @@
+{
+  this.maskY=maskY;
+  invalidate();
+}

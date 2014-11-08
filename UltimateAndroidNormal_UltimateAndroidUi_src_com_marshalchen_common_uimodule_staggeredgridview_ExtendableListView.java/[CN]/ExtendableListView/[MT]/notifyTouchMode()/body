@@ -1,0 +1,13 @@
+{
+switch (mTouchMode) {
+case TOUCH_MODE_SCROLLING:
+    reportScrollStateChange(OnScrollListener.SCROLL_STATE_TOUCH_SCROLL);
+  break;
+case TOUCH_MODE_FLINGING:
+reportScrollStateChange(OnScrollListener.SCROLL_STATE_FLING);
+break;
+case TOUCH_MODE_IDLE:
+reportScrollStateChange(OnScrollListener.SCROLL_STATE_IDLE);
+break;
+}
+}

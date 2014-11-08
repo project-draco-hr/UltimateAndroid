@@ -1,0 +1,6 @@
+{
+  super.onFinishInflate();
+  mGreenView1=(TextView)findViewById(R.id.greenView1);
+  mGreenView1TranslationY=mGreenView1.getTranslationY();
+  mGreenColor=getResources().getColor(android.R.color.holo_green_light);
+}

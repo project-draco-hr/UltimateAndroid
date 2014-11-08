@@ -1,0 +1,10 @@
+{
+  int len=mItemEntries.length;
+  while (len <= position) {
+    len*=2;
+  }
+  if (len > mAdapterSize) {
+    len=mAdapterSize;
+  }
+  return len;
+}

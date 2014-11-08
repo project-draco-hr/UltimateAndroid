@@ -1,0 +1,5 @@
+StyleSpan span
+String content
+int start
+int end
+float thisXOffset

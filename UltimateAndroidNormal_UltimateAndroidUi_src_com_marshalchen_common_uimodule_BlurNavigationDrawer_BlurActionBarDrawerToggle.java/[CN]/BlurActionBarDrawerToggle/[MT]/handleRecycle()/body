@@ -1,0 +1,10 @@
+{
+  Drawable drawable=mBlurredImageView.getDrawable();
+  if (drawable instanceof BitmapDrawable) {
+    BitmapDrawable bitmapDrawable=((BitmapDrawable)drawable);
+    Bitmap bitmap=bitmapDrawable.getBitmap();
+    if (bitmap != null)     bitmap.recycle();
+    mBlurredImageView.setImageBitmap(null);
+  }
+  prepareToRender=true;
+}

@@ -1,0 +1,14 @@
+{
+  if (croppedImage != null) {
+    final Bitmap b=croppedImage;
+    CropUtil.startBackgroundJob(this,null,"crop__saving",new Runnable(){
+      public void run(){
+        saveOutput(b);
+      }
+    }
+,handler);
+  }
+ else {
+    finish();
+  }
+}

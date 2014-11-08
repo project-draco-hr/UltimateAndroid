@@ -1,0 +1,24 @@
+{
+  if (mChoiceMode == CHOICE_MODE_MULTIPLE_MODAL) {
+    if (mChoiceActionMode == null && (mChoiceActionMode=startActionMode(mMultiChoiceModeCallback)) != null) {
+      setItemChecked(beginTouchAt.itemSection,beginTouchAt.itemIndex,true);
+      updateOnScreenCheckedViews();
+      performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+    }
+    return true;
+  }
+  boolean handled=false;
+  final long longPressId=mAdapter.getItemId(beginTouchAt.itemSection,beginTouchAt.itemSection);
+  if (mOnItemLongClickListener != null) {
+    handled=mOnItemLongClickListener.onItemLongClick(this,beginTouchAt.view,beginTouchAt.itemSection,beginTouchAt.itemIndex,longPressId);
+  }
+  if (!handled) {
+    mContextMenuInfo=createContextMenuInfo(beginTouchAt.view,beginTouchAt.itemSection,beginTouchAt.itemIndex,longPressId);
+    handled=super.showContextMenuForChild(this);
+  }
+  if (handled) {
+    updateOnScreenCheckedViews();
+    performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+  }
+  return handled;
+}

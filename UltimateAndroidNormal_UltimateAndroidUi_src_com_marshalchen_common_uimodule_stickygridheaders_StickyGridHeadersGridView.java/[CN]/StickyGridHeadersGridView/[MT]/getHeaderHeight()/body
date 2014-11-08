@@ -1,0 +1,6 @@
+{
+  if (mStickiedHeader != null) {
+    return mStickiedHeader.getMeasuredHeight();
+  }
+  return 0;
+}

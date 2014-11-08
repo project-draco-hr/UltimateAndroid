@@ -1,0 +1,8 @@
+{
+  Bitmap bitmap=Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);
+  Canvas canvas=new Canvas(bitmap);
+  Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  paint.setColor(Color.BLACK);
+  canvas.drawRect(new RectF(0.0f,0.0f,width,height),paint);
+  return bitmap;
+}

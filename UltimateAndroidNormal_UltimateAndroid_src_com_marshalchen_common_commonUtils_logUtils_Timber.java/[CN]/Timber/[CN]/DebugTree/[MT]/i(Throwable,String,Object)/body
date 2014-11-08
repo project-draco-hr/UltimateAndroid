@@ -1,0 +1,3 @@
+{
+  throwShade(Log.INFO,formatString(message,args),t);
+}

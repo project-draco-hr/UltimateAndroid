@@ -1,0 +1,4 @@
+{
+  videoTex.updateTexImage();
+  super.drawFrame();
+}

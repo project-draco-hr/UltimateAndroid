@@ -1,0 +1,7 @@
+{
+  View last=getChildAt(getChildCount() - 1);
+  if (last == null) {
+    return 0;
+  }
+  return last.getBottom();
+}

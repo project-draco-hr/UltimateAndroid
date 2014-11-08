@@ -1,0 +1,6 @@
+{
+  List<Integer> colors=new ArrayList<Integer>();
+  colors.add(Color.WHITE);
+  colors.add(Color.BLACK);
+  return new Gradient(colors);
+}

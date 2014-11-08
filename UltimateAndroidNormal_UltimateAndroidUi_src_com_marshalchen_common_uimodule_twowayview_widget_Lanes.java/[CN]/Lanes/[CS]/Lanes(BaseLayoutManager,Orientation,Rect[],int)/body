@@ -1,0 +1,10 @@
+{
+  mLayout=layout;
+  mIsVertical=(orientation == Orientation.VERTICAL);
+  mLanes=lanes;
+  mLaneSize=laneSize;
+  mSavedLanes=new Rect[mLanes.length];
+  for (int i=0; i < mLanes.length; i++) {
+    mSavedLanes[i]=new Rect();
+  }
+}

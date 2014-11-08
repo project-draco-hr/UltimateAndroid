@@ -1,0 +1,5 @@
+{
+  mIndicatorColor=color;
+  mTabPaint.setColor(mIndicatorColor);
+  invalidate();
+}

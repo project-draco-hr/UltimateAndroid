@@ -1,0 +1,9 @@
+{
+  _copy=new ByteArrayOutputStream();
+  int chunk;
+  byte[] data=new byte[256];
+  while (-1 != (chunk=_is.read(data))) {
+    _copy.write(data,0,chunk);
+  }
+  _copy.flush();
+}

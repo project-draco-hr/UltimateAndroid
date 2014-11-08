@@ -1,0 +1,8 @@
+{
+  if (mState != State.IDLE) {
+    mRot=(float)(1 - Math.cos(2 * Math.PI * positionOffset)) / 2 * 30.0f;
+    ViewHelper.setRotationY(this,mState == State.GOING_RIGHT ? mRot : -mRot);
+    ViewHelper.setPivotX(this,getMeasuredWidth() * 0.5f);
+    ViewHelper.setPivotY(this,getMeasuredHeight() * 0.5f);
+  }
+}

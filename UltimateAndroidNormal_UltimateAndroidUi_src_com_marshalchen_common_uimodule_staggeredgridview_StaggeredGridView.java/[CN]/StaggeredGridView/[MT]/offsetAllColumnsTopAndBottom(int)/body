@@ -1,0 +1,7 @@
+{
+  if (offset != 0) {
+    for (int i=0; i < mColumnCount; i++) {
+      offsetColumnTopAndBottom(offset,i);
+    }
+  }
+}

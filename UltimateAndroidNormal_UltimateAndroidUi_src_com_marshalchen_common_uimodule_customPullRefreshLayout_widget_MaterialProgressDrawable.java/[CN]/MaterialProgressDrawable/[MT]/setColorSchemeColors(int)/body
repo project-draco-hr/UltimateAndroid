@@ -1,0 +1,4 @@
+{
+  mRing.setColors(colors);
+  mRing.setColorIndex(0);
+}

@@ -1,0 +1,6 @@
+{
+  this.textView=new WeakReference<>(textView);
+  this.delay=waveCharOffset * position;
+  this.loopDuration=loopDuration;
+  this.animatedRange=animatedRange;
+}

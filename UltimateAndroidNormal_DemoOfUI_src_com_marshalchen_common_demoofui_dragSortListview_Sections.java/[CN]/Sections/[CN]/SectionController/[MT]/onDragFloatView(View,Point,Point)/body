@@ -1,0 +1,30 @@
+{
+  final int first=mDslv.getFirstVisiblePosition();
+  final int lvDivHeight=mDslv.getDividerHeight();
+  if (origHeight == -1) {
+    origHeight=floatView.getHeight();
+  }
+  View div=mDslv.getChildAt(mDivPos - first);
+  if (touchPoint.x > mDslv.getWidth() / 2) {
+    float scale=touchPoint.x - mDslv.getWidth() / 2;
+    scale/=(float)(mDslv.getWidth() / 5);
+    ViewGroup.LayoutParams lp=floatView.getLayoutParams();
+    lp.height=Math.max(origHeight,(int)(scale * origHeight));
+    Log.d("mobeta","setting height " + lp.height);
+    floatView.setLayoutParams(lp);
+  }
+  if (div != null) {
+    if (mPos > mDivPos) {
+      final int limit=div.getBottom() + lvDivHeight;
+      if (floatPoint.y < limit) {
+        floatPoint.y=limit;
+      }
+    }
+ else {
+      final int limit=div.getTop() - lvDivHeight - floatView.getHeight();
+      if (floatPoint.y > limit) {
+        floatPoint.y=limit;
+      }
+    }
+  }
+}

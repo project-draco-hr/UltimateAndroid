@@ -1,0 +1,14 @@
+{
+switch (item.getItemId()) {
+case R.id.menu_horizontal_flip_view:
+    flipViewListVertical.setVisibility(View.GONE);
+  flipViewListHorizontal.setVisibility(View.VISIBLE);
+return true;
+case R.id.menu_vertical_flip_view:
+flipViewListVertical.setVisibility(View.VISIBLE);
+flipViewListHorizontal.setVisibility(View.GONE);
+return true;
+default :
+return super.onOptionsItemSelected(item);
+}
+}

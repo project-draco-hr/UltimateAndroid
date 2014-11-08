@@ -1,0 +1,6 @@
+{
+  super.setImageResource(resId);
+  if (null != mAttacher) {
+    mAttacher.update();
+  }
+}

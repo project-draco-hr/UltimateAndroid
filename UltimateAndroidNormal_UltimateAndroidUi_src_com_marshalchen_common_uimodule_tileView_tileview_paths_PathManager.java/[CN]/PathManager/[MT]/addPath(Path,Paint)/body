@@ -1,0 +1,6 @@
+{
+  DrawablePath drawablePath=new DrawablePath();
+  drawablePath.path=path;
+  drawablePath.paint=paint;
+  return addPath(drawablePath);
+}

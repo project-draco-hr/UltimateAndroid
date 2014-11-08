@@ -1,0 +1,20 @@
+{
+  int lastPosition=mFirstPosition + childCount - 1;
+  if (lastPosition == mItemCount - 1 && childCount > 0) {
+    final int lastBottom=getLowestChildBottom();
+    final int end=(getBottom() - getTop()) - getListPaddingBottom();
+    int bottomOffset=end - lastBottom;
+    final int firstTop=getHighestChildTop();
+    if (bottomOffset > 0 && (mFirstPosition > 0 || firstTop < getListPaddingTop())) {
+      if (mFirstPosition == 0) {
+        bottomOffset=Math.min(bottomOffset,getListPaddingTop() - firstTop);
+      }
+      offsetChildrenTopAndBottom(bottomOffset);
+      if (mFirstPosition > 0) {
+        int previousPosition=mFirstPosition - 1;
+        fillUp(previousPosition,getNextChildUpsBottom(previousPosition));
+        adjustViewsUpOrDown();
+      }
+    }
+  }
+}

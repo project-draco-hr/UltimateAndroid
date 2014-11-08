@@ -1,0 +1,23 @@
+{
+switch (action) {
+case (MotionEvent.ACTION_DOWN):
+    return "action_down";
+case (MotionEvent.ACTION_UP):
+  return "action_down";
+case (MotionEvent.ACTION_CANCEL):
+return "action_down";
+case (MotionEvent.ACTION_MOVE):
+return "action_move";
+case (MotionEvent.ACTION_OUTSIDE):
+return "action_outside";
+case (MotionEvent.ACTION_HOVER_ENTER):
+return "action_hover_enter";
+case (MotionEvent.ACTION_HOVER_EXIT):
+return "action_hover_exit";
+case (MotionEvent.ACTION_HOVER_MOVE):
+return "action_hover_move";
+case (MotionEvent.ACTION_MASK):
+return "action_mask";
+}
+return "unknown action event";
+}

@@ -1,0 +1,5 @@
+{
+  Logger.d("Deleting all teams");
+  SQLiteDatabase db=getWritableDatabase();
+  db.delete(TEAMS_TABLE_NAME,null,null);
+}

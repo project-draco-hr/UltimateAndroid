@@ -1,0 +1,22 @@
+{
+  if (mState != State.IDLE) {
+    if (left != null) {
+      manageLayer(left,true);
+      mRot=(up ? 1 : -1) * (ROT_MAX * positionOffset);
+      mTrans=(up ? -1 : 1) * (float)(getMeasuredHeight() - getMeasuredHeight() * Math.cos(mRot * Math.PI / 180.0f));
+      ViewHelper.setPivotX(left,left.getMeasuredWidth() * 0.5f);
+      ViewHelper.setPivotY(left,up ? 0 : left.getMeasuredHeight());
+      ViewHelper.setTranslationY(left,mTrans);
+      ViewHelper.setRotation(left,mRot);
+    }
+    if (right != null) {
+      manageLayer(right,true);
+      mRot=(up ? 1 : -1) * (-ROT_MAX + ROT_MAX * positionOffset);
+      mTrans=(up ? -1 : 1) * (float)(getMeasuredHeight() - getMeasuredHeight() * Math.cos(mRot * Math.PI / 180.0f));
+      ViewHelper.setPivotX(right,right.getMeasuredWidth() * 0.5f);
+      ViewHelper.setPivotY(right,up ? 0 : right.getMeasuredHeight());
+      ViewHelper.setTranslationY(right,mTrans);
+      ViewHelper.setRotation(right,mRot);
+    }
+  }
+}

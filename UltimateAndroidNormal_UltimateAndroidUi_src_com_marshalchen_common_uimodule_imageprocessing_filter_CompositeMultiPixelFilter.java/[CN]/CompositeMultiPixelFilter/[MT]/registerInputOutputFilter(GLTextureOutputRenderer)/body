@@ -1,0 +1,4 @@
+{
+  inputOutputFilters.add(filter);
+  registerFilter(filter);
+}

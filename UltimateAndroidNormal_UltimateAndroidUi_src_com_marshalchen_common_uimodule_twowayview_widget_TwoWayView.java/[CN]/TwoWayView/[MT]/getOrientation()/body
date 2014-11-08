@@ -1,0 +1,4 @@
+{
+  TwoWayLayoutManager layout=(TwoWayLayoutManager)getLayoutManager();
+  return layout.getOrientation();
+}

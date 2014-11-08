@@ -1,0 +1,3 @@
+{
+  imageView.setScaleType(scale);
+}

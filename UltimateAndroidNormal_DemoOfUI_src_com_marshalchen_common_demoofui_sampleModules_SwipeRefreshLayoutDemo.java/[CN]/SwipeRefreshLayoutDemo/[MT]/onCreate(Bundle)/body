@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.swipe_refresh_layout_demo);
+  enableSwipe();
+}
