@@ -1,0 +1,3 @@
+{
+  super(getActivity(),getItemLayout(),R.id.text,artists);
+}

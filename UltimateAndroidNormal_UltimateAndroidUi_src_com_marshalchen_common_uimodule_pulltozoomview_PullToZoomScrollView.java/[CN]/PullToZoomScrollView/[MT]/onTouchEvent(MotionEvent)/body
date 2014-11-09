@@ -1,0 +1,75 @@
+{
+  Log.d(TAG,"onTouchEvent --> action = " + (0xFF & ev.getAction()));
+  if (isHeaderTop && isEnableZoom) {
+switch (0xFF & ev.getAction()) {
+case MotionEvent.ACTION_DOWN:
+case MotionEvent.ACTION_OUTSIDE:
+      if (!mScalingRunnable.isFinished()) {
+        mScalingRunnable.abortAnimation();
+      }
+    mLastMotionY=ev.getY();
+  mActivePointerId=ev.getPointerId(0);
+mMaxScale=(mScreenHeight / mZoomHeight);
+mLastScale=(mZoomContainer.getBottom() / mZoomHeight);
+if (onScrollViewZoomListener != null) {
+onScrollViewZoomListener.onStart();
+}
+break;
+case MotionEvent.ACTION_MOVE:
+Log.d(TAG,"mActivePointerId = " + mActivePointerId);
+int j=ev.findPointerIndex(this.mActivePointerId);
+if (j == -1) {
+Log.e(TAG,"Invalid pointerId = " + mActivePointerId + " in onTouchEvent");
+}
+ else {
+if (mLastMotionY == -1.0F) {
+mLastMotionY=ev.getY(j);
+}
+if (mZoomContainer.getBottom() >= mZoomHeight) {
+LayoutParams localLayoutParams=(LayoutParams)mZoomContainer.getLayoutParams();
+ViewGroup.LayoutParams headLayoutParams=mHeaderContainer.getLayoutParams();
+float f=((ev.getY(j) - mLastMotionY + mZoomContainer.getBottom()) / mZoomHeight - mLastScale) / 2.0F + mLastScale;
+if ((mLastScale <= 1.0D) && (f < mLastScale)) {
+localLayoutParams.height=mZoomHeight;
+localLayoutParams.width=mZoomWidth;
+localLayoutParams.gravity=Gravity.CENTER;
+headLayoutParams.height=mZoomHeight;
+mZoomContainer.setLayoutParams(localLayoutParams);
+mHeaderContainer.setLayoutParams(headLayoutParams);
+return super.onTouchEvent(ev);
+}
+mLastScale=Math.min(Math.max(f,1.0F),mMaxScale);
+localLayoutParams.height=((int)(mZoomHeight * mLastScale));
+localLayoutParams.width=((int)(mZoomWidth * mLastScale));
+localLayoutParams.gravity=Gravity.CENTER;
+headLayoutParams.height=((int)(mZoomHeight * mLastScale));
+if (localLayoutParams.height < mScreenHeight) {
+mZoomContainer.setLayoutParams(localLayoutParams);
+mHeaderContainer.setLayoutParams(headLayoutParams);
+}
+mLastMotionY=ev.getY(j);
+return true;
+}
+this.mLastMotionY=ev.getY(j);
+}
+break;
+case MotionEvent.ACTION_UP:
+reset();
+endScaling();
+if (onScrollViewZoomListener != null) {
+onScrollViewZoomListener.onFinish();
+}
+break;
+case MotionEvent.ACTION_CANCEL:
+int i=ev.getActionIndex();
+mLastMotionY=ev.getY(i);
+mActivePointerId=ev.getPointerId(i);
+break;
+case MotionEvent.ACTION_POINTER_DOWN:
+onSecondaryPointerUp(ev);
+mLastMotionY=ev.getY(ev.findPointerIndex(mActivePointerId));
+break;
+}
+}
+return super.onTouchEvent(ev);
+}

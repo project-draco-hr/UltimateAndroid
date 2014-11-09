@@ -1,0 +1,5 @@
+{
+  if (mTransientStateViews != null) {
+    mTransientStateViews.clear();
+  }
+}

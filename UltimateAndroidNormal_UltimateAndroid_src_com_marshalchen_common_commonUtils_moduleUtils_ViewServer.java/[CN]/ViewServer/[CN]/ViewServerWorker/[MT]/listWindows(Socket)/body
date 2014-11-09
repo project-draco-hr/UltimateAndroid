@@ -1,0 +1,32 @@
+{
+  boolean result=true;
+  BufferedWriter out=null;
+  try {
+    mWindowsLock.readLock().lock();
+    OutputStream clientStream=client.getOutputStream();
+    out=new BufferedWriter(new OutputStreamWriter(clientStream),8 * 1024);
+    for (    Entry<View,String> entry : mWindows.entrySet()) {
+      out.write(Integer.toHexString(System.identityHashCode(entry.getKey())));
+      out.write(' ');
+      out.append(entry.getValue());
+      out.write('\n');
+    }
+    out.write("DONE.\n");
+    out.flush();
+  }
+ catch (  Exception e) {
+    result=false;
+  }
+ finally {
+    mWindowsLock.readLock().unlock();
+    if (out != null) {
+      try {
+        out.close();
+      }
+ catch (      IOException e) {
+        result=false;
+      }
+    }
+  }
+  return result;
+}

@@ -1,0 +1,4 @@
+{
+  mItemAdapter.notifyDataSetChanged();
+  super.onPostCreate(savedInstanceState);
+}

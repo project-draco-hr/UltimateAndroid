@@ -1,0 +1,15 @@
+{
+  int currHeight=mMap.get(position,-1);
+  if (currHeight != height) {
+    if (currHeight == -1) {
+      if (mMap.size() == mMaxSize) {
+        mMap.delete(mOrder.remove(0));
+      }
+    }
+ else {
+      mOrder.remove((Integer)position);
+    }
+    mMap.put(position,height);
+    mOrder.add(position);
+  }
+}

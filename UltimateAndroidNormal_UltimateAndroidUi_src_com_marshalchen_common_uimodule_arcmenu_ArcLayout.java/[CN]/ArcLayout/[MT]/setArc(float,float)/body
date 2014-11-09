@@ -1,0 +1,8 @@
+{
+  if (mFromDegrees == fromDegrees && mToDegrees == toDegrees) {
+    return;
+  }
+  mFromDegrees=fromDegrees;
+  mToDegrees=toDegrees;
+  requestLayout();
+}

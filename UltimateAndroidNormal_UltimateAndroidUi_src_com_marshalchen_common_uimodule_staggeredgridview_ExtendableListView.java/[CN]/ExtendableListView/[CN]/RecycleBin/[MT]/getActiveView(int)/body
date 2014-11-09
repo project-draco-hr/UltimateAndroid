@@ -1,0 +1,10 @@
+{
+  int index=position - mFirstActivePosition;
+  final View[] activeViews=mActiveViews;
+  if (index >= 0 && index < activeViews.length) {
+    final View match=activeViews[index];
+    activeViews[index]=null;
+    return match;
+  }
+  return null;
+}

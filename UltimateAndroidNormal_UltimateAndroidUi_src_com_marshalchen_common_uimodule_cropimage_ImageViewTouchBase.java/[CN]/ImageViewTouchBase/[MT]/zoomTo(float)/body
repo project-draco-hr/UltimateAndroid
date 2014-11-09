@@ -1,0 +1,5 @@
+{
+  float cx=getWidth() / 2F;
+  float cy=getHeight() / 2F;
+  zoomTo(scale,cx,cy);
+}

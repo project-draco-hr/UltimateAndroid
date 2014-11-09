@@ -1,0 +1,8 @@
+{
+  super(2);
+  this.intensity=intensity;
+  blur=new GaussianBlurFilter(blurSize);
+  blur.addTarget(this);
+  registerInitialFilter(blur);
+  registerTerminalFilter(blur);
+}

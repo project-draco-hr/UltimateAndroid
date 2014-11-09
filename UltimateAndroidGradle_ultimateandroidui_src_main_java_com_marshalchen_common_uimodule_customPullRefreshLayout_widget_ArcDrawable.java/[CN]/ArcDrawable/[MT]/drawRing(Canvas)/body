@@ -1,0 +1,3 @@
+{
+  canvas.drawArc(mBounds,270,mAngle,true,mPaint);
+}

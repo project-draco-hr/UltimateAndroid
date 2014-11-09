@@ -1,0 +1,7 @@
+{
+  ContextualUndoView result=currentRemovedView;
+  if (result == null || result.getParent() == null || result.getItemId() != itemId || AdapterViewUtil.getPositionForView(getAbsListView(),result) < 0) {
+    result=getContextualUndoView(itemId);
+  }
+  return result;
+}

@@ -1,9 +1,0 @@
-{
-  if (borderWidth == width) {
-    return;
-  }
-  borderWidth=width;
-  updateDrawableAttrs();
-  updateBackgroundDrawableAttrs(false);
-  invalidate();
-}

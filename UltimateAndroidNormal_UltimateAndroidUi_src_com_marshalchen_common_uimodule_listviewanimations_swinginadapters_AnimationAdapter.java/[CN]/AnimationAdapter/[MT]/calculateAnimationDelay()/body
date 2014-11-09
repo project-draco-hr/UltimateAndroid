@@ -1,0 +1,18 @@
+{
+  long delay;
+  int lastVisiblePosition=getAbsListView().getLastVisiblePosition();
+  int firstVisiblePosition=getAbsListView().getFirstVisiblePosition();
+  int numberOfItemsOnScreen=lastVisiblePosition - firstVisiblePosition;
+  int numberOfAnimatedItems=mLastAnimatedPosition - mFirstAnimatedPosition;
+  if (numberOfItemsOnScreen + 1 < numberOfAnimatedItems) {
+    delay=getAnimationDelayMillis();
+    if (getAbsListView() instanceof GridView && Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+      delay+=getAnimationDelayMillis() * ((mLastAnimatedPosition + 1) % ((GridView)getAbsListView()).getNumColumns());
+    }
+  }
+ else {
+    long delaySinceStart=(mLastAnimatedPosition - mFirstAnimatedPosition + 1) * getAnimationDelayMillis();
+    delay=mAnimationStartMillis + getInitialDelayMillis() + delaySinceStart - System.currentTimeMillis();
+  }
+  return Math.max(0,delay);
+}

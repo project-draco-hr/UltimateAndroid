@@ -1,0 +1,10 @@
+{
+  if (mSkippedScrap == null) {
+    return;
+  }
+  final int count=mSkippedScrap.size();
+  for (int i=0; i < count; i++) {
+    removeDetachedView(mSkippedScrap.get(i),false);
+  }
+  mSkippedScrap.clear();
+}

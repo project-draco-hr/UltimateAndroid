@@ -1,0 +1,19 @@
+{
+  if (alreadyRendered.contains(tile)) {
+    return;
+  }
+  tile.render(getContext());
+  alreadyRendered.add(tile);
+  ImageView imageView=tile.getImageView();
+  LayoutParams layoutParams=getLayoutFromTile(tile);
+  currentTileGroup.addView(imageView,layoutParams);
+  postInvalidate();
+  if (transitionsEnabled) {
+    if (transitionDuration > 0) {
+      AlphaAnimation fadeIn=new AlphaAnimation(0f,1f);
+      fadeIn.setDuration(transitionDuration);
+      fadeIn.setAnimationListener(transitionListener);
+      imageView.startAnimation(fadeIn);
+    }
+  }
+}

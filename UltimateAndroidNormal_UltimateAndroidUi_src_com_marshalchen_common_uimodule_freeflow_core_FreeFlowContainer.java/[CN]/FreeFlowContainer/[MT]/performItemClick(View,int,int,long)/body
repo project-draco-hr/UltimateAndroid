@@ -1,0 +1,32 @@
+{
+  boolean handled=false;
+  boolean dispatchItemClick=true;
+  if (mChoiceMode != CHOICE_MODE_NONE) {
+    handled=true;
+    boolean checkedStateChanged=false;
+    if (mChoiceMode == CHOICE_MODE_MULTIPLE || (mChoiceMode == CHOICE_MODE_MULTIPLE_MODAL && mChoiceActionMode != null)) {
+      boolean checked=isChecked(section,position);
+      checked=!checked;
+      setCheckedValue(section,position,checked);
+      if (mChoiceActionMode != null) {
+        mMultiChoiceModeCallback.onItemCheckedStateChanged(mChoiceActionMode,section,position,id,checked);
+        dispatchItemClick=false;
+      }
+      checkedStateChanged=true;
+    }
+ else     if (mChoiceMode == CHOICE_MODE_SINGLE) {
+      boolean checked=!isChecked(section,position);
+      if (checked) {
+        setCheckedValue(section,position,checked);
+      }
+      checkedStateChanged=true;
+    }
+    if (checkedStateChanged) {
+      updateOnScreenCheckedViews();
+    }
+  }
+  if (dispatchItemClick) {
+    handled|=super.performItemClick(view,section,position,id);
+  }
+  return handled;
+}

@@ -1,0 +1,7 @@
+{
+  if (foldFactor != mFoldFactor) {
+    mFoldFactor=foldFactor;
+    calculateMatrices();
+    invalidate();
+  }
+}

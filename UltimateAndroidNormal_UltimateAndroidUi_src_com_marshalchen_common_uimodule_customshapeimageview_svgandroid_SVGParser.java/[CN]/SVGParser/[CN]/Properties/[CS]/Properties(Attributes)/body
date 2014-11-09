@@ -1,0 +1,7 @@
+{
+  this.atts=atts;
+  String styleAttr=getStringAttr("style",atts);
+  if (styleAttr != null) {
+    styles=new StyleSet(styleAttr);
+  }
+}

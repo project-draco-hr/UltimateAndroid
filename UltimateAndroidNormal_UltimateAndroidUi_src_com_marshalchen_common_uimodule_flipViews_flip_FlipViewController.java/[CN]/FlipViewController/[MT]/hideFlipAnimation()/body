@@ -1,0 +1,18 @@
+{
+  if (inFlipAnimation) {
+    inFlipAnimation=false;
+    updateVisibleView(bufferIndex);
+    if (onViewFlipListener != null) {
+      onViewFlipListener.onViewFlipped(bufferedViews.get(bufferIndex),adapterIndex);
+    }
+    handler.post(new Runnable(){
+      public void run(){
+        if (!inFlipAnimation) {
+          cards.setVisible(false);
+          surfaceView.requestRender();
+        }
+      }
+    }
+);
+  }
+}

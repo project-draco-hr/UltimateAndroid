@@ -1,0 +1,4 @@
+{
+  mTop+=offset;
+  invalidateSelf();
+}

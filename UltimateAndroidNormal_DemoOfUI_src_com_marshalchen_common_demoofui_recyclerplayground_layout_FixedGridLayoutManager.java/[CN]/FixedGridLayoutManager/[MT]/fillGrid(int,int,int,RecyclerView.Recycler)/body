@@ -1,0 +1,77 @@
+{
+  if (mFirstVisiblePosition < 0)   mFirstVisiblePosition=0;
+  if (mFirstVisiblePosition >= getItemCount())   mFirstVisiblePosition=(getItemCount() - 1);
+  SparseArray<View> viewCache=new SparseArray<View>(getChildCount());
+  int startLeftOffset=getPaddingLeft() + emptyLeft;
+  int startTopOffset=getPaddingTop() + emptyTop;
+  if (getChildCount() != 0) {
+    final View topView=getChildAt(0);
+    startLeftOffset=getDecoratedLeft(topView);
+    startTopOffset=getDecoratedTop(topView);
+switch (direction) {
+case DIRECTION_START:
+      startLeftOffset-=mDecoratedChildWidth;
+    break;
+case DIRECTION_END:
+  startLeftOffset+=mDecoratedChildWidth;
+break;
+case DIRECTION_UP:
+startTopOffset-=mDecoratedChildHeight;
+break;
+case DIRECTION_DOWN:
+startTopOffset+=mDecoratedChildHeight;
+break;
+}
+for (int i=0; i < getChildCount(); i++) {
+int position=positionOfIndex(i);
+final View child=getChildAt(i);
+viewCache.put(position,child);
+}
+for (int i=0; i < viewCache.size(); i++) {
+detachView(viewCache.valueAt(i));
+}
+}
+switch (direction) {
+case DIRECTION_START:
+mFirstVisiblePosition--;
+break;
+case DIRECTION_END:
+mFirstVisiblePosition++;
+break;
+case DIRECTION_UP:
+mFirstVisiblePosition-=getTotalColumnCount();
+break;
+case DIRECTION_DOWN:
+mFirstVisiblePosition+=getTotalColumnCount();
+break;
+}
+int leftOffset=startLeftOffset;
+int topOffset=startTopOffset;
+for (int i=0; i < getVisibleChildCount(); i++) {
+int nextPosition=positionOfIndex(i);
+if (nextPosition >= getItemCount()) {
+continue;
+}
+View view=viewCache.get(nextPosition);
+if (view == null) {
+view=recycler.getViewForPosition(nextPosition);
+addView(view);
+measureChildWithMargins(view,0,0);
+layoutDecorated(view,leftOffset,topOffset,leftOffset + mDecoratedChildWidth,topOffset + mDecoratedChildHeight);
+}
+ else {
+attachView(view);
+viewCache.remove(nextPosition);
+}
+if (i % mVisibleColumnCount == (mVisibleColumnCount - 1)) {
+leftOffset=startLeftOffset;
+topOffset+=mDecoratedChildHeight;
+}
+ else {
+leftOffset+=mDecoratedChildWidth;
+}
+}
+for (int i=0; i < viewCache.size(); i++) {
+recycler.recycleView(viewCache.valueAt(i));
+}
+}

@@ -1,0 +1,12 @@
+{
+  try {
+    delAllFile(folderPath);
+    String filePath=folderPath;
+    filePath=filePath.toString();
+    File myFilePath=new File(filePath);
+    myFilePath.delete();
+  }
+ catch (  Exception e) {
+    Logs.e(e,"");
+  }
+}

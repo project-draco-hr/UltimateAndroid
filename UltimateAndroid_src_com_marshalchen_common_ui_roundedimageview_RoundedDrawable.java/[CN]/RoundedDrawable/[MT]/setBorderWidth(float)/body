@@ -1,5 +1,0 @@
-{
-  mBorderWidth=width;
-  mBorderPaint.setStrokeWidth(mBorderWidth);
-  return this;
-}

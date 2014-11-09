@@ -1,0 +1,4 @@
+{
+  this.isToday=isToday;
+  refreshDrawableState();
+}

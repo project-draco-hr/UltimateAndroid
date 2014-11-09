@@ -1,0 +1,4 @@
+{
+  if (direction == DIRECTION_LEFT)   return leftMenuItems;
+ else   return rightMenuItems;
+}

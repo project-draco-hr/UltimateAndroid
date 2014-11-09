@@ -1,0 +1,7 @@
+{
+  borderPaint=new Paint();
+  borderPaint.setStyle(Paint.Style.STROKE);
+  borderPaint.setAntiAlias(true);
+  imagePaint=new Paint();
+  imagePaint.setAntiAlias(true);
+}

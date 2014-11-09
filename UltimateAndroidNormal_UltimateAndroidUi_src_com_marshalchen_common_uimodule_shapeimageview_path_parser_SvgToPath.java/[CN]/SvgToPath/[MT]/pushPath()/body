@@ -1,0 +1,5 @@
+{
+  Path path=new Path();
+  this.path=path;
+  pathStack.add(path);
+}

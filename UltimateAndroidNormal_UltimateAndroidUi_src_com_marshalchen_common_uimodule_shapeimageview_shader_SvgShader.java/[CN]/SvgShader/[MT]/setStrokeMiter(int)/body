@@ -1,0 +1,6 @@
+{
+  this.strokeMiter=strokeMiter;
+  if (strokeMiter > 0) {
+    borderPaint.setStrokeMiter(strokeMiter);
+  }
+}

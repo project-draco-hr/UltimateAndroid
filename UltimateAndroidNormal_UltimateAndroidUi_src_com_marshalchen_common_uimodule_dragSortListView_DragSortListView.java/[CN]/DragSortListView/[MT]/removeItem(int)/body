@@ -1,0 +1,4 @@
+{
+  mUseRemoveVelocity=false;
+  removeItem(which,0);
+}

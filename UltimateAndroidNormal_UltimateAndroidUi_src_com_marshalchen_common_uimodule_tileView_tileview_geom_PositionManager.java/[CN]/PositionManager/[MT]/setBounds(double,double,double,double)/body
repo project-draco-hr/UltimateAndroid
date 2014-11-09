@@ -1,0 +1,8 @@
+{
+  definedBounds=true;
+  left=l;
+  top=t;
+  right=r;
+  bottom=b;
+  calculateOffsets();
+}

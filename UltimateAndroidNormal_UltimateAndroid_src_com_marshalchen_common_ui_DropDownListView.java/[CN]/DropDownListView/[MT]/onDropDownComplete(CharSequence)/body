@@ -1,0 +1,6 @@
+{
+  if (isDropDownStyle) {
+    setHeaderSecondText(secondText);
+    onDropDownComplete();
+  }
+}

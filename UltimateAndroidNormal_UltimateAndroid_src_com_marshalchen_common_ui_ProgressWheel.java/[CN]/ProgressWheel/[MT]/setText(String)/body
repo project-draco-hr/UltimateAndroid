@@ -1,0 +1,4 @@
+{
+  this.text=text;
+  splitText=this.text.split("\n");
+}

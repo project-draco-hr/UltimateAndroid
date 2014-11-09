@@ -1,0 +1,64 @@
+{
+  if (target == lastOpen && position != lastOpenPosition) {
+    lastOpen=null;
+  }
+  if (position == lastOpenPosition) {
+    lastOpen=target;
+  }
+  int height=viewHeights.get(position,-1);
+  if (height == -1) {
+    viewHeights.put(position,target.getMeasuredHeight());
+    updateExpandable(target,position);
+  }
+ else {
+    updateExpandable(target,position);
+  }
+  expandItem.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    final View view){
+      Animation a=target.getAnimation();
+      if (a != null && a.hasStarted() && !a.hasEnded()) {
+        a.setAnimationListener(new AnimationListener(){
+          @Override public void onAnimationStart(          Animation animation){
+          }
+          @Override public void onAnimationEnd(          Animation animation){
+            view.performClick();
+          }
+          @Override public void onAnimationRepeat(          Animation animation){
+          }
+        }
+);
+      }
+ else {
+        target.setAnimation(null);
+        int type=target.getVisibility() == View.VISIBLE ? ExpandCollapseAnimation.COLLAPSE : ExpandCollapseAnimation.EXPAND;
+        if (type == ExpandCollapseAnimation.EXPAND) {
+          openItems.set(position,true);
+          ((ImageView)button).setImageResource(R.drawable.abc_ic_clear_mtrl_alpha);
+        }
+ else {
+          openItems.set(position,false);
+          ((ImageView)button).setImageResource(R.drawable.abc_ic_go_search_api_mtrl_alpha);
+        }
+        if (type == ExpandCollapseAnimation.EXPAND) {
+          if (lastOpenPosition != -1 && lastOpenPosition != position) {
+            if (lastOpen != null) {
+              animateView(button,lastOpen,ExpandCollapseAnimation.COLLAPSE);
+              notifiyExpandCollapseListener(ExpandCollapseAnimation.COLLAPSE,lastOpen,lastOpenPosition);
+              if (lastOpenButton != null)               ((ImageView)lastOpenButton).setImageResource(R.drawable.abc_ic_go_search_api_mtrl_alpha);
+            }
+            openItems.set(lastOpenPosition,false);
+          }
+          lastOpen=target;
+          lastOpenPosition=position;
+          lastOpenButton=button;
+        }
+ else         if (lastOpenPosition == position) {
+          lastOpenPosition=-1;
+        }
+        animateView(target,type);
+        notifiyExpandCollapseListener(type,target,position);
+      }
+    }
+  }
+);
+}

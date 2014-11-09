@@ -1,0 +1,5 @@
+{
+  if (max < 0)   throw new IllegalArgumentException("Drag distance can not be < 0");
+  mDragDistance=dp2px(max);
+  requestLayout();
+}

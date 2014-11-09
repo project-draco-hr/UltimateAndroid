@@ -1,0 +1,6 @@
+{
+  final boolean wasTaskInvoked=mTaskInvoked.get();
+  if (!wasTaskInvoked) {
+    postResult(result);
+  }
+}

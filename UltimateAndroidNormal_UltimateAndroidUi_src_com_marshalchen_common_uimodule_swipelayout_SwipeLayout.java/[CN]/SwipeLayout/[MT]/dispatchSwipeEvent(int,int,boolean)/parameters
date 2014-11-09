@@ -1,0 +1,3 @@
+int surfaceLeft
+int surfaceTop
+boolean open

@@ -1,0 +1,22 @@
+{
+  ViewHolder holder=null;
+  if (convertView == null) {
+    holder=new ViewHolder();
+    int type=getItemViewType(position);
+switch (type) {
+case TYPE_ITEM:
+      convertView=mLayoutInflater.inflate(R.layout.list_filter_row_view,null);
+    break;
+case TYPE_SECTION:
+  convertView=mLayoutInflater.inflate(R.layout.list_filter_section_row_view,null);
+break;
+}
+holder.textView=(TextView)convertView.findViewById(R.id.row_title);
+convertView.setTag(holder);
+}
+ else {
+holder=(ViewHolder)convertView.getTag();
+}
+holder.textView.setText(mListItems.get(position).toString());
+return convertView;
+}

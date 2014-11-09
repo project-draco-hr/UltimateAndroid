@@ -1,0 +1,3 @@
+{
+  mAwayName.setText(awayName);
+}

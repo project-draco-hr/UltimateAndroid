@@ -1,0 +1,4 @@
+{
+  if (mFirstLayout != null)   mFirstLayout.draw(canvas);
+  if (mSecondLayout != null)   mSecondLayout.draw(canvas);
+}

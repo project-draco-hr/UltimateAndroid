@@ -1,0 +1,3 @@
+{
+  return context.obtainStyledAttributes(attributeSet,attr,0,0);
+}

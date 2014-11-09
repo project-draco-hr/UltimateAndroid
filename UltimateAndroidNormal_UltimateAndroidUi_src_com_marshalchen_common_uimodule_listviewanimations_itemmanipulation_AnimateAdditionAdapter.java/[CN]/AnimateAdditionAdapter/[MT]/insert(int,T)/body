@@ -1,0 +1,3 @@
+{
+  insert(new Pair<Integer,T>(index,item));
+}

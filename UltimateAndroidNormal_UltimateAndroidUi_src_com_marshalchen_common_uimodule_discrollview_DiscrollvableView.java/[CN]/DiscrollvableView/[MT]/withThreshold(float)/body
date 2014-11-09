@@ -1,0 +1,3 @@
+{
+  return (ratio - mDiscrollveThreshold) / (1.0f - mDiscrollveThreshold);
+}

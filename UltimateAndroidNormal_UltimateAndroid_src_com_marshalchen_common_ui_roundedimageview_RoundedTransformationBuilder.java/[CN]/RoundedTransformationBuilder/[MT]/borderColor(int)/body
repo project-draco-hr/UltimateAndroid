@@ -1,0 +1,4 @@
+{
+  mBorderColor=ColorStateList.valueOf(color);
+  return this;
+}

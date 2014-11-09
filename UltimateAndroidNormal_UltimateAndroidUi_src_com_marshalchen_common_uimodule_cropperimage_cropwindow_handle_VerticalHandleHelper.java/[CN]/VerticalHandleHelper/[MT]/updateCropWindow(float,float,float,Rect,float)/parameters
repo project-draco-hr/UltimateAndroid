@@ -1,0 +1,5 @@
+float x
+float y
+float targetAspectRatio
+Rect imageRect
+float snapRadius

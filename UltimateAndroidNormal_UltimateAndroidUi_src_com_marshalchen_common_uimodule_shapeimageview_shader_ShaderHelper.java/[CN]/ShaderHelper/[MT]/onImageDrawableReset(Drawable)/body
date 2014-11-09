@@ -1,0 +1,5 @@
+{
+  this.drawable=drawable;
+  shader=null;
+  imagePaint.setShader(null);
+}

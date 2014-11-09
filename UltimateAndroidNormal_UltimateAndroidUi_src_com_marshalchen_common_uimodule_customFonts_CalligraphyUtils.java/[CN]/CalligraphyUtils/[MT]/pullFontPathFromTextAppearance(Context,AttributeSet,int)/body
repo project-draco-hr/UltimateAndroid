@@ -1,0 +1,31 @@
+{
+  if (attributeId == -1) {
+    return null;
+  }
+  int textAppearanceId=-1;
+  final TypedArray typedArrayAttr=context.obtainStyledAttributes(attrs,new int[]{android.R.attr.textAppearance});
+  if (typedArrayAttr != null) {
+    try {
+      textAppearanceId=typedArrayAttr.getResourceId(0,-1);
+    }
+ catch (    Exception ignored) {
+      return null;
+    }
+ finally {
+      typedArrayAttr.recycle();
+    }
+  }
+  final TypedArray textAppearanceAttrs=context.obtainStyledAttributes(textAppearanceId,new int[]{attributeId});
+  if (textAppearanceAttrs != null) {
+    try {
+      return textAppearanceAttrs.getString(0);
+    }
+ catch (    Exception ignore) {
+      return null;
+    }
+ finally {
+      textAppearanceAttrs.recycle();
+    }
+  }
+  return null;
+}

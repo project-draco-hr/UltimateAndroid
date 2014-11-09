@@ -1,0 +1,4 @@
+{
+  this.mUserItemClickListener=listener;
+  super.setOnItemClickListener(mLocalItemClickListener);
+}

@@ -1,0 +1,4 @@
+{
+  super.onSaveInstanceState(outState);
+  outState.putInt(ARG_SELECTED_LAYOUT_ID,mSelectedLayoutId);
+}

@@ -1,0 +1,9 @@
+{
+  Bitmap bitmap=null;
+  if (drawable != null) {
+    if (drawable instanceof BitmapDrawable) {
+      bitmap=((BitmapDrawable)drawable).getBitmap();
+    }
+  }
+  return bitmap;
+}

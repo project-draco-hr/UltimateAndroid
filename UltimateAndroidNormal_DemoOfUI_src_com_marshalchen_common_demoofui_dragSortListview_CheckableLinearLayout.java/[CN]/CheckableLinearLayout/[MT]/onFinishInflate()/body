@@ -1,0 +1,4 @@
+{
+  super.onFinishInflate();
+  child=(Checkable)getChildAt(CHECKABLE_CHILD_INDEX);
+}

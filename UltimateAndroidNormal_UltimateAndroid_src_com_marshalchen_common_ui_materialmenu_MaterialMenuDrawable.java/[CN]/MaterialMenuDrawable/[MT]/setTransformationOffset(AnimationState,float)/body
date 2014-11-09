@@ -1,0 +1,11 @@
+{
+  if (offset < TRANSFORMATION_START || offset > TRANSFORMATION_END) {
+    throw new IllegalArgumentException(String.format("Value must be between %s and %s",TRANSFORMATION_START,TRANSFORMATION_END));
+  }
+  this.animationState=animationState;
+  final boolean isFirstIcon=offset < TRANSFORMATION_MID || offset == TRANSFORMATION_END;
+  currentIconState=isFirstIcon ? animationState.getFirstState() : animationState.getSecondState();
+  animatingIconState=isFirstIcon ? animationState.getSecondState() : animationState.getFirstState();
+  setTransformationValue(offset);
+  return currentIconState;
+}

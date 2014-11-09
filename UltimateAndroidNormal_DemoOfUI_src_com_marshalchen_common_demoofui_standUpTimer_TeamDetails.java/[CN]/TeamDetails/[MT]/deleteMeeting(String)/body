@@ -1,0 +1,11 @@
+{
+  try {
+    Date date=new SimpleDateFormat(Meeting.DESCRIPTION_FORMAT).parse(dateString);
+    Meeting meeting=Meeting.findByTeamAndDate(team,date,this);
+    meeting.delete(this);
+  }
+ catch (  ParseException e) {
+    Logger.e(e.getMessage());
+    Logger.e("Could not parse the date string '" + dateString + "'.  Will not attempt to delete the meeting.");
+  }
+}

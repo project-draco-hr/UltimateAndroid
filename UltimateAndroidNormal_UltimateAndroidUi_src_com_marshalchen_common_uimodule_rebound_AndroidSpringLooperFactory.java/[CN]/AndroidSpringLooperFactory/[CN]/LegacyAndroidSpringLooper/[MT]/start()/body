@@ -1,0 +1,5 @@
+{
+  mStarted=true;
+  mHandler.removeCallbacks(mLooperRunnable);
+  mHandler.post(mLooperRunnable);
+}

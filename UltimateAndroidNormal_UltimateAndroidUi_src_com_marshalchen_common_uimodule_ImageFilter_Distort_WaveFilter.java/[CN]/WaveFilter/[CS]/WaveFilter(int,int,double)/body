@@ -1,0 +1,5 @@
+{
+  _waveLength=2 * ((wavelength >= 1) ? wavelength : 1);
+  _amplitude=((amplitude >= 1) ? amplitude : 1);
+  _phase=phase;
+}

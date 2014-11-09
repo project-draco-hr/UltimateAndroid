@@ -1,0 +1,10 @@
+{
+  if (arg0.getClass() == PasscodeUnlockActivity.class)   return;
+  if ((this.appLockDisabledActivities != null) && Arrays.asList(this.appLockDisabledActivities).contains(arg0.getClass().getName()))   return;
+  if (mustShowUnlockSceen()) {
+    Intent i=new Intent(arg0.getApplicationContext(),PasscodeUnlockActivity.class);
+    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    arg0.getApplication().startActivity(i);
+    return;
+  }
+}

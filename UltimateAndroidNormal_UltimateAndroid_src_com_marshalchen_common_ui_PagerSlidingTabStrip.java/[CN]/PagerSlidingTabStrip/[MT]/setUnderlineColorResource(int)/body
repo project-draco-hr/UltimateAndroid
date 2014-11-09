@@ -1,0 +1,4 @@
+{
+  this.underlineColor=getResources().getColor(resId);
+  invalidate();
+}

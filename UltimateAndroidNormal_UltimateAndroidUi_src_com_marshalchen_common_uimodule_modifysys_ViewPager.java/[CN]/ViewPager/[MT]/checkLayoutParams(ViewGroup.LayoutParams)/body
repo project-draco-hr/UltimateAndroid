@@ -1,0 +1,3 @@
+{
+  return p instanceof LayoutParams && super.checkLayoutParams(p);
+}

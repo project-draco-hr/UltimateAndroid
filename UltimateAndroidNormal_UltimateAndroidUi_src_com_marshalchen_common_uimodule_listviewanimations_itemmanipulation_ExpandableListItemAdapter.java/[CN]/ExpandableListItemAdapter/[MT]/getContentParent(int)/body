@@ -1,0 +1,11 @@
+{
+  View contentParent=null;
+  View parentView=findViewForPosition(position);
+  if (parentView != null) {
+    Object tag=parentView.getTag();
+    if (tag instanceof ViewHolder) {
+      contentParent=((ViewHolder)tag).contentParent;
+    }
+  }
+  return contentParent;
+}

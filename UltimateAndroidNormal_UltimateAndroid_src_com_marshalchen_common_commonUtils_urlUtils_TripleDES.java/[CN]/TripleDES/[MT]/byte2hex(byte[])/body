@@ -1,0 +1,10 @@
+{
+  String hs="";
+  String stmp="";
+  for (int n=0; n < b.length; n++) {
+    stmp=Integer.toHexString(b[n] & 0xFF);
+    if (stmp.length() == 1)     hs+=("0" + stmp);
+ else     hs+=stmp;
+  }
+  return hs.toUpperCase();
+}

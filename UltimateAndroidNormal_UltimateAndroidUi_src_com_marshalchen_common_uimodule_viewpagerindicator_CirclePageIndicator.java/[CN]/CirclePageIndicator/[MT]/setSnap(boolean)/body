@@ -1,0 +1,4 @@
+{
+  mSnap=snap;
+  invalidate();
+}

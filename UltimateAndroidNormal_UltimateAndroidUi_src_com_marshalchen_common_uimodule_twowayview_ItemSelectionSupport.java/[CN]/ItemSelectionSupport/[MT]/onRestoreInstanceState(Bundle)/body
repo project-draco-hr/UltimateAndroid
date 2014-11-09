@@ -1,0 +1,6 @@
+{
+  mChoiceMode=ChoiceMode.values()[state.getInt(STATE_KEY_CHOICE_MODE)];
+  mCheckedStates=state.getParcelable(STATE_KEY_CHECKED_STATES);
+  mCheckedIdStates=state.getParcelable(STATE_KEY_CHECKED_ID_STATES);
+  mCheckedCount=state.getInt(STATE_KEY_CHECKED_COUNT);
+}

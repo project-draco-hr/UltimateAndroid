@@ -1,0 +1,22 @@
+{
+  boolean needsInvalidate=false;
+  final float deltaX=mLastMotionX - x;
+  mLastMotionX=x;
+  float oldScrollX=getScrollX();
+  float scrollX=oldScrollX + deltaX;
+  final int width=getWidth();
+  float leftBound=width * 0;
+  float rightBound=width * (mPageCount - 1);
+  if (scrollX < leftBound) {
+    final float over=Math.min(leftBound - scrollX,mMaxOverScrollSize);
+    scrollX=leftBound - over;
+  }
+ else   if (scrollX > rightBound) {
+    final float over=Math.min(scrollX - rightBound,mMaxOverScrollSize);
+    scrollX=rightBound + over;
+  }
+  mLastMotionX+=scrollX - (int)scrollX;
+  scrollTo((int)scrollX,getScrollY());
+  pageScrolled((int)scrollX);
+  return needsInvalidate;
+}

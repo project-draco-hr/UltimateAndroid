@@ -1,0 +1,5 @@
+{
+  mItems.remove(item);
+  removeStableID(item);
+  notifyDataSetChanged();
+}

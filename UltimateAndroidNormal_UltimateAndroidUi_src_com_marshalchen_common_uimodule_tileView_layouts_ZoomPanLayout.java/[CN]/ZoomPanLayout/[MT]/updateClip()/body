@@ -1,0 +1,8 @@
+{
+  updateViewClip(clip);
+  for (int i=0; i < clip.getChildCount(); i++) {
+    View child=clip.getChildAt(i);
+    updateViewClip(child);
+  }
+  constrainScroll();
+}

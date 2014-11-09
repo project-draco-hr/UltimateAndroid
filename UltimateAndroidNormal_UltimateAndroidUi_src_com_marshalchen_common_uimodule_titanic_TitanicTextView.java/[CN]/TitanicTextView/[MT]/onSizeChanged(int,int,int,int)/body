@@ -1,0 +1,10 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  createShader();
+  if (!setUp) {
+    setUp=true;
+    if (animationSetupCallback != null) {
+      animationSetupCallback.onSetupAnimation(TitanicTextView.this);
+    }
+  }
+}

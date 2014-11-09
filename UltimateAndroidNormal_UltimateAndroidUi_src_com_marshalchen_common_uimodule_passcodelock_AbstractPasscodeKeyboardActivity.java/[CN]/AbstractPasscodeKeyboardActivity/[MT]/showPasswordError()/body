@@ -1,0 +1,5 @@
+{
+  Toast toast=Toast.makeText(AbstractPasscodeKeyboardActivity.this,"passcode_wrong_passcode",Toast.LENGTH_SHORT);
+  toast.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL,0,30);
+  toast.show();
+}

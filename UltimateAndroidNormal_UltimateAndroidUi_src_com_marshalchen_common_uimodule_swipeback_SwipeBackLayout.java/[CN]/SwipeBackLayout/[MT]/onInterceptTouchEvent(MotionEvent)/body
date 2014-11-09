@@ -1,0 +1,11 @@
+{
+  if (!mEnable) {
+    return false;
+  }
+  try {
+    return mDragHelper.shouldInterceptTouchEvent(event);
+  }
+ catch (  ArrayIndexOutOfBoundsException e) {
+    return false;
+  }
+}

@@ -1,0 +1,4 @@
+{
+  this.tabTextSize=textSizePx;
+  updateTabStyles();
+}

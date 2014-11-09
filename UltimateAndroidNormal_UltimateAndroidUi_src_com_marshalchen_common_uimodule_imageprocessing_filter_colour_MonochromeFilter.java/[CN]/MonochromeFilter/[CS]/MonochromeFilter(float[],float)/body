@@ -1,0 +1,4 @@
+{
+  this.intensity=intensity;
+  this.colour=colour;
+}

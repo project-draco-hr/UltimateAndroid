@@ -1,0 +1,11 @@
+{
+  setScaleDirection(direction);
+  isOpened=true;
+  AnimatorSet scaleDown_activity=buildScaleDownAnimation(viewActivity,mScaleValue,mScaleValue);
+  AnimatorSet scaleDown_shadow=buildScaleDownAnimation(imageViewShadow,mScaleValue + shadowAdjustScaleX,mScaleValue + shadowAdjustScaleY);
+  AnimatorSet alpha_menu=buildMenuAnimation(scrollViewMenu,1.0f);
+  scaleDown_shadow.addListener(animationListener);
+  scaleDown_activity.playTogether(scaleDown_shadow);
+  scaleDown_activity.playTogether(alpha_menu);
+  scaleDown_activity.start();
+}

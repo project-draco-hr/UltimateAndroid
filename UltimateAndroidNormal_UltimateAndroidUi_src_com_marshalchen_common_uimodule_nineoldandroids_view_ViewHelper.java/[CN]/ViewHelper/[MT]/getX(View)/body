@@ -1,0 +1,3 @@
+{
+  return NEEDS_PROXY ? wrap(view).getX() : Honeycomb.getX(view);
+}

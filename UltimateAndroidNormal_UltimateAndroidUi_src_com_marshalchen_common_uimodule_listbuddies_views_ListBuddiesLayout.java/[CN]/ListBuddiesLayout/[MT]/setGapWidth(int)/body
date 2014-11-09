@@ -1,0 +1,7 @@
+{
+  if (mGapView != null) {
+    LayoutParams params=(LayoutParams)mGapView.getLayoutParams();
+    params.width=width;
+    mGapView.setLayoutParams(params);
+  }
+}

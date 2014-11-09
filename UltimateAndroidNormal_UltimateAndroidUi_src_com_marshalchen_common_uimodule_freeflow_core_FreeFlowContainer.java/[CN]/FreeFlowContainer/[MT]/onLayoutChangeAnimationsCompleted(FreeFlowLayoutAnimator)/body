@@ -1,0 +1,10 @@
+{
+  isAnimatingChanges=false;
+  logLifecycleEvent("layout change animations complete");
+  for (  FreeFlowItem freeflowItem : anim.getChangeSet().getRemoved()) {
+    View v=freeflowItem.view;
+    removeView(v);
+    returnItemToPoolIfNeeded(freeflowItem);
+  }
+  dispatchLayoutChangeAnimationsComplete();
+}

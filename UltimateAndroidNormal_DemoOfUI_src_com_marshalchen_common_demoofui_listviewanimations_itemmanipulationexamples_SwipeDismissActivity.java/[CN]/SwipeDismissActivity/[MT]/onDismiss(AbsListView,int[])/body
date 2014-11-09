@@ -1,0 +1,6 @@
+{
+  for (  int position : reverseSortedPositions) {
+    mAdapter.remove(position);
+  }
+  Toast.makeText(this,"Removed positions: " + Arrays.toString(reverseSortedPositions),Toast.LENGTH_SHORT).show();
+}

@@ -1,0 +1,8 @@
+{
+  if (factor >= 1.0f) {
+    mDownScaleFactor=factor;
+  }
+ else {
+    mDownScaleFactor=1.0f;
+  }
+}

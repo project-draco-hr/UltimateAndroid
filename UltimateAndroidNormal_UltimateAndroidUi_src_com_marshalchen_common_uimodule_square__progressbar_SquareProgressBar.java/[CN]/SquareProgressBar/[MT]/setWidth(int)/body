@@ -1,0 +1,5 @@
+{
+  int padding=CalculationUtil.convertDpToPx(width,getContext());
+  imageView.setPadding(padding,padding,padding,padding);
+  bar.setWidthInDp(width);
+}

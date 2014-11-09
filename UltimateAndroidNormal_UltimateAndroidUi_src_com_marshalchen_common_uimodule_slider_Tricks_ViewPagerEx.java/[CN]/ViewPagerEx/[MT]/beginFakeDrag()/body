@@ -1,0 +1,20 @@
+{
+  if (mIsBeingDragged) {
+    return false;
+  }
+  mFakeDragging=true;
+  setScrollState(SCROLL_STATE_DRAGGING);
+  mInitialMotionX=mLastMotionX=0;
+  if (mVelocityTracker == null) {
+    mVelocityTracker=VelocityTracker.obtain();
+  }
+ else {
+    mVelocityTracker.clear();
+  }
+  final long time=SystemClock.uptimeMillis();
+  final MotionEvent ev=MotionEvent.obtain(time,time,MotionEvent.ACTION_DOWN,0,0,0);
+  mVelocityTracker.addMovement(ev);
+  ev.recycle();
+  mFakeDragBeginTime=time;
+  return true;
+}

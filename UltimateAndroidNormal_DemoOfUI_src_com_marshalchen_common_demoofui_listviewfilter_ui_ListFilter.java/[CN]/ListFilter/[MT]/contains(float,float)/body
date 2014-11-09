@@ -1,0 +1,3 @@
+{
+  return (x >= getLeft() && y >= getTop() && y <= getTop() + getMeasuredHeight());
+}

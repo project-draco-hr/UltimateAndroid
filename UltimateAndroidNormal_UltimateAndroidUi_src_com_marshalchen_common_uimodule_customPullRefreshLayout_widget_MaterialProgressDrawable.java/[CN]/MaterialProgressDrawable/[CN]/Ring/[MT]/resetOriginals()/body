@@ -1,0 +1,8 @@
+{
+  mStartingStartTrim=0;
+  mStartingEndTrim=0;
+  mStartingRotation=0;
+  setStartTrim(0);
+  setEndTrim(0);
+  setRotation(0);
+}

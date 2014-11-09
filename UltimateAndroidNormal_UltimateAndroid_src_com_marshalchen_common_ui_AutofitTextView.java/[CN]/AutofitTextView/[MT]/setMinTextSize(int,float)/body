@@ -1,0 +1,8 @@
+{
+  Context context=getContext();
+  Resources r=Resources.getSystem();
+  if (context != null) {
+    r=context.getResources();
+  }
+  setRawMinTextSize(TypedValue.applyDimension(unit,minSize,r.getDisplayMetrics()));
+}

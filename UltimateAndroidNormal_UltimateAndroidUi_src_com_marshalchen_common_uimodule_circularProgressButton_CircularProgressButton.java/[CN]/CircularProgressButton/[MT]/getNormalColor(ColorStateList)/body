@@ -1,0 +1,3 @@
+{
+  return colorStateList.getColorForState(new int[]{android.R.attr.state_enabled},0);
+}

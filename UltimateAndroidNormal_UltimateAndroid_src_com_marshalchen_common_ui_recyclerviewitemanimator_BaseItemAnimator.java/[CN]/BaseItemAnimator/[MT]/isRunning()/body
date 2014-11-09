@@ -1,0 +1,3 @@
+{
+  return (!mMoveAnimations.isEmpty() || !mRemoveAnimations.isEmpty() || !mAddAnimations.isEmpty()|| !mMoves.isEmpty()|| !mAdditions.isEmpty());
+}

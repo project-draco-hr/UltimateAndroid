@@ -1,0 +1,4 @@
+{
+  showcaseView.setContentTitle(title);
+  return this;
+}

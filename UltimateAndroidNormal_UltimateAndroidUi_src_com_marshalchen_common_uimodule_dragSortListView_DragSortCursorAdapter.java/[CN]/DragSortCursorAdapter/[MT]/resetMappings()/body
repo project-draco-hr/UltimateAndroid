@@ -1,0 +1,4 @@
+{
+  mListMapping.clear();
+  mRemovedCursorPositions.clear();
+}

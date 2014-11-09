@@ -1,0 +1,24 @@
+{
+  long currentTimeMillis=mClock.now();
+  if (mLastTimeMillis == -1) {
+    mLastTimeMillis=currentTimeMillis - 1;
+  }
+  long ellapsedMillis=currentTimeMillis - mLastTimeMillis;
+  mLastTimeMillis=currentTimeMillis;
+  for (  SpringSystemListener listener : mListeners) {
+    listener.onBeforeIntegrate(this);
+  }
+  advance(currentTimeMillis,ellapsedMillis);
+synchronized (this) {
+    if (mActiveSprings.isEmpty()) {
+      mIdle=true;
+      mLastTimeMillis=-1;
+    }
+  }
+  for (  SpringSystemListener listener : mListeners) {
+    listener.onAfterIntegrate(this);
+  }
+  if (mIdle) {
+    mSpringLooper.stop();
+  }
+}

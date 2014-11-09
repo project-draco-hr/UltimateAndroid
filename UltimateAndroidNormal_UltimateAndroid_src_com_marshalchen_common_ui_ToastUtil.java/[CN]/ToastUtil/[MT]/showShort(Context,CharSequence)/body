@@ -1,0 +1,9 @@
+{
+  if (null == toast) {
+    toast=Toast.makeText(context,message,Toast.LENGTH_SHORT);
+  }
+ else {
+    toast.setText(message);
+  }
+  toast.show();
+}

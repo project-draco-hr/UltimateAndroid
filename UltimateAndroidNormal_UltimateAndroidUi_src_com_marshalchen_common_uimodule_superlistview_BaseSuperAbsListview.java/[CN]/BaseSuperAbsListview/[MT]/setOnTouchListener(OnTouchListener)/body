@@ -1,0 +1,3 @@
+{
+  mList.setOnTouchListener(listener);
+}

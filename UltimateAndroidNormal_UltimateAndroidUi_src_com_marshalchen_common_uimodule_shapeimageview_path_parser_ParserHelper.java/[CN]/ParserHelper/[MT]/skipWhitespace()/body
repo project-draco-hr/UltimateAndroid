@@ -1,0 +1,10 @@
+{
+  while (pos < n) {
+    if (Character.isWhitespace(s.charAt(pos))) {
+      advance();
+    }
+ else {
+      break;
+    }
+  }
+}

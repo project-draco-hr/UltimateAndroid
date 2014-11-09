@@ -1,0 +1,38 @@
+{
+  if (first == null) {
+    return null;
+  }
+  if (second == null) {
+    return first;
+  }
+  int fw=first.getWidth();
+  int fh=first.getHeight();
+  int sw=second.getWidth();
+  int sh=second.getHeight();
+  Bitmap newBitmap=null;
+  if (direction == LEFT) {
+    newBitmap=Bitmap.createBitmap(fw + sw,fh > sh ? fh : sh,Config.ARGB_8888);
+    Canvas canvas=new Canvas(newBitmap);
+    canvas.drawBitmap(first,sw,0,null);
+    canvas.drawBitmap(second,0,0,null);
+  }
+ else   if (direction == RIGHT) {
+    newBitmap=Bitmap.createBitmap(fw + sw,fh > sh ? fh : sh,Config.ARGB_8888);
+    Canvas canvas=new Canvas(newBitmap);
+    canvas.drawBitmap(first,0,0,null);
+    canvas.drawBitmap(second,fw,0,null);
+  }
+ else   if (direction == TOP) {
+    newBitmap=Bitmap.createBitmap(sw > fw ? sw : fw,fh + sh,Config.ARGB_8888);
+    Canvas canvas=new Canvas(newBitmap);
+    canvas.drawBitmap(first,0,sh,null);
+    canvas.drawBitmap(second,0,0,null);
+  }
+ else   if (direction == BOTTOM) {
+    newBitmap=Bitmap.createBitmap(sw > fw ? sw : fw,fh + sh,Config.ARGB_8888);
+    Canvas canvas=new Canvas(newBitmap);
+    canvas.drawBitmap(first,0,0,null);
+    canvas.drawBitmap(second,0,fh,null);
+  }
+  return newBitmap;
+}

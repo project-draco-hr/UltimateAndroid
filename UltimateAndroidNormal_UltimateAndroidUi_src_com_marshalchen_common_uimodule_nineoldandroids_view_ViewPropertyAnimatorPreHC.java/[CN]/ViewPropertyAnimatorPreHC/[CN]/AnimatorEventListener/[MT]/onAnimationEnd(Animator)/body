@@ -1,0 +1,9 @@
+{
+  if (mListener != null) {
+    mListener.onAnimationEnd(animation);
+  }
+  mAnimatorMap.remove(animation);
+  if (mAnimatorMap.isEmpty()) {
+    mListener=null;
+  }
+}

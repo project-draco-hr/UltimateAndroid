@@ -1,0 +1,4 @@
+float left
+float top
+float bottom
+float targetAspectRatio

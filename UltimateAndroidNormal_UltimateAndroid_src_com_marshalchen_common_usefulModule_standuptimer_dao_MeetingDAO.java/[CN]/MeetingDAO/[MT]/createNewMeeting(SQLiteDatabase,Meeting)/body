@@ -1,0 +1,6 @@
+{
+  Logger.d("Creating new meeting for " + meeting.getTeam().getName() + " with a date/time of '"+ meeting.getDateTime()+ "'");
+  ContentValues values=createContentValues(meeting);
+  long id=db.insertOrThrow(MEETINGS_TABLE_NAME,null,values);
+  return new Meeting(id,meeting);
+}

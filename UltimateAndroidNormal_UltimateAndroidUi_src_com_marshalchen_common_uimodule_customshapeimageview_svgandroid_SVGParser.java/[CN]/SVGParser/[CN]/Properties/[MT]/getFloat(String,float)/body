@@ -1,0 +1,9 @@
+{
+  Float v=getFloat(name);
+  if (v == null) {
+    return defaultValue;
+  }
+ else {
+    return v;
+  }
+}

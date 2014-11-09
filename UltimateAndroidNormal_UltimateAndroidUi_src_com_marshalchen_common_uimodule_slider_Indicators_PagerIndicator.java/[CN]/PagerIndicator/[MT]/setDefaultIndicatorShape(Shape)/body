@@ -1,0 +1,19 @@
+{
+  if (mUserSetSelectedIndicatorResId == 0) {
+    if (shape == Shape.Oval) {
+      mSelectedGradientDrawable.setShape(GradientDrawable.OVAL);
+    }
+ else {
+      mSelectedGradientDrawable.setShape(GradientDrawable.RECTANGLE);
+    }
+  }
+  if (mUserSetUnSelectedIndicatorResId == 0) {
+    if (shape == Shape.Oval) {
+      mUnSelectedGradientDrawable.setShape(GradientDrawable.OVAL);
+    }
+ else {
+      mUnSelectedGradientDrawable.setShape(GradientDrawable.RECTANGLE);
+    }
+  }
+  resetDrawable();
+}

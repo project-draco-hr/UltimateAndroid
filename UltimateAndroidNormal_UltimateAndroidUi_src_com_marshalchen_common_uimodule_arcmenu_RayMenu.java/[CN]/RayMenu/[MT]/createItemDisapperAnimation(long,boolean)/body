@@ -1,0 +1,9 @@
+{
+  AnimationSet animationSet=new AnimationSet(true);
+  animationSet.addAnimation(new ScaleAnimation(1.0f,isClicked ? 2.0f : 0.0f,1.0f,isClicked ? 2.0f : 0.0f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f));
+  animationSet.addAnimation(new AlphaAnimation(1.0f,0.0f));
+  animationSet.setDuration(duration);
+  animationSet.setInterpolator(new DecelerateInterpolator());
+  animationSet.setFillAfter(true);
+  return animationSet;
+}

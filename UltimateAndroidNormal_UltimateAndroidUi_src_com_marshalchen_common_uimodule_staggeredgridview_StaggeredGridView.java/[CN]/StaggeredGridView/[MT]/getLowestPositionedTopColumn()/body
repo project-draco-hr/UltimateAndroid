@@ -1,0 +1,12 @@
+{
+  int columnFound=0;
+  int lowestPositionedTop=Integer.MIN_VALUE;
+  for (int i=0; i < mColumnCount; i++) {
+    int top=mColumnTops[i];
+    if (top > lowestPositionedTop) {
+      lowestPositionedTop=top;
+      columnFound=i;
+    }
+  }
+  return columnFound;
+}

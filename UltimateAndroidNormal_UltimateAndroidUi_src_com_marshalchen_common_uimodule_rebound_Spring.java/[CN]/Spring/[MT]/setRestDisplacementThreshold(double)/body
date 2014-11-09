@@ -1,0 +1,4 @@
+{
+  mDisplacementFromRestThreshold=displacementFromRestThreshold;
+  return this;
+}

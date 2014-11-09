@@ -1,0 +1,3 @@
+{
+  return super.getInterpolation(Math.min(1,input * 2.0f));
+}

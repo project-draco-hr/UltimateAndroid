@@ -1,0 +1,9 @@
+{
+  final int index=pointToPosition(INVALID_POSITION,mTouchStartX,mTouchStartY);
+  if (index != INVALID_POSITION && index == mTouchStartItemPosition) {
+    final View itemView=getChildAt(index);
+    final int position=index;
+    final long id=mAdapter.getItemId(position);
+    performItemClick(itemView,position,id);
+  }
+}

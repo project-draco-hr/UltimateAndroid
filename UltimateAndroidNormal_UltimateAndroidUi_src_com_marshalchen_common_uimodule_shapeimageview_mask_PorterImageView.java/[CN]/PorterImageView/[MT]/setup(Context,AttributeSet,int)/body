@@ -1,0 +1,12 @@
+{
+  if (attrs != null) {
+    TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.ShaderImageView,defStyle,0);
+    square=typedArray.getBoolean(R.styleable.ShaderImageView_square,false);
+    typedArray.recycle();
+  }
+  if (getScaleType() == ScaleType.FIT_CENTER) {
+    setScaleType(ScaleType.CENTER_CROP);
+  }
+  maskPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  maskPaint.setColor(Color.BLACK);
+}

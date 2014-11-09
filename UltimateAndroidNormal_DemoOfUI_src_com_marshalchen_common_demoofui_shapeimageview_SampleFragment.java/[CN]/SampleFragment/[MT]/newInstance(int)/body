@@ -1,0 +1,7 @@
+{
+  SampleFragment fragment=new SampleFragment();
+  Bundle args=new Bundle();
+  args.putInt(ARG_LAYOUT,layout);
+  fragment.setArguments(args);
+  return fragment;
+}

@@ -1,0 +1,67 @@
+{
+  Log.d(TAG,"prepare layout!!!");
+  map=new HashMap<Object,FreeFlowItem>();
+  s=itemsAdapter.getSection(0);
+  int rowIndex;
+  Log.d(TAG,"prepare layout for: " + s.getDataCount());
+  for (int i=0; i < s.getDataCount(); i++) {
+    rowIndex=i / 5;
+    FreeFlowItem p=new FreeFlowItem();
+    p.isHeader=false;
+    p.itemIndex=i;
+    p.itemSection=0;
+    p.data=s.getDataAtIndex(i);
+    Rect r=new Rect();
+switch (i % 5) {
+case (0):
+      r.left=0;
+    r.top=rowIndex * largeItemSide;
+  r.right=largeItemSide;
+r.bottom=r.top + largeItemSide;
+if (rowIndex % 2 != 0) {
+r.offset(largeItemSide,0);
+}
+break;
+case (1):
+r.left=largeItemSide;
+r.right=largeItemSide + regularItemSide;
+r.top=rowIndex * largeItemSide;
+r.bottom=r.top + regularItemSide;
+if (rowIndex % 2 != 0) {
+r.offset(-largeItemSide,0);
+}
+break;
+case (2):
+r.left=3 * regularItemSide;
+r.right=width;
+r.top=rowIndex * largeItemSide;
+r.bottom=r.top + regularItemSide;
+if (rowIndex % 2 != 0) {
+r.offset(-largeItemSide,0);
+}
+break;
+case (3):
+r.left=largeItemSide;
+r.right=largeItemSide + regularItemSide;
+r.top=rowIndex * largeItemSide + regularItemSide;
+r.bottom=r.top + regularItemSide;
+if (rowIndex % 2 != 0) {
+r.offset(-largeItemSide,0);
+}
+break;
+case (4):
+r.left=3 * regularItemSide;
+r.right=width;
+r.top=rowIndex * largeItemSide + regularItemSide;
+r.bottom=r.top + regularItemSide;
+if (rowIndex % 2 != 0) {
+r.offset(-largeItemSide,0);
+}
+break;
+default :
+break;
+}
+p.frame=r;
+map.put(s.getDataAtIndex(i),p);
+}
+}

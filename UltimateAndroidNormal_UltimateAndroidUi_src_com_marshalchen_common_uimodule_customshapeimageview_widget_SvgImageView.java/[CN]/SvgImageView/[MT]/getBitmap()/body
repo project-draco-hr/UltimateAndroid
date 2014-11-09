@@ -1,0 +1,3 @@
+{
+  return getBitmap(mContext,getWidth(),getHeight(),mSvgRawResourceId);
+}

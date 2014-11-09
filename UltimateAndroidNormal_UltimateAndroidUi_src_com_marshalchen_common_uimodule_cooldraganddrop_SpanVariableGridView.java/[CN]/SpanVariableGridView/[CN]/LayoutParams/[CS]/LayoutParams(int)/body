@@ -1,0 +1,6 @@
+{
+  super(MATCH_PARENT,height);
+  if (this.height == MATCH_PARENT) {
+    this.height=WRAP_CONTENT;
+  }
+}

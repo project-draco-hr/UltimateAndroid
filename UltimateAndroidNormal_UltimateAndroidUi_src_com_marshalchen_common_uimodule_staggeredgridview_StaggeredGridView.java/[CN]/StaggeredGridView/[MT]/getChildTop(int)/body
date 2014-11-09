@@ -1,0 +1,12 @@
+{
+  if (isHeaderOrFooter(position)) {
+    return super.getChildTop(position);
+  }
+ else {
+    final int column=getPositionColumn(position);
+    if (column == -1) {
+      return getHighestPositionedBottom();
+    }
+    return mColumnBottoms[column];
+  }
+}

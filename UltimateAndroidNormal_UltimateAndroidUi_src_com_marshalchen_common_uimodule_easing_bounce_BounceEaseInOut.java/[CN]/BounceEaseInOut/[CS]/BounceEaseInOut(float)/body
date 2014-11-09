@@ -1,0 +1,5 @@
+{
+  super(duration);
+  mBounceEaseIn=new BounceEaseIn(duration);
+  mBounceEaseOut=new BounceEaseOut(duration);
+}

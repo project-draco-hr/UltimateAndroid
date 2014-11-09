@@ -1,0 +1,14 @@
+{
+  mBlurredImageView=new ImageView(context);
+  RelativeLayout.LayoutParams params=new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+  mBlurredImageView.setLayoutParams(params);
+  mBlurredImageView.setClickable(false);
+  mBlurredImageView.setVisibility(View.GONE);
+  mBlurredImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+  mDrawerLayout.post(new Runnable(){
+    @Override public void run(){
+      mDrawerLayout.addView(mBlurredImageView,1);
+    }
+  }
+);
+}

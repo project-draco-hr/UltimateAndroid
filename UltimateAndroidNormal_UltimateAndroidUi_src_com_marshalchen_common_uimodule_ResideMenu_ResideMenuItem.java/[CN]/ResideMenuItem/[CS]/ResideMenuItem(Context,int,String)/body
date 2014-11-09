@@ -1,0 +1,6 @@
+{
+  super(context);
+  initViews(context);
+  iv_icon.setImageResource(icon);
+  tv_title.setText(title);
+}

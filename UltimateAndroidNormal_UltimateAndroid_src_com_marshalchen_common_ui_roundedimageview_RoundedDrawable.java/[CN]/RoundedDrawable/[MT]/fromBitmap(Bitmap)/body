@@ -1,0 +1,8 @@
+{
+  if (bitmap != null) {
+    return new RoundedDrawable(bitmap);
+  }
+ else {
+    return null;
+  }
+}

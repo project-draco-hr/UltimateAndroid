@@ -1,0 +1,7 @@
+{
+  int viewHeight=mChildRootView.getMeasuredHeight();
+  int scrollHeight=getHeight();
+  int offset=viewHeight - scrollHeight;
+  int scrollY=getScrollY();
+  return scrollY == 0 || scrollY == offset;
+}

@@ -1,0 +1,15 @@
+{
+synchronized (mAnimationLock) {
+    if (mAnimatedViews.contains(view)) {
+      return;
+    }
+    ++mDismissAnimationRefCount;
+    mAnimatedViews.add(view);
+  }
+  ViewPropertyAnimator.animate(view).translationX(toRightSide ? mViewWidth : -mViewWidth).setDuration(mAnimationTime).setListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      performDismiss(view,childView,position);
+    }
+  }
+);
+}

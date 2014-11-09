@@ -1,0 +1,7 @@
+{
+  int seconds=(int)Math.ceil(millisUntilFinished / 1000.0);
+  if (seconds > 0) {
+    return "countdown_seconds";
+  }
+  return "countdown_dismissing";
+}

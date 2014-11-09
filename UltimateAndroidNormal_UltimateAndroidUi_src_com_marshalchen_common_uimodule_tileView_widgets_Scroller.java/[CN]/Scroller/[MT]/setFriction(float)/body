@@ -1,0 +1,3 @@
+{
+  mDeceleration=computeDeceleration(friction);
+}

@@ -1,0 +1,7 @@
+BaseAdapter baseAdapter
+int undoLayoutResId
+int undoActionResId
+int autoDeleteTime
+int countDownTextViewResId
+DeleteItemCallback deleteItemCallback
+CountDownFormatter countDownFormatter

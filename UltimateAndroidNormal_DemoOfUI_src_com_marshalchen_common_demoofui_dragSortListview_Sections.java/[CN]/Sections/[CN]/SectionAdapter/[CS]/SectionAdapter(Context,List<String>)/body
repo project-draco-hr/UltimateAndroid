@@ -1,0 +1,6 @@
+{
+  super();
+  mInflater=(LayoutInflater)context.getSystemService(LAYOUT_INFLATER_SERVICE);
+  mData=names;
+  mDivPos=names.size() / 2;
+}

@@ -1,0 +1,6 @@
+{
+  StateListDrawable drawable=new StateListDrawable();
+  drawable.addState(new int[]{android.R.attr.state_pressed},createCircleDrawable(circleRect,mColorPressed));
+  drawable.addState(new int[]{},createCircleDrawable(circleRect,mColorNormal));
+  return drawable;
+}

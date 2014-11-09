@@ -1,0 +1,3 @@
+int wavelength
+int amplitude
+double phase

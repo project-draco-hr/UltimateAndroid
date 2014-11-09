@@ -1,0 +1,5 @@
+{
+  super.passShaderValues();
+  GLES20.glUniformMatrix4fv(transformMatrixHandle,1,false,transformMatrix,0);
+  GLES20.glUniformMatrix4fv(orthoMatrixHandle,1,false,orthoMatrix,0);
+}

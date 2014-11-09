@@ -1,0 +1,5 @@
+{
+  if (settings.contains(OLD_APP_LOCK_PASSWORD_PREF_KEY))   return true;
+  if (settings.contains(PASSWORD_PREFERENCE_KEY))   return true;
+  return false;
+}

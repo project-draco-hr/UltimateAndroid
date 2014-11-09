@@ -1,0 +1,4 @@
+{
+  matrix.getValues(matrixValues);
+  return matrixValues[whichValue];
+}

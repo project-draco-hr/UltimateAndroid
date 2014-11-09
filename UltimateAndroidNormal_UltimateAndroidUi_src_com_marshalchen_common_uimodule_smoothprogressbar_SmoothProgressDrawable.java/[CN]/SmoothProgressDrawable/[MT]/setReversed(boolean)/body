@@ -1,0 +1,5 @@
+{
+  if (mReversed == reversed)   return;
+  mReversed=reversed;
+  invalidateSelf();
+}

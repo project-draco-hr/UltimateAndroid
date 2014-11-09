@@ -1,0 +1,20 @@
+{
+  int position=pointToPosition(mDownX,mDownY);
+  int itemNum=position - getFirstVisiblePosition();
+  View selectedView=getChildAt(itemNum);
+  if (selectedView == null || position < getHeaderViewsCount() || position >= getAdapter().getCount() - getHeaderViewsCount()) {
+    return;
+  }
+  mOriginalTranscriptMode=getTranscriptMode();
+  setTranscriptMode(TRANSCRIPT_MODE_NORMAL);
+  mTotalOffset=0;
+  mMobileItemId=getAdapter().getItemId(position);
+  mHoverCell=getAndAddHoverView(selectedView);
+  if (mOnHoverCellListener != null) {
+    mHoverCell=mOnHoverCellListener.onHoverCellCreated(mHoverCell);
+  }
+  selectedView.setVisibility(INVISIBLE);
+  mCellIsMobile=true;
+  getParent().requestDisallowInterceptTouchEvent(true);
+  updateNeighborViewsForId(mMobileItemId);
+}

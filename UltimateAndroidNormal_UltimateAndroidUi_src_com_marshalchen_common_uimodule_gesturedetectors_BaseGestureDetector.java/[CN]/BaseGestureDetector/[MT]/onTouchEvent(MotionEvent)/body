@@ -1,0 +1,10 @@
+{
+  final int actionCode=event.getAction() & MotionEvent.ACTION_MASK;
+  if (!mGestureInProgress) {
+    handleStartProgressEvent(actionCode,event);
+  }
+ else {
+    handleInProgressEvent(actionCode,event);
+  }
+  return true;
+}

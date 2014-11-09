@@ -1,0 +1,6 @@
+View v
+boolean checkV
+int dx
+int dy
+int x
+int y

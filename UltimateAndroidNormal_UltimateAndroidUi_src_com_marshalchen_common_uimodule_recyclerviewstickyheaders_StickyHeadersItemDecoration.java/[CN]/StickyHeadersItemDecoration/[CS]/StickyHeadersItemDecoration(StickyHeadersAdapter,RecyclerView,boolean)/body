@@ -1,0 +1,9 @@
+{
+  this.adapter=adapter;
+  this.parent=parent;
+  this.headerViewHolder=adapter.onCreateViewHolder(parent);
+  this.overlay=overlay;
+  this.headers=new HashMap<Long,Boolean>();
+  this.adapterDataObserver=new AdapterDataObserver();
+  this.headerHeight=NO_HEIGHT;
+}

@@ -1,0 +1,61 @@
+{
+  final Holder holder;
+  if (convertView == null) {
+    holder=new Holder();
+    convertView=View.inflate(act,R.layout.group_item_image_grid,null);
+    holder.iv=(ImageView)convertView.findViewById(R.id.image);
+    holder.selected=(ImageView)convertView.findViewById(R.id.isselected);
+    holder.text=(TextView)convertView.findViewById(R.id.item_image_grid_text);
+    convertView.setTag(holder);
+  }
+ else {
+    holder=(Holder)convertView.getTag();
+  }
+  final ImageItem item=dataList.get(position);
+  holder.iv.setTag(item.imagePath);
+  cache.displayBmp(holder.iv,item.thumbnailPath,item.imagePath,callback);
+  if (item.isSelected) {
+    holder.selected.setImageResource(R.drawable.icon_data_select);
+    holder.text.setBackgroundResource(R.drawable.icon_bgd_relatly_line);
+  }
+ else {
+    holder.selected.setImageBitmap(null);
+    holder.text.setBackgroundColor(0x00000000);
+  }
+  holder.iv.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View v){
+      String path=dataList.get(position).imagePath;
+      if ((Bimp.drr.size() + selectTotal) < 9) {
+        item.isSelected=!item.isSelected;
+        if (item.isSelected) {
+          holder.selected.setImageResource(R.drawable.icon_data_select);
+          holder.text.setBackgroundResource(R.drawable.icon_bgd_relatly_line);
+          selectTotal++;
+          if (textcallback != null)           textcallback.onListen(selectTotal);
+          map.put(path,path);
+        }
+ else         if (!item.isSelected) {
+          holder.selected.setImageResource(-1);
+          holder.text.setBackgroundColor(0x00000000);
+          selectTotal--;
+          if (textcallback != null)           textcallback.onListen(selectTotal);
+          map.remove(path);
+        }
+      }
+ else       if ((Bimp.drr.size() + selectTotal) >= 9) {
+        if (item.isSelected == true) {
+          item.isSelected=!item.isSelected;
+          holder.selected.setImageResource(-1);
+          selectTotal--;
+          map.remove(path);
+        }
+ else {
+          Message message=Message.obtain(mHandler,0);
+          message.sendToTarget();
+        }
+      }
+    }
+  }
+);
+  return convertView;
+}

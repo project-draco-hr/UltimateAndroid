@@ -1,0 +1,5 @@
+{
+  if (!mPopulating) {
+    super.requestLayout();
+  }
+}

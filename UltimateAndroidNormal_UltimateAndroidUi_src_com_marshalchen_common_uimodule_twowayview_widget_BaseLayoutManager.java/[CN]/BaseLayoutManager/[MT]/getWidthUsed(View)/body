@@ -1,0 +1,7 @@
+{
+  if (!isVertical()) {
+    return 0;
+  }
+  final int size=getLanes().getLaneSize() * getLaneSpanForChild(child);
+  return getWidth() - getPaddingLeft() - getPaddingRight()- size;
+}

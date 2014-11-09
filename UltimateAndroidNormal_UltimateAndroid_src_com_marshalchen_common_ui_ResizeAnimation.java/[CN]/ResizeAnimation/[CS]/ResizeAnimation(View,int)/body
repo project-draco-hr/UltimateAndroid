@@ -1,0 +1,6 @@
+{
+  view=v;
+  startH=v.getLayoutParams().height;
+  endH=newh;
+  diff=endH - startH;
+}

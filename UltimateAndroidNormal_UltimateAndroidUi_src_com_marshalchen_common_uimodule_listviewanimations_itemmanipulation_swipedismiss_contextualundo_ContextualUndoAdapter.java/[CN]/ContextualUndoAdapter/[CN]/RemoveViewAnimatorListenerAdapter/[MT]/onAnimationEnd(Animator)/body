@@ -1,0 +1,10 @@
+{
+  mDismissView=getViewBeingAnimated();
+  if (mDismissView == null) {
+    deleteItemGivenId(mDismissViewId);
+    return;
+  }
+  restoreViewPosition(mDismissView);
+  restoreViewDimension(mDismissView);
+  deleteCurrentItem(mDismissView);
+}

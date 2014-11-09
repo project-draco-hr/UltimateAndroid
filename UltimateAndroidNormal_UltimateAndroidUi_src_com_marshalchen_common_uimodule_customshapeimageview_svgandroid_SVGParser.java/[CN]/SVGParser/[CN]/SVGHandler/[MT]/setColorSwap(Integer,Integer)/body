@@ -1,0 +1,4 @@
+{
+  this.searchColor=searchColor;
+  this.replaceColor=replaceColor;
+}

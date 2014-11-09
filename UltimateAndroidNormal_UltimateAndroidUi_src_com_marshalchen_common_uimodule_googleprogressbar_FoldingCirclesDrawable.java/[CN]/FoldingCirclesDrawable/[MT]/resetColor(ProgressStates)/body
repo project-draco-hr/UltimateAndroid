@@ -1,0 +1,24 @@
+{
+switch (currentState) {
+case FOLDING_DOWN:
+    fstColor=mColor1;
+  scndColor=mColor2;
+goesBackward=false;
+break;
+case FOLDING_LEFT:
+fstColor=mColor1;
+scndColor=mColor3;
+goesBackward=true;
+break;
+case FOLDING_UP:
+fstColor=mColor3;
+scndColor=mColor4;
+goesBackward=true;
+break;
+case FOLDING_RIGHT:
+fstColor=mColor2;
+scndColor=mColor4;
+goesBackward=false;
+break;
+}
+}

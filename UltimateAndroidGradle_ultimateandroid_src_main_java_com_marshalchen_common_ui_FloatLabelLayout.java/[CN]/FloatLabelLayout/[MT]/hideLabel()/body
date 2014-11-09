@@ -1,0 +1,10 @@
+{
+  mLabel.setAlpha(1f);
+  mLabel.setTranslationY(0f);
+  mLabel.animate().alpha(0f).translationY(mLabel.getHeight()).setDuration(ANIMATION_DURATION).setListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      mLabel.setVisibility(View.GONE);
+    }
+  }
+).start();
+}

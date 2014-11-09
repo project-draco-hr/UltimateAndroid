@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.recyclerview_playground_activity_main);
+  mNavigationDrawerFragment=(NavigationDrawerFragment)getFragmentManager().findFragmentById(R.id.navigation_drawer);
+  mTitle=getTitle();
+}

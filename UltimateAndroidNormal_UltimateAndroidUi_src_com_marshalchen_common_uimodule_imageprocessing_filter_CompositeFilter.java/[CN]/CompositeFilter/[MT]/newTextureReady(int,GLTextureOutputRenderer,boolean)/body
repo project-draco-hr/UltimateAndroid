@@ -1,0 +1,18 @@
+{
+  if (inputOutputFilters.contains(source)) {
+    if (!texturesReceived.contains(source)) {
+      super.newTextureReady(texture,source,newData);
+      for (      BasicFilter initialFilter : initialFilters) {
+        initialFilter.newTextureReady(texture,source,newData);
+      }
+    }
+  }
+ else   if (terminalFilters.contains(source)) {
+    super.newTextureReady(texture,source,newData);
+  }
+ else {
+    for (    BasicFilter initialFilter : initialFilters) {
+      initialFilter.newTextureReady(texture,source,newData);
+    }
+  }
+}

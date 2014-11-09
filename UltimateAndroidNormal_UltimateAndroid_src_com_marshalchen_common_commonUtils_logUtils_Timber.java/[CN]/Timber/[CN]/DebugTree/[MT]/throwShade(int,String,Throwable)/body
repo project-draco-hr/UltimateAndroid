@@ -1,0 +1,23 @@
+{
+  if (message == null || message.length() == 0) {
+    if (t != null) {
+      message=Log.getStackTraceString(t);
+    }
+ else {
+      return;
+    }
+  }
+ else   if (t != null) {
+    message+="\n" + Log.getStackTraceString(t);
+  }
+  String tag=createTag();
+  if (message.length() < 4000) {
+    Log.println(priority,tag,message);
+  }
+ else {
+    String[] lines=message.split("\n");
+    for (    String line : lines) {
+      Log.println(priority,tag,line);
+    }
+  }
+}

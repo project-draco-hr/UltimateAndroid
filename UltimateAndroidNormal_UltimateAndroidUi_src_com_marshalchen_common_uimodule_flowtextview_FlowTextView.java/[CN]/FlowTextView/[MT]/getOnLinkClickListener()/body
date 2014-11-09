@@ -1,0 +1,3 @@
+{
+  return mClickHandler.getOnLinkClickListener();
+}

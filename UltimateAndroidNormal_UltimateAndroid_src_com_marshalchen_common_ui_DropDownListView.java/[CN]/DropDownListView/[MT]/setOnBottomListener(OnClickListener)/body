@@ -1,0 +1,3 @@
+{
+  footerButton.setOnClickListener(onBottomListener);
+}

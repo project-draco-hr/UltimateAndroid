@@ -1,0 +1,10 @@
+{
+  mWindowsLock.writeLock().lock();
+  try {
+    mWindows.put(view.getRootView(),name);
+  }
+  finally {
+    mWindowsLock.writeLock().unlock();
+  }
+  fireWindowsChangedEvent();
+}

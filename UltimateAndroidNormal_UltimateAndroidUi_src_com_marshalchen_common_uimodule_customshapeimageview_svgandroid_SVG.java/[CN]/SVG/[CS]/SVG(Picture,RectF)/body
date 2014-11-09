@@ -1,0 +1,4 @@
+{
+  this.picture=picture;
+  this.bounds=bounds;
+}

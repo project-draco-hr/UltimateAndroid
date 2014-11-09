@@ -1,0 +1,14 @@
+{
+  super(activity);
+  setPosition(position,layoutParams);
+  if (backgroundDrawable == null) {
+    if (theme == THEME_LIGHT)     backgroundDrawable=activity.getResources().getDrawable(R.drawable.floating_menu_button_action_selector);
+ else     backgroundDrawable=activity.getResources().getDrawable(R.drawable.floating_menu_button_action_dark_selector);
+  }
+  setBackgroundResource(backgroundDrawable);
+  if (contentView != null) {
+    setContentView(contentView,contentParams);
+  }
+  setClickable(true);
+  attach(layoutParams);
+}

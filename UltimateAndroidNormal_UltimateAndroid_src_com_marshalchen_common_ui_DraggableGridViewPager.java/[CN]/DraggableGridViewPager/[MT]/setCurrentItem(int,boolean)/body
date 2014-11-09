@@ -1,0 +1,3 @@
+{
+  setCurrentItemInternal(item,smoothScroll,false);
+}

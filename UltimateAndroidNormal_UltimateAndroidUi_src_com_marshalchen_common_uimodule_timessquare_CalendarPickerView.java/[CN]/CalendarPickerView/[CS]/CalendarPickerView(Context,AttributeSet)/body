@@ -1,0 +1,30 @@
+{
+  super(context,attrs);
+  Resources res=context.getResources();
+  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.CalendarPickerView);
+  final int bg=a.getColor(R.styleable.CalendarPickerView_android_background,res.getColor(R.color.calendar_bg));
+  dividerColor=a.getColor(R.styleable.CalendarPickerView_dividerColor,res.getColor(R.color.calendar_divider));
+  dayBackgroundResId=a.getResourceId(R.styleable.CalendarPickerView_dayBackground,R.drawable.calendar_bg_selector);
+  dayTextColorResId=a.getResourceId(R.styleable.CalendarPickerView_dayTextColor,R.color.calendar_text_selector);
+  titleTextColor=a.getColor(R.styleable.CalendarPickerView_titleTextColor,R.color.calendar_text_active);
+  headerTextColor=a.getColor(R.styleable.CalendarPickerView_headerTextColor,R.color.calendar_text_active);
+  a.recycle();
+  adapter=new MonthAdapter();
+  setDivider(null);
+  setDividerHeight(0);
+  setBackgroundColor(bg);
+  setCacheColorHint(bg);
+  locale=Locale.getDefault();
+  today=Calendar.getInstance(locale);
+  minCal=Calendar.getInstance(locale);
+  maxCal=Calendar.getInstance(locale);
+  monthCounter=Calendar.getInstance(locale);
+  monthNameFormat=new SimpleDateFormat(context.getString(R.string.month_name_format),locale);
+  weekdayNameFormat=new SimpleDateFormat(context.getString(R.string.day_name_format),locale);
+  fullDateFormat=DateFormat.getDateInstance(DateFormat.MEDIUM,locale);
+  if (isInEditMode()) {
+    Calendar nextYear=Calendar.getInstance(locale);
+    nextYear.add(Calendar.YEAR,1);
+    init(new Date(),nextYear.getTime()).withSelectedDate(new Date());
+  }
+}

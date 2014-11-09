@@ -1,0 +1,16 @@
+{
+  mChoiceMode=choiceMode;
+  if (mChoiceActionMode != null) {
+    mChoiceActionMode.finish();
+    mChoiceActionMode=null;
+  }
+  if (mChoiceMode != CHOICE_MODE_NONE) {
+    if (mCheckStates == null) {
+      mCheckStates=new SimpleArrayMap<IndexPath,Boolean>();
+    }
+    if (mChoiceMode == CHOICE_MODE_MULTIPLE_MODAL) {
+      clearChoices();
+      setLongClickable(true);
+    }
+  }
+}

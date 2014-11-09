@@ -1,0 +1,6 @@
+{
+  if (mProperty != null) {
+    return;
+  }
+  super.setupSetter(targetClass);
+}

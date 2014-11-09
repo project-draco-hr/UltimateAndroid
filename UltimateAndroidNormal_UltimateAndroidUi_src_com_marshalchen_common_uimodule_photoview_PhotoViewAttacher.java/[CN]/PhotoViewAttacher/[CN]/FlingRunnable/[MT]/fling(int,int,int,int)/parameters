@@ -1,0 +1,4 @@
+int viewWidth
+int viewHeight
+int velocityX
+int velocityY

@@ -1,0 +1,11 @@
+{
+  ActionBar actionBar=getSupportActionBar();
+  actionBar.setHomeButtonEnabled(false);
+  actionBar.setDisplayShowHomeEnabled(false);
+  actionBar.setDisplayShowTitleEnabled(false);
+  actionBar.setDisplayHomeAsUpEnabled(false);
+  actionBar.setDisplayShowCustomEnabled(true);
+  actionBar.setCustomView(R.layout.material_menu_action_bar);
+  materialMenu=(MaterialMenuView)actionBar.getCustomView().findViewById(R.id.action_bar_menu);
+  materialMenu.setOnClickListener(this);
+}

@@ -1,0 +1,9 @@
+{
+  CheckedTextView tv=(CheckedTextView)convertView;
+  if (tv == null) {
+    tv=(CheckedTextView)LayoutInflater.from(AnimateDismissActivity.this).inflate(R.layout.list_anim_activity_animateremoval_row,parent,false);
+  }
+  tv.setText(String.valueOf(getItem(position)));
+  tv.setChecked(mSelectedPositions.contains(position));
+  return tv;
+}

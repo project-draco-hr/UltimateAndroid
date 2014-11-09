@@ -1,0 +1,4 @@
+{
+  mUseParallax=value;
+  return (T)this;
+}

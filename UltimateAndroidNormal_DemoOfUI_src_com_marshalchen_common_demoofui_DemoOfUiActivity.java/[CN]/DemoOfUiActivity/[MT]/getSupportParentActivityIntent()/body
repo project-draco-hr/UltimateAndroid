@@ -1,0 +1,4 @@
+{
+  Logs.d("upTask");
+  return super.getSupportParentActivityIntent();
+}

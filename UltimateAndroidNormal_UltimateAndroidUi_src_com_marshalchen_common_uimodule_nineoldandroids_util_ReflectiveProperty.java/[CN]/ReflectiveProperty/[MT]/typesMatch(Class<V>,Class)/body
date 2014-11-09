@@ -1,0 +1,9 @@
+{
+  if (getterType != valueType) {
+    if (getterType.isPrimitive()) {
+      return (getterType == float.class && valueType == Float.class) || (getterType == int.class && valueType == Integer.class) || (getterType == boolean.class && valueType == Boolean.class)|| (getterType == long.class && valueType == Long.class)|| (getterType == double.class && valueType == Double.class)|| (getterType == short.class && valueType == Short.class)|| (getterType == byte.class && valueType == Byte.class)|| (getterType == char.class && valueType == Character.class);
+    }
+    return false;
+  }
+  return true;
+}

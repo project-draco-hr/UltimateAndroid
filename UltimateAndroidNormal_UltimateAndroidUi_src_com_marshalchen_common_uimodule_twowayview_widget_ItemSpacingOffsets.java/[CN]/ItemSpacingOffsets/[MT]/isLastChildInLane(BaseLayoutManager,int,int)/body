@@ -1,0 +1,10 @@
+{
+  final int laneCount=lm.getLanes().getCount();
+  if (itemPosition < itemCount - laneCount) {
+    return false;
+  }
+  if (lm instanceof SpannableGridLayoutManager || lm instanceof StaggeredGridLayoutManager) {
+    return false;
+  }
+  return true;
+}

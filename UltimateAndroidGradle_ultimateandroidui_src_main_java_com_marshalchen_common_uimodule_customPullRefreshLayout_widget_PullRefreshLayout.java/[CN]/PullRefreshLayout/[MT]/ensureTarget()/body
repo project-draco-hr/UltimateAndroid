@@ -1,0 +1,9 @@
+{
+  if (mTarget != null)   return;
+  if (getChildCount() > 0) {
+    for (int i=0; i < getChildCount(); i++) {
+      View child=getChildAt(i);
+      if (child != mRefreshView)       mTarget=child;
+    }
+  }
+}

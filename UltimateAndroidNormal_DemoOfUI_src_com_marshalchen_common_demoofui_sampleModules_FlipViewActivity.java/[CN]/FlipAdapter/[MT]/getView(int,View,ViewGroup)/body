@@ -1,0 +1,13 @@
+{
+  ViewHolder holder;
+  if (convertView == null) {
+    holder=new ViewHolder();
+    convertView=inflater.inflate(R.layout.flip_view_item,parent,false);
+    holder.text=(TextView)convertView.findViewById(R.id.flipViewTextView);
+    convertView.setTag(holder);
+  }
+ else {
+    holder=(ViewHolder)convertView.getTag();
+  }
+  return convertView;
+}

@@ -1,0 +1,18 @@
+{
+  float scaledDensity=context.getResources().getDisplayMetrics().scaledDensity;
+  boolean sizeToFit=true;
+  int minTextSize=(int)scaledDensity * DEFAULT_MIN_TEXT_SIZE;
+  float precision=PRECISION;
+  if (attrs != null) {
+    TypedArray ta=context.obtainStyledAttributes(attrs,R.styleable.AutofitTextView,defStyle,0);
+    sizeToFit=ta.getBoolean(R.styleable.AutofitTextView_sizeToFit,sizeToFit);
+    minTextSize=ta.getDimensionPixelSize(R.styleable.AutofitTextView_minTextSize,minTextSize);
+    precision=ta.getFloat(R.styleable.AutofitTextView_precision,precision);
+    ta.recycle();
+  }
+  mPaint=new TextPaint();
+  setSizeToFit(sizeToFit);
+  setRawTextSize(super.getTextSize());
+  setRawMinTextSize(minTextSize);
+  setPrecision(precision);
+}

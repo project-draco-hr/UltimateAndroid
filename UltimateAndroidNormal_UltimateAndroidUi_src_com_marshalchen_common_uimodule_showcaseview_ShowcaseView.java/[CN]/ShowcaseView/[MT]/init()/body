@@ -1,0 +1,16 @@
+{
+  setOnTouchListener(this);
+  if (mEndButton.getParent() == null) {
+    int margin=(int)getResources().getDimension(R.dimen.showcase_button_margin);
+    LayoutParams lps=(LayoutParams)generateDefaultLayoutParams();
+    lps.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+    lps.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+    lps.setMargins(margin,margin,margin,margin);
+    mEndButton.setLayoutParams(lps);
+    mEndButton.setText("");
+    if (!hasCustomClickListener) {
+      mEndButton.setOnClickListener(this);
+    }
+    addView(mEndButton);
+  }
+}

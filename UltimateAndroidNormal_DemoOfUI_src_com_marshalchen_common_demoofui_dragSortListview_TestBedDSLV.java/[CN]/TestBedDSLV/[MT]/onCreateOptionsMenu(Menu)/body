@@ -1,0 +1,5 @@
+{
+  MenuInflater inflater=getMenuInflater();
+  inflater.inflate(R.menu.drag_sort_listview_mode_menu,menu);
+  return true;
+}

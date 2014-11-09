@@ -1,0 +1,11 @@
+{
+  surfaceView=new GLSurfaceView(getContext());
+  cards=new FlipCards(this,flipOrientation == VERTICAL);
+  renderer=new FlipRenderer(this,cards);
+  surfaceView.setEGLConfigChooser(8,8,8,8,16,0);
+  surfaceView.setZOrderOnTop(true);
+  surfaceView.setRenderer(renderer);
+  surfaceView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
+  surfaceView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
+  addViewInLayout(surfaceView,-1,new AbsListView.LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT),false);
+}

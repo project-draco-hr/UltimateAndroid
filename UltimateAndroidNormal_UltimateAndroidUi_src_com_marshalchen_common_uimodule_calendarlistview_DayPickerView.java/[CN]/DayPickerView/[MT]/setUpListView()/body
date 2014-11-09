@@ -1,0 +1,9 @@
+{
+  setCacheColorHint(0);
+  setDivider(null);
+  setItemsCanFocus(true);
+  setFastScrollEnabled(false);
+  setVerticalScrollBarEnabled(false);
+  setOnScrollListener(this);
+  setFadingEdgeLength(0);
+}

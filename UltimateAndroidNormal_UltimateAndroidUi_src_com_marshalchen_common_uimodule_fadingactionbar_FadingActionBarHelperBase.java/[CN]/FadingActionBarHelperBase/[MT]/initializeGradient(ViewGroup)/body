@@ -1,0 +1,8 @@
+{
+  View gradientView=headerContainer.findViewById(R.id.fab__gradient);
+  int gradient=R.drawable.fab__gradient;
+  if (mLightActionBar) {
+    gradient=R.drawable.fab__gradient_light;
+  }
+  gradientView.setBackgroundResource(gradient);
+}

@@ -1,0 +1,5 @@
+{
+  canvas.save();
+  drawRing(canvas);
+  canvas.restore();
+}

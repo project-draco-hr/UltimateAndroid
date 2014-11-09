@@ -1,0 +1,9 @@
+{
+  if (mUserSetSelectedIndicatorResId == 0) {
+    mSelectedGradientDrawable.setColor(selectedColor);
+  }
+  if (mUserSetUnSelectedIndicatorResId == 0) {
+    mUnSelectedGradientDrawable.setColor(unselectedColor);
+  }
+  resetDrawable();
+}

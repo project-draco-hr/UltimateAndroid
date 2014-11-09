@@ -1,0 +1,45 @@
+{
+  super(context,attrs,defStyle);
+  setFillViewport(true);
+  setWillNotDraw(false);
+  tabsContainer=new LinearLayout(context);
+  tabsContainer.setOrientation(LinearLayout.HORIZONTAL);
+  tabsContainer.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+  addView(tabsContainer);
+  DisplayMetrics dm=getResources().getDisplayMetrics();
+  scrollOffset=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,scrollOffset,dm);
+  indicatorHeight=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,indicatorHeight,dm);
+  underlineHeight=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,underlineHeight,dm);
+  dividerPadding=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dividerPadding,dm);
+  tabPadding=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,tabPadding,dm);
+  dividerWidth=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dividerWidth,dm);
+  tabTextSize=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,tabTextSize,dm);
+  TypedArray a=context.obtainStyledAttributes(attrs,ATTRS);
+  tabTextSize=a.getDimensionPixelSize(0,tabTextSize);
+  tabTextColor=a.getColor(1,tabTextColor);
+  a.recycle();
+  a=context.obtainStyledAttributes(attrs,R.styleable.PagerSlidingTabStrip);
+  indicatorColor=a.getColor(R.styleable.PagerSlidingTabStrip_pstsIndicatorColor,indicatorColor);
+  underlineColor=a.getColor(R.styleable.PagerSlidingTabStrip_pstsUnderlineColor,underlineColor);
+  dividerColor=a.getColor(R.styleable.PagerSlidingTabStrip_pstsDividerColor,dividerColor);
+  indicatorHeight=a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstsIndicatorHeight,indicatorHeight);
+  underlineHeight=a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstsUnderlineHeight,underlineHeight);
+  dividerPadding=a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstsDividerPadding,dividerPadding);
+  tabPadding=a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstsTabPaddingLeftRight,tabPadding);
+  tabBackgroundResId=a.getResourceId(R.styleable.PagerSlidingTabStrip_pstsTabBackground,tabBackgroundResId);
+  shouldExpand=a.getBoolean(R.styleable.PagerSlidingTabStrip_pstsShouldExpand,shouldExpand);
+  scrollOffset=a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstsScrollOffset,scrollOffset);
+  textAllCaps=a.getBoolean(R.styleable.PagerSlidingTabStrip_pstsTextAllCaps,textAllCaps);
+  a.recycle();
+  rectPaint=new Paint();
+  rectPaint.setAntiAlias(true);
+  rectPaint.setStyle(Style.FILL);
+  dividerPaint=new Paint();
+  dividerPaint.setAntiAlias(true);
+  dividerPaint.setStrokeWidth(dividerWidth);
+  defaultTabLayoutParams=new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.MATCH_PARENT);
+  expandedTabLayoutParams=new LinearLayout.LayoutParams(0,LayoutParams.MATCH_PARENT,1.0f);
+  if (locale == null) {
+    locale=getResources().getConfiguration().locale;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  View drawerView2=(View)drawerView.getParent();
+  if (isFoldingLayout(drawerView2)) {
+    return drawerView2;
+  }
+ else {
+    return drawerView;
+  }
+}

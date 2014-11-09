@@ -1,0 +1,7 @@
+{
+  View descriptionLayout=next.findViewById(R.id.description_layout);
+  if (descriptionLayout != null) {
+    next.findViewById(R.id.description_layout).setVisibility(View.INVISIBLE);
+  }
+  Log.e(TAG,"onPrepareNextItemShowInScreen called");
+}

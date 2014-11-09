@@ -1,0 +1,16 @@
+{
+  return new AbsListView.OnScrollListener(){
+    @Override public void onScrollStateChanged(    final AbsListView absListView,    final int scrollState){
+      setEnabled(scrollState != AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL);
+      if (mPaused) {
+        mCallback.onListScrolled();
+      }
+      if (scrollState != AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
+        mDisallowSwipe=true;
+      }
+    }
+    @Override public void onScroll(    final AbsListView absListView,    final int firstVisibleItem,    final int visibleItemCount,    final int totalItemCount){
+    }
+  }
+;
+}

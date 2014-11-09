@@ -1,0 +1,31 @@
+{
+  if (mDragState == STATE_SETTLING) {
+    boolean keepGoing=mScroller.computeScrollOffset();
+    final int x=mScroller.getCurrX();
+    final int y=mScroller.getCurrY();
+    final int dx=x - mCapturedView.getLeft();
+    final int dy=y - mCapturedView.getTop();
+    if (dx != 0) {
+      mCapturedView.offsetLeftAndRight(dx);
+    }
+    if (dy != 0) {
+      mCapturedView.offsetTopAndBottom(dy);
+    }
+    if (dx != 0 || dy != 0) {
+      mCallback.onViewPositionChanged(mCapturedView,x,y,dx,dy);
+    }
+    if (keepGoing && x == mScroller.getFinalX() && y == mScroller.getFinalY()) {
+      mScroller.abortAnimation();
+      keepGoing=mScroller.isFinished();
+    }
+    if (!keepGoing) {
+      if (deferCallbacks) {
+        mParentView.post(mSetIdleRunnable);
+      }
+ else {
+        setDragState(STATE_IDLE);
+      }
+    }
+  }
+  return mDragState == STATE_SETTLING;
+}

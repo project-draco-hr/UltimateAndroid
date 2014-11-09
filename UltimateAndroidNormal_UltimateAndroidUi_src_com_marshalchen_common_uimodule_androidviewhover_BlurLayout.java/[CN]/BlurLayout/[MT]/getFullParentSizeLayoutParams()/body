@@ -1,0 +1,6 @@
+{
+  LayoutParams pm=(LayoutParams)this.generateDefaultLayoutParams();
+  pm.width=this.getWidth();
+  pm.height=this.getHeight();
+  return pm;
+}

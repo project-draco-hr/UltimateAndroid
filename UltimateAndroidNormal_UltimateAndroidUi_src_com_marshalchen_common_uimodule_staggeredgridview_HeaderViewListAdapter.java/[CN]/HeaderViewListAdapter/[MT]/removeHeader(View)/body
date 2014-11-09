@@ -1,0 +1,11 @@
+{
+  for (int i=0; i < mHeaderViewInfos.size(); i++) {
+    StaggeredGridView.FixedViewInfo info=mHeaderViewInfos.get(i);
+    if (info.view == v) {
+      mHeaderViewInfos.remove(i);
+      mAreAllFixedViewsSelectable=areAllListInfosSelectable(mHeaderViewInfos) && areAllListInfosSelectable(mFooterViewInfos);
+      return true;
+    }
+  }
+  return false;
+}

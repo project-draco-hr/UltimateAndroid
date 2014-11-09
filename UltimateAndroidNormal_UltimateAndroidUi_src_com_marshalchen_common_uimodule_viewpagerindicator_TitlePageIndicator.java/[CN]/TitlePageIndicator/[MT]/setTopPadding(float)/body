@@ -1,0 +1,4 @@
+{
+  mTopPadding=topPadding;
+  invalidate();
+}

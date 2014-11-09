@@ -1,0 +1,8 @@
+{
+  if (mode == Mode.Multiple) {
+    return mOpenPositions.contains(position);
+  }
+ else {
+    return mOpenPosition == position;
+  }
+}

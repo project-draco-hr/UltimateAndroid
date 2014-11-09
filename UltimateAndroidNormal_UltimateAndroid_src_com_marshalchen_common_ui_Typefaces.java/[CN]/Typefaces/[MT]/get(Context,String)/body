@@ -1,0 +1,15 @@
+{
+synchronized (cache) {
+    if (!cache.containsKey(assetPath)) {
+      try {
+        Typeface t=Typeface.createFromAsset(c.getAssets(),assetPath);
+        cache.put(assetPath,t);
+      }
+ catch (      Exception e) {
+        Logs.e("Could not get typeface '" + assetPath + "' because "+ e.getMessage());
+        return null;
+      }
+    }
+    return cache.get(assetPath);
+  }
+}

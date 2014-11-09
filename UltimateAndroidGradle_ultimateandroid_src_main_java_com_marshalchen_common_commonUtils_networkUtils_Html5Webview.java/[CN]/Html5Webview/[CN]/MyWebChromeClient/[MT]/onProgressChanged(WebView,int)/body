@@ -1,0 +1,3 @@
+{
+  ((Activity)mContext).getWindow().setFeatureInt(Window.FEATURE_PROGRESS,newProgress * 100);
+}

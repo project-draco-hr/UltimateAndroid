@@ -1,0 +1,5 @@
+{
+  mAdapter.clear();
+  fetchData();
+  return true;
+}

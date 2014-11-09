@@ -1,0 +1,5 @@
+{
+  FixedGridLayoutManager manager=new FixedGridLayoutManager();
+  manager.setTotalColumnCount(10);
+  return manager;
+}

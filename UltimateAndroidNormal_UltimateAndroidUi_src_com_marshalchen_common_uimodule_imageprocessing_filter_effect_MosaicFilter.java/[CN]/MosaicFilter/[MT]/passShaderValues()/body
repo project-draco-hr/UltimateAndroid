@@ -1,0 +1,12 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform2f(inputTileSizeHandle,inputTileSize.x,inputTileSize.y);
+  GLES20.glUniform2f(displayTileSizeHandle,displayTileSize.x,displayTileSize.y);
+  GLES20.glUniform1i(numOfTilesHandle,numOfTiles);
+  if (color) {
+    GLES20.glUniform1i(colorHandle,1);
+  }
+ else {
+    GLES20.glUniform1i(colorHandle,0);
+  }
+}

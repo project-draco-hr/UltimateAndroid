@@ -1,0 +1,5 @@
+{
+  if (getBitmapFromMemCache(key) == null) {
+    mMemoryCache.put(key,bitmap);
+  }
+}

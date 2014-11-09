@@ -1,0 +1,5 @@
+String content
+int start
+int end
+float xOffset
+TextPaint paint

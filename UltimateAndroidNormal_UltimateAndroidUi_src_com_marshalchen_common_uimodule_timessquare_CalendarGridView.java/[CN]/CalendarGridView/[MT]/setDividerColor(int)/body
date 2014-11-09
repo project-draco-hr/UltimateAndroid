@@ -1,0 +1,3 @@
+{
+  dividerPaint.setColor(color);
+}

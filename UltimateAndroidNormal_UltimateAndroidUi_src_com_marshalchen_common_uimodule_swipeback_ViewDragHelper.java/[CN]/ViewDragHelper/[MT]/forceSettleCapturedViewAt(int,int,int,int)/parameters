@@ -1,0 +1,4 @@
+int finalLeft
+int finalTop
+int xvel
+int yvel

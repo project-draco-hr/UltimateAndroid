@@ -1,0 +1,6 @@
+{
+  if (mShowArrow != show) {
+    mShowArrow=show;
+    invalidateSelf();
+  }
+}

@@ -1,0 +1,6 @@
+{
+  mScrimOpacity=1 - mScrollPercent;
+  if (mDragHelper.continueSettling(true)) {
+    ViewCompat.postInvalidateOnAnimation(this);
+  }
+}

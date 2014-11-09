@@ -1,0 +1,16 @@
+{
+  if (mWay == Way.R2L) {
+    mWay=Way.L2R;
+  }
+ else   if (mWay == Way.L2R) {
+    mWay=Way.R2L;
+  }
+ else   if (mWay == Way.T2B) {
+    mWay=Way.B2T;
+  }
+ else   if (mWay == Way.B2T) {
+    mWay=Way.T2B;
+  }
+  mCurrentPlayTime=0;
+  mTotalTime=0;
+}

@@ -1,0 +1,7 @@
+{
+  if (sectionsCount <= 0)   throw new IllegalArgumentException("SectionsCount must be > 0");
+  mSectionsCount=sectionsCount;
+  mMaxOffset=1f / mSectionsCount;
+  mCurrentOffset%=mMaxOffset;
+  invalidateSelf();
+}

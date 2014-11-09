@@ -1,0 +1,4 @@
+View view
+View childView
+int position
+boolean toRightSide

@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.pull_to_zoom_activity_pull_to_zoom_list_view);
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  listView=(PullToZoomListView)findViewById(R.id.listview);
+  String[] adapterData=new String[]{"Activity","Service","Content Provider","Intent","BroadcastReceiver","ADT","Sqlite3","HttpClient","DDMS","Android Studio","Fragment","Loader","Activity","Service","Content Provider","Intent","BroadcastReceiver","ADT","Sqlite3","HttpClient","Activity","Service","Content Provider","Intent","BroadcastReceiver","ADT","Sqlite3","HttpClient"};
+  listView.setAdapter(new ArrayAdapter<String>(PullToZoomListActivity.this,android.R.layout.simple_list_item_1,adapterData));
+}

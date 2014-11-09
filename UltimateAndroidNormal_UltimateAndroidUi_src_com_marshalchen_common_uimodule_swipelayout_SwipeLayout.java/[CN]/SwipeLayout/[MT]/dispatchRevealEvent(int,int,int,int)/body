@@ -1,0 +1,65 @@
+{
+  if (mRevealListeners.isEmpty())   return;
+  for (  Map.Entry<View,ArrayList<OnRevealListener>> entry : mRevealListeners.entrySet()) {
+    View child=entry.getKey();
+    Rect rect=getRelativePosition(child);
+    if (isViewShowing(child,rect,mDragEdge,surfaceLeft,surfaceTop,surfaceRight,surfaceBottom)) {
+      mShowEntirely.put(child,false);
+      int distance=0;
+      float fraction=0f;
+      if (getShowMode() == ShowMode.LayDown) {
+switch (mDragEdge) {
+case Left:
+          distance=rect.left - surfaceLeft;
+        fraction=distance / (float)child.getWidth();
+      break;
+case Right:
+    distance=rect.right - surfaceRight;
+  fraction=distance / (float)child.getWidth();
+break;
+case Top:
+distance=rect.top - surfaceTop;
+fraction=distance / (float)child.getHeight();
+break;
+case Bottom:
+distance=rect.bottom - surfaceBottom;
+fraction=distance / (float)child.getHeight();
+break;
+}
+}
+ else if (getShowMode() == ShowMode.PullOut) {
+switch (mDragEdge) {
+case Left:
+distance=rect.right - getPaddingLeft();
+fraction=distance / (float)child.getWidth();
+break;
+case Right:
+distance=rect.left - getWidth();
+fraction=distance / (float)child.getWidth();
+break;
+case Top:
+distance=rect.bottom - getPaddingTop();
+fraction=distance / (float)child.getHeight();
+break;
+case Bottom:
+distance=rect.top - getHeight();
+fraction=distance / (float)child.getHeight();
+break;
+}
+}
+for (OnRevealListener l : entry.getValue()) {
+l.onReveal(child,mDragEdge,Math.abs(fraction),distance);
+if (Math.abs(fraction) == 1) {
+mShowEntirely.put(child,true);
+}
+}
+}
+if (isViewTotallyFirstShowed(child,rect,mDragEdge,surfaceLeft,surfaceTop,surfaceRight,surfaceBottom)) {
+mShowEntirely.put(child,true);
+for (OnRevealListener l : entry.getValue()) {
+if (mDragEdge == DragEdge.Left || mDragEdge == DragEdge.Right) l.onReveal(child,mDragEdge,1,child.getWidth());
+ else l.onReveal(child,mDragEdge,1,child.getHeight());
+}
+}
+}
+}

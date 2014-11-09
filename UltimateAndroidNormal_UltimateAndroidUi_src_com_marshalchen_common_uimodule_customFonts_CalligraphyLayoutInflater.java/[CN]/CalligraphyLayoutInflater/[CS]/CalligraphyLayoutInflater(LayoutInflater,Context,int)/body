@@ -1,0 +1,5 @@
+{
+  super(original,newContext);
+  mAttributeId=attributeId;
+  setUpLayoutFactory();
+}

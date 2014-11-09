@@ -1,0 +1,27 @@
+{
+  if (isInEditMode()) {
+    return;
+  }
+  ViewConfiguration vc=ViewConfiguration.get(ctx);
+  mSlop=getResources().getDimension(R.dimen.elv_touch_slop);
+  mMinFlingVelocity=vc.getScaledMinimumFlingVelocity();
+  mMaxFlingVelocity=vc.getScaledMaximumFlingVelocity();
+  mAnimationTime=ctx.getResources().getInteger(android.R.integer.config_shortAnimTime);
+  mAnimationTime=10;
+  LayoutInflater inflater=(LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+  View undoView=inflater.inflate(R.layout.elv_undo_popup,null);
+  mUndoButton=(Button)undoView.findViewById(R.id.undo);
+  mUndoButton.setOnClickListener(new UndoClickListener());
+  mUndoButton.setOnTouchListener(new OnTouchListener(){
+    @Override public boolean onTouch(    View v,    MotionEvent event){
+      mValidDelayedMsgId++;
+      return false;
+    }
+  }
+);
+  mUndoPopupTextView=(TextView)undoView.findViewById(R.id.text);
+  mUndoPopup=new PopupWindow(undoView,ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,false);
+  mUndoPopup.setAnimationStyle(R.style.elv_fade_animation);
+  mScreenDensity=getResources().getDisplayMetrics().density;
+  setOnScrollListener(makeScrollListener());
+}

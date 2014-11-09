@@ -1,0 +1,4 @@
+{
+  mPaint.setColor(selectedColor);
+  invalidate();
+}

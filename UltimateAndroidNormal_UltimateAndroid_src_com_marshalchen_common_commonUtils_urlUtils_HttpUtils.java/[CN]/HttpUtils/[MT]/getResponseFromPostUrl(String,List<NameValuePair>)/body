@@ -1,0 +1,31 @@
+{
+  String result=null;
+  HttpPost httpPost=new HttpPost(url);
+  HttpEntity entity=new UrlEncodedFormEntity(params,HTTP.UTF_8);
+  httpPost.setEntity(entity);
+  HttpClient httpClient=new DefaultHttpClient();
+  httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT,30000);
+  httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT,30000);
+  try {
+    HttpResponse httpResp=httpClient.execute(httpPost);
+    if (httpResp.getStatusLine().getStatusCode() == 200) {
+      result=EntityUtils.toString(httpResp.getEntity(),"UTF-8");
+      Logs.d("HttpPost success :");
+      Logs.d(result);
+    }
+ else {
+      Logs.d("HttpPost failed" + "    " + httpResp.getStatusLine().getStatusCode() + "   "+ EntityUtils.toString(httpResp.getEntity(),"UTF-8"));
+      result="connect_failed";
+    }
+  }
+ catch (  ConnectTimeoutException e) {
+    result="";
+    Logs.e("HttpPost overtime:  " + "");
+  }
+catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e,"");
+    result="";
+  }
+  return result;
+}

@@ -1,0 +1,11 @@
+{
+  int result=0;
+  Resources resources=mHoldingActivity.getResources();
+  if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP && resources.getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+    int resourceId=resources.getIdentifier("navigation_bar_height","dimen","android");
+    if (resourceId > 0) {
+      result=resources.getDimensionPixelSize(resourceId);
+    }
+  }
+  return result;
+}

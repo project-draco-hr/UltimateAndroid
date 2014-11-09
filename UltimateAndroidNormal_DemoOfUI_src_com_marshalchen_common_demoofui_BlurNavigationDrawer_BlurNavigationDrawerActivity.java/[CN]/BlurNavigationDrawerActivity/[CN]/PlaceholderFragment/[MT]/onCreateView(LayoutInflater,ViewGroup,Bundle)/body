@@ -1,0 +1,18 @@
+{
+  View rootView=inflater.inflate(R.layout.blur_navigation_drawer_fragment_main,container,false);
+  GridView gridView=(GridView)rootView.findViewById(R.id.gridview);
+  Resources res=getActivity().getResources();
+  ArrayList<Movie> movies=new ArrayList<Movie>();
+  movies.add(new Movie(res.getDrawable(R.drawable.test),"About Time"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test_back),"Enders Game"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test_back1),"Enough Said"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test_back2),"The fifth estate"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test),"Gravity"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test_back),"Cloudy with a chance of meatballs"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test),"Prisoners"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test_back),"Runner Runner"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test),"The counselor"));
+  movies.add(new Movie(res.getDrawable(R.drawable.test),"About Time"));
+  gridView.setAdapter(new MovieAdapter(getActivity(),movies));
+  return rootView;
+}

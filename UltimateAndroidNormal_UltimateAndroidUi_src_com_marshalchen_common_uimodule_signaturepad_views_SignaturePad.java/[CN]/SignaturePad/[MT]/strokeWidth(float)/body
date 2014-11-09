@@ -1,0 +1,3 @@
+{
+  return Math.max(mMaxWidth / (velocity + 1),mMinWidth);
+}

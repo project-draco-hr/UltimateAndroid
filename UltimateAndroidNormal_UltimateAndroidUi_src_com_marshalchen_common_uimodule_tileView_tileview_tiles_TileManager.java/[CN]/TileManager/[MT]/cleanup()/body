@@ -1,0 +1,14 @@
+{
+  LinkedList<Tile> condemned=new LinkedList<Tile>(alreadyRendered);
+  condemned.removeAll(scheduledToRender);
+  for (  Tile m : condemned) {
+    m.destroy();
+    alreadyRendered.remove(m);
+  }
+  for (  ScalingLayout tileGroup : tileGroups.values()) {
+    if (currentTileGroup == tileGroup) {
+      continue;
+    }
+    tileGroup.setVisibility(View.GONE);
+  }
+}

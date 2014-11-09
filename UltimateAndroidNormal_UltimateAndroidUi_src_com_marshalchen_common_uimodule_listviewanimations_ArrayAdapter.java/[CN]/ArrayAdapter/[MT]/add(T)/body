@@ -1,0 +1,5 @@
+{
+  boolean result=mItems.add(object);
+  notifyDataSetChanged();
+  return result;
+}

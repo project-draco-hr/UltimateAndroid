@@ -1,0 +1,14 @@
+{
+  bar.setProgress(progress);
+  if (opacity) {
+    if (isFadingOnProgress) {
+      setOpacity(100 - (int)progress);
+    }
+ else {
+      setOpacity((int)progress);
+    }
+  }
+ else {
+    setOpacity(100);
+  }
+}

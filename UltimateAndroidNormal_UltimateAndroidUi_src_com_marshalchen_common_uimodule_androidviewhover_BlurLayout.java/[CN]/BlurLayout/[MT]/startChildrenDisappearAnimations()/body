@@ -1,0 +1,7 @@
+{
+  for (  View view : mChildDisappearAnimators.keySet()) {
+    for (    AnimationProxy animator : mChildDisappearAnimators.get(view)) {
+      animator.start();
+    }
+  }
+}

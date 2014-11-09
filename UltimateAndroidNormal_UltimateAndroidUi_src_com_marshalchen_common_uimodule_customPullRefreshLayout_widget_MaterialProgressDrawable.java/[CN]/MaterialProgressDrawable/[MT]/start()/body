@@ -1,0 +1,12 @@
+{
+  mAnimation.reset();
+  mRing.storeOriginals();
+  if (mRing.getEndTrim() != mRing.getStartTrim()) {
+    mParent.startAnimation(mFinishAnimation);
+  }
+ else {
+    mRing.setColorIndex(0);
+    mRing.resetOriginals();
+    mParent.startAnimation(mAnimation);
+  }
+}

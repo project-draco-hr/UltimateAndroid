@@ -1,0 +1,5 @@
+View child
+int left
+int top
+int right
+int bottom

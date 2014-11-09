@@ -1,0 +1,4 @@
+{
+  mColors=colors;
+  setColorIndex(0);
+}

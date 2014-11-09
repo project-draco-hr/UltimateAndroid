@@ -1,0 +1,4 @@
+{
+  mTodayHeaderTextColor=todayHeaderTextColor;
+  invalidate();
+}

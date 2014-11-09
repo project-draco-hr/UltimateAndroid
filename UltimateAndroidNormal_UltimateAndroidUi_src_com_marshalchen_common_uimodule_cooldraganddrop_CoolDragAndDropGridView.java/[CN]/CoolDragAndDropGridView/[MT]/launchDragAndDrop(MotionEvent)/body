@@ -1,0 +1,12 @@
+{
+  final int x=(int)event.getX();
+  final int y=(int)event.getY();
+  mCurrentPosition=mDragPosition=mDropPosition=pointToPosition(mDragPosition,x,y);
+  if (mDragPosition != AdapterView.INVALID_POSITION && mDragAndDropListener.isDragAndDropEnabled(mDragPosition)) {
+    mDragOffsetX=(int)(event.getRawX() - x);
+    mDragOffsetY=(int)(event.getRawY() - y);
+    startDrag(x,y);
+    return true;
+  }
+  return false;
+}

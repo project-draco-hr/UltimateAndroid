@@ -1,0 +1,4 @@
+{
+  long itemId=getItemId(position);
+  return mExpandedIds.contains(itemId);
+}

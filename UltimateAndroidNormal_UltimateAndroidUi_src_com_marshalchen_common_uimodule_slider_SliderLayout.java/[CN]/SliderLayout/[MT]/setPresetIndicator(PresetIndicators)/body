@@ -1,0 +1,4 @@
+{
+  PagerIndicator pagerIndicator=(PagerIndicator)findViewById(presetIndicator.getResourceId());
+  setCustomIndicator(pagerIndicator);
+}

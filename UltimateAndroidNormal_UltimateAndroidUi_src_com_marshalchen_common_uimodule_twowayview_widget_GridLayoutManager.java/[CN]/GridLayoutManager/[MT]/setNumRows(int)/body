@@ -1,0 +1,9 @@
+{
+  if (mNumRows == numRows) {
+    return;
+  }
+  mNumRows=numRows;
+  if (!isVertical()) {
+    requestLayout();
+  }
+}

@@ -1,0 +1,23 @@
+{
+  this.mainActionView=mainActionView;
+  this.startAngle=startAngle;
+  this.endAngle=endAngle;
+  this.radius=radius;
+  this.subActionItems=subActionItems;
+  this.animationHandler=animationHandler;
+  this.animated=animated;
+  this.open=false;
+  this.stateChangeListener=stateChangeListener;
+  this.mainActionView.setClickable(true);
+  this.mainActionView.setOnClickListener(new ActionViewClickListener());
+  if (animationHandler != null) {
+    animationHandler.setMenu(this);
+  }
+  for (  final Item item : subActionItems) {
+    if (item.width == 0 || item.height == 0) {
+      ((ViewGroup)getActivityContentView()).addView(item.view);
+      item.view.setAlpha(0);
+      item.view.post(new ItemViewQueueListener(item));
+    }
+  }
+}

@@ -1,0 +1,12 @@
+long id
+String name
+int startYear
+int startMonth
+int startDay
+int startHour
+int startMinute
+int endYear
+int endMonth
+int endDay
+int endHour
+int endMinute

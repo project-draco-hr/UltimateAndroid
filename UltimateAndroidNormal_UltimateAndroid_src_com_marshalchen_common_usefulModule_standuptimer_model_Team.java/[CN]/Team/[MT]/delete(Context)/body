@@ -1,0 +1,13 @@
+{
+  TeamDAO dao=null;
+  try {
+    Meeting.deleteAllByTeam(this,context);
+    dao=daoFactory.getTeamDAO(context);
+    dao.delete(this);
+  }
+  finally {
+    if (dao != null) {
+      dao.close();
+    }
+  }
+}

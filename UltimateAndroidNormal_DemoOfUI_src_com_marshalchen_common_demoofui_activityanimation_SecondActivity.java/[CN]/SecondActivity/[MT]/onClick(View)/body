@@ -1,0 +1,6 @@
+{
+  Intent intent=new Intent(this,ThirdActivity.class);
+  intent.putExtra("animation_type",mAnimationType);
+  startActivity(intent);
+  overridePendingTransition(0,0);
+}

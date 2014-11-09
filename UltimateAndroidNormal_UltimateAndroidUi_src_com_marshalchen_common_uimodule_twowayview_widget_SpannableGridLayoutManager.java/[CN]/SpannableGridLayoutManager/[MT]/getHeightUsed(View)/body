@@ -1,0 +1,4 @@
+{
+  final LayoutParams lp=(LayoutParams)child.getLayoutParams();
+  return getHeight() - getPaddingTop() - getPaddingBottom()- getChildHeight(lp.rowSpan);
+}

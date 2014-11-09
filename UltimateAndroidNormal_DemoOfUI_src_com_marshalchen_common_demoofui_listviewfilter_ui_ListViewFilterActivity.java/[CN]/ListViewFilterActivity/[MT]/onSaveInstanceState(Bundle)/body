@@ -1,0 +1,13 @@
+{
+  if (mListItems != null && mListItems.size() > 0) {
+    outState.putStringArrayList("mListItems",mListItems);
+  }
+  if (mListSectionPos != null && mListSectionPos.size() > 0) {
+    outState.putIntegerArrayList("mListSectionPos",mListSectionPos);
+  }
+  String searchText=mSearchView.getText().toString();
+  if (searchText != null && searchText.length() > 0) {
+    outState.putString("constraint",searchText);
+  }
+  super.onSaveInstanceState(outState);
+}

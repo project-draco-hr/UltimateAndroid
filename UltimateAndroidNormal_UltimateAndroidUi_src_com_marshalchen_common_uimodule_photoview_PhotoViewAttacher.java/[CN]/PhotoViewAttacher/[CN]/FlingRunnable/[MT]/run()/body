@@ -1,0 +1,18 @@
+{
+  if (mScroller.isFinished()) {
+    return;
+  }
+  ImageView imageView=getImageView();
+  if (null != imageView && mScroller.computeScrollOffset()) {
+    final int newX=mScroller.getCurrX();
+    final int newY=mScroller.getCurrY();
+    if (DEBUG) {
+      LogManager.getLogger().d(LOG_TAG,"fling run(). CurrentX:" + mCurrentX + " CurrentY:"+ mCurrentY+ " NewX:"+ newX+ " NewY:"+ newY);
+    }
+    mSuppMatrix.postTranslate(mCurrentX - newX,mCurrentY - newY);
+    setImageViewMatrix(getDrawMatrix());
+    mCurrentX=newX;
+    mCurrentY=newY;
+    Compat.postOnAnimation(imageView,this);
+  }
+}

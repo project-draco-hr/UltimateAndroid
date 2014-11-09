@@ -1,0 +1,19 @@
+{
+  super.onDraw(canvas);
+  canvas.drawArc(circleBounds,360,360,false,circlePaint);
+  canvas.drawArc(circleBounds,360,360,false,rimPaint);
+  canvas.drawArc(circleOuterContour,360,360,false,contourPaint);
+  canvas.drawArc(circleInnerContour,360,360,false,contourPaint);
+  if (isSpinning) {
+    canvas.drawArc(circleBounds,progress - 90,barLength,false,barPaint);
+  }
+ else {
+    canvas.drawArc(circleBounds,-90,progress,false,barPaint);
+  }
+  float textHeight=textPaint.descent() - textPaint.ascent();
+  float verticalTextOffset=(textHeight / 2) - textPaint.descent();
+  for (  String s : splitText) {
+    float horizontalTextOffset=textPaint.measureText(s) / 2;
+    canvas.drawText(s,this.getWidth() / 2 - horizontalTextOffset,this.getHeight() / 2 + verticalTextOffset,textPaint);
+  }
+}

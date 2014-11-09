@@ -1,0 +1,5 @@
+{
+  contentView.setVisibility(View.VISIBLE);
+  loadingView.setVisibility(View.GONE);
+  emptyView.setVisibility(View.GONE);
+}

@@ -1,0 +1,4 @@
+{
+  mHeaderView=view;
+  return (T)this;
+}

@@ -1,0 +1,3 @@
+{
+  return mVelocity - mDeceleration * timePassed() / 2000.0f;
+}

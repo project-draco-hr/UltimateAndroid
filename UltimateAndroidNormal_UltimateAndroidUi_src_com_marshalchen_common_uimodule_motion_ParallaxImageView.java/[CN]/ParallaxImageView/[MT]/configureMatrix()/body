@@ -1,0 +1,25 @@
+{
+  if (getDrawable() == null || getWidth() == 0 || getHeight() == 0)   return;
+  int dWidth=getDrawable().getIntrinsicWidth();
+  int dHeight=getDrawable().getIntrinsicHeight();
+  int vWidth=getWidth();
+  int vHeight=getHeight();
+  float scale;
+  float dx, dy;
+  if (dWidth * vHeight > vWidth * dHeight) {
+    scale=(float)vHeight / (float)dHeight;
+    mXOffset=(vWidth - dWidth * scale * mParallaxIntensity) * 0.5f;
+    mYOffset=(vHeight - dHeight * scale * mParallaxIntensity) * 0.5f;
+  }
+ else {
+    scale=(float)vWidth / (float)dWidth;
+    mXOffset=(vWidth - dWidth * scale * mParallaxIntensity) * 0.5f;
+    mYOffset=(vHeight - dHeight * scale * mParallaxIntensity) * 0.5f;
+  }
+  dx=mXOffset + mXTranslation;
+  dy=mYOffset + mYTranslation;
+  mTranslationMatrix.set(getImageMatrix());
+  mTranslationMatrix.setScale(mParallaxIntensity * scale,mParallaxIntensity * scale);
+  mTranslationMatrix.postTranslate(dx,dy);
+  setImageMatrix(mTranslationMatrix);
+}

@@ -1,0 +1,10 @@
+{
+  this.activity=activity;
+  int size=activity.getResources().getDimensionPixelSize(R.dimen.action_button_size);
+  int margin=activity.getResources().getDimensionPixelSize(R.dimen.action_button_margin);
+  LayoutParams layoutParams=new LayoutParams(size,size,Gravity.BOTTOM | Gravity.RIGHT);
+  layoutParams.setMargins(margin,margin,margin,margin);
+  setLayoutParams(layoutParams);
+  setTheme(FloatingActionButton.THEME_LIGHT);
+  setPosition(FloatingActionButton.POSITION_BOTTOM_RIGHT);
+}

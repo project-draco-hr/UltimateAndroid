@@ -1,0 +1,16 @@
+{
+  mMorphingInProgress=true;
+  MorphingAnimation animation=new MorphingAnimation(this,background);
+  animation.setFromCornerRadius(mCornerRadius);
+  animation.setToCornerRadius(mCornerRadius);
+  animation.setFromWidth(getWidth());
+  animation.setToWidth(getWidth());
+  if (mConfigurationChanged) {
+    animation.setDuration(MorphingAnimation.DURATION_INSTANT);
+  }
+ else {
+    animation.setDuration(MorphingAnimation.DURATION_NORMAL);
+  }
+  mConfigurationChanged=false;
+  return animation;
+}

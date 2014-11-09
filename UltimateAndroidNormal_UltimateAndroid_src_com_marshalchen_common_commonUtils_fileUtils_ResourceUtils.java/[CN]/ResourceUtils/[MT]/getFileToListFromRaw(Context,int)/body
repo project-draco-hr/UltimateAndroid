@@ -1,0 +1,21 @@
+{
+  if (context == null) {
+    return null;
+  }
+  List<String> fileContent=new ArrayList<String>();
+  BufferedReader reader=null;
+  try {
+    InputStreamReader in=new InputStreamReader(context.getResources().openRawResource(resId));
+    reader=new BufferedReader(in);
+    String line=null;
+    while ((line=reader.readLine()) != null) {
+      fileContent.add(line);
+    }
+    reader.close();
+    return fileContent;
+  }
+ catch (  IOException e) {
+    e.printStackTrace();
+    return null;
+  }
+}

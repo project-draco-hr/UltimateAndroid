@@ -1,0 +1,6 @@
+{
+  mCoverHolderLayout=new CoverHolderLayout(context);
+  mDefaultDetailsPlaceHolderView=new View(context);
+  mDefaultCoverPlaceHolderView=new View(context);
+  mAdapter=new Adapter();
+}

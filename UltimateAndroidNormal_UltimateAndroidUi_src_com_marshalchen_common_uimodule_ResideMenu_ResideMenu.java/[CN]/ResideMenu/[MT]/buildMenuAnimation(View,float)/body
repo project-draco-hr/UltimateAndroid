@@ -1,0 +1,6 @@
+{
+  AnimatorSet alphaAnimation=new AnimatorSet();
+  alphaAnimation.playTogether(ObjectAnimator.ofFloat(target,"alpha",alpha));
+  alphaAnimation.setDuration(250);
+  return alphaAnimation;
+}

@@ -1,0 +1,15 @@
+{
+  float viewWidth=getWidth();
+  float viewHeight=getHeight();
+  float w=bitmap.getWidth();
+  float h=bitmap.getHeight();
+  matrix.reset();
+  float widthScale=Math.min(viewWidth / w,3.0f);
+  float heightScale=Math.min(viewHeight / h,3.0f);
+  float scale=Math.min(widthScale,heightScale);
+  if (includeRotation) {
+    matrix.postConcat(bitmap.getRotateMatrix());
+  }
+  matrix.postScale(scale,scale);
+  matrix.postTranslate((viewWidth - w * scale) / 2F,(viewHeight - h * scale) / 2F);
+}

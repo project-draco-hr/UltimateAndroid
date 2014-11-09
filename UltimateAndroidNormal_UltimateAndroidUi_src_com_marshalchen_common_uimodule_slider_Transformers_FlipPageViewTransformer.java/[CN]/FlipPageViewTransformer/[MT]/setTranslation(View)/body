@@ -1,0 +1,5 @@
+{
+  ViewPagerEx viewPager=(ViewPagerEx)view.getParent();
+  int scroll=viewPager.getScrollX() - view.getLeft();
+  ViewHelper.setTranslationX(view,scroll);
+}

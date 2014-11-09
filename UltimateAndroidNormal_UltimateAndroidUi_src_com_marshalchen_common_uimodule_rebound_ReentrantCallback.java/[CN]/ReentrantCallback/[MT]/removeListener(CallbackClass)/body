@@ -1,0 +1,4 @@
+{
+  mListeners.remove(listener);
+  mReturnSet=null;
+}

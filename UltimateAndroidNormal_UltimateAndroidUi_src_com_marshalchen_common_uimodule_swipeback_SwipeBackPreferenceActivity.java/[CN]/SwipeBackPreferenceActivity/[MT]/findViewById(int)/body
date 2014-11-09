@@ -1,0 +1,5 @@
+{
+  View v=super.findViewById(id);
+  if (v == null && mHelper != null)   return mHelper.findViewById(id);
+  return v;
+}

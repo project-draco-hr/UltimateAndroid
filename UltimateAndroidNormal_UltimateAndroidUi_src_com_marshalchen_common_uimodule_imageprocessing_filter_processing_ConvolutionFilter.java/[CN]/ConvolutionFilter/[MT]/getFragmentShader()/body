@@ -1,0 +1,3 @@
+{
+  return "precision mediump float;\n" + "uniform sampler2D " + UNIFORM_TEXTURE0 + ";\n"+ "uniform float "+ UNIFORM_TEXELWIDTH+ ";\n"+ "uniform float "+ UNIFORM_TEXELHEIGHT+ ";\n"+ "uniform float "+ UNIFORM_FILTER+ "["+ getFilterSize()+ "];"+ "varying vec2 "+ VARYING_TEXCOORD+ ";\n"+ "void main(){\n"+ "   vec2 widthStep = vec2("+ UNIFORM_TEXELWIDTH+ ", 0);"+ "   vec2 heightStep = vec2(0, "+ UNIFORM_TEXELHEIGHT+ ");"+ filterBody+ "}\n";
+}

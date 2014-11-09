@@ -1,0 +1,13 @@
+{
+  DisplayMetrics displayMetrics=context.getResources().getDisplayMetrics();
+  mHandleRadius=HandleUtil.getTargetRadius(context);
+  mSnapRadius=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,SNAP_RADIUS_DP,displayMetrics);
+  mBorderPaint=PaintUtil.newBorderPaint(context);
+  mGuidelinePaint=PaintUtil.newGuidelinePaint();
+  mBackgroundPaint=PaintUtil.newBackgroundPaint(context);
+  mCornerPaint=PaintUtil.newCornerPaint(context);
+  mCornerOffset=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,DEFAULT_CORNER_OFFSET_DP,displayMetrics);
+  mCornerExtension=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,DEFAULT_CORNER_EXTENSION_DP,displayMetrics);
+  mCornerLength=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,DEFAULT_CORNER_LENGTH_DP,displayMetrics);
+  mGuidelines=CropImageView.DEFAULT_GUIDELINES;
+}

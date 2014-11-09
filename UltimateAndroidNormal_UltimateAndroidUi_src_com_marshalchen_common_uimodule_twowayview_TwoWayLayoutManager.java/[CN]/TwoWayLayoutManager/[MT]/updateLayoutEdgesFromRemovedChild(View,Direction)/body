@@ -1,0 +1,47 @@
+{
+  final int childCount=getChildCount();
+  if (childCount == 0) {
+    resetLayoutEdges();
+    return;
+  }
+  final int removedChildStart=getChildStart(removedChild);
+  final int removedChildEnd=getChildEnd(removedChild);
+  if (removedChildStart > mLayoutStart && removedChildEnd < mLayoutEnd) {
+    return;
+  }
+  int index;
+  final int limit;
+  if (direction == Direction.END) {
+    mLayoutStart=Integer.MAX_VALUE;
+    index=0;
+    limit=removedChildEnd;
+  }
+ else {
+    mLayoutEnd=Integer.MIN_VALUE;
+    index=childCount - 1;
+    limit=removedChildStart;
+  }
+  while (index >= 0 && index <= childCount - 1) {
+    final View child=getChildAt(index);
+    if (direction == Direction.END) {
+      final int childStart=getChildStart(child);
+      if (childStart < mLayoutStart) {
+        mLayoutStart=childStart;
+      }
+      if (childStart >= limit) {
+        break;
+      }
+      index++;
+    }
+ else {
+      final int childEnd=getChildEnd(child);
+      if (childEnd > mLayoutEnd) {
+        mLayoutEnd=childEnd;
+      }
+      if (childEnd <= limit) {
+        break;
+      }
+      index--;
+    }
+  }
+}

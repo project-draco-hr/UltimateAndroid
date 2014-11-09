@@ -1,8 +1,0 @@
-{
-  if (mutateBackground == mutate) {
-    return;
-  }
-  mutateBackground=mutate;
-  updateBackgroundDrawableAttrs(true);
-  invalidate();
-}

@@ -1,0 +1,11 @@
+{
+  if (mPrevEvent != null) {
+    mPrevEvent.recycle();
+    mPrevEvent=null;
+  }
+  if (mCurrEvent != null) {
+    mCurrEvent.recycle();
+    mCurrEvent=null;
+  }
+  mGestureInProgress=false;
+}

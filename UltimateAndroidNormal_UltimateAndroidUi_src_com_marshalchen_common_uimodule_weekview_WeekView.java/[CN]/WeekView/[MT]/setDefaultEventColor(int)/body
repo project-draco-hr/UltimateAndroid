@@ -1,0 +1,4 @@
+{
+  mDefaultEventColor=defaultEventColor;
+  invalidate();
+}

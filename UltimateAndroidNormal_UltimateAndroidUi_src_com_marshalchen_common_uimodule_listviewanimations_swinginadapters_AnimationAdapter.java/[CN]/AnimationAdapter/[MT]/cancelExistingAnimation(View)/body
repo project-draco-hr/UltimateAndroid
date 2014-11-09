@@ -1,0 +1,8 @@
+{
+  int hashCode=convertView.hashCode();
+  Animator animator=mAnimators.get(hashCode);
+  if (animator != null) {
+    animator.end();
+    mAnimators.remove(hashCode);
+  }
+}

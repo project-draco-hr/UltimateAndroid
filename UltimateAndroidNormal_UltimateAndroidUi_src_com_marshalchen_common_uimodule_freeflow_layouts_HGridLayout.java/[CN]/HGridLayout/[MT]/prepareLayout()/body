@@ -1,0 +1,39 @@
+{
+  proxies.clear();
+  int rows=height / itemHeight;
+  int leftStart=0;
+  for (int i=0; i < itemsAdapter.getNumberOfSections(); i++) {
+    Section s=itemsAdapter.getSection(i);
+    if (itemsAdapter.shouldDisplaySectionHeaders()) {
+      FreeFlowItem header=new FreeFlowItem();
+      Rect hframe=new Rect();
+      header.itemSection=i;
+      header.itemIndex=-1;
+      header.isHeader=true;
+      hframe.left=leftStart;
+      hframe.top=0;
+      hframe.right=leftStart + headerWidth;
+      hframe.bottom=headerHeight;
+      header.frame=hframe;
+      header.data=s.getHeaderData();
+      proxies.put(header.data,header);
+      leftStart+=headerWidth;
+    }
+    for (int j=0; j < s.getDataCount(); j++) {
+      FreeFlowItem descriptor=new FreeFlowItem();
+      Rect frame=new Rect();
+      descriptor.itemSection=i;
+      descriptor.itemIndex=j;
+      frame.left=(j / rows) * itemWidth + leftStart;
+      frame.top=(j % rows) * itemHeight;
+      frame.right=frame.left + itemWidth;
+      frame.bottom=frame.top + itemHeight;
+      descriptor.frame=frame;
+      descriptor.data=s.getDataAtIndex(j);
+      proxies.put(descriptor.data,descriptor);
+    }
+    int mod=0;
+    if (s.getDataCount() % rows != 0)     mod=1;
+    leftStart+=((s.getDataCount() / rows) + mod) * itemWidth;
+  }
+}

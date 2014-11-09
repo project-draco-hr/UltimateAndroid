@@ -1,0 +1,8 @@
+{
+  double procent=1 - h / _scolor;
+  if (procent > 0) {
+    procent*=procent;
+    color=fixpix(color,procent,_color);
+  }
+  return color;
+}

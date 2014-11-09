@@ -1,0 +1,13 @@
+{
+  if (mPreviousSelectedIndicator != null) {
+    mPreviousSelectedIndicator.setImageDrawable(mUnselectedDrawable);
+    mPreviousSelectedIndicator.setPadding((int)mUnSelectedPadding_Left,(int)mUnSelectedPadding_Top,(int)mUnSelectedPadding_Right,(int)mUnSelectedPadding_Bottom);
+  }
+  ImageView currentSelected=(ImageView)getChildAt(position + 1);
+  if (currentSelected != null) {
+    currentSelected.setImageDrawable(mSelectedDrawable);
+    currentSelected.setPadding((int)mSelectedPadding_Left,(int)mSelectedPadding_Top,(int)mSelectedPadding_Right,(int)mSelectedPadding_Bottom);
+    mPreviousSelectedIndicator=currentSelected;
+  }
+  mPreviousSelectedPosition=position;
+}

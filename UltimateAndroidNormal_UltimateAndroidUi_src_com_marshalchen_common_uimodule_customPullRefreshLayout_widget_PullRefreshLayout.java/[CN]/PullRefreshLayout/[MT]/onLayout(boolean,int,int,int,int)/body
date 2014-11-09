@@ -1,0 +1,12 @@
+{
+  ensureTarget();
+  if (mTarget == null)   return;
+  int height=getMeasuredHeight();
+  int width=getMeasuredWidth();
+  int left=getPaddingLeft();
+  int top=getPaddingTop();
+  int right=getPaddingRight();
+  int bottom=getPaddingBottom();
+  mTarget.layout(left,top + mCurrentOffsetTop,left + width - right,top + height - bottom + mCurrentOffsetTop);
+  mRefreshView.layout(left,top,left + width - right,top + height - bottom);
+}

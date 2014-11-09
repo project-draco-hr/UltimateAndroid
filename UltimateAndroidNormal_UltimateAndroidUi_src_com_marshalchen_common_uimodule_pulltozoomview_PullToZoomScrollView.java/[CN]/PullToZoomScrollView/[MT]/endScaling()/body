@@ -1,0 +1,6 @@
+{
+  if (mZoomContainer.getBottom() >= mZoomHeight) {
+    Log.d(TAG,"endScaling");
+  }
+  mScalingRunnable.startAnimation(200L);
+}

@@ -1,0 +1,3 @@
+PointF center
+float radius
+float angle

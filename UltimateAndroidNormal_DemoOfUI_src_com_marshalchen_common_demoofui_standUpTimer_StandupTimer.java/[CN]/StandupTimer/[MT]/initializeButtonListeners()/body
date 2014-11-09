@@ -1,0 +1,6 @@
+{
+  View nextButton=findViewById(R.id.next_button);
+  nextButton.setOnClickListener(this);
+  View finishedButton=findViewById(R.id.finished_button);
+  finishedButton.setOnClickListener(this);
+}

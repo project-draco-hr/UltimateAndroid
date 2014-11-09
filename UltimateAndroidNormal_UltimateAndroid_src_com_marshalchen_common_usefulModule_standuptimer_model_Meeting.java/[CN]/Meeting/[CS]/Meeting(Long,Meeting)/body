@@ -1,0 +1,6 @@
+{
+  this.id=id;
+  this.team=new Team(meeting.getTeam().getName());
+  this.dateTime=meeting.dateTime;
+  this.meetingStats=meeting.meetingStats;
+}

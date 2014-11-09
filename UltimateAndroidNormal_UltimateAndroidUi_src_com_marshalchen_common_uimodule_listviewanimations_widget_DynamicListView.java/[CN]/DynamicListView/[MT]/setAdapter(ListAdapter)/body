@@ -1,0 +1,6 @@
+{
+  if (!(adapter instanceof BaseAdapter)) {
+    throw new IllegalArgumentException("DynamicListView needs a BaseAdapter!");
+  }
+  super.setAdapter(adapter);
+}

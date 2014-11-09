@@ -1,0 +1,4 @@
+{
+  showArrow(true);
+  setProgressRotation(percent);
+}

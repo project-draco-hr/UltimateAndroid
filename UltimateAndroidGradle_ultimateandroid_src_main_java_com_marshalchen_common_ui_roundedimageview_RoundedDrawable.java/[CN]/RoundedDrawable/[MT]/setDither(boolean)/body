@@ -1,0 +1,4 @@
+{
+  mBitmapPaint.setDither(dither);
+  invalidateSelf();
+}

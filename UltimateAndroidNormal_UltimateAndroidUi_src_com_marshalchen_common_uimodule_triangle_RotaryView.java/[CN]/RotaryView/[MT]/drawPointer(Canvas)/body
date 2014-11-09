@@ -1,0 +1,8 @@
+{
+  Matrix matrix=new Matrix();
+  matrix.postScale(scale,scale);
+  matrix.preRotate((float)-discStart);
+  matrix.preTranslate(-(float)brWidth / 2,-(float)brHeight / 2);
+  matrix.postTranslate(WidthCenter,HeightCenter);
+  c.drawBitmap(bitmapScale,matrix,bitmapRefreshPaint);
+}

@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+  getActionBar().setListNavigationCallbacks(ArrayAdapter.createFromResource(getActionBar().getThemedContext(),R.array.action_list,android.R.layout.simple_spinner_dropdown_item),this);
+  if (savedInstanceState == null) {
+    getFragmentManager().beginTransaction().replace(android.R.id.content,new RoundedFragment()).commit();
+  }
+}

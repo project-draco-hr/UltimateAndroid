@@ -1,0 +1,4 @@
+{
+  float currentFontSize=flowTextView.getTextsize();
+  flowTextView.setTextSize(currentFontSize - 1);
+}

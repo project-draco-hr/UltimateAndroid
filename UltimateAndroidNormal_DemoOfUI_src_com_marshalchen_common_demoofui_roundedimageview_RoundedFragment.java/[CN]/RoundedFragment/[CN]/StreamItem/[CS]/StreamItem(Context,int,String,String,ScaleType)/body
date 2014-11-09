@@ -1,0 +1,6 @@
+{
+  mBitmap=BitmapFactory.decodeResource(c.getResources(),resid);
+  mLine1=line1;
+  mLine2=line2;
+  mScaleType=scaleType;
+}

@@ -1,0 +1,27 @@
+{
+  if (mPageCount < 1) {
+    return;
+  }
+  if (!mScroller.isFinished() && mScroller.computeScrollOffset()) {
+    setFlipDistance(mScroller.getCurrY());
+  }
+  if (mIsFlipping || !mScroller.isFinished() || mPeakAnim != null) {
+    showAllPages();
+    drawPreviousHalf(canvas);
+    drawNextHalf(canvas);
+    drawFlippingHalf(canvas);
+  }
+ else {
+    endScroll();
+    setDrawWithLayer(mCurrentPage.v,false);
+    hideOtherPages(mCurrentPage);
+    drawChild(canvas,mCurrentPage.v,0);
+    if (mLastDispatchedPageEventIndex != mCurrentPageIndex) {
+      mLastDispatchedPageEventIndex=mCurrentPageIndex;
+      postFlippedToPage(mCurrentPageIndex);
+    }
+  }
+  if (mOverFlipper.draw(canvas)) {
+    invalidate();
+  }
+}

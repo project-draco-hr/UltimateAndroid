@@ -1,0 +1,5 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(crossHatchSpacingHandle,crossHatchSpacing);
+  GLES20.glUniform1f(lineWidthHandle,lineWidth);
+}

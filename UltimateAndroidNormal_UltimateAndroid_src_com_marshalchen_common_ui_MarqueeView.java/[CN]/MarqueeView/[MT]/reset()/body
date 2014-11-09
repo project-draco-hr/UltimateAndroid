@@ -1,0 +1,11 @@
+{
+  mCancelled=true;
+  if (mAnimationStartRunnable != null) {
+    removeCallbacks(mAnimationStartRunnable);
+  }
+  mTextField.clearAnimation();
+  mStarted=false;
+  mMoveTextOut.reset();
+  mMoveTextIn.reset();
+  invalidate();
+}

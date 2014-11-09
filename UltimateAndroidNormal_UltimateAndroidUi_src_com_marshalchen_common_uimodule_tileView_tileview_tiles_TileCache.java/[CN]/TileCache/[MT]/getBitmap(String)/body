@@ -1,0 +1,7 @@
+{
+  Bitmap bitmap=getBitmapFromMemoryCache(key);
+  if (bitmap == null) {
+    bitmap=getBitmapFromDiskCache(key);
+  }
+  return bitmap;
+}

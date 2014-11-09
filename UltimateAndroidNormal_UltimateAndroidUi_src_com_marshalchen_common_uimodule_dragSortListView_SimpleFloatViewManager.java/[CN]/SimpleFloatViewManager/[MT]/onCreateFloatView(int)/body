@@ -1,0 +1,18 @@
+{
+  View v=mListView.getChildAt(position + mListView.getHeaderViewsCount() - mListView.getFirstVisiblePosition());
+  if (v == null) {
+    return null;
+  }
+  v.setPressed(false);
+  v.setDrawingCacheEnabled(true);
+  mFloatBitmap=Bitmap.createBitmap(v.getDrawingCache());
+  v.setDrawingCacheEnabled(false);
+  if (mImageView == null) {
+    mImageView=new ImageView(mListView.getContext());
+  }
+  mImageView.setBackgroundColor(mFloatBGColor);
+  mImageView.setPadding(0,0,0,0);
+  mImageView.setImageBitmap(mFloatBitmap);
+  mImageView.setLayoutParams(new ViewGroup.LayoutParams(v.getWidth(),v.getHeight()));
+  return mImageView;
+}

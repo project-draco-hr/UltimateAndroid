@@ -1,0 +1,3 @@
+{
+  return Color.argb(Math.min(255,Color.alpha(color)),Math.min(255,Color.red(color) + amount),Math.min(255,Color.green(color) + amount),Math.min(255,Color.blue(color) + amount));
+}

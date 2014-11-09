@@ -1,0 +1,8 @@
+{
+  if (getChildCount() > 0) {
+    stopFlingRunnable();
+    mRecycleBin.clear();
+    mDataChanged=true;
+    rememberSyncState();
+  }
+}

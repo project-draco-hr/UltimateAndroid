@@ -1,0 +1,11 @@
+{
+  if (!scroller.isFinished()) {
+    scroller.forceFinished(true);
+  }
+  removeCallbacks(flingRunnable);
+  resetAllCallbacks();
+  mTouchMode=TOUCH_MODE_REST;
+  if (mOnTouchModeChangedListener != null) {
+    mOnTouchModeChangedListener.onTouchModeChanged(mTouchMode);
+  }
+}

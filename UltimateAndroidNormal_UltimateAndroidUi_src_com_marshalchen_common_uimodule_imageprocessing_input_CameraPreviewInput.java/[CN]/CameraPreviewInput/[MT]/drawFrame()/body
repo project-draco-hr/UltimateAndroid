@@ -1,0 +1,4 @@
+{
+  camTex.updateTexImage();
+  super.drawFrame();
+}

@@ -1,0 +1,4 @@
+{
+  int end=mClipToPadding ? getRowPaddingTop() : 0;
+  return getLowestPositionedTop() > end;
+}

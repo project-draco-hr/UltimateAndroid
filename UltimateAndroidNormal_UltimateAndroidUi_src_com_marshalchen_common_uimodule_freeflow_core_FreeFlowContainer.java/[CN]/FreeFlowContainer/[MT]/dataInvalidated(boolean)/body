@@ -1,0 +1,9 @@
+{
+  logLifecycleEvent("Data Invalidated");
+  if (mLayout == null || mAdapter == null) {
+    return;
+  }
+  shouldRecalculateScrollWhenComputingLayout=shouldRecalculateScrollPositions;
+  markAdapterDirty=true;
+  requestLayout();
+}

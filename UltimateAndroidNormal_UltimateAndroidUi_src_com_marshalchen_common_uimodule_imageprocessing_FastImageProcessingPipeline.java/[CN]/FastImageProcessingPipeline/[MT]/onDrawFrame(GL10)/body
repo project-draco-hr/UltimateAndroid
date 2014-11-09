@@ -1,0 +1,17 @@
+{
+  if (isRendering()) {
+    for (int i=0; i < rootRenderers.size(); i++) {
+      GLRenderer rootRenderer;
+synchronized (this) {
+        rootRenderer=rootRenderers.get(i);
+      }
+      rootRenderer.onDrawFrame();
+    }
+  }
+synchronized (filtersToDestroy) {
+    for (    GLRenderer renderer : filtersToDestroy) {
+      renderer.destroy();
+    }
+    filtersToDestroy.clear();
+  }
+}

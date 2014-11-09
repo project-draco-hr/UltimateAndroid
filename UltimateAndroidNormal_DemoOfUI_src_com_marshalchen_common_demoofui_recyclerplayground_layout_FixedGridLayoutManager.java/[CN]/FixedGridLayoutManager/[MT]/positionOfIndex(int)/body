@@ -1,0 +1,5 @@
+{
+  int row=childIndex / mVisibleColumnCount;
+  int column=childIndex % mVisibleColumnCount;
+  return mFirstVisiblePosition + (row * getTotalColumnCount()) + column;
+}

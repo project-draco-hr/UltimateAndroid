@@ -1,0 +1,12 @@
+{
+  if (mScroller.computeScrollOffset()) {
+    scrollTo(mScroller.getCurrX(),mScroller.getCurrY());
+    Log.i("scroller","getCurrX()= " + mScroller.getCurrX() + "     getCurrY()="+ mScroller.getCurrY()+ "  getFinalY() =  "+ mScroller.getFinalY());
+    postInvalidate();
+  }
+ else {
+    if (mCloseFlag) {
+      this.setVisibility(View.GONE);
+    }
+  }
+}

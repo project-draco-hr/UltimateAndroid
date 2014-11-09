@@ -1,0 +1,19 @@
+{
+  setEnabled(false);
+  animating=true;
+  final float durationUnit=(float)MAX_ANIM_DURATION / getHeight();
+  animatePreLayout(durationUnit,new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    final Animator animation){
+      adapter.notifyDataSetChanged();
+      getViewTreeObserver().addOnPreDrawListener(new OnPreDrawListener(){
+        @Override public boolean onPreDraw(){
+          getViewTreeObserver().removeOnPreDrawListener(this);
+          animatePostLayout(durationUnit);
+          return true;
+        }
+      }
+);
+    }
+  }
+);
+}

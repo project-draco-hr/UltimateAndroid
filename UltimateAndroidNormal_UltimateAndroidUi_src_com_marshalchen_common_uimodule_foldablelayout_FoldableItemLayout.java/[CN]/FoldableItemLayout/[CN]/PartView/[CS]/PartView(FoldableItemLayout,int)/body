@@ -1,0 +1,11 @@
+{
+  super(parent.getContext());
+  mGravity=gravity;
+  final int matchParent=LayoutParams.MATCH_PARENT;
+  parent.addView(this,new LayoutParams(matchParent,matchParent));
+  setCameraDistance(CAMERA_DISTANCE * getResources().getDisplayMetrics().densityDpi);
+  mBitmapPaint=new Paint();
+  mBitmapPaint.setDither(true);
+  mBitmapPaint.setFilterBitmap(true);
+  setWillNotDraw(false);
+}

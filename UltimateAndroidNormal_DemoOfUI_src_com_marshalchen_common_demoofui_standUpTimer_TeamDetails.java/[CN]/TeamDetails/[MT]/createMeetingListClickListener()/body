@@ -1,0 +1,12 @@
+{
+  return new OnItemClickListener(){
+    public void onItemClick(    AdapterView<?> parent,    View view,    int position,    long id){
+      String meetingTime=meetingListAdapter.getItem(position);
+      Intent intent=new Intent(TeamDetails.this,MeetingDetails.class);
+      intent.putExtra("teamName",team.getName());
+      intent.putExtra("meetingTime",meetingTime);
+      startActivity(intent);
+    }
+  }
+;
+}

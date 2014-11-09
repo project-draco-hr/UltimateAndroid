@@ -1,0 +1,4 @@
+{
+  DetailLevel detailLevel=new DetailLevel(this,scale,pattern,downsample,tileWidth,tileHeight);
+  addDetailLevel(detailLevel);
+}

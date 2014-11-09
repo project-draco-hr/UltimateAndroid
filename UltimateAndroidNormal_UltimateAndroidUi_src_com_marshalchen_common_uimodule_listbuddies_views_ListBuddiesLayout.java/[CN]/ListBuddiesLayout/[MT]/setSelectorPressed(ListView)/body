@@ -1,0 +1,15 @@
+{
+  if (mDownView != null) {
+    mDownPosition=list.getPositionForView(mDownView);
+    mDownView.postDelayed(new Runnable(){
+      @Override public void run(){
+        if (isUserInteracting) {
+          if (mDownView != null) {
+            mDownView.setPressed(true);
+          }
+        }
+      }
+    }
+,PRESS_DELAY);
+  }
+}

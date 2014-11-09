@@ -1,0 +1,4 @@
+{
+  this.leftMenuItems.add(menuItem);
+  layoutLeftMenu.addView(menuItem);
+}

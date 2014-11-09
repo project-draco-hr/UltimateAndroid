@@ -1,0 +1,5 @@
+{
+  GridItemRecord rec=getOrCreateRecord(position);
+  rec.heightRatio=(double)height / (double)mColumnWidth;
+  if (DBG)   Log.d(TAG,"position:" + position + " width:"+ mColumnWidth+ " height:"+ height+ " heightRatio:"+ rec.heightRatio);
+}

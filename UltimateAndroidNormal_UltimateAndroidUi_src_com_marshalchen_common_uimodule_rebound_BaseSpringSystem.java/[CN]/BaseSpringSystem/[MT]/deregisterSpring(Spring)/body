@@ -1,0 +1,7 @@
+{
+  if (spring == null) {
+    throw new IllegalArgumentException("spring is required");
+  }
+  mActiveSprings.remove(spring);
+  mSpringRegistry.remove(spring.getId());
+}

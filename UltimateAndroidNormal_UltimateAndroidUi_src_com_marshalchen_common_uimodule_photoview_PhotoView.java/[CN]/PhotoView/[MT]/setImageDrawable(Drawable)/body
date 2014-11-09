@@ -1,0 +1,6 @@
+{
+  super.setImageDrawable(drawable);
+  if (null != mAttacher) {
+    mAttacher.update();
+  }
+}

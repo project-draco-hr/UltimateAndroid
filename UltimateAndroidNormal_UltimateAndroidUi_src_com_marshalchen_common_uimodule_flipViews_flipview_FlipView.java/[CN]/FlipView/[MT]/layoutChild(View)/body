@@ -1,0 +1,3 @@
+{
+  child.layout(0,0,getWidth(),getHeight());
+}

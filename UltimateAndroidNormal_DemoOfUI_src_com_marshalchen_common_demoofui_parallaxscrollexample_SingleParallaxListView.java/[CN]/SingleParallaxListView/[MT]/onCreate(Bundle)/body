@@ -1,0 +1,14 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.parallax_scroll_list_one_parallax);
+  ParallaxListView listView=(ParallaxListView)findViewById(R.id.list_view);
+  CustomListAdapter adapter=new CustomListAdapter(LayoutInflater.from(this));
+  TextView v=new TextView(this);
+  v.setText("PARALLAXED");
+  v.setGravity(Gravity.CENTER);
+  v.setTextSize(40);
+  v.setHeight(200);
+  v.setBackgroundResource(R.drawable.parallax_scroll_item_background);
+  listView.addParallaxedHeaderView(v);
+  listView.setAdapter(adapter);
+}

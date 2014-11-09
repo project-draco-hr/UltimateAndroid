@@ -1,0 +1,7 @@
+{
+  if (mWrapped.onCreateActionMode(mode,menu)) {
+    setLongClickable(false);
+    return true;
+  }
+  return false;
+}

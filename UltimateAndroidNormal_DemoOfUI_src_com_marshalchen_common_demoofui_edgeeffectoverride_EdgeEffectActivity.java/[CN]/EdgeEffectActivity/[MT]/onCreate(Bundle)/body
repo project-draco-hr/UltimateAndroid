@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.edge_effect_activity_main);
+  mListView=(EdgeEffectListView)findViewById(R.id.listview);
+  mListView.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,STRINGS));
+  mListView.setOnItemClickListener(this);
+}

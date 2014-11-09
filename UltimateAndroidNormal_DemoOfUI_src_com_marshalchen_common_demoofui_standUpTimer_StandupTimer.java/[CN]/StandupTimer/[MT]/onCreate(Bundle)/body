@@ -1,0 +1,13 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.stand_up_timer_timer);
+  team=Team.findByName(getIntent().getStringExtra("teamName"),this);
+  if (team != null) {
+    Logger.i("Starting new meeting for team '" + team.getName() + "'");
+  }
+  setVolumeControlStream(AudioManager.STREAM_MUSIC);
+  initializeSounds();
+  initializeButtonListeners();
+  initializeTimerValues();
+  updateDisplay();
+}

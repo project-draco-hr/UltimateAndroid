@@ -1,0 +1,9 @@
+{
+  outlinePaint.setStrokeWidth(1);
+  float xThird=(drawRect.right - drawRect.left) / 3;
+  float yThird=(drawRect.bottom - drawRect.top) / 3;
+  canvas.drawLine(drawRect.left + xThird,drawRect.top,drawRect.left + xThird,drawRect.bottom,outlinePaint);
+  canvas.drawLine(drawRect.left + xThird * 2,drawRect.top,drawRect.left + xThird * 2,drawRect.bottom,outlinePaint);
+  canvas.drawLine(drawRect.left,drawRect.top + yThird,drawRect.right,drawRect.top + yThird,outlinePaint);
+  canvas.drawLine(drawRect.left,drawRect.top + yThird * 2,drawRect.right,drawRect.top + yThird * 2,outlinePaint);
+}

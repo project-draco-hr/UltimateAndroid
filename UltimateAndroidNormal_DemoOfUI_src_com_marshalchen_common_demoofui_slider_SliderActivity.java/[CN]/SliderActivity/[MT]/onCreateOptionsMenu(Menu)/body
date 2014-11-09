@@ -1,0 +1,5 @@
+{
+  MenuInflater menuInflater=getMenuInflater();
+  menuInflater.inflate(R.menu.slider,menu);
+  return super.onCreateOptionsMenu(menu);
+}

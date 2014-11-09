@@ -1,0 +1,4 @@
+{
+  mMirrorMode=mirrorMode;
+  return this;
+}

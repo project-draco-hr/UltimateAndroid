@@ -1,0 +1,3 @@
+{
+  return ((Activity)getContext()).getWindow().getDecorView().findViewById(android.R.id.content);
+}

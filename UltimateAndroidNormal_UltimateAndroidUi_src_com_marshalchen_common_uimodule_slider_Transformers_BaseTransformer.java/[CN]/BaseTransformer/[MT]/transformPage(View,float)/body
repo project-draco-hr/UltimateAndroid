@@ -1,0 +1,5 @@
+{
+  onPreTransform(view,position);
+  onTransform(view,position);
+  onPostTransform(view,position);
+}

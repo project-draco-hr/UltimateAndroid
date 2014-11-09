@@ -1,0 +1,4 @@
+{
+  super.unregisterDataSetObserver(observer);
+  mDelegate.unregisterDataSetObserver(observer);
+}

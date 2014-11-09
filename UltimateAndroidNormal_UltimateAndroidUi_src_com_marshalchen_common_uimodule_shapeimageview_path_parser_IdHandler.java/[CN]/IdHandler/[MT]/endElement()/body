@@ -1,0 +1,19 @@
+{
+  String localName=atts.getName();
+  if (idRecordingStack.size() > 0) {
+    IdRecording ir=idRecordingStack.lastElement();
+    ir.sb.append("</");
+    ir.sb.append(localName);
+    ir.sb.append(">");
+    ir.level--;
+    if (ir.level == 0) {
+      String xml=ir.sb.toString();
+      idXml.put(ir.id,xml);
+      idRecordingStack.pop();
+      if (idRecordingStack.size() > 0) {
+        idRecordingStack.lastElement().sb.append(xml);
+      }
+      Log.w(TAG,xml);
+    }
+  }
+}

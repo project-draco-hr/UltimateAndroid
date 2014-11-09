@@ -1,0 +1,12 @@
+{
+  View view=inflater.inflate(R.layout.shape_image_fragment_chat_sample,container,false);
+  final Picasso picasso=Picasso.with(getActivity());
+  picasso.setLoggingEnabled(true);
+  picasso.setIndicatorsEnabled(false);
+  int listLayout1=getArguments().getInt(ARG_LAYOUT_1);
+  int listLayout2=getArguments().getInt(ARG_LAYOUT_2);
+  final ListView listView=(ListView)view.findViewById(R.id.list);
+  Adapter adapter=new Adapter(getActivity(),picasso,listLayout1,listLayout2);
+  listView.setAdapter(adapter);
+  return view;
+}

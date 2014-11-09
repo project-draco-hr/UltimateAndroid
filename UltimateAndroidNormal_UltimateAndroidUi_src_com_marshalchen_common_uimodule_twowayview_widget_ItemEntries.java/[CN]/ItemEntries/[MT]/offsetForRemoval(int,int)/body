@@ -1,0 +1,8 @@
+{
+  if (mItemEntries == null || positionStart >= mItemEntries.length) {
+    return;
+  }
+  ensureSize(positionStart + itemCount);
+  System.arraycopy(mItemEntries,positionStart + itemCount,mItemEntries,positionStart,mItemEntries.length - positionStart - itemCount);
+  Arrays.fill(mItemEntries,mItemEntries.length - itemCount,mItemEntries.length,null);
+}

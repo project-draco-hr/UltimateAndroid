@@ -1,0 +1,4 @@
+{
+  Resources resources=activity.getResources();
+  return activity.getWindow().getDecorView().findViewById(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ? resources.getIdentifier("android:id/home",null,null) : R.id.home);
+}

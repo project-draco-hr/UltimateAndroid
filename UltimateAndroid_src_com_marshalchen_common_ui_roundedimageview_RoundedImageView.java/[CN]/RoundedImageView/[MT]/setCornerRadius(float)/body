@@ -1,8 +1,0 @@
-{
-  if (cornerRadius == radius) {
-    return;
-  }
-  cornerRadius=radius;
-  updateDrawableAttrs();
-  updateBackgroundDrawableAttrs(false);
-}

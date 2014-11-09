@@ -1,0 +1,5 @@
+{
+  Schema schema=new Schema(1,getGenerateSchemaPath);
+  addNote(schema);
+  new DaoGenerator().generateAll(schema,generatePath);
+}

@@ -1,0 +1,3 @@
+{
+  return getQueryBuilder(dao,cond,condmore).listLazy();
+}

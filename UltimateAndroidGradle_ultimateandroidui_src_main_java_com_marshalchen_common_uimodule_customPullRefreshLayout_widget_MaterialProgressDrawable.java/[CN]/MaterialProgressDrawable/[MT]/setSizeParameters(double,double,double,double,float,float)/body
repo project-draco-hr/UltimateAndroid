@@ -1,0 +1,12 @@
+{
+  final Ring ring=mRing;
+  final DisplayMetrics metrics=mResources.getDisplayMetrics();
+  final float screenDensity=metrics.density;
+  mWidth=progressCircleWidth * screenDensity;
+  mHeight=progressCircleHeight * screenDensity;
+  ring.setStrokeWidth((float)strokeWidth * screenDensity);
+  ring.setCenterRadius(centerRadius * screenDensity);
+  ring.setColorIndex(0);
+  ring.setArrowDimensions(arrowWidth * screenDensity,arrowHeight * screenDensity);
+  ring.setInsets((int)mWidth,(int)mHeight);
+}

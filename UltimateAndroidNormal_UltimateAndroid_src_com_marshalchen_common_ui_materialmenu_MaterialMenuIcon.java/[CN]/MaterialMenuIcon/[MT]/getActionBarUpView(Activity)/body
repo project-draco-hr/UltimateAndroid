@@ -1,0 +1,6 @@
+{
+  Resources resources=activity.getResources();
+  ViewGroup actionBarView=(ViewGroup)activity.getWindow().getDecorView().findViewById(resources.getIdentifier("android:id/action_bar",null,null));
+  View homeView=actionBarView.getChildAt(actionBarView.getChildCount() > 1 ? 1 : 0);
+  return homeView.findViewById(resources.getIdentifier("android:id/up",null,null));
+}

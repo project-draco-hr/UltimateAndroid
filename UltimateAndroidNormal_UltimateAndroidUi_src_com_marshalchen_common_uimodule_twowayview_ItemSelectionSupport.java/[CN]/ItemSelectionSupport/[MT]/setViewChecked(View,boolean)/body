@@ -1,0 +1,8 @@
+{
+  if (view instanceof Checkable) {
+    ((Checkable)view).setChecked(checked);
+  }
+ else   if (Build.VERSION.SDK_INT >= HONEYCOMB) {
+    view.setActivated(checked);
+  }
+}

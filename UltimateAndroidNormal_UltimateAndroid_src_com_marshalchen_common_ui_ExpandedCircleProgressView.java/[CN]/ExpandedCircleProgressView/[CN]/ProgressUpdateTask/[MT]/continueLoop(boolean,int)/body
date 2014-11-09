@@ -1,0 +1,4 @@
+{
+  if (isIncresing)   return mProgressCircle.radius <= size;
+ else   return mProgressCircle.radius >= size;
+}

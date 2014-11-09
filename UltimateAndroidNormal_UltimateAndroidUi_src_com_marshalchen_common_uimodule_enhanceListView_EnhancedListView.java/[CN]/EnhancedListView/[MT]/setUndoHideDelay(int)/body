@@ -1,0 +1,4 @@
+{
+  mUndoHideDelay=hideDelay;
+  return this;
+}

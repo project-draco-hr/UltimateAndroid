@@ -1,0 +1,6 @@
+{
+  super.initShaderHandles();
+  for (int i=0; i < numOfInputs - 1; i++) {
+    textureHandle[i]=GLES20.glGetUniformLocation(programHandle,UNIFORM_TEXTUREBASE + (i + 1));
+  }
+}

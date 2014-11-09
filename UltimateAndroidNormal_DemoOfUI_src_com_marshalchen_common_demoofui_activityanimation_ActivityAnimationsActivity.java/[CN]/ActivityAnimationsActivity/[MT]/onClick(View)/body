@@ -1,0 +1,13 @@
+{
+  Intent intent=null;
+  if (view.getId() == R.id.next) {
+    intent=new Intent(this,SecondActivity.class);
+    intent.putExtra("animation_type",mAnimationType);
+  }
+ else   if (view.getId() == R.id.open_door) {
+    intent=new Intent(this,DoorActivity.class);
+    intent.putExtra("door_type",mDoorType);
+  }
+  startActivity(intent);
+  overridePendingTransition(0,0);
+}

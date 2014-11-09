@@ -1,0 +1,4 @@
+{
+  super.passShaderValues();
+  GLES20.glUniform1f(mixPercentHandle,mixPercent);
+}

@@ -1,0 +1,29 @@
+{
+  final List<Integer> positionsCopy=new ArrayList<Integer>(positions);
+  if (getAbsListView() == null) {
+    throw new IllegalStateException("Call setAbsListView() on this AnimateDismissAdapter before calling setAdapter()!");
+  }
+  List<View> views=getVisibleViewsForPositions(positionsCopy);
+  if (!views.isEmpty()) {
+    List<Animator> animators=new ArrayList<Animator>();
+    for (    final View view : views) {
+      animators.add(createAnimatorForView(view));
+    }
+    AnimatorSet animatorSet=new AnimatorSet();
+    Animator[] animatorsArray=new Animator[animators.size()];
+    for (int i=0; i < animatorsArray.length; i++) {
+      animatorsArray[i]=animators.get(i);
+    }
+    animatorSet.playTogether(animatorsArray);
+    animatorSet.addListener(new AnimatorListenerAdapter(){
+      @Override public void onAnimationEnd(      final Animator animator){
+        invokeCallback(positionsCopy);
+      }
+    }
+);
+    animatorSet.start();
+  }
+ else {
+    invokeCallback(positionsCopy);
+  }
+}

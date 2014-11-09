@@ -1,0 +1,3 @@
+{
+  updateAdapter(oldAdapter,newAdapter);
+}

@@ -1,0 +1,4 @@
+{
+  this.threshold=threshold;
+  this.quantizationLevels=quantizationLevels;
+}

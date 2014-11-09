@@ -1,0 +1,6 @@
+{
+  if (mBlurredBackgroundView == null || retainedInstance) {
+    mBluringTask=new BlurAsyncTask();
+    mBluringTask.execute();
+  }
+}

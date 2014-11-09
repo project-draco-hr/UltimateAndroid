@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.drag_sort_listview_test_bed_main);
+  if (savedInstanceState == null) {
+    getSupportFragmentManager().beginTransaction().add(R.id.test_bed,getNewDslvFragment(),mTag).commit();
+  }
+}

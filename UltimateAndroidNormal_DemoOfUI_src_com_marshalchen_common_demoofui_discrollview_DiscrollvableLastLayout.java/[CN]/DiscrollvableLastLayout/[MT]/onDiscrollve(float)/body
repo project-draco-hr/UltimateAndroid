@@ -1,0 +1,11 @@
+{
+  mLastView1.setTranslationX(mLastView1TranslationX * (1 - ratio));
+  mLastView1.setTranslationY(mLastView1TranslationY * (1 - ratio));
+  mLastView1.setAlpha(ratio);
+  mLastView2.setTranslationX(mLastView2TranslationX * (1 - ratio));
+  mLastView2.setTranslationY(mLastView2TranslationY * (1 - ratio));
+  mLastView2.setAlpha(ratio);
+  mLastView3.setTranslationX(mLastView3TranslationX * (1 - ratio));
+  mLastView3.setTranslationY(mLastView3TranslationY * (1 - ratio));
+  mLastView3.setAlpha(ratio);
+}

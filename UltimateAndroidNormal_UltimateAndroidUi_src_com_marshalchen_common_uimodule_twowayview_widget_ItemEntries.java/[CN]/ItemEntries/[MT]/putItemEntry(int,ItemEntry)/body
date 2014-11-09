@@ -1,0 +1,4 @@
+{
+  ensureSize(position);
+  mItemEntries[position]=entry;
+}

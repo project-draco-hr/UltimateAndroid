@@ -1,0 +1,8 @@
+{
+  Animation animation=new RotateAndTranslateAnimation(0,toXDelta,0,toYDelta,0,720);
+  animation.setStartOffset(startOffset);
+  animation.setDuration(duration);
+  animation.setInterpolator(interpolator);
+  animation.setFillAfter(true);
+  return animation;
+}

@@ -1,0 +1,8 @@
+{
+  if (NEEDS_PROXY) {
+    wrap(view).setScaleY(scaleY);
+  }
+ else {
+    Honeycomb.setScaleY(view,scaleY);
+  }
+}

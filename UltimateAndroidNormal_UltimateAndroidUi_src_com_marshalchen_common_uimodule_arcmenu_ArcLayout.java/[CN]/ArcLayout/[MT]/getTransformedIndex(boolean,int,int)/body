@@ -1,0 +1,6 @@
+{
+  if (expanded) {
+    return count - 1 - index;
+  }
+  return index;
+}

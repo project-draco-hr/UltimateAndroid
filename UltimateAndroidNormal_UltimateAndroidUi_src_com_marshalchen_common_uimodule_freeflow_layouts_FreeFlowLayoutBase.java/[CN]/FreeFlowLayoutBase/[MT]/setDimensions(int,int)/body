@@ -1,0 +1,7 @@
+{
+  if (measuredHeight == height && measuredWidth == width) {
+    return;
+  }
+  this.width=measuredWidth;
+  this.height=measuredHeight;
+}

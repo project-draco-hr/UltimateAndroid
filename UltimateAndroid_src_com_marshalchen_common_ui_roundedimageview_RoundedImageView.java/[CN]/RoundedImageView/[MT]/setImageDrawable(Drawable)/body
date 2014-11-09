@@ -1,6 +1,0 @@
-{
-  mResource=0;
-  mDrawable=RoundedDrawable.fromDrawable(drawable);
-  updateDrawableAttrs();
-  super.setImageDrawable(mDrawable);
-}

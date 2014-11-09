@@ -1,0 +1,5 @@
+{
+  this.context=context;
+  section=new Section();
+  section.setSectionTitle("Pics");
+}

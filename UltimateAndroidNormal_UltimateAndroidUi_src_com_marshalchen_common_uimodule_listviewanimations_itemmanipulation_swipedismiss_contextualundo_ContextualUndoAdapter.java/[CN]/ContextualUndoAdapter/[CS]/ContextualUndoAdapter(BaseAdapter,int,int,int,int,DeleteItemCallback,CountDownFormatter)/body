@@ -1,0 +1,12 @@
+{
+  super(baseAdapter);
+  mHandler=new Handler();
+  mCountDownRunnable=new CountDownRunnable();
+  mUndoLayoutId=undoLayoutResId;
+  mUndoActionId=undoActionResId;
+  mCurrentRemovedId=-1;
+  mAutoDeleteDelayMillis=autoDeleteTime;
+  mCountDownTextViewResId=countDownTextViewResId;
+  mDeleteItemCallback=deleteItemCallback;
+  mCountDownFormatter=countDownFormatter;
+}

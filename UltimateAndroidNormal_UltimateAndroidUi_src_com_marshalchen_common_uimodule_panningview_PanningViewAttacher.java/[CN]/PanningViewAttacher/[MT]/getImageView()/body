@@ -1,0 +1,11 @@
+{
+  ImageView imageView=null;
+  if (null != mImageView) {
+    imageView=mImageView.get();
+  }
+  if (null == imageView) {
+    cleanup();
+    throw new IllegalStateException("ImageView no longer exists. You should not use this PanningViewAttacher any more.");
+  }
+  return imageView;
+}

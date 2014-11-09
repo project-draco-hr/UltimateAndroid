@@ -1,0 +1,32 @@
+{
+  final int childCount=getChildCount();
+  int maxWidth=r - l;
+  int x=0;
+  int y=0;
+  int row=0;
+  int arrayx=0;
+  int arrayy=0;
+  for (int i=0; i < childCount; i++) {
+    final View child=this.getChildAt(i);
+    if (child.getVisibility() != View.GONE) {
+      int width=child.getMeasuredWidth();
+      int height=child.getMeasuredHeight();
+      x+=width + VIEW_MARGIN;
+      y=row * height + height + row * (VIEW_MARGIN);
+      arrayy++;
+      countsArray[arrayx]=arrayy;
+      if (x > maxWidth) {
+        x=width + VIEW_MARGIN;
+        row++;
+        y=row * height + height + row * (VIEW_MARGIN);
+        countsArray[arrayx]=arrayy - 1;
+        arrayx++;
+        arrayy=0;
+      }
+      if (row > 1)       break;
+      child.layout(x - width,y - height,x,y);
+      rowsHeight=y - height;
+    }
+  }
+  if (row > 0)   countsArray[1]++;
+}

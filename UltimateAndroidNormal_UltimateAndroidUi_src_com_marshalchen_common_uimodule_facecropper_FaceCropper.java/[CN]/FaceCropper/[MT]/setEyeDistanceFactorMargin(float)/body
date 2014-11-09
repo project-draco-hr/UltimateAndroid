@@ -1,0 +1,4 @@
+{
+  mEyeDistanceFactorMargin=eyeDistanceFactorMargin;
+  mSizeMode=SizeMode.EyeDistanceFactorMargin;
+}

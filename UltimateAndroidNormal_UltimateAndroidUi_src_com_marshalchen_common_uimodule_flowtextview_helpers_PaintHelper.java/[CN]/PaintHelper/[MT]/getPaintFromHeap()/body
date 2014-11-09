@@ -1,0 +1,8 @@
+{
+  if (mPaintHeap.size() > 0) {
+    return mPaintHeap.remove(0);
+  }
+ else {
+    return new TextPaint(Paint.ANTI_ALIAS_FLAG);
+  }
+}

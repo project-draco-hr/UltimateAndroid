@@ -1,0 +1,4 @@
+{
+  mContextualUndoView=contextualUndoView;
+  mContextualUndoView.setTag(this);
+}

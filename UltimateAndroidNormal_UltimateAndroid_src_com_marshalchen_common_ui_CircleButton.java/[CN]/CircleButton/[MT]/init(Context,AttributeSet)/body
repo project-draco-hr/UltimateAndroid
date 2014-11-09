@@ -1,0 +1,22 @@
+{
+  this.setFocusable(true);
+  this.setScaleType(ScaleType.CENTER_INSIDE);
+  setClickable(true);
+  circlePaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  circlePaint.setStyle(Paint.Style.FILL);
+  focusPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+  focusPaint.setStyle(Paint.Style.STROKE);
+  pressedRingWidth=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,DEFAULT_PRESSED_RING_WIDTH_DIP,getResources().getDisplayMetrics());
+  int color=Color.BLACK;
+  if (attrs != null) {
+    final TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.CircleButton);
+    color=a.getColor(R.styleable.CircleButton_cb_color,color);
+    pressedRingWidth=(int)a.getDimension(R.styleable.CircleButton_cb_pressed_ring_width,pressedRingWidth);
+    a.recycle();
+  }
+  setColor(color);
+  focusPaint.setStrokeWidth(pressedRingWidth);
+  final int pressedAnimationTime=getResources().getInteger(ANIMATION_TIME_ID);
+  pressedAnimator=ObjectAnimator.ofFloat(this,"animationProgress",0f,0f);
+  pressedAnimator.setDuration(pressedAnimationTime);
+}

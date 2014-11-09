@@ -1,0 +1,15 @@
+{
+  if (x < 0) {
+    x=0;
+  }
+ else   if (x >= w) {
+    x=w - 1;
+  }
+  if (y < 0) {
+    y=0;
+  }
+ else   if (y >= h) {
+    y=h - 1;
+  }
+  return ((((input.getRComponent(x,y) * 0x1b36) + (input.getGComponent(x,y) * 0x5b8c)) + (input.getBComponent(x,y) * 0x93e)) >> 15);
+}

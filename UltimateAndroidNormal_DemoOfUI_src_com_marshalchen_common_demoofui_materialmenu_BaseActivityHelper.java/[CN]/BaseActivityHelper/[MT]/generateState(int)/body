@@ -1,0 +1,4 @@
+{
+  int generated=new Random().nextInt(4);
+  return generated != previous ? generated : generateState(previous);
+}

@@ -1,0 +1,3 @@
+{
+  reference=new WeakReference<TileManager>(tm);
+}

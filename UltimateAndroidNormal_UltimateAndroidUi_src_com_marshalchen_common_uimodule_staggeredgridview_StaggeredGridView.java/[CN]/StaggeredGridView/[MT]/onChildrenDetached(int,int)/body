@@ -1,0 +1,36 @@
+{
+  super.onChildrenDetached(start,count);
+  Arrays.fill(mColumnTops,Integer.MAX_VALUE);
+  Arrays.fill(mColumnBottoms,0);
+  for (int i=0; i < getChildCount(); i++) {
+    final View child=getChildAt(i);
+    if (child != null) {
+      final LayoutParams childParams=(LayoutParams)child.getLayoutParams();
+      if (childParams.viewType != ITEM_VIEW_TYPE_HEADER_OR_FOOTER && childParams instanceof GridLayoutParams) {
+        GridLayoutParams layoutParams=(GridLayoutParams)childParams;
+        int column=layoutParams.column;
+        int position=layoutParams.position;
+        final int childTop=child.getTop();
+        if (childTop < mColumnTops[column]) {
+          mColumnTops[column]=childTop - getChildTopMargin(position);
+        }
+        final int childBottom=child.getBottom();
+        if (childBottom > mColumnBottoms[column]) {
+          mColumnBottoms[column]=childBottom + getChildBottomMargin();
+        }
+      }
+ else {
+        final int childTop=child.getTop();
+        final int childBottom=child.getBottom();
+        for (int col=0; col < mColumnCount; col++) {
+          if (childTop < mColumnTops[col]) {
+            mColumnTops[col]=childTop;
+          }
+          if (childBottom > mColumnBottoms[col]) {
+            mColumnBottoms[col]=childBottom;
+          }
+        }
+      }
+    }
+  }
+}

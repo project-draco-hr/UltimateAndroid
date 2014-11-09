@@ -1,0 +1,4 @@
+Rect outRect
+int lane
+int margin
+Direction direction

@@ -1,0 +1,3 @@
+{
+  this(context,attrs,defStyle,DEFAULT_NUM_COLS,DEFAULT_NUM_ROWS);
+}

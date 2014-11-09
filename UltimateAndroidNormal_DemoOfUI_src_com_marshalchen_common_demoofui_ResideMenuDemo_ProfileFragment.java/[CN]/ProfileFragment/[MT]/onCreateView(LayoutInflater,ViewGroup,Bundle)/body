@@ -1,0 +1,3 @@
+{
+  return inflater.inflate(R.layout.resize_menu_profile,container,false);
+}

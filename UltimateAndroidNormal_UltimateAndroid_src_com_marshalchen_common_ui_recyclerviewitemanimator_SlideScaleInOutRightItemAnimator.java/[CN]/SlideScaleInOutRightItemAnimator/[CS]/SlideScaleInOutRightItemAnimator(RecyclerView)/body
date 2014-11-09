@@ -1,0 +1,5 @@
+{
+  super(recyclerView);
+  setAddDuration(750);
+  setRemoveDuration(750);
+}

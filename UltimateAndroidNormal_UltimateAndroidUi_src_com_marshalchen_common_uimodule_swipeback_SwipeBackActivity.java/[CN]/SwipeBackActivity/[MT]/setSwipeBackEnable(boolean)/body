@@ -1,0 +1,3 @@
+{
+  getSwipeBackLayout().setEnableGesture(enable);
+}

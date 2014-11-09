@@ -1,0 +1,6 @@
+{
+  super.onProgressUpdate(values);
+  int value=values[0];
+  mCurrentProgress=value + "%";
+  invalidate();
+}

@@ -1,0 +1,4 @@
+{
+  personDataProvider.remove(position);
+  notifyItemRemoved(position);
+}

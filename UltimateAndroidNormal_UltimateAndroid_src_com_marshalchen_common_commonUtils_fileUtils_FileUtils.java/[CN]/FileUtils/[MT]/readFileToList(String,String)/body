@@ -1,0 +1,31 @@
+{
+  File file=new File(filePath);
+  List<String> fileContent=new ArrayList<String>();
+  if (file == null || !file.isFile()) {
+    return null;
+  }
+  BufferedReader reader=null;
+  try {
+    InputStreamReader is=new InputStreamReader(new FileInputStream(file),charsetName);
+    reader=new BufferedReader(is);
+    String line=null;
+    while ((line=reader.readLine()) != null) {
+      fileContent.add(line);
+    }
+    reader.close();
+    return fileContent;
+  }
+ catch (  IOException e) {
+    throw new RuntimeException("IOException occurred. ",e);
+  }
+ finally {
+    if (reader != null) {
+      try {
+        reader.close();
+      }
+ catch (      IOException e) {
+        throw new RuntimeException("IOException occurred. ",e);
+      }
+    }
+  }
+}

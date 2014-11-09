@@ -1,0 +1,4 @@
+{
+  mTitlePadding=titlePadding;
+  invalidate();
+}

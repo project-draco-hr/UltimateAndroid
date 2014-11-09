@@ -1,0 +1,4 @@
+{
+  prepareToRender=true;
+  mBlurredImageView.setVisibility(View.GONE);
+}

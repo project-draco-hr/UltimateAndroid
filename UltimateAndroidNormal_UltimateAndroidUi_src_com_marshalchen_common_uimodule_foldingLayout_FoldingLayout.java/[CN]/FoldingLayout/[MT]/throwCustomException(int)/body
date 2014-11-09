@@ -1,0 +1,5 @@
+{
+  if (numOfChildViews == 1) {
+    throw new NumberOfFoldingLayoutChildrenException(FOLDING_VIEW_EXCEPTION_MESSAGE);
+  }
+}

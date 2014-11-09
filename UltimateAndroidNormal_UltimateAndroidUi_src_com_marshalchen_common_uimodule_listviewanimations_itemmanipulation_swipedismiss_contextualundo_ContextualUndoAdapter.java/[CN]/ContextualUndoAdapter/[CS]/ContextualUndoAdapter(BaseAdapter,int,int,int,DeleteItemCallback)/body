@@ -1,0 +1,3 @@
+{
+  this(baseAdapter,undoLayoutResId,undoActionResId,autoDeleteTimeMillis,-1,deleteItemCallback,null);
+}

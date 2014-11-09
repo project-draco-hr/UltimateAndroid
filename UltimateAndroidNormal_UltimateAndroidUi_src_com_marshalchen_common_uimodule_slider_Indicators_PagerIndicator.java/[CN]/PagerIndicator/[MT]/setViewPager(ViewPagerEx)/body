@@ -1,0 +1,8 @@
+{
+  if (pager.getAdapter() == null) {
+    throw new IllegalStateException("Viewpager does not have adapter instance");
+  }
+  mPager=pager;
+  mPager.setOnPageChangeListener(this);
+  ((InfinitePagerAdapter)mPager.getAdapter()).getRealAdapter().registerDataSetObserver(dataChangeObserver);
+}

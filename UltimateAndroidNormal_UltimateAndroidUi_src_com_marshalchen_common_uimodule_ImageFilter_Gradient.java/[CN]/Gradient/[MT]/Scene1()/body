@@ -1,0 +1,7 @@
+{
+  List<Integer> colors=new ArrayList<Integer>();
+  colors.add(Color.rgb(0xED,0x95,0x64));
+  colors.add(Color.WHITE);
+  colors.add(Color.rgb(0xED,0x95,0x64));
+  return new Gradient(colors);
+}

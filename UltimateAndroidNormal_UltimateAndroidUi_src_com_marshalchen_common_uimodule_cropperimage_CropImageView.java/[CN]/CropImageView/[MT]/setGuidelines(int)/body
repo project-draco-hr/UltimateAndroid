@@ -1,0 +1,3 @@
+{
+  mCropOverlayView.setGuidelines(guidelines);
+}

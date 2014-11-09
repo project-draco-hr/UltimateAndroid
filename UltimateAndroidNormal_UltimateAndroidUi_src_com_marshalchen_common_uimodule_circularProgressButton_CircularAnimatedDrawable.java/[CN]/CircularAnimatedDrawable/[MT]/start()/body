@@ -1,0 +1,9 @@
+{
+  if (isRunning()) {
+    return;
+  }
+  mRunning=true;
+  mObjectAnimatorAngle.start();
+  mObjectAnimatorSweep.start();
+  invalidateSelf();
+}

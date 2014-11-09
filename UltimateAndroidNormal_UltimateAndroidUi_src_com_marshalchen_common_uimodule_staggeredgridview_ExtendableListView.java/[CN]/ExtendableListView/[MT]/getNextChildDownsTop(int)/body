@@ -1,0 +1,4 @@
+{
+  final int count=getChildCount();
+  return count > 0 ? getChildAt(count - 1).getBottom() : 0;
+}

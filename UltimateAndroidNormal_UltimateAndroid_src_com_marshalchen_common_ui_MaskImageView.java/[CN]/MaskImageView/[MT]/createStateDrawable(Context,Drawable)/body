@@ -1,0 +1,7 @@
+{
+  StateListDrawable drawable=new StateListDrawable();
+  drawable.addState(View.PRESSED_ENABLED_STATE_SET,createPressDrawable(normal));
+  drawable.addState(View.ENABLED_STATE_SET,normal);
+  drawable.addState(View.EMPTY_STATE_SET,normal);
+  return drawable;
+}

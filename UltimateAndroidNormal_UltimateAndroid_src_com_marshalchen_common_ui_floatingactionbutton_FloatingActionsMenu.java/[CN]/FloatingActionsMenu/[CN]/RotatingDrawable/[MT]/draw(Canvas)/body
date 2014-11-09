@@ -1,0 +1,6 @@
+{
+  canvas.save();
+  canvas.rotate(mRotation,getBounds().centerX(),getBounds().centerY());
+  super.draw(canvas);
+  canvas.restore();
+}

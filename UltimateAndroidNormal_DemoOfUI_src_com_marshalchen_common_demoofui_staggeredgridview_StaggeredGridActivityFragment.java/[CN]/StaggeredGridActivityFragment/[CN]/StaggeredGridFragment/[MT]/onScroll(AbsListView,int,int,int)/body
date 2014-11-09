@@ -1,0 +1,11 @@
+{
+  Log.d(TAG,"onScroll firstVisibleItem:" + firstVisibleItem + " visibleItemCount:"+ visibleItemCount+ " totalItemCount:"+ totalItemCount);
+  if (!mHasRequestedMore) {
+    int lastInScreen=firstVisibleItem + visibleItemCount;
+    if (lastInScreen >= totalItemCount) {
+      Log.d(TAG,"onScroll lastInScreen - so load more");
+      mHasRequestedMore=true;
+      onLoadMoreItems();
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{
+  setBorderWidth(getResources().getDimension(resId));
+}

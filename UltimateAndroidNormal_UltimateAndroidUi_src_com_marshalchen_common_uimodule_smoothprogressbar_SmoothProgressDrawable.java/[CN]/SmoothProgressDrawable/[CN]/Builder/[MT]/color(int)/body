@@ -1,0 +1,4 @@
+{
+  mColors=new int[]{color};
+  return this;
+}

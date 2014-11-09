@@ -1,3 +1,0 @@
-{
-  setBorderColor(ColorStateList.valueOf(color));
-}

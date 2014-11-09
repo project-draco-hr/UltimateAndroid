@@ -1,0 +1,6 @@
+{
+  super.writeToParcel(out,flags);
+  out.writeInt(columnCount);
+  out.writeIntArray(columnTops);
+  out.writeSparseArray(positionData);
+}

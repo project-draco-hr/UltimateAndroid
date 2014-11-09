@@ -1,0 +1,15 @@
+{
+  if (!mHasParentAnimationAdapter) {
+    if (getAbsListView() == null) {
+      throw new IllegalStateException("Call setListView() on this AnimationAdapter before setAdapter()!");
+    }
+    if (convertView != null) {
+      cancelExistingAnimation(convertView);
+    }
+  }
+  View itemView=super.getView(position,convertView,parent);
+  if (!mHasParentAnimationAdapter) {
+    animateViewIfNecessary(position,itemView,parent);
+  }
+  return itemView;
+}

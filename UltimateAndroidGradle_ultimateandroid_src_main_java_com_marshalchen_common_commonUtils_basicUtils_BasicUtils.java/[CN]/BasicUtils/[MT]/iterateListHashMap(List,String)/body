@@ -1,0 +1,11 @@
+{
+  try {
+    for (Iterator it=list.iterator(); it.hasNext(); ) {
+      iterateHashMap((HashMap)it.next(),classAndMethodName);
+    }
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+    Logs.e(e.getMessage());
+  }
+}

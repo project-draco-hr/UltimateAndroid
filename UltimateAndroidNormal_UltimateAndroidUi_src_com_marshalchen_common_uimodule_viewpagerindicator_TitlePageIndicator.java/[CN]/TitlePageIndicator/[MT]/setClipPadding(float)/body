@@ -1,0 +1,4 @@
+{
+  mClipPadding=clipPadding;
+  invalidate();
+}

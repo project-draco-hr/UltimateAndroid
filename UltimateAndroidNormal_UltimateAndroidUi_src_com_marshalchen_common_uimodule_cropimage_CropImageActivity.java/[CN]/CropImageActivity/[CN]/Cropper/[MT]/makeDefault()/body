@@ -1,0 +1,24 @@
+{
+  if (rotateBitmap == null) {
+    return;
+  }
+  HighlightView hv=new HighlightView(imageView);
+  final int width=rotateBitmap.getWidth();
+  final int height=rotateBitmap.getHeight();
+  Rect imageRect=new Rect(0,0,width,height);
+  int cropWidth=Math.min(width,height) * 4 / 5;
+  @SuppressWarnings("SuspiciousNameCombination") int cropHeight=cropWidth;
+  if (aspectX != 0 && aspectY != 0) {
+    if (aspectX > aspectY) {
+      cropHeight=cropWidth * aspectY / aspectX;
+    }
+ else {
+      cropWidth=cropHeight * aspectX / aspectY;
+    }
+  }
+  int x=(width - cropWidth) / 2;
+  int y=(height - cropHeight) / 2;
+  RectF cropRect=new RectF(x,y,x + cropWidth,y + cropHeight);
+  hv.setup(imageView.getUnrotatedMatrix(),imageRect,cropRect,aspectX != 0 && aspectY != 0);
+  imageView.add(hv);
+}

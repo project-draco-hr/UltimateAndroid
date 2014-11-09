@@ -1,0 +1,4 @@
+{
+  tweens.add(tween);
+  sendEmptyMessage(RENDER);
+}

@@ -1,0 +1,13 @@
+{
+  String msg=null;
+  if (mUndoActions.size() > 1) {
+    msg=getResources().getString(R.string.elv_n_items_deleted,mUndoActions.size());
+  }
+ else   if (mUndoActions.size() >= 1) {
+    msg=mUndoActions.get(mUndoActions.size() - 1).getTitle();
+    if (msg == null) {
+      msg=getResources().getString(R.string.elv_item_deleted);
+    }
+  }
+  mUndoPopupTextView.setText(msg);
+}

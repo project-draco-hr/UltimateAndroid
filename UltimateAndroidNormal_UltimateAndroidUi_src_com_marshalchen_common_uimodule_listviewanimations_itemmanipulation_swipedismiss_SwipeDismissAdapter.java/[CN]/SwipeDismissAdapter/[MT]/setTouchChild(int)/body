@@ -1,0 +1,6 @@
+{
+  super.setTouchChild(childResId);
+  if (mSwipeDismissListViewTouchListener != null) {
+    mSwipeDismissListViewTouchListener.setTouchChild(childResId);
+  }
+}

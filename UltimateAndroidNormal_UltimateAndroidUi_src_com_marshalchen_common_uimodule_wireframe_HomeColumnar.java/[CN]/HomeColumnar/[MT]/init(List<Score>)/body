@@ -1,0 +1,23 @@
+{
+  if (null == score || score.size() == 0)   return;
+  this.score=score;
+  Resources res=getResources();
+  tb=res.getDimension(R.dimen.historyscore_tb);
+  interval_left_right=tb * 5.0f;
+  paint_date=new Paint();
+  paint_date.setStrokeWidth(tb * 0.1f);
+  paint_date.setTextSize(tb * 1.2f);
+  paint_date.setColor(fineLineColor);
+  paint_date.setTextAlign(Align.CENTER);
+  paint_rectf_gray=new Paint();
+  paint_rectf_gray.setStrokeWidth(tb * 0.1f);
+  paint_rectf_gray.setColor(fineLineColor);
+  paint_rectf_gray.setStyle(Style.FILL);
+  paint_rectf_gray.setAntiAlias(true);
+  paint_rectf_blue=new Paint();
+  paint_rectf_blue.setStrokeWidth(tb * 0.1f);
+  paint_rectf_blue.setColor(blueLineColor);
+  paint_rectf_blue.setStyle(Style.FILL);
+  paint_rectf_blue.setAntiAlias(true);
+  setLayoutParams(new LayoutParams((int)(this.score.size() * interval_left_right),LayoutParams.MATCH_PARENT));
+}

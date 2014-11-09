@@ -1,0 +1,6 @@
+{
+  if (color != mColorPressed) {
+    mColorPressed=color;
+    updateBackground();
+  }
+}

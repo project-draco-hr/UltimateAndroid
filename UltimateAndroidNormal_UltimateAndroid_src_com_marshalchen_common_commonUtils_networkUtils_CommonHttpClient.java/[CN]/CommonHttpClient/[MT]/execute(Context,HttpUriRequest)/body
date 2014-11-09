@@ -1,0 +1,4 @@
+{
+  HttpResponse response=getNewInstance(context).execute(paramHttpUriRequest);
+  return response;
+}

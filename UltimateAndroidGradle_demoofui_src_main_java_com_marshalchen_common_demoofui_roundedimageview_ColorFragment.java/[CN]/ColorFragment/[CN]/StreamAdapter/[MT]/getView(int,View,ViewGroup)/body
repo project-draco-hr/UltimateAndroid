@@ -1,0 +1,16 @@
+{
+  ViewGroup view;
+  if (convertView == null) {
+    view=(ViewGroup)mInflater.inflate(R.layout.rounded_image_view_frounded_item,parent,false);
+  }
+ else {
+    view=(ViewGroup)convertView;
+  }
+  ColorItem item=getItem(position);
+  ((ImageView)view.findViewById(R.id.imageView1)).setImageResource(item.mResId);
+  ((ImageView)view.findViewById(R.id.imageView1)).setScaleType(item.mScaleType);
+  ((TextView)view.findViewById(R.id.textView1)).setText(item.mLine1);
+  ((TextView)view.findViewById(R.id.textView2)).setText(item.mLine2);
+  ((TextView)view.findViewById(R.id.textView3)).setText(item.mScaleType.toString());
+  return view;
+}

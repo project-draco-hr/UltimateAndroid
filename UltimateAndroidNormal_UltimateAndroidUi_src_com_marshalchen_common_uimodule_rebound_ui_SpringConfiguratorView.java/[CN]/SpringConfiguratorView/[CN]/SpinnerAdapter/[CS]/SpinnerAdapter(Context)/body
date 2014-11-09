@@ -1,0 +1,4 @@
+{
+  mContext=context;
+  mStrings=new ArrayList<String>();
+}

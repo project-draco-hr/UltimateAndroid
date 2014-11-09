@@ -1,0 +1,5 @@
+{
+  final float distance=newY - oldY;
+  final int duration=(int)(Math.abs(distance) * durationUnit);
+  return duration;
+}

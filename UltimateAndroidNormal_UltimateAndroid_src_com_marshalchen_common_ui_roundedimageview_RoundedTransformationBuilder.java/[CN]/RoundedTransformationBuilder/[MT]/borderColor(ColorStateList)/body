@@ -1,0 +1,4 @@
+{
+  mBorderColor=colors;
+  return this;
+}

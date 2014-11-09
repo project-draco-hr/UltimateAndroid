@@ -1,0 +1,39 @@
+{
+  if (whiteMode) {
+    return false;
+  }
+  if ("none".equals(atts.getString("display"))) {
+    return false;
+  }
+  Integer color=atts.getHex("stroke");
+  if (color != null) {
+    doColor(atts,color,false);
+    Float width=atts.getFloat("stroke-width");
+    if (width != null) {
+      paint.setStrokeWidth(width);
+    }
+    String linecap=atts.getString("stroke-linecap");
+    if ("round".equals(linecap)) {
+      paint.setStrokeCap(Paint.Cap.ROUND);
+    }
+ else     if ("square".equals(linecap)) {
+      paint.setStrokeCap(Paint.Cap.SQUARE);
+    }
+ else     if ("butt".equals(linecap)) {
+      paint.setStrokeCap(Paint.Cap.BUTT);
+    }
+    String linejoin=atts.getString("stroke-linejoin");
+    if ("miter".equals(linejoin)) {
+      paint.setStrokeJoin(Paint.Join.MITER);
+    }
+ else     if ("round".equals(linejoin)) {
+      paint.setStrokeJoin(Paint.Join.ROUND);
+    }
+ else     if ("bevel".equals(linejoin)) {
+      paint.setStrokeJoin(Paint.Join.BEVEL);
+    }
+    paint.setStyle(Paint.Style.STROKE);
+    return true;
+  }
+  return false;
+}

@@ -1,0 +1,7 @@
+{
+  if (mLayout == null || mAdapter == null)   return 0;
+  float w=mLayout.getContentWidth();
+  float scrollableWidth=w - getWidth();
+  if (scrollableWidth == 0)   return 0;
+  return viewPortX / scrollableWidth;
+}

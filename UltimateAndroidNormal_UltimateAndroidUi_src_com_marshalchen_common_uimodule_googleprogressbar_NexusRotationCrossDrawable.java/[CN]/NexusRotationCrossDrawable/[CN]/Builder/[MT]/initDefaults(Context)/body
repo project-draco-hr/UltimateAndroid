@@ -1,0 +1,3 @@
+{
+  mColors=context.getResources().getIntArray(R.array.google_colors);
+}

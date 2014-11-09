@@ -1,0 +1,3 @@
+{
+  addChildAppearAnimator(hoverView,resId,technique,duration,0);
+}

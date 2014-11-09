@@ -1,0 +1,4 @@
+{
+  mImageContents.clear();
+  notifyDataSetChanged();
+}

@@ -1,0 +1,8 @@
+{
+  if (isLeftList) {
+    isLeftListEnabled=isEnabled;
+  }
+ else {
+    isRightListEnabled=isEnabled;
+  }
+}

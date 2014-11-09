@@ -1,0 +1,18 @@
+{
+  mActivity.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+  mActivity.getWindow().getDecorView().setBackgroundDrawable(null);
+  mSwipeBackLayout=(SwipeBackLayout)LayoutInflater.from(mActivity).inflate(R.layout.swipeback_layout,null);
+  mSwipeBackLayout.addSwipeListener(new SwipeBackLayout.SwipeListener(){
+    @Override public void onScrollStateChange(    int state,    float scrollPercent){
+      if (state == SwipeBackLayout.STATE_IDLE && scrollPercent == 0) {
+        convertActivityFromTranslucent();
+      }
+    }
+    @Override public void onEdgeTouch(    int edgeFlag){
+      convertActivityToTranslucent();
+    }
+    @Override public void onScrollOverThreshold(){
+    }
+  }
+);
+}

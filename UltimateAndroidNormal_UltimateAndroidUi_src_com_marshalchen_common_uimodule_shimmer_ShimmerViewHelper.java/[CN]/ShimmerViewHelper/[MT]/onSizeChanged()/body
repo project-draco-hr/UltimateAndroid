@@ -1,0 +1,9 @@
+{
+  resetLinearGradient();
+  if (!isSetUp) {
+    isSetUp=true;
+    if (callback != null) {
+      callback.onSetupAnimation(view);
+    }
+  }
+}

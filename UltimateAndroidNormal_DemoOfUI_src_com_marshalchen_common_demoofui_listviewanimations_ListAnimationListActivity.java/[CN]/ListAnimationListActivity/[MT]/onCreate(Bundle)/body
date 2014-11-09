@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.list_anim_activity_mylist);
+  mListView=(ListView)findViewById(R.id.activity_mylist_listview);
+  mListView.setDivider(null);
+}

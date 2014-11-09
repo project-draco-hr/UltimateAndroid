@@ -1,0 +1,6 @@
+{
+  super.onPostExecute(aVoid);
+  mHoldingActivity.getWindow().addContentView(mBlurredBackgroundView,mBlurredBackgroundLayoutParams);
+  mBackgroundView=null;
+  mBackground=null;
+}

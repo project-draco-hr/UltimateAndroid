@@ -1,0 +1,9 @@
+{
+  super.onRefresh();
+  new Handler().postDelayed(new Runnable(){
+    @Override public void run(){
+      refreshLayout.setRefreshing(false);
+    }
+  }
+,1000);
+}

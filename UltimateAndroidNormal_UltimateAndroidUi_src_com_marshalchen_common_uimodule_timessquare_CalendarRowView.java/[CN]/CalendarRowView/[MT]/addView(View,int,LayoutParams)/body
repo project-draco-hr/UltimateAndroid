@@ -1,0 +1,4 @@
+{
+  child.setOnClickListener(this);
+  super.addView(child,index,params);
+}

@@ -1,0 +1,3 @@
+{
+  this.setPadding(viewActivity.getPaddingLeft(),viewActivity.getPaddingTop(),viewActivity.getPaddingRight(),viewActivity.getPaddingBottom());
+}

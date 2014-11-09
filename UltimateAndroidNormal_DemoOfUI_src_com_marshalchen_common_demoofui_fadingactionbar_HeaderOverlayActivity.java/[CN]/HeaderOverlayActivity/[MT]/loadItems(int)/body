@@ -1,0 +1,16 @@
+{
+  try {
+    ArrayList<String> countries=new ArrayList<String>();
+    InputStream inputStream=getResources().openRawResource(rawResourceId);
+    BufferedReader reader=new BufferedReader(new InputStreamReader(inputStream));
+    String line;
+    while ((line=reader.readLine()) != null) {
+      countries.add(line);
+    }
+    reader.close();
+    return countries;
+  }
+ catch (  IOException e) {
+    return null;
+  }
+}

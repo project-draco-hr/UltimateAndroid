@@ -1,0 +1,4 @@
+{
+  dialogShower.setNoticeTitle(title);
+  return this;
+}
