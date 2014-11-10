@@ -1,0 +1,14 @@
+{
+  int numHeadersAndPlaceholders=getHeadersCount() * mNumColumns;
+  if (position < numHeadersAndPlaceholders && (position % mNumColumns != 0)) {
+    return mAdapter != null ? mAdapter.getViewTypeCount() : 1;
+  }
+  if (mAdapter != null && position >= numHeadersAndPlaceholders) {
+    int adjPosition=position - numHeadersAndPlaceholders;
+    int adapterCount=getAdapterAndPlaceHolderCount();
+    if (adjPosition < adapterCount) {
+      return mAdapter.getItemViewType(adjPosition);
+    }
+  }
+  return AdapterView.ITEM_VIEW_TYPE_HEADER_OR_FOOTER;
+}
