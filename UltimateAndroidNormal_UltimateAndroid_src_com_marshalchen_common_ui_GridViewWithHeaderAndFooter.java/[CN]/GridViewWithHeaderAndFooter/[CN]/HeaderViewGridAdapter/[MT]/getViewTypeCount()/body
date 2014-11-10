@@ -1,0 +1,6 @@
+{
+  if (mAdapter != null) {
+    return mAdapter.getViewTypeCount() + 1;
+  }
+  return 2;
+}
