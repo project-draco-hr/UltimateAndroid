@@ -1,0 +1,5 @@
+{
+  super.onRestoreInstanceState(savedInstanceState);
+  currentColor=savedInstanceState.getInt("currentColor");
+  changeColor(currentColor);
+}

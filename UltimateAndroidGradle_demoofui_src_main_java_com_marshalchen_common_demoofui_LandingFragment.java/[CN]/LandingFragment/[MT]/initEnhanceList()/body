@@ -465,7 +465,7 @@
   map.put("name","CropImage");
   map.put("detail","try");
   map.put("subname","CropImage");
-  map.put("class","");
+  map.put("class","CropperSample");
   enhanceList.add(map);
   map=new HashMap<>();
   map.put("name","CropperImage");
@@ -622,6 +622,12 @@
   map.put("detail","try");
   map.put("subname","RippleBackgroundActivity");
   map.put("class","RippleBackgroundActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","PagerSlidingTab");
+  map.put("detail","try");
+  map.put("subname","PagerSlidingTabStripActivity");
+  map.put("class","PagerSlidingTabStripActivity");
   enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
@@ -953,6 +959,9 @@ BasicUtils.sendIntent(getActivity(),MaterialEditTextActivity.class);
 break;
 case "RippleBackgroundActivity":
 BasicUtils.sendIntent(getActivity(),RippleBackgroundActivity.class);
+break;
+case "PagerSlidingTabStripActivity":
+BasicUtils.sendIntent(getActivity(),PagerSlidingTabStripActivity.class);
 break;
 }
 }

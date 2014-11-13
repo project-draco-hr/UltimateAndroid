@@ -1,0 +1,5 @@
+{
+  MaterialRippleLayout materialRippleLayout=(MaterialRippleLayout)LayoutInflater.from(getActivity()).inflate(R.layout.pager_sliding_tab_custom_tab,parent,false);
+  ((ImageView)materialRippleLayout.findViewById(R.id.image)).setImageResource(ICONS[position]);
+  return materialRippleLayout;
+}
