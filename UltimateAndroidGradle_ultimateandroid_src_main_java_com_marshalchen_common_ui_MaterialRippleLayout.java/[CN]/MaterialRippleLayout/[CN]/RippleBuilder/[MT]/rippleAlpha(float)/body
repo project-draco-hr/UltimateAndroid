@@ -1,0 +1,4 @@
+{
+  this.rippleAlpha=255 * alpha;
+  return this;
+}

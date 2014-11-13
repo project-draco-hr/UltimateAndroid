@@ -1,0 +1,10 @@
+{
+  if (eventCancelled)   return;
+  if (hoverAnimator != null) {
+    hoverAnimator.cancel();
+  }
+  final float radius=(float)(Math.sqrt(Math.pow(getWidth(),2) + Math.pow(getHeight(),2)) * 1.2f);
+  hoverAnimator=ObjectAnimator.ofFloat(this,radiusProperty,rippleDiameter,radius).setDuration(HOVER_DURATION);
+  hoverAnimator.setInterpolator(new LinearInterpolator());
+  hoverAnimator.start();
+}

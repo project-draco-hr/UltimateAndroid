@@ -1,0 +1,4 @@
+{
+  this.rippleBackground=color;
+  return this;
+}

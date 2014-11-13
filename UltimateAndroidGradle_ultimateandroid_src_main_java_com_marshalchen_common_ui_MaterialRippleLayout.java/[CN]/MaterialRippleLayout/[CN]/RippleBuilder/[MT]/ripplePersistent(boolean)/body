@@ -1,0 +1,4 @@
+{
+  this.ripplePersistent=persistent;
+  return this;
+}

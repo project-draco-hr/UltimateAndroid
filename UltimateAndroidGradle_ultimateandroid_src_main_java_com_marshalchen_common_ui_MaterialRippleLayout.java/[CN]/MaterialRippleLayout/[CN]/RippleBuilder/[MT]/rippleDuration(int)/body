@@ -1,0 +1,4 @@
+{
+  this.rippleDuration=duration;
+  return this;
+}

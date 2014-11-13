@@ -1,0 +1,4 @@
+{
+  paint.setAlpha(rippleAlpha);
+  invalidate();
+}

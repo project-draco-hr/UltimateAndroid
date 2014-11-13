@@ -1,0 +1,6 @@
+{
+  if (pendingPressEvent != null) {
+    removeCallbacks(pendingPressEvent);
+    prepressed=false;
+  }
+}

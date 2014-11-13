@@ -1,0 +1,5 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  bounds.set(0,0,w,h);
+  rippleBackground.setBounds(bounds);
+}

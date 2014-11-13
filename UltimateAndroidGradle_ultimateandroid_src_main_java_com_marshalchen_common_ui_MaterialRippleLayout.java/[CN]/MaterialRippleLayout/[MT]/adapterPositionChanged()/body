@@ -1,0 +1,15 @@
+{
+  if (rippleInAdapter) {
+    int newPosition=findParentAdapterView().getPositionForView(MaterialRippleLayout.this);
+    final boolean changed=newPosition != positionInAdapter;
+    positionInAdapter=newPosition;
+    if (changed) {
+      cancelPressedEvent();
+      cancelAnimations();
+      childView.setPressed(false);
+      setRadius(0);
+    }
+    return changed;
+  }
+  return false;
+}

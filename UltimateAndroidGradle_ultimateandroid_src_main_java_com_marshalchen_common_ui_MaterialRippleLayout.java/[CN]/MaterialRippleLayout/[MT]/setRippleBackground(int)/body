@@ -1,0 +1,5 @@
+{
+  rippleBackground=new ColorDrawable(color);
+  rippleBackground.setBounds(bounds);
+  invalidate();
+}

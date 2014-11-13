@@ -1,0 +1,6 @@
+{
+  if (childView == null) {
+    throw new IllegalStateException("MaterialRippleLayout must have a child view to handle clicks");
+  }
+  childView.setOnClickListener(onClickListener);
+}

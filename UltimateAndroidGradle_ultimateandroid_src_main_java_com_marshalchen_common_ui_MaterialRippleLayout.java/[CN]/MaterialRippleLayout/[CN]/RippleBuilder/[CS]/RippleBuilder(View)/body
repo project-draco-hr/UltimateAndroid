@@ -1,0 +1,4 @@
+{
+  this.child=child;
+  this.context=child.getContext();
+}

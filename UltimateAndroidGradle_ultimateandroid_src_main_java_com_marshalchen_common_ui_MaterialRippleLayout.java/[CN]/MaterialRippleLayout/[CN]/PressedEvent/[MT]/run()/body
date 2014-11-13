@@ -1,0 +1,8 @@
+{
+  prepressed=false;
+  childView.onTouchEvent(event);
+  childView.setPressed(true);
+  if (rippleHover) {
+    startHover();
+  }
+}

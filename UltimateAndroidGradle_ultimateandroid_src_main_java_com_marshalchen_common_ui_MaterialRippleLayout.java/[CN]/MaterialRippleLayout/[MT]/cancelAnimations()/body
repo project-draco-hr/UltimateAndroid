@@ -1,0 +1,9 @@
+{
+  if (rippleAnimator != null) {
+    rippleAnimator.cancel();
+    rippleAnimator.removeAllListeners();
+  }
+  if (hoverAnimator != null) {
+    hoverAnimator.cancel();
+  }
+}

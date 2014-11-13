@@ -1,0 +1,29 @@
+{
+  MaterialRippleLayout layout=new MaterialRippleLayout(context);
+  layout.setRippleColor(rippleColor);
+  layout.setDefaultRippleAlpha((int)rippleAlpha);
+  layout.setRippleDelayClick(rippleDelayClick);
+  layout.setRippleDiameter((int)dpToPx(context.getResources(),rippleDiameter));
+  layout.setRippleDuration(rippleDuration);
+  layout.setRippleFadeDuration(rippleFadeDuration);
+  layout.setRippleHover(rippleHover);
+  layout.setRipplePersistent(ripplePersistent);
+  layout.setRippleOverlay(rippleOverlay);
+  layout.setRippleBackground(rippleBackground);
+  layout.setRippleInAdapter(rippleSearchAdapter);
+  ViewGroup.LayoutParams params=child.getLayoutParams();
+  ViewGroup parent=(ViewGroup)child.getParent();
+  int index=0;
+  if (parent != null && parent instanceof MaterialRippleLayout) {
+    throw new IllegalStateException("MaterialRippleLayout could not be created: parent of the view already is a MaterialRippleLayout");
+  }
+  if (parent != null) {
+    index=parent.indexOfChild(child);
+    parent.removeView(child);
+  }
+  layout.addView(child,new ViewGroup.LayoutParams(MATCH_PARENT,MATCH_PARENT));
+  if (parent != null) {
+    parent.addView(layout,index,params);
+  }
+  return layout;
+}

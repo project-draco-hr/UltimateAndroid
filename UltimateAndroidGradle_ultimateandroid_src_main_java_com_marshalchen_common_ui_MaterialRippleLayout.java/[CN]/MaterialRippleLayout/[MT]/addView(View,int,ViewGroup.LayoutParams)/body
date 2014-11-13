@@ -1,0 +1,7 @@
+{
+  if (getChildCount() > 0) {
+    throw new IllegalStateException("MaterialRippleLayout can host only one child");
+  }
+  childView=child;
+  super.addView(child,index,params);
+}

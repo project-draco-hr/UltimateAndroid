@@ -1,0 +1,6 @@
+{
+  this.rippleColor=rippleColor;
+  paint.setColor(rippleColor);
+  paint.setAlpha(rippleAlpha);
+  invalidate();
+}

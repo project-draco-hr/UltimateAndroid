@@ -1,0 +1,11 @@
+{
+  if (getParent() instanceof AdapterView) {
+    clickAdapterView((AdapterView)getParent());
+  }
+ else   if (rippleInAdapter) {
+    clickAdapterView(findParentAdapterView());
+  }
+ else {
+    childView.performClick();
+  }
+}
