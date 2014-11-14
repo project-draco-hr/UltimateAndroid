@@ -1,0 +1,9 @@
+{
+  int id=item.getItemId();
+  if (id == R.id.switch_list) {
+    startActivity(new Intent(this,MaterialRippleListActivity.class));
+    finish();
+    return true;
+  }
+  return super.onOptionsItemSelected(item);
+}

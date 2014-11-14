@@ -629,6 +629,12 @@
   map.put("subname","PagerSlidingTabStripActivity");
   map.put("class","PagerSlidingTabStripActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialRipple");
+  map.put("detail","try");
+  map.put("subname","MaterialRippleActivity");
+  map.put("class","MaterialRippleActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -962,6 +968,9 @@ BasicUtils.sendIntent(getActivity(),RippleBackgroundActivity.class);
 break;
 case "PagerSlidingTabStripActivity":
 BasicUtils.sendIntent(getActivity(),PagerSlidingTabStripActivity.class);
+break;
+case "MaterialRippleActivity":
+BasicUtils.sendIntent(getActivity(),MaterialRippleActivity.class);
 break;
 }
 }
