@@ -1,0 +1,17 @@
+{
+  tabs.setBackgroundColor(newColor);
+  mTintManager.setTintColor(newColor);
+  Drawable colorDrawable=new ColorDrawable(newColor);
+  Drawable bottomDrawable=new ColorDrawable(getResources().getColor(android.R.color.transparent));
+  LayerDrawable ld=new LayerDrawable(new Drawable[]{colorDrawable,bottomDrawable});
+  if (oldBackground == null) {
+    getSupportActionBar().setBackgroundDrawable(ld);
+  }
+ else {
+    TransitionDrawable td=new TransitionDrawable(new Drawable[]{oldBackground,ld});
+    getSupportActionBar().setBackgroundDrawable(td);
+    td.startTransition(200);
+  }
+  oldBackground=ld;
+  currentColor=newColor;
+}

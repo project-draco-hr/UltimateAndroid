@@ -1,0 +1,37 @@
+{
+  if (eventCancelled)   return;
+  float endRadius=getEndRadius();
+  cancelAnimations();
+  rippleAnimator=new AnimatorSet();
+  rippleAnimator.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      if (!ripplePersistent) {
+        setRadius(0);
+        setRippleAlpha(rippleAlpha);
+      }
+      if (animationEndRunnable != null && rippleDelayClick) {
+        animationEndRunnable.run();
+      }
+      childView.setPressed(false);
+    }
+  }
+);
+  ObjectAnimator ripple=ObjectAnimator.ofFloat(this,radiusProperty,radius,endRadius);
+  ripple.setDuration(rippleDuration);
+  ripple.setInterpolator(new DecelerateInterpolator());
+  ObjectAnimator fade=ObjectAnimator.ofInt(this,circleAlphaProperty,rippleAlpha,0);
+  fade.setDuration(rippleFadeDuration);
+  fade.setInterpolator(new AccelerateInterpolator());
+  fade.setStartDelay(rippleDuration - rippleFadeDuration - FADE_EXTRA_DELAY);
+  if (ripplePersistent) {
+    rippleAnimator.play(ripple);
+  }
+ else   if (getRadius() > endRadius) {
+    fade.setStartDelay(0);
+    rippleAnimator.play(fade);
+  }
+ else {
+    rippleAnimator.playTogether(ripple,fade);
+  }
+  rippleAnimator.start();
+}

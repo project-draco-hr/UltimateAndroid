@@ -1,0 +1,5 @@
+{
+  if (rippleInAdapter) {
+    positionInAdapter=findParentAdapterView().getPositionForView(MaterialRippleLayout.this);
+  }
+}

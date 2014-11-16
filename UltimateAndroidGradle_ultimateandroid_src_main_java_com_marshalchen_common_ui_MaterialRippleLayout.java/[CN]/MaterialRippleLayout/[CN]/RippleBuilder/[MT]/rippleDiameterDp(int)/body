@@ -1,0 +1,4 @@
+{
+  this.rippleDiameter=diameterDp;
+  return this;
+}

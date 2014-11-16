@@ -1,0 +1,19 @@
+{
+  final boolean positionChanged=adapterPositionChanged();
+  if (rippleOverlay) {
+    if (!positionChanged) {
+      rippleBackground.draw(canvas);
+    }
+    super.draw(canvas);
+    if (!positionChanged) {
+      canvas.drawCircle(currentCoords.x,currentCoords.y,radius,paint);
+    }
+  }
+ else {
+    if (!positionChanged) {
+      rippleBackground.draw(canvas);
+      canvas.drawCircle(currentCoords.x,currentCoords.y,radius,paint);
+    }
+    super.draw(canvas);
+  }
+}

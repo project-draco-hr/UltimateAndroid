@@ -1,0 +1,4 @@
+{
+  getMenuInflater().inflate(R.menu.pager_sliding_tab,menu);
+  return true;
+}

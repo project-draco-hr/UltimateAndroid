@@ -1,0 +1,9 @@
+{
+  if (numColumns < 1) {
+    throw new IllegalArgumentException("Number of columns must be 1 or more");
+  }
+  if (mNumColumns != numColumns) {
+    mNumColumns=numColumns;
+    notifyDataSetChanged();
+  }
+}

@@ -1,0 +1,5 @@
+{
+  this.rippleAlpha=alpha;
+  paint.setAlpha(alpha);
+  invalidate();
+}

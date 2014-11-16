@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_edittext_activity_main);
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  getSupportActionBar().setDisplayShowTitleEnabled(false);
+  EditText singleLineEllipsisEt=(EditText)findViewById(R.id.singleLineEllipsisEt);
+  singleLineEllipsisEt.setSelection(singleLineEllipsisEt.getText().length());
+}

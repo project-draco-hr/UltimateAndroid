@@ -1,0 +1,20 @@
+{
+  if (parentAdapter != null) {
+    return parentAdapter;
+  }
+  ViewParent current=getParent();
+  while (true) {
+    if (current instanceof AdapterView) {
+      parentAdapter=(AdapterView)current;
+      return parentAdapter;
+    }
+ else {
+      try {
+        current=current.getParent();
+      }
+ catch (      NullPointerException npe) {
+        throw new RuntimeException("Could not find a parent AdapterView");
+      }
+    }
+  }
+}

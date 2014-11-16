@@ -1,0 +1,14 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_ripple_demo_list);
+  ListView listView=(ListView)findViewById(R.id.list);
+  listView.setAdapter(new ArrayAdapter<>(this,R.layout.material_ripple_demo_list_item,android.R.id.text1,data));
+  listView.setOnItemClickListener(this);
+  listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
+    @Override public boolean onItemLongClick(    AdapterView<?> parent,    View view,    int position,    long id){
+      Toast.makeText(MaterialRippleListActivity.this,"Rippled  long item: " + position,Toast.LENGTH_SHORT).show();
+      return false;
+    }
+  }
+);
+}

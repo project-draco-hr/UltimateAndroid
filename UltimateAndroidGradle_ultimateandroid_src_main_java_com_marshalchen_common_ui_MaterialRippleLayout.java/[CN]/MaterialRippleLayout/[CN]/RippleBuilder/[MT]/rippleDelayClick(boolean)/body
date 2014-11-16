@@ -1,0 +1,4 @@
+{
+  this.rippleDelayClick=delayClick;
+  return this;
+}

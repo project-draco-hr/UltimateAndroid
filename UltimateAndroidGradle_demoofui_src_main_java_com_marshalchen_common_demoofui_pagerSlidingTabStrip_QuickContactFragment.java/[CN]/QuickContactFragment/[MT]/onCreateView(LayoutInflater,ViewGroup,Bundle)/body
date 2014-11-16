@@ -1,0 +1,13 @@
+{
+  if (getDialog() != null) {
+    getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+    getDialog().getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+  }
+  View root=inflater.inflate(R.layout.pager_sliding_tab_fragment_quick_contact,container,false);
+  tabs=(PagerSlidingTabStrip)root.findViewById(R.id.tabs);
+  pager=(ViewPager)root.findViewById(R.id.pager);
+  adapter=new ContactPagerAdapter();
+  pager.setAdapter(adapter);
+  tabs.setViewPager(pager);
+  return root;
+}

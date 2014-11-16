@@ -1,0 +1,14 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.pager_sliding_tab_activity_main);
+  ButterKnife.inject(this);
+  setSupportActionBar(toolbar);
+  mTintManager=new SystemBarTintManager(this);
+  mTintManager.setStatusBarTintEnabled(true);
+  adapter=new MyPagerAdapter(getSupportFragmentManager());
+  pager.setAdapter(adapter);
+  tabs.setViewPager(pager);
+  final int pageMargin=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,4,getResources().getDisplayMetrics());
+  pager.setPageMargin(pageMargin);
+  changeColor(getResources().getColor(R.color.Green));
+}

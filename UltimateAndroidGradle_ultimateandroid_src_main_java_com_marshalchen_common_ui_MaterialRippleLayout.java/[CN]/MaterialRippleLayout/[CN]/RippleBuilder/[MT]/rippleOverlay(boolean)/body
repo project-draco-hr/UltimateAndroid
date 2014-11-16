@@ -1,0 +1,4 @@
+{
+  this.rippleOverlay=overlay;
+  return this;
+}

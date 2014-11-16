@@ -1,0 +1,4 @@
+{
+  this.rippleFadeDuration=fadeDuration;
+  return this;
+}

@@ -465,7 +465,7 @@
   map.put("name","CropImage");
   map.put("detail","try");
   map.put("subname","CropImage");
-  map.put("class","");
+  map.put("class","CropperSample");
   enhanceList.add(map);
   map=new HashMap<>();
   map.put("name","CropperImage");
@@ -610,6 +610,30 @@
   map.put("detail","try");
   map.put("subname","CustomPullToRefreshActivity");
   map.put("class","CustomPullToRefreshActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialEditText");
+  map.put("detail","try");
+  map.put("subname","MaterialEditTextActivity");
+  map.put("class","MaterialEditTextActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","RippleBackground");
+  map.put("detail","try");
+  map.put("subname","RippleBackgroundActivity");
+  map.put("class","RippleBackgroundActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","PagerSlidingTab");
+  map.put("detail","try");
+  map.put("subname","PagerSlidingTabStripActivity");
+  map.put("class","PagerSlidingTabStripActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialRipple");
+  map.put("detail","try");
+  map.put("subname","MaterialRippleActivity");
+  map.put("class","MaterialRippleActivity");
   enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
@@ -935,6 +959,18 @@ BasicUtils.sendIntent(getActivity(),BlurDialogActivity.class);
 break;
 case "CustomPullToRefreshActivity":
 BasicUtils.sendIntent(getActivity(),CustomPullToRefreshActivity.class);
+break;
+case "MaterialEditTextActivity":
+BasicUtils.sendIntent(getActivity(),MaterialEditTextActivity.class);
+break;
+case "RippleBackgroundActivity":
+BasicUtils.sendIntent(getActivity(),RippleBackgroundActivity.class);
+break;
+case "PagerSlidingTabStripActivity":
+BasicUtils.sendIntent(getActivity(),PagerSlidingTabStripActivity.class);
+break;
+case "MaterialRippleActivity":
+BasicUtils.sendIntent(getActivity(),MaterialRippleActivity.class);
 break;
 }
 }

@@ -1,0 +1,4 @@
+{
+  this.rippleHover=hover;
+  return this;
+}

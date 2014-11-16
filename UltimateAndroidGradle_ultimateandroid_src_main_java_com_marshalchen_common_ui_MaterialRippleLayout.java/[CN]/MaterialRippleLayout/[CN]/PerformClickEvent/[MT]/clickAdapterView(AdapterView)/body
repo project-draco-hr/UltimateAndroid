@@ -1,0 +1,7 @@
+{
+  final int position=parent.getPositionForView(MaterialRippleLayout.this);
+  final long itemId=parent.getAdapter() != null ? parent.getAdapter().getItemId(position) : 0;
+  if (position != AdapterView.INVALID_POSITION) {
+    parent.performItemClick(MaterialRippleLayout.this,position,itemId);
+  }
+}
