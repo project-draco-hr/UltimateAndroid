@@ -1,0 +1,8 @@
+{
+  minHeight=36;
+  minWidth=88;
+  rippleSize=3;
+  setMinimumHeight(Utils.dpToPx(minHeight,getResources()));
+  setMinimumWidth(Utils.dpToPx(minWidth,getResources()));
+  setBackgroundResource(R.drawable.material_design_background_transparent);
+}

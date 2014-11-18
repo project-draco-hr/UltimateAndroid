@@ -1,0 +1,25 @@
+{
+  super.onDraw(canvas);
+  if (numberIndicatorResize == false) {
+    LayoutParams params=(LayoutParams)numberIndicator.numberIndicator.getLayoutParams();
+    params.height=(int)finalSize * 2;
+    params.width=(int)finalSize * 2;
+    numberIndicator.numberIndicator.setLayoutParams(params);
+  }
+  Paint paint=new Paint();
+  paint.setAntiAlias(true);
+  paint.setColor(backgroundColor);
+  if (animate) {
+    if (y == 0)     y=finalY + finalSize * 2;
+    y-=Utils.dpToPx(6,getResources());
+    size+=Utils.dpToPx(2,getResources());
+  }
+  canvas.drawCircle(ViewHelper.getX(ball) + Utils.getRelativeLeft((View)ball.getParent()) + ball.getWidth() / 2,y,size,paint);
+  if (animate && size >= finalSize)   animate=false;
+  if (animate == false) {
+    ViewHelper.setX(numberIndicator.numberIndicator,(ViewHelper.getX(ball) + Utils.getRelativeLeft((View)ball.getParent()) + ball.getWidth() / 2) - size);
+    ViewHelper.setY(numberIndicator.numberIndicator,y - size);
+    numberIndicator.numberIndicator.setText(value + "");
+  }
+  invalidate();
+}

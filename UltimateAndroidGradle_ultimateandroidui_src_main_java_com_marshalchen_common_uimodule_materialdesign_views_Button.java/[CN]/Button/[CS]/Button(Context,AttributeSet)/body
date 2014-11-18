@@ -1,0 +1,6 @@
+{
+  super(context,attrs);
+  setDefaultProperties();
+  setAttributes(attrs);
+  beforeBackground=backgroundColor;
+}

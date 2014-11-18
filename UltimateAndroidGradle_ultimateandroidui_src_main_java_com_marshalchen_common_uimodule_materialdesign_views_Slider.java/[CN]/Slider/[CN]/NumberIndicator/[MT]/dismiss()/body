@@ -1,0 +1,6 @@
+{
+  super.dismiss();
+  indicator.y=0;
+  indicator.size=0;
+  indicator.animate=true;
+}

@@ -1,0 +1,4 @@
+{
+  this.onCancelButtonClickListener=onCancelButtonClickListener;
+  if (buttonCancel != null)   buttonCancel.setOnClickListener(onAcceptButtonClickListener);
+}

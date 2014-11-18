@@ -1,0 +1,4 @@
+{
+  backgroundButton=color;
+  if (button != null)   button.setBackgroundColor(color);
+}

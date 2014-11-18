@@ -1,0 +1,5 @@
+{
+  super(context,android.R.style.Theme_Translucent);
+  this.message=message;
+  this.title=title;
+}

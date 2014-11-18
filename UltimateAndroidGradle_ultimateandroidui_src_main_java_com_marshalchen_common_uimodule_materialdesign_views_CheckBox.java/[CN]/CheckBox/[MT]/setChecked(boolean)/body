@@ -1,0 +1,9 @@
+{
+  this.check=check;
+  setPressed(false);
+  changeBackgroundColor(getResources().getColor(android.R.color.transparent));
+  if (check) {
+    step=0;
+  }
+  if (check)   checkView.changeBackground();
+}

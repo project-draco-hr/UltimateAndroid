@@ -1,0 +1,16 @@
+{
+  super(context,attrs);
+  setBackgroundResource(R.drawable.material_design_background_button_float);
+  sizeRadius=28;
+  setDefaultProperties();
+  icon=new ImageView(context);
+  icon.setAdjustViewBounds(true);
+  icon.setScaleType(ScaleType.CENTER_CROP);
+  if (drawableIcon != null) {
+    icon.setImageDrawable(drawableIcon);
+  }
+  LayoutParams params=new LayoutParams(Utils.dpToPx(sizeIcon,getResources()),Utils.dpToPx(sizeIcon,getResources()));
+  params.addRule(RelativeLayout.CENTER_IN_PARENT,RelativeLayout.TRUE);
+  icon.setLayoutParams(params);
+  addView(icon);
+}

@@ -1,0 +1,9 @@
+{
+  if (firstProgress) {
+    firstProgress=false;
+  }
+ else {
+    stopIndeterminate();
+  }
+  super.setProgress(progress);
+}

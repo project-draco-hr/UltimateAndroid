@@ -1,0 +1,11 @@
+{
+  if (check) {
+    setBackgroundResource(R.drawable.material_design_background_checkbox_check);
+    LayerDrawable layer=(LayerDrawable)getBackground();
+    GradientDrawable shape=(GradientDrawable)layer.findDrawableByLayerId(R.id.shape_bacground);
+    shape.setColor(backgroundColor);
+  }
+ else {
+    setBackgroundResource(R.drawable.material_design_background_checkbox_uncheck);
+  }
+}

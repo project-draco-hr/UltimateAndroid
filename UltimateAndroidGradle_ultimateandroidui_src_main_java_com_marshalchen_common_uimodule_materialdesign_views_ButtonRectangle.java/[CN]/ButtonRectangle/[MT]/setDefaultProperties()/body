@@ -1,0 +1,6 @@
+{
+  super.minWidth=80;
+  super.minHeight=36;
+  super.background=R.drawable.material_design_background_button_rectangle;
+  super.setDefaultProperties();
+}

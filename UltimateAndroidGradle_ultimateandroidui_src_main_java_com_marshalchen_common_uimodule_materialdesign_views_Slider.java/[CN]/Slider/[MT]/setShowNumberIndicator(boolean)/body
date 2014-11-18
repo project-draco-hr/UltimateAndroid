@@ -1,0 +1,4 @@
+{
+  this.showNumberIndicator=showNumberIndicator;
+  numberIndicator=(showNumberIndicator) ? new NumberIndicator(getContext()) : null;
+}

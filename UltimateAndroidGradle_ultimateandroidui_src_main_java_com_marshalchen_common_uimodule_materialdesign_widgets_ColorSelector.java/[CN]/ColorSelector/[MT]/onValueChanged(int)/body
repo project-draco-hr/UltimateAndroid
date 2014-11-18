@@ -1,0 +1,4 @@
+{
+  color=Color.rgb(red.getValue(),green.getValue(),blue.getValue());
+  colorView.setBackgroundColor(color);
+}

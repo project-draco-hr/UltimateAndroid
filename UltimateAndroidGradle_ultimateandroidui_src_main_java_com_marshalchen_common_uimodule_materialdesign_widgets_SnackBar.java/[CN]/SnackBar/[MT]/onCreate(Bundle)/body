@@ -1,0 +1,24 @@
+{
+  super.onCreate(savedInstanceState);
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  setContentView(R.layout.material_design_snackbar);
+  setCanceledOnTouchOutside(false);
+  ((TextView)findViewById(R.id.text)).setText(text);
+  button=(ButtonFlat)findViewById(R.id.buttonflat);
+  if (text == null || onClickListener == null) {
+    button.setVisibility(View.GONE);
+  }
+ else {
+    button.setText(buttonText);
+    button.setBackgroundColor(backgroundButton);
+    button.setOnClickListener(new View.OnClickListener(){
+      @Override public void onClick(      View v){
+        dismiss();
+        onClickListener.onClick(v);
+      }
+    }
+);
+  }
+  view=findViewById(R.id.snackbar);
+  view.setBackgroundColor(backgroundSnackBar);
+}
