@@ -1,0 +1,4 @@
+{
+  backgroundColor=color;
+  buttonSelectColor.setBackgroundColor(color);
+}

@@ -1,0 +1,53 @@
+{
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_design_activity_main);
+  buttonSelectColor=(ButtonFloatSmall)findViewById(R.id.buttonColorSelector);
+  buttonSelectColor.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View arg0){
+      ColorSelector colorSelector=new ColorSelector(MaterialDesignActivity.this,backgroundColor,MaterialDesignActivity.this);
+      colorSelector.show();
+    }
+  }
+);
+  LayoutRipple layoutRipple=(LayoutRipple)findViewById(R.id.itemButtons);
+  setOriginRiple(layoutRipple);
+  layoutRipple.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View arg0){
+      Intent intent=new Intent(MaterialDesignActivity.this,ButtonsActivity.class);
+      intent.putExtra("BACKGROUND",backgroundColor);
+      startActivity(intent);
+    }
+  }
+);
+  layoutRipple=(LayoutRipple)findViewById(R.id.itemSwitches);
+  setOriginRiple(layoutRipple);
+  layoutRipple.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View arg0){
+      Intent intent=new Intent(MaterialDesignActivity.this,SwitchActivity.class);
+      intent.putExtra("BACKGROUND",backgroundColor);
+      startActivity(intent);
+    }
+  }
+);
+  layoutRipple=(LayoutRipple)findViewById(R.id.itemProgress);
+  setOriginRiple(layoutRipple);
+  layoutRipple.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View arg0){
+      Intent intent=new Intent(MaterialDesignActivity.this,ProgressActivity.class);
+      intent.putExtra("BACKGROUND",backgroundColor);
+      startActivity(intent);
+    }
+  }
+);
+  layoutRipple=(LayoutRipple)findViewById(R.id.itemWidgets);
+  setOriginRiple(layoutRipple);
+  layoutRipple.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View arg0){
+      Intent intent=new Intent(MaterialDesignActivity.this,WidgetActivity.class);
+      intent.putExtra("BACKGROUND",backgroundColor);
+      startActivity(intent);
+    }
+  }
+);
+}

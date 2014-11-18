@@ -1,0 +1,12 @@
+{
+  layoutRipple.post(new Runnable(){
+    @Override public void run(){
+      View v=layoutRipple.getChildAt(0);
+      layoutRipple.setxRippleOrigin(ViewHelper.getX(v) + v.getWidth() / 2);
+      layoutRipple.setyRippleOrigin(ViewHelper.getY(v) + v.getHeight() / 2);
+      layoutRipple.setRippleColor(Color.parseColor("#1E88E5"));
+      layoutRipple.setRippleSpeed(30);
+    }
+  }
+);
+}
