@@ -1,0 +1,10 @@
+{
+  view.setAlpha(0);
+  AnimatorSet set=new AnimatorSet();
+  ObjectAnimator objectAnimator1=ObjectAnimator.ofFloat(view,"rotationY",-180f,0f);
+  ObjectAnimator objectAnimator2=ObjectAnimator.ofFloat(view,"alpha",0f,1f);
+  set.setDuration(mDuration);
+  set.playTogether(objectAnimator1,objectAnimator2);
+  set.setStartDelay(delay);
+  set.start();
+}

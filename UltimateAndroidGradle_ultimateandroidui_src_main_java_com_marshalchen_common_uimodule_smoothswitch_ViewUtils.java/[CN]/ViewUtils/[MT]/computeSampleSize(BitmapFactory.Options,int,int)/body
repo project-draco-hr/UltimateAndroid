@@ -1,0 +1,14 @@
+{
+  int initialSize=computeInitialSampleSize(options,minSideLength,maxNumOfPixels);
+  int roundedSize;
+  if (initialSize <= 8) {
+    roundedSize=1;
+    while (roundedSize < initialSize) {
+      roundedSize<<=1;
+    }
+  }
+ else {
+    roundedSize=(initialSize + 7) / 8 * 8;
+  }
+  return roundedSize;
+}

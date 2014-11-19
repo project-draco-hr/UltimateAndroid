@@ -1,0 +1,4 @@
+{
+  ViewUtils.init(root.getContext());
+  bindAnimation(root,0,type);
+}

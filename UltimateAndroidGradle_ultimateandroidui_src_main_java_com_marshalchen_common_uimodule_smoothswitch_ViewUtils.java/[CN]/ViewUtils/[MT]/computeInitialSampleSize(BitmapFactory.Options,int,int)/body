@@ -1,0 +1,18 @@
+{
+  double w=options.outWidth;
+  double h=options.outHeight;
+  int lowerBound=(maxNumOfPixels == -1) ? 1 : (int)Math.ceil(Math.sqrt(w * h / maxNumOfPixels));
+  int upperBound=(minSideLength == -1) ? 128 : (int)Math.min(Math.floor(w / minSideLength),Math.floor(h / minSideLength));
+  if (upperBound < lowerBound) {
+    return lowerBound;
+  }
+  if ((maxNumOfPixels == -1) && (minSideLength == -1)) {
+    return 1;
+  }
+ else   if (minSideLength == -1) {
+    return lowerBound;
+  }
+ else {
+    return upperBound;
+  }
+}

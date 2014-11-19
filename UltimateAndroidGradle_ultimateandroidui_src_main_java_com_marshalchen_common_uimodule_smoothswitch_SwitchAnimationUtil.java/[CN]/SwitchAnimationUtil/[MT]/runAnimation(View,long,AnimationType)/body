@@ -1,0 +1,29 @@
+{
+switch (type) {
+case ROTATE:
+    runRotateAnimation(view,delay);
+  break;
+case ALPHA:
+runAlphaAnimation(view,delay);
+break;
+case HORIZION_LEFT:
+runHorizonLeftAnimation(view,delay);
+break;
+case HORIZION_RIGHT:
+runHorizonRightAnimation(view,delay);
+break;
+case HORIZON_CROSS:
+break;
+case SCALE:
+runScaleAnimation(view,delay);
+break;
+case FLIP_HORIZON:
+runFlipHorizonAnimation(view,delay);
+break;
+case FLIP_VERTICAL:
+runFlipVertialAnimation(view,delay);
+break;
+default :
+break;
+}
+}

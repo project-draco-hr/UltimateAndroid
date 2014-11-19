@@ -1,0 +1,8 @@
+{
+  view.setAlpha(0);
+  ObjectAnimator objectAnimator=ObjectAnimator.ofFloat(view,"alpha",0,1);
+  objectAnimator.setStartDelay(delay);
+  objectAnimator.setDuration(mDuration);
+  objectAnimator.setInterpolator(new LinearInterpolator());
+  objectAnimator.start();
+}

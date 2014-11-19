@@ -1,0 +1,14 @@
+{
+  view.setAlpha(0);
+  AnimatorSet set=new AnimatorSet();
+  ObjectAnimator objectAnimator=ObjectAnimator.ofFloat(view,"rotation",0f,360f);
+  ObjectAnimator objectAnimator2=ObjectAnimator.ofFloat(view,"scaleX",0f,1f);
+  ObjectAnimator objectAnimator3=ObjectAnimator.ofFloat(view,"scaleY",0f,1f);
+  ObjectAnimator objectAnimator4=ObjectAnimator.ofFloat(view,"alpha",0f,1f);
+  objectAnimator2.setInterpolator(new AccelerateInterpolator(1.0f));
+  objectAnimator3.setInterpolator(new AccelerateInterpolator(1.0f));
+  set.setDuration(mDuration);
+  set.playTogether(objectAnimator,objectAnimator2,objectAnimator3,objectAnimator4);
+  set.setStartDelay(delay);
+  set.start();
+}
