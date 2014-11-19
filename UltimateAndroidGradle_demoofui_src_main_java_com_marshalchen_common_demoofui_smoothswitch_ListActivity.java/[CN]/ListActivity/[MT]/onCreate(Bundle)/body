@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.switch_animation_activity_list);
+  mList=(ListView)findViewById(R.id.list);
+  mList.setAdapter(new ListAdapter());
+}

@@ -1,0 +1,4 @@
+{
+  getMenuInflater().inflate(R.menu.switch_animation_main,menu);
+  return true;
+}

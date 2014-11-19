@@ -647,6 +647,12 @@
   map.put("subname","MaterialDesignActivity");
   map.put("class","MaterialDesignActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","SwitchAnimation");
+  map.put("detail","try");
+  map.put("subname","SwitchAnimationActivity");
+  map.put("class","SwitchAnimationActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -989,6 +995,9 @@ BasicUtils.sendIntent(getActivity(),CircleProgressActivity.class);
 break;
 case "MaterialDesignActivity":
 BasicUtils.sendIntent(getActivity(),MaterialDesignActivity.class);
+break;
+case "SwitchAnimationActivity":
+BasicUtils.sendIntent(getActivity(),SwitchAnimationActivity.class);
 break;
 }
 }

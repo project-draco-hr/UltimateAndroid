@@ -1,0 +1,8 @@
+{
+  if (convertView == null) {
+    convertView=LayoutInflater.from(ListActivity.this).inflate(R.layout.switch_animation_view_list_item,null);
+  }
+  ImageView avatar=(ImageView)convertView.findViewById(R.id.item_avatar);
+  avatar.setImageResource(res[position % res.length]);
+  return convertView;
+}

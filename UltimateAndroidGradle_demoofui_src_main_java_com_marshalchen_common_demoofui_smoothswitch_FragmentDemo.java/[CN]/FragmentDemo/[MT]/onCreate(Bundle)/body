@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.switch_animation_activity_fragment);
+  mFragmentManager=getSupportFragmentManager();
+  FragmentTransaction mFragmentTransaction=mFragmentManager.beginTransaction();
+  mFragmentTransaction.add(R.id.fragment_container,new FlowerFragment());
+  mFragmentTransaction.commit();
+}
