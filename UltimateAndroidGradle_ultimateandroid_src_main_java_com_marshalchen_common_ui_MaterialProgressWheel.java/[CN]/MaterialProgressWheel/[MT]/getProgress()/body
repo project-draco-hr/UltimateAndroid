@@ -1,0 +1,3 @@
+{
+  return isSpinning ? -1 : mProgress / 360.0f;
+}

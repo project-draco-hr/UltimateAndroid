@@ -1,0 +1,12 @@
+{
+  super.writeToParcel(out,flags);
+  out.writeFloat(this.mProgress);
+  out.writeFloat(this.mTargetProgress);
+  out.writeByte((byte)(isSpinning ? 1 : 0));
+  out.writeFloat(this.spinSpeed);
+  out.writeInt(this.barWidth);
+  out.writeInt(this.barColor);
+  out.writeInt(this.rimWidth);
+  out.writeInt(this.rimColor);
+  out.writeInt(this.circleRadius);
+}

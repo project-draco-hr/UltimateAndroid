@@ -1,0 +1,4 @@
+{
+  super(context,attrs);
+  parseAttributes(context.obtainStyledAttributes(attrs,R.styleable.MaterialProgressWheel));
+}

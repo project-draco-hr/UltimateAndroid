@@ -1,0 +1,26 @@
+{
+  if (pausedTimeWithoutGrowing >= pauseGrowingTime) {
+    timeStartGrowing+=deltaTimeInMilliSeconds;
+    if (timeStartGrowing > barSpinCycleTime) {
+      timeStartGrowing-=barSpinCycleTime;
+      timeStartGrowing=0;
+      if (!barGrowingFromFront) {
+        pausedTimeWithoutGrowing=0;
+      }
+      barGrowingFromFront=!barGrowingFromFront;
+    }
+    float distance=(float)Math.cos((timeStartGrowing / barSpinCycleTime + 1) * Math.PI) / 2 + 0.5f;
+    float destLength=(barMaxLength - barLength);
+    if (barGrowingFromFront) {
+      barExtraLength=distance * destLength;
+    }
+ else {
+      float newLength=destLength * (1 - distance);
+      mProgress+=(barExtraLength - newLength);
+      barExtraLength=newLength;
+    }
+  }
+ else {
+    pausedTimeWithoutGrowing+=deltaTimeInMilliSeconds;
+  }
+}

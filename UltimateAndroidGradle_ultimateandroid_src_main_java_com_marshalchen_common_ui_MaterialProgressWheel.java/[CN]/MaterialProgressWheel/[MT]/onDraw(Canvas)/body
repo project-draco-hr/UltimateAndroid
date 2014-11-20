@@ -1,0 +1,32 @@
+{
+  super.onDraw(canvas);
+  canvas.drawArc(circleBounds,360,360,false,rimPaint);
+  boolean mustInvalidate=false;
+  if (isSpinning) {
+    mustInvalidate=true;
+    long deltaTime=(SystemClock.uptimeMillis() - lastTimeAnimated);
+    float deltaNormalized=deltaTime * spinSpeed / 1000.0f;
+    updateBarLength(deltaTime);
+    mProgress+=deltaNormalized;
+    if (mProgress > 360) {
+      mProgress-=360f;
+    }
+    lastTimeAnimated=SystemClock.uptimeMillis();
+    float from=mProgress - 90;
+    float length=barLength + barExtraLength;
+    canvas.drawArc(circleBounds,from,length,false,barPaint);
+  }
+ else {
+    if (mProgress != mTargetProgress) {
+      mustInvalidate=true;
+      float deltaTime=(float)(SystemClock.uptimeMillis() - lastTimeAnimated) / 1000;
+      float deltaNormalized=deltaTime * spinSpeed;
+      mProgress=Math.min(mProgress + deltaNormalized,mTargetProgress);
+      lastTimeAnimated=SystemClock.uptimeMillis();
+    }
+    canvas.drawArc(circleBounds,-90,mProgress,false,barPaint);
+  }
+  if (mustInvalidate) {
+    invalidate();
+  }
+}

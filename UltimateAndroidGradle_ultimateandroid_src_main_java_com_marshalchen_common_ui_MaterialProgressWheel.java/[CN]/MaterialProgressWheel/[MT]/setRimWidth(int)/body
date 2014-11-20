@@ -1,0 +1,6 @@
+{
+  this.rimWidth=rimWidth;
+  if (!isSpinning) {
+    invalidate();
+  }
+}

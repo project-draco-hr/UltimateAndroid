@@ -1,0 +1,6 @@
+{
+  this.barWidth=barWidth;
+  if (!isSpinning) {
+    invalidate();
+  }
+}
