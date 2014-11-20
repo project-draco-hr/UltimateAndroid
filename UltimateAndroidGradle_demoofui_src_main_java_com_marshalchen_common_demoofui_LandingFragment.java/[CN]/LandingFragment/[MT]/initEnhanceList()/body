@@ -659,6 +659,12 @@
   map.put("subname","RippleDrawActivity");
   map.put("class","RippleDrawableActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialProgress");
+  map.put("detail","try");
+  map.put("subname","MaterialProgress");
+  map.put("class","MaterialProgressWheelActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -1007,6 +1013,9 @@ BasicUtils.sendIntent(getActivity(),SwitchAnimationActivity.class);
 break;
 case "RippleDrawableActivity":
 BasicUtils.sendIntent(getActivity(),RippleDrawableActivity.class);
+break;
+case "MaterialProgressWheelActivity":
+BasicUtils.sendIntent(getActivity(),MaterialProgressWheelActivity.class);
 break;
 }
 }
