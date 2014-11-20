@@ -1,0 +1,4 @@
+{
+  View v=LayoutInflater.from(group.getContext()).inflate(R.layout.ripple_drawable_layout_item,group,false);
+  return new Holder(v);
+}

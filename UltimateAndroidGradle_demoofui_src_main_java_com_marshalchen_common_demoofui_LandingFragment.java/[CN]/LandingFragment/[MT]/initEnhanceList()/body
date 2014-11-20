@@ -648,10 +648,16 @@
   map.put("class","MaterialDesignActivity");
   enhanceList.add(map);
   map=new HashMap<>();
-  map.put("name","SwitchAnimation");
+  map.put("name","SwitchAnim");
   map.put("detail","try");
   map.put("subname","SwitchAnimationActivity");
   map.put("class","SwitchAnimationActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","RippleDrawable");
+  map.put("detail","try");
+  map.put("subname","RippleDrawActivity");
+  map.put("class","RippleDrawableActivity");
   enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
@@ -998,6 +1004,9 @@ BasicUtils.sendIntent(getActivity(),MaterialDesignActivity.class);
 break;
 case "SwitchAnimationActivity":
 BasicUtils.sendIntent(getActivity(),SwitchAnimationActivity.class);
+break;
+case "RippleDrawableActivity":
+BasicUtils.sendIntent(getActivity(),RippleDrawableActivity.class);
 break;
 }
 }
