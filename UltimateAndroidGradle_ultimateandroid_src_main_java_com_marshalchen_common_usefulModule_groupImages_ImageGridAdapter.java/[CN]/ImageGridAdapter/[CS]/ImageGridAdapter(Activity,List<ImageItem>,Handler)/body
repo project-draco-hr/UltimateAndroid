@@ -1,6 +1,0 @@
-{
-  this.act=act;
-  dataList=list;
-  cache=new BitmapCache();
-  this.mHandler=mHandler;
-}

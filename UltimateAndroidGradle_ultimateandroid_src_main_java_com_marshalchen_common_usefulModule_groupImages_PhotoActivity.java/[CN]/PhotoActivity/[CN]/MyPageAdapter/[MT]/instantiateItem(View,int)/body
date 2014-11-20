@@ -1,8 +1,0 @@
-{
-  try {
-    ((ViewPager)arg0).addView(listViews.get(arg1 % size),0);
-  }
- catch (  Exception e) {
-  }
-  return listViews.get(arg1 % size);
-}
