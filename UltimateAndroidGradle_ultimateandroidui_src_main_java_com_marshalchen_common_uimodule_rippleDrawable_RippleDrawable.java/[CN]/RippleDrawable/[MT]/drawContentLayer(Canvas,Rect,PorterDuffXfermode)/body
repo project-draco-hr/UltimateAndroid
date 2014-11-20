@@ -1,0 +1,5 @@
+{
+  mContent.setBounds(bounds);
+  mContent.draw(canvas);
+  return -1;
+}

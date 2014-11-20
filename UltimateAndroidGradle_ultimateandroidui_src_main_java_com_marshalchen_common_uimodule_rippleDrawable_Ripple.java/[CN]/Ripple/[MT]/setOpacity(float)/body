@@ -1,0 +1,4 @@
+{
+  mOpacity=a;
+  invalidateSelf();
+}

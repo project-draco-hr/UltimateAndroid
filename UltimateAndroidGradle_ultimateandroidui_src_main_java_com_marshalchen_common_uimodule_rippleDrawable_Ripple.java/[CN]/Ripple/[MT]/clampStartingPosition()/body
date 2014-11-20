@@ -1,0 +1,16 @@
+{
+  final float cX=mBounds.exactCenterX();
+  final float cY=mBounds.exactCenterY();
+  final float dX=mStartingX - cX;
+  final float dY=mStartingY - cY;
+  final float r=mOuterRadius;
+  if (dX * dX + dY * dY > r * r) {
+    final double angle=Math.atan2(dY,dX);
+    mClampedStartingX=cX + (float)(Math.cos(angle) * r);
+    mClampedStartingY=cY + (float)(Math.sin(angle) * r);
+  }
+ else {
+    mClampedStartingX=mStartingX;
+    mClampedStartingY=mStartingY;
+  }
+}

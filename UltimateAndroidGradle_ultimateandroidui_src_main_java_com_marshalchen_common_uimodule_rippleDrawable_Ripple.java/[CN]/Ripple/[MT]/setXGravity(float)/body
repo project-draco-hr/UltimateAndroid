@@ -1,0 +1,4 @@
+{
+  mTweenX=x;
+  invalidateSelf();
+}

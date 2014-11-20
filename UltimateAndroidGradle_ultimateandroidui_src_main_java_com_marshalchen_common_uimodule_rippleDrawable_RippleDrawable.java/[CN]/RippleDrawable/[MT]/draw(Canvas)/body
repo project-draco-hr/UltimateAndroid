@@ -1,0 +1,32 @@
+{
+  final boolean hasMask=mMask != null;
+  final boolean drawNonMaskContent=mContent != null;
+  final boolean drawMask=hasMask && mMask.getOpacity() != PixelFormat.OPAQUE;
+  final Rect bounds=getDirtyBounds();
+  final int saveCount=canvas.save(Canvas.CLIP_SAVE_FLAG);
+  canvas.clipRect(bounds);
+  if (drawNonMaskContent) {
+    drawContentLayer(canvas,bounds,SRC_OVER);
+  }
+  final PorterDuffXfermode xfermode=(hasMask || !drawNonMaskContent) ? SRC_OVER : SRC_ATOP;
+  final int backgroundLayer=drawBackgroundLayer(canvas,bounds,xfermode,drawMask);
+  if (backgroundLayer >= 0) {
+    if (drawMask) {
+      drawMaskingLayer(canvas,bounds,DST_IN);
+    }
+    canvas.restoreToCount(backgroundLayer);
+  }
+  final int rippleLayer=drawRippleLayer(canvas,bounds,xfermode);
+  if (rippleLayer >= 0) {
+    if (drawMask) {
+      drawMaskingLayer(canvas,bounds,DST_IN);
+    }
+    canvas.restoreToCount(rippleLayer);
+  }
+  if (mNeedsDraw) {
+    canvas.drawColor(Color.TRANSPARENT);
+    invalidateSelf();
+  }
+  mNeedsDraw=false;
+  canvas.restoreToCount(saveCount);
+}

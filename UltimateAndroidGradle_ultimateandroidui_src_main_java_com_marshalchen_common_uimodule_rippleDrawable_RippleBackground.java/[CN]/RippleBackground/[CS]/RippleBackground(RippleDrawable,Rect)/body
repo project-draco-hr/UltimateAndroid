@@ -1,0 +1,4 @@
+{
+  mOwner=owner;
+  mBounds=bounds;
+}

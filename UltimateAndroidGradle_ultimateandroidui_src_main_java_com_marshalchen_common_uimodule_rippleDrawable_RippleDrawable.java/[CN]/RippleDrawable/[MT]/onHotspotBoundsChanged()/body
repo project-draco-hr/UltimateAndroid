@@ -1,0 +1,13 @@
+{
+  final int count=mExitingRipplesCount;
+  final Ripple[] ripples=mExitingRipples;
+  for (int i=0; i < count; i++) {
+    ripples[i].onHotspotBoundsChanged();
+  }
+  if (mRipple != null) {
+    mRipple.onHotspotBoundsChanged();
+  }
+  if (mBackground != null) {
+    mBackground.onHotspotBoundsChanged();
+  }
+}

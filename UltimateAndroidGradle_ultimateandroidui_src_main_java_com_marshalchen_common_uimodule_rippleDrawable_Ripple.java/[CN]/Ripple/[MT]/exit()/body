@@ -1,0 +1,14 @@
+{
+  cancel();
+  final float radius=lerp(0,mOuterRadius,mTweenRadius);
+  final float remaining;
+  if (mAnimRadius != null && mAnimRadius.isRunning()) {
+    remaining=mOuterRadius - radius;
+  }
+ else {
+    remaining=mOuterRadius;
+  }
+  final int radiusDuration=(int)(1000 * Math.sqrt(remaining / (WAVE_TOUCH_UP_ACCELERATION + WAVE_TOUCH_DOWN_ACCELERATION) * mDensity) + 0.5);
+  final int opacityDuration=(int)(1000 * mOpacity / WAVE_OPACITY_DECAY_VELOCITY + 0.5f);
+  exitSoftware(radiusDuration,opacityDuration);
+}

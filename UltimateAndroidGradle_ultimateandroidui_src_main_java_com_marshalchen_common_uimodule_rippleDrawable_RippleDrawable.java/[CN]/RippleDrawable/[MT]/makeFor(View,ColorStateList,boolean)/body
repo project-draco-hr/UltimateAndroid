@@ -1,0 +1,8 @@
+{
+  RippleDrawable drawable=new RippleDrawable(colors,target.getBackground());
+  TouchTracker tracker=new TouchTracker(drawable);
+  tracker.setInsideScrollContainer(parentIsScrollContainer);
+  setBackground(target,drawable);
+  target.setOnTouchListener(tracker);
+  return drawable;
+}

@@ -1,0 +1,15 @@
+{
+  final boolean changed=super.setVisible(visible,restart);
+  if (!visible) {
+    clearHotspots();
+  }
+ else   if (changed) {
+    if (mRippleActive) {
+      tryRippleEnter();
+    }
+    if (mBackgroundActive) {
+      tryBackgroundEnter();
+    }
+  }
+  return changed;
+}

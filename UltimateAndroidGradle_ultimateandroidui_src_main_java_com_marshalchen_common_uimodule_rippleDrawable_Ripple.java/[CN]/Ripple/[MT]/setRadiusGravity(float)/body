@@ -1,0 +1,4 @@
+{
+  mTweenRadius=r;
+  invalidateSelf();
+}

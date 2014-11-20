@@ -1,0 +1,11 @@
+{
+  if (mBackgroundActive != active) {
+    mBackgroundActive=active;
+    if (active) {
+      tryBackgroundEnter();
+    }
+ else {
+      tryBackgroundExit();
+    }
+  }
+}

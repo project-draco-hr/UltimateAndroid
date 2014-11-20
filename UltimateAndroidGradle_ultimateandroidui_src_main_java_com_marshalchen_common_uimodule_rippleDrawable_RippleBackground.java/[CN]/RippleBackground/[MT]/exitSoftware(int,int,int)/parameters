@@ -1,0 +1,3 @@
+int opacityDuration
+int inflectionDuration
+int inflectionOpacity

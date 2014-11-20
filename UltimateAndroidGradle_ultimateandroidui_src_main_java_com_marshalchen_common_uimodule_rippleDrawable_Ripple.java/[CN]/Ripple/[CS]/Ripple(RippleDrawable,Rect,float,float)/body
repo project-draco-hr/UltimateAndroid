@@ -1,0 +1,6 @@
+{
+  mOwner=owner;
+  mBounds=bounds;
+  mStartingX=startingX;
+  mStartingY=startingY;
+}

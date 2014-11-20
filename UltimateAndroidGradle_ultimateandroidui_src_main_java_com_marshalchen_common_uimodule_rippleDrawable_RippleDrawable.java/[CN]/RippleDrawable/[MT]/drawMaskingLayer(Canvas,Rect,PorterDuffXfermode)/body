@@ -1,0 +1,5 @@
+{
+  canvas.drawColor(Color.TRANSPARENT);
+  mMask.draw(canvas);
+  return -1;
+}

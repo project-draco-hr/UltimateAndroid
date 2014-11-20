@@ -1,0 +1,8 @@
+{
+  if (mMaskingPaint == null) {
+    mMaskingPaint=new Paint();
+  }
+  mMaskingPaint.setXfermode(xfermode);
+  mMaskingPaint.setAlpha(0xFF);
+  return mMaskingPaint;
+}

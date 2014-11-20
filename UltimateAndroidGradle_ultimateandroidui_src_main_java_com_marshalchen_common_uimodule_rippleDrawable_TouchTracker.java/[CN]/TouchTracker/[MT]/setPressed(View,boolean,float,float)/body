@@ -1,0 +1,4 @@
+{
+  target.setPressed(pressed);
+  mHotspotDrawable.setHotspot(x,y);
+}

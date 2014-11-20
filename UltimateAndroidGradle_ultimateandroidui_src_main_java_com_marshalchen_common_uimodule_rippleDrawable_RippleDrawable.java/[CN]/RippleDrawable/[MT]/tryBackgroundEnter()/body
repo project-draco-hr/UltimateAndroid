@@ -1,0 +1,8 @@
+{
+  if (mBackground == null) {
+    mBackground=new RippleBackground(this,mHotspotBounds);
+  }
+  final int color=mColor.getColorForState(getState(),Color.TRANSPARENT);
+  mBackground.setup(mMaxRadius,color,mDensity);
+  mBackground.enter();
+}

@@ -1,0 +1,3 @@
+{
+  mColor.withAlpha(alpha);
+}

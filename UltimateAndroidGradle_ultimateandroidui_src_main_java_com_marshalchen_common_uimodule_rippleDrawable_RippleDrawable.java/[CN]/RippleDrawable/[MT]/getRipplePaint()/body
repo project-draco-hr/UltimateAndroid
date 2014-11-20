@@ -1,0 +1,7 @@
+{
+  if (mRipplePaint == null) {
+    mRipplePaint=new Paint();
+    mRipplePaint.setAntiAlias(true);
+  }
+  return mRipplePaint;
+}

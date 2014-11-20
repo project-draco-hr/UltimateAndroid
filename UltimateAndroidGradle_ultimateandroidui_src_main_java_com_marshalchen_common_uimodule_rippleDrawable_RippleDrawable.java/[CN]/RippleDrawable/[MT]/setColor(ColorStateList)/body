@@ -1,0 +1,4 @@
+{
+  mColor=color;
+  invalidateSelf();
+}

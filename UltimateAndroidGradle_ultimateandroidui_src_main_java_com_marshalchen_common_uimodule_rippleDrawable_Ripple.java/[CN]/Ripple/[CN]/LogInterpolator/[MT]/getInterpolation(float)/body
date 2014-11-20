@@ -1,0 +1,3 @@
+{
+  return 1 - (float)Math.pow(400,-input * 1.4);
+}

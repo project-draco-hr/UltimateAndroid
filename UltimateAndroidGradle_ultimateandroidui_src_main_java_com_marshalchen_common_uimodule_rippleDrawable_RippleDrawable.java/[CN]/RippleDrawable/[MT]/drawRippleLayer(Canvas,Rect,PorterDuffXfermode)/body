@@ -1,0 +1,36 @@
+{
+  boolean drewRipples=false;
+  int restoreToCount=-1;
+  int restoreTranslate=-1;
+  final int count=mExitingRipplesCount;
+  final Ripple[] ripples=mExitingRipples;
+  for (int i=0; i <= count; i++) {
+    final Ripple ripple;
+    if (i < count) {
+      ripple=ripples[i];
+    }
+ else     if (mRipple != null) {
+      ripple=mRipple;
+    }
+ else {
+      continue;
+    }
+    if (restoreToCount < 0) {
+      final Paint maskingPaint=getMaskingPaint(mode);
+      final int color=mColor.getColorForState(getState(),Color.TRANSPARENT);
+      final int alpha=Color.alpha(color);
+      maskingPaint.setAlpha(alpha / 2);
+      restoreTranslate=canvas.save();
+      canvas.translate(mHotspotBounds.exactCenterX(),mHotspotBounds.exactCenterY());
+    }
+    drewRipples|=ripple.draw(canvas,getRipplePaint());
+  }
+  if (restoreTranslate >= 0) {
+    canvas.restoreToCount(restoreTranslate);
+  }
+  if (restoreToCount >= 0 && !drewRipples) {
+    canvas.restoreToCount(restoreToCount);
+    restoreToCount=-1;
+  }
+  return restoreToCount;
+}

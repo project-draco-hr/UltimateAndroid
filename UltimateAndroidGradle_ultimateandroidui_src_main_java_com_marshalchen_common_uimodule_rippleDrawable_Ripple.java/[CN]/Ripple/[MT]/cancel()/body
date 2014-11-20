@@ -1,0 +1,5 @@
+{
+  mCanceled=true;
+  cancelSoftwareAnimations();
+  mCanceled=false;
+}

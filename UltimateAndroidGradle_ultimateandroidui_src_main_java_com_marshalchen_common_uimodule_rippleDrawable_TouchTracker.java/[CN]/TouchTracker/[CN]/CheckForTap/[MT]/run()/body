@@ -1,0 +1,5 @@
+{
+  mPrePressed=true;
+  setPressed(target,true,x,y);
+  checkForLongClick(target,ViewConfiguration.getTapTimeout());
+}

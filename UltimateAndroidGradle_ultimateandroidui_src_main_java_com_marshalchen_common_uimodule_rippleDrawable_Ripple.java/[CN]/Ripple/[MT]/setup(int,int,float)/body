@@ -1,0 +1,16 @@
+{
+  mColorOpaque=color | 0xFF000000;
+  if (maxRadius != -1) {
+    mHasMaxRadius=true;
+    mOuterRadius=maxRadius;
+  }
+ else {
+    final float halfWidth=mBounds.width() / 2.0f;
+    final float halfHeight=mBounds.height() / 2.0f;
+    mOuterRadius=(float)Math.sqrt(halfWidth * halfWidth + halfHeight * halfHeight);
+  }
+  mOuterX=0;
+  mOuterY=0;
+  mDensity=density;
+  clampStartingPosition();
+}

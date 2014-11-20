@@ -1,0 +1,4 @@
+View target
+float localX
+float localY
+float slop

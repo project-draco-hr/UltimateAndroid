@@ -1,0 +1,8 @@
+{
+  super.onBoundsChange(bounds);
+  if (!mOverrideBounds) {
+    mHotspotBounds.set(bounds);
+    onHotspotBoundsChanged();
+  }
+  invalidateSelf();
+}

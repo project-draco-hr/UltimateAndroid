@@ -1,0 +1,38 @@
+{
+  final ObjectAnimator outerOpacityAnim;
+  if (inflectionDuration > 0) {
+    outerOpacityAnim=ObjectAnimator.ofFloat(this,"outerOpacity",inflectionOpacity / 255.0f);
+    outerOpacityAnim.setAutoCancel(true);
+    outerOpacityAnim.setDuration(inflectionDuration);
+    outerOpacityAnim.setInterpolator(LINEAR_INTERPOLATOR);
+    final int outerDuration=opacityDuration - inflectionDuration;
+    if (outerDuration > 0) {
+      outerOpacityAnim.addListener(new AnimatorListenerAdapter(){
+        @Override public void onAnimationEnd(        Animator animation){
+          final ObjectAnimator outerFadeOutAnim=ObjectAnimator.ofFloat(RippleBackground.this,"outerOpacity",0);
+          outerFadeOutAnim.setAutoCancel(true);
+          outerFadeOutAnim.setDuration(outerDuration);
+          outerFadeOutAnim.setInterpolator(LINEAR_INTERPOLATOR);
+          outerFadeOutAnim.addListener(mAnimationListener);
+          mAnimOuterOpacity=outerFadeOutAnim;
+          outerFadeOutAnim.start();
+        }
+        @Override public void onAnimationCancel(        Animator animation){
+          animation.removeListener(this);
+        }
+      }
+);
+    }
+ else {
+      outerOpacityAnim.addListener(mAnimationListener);
+    }
+  }
+ else {
+    outerOpacityAnim=ObjectAnimator.ofFloat(this,"outerOpacity",0);
+    outerOpacityAnim.setAutoCancel(true);
+    outerOpacityAnim.setDuration(opacityDuration);
+    outerOpacityAnim.addListener(mAnimationListener);
+  }
+  mAnimOuterOpacity=outerOpacityAnim;
+  outerOpacityAnim.start();
+}

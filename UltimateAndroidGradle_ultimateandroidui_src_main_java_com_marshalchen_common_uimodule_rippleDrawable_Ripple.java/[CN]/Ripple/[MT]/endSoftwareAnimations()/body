@@ -1,0 +1,18 @@
+{
+  if (mAnimRadius != null) {
+    mAnimRadius.end();
+    mAnimRadius=null;
+  }
+  if (mAnimOpacity != null) {
+    mAnimOpacity.end();
+    mAnimOpacity=null;
+  }
+  if (mAnimX != null) {
+    mAnimX.end();
+    mAnimX=null;
+  }
+  if (mAnimY != null) {
+    mAnimY.end();
+    mAnimY=null;
+  }
+}

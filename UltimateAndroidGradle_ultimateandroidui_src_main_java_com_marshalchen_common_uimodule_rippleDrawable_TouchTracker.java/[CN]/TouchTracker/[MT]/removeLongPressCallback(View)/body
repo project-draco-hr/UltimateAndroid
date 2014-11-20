@@ -1,0 +1,5 @@
+{
+  if (mPendingCheckForLongPress != null) {
+    target.removeCallbacks(mPendingCheckForLongPress);
+  }
+}

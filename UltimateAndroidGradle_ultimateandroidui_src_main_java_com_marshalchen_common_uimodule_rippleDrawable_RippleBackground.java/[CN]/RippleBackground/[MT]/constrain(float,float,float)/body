@@ -1,0 +1,3 @@
+{
+  return amount < low ? low : (amount > high ? high : amount);
+}

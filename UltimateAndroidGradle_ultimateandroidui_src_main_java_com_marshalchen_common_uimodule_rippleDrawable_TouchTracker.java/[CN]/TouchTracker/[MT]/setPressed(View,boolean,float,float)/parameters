@@ -1,0 +1,4 @@
+View target
+boolean pressed
+float x
+float y

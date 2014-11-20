@@ -1,0 +1,6 @@
+{
+  if (mTempPaint == null) {
+    mTempPaint=new Paint();
+  }
+  return mTempPaint;
+}

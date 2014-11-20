@@ -1,0 +1,20 @@
+{
+  final boolean changed=super.onStateChange(stateSet);
+  boolean enabled=false;
+  boolean pressed=false;
+  boolean focused=false;
+  for (  int state : stateSet) {
+    if (state == android.R.attr.state_enabled) {
+      enabled=true;
+    }
+    if (state == android.R.attr.state_focused) {
+      focused=true;
+    }
+    if (state == android.R.attr.state_pressed) {
+      pressed=true;
+    }
+  }
+  setRippleActive(enabled && pressed);
+  setBackgroundActive(focused || (enabled && pressed));
+  return changed;
+}

@@ -1,0 +1,27 @@
+{
+  final ObjectAnimator radiusAnim=ObjectAnimator.ofFloat(this,"radiusGravity",1);
+  radiusAnim.setAutoCancel(true);
+  radiusAnim.setDuration(radiusDuration);
+  radiusAnim.setInterpolator(DECEL_INTERPOLATOR);
+  final ObjectAnimator xAnim=ObjectAnimator.ofFloat(this,"xGravity",1);
+  xAnim.setAutoCancel(true);
+  xAnim.setDuration(radiusDuration);
+  xAnim.setInterpolator(DECEL_INTERPOLATOR);
+  final ObjectAnimator yAnim=ObjectAnimator.ofFloat(this,"yGravity",1);
+  yAnim.setAutoCancel(true);
+  yAnim.setDuration(radiusDuration);
+  yAnim.setInterpolator(DECEL_INTERPOLATOR);
+  final ObjectAnimator opacityAnim=ObjectAnimator.ofFloat(this,"opacity",0);
+  opacityAnim.setAutoCancel(true);
+  opacityAnim.setDuration(opacityDuration);
+  opacityAnim.setInterpolator(LINEAR_INTERPOLATOR);
+  opacityAnim.addListener(mAnimationListener);
+  mAnimRadius=radiusAnim;
+  mAnimOpacity=opacityAnim;
+  mAnimX=xAnim;
+  mAnimY=yAnim;
+  radiusAnim.start();
+  opacityAnim.start();
+  xAnim.start();
+  yAnim.start();
+}
