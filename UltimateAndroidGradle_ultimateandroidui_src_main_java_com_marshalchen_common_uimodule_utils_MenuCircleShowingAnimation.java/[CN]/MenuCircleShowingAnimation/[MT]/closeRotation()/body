@@ -1,0 +1,6 @@
+{
+  rotateCloseAnimation=new RotateAnimation(45,0,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+  rotateCloseAnimation.setFillAfter(true);
+  rotateCloseAnimation.setFillEnabled(true);
+  rotateCloseAnimation.setDuration(ANIMATION_TIME);
+}

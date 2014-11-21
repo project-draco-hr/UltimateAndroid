@@ -1,0 +1,8 @@
+{
+  ImageButton button=(ImageButton)LayoutInflater.from(context).inflate(R.layout.menu_animation_promoted_action_button,frameLayout,false);
+  button.setImageDrawable(drawable);
+  button.setOnClickListener(onClickListener);
+  promotedActions.add(button);
+  frameLayout.addView(button);
+  return;
+}

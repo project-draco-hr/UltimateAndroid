@@ -1,0 +1,30 @@
+{
+  if (objectAnimator == null) {
+    objectAnimatorSetup();
+  }
+  AnimatorSet animation=new AnimatorSet();
+  for (int i=0; i < promotedActions.size(); i++) {
+    objectAnimator[i]=setCloseAnimation(promotedActions.get(i),i);
+  }
+  if (objectAnimator.length == 0) {
+    objectAnimator=null;
+  }
+  animation.playTogether(objectAnimator);
+  animation.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+      mainImageButton.startAnimation(rotateCloseAnimation);
+      mainImageButton.setClickable(false);
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+      mainImageButton.setClickable(true);
+      hidePromotedActions();
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+      mainImageButton.setClickable(true);
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  return animation;
+}
