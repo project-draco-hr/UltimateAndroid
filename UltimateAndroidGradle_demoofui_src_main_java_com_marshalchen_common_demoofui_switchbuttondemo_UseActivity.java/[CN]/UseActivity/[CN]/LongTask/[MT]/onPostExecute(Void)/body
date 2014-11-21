@@ -1,0 +1,5 @@
+{
+  super.onPostExecute(result);
+  mLongSb.slideToChecked(true);
+  mStartBt.setEnabled(true);
+}

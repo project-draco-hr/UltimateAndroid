@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.switch_button_activity_main);
+  mListView=(ListView)findViewById(R.id.list);
+  mListView.setOnItemClickListener(this);
+}

@@ -671,6 +671,12 @@
   map.put("subname","MenuCircleShowingAnimation");
   map.put("class","MenuCircleShowingAnimationActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","SwitchButton");
+  map.put("detail","try");
+  map.put("subname","SwitchButtonActivity");
+  map.put("class","SwitchButtonActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -1025,6 +1031,9 @@ BasicUtils.sendIntent(getActivity(),MaterialProgressWheelActivity.class);
 break;
 case "MenuCircleShowingAnimationActivity":
 BasicUtils.sendIntent(getActivity(),MenuCircleShowingAnimationActivity.class);
+break;
+case "SwitchButtonActivity":
+BasicUtils.sendIntent(getActivity(),SwitchButtonActivity.class);
 break;
 }
 }
