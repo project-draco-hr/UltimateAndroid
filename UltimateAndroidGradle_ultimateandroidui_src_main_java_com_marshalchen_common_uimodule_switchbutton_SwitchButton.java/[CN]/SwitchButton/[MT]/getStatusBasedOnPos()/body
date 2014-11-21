@@ -1,0 +1,3 @@
+{
+  return mThumbZone.left > mCenterPos;
+}

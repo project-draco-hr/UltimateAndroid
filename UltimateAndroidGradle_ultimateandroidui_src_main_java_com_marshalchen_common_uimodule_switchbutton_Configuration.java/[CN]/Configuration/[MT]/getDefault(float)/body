@@ -1,0 +1,7 @@
+{
+  Configuration defaultConfiguration=new Configuration();
+  defaultConfiguration.density=density;
+  defaultConfiguration.setThumbMarginInPixel(defaultConfiguration.getDefaultThumbMarginInPixel());
+  defaultConfiguration.mInsetBounds=new Rect(Default.DEFAULT_INNER_BOUNDS,Default.DEFAULT_INNER_BOUNDS,Default.DEFAULT_INNER_BOUNDS,Default.DEFAULT_INNER_BOUNDS);
+  return defaultConfiguration;
+}

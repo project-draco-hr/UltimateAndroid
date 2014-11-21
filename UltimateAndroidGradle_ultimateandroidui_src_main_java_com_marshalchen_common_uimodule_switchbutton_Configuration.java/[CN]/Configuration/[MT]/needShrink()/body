@@ -1,0 +1,3 @@
+{
+  return this.mInsetBounds.left + this.mInsetBounds.right + this.mInsetBounds.top+ this.mInsetBounds.bottom != 0;
+}

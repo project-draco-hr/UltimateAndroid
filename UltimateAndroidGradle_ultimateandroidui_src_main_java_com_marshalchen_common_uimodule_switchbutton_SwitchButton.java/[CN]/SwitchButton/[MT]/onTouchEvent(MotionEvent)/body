@@ -1,0 +1,39 @@
+{
+  if (isAnimating || !isEnabled()) {
+    return false;
+  }
+  int action=event.getAction();
+  float deltaX=event.getX() - mStartX;
+  float deltaY=event.getY() - mStartY;
+  boolean nextStatus=mIsChecked;
+switch (action) {
+case MotionEvent.ACTION_DOWN:
+    catchView();
+  mStartX=event.getX();
+mStartY=event.getY();
+mLastX=mStartX;
+setPressed(true);
+break;
+case MotionEvent.ACTION_MOVE:
+float x=event.getX();
+moveThumb((int)(x - mLastX));
+mLastX=x;
+break;
+case MotionEvent.ACTION_CANCEL:
+case MotionEvent.ACTION_UP:
+setPressed(false);
+nextStatus=getStatusBasedOnPos();
+float time=event.getEventTime() - event.getDownTime();
+if (deltaX < mTouchSlop && deltaY < mTouchSlop && time < mClickTimeout) {
+performClick();
+}
+ else {
+slideToChecked(nextStatus);
+}
+break;
+default :
+break;
+}
+invalidate();
+return true;
+}

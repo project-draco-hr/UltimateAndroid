@@ -1,0 +1,6 @@
+{
+  if (left > 0) {
+    left=-left;
+  }
+  this.mInsetBounds.left=left;
+}

@@ -1,0 +1,8 @@
+{
+  if (mConf == null) {
+    return;
+  }
+  mConf.setOffDrawable(fetchDrawable(ta,R.styleable.SwitchButton_switch_button_offDrawable,R.styleable.SwitchButton_switch_button_offColor,Configuration.Default.DEFAULT_OFF_COLOR));
+  mConf.setOnDrawable(fetchDrawable(ta,R.styleable.SwitchButton_switch_button_onDrawable,R.styleable.SwitchButton_switch_button_onColor,Configuration.Default.DEFAULT_ON_COLOR));
+  mConf.setThumbDrawable(fetchDrawable(ta,R.styleable.SwitchButton_thumbDrawable,R.styleable.SwitchButton_thumbColor,Configuration.Default.DEFAULT_THUMB_COLOR));
+}

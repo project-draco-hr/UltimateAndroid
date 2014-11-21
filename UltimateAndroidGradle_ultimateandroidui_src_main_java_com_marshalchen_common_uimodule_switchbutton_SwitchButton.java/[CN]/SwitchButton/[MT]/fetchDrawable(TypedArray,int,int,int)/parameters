@@ -1,0 +1,4 @@
+TypedArray ta
+int attrId
+int alterColorId
+int defaultColor

@@ -1,0 +1,6 @@
+{
+  if (thumbDrawable == null) {
+    throw new IllegalArgumentException("thumb drawable can not be null");
+  }
+  mThumbDrawable=thumbDrawable;
+}

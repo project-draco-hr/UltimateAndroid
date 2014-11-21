@@ -1,0 +1,6 @@
+{
+  super.drawableStateChanged();
+  setDrawableState(mConf.getThumbDrawable());
+  setDrawableState(mConf.getOnDrawable());
+  setDrawableState(mConf.getOffDrawable());
+}

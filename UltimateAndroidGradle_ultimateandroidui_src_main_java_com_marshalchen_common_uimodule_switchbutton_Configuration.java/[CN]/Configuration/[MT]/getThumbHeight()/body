@@ -1,0 +1,16 @@
+{
+  int height=mThumbHeight;
+  if (height < 0) {
+    if (mThumbDrawable != null) {
+      height=mThumbDrawable.getIntrinsicHeight();
+      if (height > 0) {
+        return height;
+      }
+    }
+    if (density <= 0) {
+      throw new IllegalArgumentException("density must be a positive number");
+    }
+    height=(int)(Limit.MIN_THUMB_SIZE * density);
+  }
+  return height;
+}

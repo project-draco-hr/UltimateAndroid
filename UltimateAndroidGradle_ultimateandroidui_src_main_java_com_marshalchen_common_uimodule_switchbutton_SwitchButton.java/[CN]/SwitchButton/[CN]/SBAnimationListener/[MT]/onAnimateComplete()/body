@@ -1,0 +1,4 @@
+{
+  setCheckedInClass(getStatusBasedOnPos());
+  isAnimating=false;
+}

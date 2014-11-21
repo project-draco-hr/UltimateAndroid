@@ -1,0 +1,6 @@
+{
+  if (bottom > 0) {
+    bottom=-bottom;
+  }
+  this.mInsetBounds.bottom=bottom;
+}

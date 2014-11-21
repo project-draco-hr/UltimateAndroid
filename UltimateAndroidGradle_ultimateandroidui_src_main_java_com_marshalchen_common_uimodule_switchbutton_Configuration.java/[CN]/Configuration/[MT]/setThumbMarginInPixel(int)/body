@@ -1,0 +1,3 @@
+{
+  setThumbMarginInPixel(marginInPixel,marginInPixel,marginInPixel,marginInPixel);
+}

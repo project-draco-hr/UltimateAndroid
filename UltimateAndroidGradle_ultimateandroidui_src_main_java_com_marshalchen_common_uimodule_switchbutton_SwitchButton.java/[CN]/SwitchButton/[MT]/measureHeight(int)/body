@@ -1,0 +1,21 @@
+{
+  int measuredHeight=0;
+  int specMode=MeasureSpec.getMode(measureSpec);
+  int specSize=MeasureSpec.getSize(measureSpec);
+  int minHeight=mConf.getThumbHeight() + getPaddingTop() + getPaddingBottom();
+  int innerMarginHeight=mConf.getThumbMarginTop() + mConf.getThumbMarginBottom();
+  if (innerMarginHeight > 0) {
+    minHeight+=innerMarginHeight;
+  }
+  if (specMode == MeasureSpec.EXACTLY) {
+    measuredHeight=Math.max(specSize,minHeight);
+  }
+ else {
+    measuredHeight=minHeight;
+    if (specMode == MeasureSpec.AT_MOST) {
+      measuredHeight=Math.min(specSize,minHeight);
+    }
+  }
+  measuredHeight+=(mConf.getInsetBounds().top + mConf.getInsetBounds().bottom);
+  return measuredHeight;
+}

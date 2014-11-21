@@ -1,0 +1,6 @@
+{
+  boolean thumbStatable=(mConf.getThumbDrawable() instanceof StateListDrawable);
+  boolean onStatable=(mConf.getOnDrawable() instanceof StateListDrawable);
+  boolean offStatable=(mConf.getOffDrawable() instanceof StateListDrawable);
+  return !thumbStatable || !onStatable || !offStatable;
+}

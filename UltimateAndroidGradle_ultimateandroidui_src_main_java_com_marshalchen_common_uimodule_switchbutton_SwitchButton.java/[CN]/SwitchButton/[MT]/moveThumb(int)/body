@@ -1,0 +1,13 @@
+{
+  int newLeft=mThumbZone.left + delta;
+  int newRight=mThumbZone.right + delta;
+  if (newLeft < mSafeZone.left) {
+    newLeft=mSafeZone.left;
+    newRight=newLeft + mConf.getThumbWidth();
+  }
+  if (newRight > mSafeZone.right) {
+    newRight=mSafeZone.right;
+    newLeft=newRight - mConf.getThumbWidth();
+  }
+  moveThumbTo(newLeft,newRight);
+}

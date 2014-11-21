@@ -1,0 +1,4 @@
+{
+  moveThumb(frame);
+  postInvalidate();
+}

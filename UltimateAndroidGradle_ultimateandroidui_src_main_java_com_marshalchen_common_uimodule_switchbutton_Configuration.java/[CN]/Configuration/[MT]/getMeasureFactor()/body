@@ -1,0 +1,6 @@
+{
+  if (mMeasureFactor <= 0) {
+    mMeasureFactor=Default.DEFAULT_MEASURE_FACTOR;
+  }
+  return mMeasureFactor;
+}

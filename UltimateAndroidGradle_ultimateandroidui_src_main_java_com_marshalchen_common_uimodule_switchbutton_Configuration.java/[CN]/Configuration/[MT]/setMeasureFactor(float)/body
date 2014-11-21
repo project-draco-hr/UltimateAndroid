@@ -1,0 +1,6 @@
+{
+  if (measureFactor <= 0) {
+    this.mMeasureFactor=Default.DEFAULT_MEASURE_FACTOR;
+  }
+  this.mMeasureFactor=measureFactor;
+}

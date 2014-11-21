@@ -1,0 +1,16 @@
+{
+  int width=mThumbWidth;
+  if (width < 0) {
+    if (mThumbDrawable != null) {
+      width=mThumbDrawable.getIntrinsicWidth();
+      if (width > 0) {
+        return width;
+      }
+    }
+    if (density <= 0) {
+      throw new IllegalArgumentException("density must be a positive number");
+    }
+    width=(int)(Limit.MIN_THUMB_SIZE * density);
+  }
+  return width;
+}

@@ -1,0 +1,15 @@
+{
+  super(context,attrs,defStyle);
+  initView();
+  TypedArray ta=context.obtainStyledAttributes(attrs,R.styleable.SwitchButton);
+  mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_margin,mConf.getDefaultThumbMarginInPixel()));
+  mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginTop,mConf.getThumbMarginTop()),ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginBottom,mConf.getThumbMarginBottom()),ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginLeft,mConf.getThumbMarginLeft()),ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginRight,mConf.getThumbMarginRight()));
+  mConf.setRadius(ta.getInt(R.styleable.SwitchButton_switch_button_radius,Configuration.Default.DEFAULT_RADIUS));
+  mConf.setThumbWidthAndHeightInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_width,-1),ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_height,-1));
+  mConf.setMeasureFactor(ta.getFloat(R.styleable.SwitchButton_measureFactor,-1));
+  mConf.setInsetBounds(ta.getDimensionPixelSize(R.styleable.SwitchButton_insetLeft,0),ta.getDimensionPixelSize(R.styleable.SwitchButton_insetTop,0),ta.getDimensionPixelSize(R.styleable.SwitchButton_insetRight,0),ta.getDimensionPixelSize(R.styleable.SwitchButton_insetBottom,0));
+  int velocity=ta.getInteger(R.styleable.SwitchButton_animationVelocity,-1);
+  mAnimationController.setVelocity(velocity);
+  fetchDrawableFromAttr(ta);
+  ta.recycle();
+}

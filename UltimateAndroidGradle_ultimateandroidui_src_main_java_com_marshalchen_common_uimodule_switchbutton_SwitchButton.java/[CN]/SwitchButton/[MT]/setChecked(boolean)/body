@@ -1,0 +1,6 @@
+{
+  if (mThumbZone != null) {
+    moveThumb(checked ? getMeasuredWidth() : -getMeasuredWidth());
+  }
+  setCheckedInClass(checked);
+}

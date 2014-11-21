@@ -1,0 +1,7 @@
+{
+  if (velocity <= 0) {
+    mVelocity=DEFAULT_VELOCITY;
+    return;
+  }
+  mVelocity=velocity;
+}

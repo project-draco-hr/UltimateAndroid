@@ -1,0 +1,4 @@
+{
+  mThumbZone.set(newLeft,mThumbZone.top,newRight,mThumbZone.bottom);
+  mConf.getThumbDrawable().setBounds(mThumbZone);
+}

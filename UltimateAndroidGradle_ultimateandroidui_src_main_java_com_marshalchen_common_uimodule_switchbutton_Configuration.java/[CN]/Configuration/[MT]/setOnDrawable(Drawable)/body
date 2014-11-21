@@ -1,0 +1,6 @@
+{
+  if (onDrawable == null) {
+    throw new IllegalArgumentException("on drawable can not be null");
+  }
+  mOnDrawable=onDrawable;
+}

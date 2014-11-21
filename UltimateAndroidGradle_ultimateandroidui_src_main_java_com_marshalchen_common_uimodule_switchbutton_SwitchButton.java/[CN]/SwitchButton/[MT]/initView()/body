@@ -1,0 +1,11 @@
+{
+  mConf=Configuration.getDefault(getContext().getResources().getDisplayMetrics().density);
+  mTouchSlop=ViewConfiguration.get(getContext()).getScaledTouchSlop();
+  mClickTimeout=ViewConfiguration.getPressedStateDuration() + ViewConfiguration.getTapTimeout();
+  mAnimationController=AnimationController.getDefault().init(mOnAnimateListener);
+  mBounds=new Rect();
+  if (SHOW_RECT) {
+    mRectPaint=new Paint();
+    mRectPaint.setStyle(Style.STROKE);
+  }
+}

@@ -1,0 +1,16 @@
+{
+  if (mConf == null) {
+    mConf=Configuration.getDefault(conf.getDensity());
+  }
+  mConf.setOffDrawable(conf.getOffDrawableWithFix());
+  mConf.setOnDrawable(conf.getOnDrawableWithFix());
+  mConf.setThumbDrawable(conf.getThumbDrawableWithFix());
+  mConf.setThumbMarginInPixel(conf.getThumbMarginTop(),conf.getThumbMarginBottom(),conf.getThumbMarginLeft(),conf.getThumbMarginRight());
+  mConf.setThumbWidthAndHeightInPixel(conf.getThumbWidth(),conf.getThumbHeight());
+  mConf.setVelocity(conf.getVelocity());
+  mConf.setMeasureFactor(conf.getMeasureFactor());
+  mAnimationController.setVelocity(mConf.getVelocity());
+  this.requestLayout();
+  setup();
+  setChecked(mIsChecked);
+}

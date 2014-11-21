@@ -1,0 +1,8 @@
+{
+  if (mThumbDrawable != null) {
+    return mThumbDrawable;
+  }
+ else {
+    return getDrawableFromColor(mThumbColor);
+  }
+}

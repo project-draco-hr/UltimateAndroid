@@ -1,0 +1,8 @@
+{
+  if (isAnimating) {
+    return;
+  }
+  int from=mThumbZone.left;
+  int to=checked ? mSafeZone.right - mConf.getThumbWidth() : mSafeZone.left;
+  mAnimationController.startAnimation(from,to);
+}

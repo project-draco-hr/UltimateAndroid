@@ -1,0 +1,3 @@
+{
+  setThumbWidthAndHeightInPixel((int)(width * density),(int)(height * density));
+}

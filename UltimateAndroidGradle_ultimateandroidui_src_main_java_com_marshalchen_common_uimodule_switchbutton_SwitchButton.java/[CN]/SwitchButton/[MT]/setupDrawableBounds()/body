@@ -1,0 +1,9 @@
+{
+  if (mBackZone != null) {
+    mConf.getOnDrawable().setBounds(mBackZone);
+    mConf.getOffDrawable().setBounds(mBackZone);
+  }
+  if (mThumbZone != null) {
+    mConf.getThumbDrawable().setBounds(mThumbZone);
+  }
+}

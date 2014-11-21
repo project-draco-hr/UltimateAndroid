@@ -1,0 +1,15 @@
+{
+  if (!isAnimating) {
+    return;
+  }
+  calcNextFrame();
+  mOnAnimateListener.onFrameUpdate(mFrame);
+  if (mOnAnimateListener.continueAnimating()) {
+    requireNextFrame();
+  }
+ else {
+    stopAnimation();
+    mOnAnimateListener.onAnimateComplete();
+    return;
+  }
+}

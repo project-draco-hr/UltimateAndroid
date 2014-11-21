@@ -1,0 +1,6 @@
+{
+  Message msg=mHandler.obtainMessage();
+  msg.what=ANI_WHAT;
+  msg.obj=this;
+  mHandler.sendMessageDelayed(msg,DEFAULT_FRAME_DURATION);
+}

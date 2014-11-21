@@ -1,0 +1,7 @@
+{
+  if (drawable != null) {
+    int[] myDrawableState=getDrawableState();
+    drawable.setState(myDrawableState);
+    invalidate();
+  }
+}

@@ -1,0 +1,14 @@
+{
+  if (onDrawable == null && offDrawable == null) {
+    throw new IllegalArgumentException("back drawable can not be null");
+  }
+  if (offDrawable != null) {
+    mOffDrawable=offDrawable;
+    if (onDrawable != null) {
+      mOnDrawable=onDrawable;
+    }
+ else {
+      mOnDrawable=mOffDrawable;
+    }
+  }
+}
