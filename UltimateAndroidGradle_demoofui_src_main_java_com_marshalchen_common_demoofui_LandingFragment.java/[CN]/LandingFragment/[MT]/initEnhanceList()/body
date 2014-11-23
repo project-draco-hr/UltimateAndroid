@@ -635,6 +635,48 @@
   map.put("subname","MaterialRippleActivity");
   map.put("class","MaterialRippleActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","CircleProgress");
+  map.put("detail","try");
+  map.put("subname","CircleProgressActivity");
+  map.put("class","CircleProgressActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialDesign");
+  map.put("detail","try");
+  map.put("subname","MaterialDesignActivity");
+  map.put("class","MaterialDesignActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","SwitchAnim");
+  map.put("detail","try");
+  map.put("subname","SwitchAnimationActivity");
+  map.put("class","SwitchAnimationActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","RippleDrawable");
+  map.put("detail","try");
+  map.put("subname","RippleDrawActivity");
+  map.put("class","RippleDrawableActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialProgress");
+  map.put("detail","try");
+  map.put("subname","MaterialProgress");
+  map.put("class","MaterialProgressWheelActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MenuCircle");
+  map.put("detail","try");
+  map.put("subname","MenuCircleShowingAnimation");
+  map.put("class","MenuCircleShowingAnimationActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","SwitchButton");
+  map.put("detail","try");
+  map.put("subname","SwitchButtonActivity");
+  map.put("class","SwitchButtonActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -971,6 +1013,27 @@ BasicUtils.sendIntent(getActivity(),PagerSlidingTabStripActivity.class);
 break;
 case "MaterialRippleActivity":
 BasicUtils.sendIntent(getActivity(),MaterialRippleActivity.class);
+break;
+case "CircleProgressActivity":
+BasicUtils.sendIntent(getActivity(),CircleProgressActivity.class);
+break;
+case "MaterialDesignActivity":
+BasicUtils.sendIntent(getActivity(),MaterialDesignActivity.class);
+break;
+case "SwitchAnimationActivity":
+BasicUtils.sendIntent(getActivity(),SwitchAnimationActivity.class);
+break;
+case "RippleDrawableActivity":
+BasicUtils.sendIntent(getActivity(),RippleDrawableActivity.class);
+break;
+case "MaterialProgressWheelActivity":
+BasicUtils.sendIntent(getActivity(),MaterialProgressWheelActivity.class);
+break;
+case "MenuCircleShowingAnimationActivity":
+BasicUtils.sendIntent(getActivity(),MenuCircleShowingAnimationActivity.class);
+break;
+case "SwitchButtonActivity":
+BasicUtils.sendIntent(getActivity(),SwitchButtonActivity.class);
 break;
 }
 }

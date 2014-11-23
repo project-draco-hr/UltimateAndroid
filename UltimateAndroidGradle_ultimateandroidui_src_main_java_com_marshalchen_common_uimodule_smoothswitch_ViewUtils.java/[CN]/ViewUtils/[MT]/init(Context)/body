@@ -1,0 +1,6 @@
+{
+  Resources res=context.getResources();
+  DisplayMetrics metrics=res.getDisplayMetrics();
+  width=metrics.widthPixels;
+  height=metrics.heightPixels;
+}

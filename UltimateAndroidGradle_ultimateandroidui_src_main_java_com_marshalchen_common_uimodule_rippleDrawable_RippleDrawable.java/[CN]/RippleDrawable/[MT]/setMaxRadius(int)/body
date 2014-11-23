@@ -1,0 +1,6 @@
+{
+  if (maxRadius != RADIUS_AUTO && maxRadius < 0) {
+    throw new IllegalArgumentException("maxRadius must be RADIUS_AUTO or >= 0");
+  }
+  mMaxRadius=maxRadius;
+}

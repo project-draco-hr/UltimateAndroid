@@ -1,5 +1,0 @@
-{
-  if (!TextUtils.isEmpty(path) && bmp != null) {
-    imageCache.put(path,new SoftReference<Bitmap>(bmp));
-  }
-}

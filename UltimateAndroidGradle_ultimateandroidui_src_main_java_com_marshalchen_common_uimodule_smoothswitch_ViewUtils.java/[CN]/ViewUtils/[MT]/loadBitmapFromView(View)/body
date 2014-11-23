@@ -1,0 +1,11 @@
+{
+  if (v == null) {
+    return null;
+  }
+  Bitmap screenshot;
+  screenshot=Bitmap.createBitmap(v.getWidth(),v.getHeight(),Config.ARGB_8888);
+  Canvas c=new Canvas(screenshot);
+  c.translate(-v.getScrollX(),-v.getScrollY());
+  v.draw(c);
+  return screenshot;
+}

@@ -1,0 +1,3 @@
+{
+  return (int)(Default.DEFAULT_THUMB_MARGIN * density);
+}

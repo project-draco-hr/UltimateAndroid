@@ -1,0 +1,16 @@
+{
+  boolean needsDraw=false;
+  if (mRipple != null) {
+    needsDraw=false;
+    mRipple.cancel();
+    mRipple=null;
+  }
+  if (mBackground != null) {
+    needsDraw=mBackground.isHardwareAnimating();
+    mBackground.cancel();
+    mBackground=null;
+  }
+  needsDraw|=cancelExitingRipples();
+  mNeedsDraw=needsDraw;
+  invalidateSelf();
+}

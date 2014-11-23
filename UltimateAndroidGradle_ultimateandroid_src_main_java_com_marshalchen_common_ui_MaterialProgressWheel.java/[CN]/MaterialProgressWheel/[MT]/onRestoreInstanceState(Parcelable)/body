@@ -1,0 +1,17 @@
+{
+  if (!(state instanceof WheelSavedState)) {
+    super.onRestoreInstanceState(state);
+    return;
+  }
+  WheelSavedState ss=(WheelSavedState)state;
+  super.onRestoreInstanceState(ss.getSuperState());
+  this.mProgress=ss.mProgress;
+  this.mTargetProgress=ss.mTargetProgress;
+  this.isSpinning=ss.isSpinning;
+  this.spinSpeed=ss.spinSpeed;
+  this.barWidth=ss.barWidth;
+  this.barColor=ss.barColor;
+  this.rimWidth=ss.rimWidth;
+  this.rimColor=ss.rimColor;
+  this.circleRadius=ss.circleRadius;
+}

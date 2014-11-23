@@ -1,0 +1,10 @@
+{
+  mConverView=LayoutInflater.from(getActivity()).inflate(R.layout.switch_animation_view_fragment,null);
+  mConverView.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener(){
+    @Override public void onGlobalLayout(){
+      new SwitchAnimationUtil().startAnimation(mConverView,Constant.mType);
+    }
+  }
+);
+  return mConverView;
+}

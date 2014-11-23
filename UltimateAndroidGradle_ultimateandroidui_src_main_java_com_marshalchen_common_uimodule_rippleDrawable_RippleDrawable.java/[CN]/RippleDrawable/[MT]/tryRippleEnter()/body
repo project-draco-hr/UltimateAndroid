@@ -1,0 +1,22 @@
+{
+  if (mExitingRipplesCount >= MAX_RIPPLES) {
+    return;
+  }
+  if (mRipple == null) {
+    final float x;
+    final float y;
+    if (mHasPending) {
+      mHasPending=false;
+      x=mPendingX;
+      y=mPendingY;
+    }
+ else {
+      x=mHotspotBounds.exactCenterX();
+      y=mHotspotBounds.exactCenterY();
+    }
+    mRipple=new Ripple(this,mHotspotBounds,x,y);
+  }
+  final int color=mColor.getColorForState(getState(),Color.TRANSPARENT);
+  mRipple.setup(mMaxRadius,color,mDensity);
+  mRipple.enter();
+}

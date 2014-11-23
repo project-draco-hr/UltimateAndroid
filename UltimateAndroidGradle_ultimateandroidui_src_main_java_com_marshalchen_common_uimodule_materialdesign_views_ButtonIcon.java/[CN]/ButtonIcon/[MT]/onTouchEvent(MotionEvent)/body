@@ -1,0 +1,8 @@
+{
+  boolean returnBool=super.onTouchEvent(event);
+  if (x != -1) {
+    x=getWidth() / 2;
+    y=getHeight() / 2;
+  }
+  return returnBool;
+}

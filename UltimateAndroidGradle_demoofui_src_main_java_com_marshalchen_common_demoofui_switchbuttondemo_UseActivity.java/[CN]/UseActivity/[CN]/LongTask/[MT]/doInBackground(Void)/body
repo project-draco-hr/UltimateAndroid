@@ -1,0 +1,13 @@
+{
+  while (progress < 100) {
+    progress++;
+    try {
+      Thread.sleep(20);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    publishProgress(progress);
+  }
+  return null;
+}

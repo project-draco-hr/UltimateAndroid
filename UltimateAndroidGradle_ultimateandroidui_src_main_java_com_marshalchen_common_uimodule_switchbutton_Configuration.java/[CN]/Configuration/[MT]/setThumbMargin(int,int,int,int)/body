@@ -1,0 +1,6 @@
+{
+  mThumbMarginTop=(int)(top * density);
+  mThumbMarginBottom=(int)(bottom * density);
+  mThumbMarginLeft=(int)(left * density);
+  mThumbMarginRight=(int)(right * density);
+}

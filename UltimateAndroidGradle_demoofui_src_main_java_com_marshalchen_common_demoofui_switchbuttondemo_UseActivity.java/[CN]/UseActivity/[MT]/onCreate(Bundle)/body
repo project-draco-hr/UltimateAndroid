@@ -1,0 +1,21 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.switch_button_activity_use);
+  findView();
+  mListenerSb.setOnCheckedChangeListener(new OnCheckedChangeListener(){
+    @Override public void onCheckedChanged(    CompoundButton buttonView,    boolean isChecked){
+      mListenerFinish.setVisibility(isChecked ? View.VISIBLE : View.INVISIBLE);
+    }
+  }
+);
+  mStartBt.setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View v){
+      new LongTask().execute();
+    }
+  }
+);
+  mToggleAniBt.setOnClickListener(this);
+  mToggleNotAniBt.setOnClickListener(this);
+  mCheckedAniBt.setOnClickListener(this);
+  mCheckNotAniBt.setOnClickListener(this);
+}

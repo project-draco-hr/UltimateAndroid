@@ -1,0 +1,5 @@
+{
+  if (target.get() != null) {
+    target.get().performClick();
+  }
+}

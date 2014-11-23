@@ -1,0 +1,7 @@
+{
+  if (onAnimateListener == null) {
+    throw new IllegalArgumentException("onAnimateListener can not be null");
+  }
+  this.mOnAnimateListener=onAnimateListener;
+  return this;
+}

@@ -1,0 +1,7 @@
+{
+  if (target.isPressed() && (target.getParent() != null)) {
+    if (target.performLongClick()) {
+      mHasPerformedLongPress=true;
+    }
+  }
+}

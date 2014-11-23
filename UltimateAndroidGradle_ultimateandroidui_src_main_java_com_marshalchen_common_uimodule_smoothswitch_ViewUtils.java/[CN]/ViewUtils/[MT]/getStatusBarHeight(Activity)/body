@@ -1,0 +1,5 @@
+{
+  Rect rect=new Rect();
+  context.getWindow().getDecorView().getWindowVisibleDisplayFrame(rect);
+  return rect.top;
+}

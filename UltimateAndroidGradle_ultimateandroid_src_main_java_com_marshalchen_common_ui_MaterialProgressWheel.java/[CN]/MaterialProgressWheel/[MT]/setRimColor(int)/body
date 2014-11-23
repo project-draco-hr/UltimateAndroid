@@ -1,0 +1,7 @@
+{
+  this.rimColor=rimColor;
+  setupPaints();
+  if (!isSpinning) {
+    invalidate();
+  }
+}

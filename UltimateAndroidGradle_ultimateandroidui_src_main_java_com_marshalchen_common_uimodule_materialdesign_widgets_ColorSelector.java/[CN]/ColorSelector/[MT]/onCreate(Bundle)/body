@@ -1,0 +1,27 @@
+{
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_design_color_selector);
+  colorView=findViewById(R.id.viewColor);
+  colorView.setBackgroundColor(color);
+  colorView.post(new Runnable(){
+    @Override public void run(){
+      LayoutParams params=(LayoutParams)colorView.getLayoutParams();
+      params.height=colorView.getWidth();
+      colorView.setLayoutParams(params);
+    }
+  }
+);
+  red=(Slider)findViewById(R.id.red);
+  green=(Slider)findViewById(R.id.green);
+  blue=(Slider)findViewById(R.id.blue);
+  int r=(this.color >> 16) & 0xFF;
+  int g=(this.color >> 8) & 0xFF;
+  int b=(this.color >> 0) & 0xFF;
+  red.setValue(r);
+  green.setValue(g);
+  blue.setValue(b);
+  red.setOnValueChangedListener(this);
+  green.setOnValueChangedListener(this);
+  blue.setOnValueChangedListener(this);
+}

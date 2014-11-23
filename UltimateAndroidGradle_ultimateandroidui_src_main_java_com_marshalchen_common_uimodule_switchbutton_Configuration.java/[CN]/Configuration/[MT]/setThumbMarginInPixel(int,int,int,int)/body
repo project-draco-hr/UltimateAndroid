@@ -1,0 +1,6 @@
+{
+  mThumbMarginTop=top;
+  mThumbMarginBottom=bottom;
+  mThumbMarginLeft=left;
+  mThumbMarginRight=right;
+}

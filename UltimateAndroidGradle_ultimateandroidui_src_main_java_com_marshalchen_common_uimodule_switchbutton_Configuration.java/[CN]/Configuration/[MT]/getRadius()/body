@@ -1,0 +1,6 @@
+{
+  if (this.mRadius < 0) {
+    return Default.DEFAULT_RADIUS;
+  }
+  return this.mRadius;
+}

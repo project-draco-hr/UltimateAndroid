@@ -1,0 +1,9 @@
+{
+  cancel();
+  final int opacityDuration=(int)(1000 / WAVE_OPACITY_DECAY_VELOCITY + 0.5f);
+  final float outerSizeInfluence=constrain((mOuterRadius - WAVE_OUTER_SIZE_INFLUENCE_MIN * mDensity) / (WAVE_OUTER_SIZE_INFLUENCE_MAX * mDensity),0,1);
+  final float outerOpacityVelocity=Ripple.lerp(WAVE_OUTER_OPACITY_EXIT_VELOCITY_MIN,WAVE_OUTER_OPACITY_EXIT_VELOCITY_MAX,outerSizeInfluence);
+  final int inflectionDuration=Math.max(0,(int)(1000 * (1 - mOuterOpacity) / (WAVE_OPACITY_DECAY_VELOCITY + outerOpacityVelocity) + 0.5f));
+  final int inflectionOpacity=(int)(mColorAlpha * (mOuterOpacity + inflectionDuration * outerOpacityVelocity * outerSizeInfluence / 1000) + 0.5f);
+  exitSoftware(opacityDuration,inflectionDuration,inflectionOpacity);
+}

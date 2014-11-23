@@ -1,4 +1,0 @@
-{
-  super.onResume();
-  if (adapter != null)   adapter.update();
-}

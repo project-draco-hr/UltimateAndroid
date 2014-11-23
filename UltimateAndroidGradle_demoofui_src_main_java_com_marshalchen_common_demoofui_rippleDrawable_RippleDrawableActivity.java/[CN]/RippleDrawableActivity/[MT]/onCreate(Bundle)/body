@@ -1,0 +1,12 @@
+{
+  super.onCreate(savedInstanceState);
+  View decor=getWindow().getDecorView();
+  RecyclerView recyclerView=new RecyclerView(this);
+  recyclerView.setPadding(20,20,20,20);
+  stateList=getResources().getColorStateList(R.color.ripple_drawable_example_colors_state);
+  setContentView(recyclerView);
+  recyclerView.setAdapter(new RecyclerAdapter());
+  recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+  recyclerView.setHasFixedSize(true);
+  recyclerView.setItemViewCacheSize(5);
+}

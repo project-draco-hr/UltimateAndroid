@@ -1,0 +1,21 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.circle_progress_activity_my);
+  donutProgress=(DonutProgress)findViewById(R.id.donut_progress);
+  circleProgress=(CircleProgress)findViewById(R.id.circle_progress);
+  arcProgress=(ArcProgress)findViewById(R.id.arc_progress);
+  timer=new Timer();
+  timer.schedule(new TimerTask(){
+    @Override public void run(){
+      runOnUiThread(new Runnable(){
+        @Override public void run(){
+          donutProgress.setProgress(donutProgress.getProgress() + 1);
+          circleProgress.setProgress(circleProgress.getProgress() + 1);
+          arcProgress.setProgress(arcProgress.getProgress() + 1);
+        }
+      }
+);
+    }
+  }
+,1000,100);
+}

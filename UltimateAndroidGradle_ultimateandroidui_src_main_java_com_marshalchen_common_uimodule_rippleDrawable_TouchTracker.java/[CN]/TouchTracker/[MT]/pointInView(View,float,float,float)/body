@@ -1,0 +1,3 @@
+{
+  return localX >= -slop && localY >= -slop && localX < ((target.getRight() - target.getLeft()) + slop) && localY < ((target.getBottom() - target.getTop()) + slop);
+}

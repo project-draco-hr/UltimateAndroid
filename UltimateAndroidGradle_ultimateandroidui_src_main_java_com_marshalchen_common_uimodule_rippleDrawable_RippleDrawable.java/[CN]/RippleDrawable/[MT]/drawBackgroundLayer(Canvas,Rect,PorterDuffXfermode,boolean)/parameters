@@ -1,0 +1,4 @@
+Canvas canvas
+Rect bounds
+PorterDuffXfermode mode
+boolean drawMask

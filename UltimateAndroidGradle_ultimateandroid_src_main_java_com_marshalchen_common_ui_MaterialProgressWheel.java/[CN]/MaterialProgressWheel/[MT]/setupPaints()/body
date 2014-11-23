@@ -1,0 +1,10 @@
+{
+  barPaint.setColor(barColor);
+  barPaint.setAntiAlias(true);
+  barPaint.setStyle(Style.STROKE);
+  barPaint.setStrokeWidth(barWidth);
+  rimPaint.setColor(rimColor);
+  rimPaint.setAntiAlias(true);
+  rimPaint.setStyle(Style.STROKE);
+  rimPaint.setStrokeWidth(rimWidth);
+}

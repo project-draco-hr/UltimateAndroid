@@ -1,0 +1,19 @@
+{
+  this.isAnimating=true;
+  this.mFrom=from;
+  this.mTo=to;
+  this.mFrame=mVelocity;
+  if (mTo > mFrom) {
+    this.mFrame=Math.abs(this.mVelocity);
+  }
+ else   if (mTo < mFrom) {
+    this.mFrame=-Math.abs(this.mVelocity);
+  }
+ else {
+    this.isAnimating=false;
+    this.mOnAnimateListener.onAnimateComplete();
+    return;
+  }
+  this.mOnAnimateListener.onAnimationStart();
+  new RequireNextFrame().run();
+}

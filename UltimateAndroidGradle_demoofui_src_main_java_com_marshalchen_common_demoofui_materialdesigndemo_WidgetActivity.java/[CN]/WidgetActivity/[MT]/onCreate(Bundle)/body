@@ -1,0 +1,41 @@
+{
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_design_activity_widgets);
+  findViewById(R.id.buttonSnackBar).setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    final View flatButton){
+      new SnackBar(WidgetActivity.this,"Do you want change color of this button to red?","yes",new OnClickListener(){
+        @Override public void onClick(        View v){
+          findViewById(R.id.buttonSnackBar).setBackgroundColor(Color.RED);
+        }
+      }
+).show();
+    }
+  }
+);
+  findViewById(R.id.buttonDialog).setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    final View flatButton){
+      Dialog dialog=new Dialog(WidgetActivity.this,"Title","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam");
+      dialog.setOnAcceptButtonClickListener(new OnClickListener(){
+        @Override public void onClick(        View v){
+          Toast.makeText(WidgetActivity.this,"Click accept button",1).show();
+        }
+      }
+);
+      dialog.setOnCancelButtonClickListener(new OnClickListener(){
+        @Override public void onClick(        View v){
+          Toast.makeText(WidgetActivity.this,"Click cancel button",1).show();
+        }
+      }
+);
+      dialog.show();
+    }
+  }
+);
+  findViewById(R.id.buttonColorSelector).setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    final View flatButton){
+      new ColorSelector(WidgetActivity.this,Color.RED,null).show();
+    }
+  }
+);
+}

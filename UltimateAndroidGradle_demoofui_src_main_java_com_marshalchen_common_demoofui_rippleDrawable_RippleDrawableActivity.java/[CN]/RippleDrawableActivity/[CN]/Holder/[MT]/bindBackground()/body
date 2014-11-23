@@ -1,0 +1,4 @@
+{
+  mNumberView.setClickable(true);
+  RippleDrawable.makeFor(mNumberView,stateList,true);
+}

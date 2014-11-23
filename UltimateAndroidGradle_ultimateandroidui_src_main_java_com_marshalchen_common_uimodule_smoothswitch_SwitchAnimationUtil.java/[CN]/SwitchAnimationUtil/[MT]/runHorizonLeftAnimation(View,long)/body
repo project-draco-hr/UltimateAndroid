@@ -1,0 +1,11 @@
+{
+  view.setAlpha(0);
+  ObjectAnimator objectAnimator=ObjectAnimator.ofFloat(view,"translationX",-ViewUtils.getScreenWidth(),0);
+  objectAnimator.setInterpolator(new LinearInterpolator());
+  ObjectAnimator objectAnimatorAlpha=ObjectAnimator.ofFloat(view,"alpha",0f,1f);
+  AnimatorSet set=new AnimatorSet();
+  set.setDuration(mDuration);
+  set.setStartDelay(delay);
+  set.playTogether(objectAnimator,objectAnimatorAlpha);
+  set.start();
+}

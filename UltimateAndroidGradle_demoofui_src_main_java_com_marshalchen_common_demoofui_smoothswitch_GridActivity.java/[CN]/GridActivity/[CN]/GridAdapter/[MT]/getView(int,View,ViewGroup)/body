@@ -1,0 +1,13 @@
+{
+  if (convertView == null) {
+    ImageView mImage=new ImageView(GridActivity.this);
+    AbsListView.LayoutParams params=new AbsListView.LayoutParams(440 / 4,440 / 4);
+    mImage.setLayoutParams(params);
+    mImage.setScaleType(ScaleType.CENTER_CROP);
+    mImage.setPadding(5,5,5,5);
+    convertView=mImage;
+    convertView.setAlpha(0);
+  }
+  ((ImageView)convertView).setImageResource(res[position % res.length]);
+  return convertView;
+}

@@ -1,0 +1,19 @@
+{
+  int w=getMeasuredWidth();
+  int h=getMeasuredHeight();
+  if (w > 0 && h > 0) {
+    if (mSafeZone == null) {
+      mSafeZone=new Rect();
+    }
+    int left, right, top, bottom;
+    left=getPaddingLeft() + (mConf.getThumbMarginLeft() > 0 ? mConf.getThumbMarginLeft() : 0);
+    right=w - getPaddingRight() - (mConf.getThumbMarginRight() > 0 ? mConf.getThumbMarginRight() : 0) + (-mConf.getShrinkX());
+    top=getPaddingTop() + (mConf.getThumbMarginTop() > 0 ? mConf.getThumbMarginTop() : 0);
+    bottom=h - getPaddingBottom() - (mConf.getThumbMarginBottom() > 0 ? mConf.getThumbMarginBottom() : 0) + (-mConf.getShrinkY());
+    mSafeZone.set(left,top,right,bottom);
+    mCenterPos=mSafeZone.left + (mSafeZone.right - mSafeZone.left - mConf.getThumbWidth()) / 2;
+  }
+ else {
+    mSafeZone=null;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  isSpinning=false;
+  mProgress=0.0f;
+  mTargetProgress=0.0f;
+  invalidate();
+}

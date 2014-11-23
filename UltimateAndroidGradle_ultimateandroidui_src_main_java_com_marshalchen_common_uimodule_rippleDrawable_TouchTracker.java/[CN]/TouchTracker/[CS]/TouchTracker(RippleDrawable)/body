@@ -1,0 +1,4 @@
+{
+  mHotspotDrawable=hotspot;
+  mTouchSlop=-1;
+}

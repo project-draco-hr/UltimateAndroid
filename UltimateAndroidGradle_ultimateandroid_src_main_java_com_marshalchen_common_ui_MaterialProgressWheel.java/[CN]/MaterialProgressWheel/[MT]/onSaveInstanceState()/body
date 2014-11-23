@@ -1,0 +1,14 @@
+{
+  Parcelable superState=super.onSaveInstanceState();
+  WheelSavedState ss=new WheelSavedState(superState);
+  ss.mProgress=this.mProgress;
+  ss.mTargetProgress=this.mTargetProgress;
+  ss.isSpinning=this.isSpinning;
+  ss.spinSpeed=this.spinSpeed;
+  ss.barWidth=this.barWidth;
+  ss.barColor=this.barColor;
+  ss.rimWidth=this.rimWidth;
+  ss.rimColor=this.rimColor;
+  ss.circleRadius=this.circleRadius;
+  return ss;
+}

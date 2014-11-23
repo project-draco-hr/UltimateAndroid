@@ -1,0 +1,4 @@
+{
+  this(color);
+  mContent=content;
+}

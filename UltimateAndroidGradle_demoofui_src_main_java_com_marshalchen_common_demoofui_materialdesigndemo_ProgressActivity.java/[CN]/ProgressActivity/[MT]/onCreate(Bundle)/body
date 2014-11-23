@@ -1,0 +1,16 @@
+{
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_design_activity_progress);
+  int color=getIntent().getIntExtra("BACKGROUND",Color.BLACK);
+  findViewById(R.id.progressBarCircularIndetermininate).setBackgroundColor(color);
+  findViewById(R.id.progressBarIndeterminate).setBackgroundColor(color);
+  findViewById(R.id.progressBarIndeterminateDeterminate).setBackgroundColor(color);
+  findViewById(R.id.progressDeterminate).setBackgroundColor(color);
+  findViewById(R.id.slider).setBackgroundColor(color);
+  findViewById(R.id.sliderNumber).setBackgroundColor(color);
+  progreesBarDetermininate=(ProgressBarDetermininate)findViewById(R.id.progressDeterminate);
+  progressTimer.start();
+  progressBarIndeterminateDeterminate=(ProgressBarIndeterminateDeterminate)findViewById(R.id.progressBarIndeterminateDeterminate);
+  progressTimer2.start();
+}

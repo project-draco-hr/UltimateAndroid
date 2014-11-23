@@ -1,0 +1,11 @@
+{
+  super(context,attrs);
+  setAttributes(attrs);
+  setOnClickListener(new OnClickListener(){
+    @Override public void onClick(    View arg0){
+      if (check)       setChecked(false);
+ else       setChecked(true);
+    }
+  }
+);
+}

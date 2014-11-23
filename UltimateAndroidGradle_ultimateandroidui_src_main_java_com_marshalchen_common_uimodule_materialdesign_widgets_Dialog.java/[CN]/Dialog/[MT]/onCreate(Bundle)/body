@@ -1,0 +1,25 @@
+{
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_design_dialog);
+  this.titleTextView=(TextView)findViewById(R.id.title);
+  setTitle(title);
+  this.messageTextView=(TextView)findViewById(R.id.message);
+  setMessage(message);
+  this.buttonAccept=(ButtonFlat)findViewById(R.id.button_accept);
+  buttonAccept.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      dismiss();
+      if (onAcceptButtonClickListener != null)       onAcceptButtonClickListener.onClick(v);
+    }
+  }
+);
+  this.buttonCancel=(ButtonFlat)findViewById(R.id.button_cancel);
+  buttonCancel.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      dismiss();
+      if (onCancelButtonClickListener != null)       onCancelButtonClickListener.onClick(v);
+    }
+  }
+);
+}

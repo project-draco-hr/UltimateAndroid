@@ -1,0 +1,6 @@
+{
+  int result=0;
+  Resources res=context.getResources();
+  result=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dipValue,res.getDisplayMetrics());
+  return result;
+}

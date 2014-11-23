@@ -1,0 +1,14 @@
+{
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_design_number_indicator_spinner);
+  setCanceledOnTouchOutside(false);
+  RelativeLayout content=(RelativeLayout)this.findViewById(R.id.number_indicator_spinner_content);
+  indicator=new Indicator(this.getContext());
+  content.addView(indicator);
+  numberIndicator=new TextView(getContext());
+  numberIndicator.setTextColor(Color.WHITE);
+  numberIndicator.setGravity(Gravity.CENTER);
+  content.addView(numberIndicator);
+  indicator.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT,RelativeLayout.LayoutParams.FILL_PARENT));
+}

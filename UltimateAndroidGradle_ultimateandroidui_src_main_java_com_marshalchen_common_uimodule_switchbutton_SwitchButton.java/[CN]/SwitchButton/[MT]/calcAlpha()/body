@@ -1,0 +1,12 @@
+{
+  int alpha=255;
+  if (mSafeZone == null || mSafeZone.right == mSafeZone.left) {
+  }
+ else {
+    int backWidth=mSafeZone.right - mConf.getThumbWidth() - mSafeZone.left;
+    if (backWidth > 0) {
+      alpha=(mThumbZone.left - mSafeZone.left) * 255 / backWidth;
+    }
+  }
+  return alpha;
+}

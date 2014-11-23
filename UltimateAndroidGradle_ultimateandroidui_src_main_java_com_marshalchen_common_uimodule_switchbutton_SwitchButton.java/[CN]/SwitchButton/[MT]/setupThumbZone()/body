@@ -1,0 +1,18 @@
+{
+  int w=getMeasuredWidth();
+  int h=getMeasuredHeight();
+  if (w > 0 && h > 0) {
+    if (mThumbZone == null) {
+      mThumbZone=new Rect();
+    }
+    int left, right, top, bottom;
+    left=mIsChecked ? (mSafeZone.right - mConf.getThumbWidth()) : mSafeZone.left;
+    right=left + mConf.getThumbWidth();
+    top=mSafeZone.top;
+    bottom=top + mConf.getThumbHeight();
+    mThumbZone.set(left,top,right,bottom);
+  }
+ else {
+    mThumbZone=null;
+  }
+}

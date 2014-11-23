@@ -1,0 +1,14 @@
+{
+  ObjectAnimator objectAnimator;
+  if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+    objectAnimator=ObjectAnimator.ofFloat(promotedAction,View.TRANSLATION_Y,0f,-px * (promotedActions.size() - position));
+    objectAnimator.setRepeatCount(0);
+    objectAnimator.setDuration(ANIMATION_TIME * (promotedActions.size() - position));
+  }
+ else {
+    objectAnimator=ObjectAnimator.ofFloat(promotedAction,View.TRANSLATION_X,0f,-px * (promotedActions.size() - position));
+    objectAnimator.setRepeatCount(0);
+    objectAnimator.setDuration(ANIMATION_TIME * (promotedActions.size() - position));
+  }
+  return objectAnimator;
+}

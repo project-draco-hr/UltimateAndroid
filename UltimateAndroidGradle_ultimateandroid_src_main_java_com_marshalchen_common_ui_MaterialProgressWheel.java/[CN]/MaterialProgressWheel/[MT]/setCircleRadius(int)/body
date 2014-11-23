@@ -1,0 +1,6 @@
+{
+  this.circleRadius=circleRadius;
+  if (!isSpinning) {
+    invalidate();
+  }
+}

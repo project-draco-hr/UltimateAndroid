@@ -1,0 +1,36 @@
+{
+  super(context,attrs);
+  post(new Runnable(){
+    @Override public void run(){
+      setProgress(60);
+      ViewHelper.setX(progressView,getWidth() + progressView.getWidth() / 2);
+      animation=ObjectAnimator.ofFloat(progressView,"x",-progressView.getWidth() / 2);
+      animation.setDuration(1200);
+      animation.addListener(new AnimatorListener(){
+        int cont=1;
+        int suma=1;
+        int duration=1200;
+        public void onAnimationEnd(        Animator arg0){
+          if (runAnimation) {
+            ViewHelper.setX(progressView,getWidth() + progressView.getWidth() / 2);
+            cont+=suma;
+            animation=ObjectAnimator.ofFloat(progressView,"x",-progressView.getWidth() / 2);
+            animation.setDuration(duration / cont);
+            animation.addListener(this);
+            animation.start();
+            if (cont == 3 || cont == 1)             suma*=-1;
+          }
+        }
+        public void onAnimationStart(        Animator arg0){
+        }
+        public void onAnimationRepeat(        Animator arg0){
+        }
+        public void onAnimationCancel(        Animator arg0){
+        }
+      }
+);
+      animation.start();
+    }
+  }
+);
+}

@@ -1,0 +1,4 @@
+{
+  super.onDraw(canvas);
+  if (pendindProgress != -1)   setProgress(pendindProgress);
+}

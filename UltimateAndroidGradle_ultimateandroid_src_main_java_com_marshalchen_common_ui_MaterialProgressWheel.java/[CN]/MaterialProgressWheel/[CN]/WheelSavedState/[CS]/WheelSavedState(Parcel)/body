@@ -1,0 +1,12 @@
+{
+  super(in);
+  this.mProgress=in.readFloat();
+  this.mTargetProgress=in.readFloat();
+  this.isSpinning=in.readByte() != 0;
+  this.spinSpeed=in.readFloat();
+  this.barWidth=in.readInt();
+  this.barColor=in.readInt();
+  this.rimWidth=in.readInt();
+  this.rimColor=in.readInt();
+  this.circleRadius=in.readInt();
+}

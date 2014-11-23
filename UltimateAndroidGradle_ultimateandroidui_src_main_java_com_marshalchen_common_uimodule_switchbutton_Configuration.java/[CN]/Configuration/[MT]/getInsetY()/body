@@ -1,0 +1,3 @@
+{
+  return getShrinkY() / 2;
+}

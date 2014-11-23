@@ -1,0 +1,8 @@
+{
+  if (mOnDrawable != null) {
+    return mOnDrawable;
+  }
+ else {
+    return getDrawableFromColor(mOnColor);
+  }
+}

@@ -1,0 +1,7 @@
+{
+  if (msg.what == ANI_WHAT) {
+    if (msg.obj != null) {
+      ((Runnable)msg.obj).run();
+    }
+  }
+}

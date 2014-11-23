@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.switch_animation_activity_main);
+  new SwitchAnimationUtil().startAnimation(getWindow().getDecorView(),Constant.mType);
+}

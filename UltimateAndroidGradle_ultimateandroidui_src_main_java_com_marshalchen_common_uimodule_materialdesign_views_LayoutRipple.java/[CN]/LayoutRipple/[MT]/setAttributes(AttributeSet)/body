@@ -1,0 +1,21 @@
+{
+  int bacgroundColor=attrs.getAttributeResourceValue(ANDROIDXML,"background",-1);
+  if (bacgroundColor != -1) {
+    setBackgroundColor(getResources().getColor(bacgroundColor));
+  }
+ else {
+    String background=attrs.getAttributeValue(ANDROIDXML,"background");
+    if (background != null)     setBackgroundColor(Color.parseColor(background));
+ else     setBackgroundColor(this.backgroundColor);
+  }
+  int rippleColor=attrs.getAttributeResourceValue(MATERIALDESIGNXML,"rippleColor",-1);
+  if (rippleColor != -1) {
+    setRippleColor(getResources().getColor(rippleColor));
+  }
+ else {
+    String background=attrs.getAttributeValue(MATERIALDESIGNXML,"rippleColor");
+    if (background != null)     setRippleColor(Color.parseColor(background));
+ else     setRippleColor(makePressColor());
+  }
+  rippleSpeed=attrs.getAttributeFloatValue(MATERIALDESIGNXML,"rippleSpeed",20f);
+}

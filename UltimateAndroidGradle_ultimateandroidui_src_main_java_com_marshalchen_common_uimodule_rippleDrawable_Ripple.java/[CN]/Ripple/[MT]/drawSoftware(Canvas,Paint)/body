@@ -1,0 +1,15 @@
+{
+  boolean hasContent=false;
+  p.setColor(mColorOpaque);
+  final int alpha=(int)(255 * mOpacity + 0.5f);
+  final float radius=lerp(0,mOuterRadius,mTweenRadius);
+  if (alpha > 0 && radius > 0) {
+    final float x=lerp(mClampedStartingX - mBounds.exactCenterX(),mOuterX,mTweenX);
+    final float y=lerp(mClampedStartingY - mBounds.exactCenterY(),mOuterY,mTweenY);
+    p.setAlpha(alpha);
+    p.setStyle(Style.FILL);
+    c.drawCircle(x,y,radius,p);
+    hasContent=true;
+  }
+  return hasContent;
+}

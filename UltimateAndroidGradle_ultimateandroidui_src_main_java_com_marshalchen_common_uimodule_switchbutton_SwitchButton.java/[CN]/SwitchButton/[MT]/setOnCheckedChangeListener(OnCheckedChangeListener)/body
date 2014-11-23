@@ -1,0 +1,6 @@
+{
+  if (onCheckedChangeListener == null) {
+    throw new IllegalArgumentException("onCheckedChangeListener can not be null");
+  }
+  mOnCheckedChangeListener=onCheckedChangeListener;
+}

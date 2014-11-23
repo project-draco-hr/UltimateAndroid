@@ -1,0 +1,18 @@
+{
+  DisplayMetrics metrics=getContext().getResources().getDisplayMetrics();
+  barWidth=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,barWidth,metrics);
+  rimWidth=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,rimWidth,metrics);
+  circleRadius=(int)a.getDimension(R.styleable.MaterialProgressWheel_mpwCircleRadius,circleRadius);
+  fillRadius=a.getBoolean(R.styleable.MaterialProgressWheel_mpwFillRadius,false);
+  barWidth=(int)a.getDimension(R.styleable.MaterialProgressWheel_mpwBarWidth,barWidth);
+  rimWidth=(int)a.getDimension(R.styleable.MaterialProgressWheel_mpwRimWidth,rimWidth);
+  float baseSpinSpeed=a.getFloat(R.styleable.MaterialProgressWheel_mpwSpinSpeed,spinSpeed / 360.0f);
+  spinSpeed=baseSpinSpeed * 360;
+  barSpinCycleTime=a.getInt(R.styleable.MaterialProgressWheel_mpwBarSpinCycleTime,(int)barSpinCycleTime);
+  barColor=a.getColor(R.styleable.MaterialProgressWheel_mpwBarColor,barColor);
+  rimColor=a.getColor(R.styleable.MaterialProgressWheel_mpwRimColor,rimColor);
+  if (a.getBoolean(R.styleable.MaterialProgressWheel_mpwProgressIndeterminate,false)) {
+    spin();
+  }
+  a.recycle();
+}

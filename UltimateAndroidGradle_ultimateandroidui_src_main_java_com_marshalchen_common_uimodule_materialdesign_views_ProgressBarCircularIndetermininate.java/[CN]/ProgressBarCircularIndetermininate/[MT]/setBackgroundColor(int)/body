@@ -1,0 +1,5 @@
+{
+  super.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+  if (isEnabled())   beforeBackground=backgroundColor;
+  this.backgroundColor=color;
+}

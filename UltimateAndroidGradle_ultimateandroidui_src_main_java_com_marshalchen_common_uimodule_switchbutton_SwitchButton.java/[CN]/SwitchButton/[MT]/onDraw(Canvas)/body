@@ -1,0 +1,28 @@
+{
+  super.onDraw(canvas);
+  canvas.getClipBounds(mBounds);
+  if (mBounds != null && mConf.needShrink()) {
+    mBounds.inset(mConf.getInsetX(),mConf.getInsetY());
+    canvas.clipRect(mBounds,Region.Op.REPLACE);
+    canvas.translate(mConf.getInsetBounds().left,mConf.getInsetBounds().top);
+  }
+  boolean useGeneralDisableEffect=!isEnabled() && this.notStatableDrawable();
+  if (useGeneralDisableEffect) {
+    canvas.saveLayerAlpha(mSaveLayerZone,255 / 2,Canvas.MATRIX_SAVE_FLAG | Canvas.CLIP_SAVE_FLAG | Canvas.HAS_ALPHA_LAYER_SAVE_FLAG| Canvas.FULL_COLOR_LAYER_SAVE_FLAG| Canvas.CLIP_TO_LAYER_SAVE_FLAG);
+  }
+  mConf.getOffDrawable().draw(canvas);
+  mConf.getOnDrawable().setAlpha(calcAlpha());
+  mConf.getOnDrawable().draw(canvas);
+  mConf.getThumbDrawable().draw(canvas);
+  if (useGeneralDisableEffect) {
+    canvas.restore();
+  }
+  if (SHOW_RECT) {
+    mRectPaint.setColor(Color.parseColor("#AA0000"));
+    canvas.drawRect(mBackZone,mRectPaint);
+    mRectPaint.setColor(Color.parseColor("#00FF00"));
+    canvas.drawRect(mSafeZone,mRectPaint);
+    mRectPaint.setColor(Color.parseColor("#0000FF"));
+    canvas.drawRect(mThumbZone,mRectPaint);
+  }
+}

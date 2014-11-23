@@ -1,0 +1,4 @@
+{
+  this.onAcceptButtonClickListener=onAcceptButtonClickListener;
+  if (buttonAccept != null)   buttonAccept.setOnClickListener(onAcceptButtonClickListener);
+}

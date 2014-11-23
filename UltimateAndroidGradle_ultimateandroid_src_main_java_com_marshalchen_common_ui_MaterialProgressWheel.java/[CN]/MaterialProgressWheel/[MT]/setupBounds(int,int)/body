@@ -1,0 +1,16 @@
+{
+  int paddingTop=getPaddingTop();
+  int paddingBottom=getPaddingBottom();
+  int paddingLeft=getPaddingLeft();
+  int paddingRight=getPaddingRight();
+  if (!fillRadius) {
+    int minValue=Math.min(layout_width - paddingLeft - paddingRight,layout_height - paddingBottom - paddingTop);
+    int circleDiameter=Math.min(minValue,circleRadius * 2 - barWidth * 2);
+    int xOffset=(layout_width - paddingLeft - paddingRight- circleDiameter) / 2 + paddingLeft;
+    int yOffset=(layout_height - paddingTop - paddingBottom- circleDiameter) / 2 + paddingTop;
+    circleBounds=new RectF(xOffset + barWidth,yOffset + barWidth,xOffset + circleDiameter - barWidth,yOffset + circleDiameter - barWidth);
+  }
+ else {
+    circleBounds=new RectF(paddingLeft + barWidth,paddingTop + barWidth,layout_width - paddingRight - barWidth,layout_height - paddingBottom - barWidth);
+  }
+}

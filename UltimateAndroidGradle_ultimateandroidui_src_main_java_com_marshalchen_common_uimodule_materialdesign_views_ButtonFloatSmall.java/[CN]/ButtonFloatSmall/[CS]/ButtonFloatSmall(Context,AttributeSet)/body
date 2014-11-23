@@ -1,0 +1,9 @@
+{
+  super(context,attrs);
+  sizeRadius=20;
+  sizeIcon=20;
+  setDefaultProperties();
+  LayoutParams params=new LayoutParams(Utils.dpToPx(sizeIcon,getResources()),Utils.dpToPx(sizeIcon,getResources()));
+  params.addRule(RelativeLayout.CENTER_IN_PARENT,RelativeLayout.TRUE);
+  icon.setLayoutParams(params);
+}

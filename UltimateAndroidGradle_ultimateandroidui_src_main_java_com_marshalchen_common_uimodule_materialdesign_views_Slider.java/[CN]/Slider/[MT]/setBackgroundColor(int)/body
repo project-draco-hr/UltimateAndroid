@@ -1,0 +1,4 @@
+{
+  backgroundColor=color;
+  if (isEnabled())   beforeBackground=backgroundColor;
+}

@@ -1,0 +1,3 @@
+{
+  mNumberView.setText(String.valueOf(number.intValue()));
+}

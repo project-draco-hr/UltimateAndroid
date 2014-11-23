@@ -1,0 +1,10 @@
+{
+  if (mIsChecked == checked) {
+    return;
+  }
+  mIsChecked=checked;
+  refreshDrawableState();
+  if (mOnCheckedChangeListener != null) {
+    mOnCheckedChangeListener.onCheckedChanged(this,mIsChecked);
+  }
+}

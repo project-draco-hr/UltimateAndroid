@@ -1,0 +1,5 @@
+{
+  super(activity,android.R.style.Theme_Translucent);
+  this.activity=activity;
+  this.text=text;
+}

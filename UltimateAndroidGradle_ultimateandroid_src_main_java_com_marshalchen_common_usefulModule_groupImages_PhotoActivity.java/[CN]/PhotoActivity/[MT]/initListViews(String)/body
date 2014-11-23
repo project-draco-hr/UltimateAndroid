@@ -1,8 +1,0 @@
-{
-  if (listViews == null)   listViews=new ArrayList<View>();
-  ImageView img=new ImageView(this);
-  img.setBackgroundColor(0xff000000);
-  ImageLoader.getInstance().displayImage("file://" + drrPath,img);
-  img.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT));
-  listViews.add(img);
-}

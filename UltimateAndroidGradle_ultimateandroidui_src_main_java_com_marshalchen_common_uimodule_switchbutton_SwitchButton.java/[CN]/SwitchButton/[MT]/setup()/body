@@ -1,0 +1,9 @@
+{
+  setupBackZone();
+  setupSafeZone();
+  setupThumbZone();
+  setupDrawableBounds();
+  if (this.getMeasuredWidth() > 0 && this.getMeasuredHeight() > 0) {
+    mSaveLayerZone=new RectF(0,0,this.getMeasuredWidth(),this.getMeasuredHeight());
+  }
+}

@@ -1,0 +1,4 @@
+{
+  mOuterOpacity=a;
+  invalidateSelf();
+}

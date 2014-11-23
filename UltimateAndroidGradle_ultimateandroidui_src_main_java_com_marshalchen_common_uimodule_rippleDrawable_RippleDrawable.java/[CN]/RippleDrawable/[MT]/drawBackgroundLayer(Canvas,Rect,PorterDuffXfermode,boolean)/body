@@ -1,0 +1,13 @@
+{
+  int saveCount=-1;
+  if (mBackground != null && mBackground.shouldDraw()) {
+    if (drawMask || mode != SRC_OVER) {
+    }
+    final float x=mHotspotBounds.exactCenterX();
+    final float y=mHotspotBounds.exactCenterY();
+    canvas.translate(x,y);
+    mBackground.draw(canvas,getRipplePaint());
+    canvas.translate(-x,-y);
+  }
+  return saveCount;
+}

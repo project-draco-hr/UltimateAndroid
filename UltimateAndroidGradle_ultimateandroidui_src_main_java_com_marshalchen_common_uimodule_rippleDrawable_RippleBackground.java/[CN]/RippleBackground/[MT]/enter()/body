@@ -1,0 +1,10 @@
+{
+  cancel();
+  final int outerDuration=(int)(1000 * 1.0f / WAVE_OUTER_OPACITY_ENTER_VELOCITY);
+  final ObjectAnimator outer=ObjectAnimator.ofFloat(this,"outerOpacity",0,1);
+  outer.setAutoCancel(true);
+  outer.setDuration(outerDuration);
+  outer.setInterpolator(LINEAR_INTERPOLATOR);
+  mAnimOuterOpacity=outer;
+  outer.start();
+}

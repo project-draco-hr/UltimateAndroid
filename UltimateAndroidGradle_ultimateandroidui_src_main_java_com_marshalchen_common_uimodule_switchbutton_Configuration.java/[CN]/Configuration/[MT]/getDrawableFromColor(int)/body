@@ -1,0 +1,6 @@
+{
+  GradientDrawable tempDrawable=new GradientDrawable();
+  tempDrawable.setCornerRadius(this.getRadius());
+  tempDrawable.setColor(color);
+  return tempDrawable;
+}

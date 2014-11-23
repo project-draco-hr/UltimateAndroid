@@ -1,0 +1,6 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  setupBounds(w,h);
+  setupPaints();
+  invalidate();
+}

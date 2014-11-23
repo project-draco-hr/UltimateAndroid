@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.switch_animation_activity_grid);
+  mGrid=(GridView)findViewById(R.id.grid);
+  mGrid.setAdapter(new GridAdapter());
+}

@@ -1,0 +1,15 @@
+{
+  if (Build.VERSION.SDK_INT > 11) {
+    super.jumpToCurrentState();
+  }
+  boolean needsDraw;
+  if (mRipple != null) {
+    mRipple.jump();
+  }
+  if (mBackground != null) {
+    mBackground.jump();
+  }
+  needsDraw=cancelExitingRipples();
+  mNeedsDraw=needsDraw;
+  invalidateSelf();
+}

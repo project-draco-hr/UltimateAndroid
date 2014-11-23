@@ -1,0 +1,3 @@
+{
+  this.spinSpeed=spinSpeed * 360.0f;
+}

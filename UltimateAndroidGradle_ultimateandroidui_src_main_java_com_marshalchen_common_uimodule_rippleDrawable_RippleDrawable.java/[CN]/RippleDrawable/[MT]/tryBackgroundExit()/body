@@ -1,0 +1,5 @@
+{
+  if (mBackground != null) {
+    mBackground.exit();
+  }
+}

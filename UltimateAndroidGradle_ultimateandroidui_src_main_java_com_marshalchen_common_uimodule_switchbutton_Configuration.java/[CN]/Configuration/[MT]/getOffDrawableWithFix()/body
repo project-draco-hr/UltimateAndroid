@@ -1,0 +1,8 @@
+{
+  if (mOffDrawable != null) {
+    return mOffDrawable;
+  }
+ else {
+    return getDrawableFromColor(mOffColor);
+  }
+}

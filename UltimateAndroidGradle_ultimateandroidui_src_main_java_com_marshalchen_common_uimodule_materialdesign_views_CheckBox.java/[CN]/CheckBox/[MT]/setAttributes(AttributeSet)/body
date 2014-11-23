@@ -1,0 +1,29 @@
+{
+  setBackgroundResource(R.drawable.material_design_background_checkbox);
+  setMinimumHeight(Utils.dpToPx(48,getResources()));
+  setMinimumWidth(Utils.dpToPx(48,getResources()));
+  int bacgroundColor=attrs.getAttributeResourceValue(ANDROIDXML,"background",-1);
+  if (bacgroundColor != -1) {
+    setBackgroundColor(getResources().getColor(bacgroundColor));
+  }
+ else {
+    String background=attrs.getAttributeValue(ANDROIDXML,"background");
+    if (background != null)     setBackgroundColor(Color.parseColor(background));
+  }
+  boolean check=attrs.getAttributeBooleanValue(MATERIALDESIGNXML,"check",false);
+  if (check) {
+    post(new Runnable(){
+      @Override public void run(){
+        setChecked(true);
+        setPressed(false);
+        changeBackgroundColor(getResources().getColor(android.R.color.transparent));
+      }
+    }
+);
+  }
+  checkView=new Check(getContext());
+  RelativeLayout.LayoutParams params=new LayoutParams(Utils.dpToPx(20,getResources()),Utils.dpToPx(20,getResources()));
+  params.addRule(RelativeLayout.CENTER_IN_PARENT,RelativeLayout.TRUE);
+  checkView.setLayoutParams(params);
+  addView(checkView);
+}

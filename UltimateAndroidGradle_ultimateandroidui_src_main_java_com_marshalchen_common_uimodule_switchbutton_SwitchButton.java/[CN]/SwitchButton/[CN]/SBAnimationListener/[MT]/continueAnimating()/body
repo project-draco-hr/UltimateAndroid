@@ -1,0 +1,3 @@
+{
+  return mThumbZone.right < mSafeZone.right && mThumbZone.left > mSafeZone.left;
+}

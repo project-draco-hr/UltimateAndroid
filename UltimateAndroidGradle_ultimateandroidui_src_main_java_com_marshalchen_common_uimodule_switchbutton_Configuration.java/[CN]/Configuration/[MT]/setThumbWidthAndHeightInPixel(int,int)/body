@@ -1,0 +1,8 @@
+{
+  if (width > 0) {
+    mThumbWidth=width;
+  }
+  if (height > 0) {
+    mThumbHeight=height;
+  }
+}

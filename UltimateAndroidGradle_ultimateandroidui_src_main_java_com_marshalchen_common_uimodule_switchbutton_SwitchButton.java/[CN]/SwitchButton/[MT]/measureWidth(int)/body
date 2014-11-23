@@ -1,0 +1,21 @@
+{
+  int measuredWidth=0;
+  int specMode=MeasureSpec.getMode(measureSpec);
+  int specSize=MeasureSpec.getSize(measureSpec);
+  int minWidth=(int)(mConf.getThumbWidth() * mConf.getMeasureFactor() + getPaddingLeft() + getPaddingRight());
+  int innerMarginWidth=mConf.getThumbMarginLeft() + mConf.getThumbMarginRight();
+  if (innerMarginWidth > 0) {
+    minWidth+=innerMarginWidth;
+  }
+  if (specMode == MeasureSpec.EXACTLY) {
+    measuredWidth=Math.max(specSize,minWidth);
+  }
+ else {
+    measuredWidth=minWidth;
+    if (specMode == MeasureSpec.AT_MOST) {
+      measuredWidth=Math.min(specSize,minWidth);
+    }
+  }
+  measuredWidth+=(mConf.getInsetBounds().left + mConf.getInsetBounds().right);
+  return measuredWidth;
+}

@@ -1,0 +1,4 @@
+{
+  this.message=message;
+  messageTextView.setText(message);
+}

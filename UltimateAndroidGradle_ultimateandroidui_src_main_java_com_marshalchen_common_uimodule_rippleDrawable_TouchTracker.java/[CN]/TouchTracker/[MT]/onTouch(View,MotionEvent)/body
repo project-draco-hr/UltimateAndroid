@@ -1,0 +1,76 @@
+{
+  final float x=event.getX();
+  final float y=event.getY();
+  if (v.isClickable() || v.isLongClickable()) {
+switch (event.getAction()) {
+case MotionEvent.ACTION_UP:
+      if (mPrePressed || v.isPressed()) {
+        boolean focusTaken=false;
+        if (v.isFocusable() && v.isFocusableInTouchMode() && !v.isFocused()) {
+          focusTaken=v.requestFocus();
+        }
+        if (mPrePressed) {
+          setPressed(v,true,x,y);
+        }
+        if (!mHasPerformedLongPress) {
+          removeLongPressCallback(v);
+          if (!focusTaken) {
+            if (mPerformClick == null) {
+              mPerformClick=new PerformClick(v);
+            }
+            if (!v.post(mPerformClick)) {
+              v.performClick();
+            }
+          }
+        }
+        if (mUnsetPressedState == null) {
+          mUnsetPressedState=new UnsetPressedState(v);
+        }
+        if (mPrePressed) {
+          v.postDelayed(mUnsetPressedState,ViewConfiguration.getPressedStateDuration());
+        }
+ else         if (!v.post(mUnsetPressedState)) {
+          mUnsetPressedState.run();
+        }
+        removeTapCallback(v);
+      }
+    break;
+case MotionEvent.ACTION_DOWN:
+  mHasPerformedLongPress=false;
+if (mInsideScrollContainer) {
+  mPrePressed=true;
+  if (mPendingCheckForTap == null) {
+    mPendingCheckForTap=new CheckForTap(v);
+  }
+  mPendingCheckForTap.x=event.getX();
+  mPendingCheckForTap.y=event.getY();
+  v.postDelayed(mPendingCheckForTap,ViewConfiguration.getTapTimeout());
+}
+ else {
+  setPressed(v,true,x,y);
+  checkForLongClick(v,0);
+}
+break;
+case MotionEvent.ACTION_MOVE:
+mHotspotDrawable.setHotspot(x,y);
+if (mTouchSlop == -1) {
+mTouchSlop=ViewConfiguration.get(v.getContext()).getScaledTouchSlop();
+}
+if (!pointInView(v,x,y,mTouchSlop)) {
+removeTapCallback(v);
+if (v.isPressed()) {
+removeLongPressCallback(v);
+v.setPressed(false);
+}
+}
+break;
+case MotionEvent.ACTION_CANCEL:
+v.setPressed(false);
+removeTapCallback(v);
+removeLongPressCallback(v);
+break;
+}
+return true;
+}
+return false;
+}

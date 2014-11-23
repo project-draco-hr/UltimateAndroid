@@ -1,0 +1,19 @@
+{
+  int id=v.getId();
+switch (id) {
+case R.id.toggle_ani:
+    mToggleSb.toggle();
+  break;
+case R.id.toggle_not_ani:
+mToggleSb.toggle(false);
+break;
+case R.id.checked_ani:
+mCheckedSb.slideToChecked(!mCheckedSb.isChecked());
+break;
+case R.id.checked_not_ani:
+mCheckedSb.setChecked(!mCheckedSb.isChecked());
+break;
+default :
+break;
+}
+}

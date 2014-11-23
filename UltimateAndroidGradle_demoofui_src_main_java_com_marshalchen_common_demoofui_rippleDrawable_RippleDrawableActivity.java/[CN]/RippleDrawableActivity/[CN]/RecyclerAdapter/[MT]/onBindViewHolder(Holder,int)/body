@@ -1,0 +1,4 @@
+{
+  holder.setText(mItems.get(i));
+  holder.bindBackground();
+}

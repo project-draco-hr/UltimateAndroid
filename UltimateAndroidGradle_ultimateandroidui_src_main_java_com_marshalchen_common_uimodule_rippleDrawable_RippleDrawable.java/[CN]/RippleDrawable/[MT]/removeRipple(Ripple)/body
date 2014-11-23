@@ -1,0 +1,11 @@
+{
+  final Ripple[] ripples=mExitingRipples;
+  final int count=mExitingRipplesCount;
+  final int index=getRippleIndex(ripple);
+  if (index >= 0) {
+    System.arraycopy(ripples,index + 1,ripples,index,count - (index + 1));
+    ripples[count - 1]=null;
+    mExitingRipplesCount--;
+    invalidateSelf();
+  }
+}

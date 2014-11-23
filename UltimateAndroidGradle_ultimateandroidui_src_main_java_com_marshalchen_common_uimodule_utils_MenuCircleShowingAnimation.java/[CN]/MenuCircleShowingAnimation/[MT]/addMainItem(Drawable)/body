@@ -1,0 +1,20 @@
+{
+  ImageButton button=(ImageButton)LayoutInflater.from(context).inflate(R.layout.menu_animation_main_promoted_action_button,frameLayout,false);
+  button.setImageDrawable(drawable);
+  button.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View view){
+      if (isMenuOpened) {
+        closePromotedActions().start();
+        isMenuOpened=false;
+      }
+ else {
+        isMenuOpened=true;
+        openPromotedActions().start();
+      }
+    }
+  }
+);
+  frameLayout.addView(button);
+  mainImageButton=button;
+  return button;
+}

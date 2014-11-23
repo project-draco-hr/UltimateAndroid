@@ -1,0 +1,18 @@
+{
+  if (getWidth() == 0) {
+    pendindProgress=progress;
+  }
+ else {
+    this.progress=progress;
+    if (progress > max)     progress=max;
+    if (progress < min)     progress=min;
+    int totalWidth=max - min;
+    double progressPercent=(double)progress / (double)totalWidth;
+    int progressWidth=(int)(getWidth() * progressPercent);
+    LayoutParams params=(LayoutParams)progressView.getLayoutParams();
+    params.width=progressWidth;
+    params.height=getHeight();
+    progressView.setLayoutParams(params);
+    pendindProgress=-1;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  setInsetLeft(left);
+  setInsetTop(top);
+  setInsetRight(right);
+  setInsetBottom(bottom);
+}

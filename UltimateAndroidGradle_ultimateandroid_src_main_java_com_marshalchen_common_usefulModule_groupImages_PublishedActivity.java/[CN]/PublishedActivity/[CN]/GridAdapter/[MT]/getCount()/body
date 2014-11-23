@@ -1,3 +1,0 @@
-{
-  return (Bimp.drr.size() + 1);
-}

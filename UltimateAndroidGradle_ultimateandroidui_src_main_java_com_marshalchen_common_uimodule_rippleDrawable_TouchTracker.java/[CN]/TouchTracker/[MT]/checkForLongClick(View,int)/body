@@ -1,0 +1,9 @@
+{
+  if (target.isLongClickable()) {
+    mHasPerformedLongPress=false;
+    if (mPendingCheckForLongPress == null) {
+      mPendingCheckForLongPress=new CheckForLongPress(target);
+    }
+    target.postDelayed(mPendingCheckForLongPress,ViewConfiguration.getLongPressTimeout() - delayOffset);
+  }
+}

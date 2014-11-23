@@ -1,0 +1,11 @@
+{
+  if (mRippleActive != active) {
+    mRippleActive=active;
+    if (active) {
+      tryRippleEnter();
+    }
+ else {
+      tryRippleExit();
+    }
+  }
+}

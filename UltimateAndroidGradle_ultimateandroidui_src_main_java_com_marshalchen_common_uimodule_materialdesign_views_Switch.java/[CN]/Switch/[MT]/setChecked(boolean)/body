@@ -1,0 +1,4 @@
+{
+  this.check=check;
+  ball.animateCheck();
+}

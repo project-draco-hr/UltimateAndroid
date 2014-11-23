@@ -1,0 +1,19 @@
+{
+  if (isSpinning) {
+    mProgress=0.0f;
+    isSpinning=false;
+  }
+  if (progress > 1.0f) {
+    progress-=1.0f;
+  }
+ else   if (progress < 0) {
+    progress=0;
+  }
+  if (progress == mTargetProgress) {
+    return;
+  }
+  mTargetProgress=Math.min(progress * 360.0f,360.0f);
+  mProgress=mTargetProgress;
+  lastTimeAnimated=SystemClock.uptimeMillis();
+  invalidate();
+}

@@ -1,0 +1,6 @@
+{
+  if (offDrawable == null) {
+    throw new IllegalArgumentException("off drawable can not be null");
+  }
+  mOffDrawable=offDrawable;
+}

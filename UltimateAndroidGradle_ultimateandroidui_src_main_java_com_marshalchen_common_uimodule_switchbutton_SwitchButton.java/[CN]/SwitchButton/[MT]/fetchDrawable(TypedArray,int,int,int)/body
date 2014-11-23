@@ -1,0 +1,10 @@
+{
+  Drawable tempDrawable=ta.getDrawable(attrId);
+  if (tempDrawable == null) {
+    int tempColor=ta.getColor(alterColorId,defaultColor);
+    tempDrawable=new GradientDrawable();
+    ((GradientDrawable)tempDrawable).setCornerRadius(this.mConf.getRadius());
+    ((GradientDrawable)tempDrawable).setColor(tempColor);
+  }
+  return tempDrawable;
+}

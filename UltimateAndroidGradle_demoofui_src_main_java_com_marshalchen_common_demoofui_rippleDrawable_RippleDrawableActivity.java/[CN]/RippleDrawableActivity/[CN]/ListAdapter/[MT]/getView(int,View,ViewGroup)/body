@@ -1,0 +1,9 @@
+{
+  if (convertView == null) {
+    Holder holder=mAdapter.onCreateViewHolder(parent,position);
+    convertView=holder.itemView;
+    convertView.setTag(holder);
+  }
+  mAdapter.onBindViewHolder((Holder)convertView.getTag(),position);
+  return convertView;
+}

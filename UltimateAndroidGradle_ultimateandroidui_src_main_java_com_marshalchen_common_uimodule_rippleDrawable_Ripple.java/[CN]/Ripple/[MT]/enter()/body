@@ -1,0 +1,25 @@
+{
+  cancel();
+  final int radiusDuration=(int)(1000 * Math.sqrt(mOuterRadius / WAVE_TOUCH_DOWN_ACCELERATION * mDensity) + 0.5);
+  final ObjectAnimator radius=ObjectAnimator.ofFloat(this,"radiusGravity",1);
+  radius.setAutoCancel(true);
+  radius.setDuration(radiusDuration);
+  radius.setInterpolator(LINEAR_INTERPOLATOR);
+  radius.setStartDelay(RIPPLE_ENTER_DELAY);
+  final ObjectAnimator cX=ObjectAnimator.ofFloat(this,"xGravity",1);
+  cX.setAutoCancel(true);
+  cX.setDuration(radiusDuration);
+  cX.setInterpolator(LINEAR_INTERPOLATOR);
+  cX.setStartDelay(RIPPLE_ENTER_DELAY);
+  final ObjectAnimator cY=ObjectAnimator.ofFloat(this,"yGravity",1);
+  cY.setAutoCancel(true);
+  cY.setDuration(radiusDuration);
+  cY.setInterpolator(LINEAR_INTERPOLATOR);
+  cY.setStartDelay(RIPPLE_ENTER_DELAY);
+  mAnimRadius=radius;
+  mAnimX=cX;
+  mAnimY=cY;
+  radius.start();
+  cX.start();
+  cY.start();
+}

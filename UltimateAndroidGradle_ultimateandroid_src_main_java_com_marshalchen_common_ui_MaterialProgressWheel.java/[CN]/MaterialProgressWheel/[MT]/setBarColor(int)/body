@@ -1,0 +1,7 @@
+{
+  this.barColor=barColor;
+  setupPaints();
+  if (!isSpinning) {
+    invalidate();
+  }
+}
