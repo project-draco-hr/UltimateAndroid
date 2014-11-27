@@ -1,0 +1,12 @@
+{
+  tab.setAccentColor(accentColor);
+  tab.setPrimaryColor(primaryColor);
+  tab.setTextColor(textColor);
+  tab.setIconColor(iconColor);
+  tab.setPosition(tabs.size());
+  tabs.add(tab);
+  if (tabs.size() == 4) {
+    scrollable=true;
+    if (isTablet)     throw new RuntimeException("Tablet scrollable tabs are currently not supported");
+  }
+}

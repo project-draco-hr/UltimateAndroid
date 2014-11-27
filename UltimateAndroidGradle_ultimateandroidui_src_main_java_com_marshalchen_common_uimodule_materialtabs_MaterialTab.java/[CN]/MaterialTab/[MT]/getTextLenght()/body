@@ -1,0 +1,7 @@
+{
+  String textString=text.getText().toString();
+  Rect bounds=new Rect();
+  Paint textPaint=text.getPaint();
+  textPaint.getTextBounds(textString,0,textString.length(),bounds);
+  return bounds.width();
+}

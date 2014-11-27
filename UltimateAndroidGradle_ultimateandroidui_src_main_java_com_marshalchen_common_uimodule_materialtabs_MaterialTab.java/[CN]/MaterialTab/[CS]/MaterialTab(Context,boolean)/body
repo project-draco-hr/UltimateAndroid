@@ -1,0 +1,19 @@
+{
+  this.hasIcon=hasIcon;
+  density=ctx.getResources().getDisplayMetrics().density;
+  res=ctx.getResources();
+  if (!hasIcon) {
+    completeView=LayoutInflater.from(ctx).inflate(R.layout.material_tab,null);
+    text=(TextView)completeView.findViewById(R.id.text);
+  }
+ else {
+    completeView=LayoutInflater.from(ctx).inflate(R.layout.material_tab_icon,null);
+    icon=(ImageView)completeView.findViewById(R.id.icon);
+  }
+  background=(RevealColorView)completeView.findViewById(R.id.reveal);
+  selector=(ImageView)completeView.findViewById(R.id.selector);
+  completeView.setOnTouchListener(this);
+  active=false;
+  textColor=Color.WHITE;
+  iconColor=Color.WHITE;
+}

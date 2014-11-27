@@ -1,0 +1,6 @@
+{
+  textColor=color;
+  if (text != null) {
+    text.setTextColor(color);
+  }
+}

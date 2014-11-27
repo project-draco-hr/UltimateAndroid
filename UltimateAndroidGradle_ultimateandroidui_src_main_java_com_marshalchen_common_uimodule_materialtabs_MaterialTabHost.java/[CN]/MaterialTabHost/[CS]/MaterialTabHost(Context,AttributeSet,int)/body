@@ -1,0 +1,33 @@
+{
+  super(context,attrs,defStyleAttr);
+  super.setOverScrollMode(this.OVER_SCROLL_NEVER);
+  layout=new LinearLayout(context);
+  this.addView(layout);
+  Theme theme=context.getTheme();
+  TypedValue typedValue=new TypedValue();
+  theme.resolveAttribute(R.attr.colorPrimary,typedValue,true);
+  primaryColor=typedValue.data;
+  theme.resolveAttribute(R.attr.colorAccent,typedValue,true);
+  accentColor=typedValue.data;
+  iconColor=Color.WHITE;
+  textColor=Color.WHITE;
+  if (attrs != null) {
+    TypedArray a=context.getTheme().obtainStyledAttributes(attrs,R.styleable.MaterialTabHost,0,0);
+    try {
+      hasIcons=a.getBoolean(R.styleable.MaterialTabHost_hasIcons,false);
+    }
+  finally {
+      a.recycle();
+    }
+  }
+ else {
+    hasIcons=false;
+  }
+  this.isInEditMode();
+  density=this.getResources().getDisplayMetrics().density;
+  scrollable=false;
+  isTablet=this.getResources().getBoolean(R.bool.isTablet);
+  tabs=new LinkedList<MaterialTab>();
+  tabsWidth=new LinkedList<Integer>();
+  super.setBackgroundColor(primaryColor);
+}

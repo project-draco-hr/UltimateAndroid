@@ -1,0 +1,3 @@
+{
+  this.background.reveal(lastTouchedPoint.x,lastTouchedPoint.y,primaryColor,0,HIDE_DURATION,null);
+}

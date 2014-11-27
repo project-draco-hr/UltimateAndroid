@@ -1,0 +1,4 @@
+{
+  this.text.setText(text.toString().toUpperCase(Locale.US));
+  return this;
+}

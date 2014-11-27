@@ -1,0 +1,22 @@
+{
+  lastTouchedPoint=new Point();
+  lastTouchedPoint.x=(int)event.getX();
+  lastTouchedPoint.y=(int)event.getY();
+  if (event.getAction() == MotionEvent.ACTION_DOWN) {
+    return true;
+  }
+  if (event.getAction() == MotionEvent.ACTION_UP) {
+    this.background.reveal(lastTouchedPoint.x,lastTouchedPoint.y,Color.argb(0x80,Color.red(accentColor),Color.green(accentColor),Color.blue(accentColor)),0,REVEAL_DURATION,this);
+    if (listener != null) {
+      if (active) {
+        listener.onTabReselected(this);
+      }
+ else {
+        listener.onTabSelected(this);
+      }
+    }
+    if (!active)     this.activateTab();
+    return true;
+  }
+  return false;
+}

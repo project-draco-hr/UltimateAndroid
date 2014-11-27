@@ -1,0 +1,6 @@
+{
+  this.iconColor=color;
+  for (  MaterialTab tab : tabs) {
+    tab.setIconColor(color);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  this.accentColor=color;
+  for (  MaterialTab tab : tabs) {
+    tab.setAccentColor(color);
+  }
+}

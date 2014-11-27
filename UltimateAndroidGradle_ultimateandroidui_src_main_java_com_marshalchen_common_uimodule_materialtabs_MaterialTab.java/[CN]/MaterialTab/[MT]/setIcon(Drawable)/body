@@ -1,0 +1,6 @@
+{
+  iconDrawable=icon;
+  this.icon.setImageDrawable(icon);
+  this.setIconColor(this.iconColor);
+  return this;
+}
