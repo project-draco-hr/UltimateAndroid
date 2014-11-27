@@ -1,0 +1,11 @@
+{
+switch (position) {
+case 0:
+    return res.getDrawable(R.drawable.material_tab_ic_person_black_24dp);
+case 1:
+  return res.getDrawable(R.drawable.material_tab_ic_group_black_24dp);
+case 2:
+return res.getDrawable(R.drawable.material_tab_ic_notifications_off_white_24dp);
+}
+return null;
+}

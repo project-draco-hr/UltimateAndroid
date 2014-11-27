@@ -677,6 +677,18 @@
   map.put("subname","SwitchButtonActivity");
   map.put("class","SwitchButtonActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialTabicons");
+  map.put("detail","try");
+  map.put("subname","MaterialTabwithicons");
+  map.put("class","MaterialTabsWithIconsActivity");
+  enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialTabText");
+  map.put("detail","try");
+  map.put("subname","MaterialTabText");
+  map.put("class","MaterialTabTextActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -1034,6 +1046,12 @@ BasicUtils.sendIntent(getActivity(),MenuCircleShowingAnimationActivity.class);
 break;
 case "SwitchButtonActivity":
 BasicUtils.sendIntent(getActivity(),SwitchButtonActivity.class);
+break;
+case "MaterialTabsWithIconsActivity":
+BasicUtils.sendIntent(getActivity(),MaterialTabsWithIconsActivity.class);
+break;
+case "MaterialTabTextActivity":
+BasicUtils.sendIntent(getActivity(),MaterialTabTextActivity.class);
 break;
 }
 }

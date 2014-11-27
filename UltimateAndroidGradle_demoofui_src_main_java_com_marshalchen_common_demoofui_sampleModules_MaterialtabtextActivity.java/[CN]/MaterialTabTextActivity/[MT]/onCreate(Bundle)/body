@@ -1,0 +1,19 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_tab_text_activity_main);
+  Toolbar toolbar=(Toolbar)this.findViewById(R.id.toolbar);
+  this.setSupportActionBar(toolbar);
+  tabHost=(MaterialTabHost)this.findViewById(R.id.tabHost);
+  pager=(ViewPager)this.findViewById(R.id.pager);
+  adapter=new ViewPagerAdapter(getSupportFragmentManager());
+  pager.setAdapter(adapter);
+  pager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+    @Override public void onPageSelected(    int position){
+      tabHost.setSelectedNavigationItem(position);
+    }
+  }
+);
+  for (int i=0; i < adapter.getCount(); i++) {
+    tabHost.addTab(tabHost.newTab().setText(adapter.getPageTitle(i)).setTabListener(this));
+  }
+}

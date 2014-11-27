@@ -1,0 +1,12 @@
+{
+switch (position) {
+case 0:
+    return "tab 1";
+case 1:
+  return "tab 2";
+case 2:
+return "tab 3";
+default :
+return null;
+}
+}
