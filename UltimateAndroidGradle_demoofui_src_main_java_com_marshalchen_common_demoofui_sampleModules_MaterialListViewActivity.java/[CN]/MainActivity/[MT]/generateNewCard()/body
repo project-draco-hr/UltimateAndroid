@@ -1,0 +1,7 @@
+{
+  Card card=new BasicImageButtonsCard();
+  card.setBitmap(mContext,R.drawable.dog);
+  card.setTitle("I'm new");
+  card.setDescription("I've been generated on runtime!");
+  return card;
+}
