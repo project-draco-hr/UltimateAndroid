@@ -16,7 +16,7 @@ case 1:
 card=new BigImageCard();
 card.setDescription(description);
 card.setTitle(title);
-icon=getResources().getDrawable(R.drawable.photo);
+icon=getResources().getDrawable(R.drawable.test);
 card.setBitmap(icon);
 card.setCanDismiss(false);
 return card;
@@ -24,7 +24,7 @@ case 2:
 card=new BasicImageButtonsCard();
 card.setDescription(description);
 card.setTitle(title);
-icon=getResources().getDrawable(R.drawable.dog);
+icon=getResources().getDrawable(R.drawable.test_back);
 card.setBitmap(icon);
 ((BasicImageButtonsCard)card).setLeftButtonText("LEFT");
 ((BasicImageButtonsCard)card).setRightButtonText("RIGHT");
@@ -82,7 +82,7 @@ default :
 card=new BigImageButtonsCard();
 card.setDescription(description);
 card.setTitle(title);
-icon=getResources().getDrawable(R.drawable.photo);
+icon=getResources().getDrawable(R.drawable.test_back2);
 card.setBitmap(icon);
 ((BigImageButtonsCard)card).setLeftButtonText("ADD CARD");
 ((BigImageButtonsCard)card).setRightButtonText("RIGHT BUTTON");

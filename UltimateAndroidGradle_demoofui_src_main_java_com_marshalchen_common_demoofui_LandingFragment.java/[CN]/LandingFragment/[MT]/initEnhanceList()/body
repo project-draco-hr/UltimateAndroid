@@ -689,6 +689,12 @@
   map.put("subname","MaterialTabText");
   map.put("class","MaterialTabTextActivity");
   enhanceList.add(map);
+  map=new HashMap<>();
+  map.put("name","MaterialList");
+  map.put("detail","try");
+  map.put("subname","MaterialListView");
+  map.put("class","MaterialListViewActivity");
+  enhanceList.add(map);
   enhancedListAdapter=new EnhancedListAdapter(enhanceList);
   landingEnhanceListView.setAdapter(enhancedListAdapter);
   landingEnhanceListView.setDismissCallback(new EnhancedListView.OnDismissCallback(){
@@ -1052,6 +1058,9 @@ BasicUtils.sendIntent(getActivity(),MaterialTabsWithIconsActivity.class);
 break;
 case "MaterialTabTextActivity":
 BasicUtils.sendIntent(getActivity(),MaterialTabTextActivity.class);
+break;
+case "MaterialListViewActivity":
+BasicUtils.sendIntent(getActivity(),MaterialListViewActivity.class);
 break;
 }
 }

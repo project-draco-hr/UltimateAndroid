@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_main);
+  setContentView(R.layout.material_list_activity_main);
   mContext=this;
   mListView=(MaterialListView)findViewById(R.id.material_listview);
   cardsList=new CardList();
