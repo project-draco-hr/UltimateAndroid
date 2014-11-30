@@ -1,0 +1,6 @@
+{
+  TextView text=new TextView(container.getContext());
+  text.setText("Section");
+  text.setGravity(Gravity.CENTER);
+  return text;
+}

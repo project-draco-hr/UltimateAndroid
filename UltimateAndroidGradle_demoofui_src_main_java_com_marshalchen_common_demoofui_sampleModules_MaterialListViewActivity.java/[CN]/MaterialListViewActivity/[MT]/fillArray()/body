@@ -1,0 +1,6 @@
+{
+  for (int i=0; i < 35; i++) {
+    Card card=getRandomCard(i);
+    cardsList.add(card);
+  }
+}

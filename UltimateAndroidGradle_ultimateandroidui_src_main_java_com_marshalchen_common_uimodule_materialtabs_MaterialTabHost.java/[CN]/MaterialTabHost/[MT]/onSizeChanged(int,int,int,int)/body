@@ -1,0 +1,37 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  layout.removeAllViews();
+  if (!tabs.isEmpty()) {
+    if (!scrollable) {
+      int tabWidth=this.getWidth() / tabs.size();
+      LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(tabWidth,LayoutParams.MATCH_PARENT);
+      for (      MaterialTab t : tabs) {
+        layout.addView(t.getView(),params);
+      }
+    }
+ else {
+      for (int i=0; i < tabs.size(); i++) {
+        LinearLayout.LayoutParams params;
+        MaterialTab tab=tabs.get(i);
+        int tabWidth=(int)(tab.getTabMinWidth() + (24 * density));
+        params=new LinearLayout.LayoutParams(tabWidth,LayoutParams.MATCH_PARENT);
+        if (i == 0) {
+          View view=new View(layout.getContext());
+          view.setMinimumWidth((int)(60 * density));
+          layout.addView(view);
+          tabsWidth.add((int)(60 * density));
+        }
+        params=new LinearLayout.LayoutParams(tabWidth,LayoutParams.MATCH_PARENT);
+        layout.addView(tab.getView(),params);
+        tabsWidth.add(tabWidth);
+        if (i == tabs.size() - 1) {
+          View view=new View(layout.getContext());
+          view.setMinimumWidth((int)(60 * density));
+          layout.addView(view);
+          tabsWidth.add((int)(60 * density));
+        }
+      }
+    }
+    this.setSelectedNavigationItem(0);
+  }
+}

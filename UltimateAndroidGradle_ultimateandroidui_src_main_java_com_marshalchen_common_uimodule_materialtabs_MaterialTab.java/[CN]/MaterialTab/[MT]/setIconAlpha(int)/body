@@ -1,0 +1,7 @@
+{
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    this.icon.setImageAlpha(paramInt);
+    return;
+  }
+  this.icon.setColorFilter(Color.argb(paramInt,Color.red(this.iconColor),Color.green(this.iconColor),Color.blue(this.iconColor)));
+}

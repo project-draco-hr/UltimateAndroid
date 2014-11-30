@@ -1,0 +1,3 @@
+{
+  pager.setCurrentItem(tab.getPosition());
+}

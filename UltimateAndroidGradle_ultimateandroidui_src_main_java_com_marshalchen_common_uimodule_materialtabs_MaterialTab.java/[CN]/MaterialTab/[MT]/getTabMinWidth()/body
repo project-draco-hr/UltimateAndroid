@@ -1,0 +1,8 @@
+{
+  if (hasIcon) {
+    return getIconWidth();
+  }
+ else {
+    return getTextLenght();
+  }
+}

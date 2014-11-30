@@ -1,0 +1,6 @@
+{
+  if (text != null)   this.text.setTextColor(textColor);
+  if (icon != null)   setIconAlpha(0xFF);
+  this.selector.setBackgroundColor(accentColor);
+  active=true;
+}

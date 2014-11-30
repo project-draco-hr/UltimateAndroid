@@ -1,0 +1,5 @@
+{
+  this.accentColor=color;
+  this.textColor=color;
+  this.iconColor=color;
+}

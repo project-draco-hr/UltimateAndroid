@@ -1,0 +1,4 @@
+{
+  this.primaryColor=color;
+  background.setBackgroundColor(color);
+}

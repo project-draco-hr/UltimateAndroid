@@ -1,0 +1,6 @@
+{
+  this.primaryColor=color;
+  for (  MaterialTab tab : tabs) {
+    tab.setPrimaryColor(color);
+  }
+}

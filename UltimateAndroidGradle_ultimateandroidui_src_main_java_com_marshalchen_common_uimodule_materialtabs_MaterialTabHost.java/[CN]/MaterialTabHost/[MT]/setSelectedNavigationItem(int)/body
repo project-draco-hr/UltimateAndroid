@@ -1,0 +1,24 @@
+{
+  if (position < 0 || position > tabs.size()) {
+    throw new RuntimeException("Index overflow");
+  }
+ else {
+    for (int i=0; i < tabs.size(); i++) {
+      MaterialTab tab=tabs.get(i);
+      if (i == position && !tab.isSelected()) {
+        tab.activateTab();
+      }
+ else {
+        tabs.get(i).disableTab();
+      }
+    }
+    if (scrollable) {
+      int totalWidth=0;
+      for (int i=0; i < position + 1; i++) {
+        totalWidth+=tabsWidth.get(i);
+      }
+      totalWidth-=(int)(60 * density);
+      this.smoothScrollTo(totalWidth,0);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  if (text != null)   this.text.setTextColor(Color.argb(0x99,Color.red(textColor),Color.green(textColor),Color.blue(textColor)));
+  if (icon != null)   setIconAlpha(0x99);
+  this.selector.setBackgroundColor(res.getColor(android.R.color.transparent));
+  active=false;
+  if (listener != null)   listener.onTabUnselected(this);
+}

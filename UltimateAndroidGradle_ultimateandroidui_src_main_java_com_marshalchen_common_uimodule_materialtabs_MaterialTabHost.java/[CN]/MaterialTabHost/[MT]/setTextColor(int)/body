@@ -1,0 +1,6 @@
+{
+  this.textColor=color;
+  for (  MaterialTab tab : tabs) {
+    tab.setTextColor(color);
+  }
+}

@@ -1,0 +1,15 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_list_activity_main);
+  mContext=this;
+  mListView=(MaterialListView)findViewById(R.id.material_listview);
+  cardsList=new CardList();
+  fillArray();
+  adapter=new MaterialListViewAdapter(this,cardsList);
+  mListView.setMaterialListViewAdapter(adapter);
+  mListView.setOnDismissCallback(new OnDismissCallback(){
+    @Override public void onDismiss(    Card card,    int position){
+    }
+  }
+);
+}

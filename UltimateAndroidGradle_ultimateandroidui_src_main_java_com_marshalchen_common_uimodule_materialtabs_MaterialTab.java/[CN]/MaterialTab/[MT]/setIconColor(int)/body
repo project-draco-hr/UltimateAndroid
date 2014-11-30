@@ -1,0 +1,4 @@
+{
+  this.iconColor=color;
+  if (this.icon != null)   this.icon.setColorFilter(color);
+}
