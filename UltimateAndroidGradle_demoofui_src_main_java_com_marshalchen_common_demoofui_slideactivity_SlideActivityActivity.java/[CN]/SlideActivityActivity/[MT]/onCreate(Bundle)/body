@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.slide_activity_main);
+  ListView listView=(ListView)findViewById(R.id.list_item);
+  listView.setAdapter(new SimpleAdapter(this));
+  listView.setOnItemClickListener(this);
+}

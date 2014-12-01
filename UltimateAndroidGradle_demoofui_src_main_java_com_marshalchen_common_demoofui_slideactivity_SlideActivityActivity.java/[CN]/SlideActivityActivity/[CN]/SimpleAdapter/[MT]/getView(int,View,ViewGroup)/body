@@ -1,0 +1,17 @@
+{
+  TextView textView;
+  if (null == convertView) {
+    textView=new TextView(mContext);
+    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,16.f);
+    textView.setTextColor(0xFF333333);
+    final int paddingLeft=(int)(mDensity * 8 + .5f);
+    final int paddingTop=(int)(mDensity * 20 + .5f);
+    textView.setPadding(paddingLeft,paddingTop,paddingLeft,paddingTop);
+  }
+ else {
+    textView=(TextView)convertView;
+  }
+  final String str=getItem(position);
+  textView.setText(TextUtils.isEmpty(str) ? "SlideItem" : str);
+  return textView;
+}
