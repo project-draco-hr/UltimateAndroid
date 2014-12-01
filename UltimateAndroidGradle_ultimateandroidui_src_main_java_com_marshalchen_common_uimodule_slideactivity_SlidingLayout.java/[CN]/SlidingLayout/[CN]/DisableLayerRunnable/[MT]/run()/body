@@ -1,0 +1,7 @@
+{
+  if (mChildView.getParent() == SlidingLayout.this) {
+    ViewCompat.setLayerType(mChildView,ViewCompat.LAYER_TYPE_NONE,null);
+    invalidateChildRegion(mChildView);
+  }
+  mPostedRunnables.remove(this);
+}

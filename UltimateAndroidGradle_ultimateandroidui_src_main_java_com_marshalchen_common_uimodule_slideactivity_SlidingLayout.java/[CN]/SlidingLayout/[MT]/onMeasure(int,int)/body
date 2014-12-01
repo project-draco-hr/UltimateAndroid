@@ -1,0 +1,165 @@
+{
+  int widthMode=MeasureSpec.getMode(widthMeasureSpec);
+  int widthSize=MeasureSpec.getSize(widthMeasureSpec);
+  int heightMode=MeasureSpec.getMode(heightMeasureSpec);
+  int heightSize=MeasureSpec.getSize(heightMeasureSpec);
+  if (widthMode != MeasureSpec.EXACTLY) {
+    if (isInEditMode()) {
+      if (widthMode == MeasureSpec.AT_MOST) {
+        widthMode=MeasureSpec.EXACTLY;
+      }
+ else       if (widthMode == MeasureSpec.UNSPECIFIED) {
+        widthMode=MeasureSpec.EXACTLY;
+        widthSize=300;
+      }
+    }
+ else {
+      throw new IllegalStateException("Width must have an exact value or MATCH_PARENT");
+    }
+  }
+ else   if (heightMode == MeasureSpec.UNSPECIFIED) {
+    if (isInEditMode()) {
+      if (heightMode == MeasureSpec.UNSPECIFIED) {
+        heightMode=MeasureSpec.AT_MOST;
+        heightSize=300;
+      }
+    }
+ else {
+      throw new IllegalStateException("Height must not be UNSPECIFIED");
+    }
+  }
+  int layoutHeight=0;
+  int maxLayoutHeight=-1;
+switch (heightMode) {
+case MeasureSpec.EXACTLY:
+    layoutHeight=maxLayoutHeight=heightSize - getPaddingTop() - getPaddingBottom();
+  break;
+case MeasureSpec.AT_MOST:
+maxLayoutHeight=heightSize - getPaddingTop() - getPaddingBottom();
+break;
+}
+float weightSum=0;
+boolean canSlide=false;
+int widthRemaining=widthSize - getPaddingLeft() - getPaddingRight();
+final int childCount=getChildCount();
+if (childCount > 2) {
+Log.e(TAG,"onMeasure: More than two child views are not supported.");
+}
+mSlideableView=null;
+for (int i=0; i < childCount; i++) {
+final View child=getChildAt(i);
+final LayoutParams lp=(LayoutParams)child.getLayoutParams();
+if (child.getVisibility() == GONE) {
+lp.dimWhenOffset=false;
+continue;
+}
+if (lp.weight > 0) {
+weightSum+=lp.weight;
+if (lp.width == 0) continue;
+}
+int childWidthSpec;
+final int horizontalMargin=lp.leftMargin + lp.rightMargin;
+if (lp.width == LayoutParams.WRAP_CONTENT) {
+childWidthSpec=MeasureSpec.makeMeasureSpec(widthSize - horizontalMargin,MeasureSpec.AT_MOST);
+}
+ else if (lp.width == LayoutParams.FILL_PARENT) {
+childWidthSpec=MeasureSpec.makeMeasureSpec(widthSize - horizontalMargin,MeasureSpec.EXACTLY);
+}
+ else {
+childWidthSpec=MeasureSpec.makeMeasureSpec(lp.width,MeasureSpec.EXACTLY);
+}
+int childHeightSpec;
+if (lp.height == LayoutParams.WRAP_CONTENT) {
+childHeightSpec=MeasureSpec.makeMeasureSpec(maxLayoutHeight,MeasureSpec.AT_MOST);
+}
+ else if (lp.height == LayoutParams.FILL_PARENT) {
+childHeightSpec=MeasureSpec.makeMeasureSpec(maxLayoutHeight,MeasureSpec.EXACTLY);
+}
+ else {
+childHeightSpec=MeasureSpec.makeMeasureSpec(lp.height,MeasureSpec.EXACTLY);
+}
+child.measure(childWidthSpec,childHeightSpec);
+final int childWidth=child.getMeasuredWidth();
+final int childHeight=child.getMeasuredHeight();
+if (heightMode == MeasureSpec.AT_MOST && childHeight > layoutHeight) {
+layoutHeight=Math.min(childHeight,maxLayoutHeight);
+}
+widthRemaining-=childWidth;
+canSlide|=lp.slideable=widthRemaining < 0;
+if (lp.slideable) {
+mSlideableView=child;
+}
+}
+if (canSlide || weightSum > 0) {
+final int fixedPanelWidthLimit=widthSize;
+for (int i=0; i < childCount; i++) {
+final View child=getChildAt(i);
+if (child.getVisibility() == GONE) {
+continue;
+}
+final LayoutParams lp=(LayoutParams)child.getLayoutParams();
+if (child.getVisibility() == GONE) {
+continue;
+}
+final boolean skippedFirstPass=lp.width == 0 && lp.weight > 0;
+final int measuredWidth=skippedFirstPass ? 0 : child.getMeasuredWidth();
+if (canSlide && child != mSlideableView) {
+if (lp.width < 0 && (measuredWidth > fixedPanelWidthLimit || lp.weight > 0)) {
+  final int childHeightSpec;
+  if (skippedFirstPass) {
+    if (lp.height == LayoutParams.WRAP_CONTENT) {
+      childHeightSpec=MeasureSpec.makeMeasureSpec(maxLayoutHeight,MeasureSpec.AT_MOST);
+    }
+ else     if (lp.height == LayoutParams.FILL_PARENT) {
+      childHeightSpec=MeasureSpec.makeMeasureSpec(maxLayoutHeight,MeasureSpec.EXACTLY);
+    }
+ else {
+      childHeightSpec=MeasureSpec.makeMeasureSpec(lp.height,MeasureSpec.EXACTLY);
+    }
+  }
+ else {
+    childHeightSpec=MeasureSpec.makeMeasureSpec(child.getMeasuredHeight(),MeasureSpec.EXACTLY);
+  }
+  final int childWidthSpec=MeasureSpec.makeMeasureSpec(fixedPanelWidthLimit,MeasureSpec.EXACTLY);
+  child.measure(childWidthSpec,childHeightSpec);
+}
+}
+ else if (lp.weight > 0) {
+int childHeightSpec;
+if (lp.width == 0) {
+  if (lp.height == LayoutParams.WRAP_CONTENT) {
+    childHeightSpec=MeasureSpec.makeMeasureSpec(maxLayoutHeight,MeasureSpec.AT_MOST);
+  }
+ else   if (lp.height == LayoutParams.FILL_PARENT) {
+    childHeightSpec=MeasureSpec.makeMeasureSpec(maxLayoutHeight,MeasureSpec.EXACTLY);
+  }
+ else {
+    childHeightSpec=MeasureSpec.makeMeasureSpec(lp.height,MeasureSpec.EXACTLY);
+  }
+}
+ else {
+  childHeightSpec=MeasureSpec.makeMeasureSpec(child.getMeasuredHeight(),MeasureSpec.EXACTLY);
+}
+if (canSlide) {
+  final int horizontalMargin=lp.leftMargin + lp.rightMargin;
+  final int newWidth=widthSize - horizontalMargin;
+  final int childWidthSpec=MeasureSpec.makeMeasureSpec(newWidth,MeasureSpec.EXACTLY);
+  if (measuredWidth != newWidth) {
+    child.measure(childWidthSpec,childHeightSpec);
+  }
+}
+ else {
+  final int widthToDistribute=Math.max(0,widthRemaining);
+  final int addedWidth=(int)(lp.weight * widthToDistribute / weightSum);
+  final int childWidthSpec=MeasureSpec.makeMeasureSpec(measuredWidth + addedWidth,MeasureSpec.EXACTLY);
+  child.measure(childWidthSpec,childHeightSpec);
+}
+}
+}
+}
+setMeasuredDimension(widthSize,layoutHeight);
+mCanSlide=mCanSlide ? canSlide : mCanSlide;
+if (mDragHelper.getViewDragState() != ViewDragHelper.STATE_IDLE && !canSlide) {
+mDragHelper.abort();
+}
+}

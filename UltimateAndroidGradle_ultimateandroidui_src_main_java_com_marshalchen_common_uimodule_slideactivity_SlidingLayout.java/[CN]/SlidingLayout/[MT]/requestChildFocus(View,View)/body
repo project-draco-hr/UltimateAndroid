@@ -1,0 +1,6 @@
+{
+  super.requestChildFocus(child,focused);
+  if (!isInTouchMode() && !mCanSlide) {
+    mPreservedOpenState=child == mSlideableView;
+  }
+}

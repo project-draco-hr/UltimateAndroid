@@ -1,0 +1,4 @@
+{
+  super.onInitializeAccessibilityEvent(host,event);
+  event.setClassName(SlidingLayout.class.getName());
+}

@@ -1,0 +1,6 @@
+{
+  if (mIsUnableToDrag) {
+    return false;
+  }
+  return ((LayoutParams)child.getLayoutParams()).slideable;
+}

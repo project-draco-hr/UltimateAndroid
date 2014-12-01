@@ -1,0 +1,34 @@
+{
+  if (!mCanSlide) {
+    return super.onTouchEvent(ev);
+  }
+  mDragHelper.processTouchEvent(ev);
+  final int action=ev.getAction();
+  boolean wantTouchEvents=true;
+switch (action & MotionEventCompat.ACTION_MASK) {
+case MotionEvent.ACTION_DOWN:
+{
+      final float x=ev.getX();
+      final float y=ev.getY();
+      mInitialMotionX=x;
+      mInitialMotionY=y;
+      break;
+    }
+case MotionEvent.ACTION_UP:
+{
+    if (isDimmed(mSlideableView)) {
+      final float x=ev.getX();
+      final float y=ev.getY();
+      final float dx=x - mInitialMotionX;
+      final float dy=y - mInitialMotionY;
+      final int slop=mDragHelper.getTouchSlop();
+      if (dx * dx + dy * dy < slop * slop && mDragHelper.isViewUnder(mSlideableView,(int)x,(int)y)) {
+        closePane(mSlideableView,0);
+        break;
+      }
+    }
+    break;
+  }
+}
+return wantTouchEvents;
+}

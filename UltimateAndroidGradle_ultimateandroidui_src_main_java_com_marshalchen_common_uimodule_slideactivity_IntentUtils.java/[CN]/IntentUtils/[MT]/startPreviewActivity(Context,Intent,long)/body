@@ -1,0 +1,44 @@
+{
+  final Handler mainThread=new Handler(Looper.getMainLooper());
+  final Runnable postAction=new Runnable(){
+    @Override public void run(){
+      context.startActivity(intent);
+    }
+  }
+;
+  Runnable action=new Runnable(){
+    @Override public void run(){
+      final View contentView=((Activity)context).findViewById(android.R.id.content);
+      ByteArrayOutputStream baos=null;
+      Bitmap bitmap=null;
+      try {
+        bitmap=Bitmap.createBitmap(contentView.getWidth(),contentView.getHeight(),Bitmap.Config.ARGB_8888);
+        contentView.draw(new Canvas(bitmap));
+        baos=new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,70,baos);
+        intent.putExtra(KEY_PREVIEW_IMAGE,baos.toByteArray());
+      }
+  finally {
+        try {
+          if (null != baos)           baos.close();
+        }
+ catch (        IOException e) {
+          e.printStackTrace();
+        }
+        if (null != bitmap && !bitmap.isRecycled()) {
+          bitmap.recycle();
+          bitmap=null;
+        }
+      }
+      mainThread.post(postAction);
+    }
+  }
+;
+  if (delay > 0) {
+    ScheduledExecutorService worker=Executors.newSingleThreadScheduledExecutor();
+    worker.schedule(action,delay,TimeUnit.MILLISECONDS);
+  }
+ else {
+    action.run();
+  }
+}

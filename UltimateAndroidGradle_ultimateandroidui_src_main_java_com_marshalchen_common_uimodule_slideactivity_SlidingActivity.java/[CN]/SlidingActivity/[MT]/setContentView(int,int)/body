@@ -1,0 +1,4 @@
+{
+  this.titleResId=titleResId;
+  setContentView(layoutResID);
+}

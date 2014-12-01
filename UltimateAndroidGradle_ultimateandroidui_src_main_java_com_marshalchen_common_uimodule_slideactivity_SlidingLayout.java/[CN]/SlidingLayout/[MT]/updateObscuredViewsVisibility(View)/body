@@ -1,0 +1,37 @@
+{
+  final int leftBound=getPaddingLeft();
+  final int rightBound=getWidth() - getPaddingRight();
+  final int topBound=getPaddingTop();
+  final int bottomBound=getHeight() - getPaddingBottom();
+  final int left;
+  final int right;
+  final int top;
+  final int bottom;
+  if (panel != null && viewIsOpaque(panel)) {
+    left=panel.getLeft();
+    right=panel.getRight();
+    top=panel.getTop();
+    bottom=panel.getBottom();
+  }
+ else {
+    left=right=top=bottom=0;
+  }
+  for (int i=0, childCount=getChildCount(); i < childCount; i++) {
+    final View child=getChildAt(i);
+    if (child == panel) {
+      break;
+    }
+    final int clampedChildLeft=Math.max(leftBound,child.getLeft());
+    final int clampedChildTop=Math.max(topBound,child.getTop());
+    final int clampedChildRight=Math.min(rightBound,child.getRight());
+    final int clampedChildBottom=Math.min(bottomBound,child.getBottom());
+    final int vis;
+    if (clampedChildLeft >= left && clampedChildTop >= top && clampedChildRight <= right && clampedChildBottom <= bottom) {
+      vis=INVISIBLE;
+    }
+ else {
+      vis=VISIBLE;
+    }
+    child.setVisibility(vis);
+  }
+}

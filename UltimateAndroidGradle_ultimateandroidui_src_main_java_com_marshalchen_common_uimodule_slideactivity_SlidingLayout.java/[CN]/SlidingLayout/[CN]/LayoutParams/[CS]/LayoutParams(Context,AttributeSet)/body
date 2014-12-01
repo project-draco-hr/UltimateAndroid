@@ -1,0 +1,6 @@
+{
+  super(c,attrs);
+  final TypedArray a=c.obtainStyledAttributes(attrs,ATTRS);
+  this.weight=a.getFloat(0,0);
+  a.recycle();
+}

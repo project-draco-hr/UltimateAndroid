@@ -1,0 +1,3 @@
+{
+  setShadowDrawable(getResources().getDrawable(resId));
+}

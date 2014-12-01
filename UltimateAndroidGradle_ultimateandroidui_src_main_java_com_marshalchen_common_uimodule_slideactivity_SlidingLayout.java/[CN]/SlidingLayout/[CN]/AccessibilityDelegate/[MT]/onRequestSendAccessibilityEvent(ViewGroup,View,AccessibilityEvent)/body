@@ -1,0 +1,6 @@
+{
+  if (!filter(child)) {
+    return super.onRequestSendAccessibilityEvent(host,child,event);
+  }
+  return false;
+}

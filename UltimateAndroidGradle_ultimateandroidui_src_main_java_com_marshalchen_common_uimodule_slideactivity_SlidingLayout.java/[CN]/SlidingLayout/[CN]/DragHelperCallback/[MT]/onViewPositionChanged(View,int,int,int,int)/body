@@ -1,0 +1,4 @@
+{
+  onPanelDragged(left);
+  invalidate();
+}

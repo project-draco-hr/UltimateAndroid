@@ -1,0 +1,3 @@
+{
+  return !(dx < 0 && p.getCurrentItem() <= 0 || 0 < dx && p.getAdapter().getCount() - 1 <= p.getCurrentItem());
+}

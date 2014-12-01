@@ -1,0 +1,3 @@
+{
+  ViewCompat.postInvalidateOnAnimation(parent,child.getLeft(),child.getTop(),child.getRight(),child.getBottom());
+}

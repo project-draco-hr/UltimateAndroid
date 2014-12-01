@@ -1,0 +1,14 @@
+{
+  if (!mCanSlide) {
+    return false;
+  }
+  final LayoutParams lp=(LayoutParams)mSlideableView.getLayoutParams();
+  final int leftBound=getPaddingLeft() + lp.leftMargin;
+  int x=(int)(leftBound + slideOffset * mSlideRange);
+  if (mDragHelper.smoothSlideViewTo(mSlideableView,x,mSlideableView.getTop())) {
+    setAllChildrenVisible();
+    ViewCompat.postInvalidateOnAnimation(this);
+    return true;
+  }
+  return false;
+}

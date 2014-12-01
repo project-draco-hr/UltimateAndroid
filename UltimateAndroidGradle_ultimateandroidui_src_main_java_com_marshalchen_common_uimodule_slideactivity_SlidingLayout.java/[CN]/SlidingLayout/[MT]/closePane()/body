@@ -1,0 +1,3 @@
+{
+  return closePane(mSlideableView,0);
+}

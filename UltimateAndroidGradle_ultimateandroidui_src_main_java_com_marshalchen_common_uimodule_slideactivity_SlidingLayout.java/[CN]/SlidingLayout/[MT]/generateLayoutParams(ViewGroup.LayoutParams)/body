@@ -1,0 +1,3 @@
+{
+  return p instanceof MarginLayoutParams ? new LayoutParams((MarginLayoutParams)p) : new LayoutParams(p);
+}

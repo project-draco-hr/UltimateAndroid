@@ -1,0 +1,11 @@
+{
+  SavedState ss=(SavedState)state;
+  super.onRestoreInstanceState(ss.getSuperState());
+  if (ss.isOpen) {
+    openPane();
+  }
+ else {
+    closePane();
+  }
+  mPreservedOpenState=ss.isOpen;
+}

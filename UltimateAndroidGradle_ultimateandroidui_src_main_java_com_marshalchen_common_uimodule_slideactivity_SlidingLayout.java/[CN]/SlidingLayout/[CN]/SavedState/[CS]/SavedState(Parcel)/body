@@ -1,0 +1,4 @@
+{
+  super(in);
+  isOpen=in.readInt() != 0;
+}

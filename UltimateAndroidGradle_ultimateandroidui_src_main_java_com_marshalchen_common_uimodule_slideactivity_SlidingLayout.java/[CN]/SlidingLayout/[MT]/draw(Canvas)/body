@@ -1,0 +1,14 @@
+{
+  super.draw(c);
+  final View shadowView=getChildCount() > 1 ? getChildAt(1) : null;
+  if (shadowView == null || mShadowDrawable == null) {
+    return;
+  }
+  final int shadowWidth=mShadowDrawable.getIntrinsicWidth();
+  final int right=shadowView.getLeft();
+  final int top=shadowView.getTop();
+  final int bottom=shadowView.getBottom();
+  final int left=right - shadowWidth;
+  mShadowDrawable.setBounds(left,top,right,bottom);
+  mShadowDrawable.draw(c);
+}

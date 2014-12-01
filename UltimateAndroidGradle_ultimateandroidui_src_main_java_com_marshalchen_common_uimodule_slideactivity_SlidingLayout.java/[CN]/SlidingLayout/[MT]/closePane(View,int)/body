@@ -1,0 +1,7 @@
+{
+  if (mFirstLayout || smoothSlideTo(0.f,initialVelocity)) {
+    mPreservedOpenState=false;
+    return true;
+  }
+  return false;
+}

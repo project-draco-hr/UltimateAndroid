@@ -1,0 +1,9 @@
+{
+  super.onDetachedFromWindow();
+  mFirstLayout=true;
+  for (int i=0, count=mPostedRunnables.size(); i < count; i++) {
+    final DisableLayerRunnable dlr=mPostedRunnables.get(i);
+    dlr.run();
+  }
+  mPostedRunnables.clear();
+}

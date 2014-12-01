@@ -1,0 +1,58 @@
+{
+  final int width=r - l;
+  final int paddingLeft=getPaddingLeft();
+  final int paddingRight=getPaddingRight();
+  final int paddingTop=getPaddingTop();
+  final int childCount=getChildCount();
+  int xStart=paddingLeft;
+  int nextXStart=xStart;
+  if (mFirstLayout) {
+    mSlideOffset=mCanSlide && mPreservedOpenState ? 1.f : 0.f;
+  }
+  for (int i=0; i < childCount; i++) {
+    final View child=getChildAt(i);
+    if (child.getVisibility() == GONE) {
+      continue;
+    }
+    final LayoutParams lp=(LayoutParams)child.getLayoutParams();
+    final int childWidth=child.getMeasuredWidth();
+    int offset=0;
+    if (lp.slideable) {
+      final int margin=lp.leftMargin + lp.rightMargin;
+      final int range=Math.min(nextXStart,width - paddingRight) - xStart - margin;
+      mSlideRange=range;
+      lp.dimWhenOffset=xStart + lp.leftMargin + range+ childWidth / 2 > width - paddingRight;
+      xStart+=(int)(range * mSlideOffset) + lp.leftMargin;
+    }
+ else     if (mCanSlide && mParallaxBy != 0) {
+      offset=(int)((1 - mSlideOffset) * mParallaxBy);
+      xStart=nextXStart;
+    }
+ else {
+      xStart=nextXStart;
+    }
+    final int childLeft=xStart - offset;
+    final int childRight=childLeft + childWidth;
+    final int childTop=paddingTop;
+    final int childBottom=childTop + child.getMeasuredHeight();
+    child.layout(childLeft,paddingTop,childRight,childBottom);
+    nextXStart+=child.getWidth();
+  }
+  if (mFirstLayout) {
+    if (mCanSlide) {
+      if (mParallaxBy != 0) {
+        parallaxOtherViews(mSlideOffset);
+      }
+      if (((LayoutParams)mSlideableView.getLayoutParams()).dimWhenOffset) {
+        dimChildView(mSlideableView,mSlideOffset,mSliderFadeColor);
+      }
+    }
+ else {
+      for (int i=0; i < childCount; i++) {
+        dimChildView(getChildAt(i),0,mSliderFadeColor);
+      }
+    }
+    updateObscuredViewsVisibility(mSlideableView);
+  }
+  mFirstLayout=false;
+}

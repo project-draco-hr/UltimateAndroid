@@ -1,0 +1,17 @@
+{
+  final LayoutParams slideLp=(LayoutParams)mSlideableView.getLayoutParams();
+  final boolean dimViews=slideLp.dimWhenOffset && slideLp.leftMargin <= 0;
+  final int childCount=getChildCount();
+  for (int i=0; i < childCount; i++) {
+    final View v=getChildAt(i);
+    if (v == mSlideableView)     continue;
+    final int oldOffset=(int)((1 - mParallaxOffset) * mParallaxBy);
+    mParallaxOffset=slideOffset;
+    final int newOffset=(int)((1 - slideOffset) * mParallaxBy);
+    final int dx=oldOffset - newOffset;
+    v.offsetLeftAndRight(dx);
+    if (dimViews) {
+      dimChildView(v,1 - mParallaxOffset,mCoveredFadeColor);
+    }
+  }
+}
