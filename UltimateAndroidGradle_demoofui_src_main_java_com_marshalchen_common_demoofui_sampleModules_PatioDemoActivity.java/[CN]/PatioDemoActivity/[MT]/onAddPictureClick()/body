@@ -1,0 +1,4 @@
+{
+  Intent intent=mPatio.getAttachPictureIntent();
+  startActivityForResult(intent,REQUEST_CODE_ATTACH_PICTURE);
+}

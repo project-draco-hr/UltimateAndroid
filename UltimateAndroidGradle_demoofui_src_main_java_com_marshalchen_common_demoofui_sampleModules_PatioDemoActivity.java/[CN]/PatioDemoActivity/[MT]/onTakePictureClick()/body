@@ -1,0 +1,4 @@
+{
+  Intent intent=mPatio.getTakePictureIntent();
+  startActivityForResult(intent,REQUEST_CODE_TAKE_PICTURE);
+}
