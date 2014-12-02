@@ -1,0 +1,5 @@
+{
+  Intent attachPictureIntent=new Intent(Intent.ACTION_PICK);
+  attachPictureIntent.setType("image/*");
+  return attachPictureIntent;
+}

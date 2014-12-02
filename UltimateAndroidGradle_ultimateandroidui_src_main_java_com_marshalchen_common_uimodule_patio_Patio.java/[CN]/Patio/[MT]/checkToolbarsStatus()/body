@@ -1,0 +1,11 @@
+{
+  boolean thumbnailsSelected=false;
+  for (  PatioThumbnail patioThumbnail : mPatioThumbnails) {
+    if (patioThumbnail.getThumbnailView().getAlpha() == 0.5f) {
+      thumbnailsSelected=true;
+      break;
+    }
+  }
+  if (thumbnailsSelected)   showRemoveToolbar();
+ else   showAddToolbar();
+}

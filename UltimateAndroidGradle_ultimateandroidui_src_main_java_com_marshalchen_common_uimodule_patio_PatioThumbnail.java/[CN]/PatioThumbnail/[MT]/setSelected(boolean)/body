@@ -1,0 +1,9 @@
+{
+  getThumbnailView().setSelected(selected);
+  if (selected) {
+    getThumbnailView().setAlpha(0.5f);
+  }
+ else {
+    getThumbnailView().setAlpha(1.0f);
+  }
+}

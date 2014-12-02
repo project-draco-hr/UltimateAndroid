@@ -1,0 +1,6 @@
+{
+  Uri uri=data.getData();
+  String filePath=PatioUtils.getRealPathFromURI(mContext,uri);
+  Log.d(TAG,"File Path: " + filePath);
+  addThumbnail(filePath);
+}

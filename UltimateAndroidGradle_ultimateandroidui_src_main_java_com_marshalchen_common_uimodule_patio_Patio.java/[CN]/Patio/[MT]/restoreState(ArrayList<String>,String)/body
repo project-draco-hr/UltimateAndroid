@@ -1,0 +1,6 @@
+{
+  for (  String thumbnailPath : thumbnailsPaths) {
+    addThumbnail(thumbnailPath);
+  }
+  mTakePicturePath=takePicturePath;
+}

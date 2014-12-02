@@ -1,0 +1,11 @@
+{
+  String result=null;
+  Cursor cursor=context.getContentResolver().query(contentURI,null,null,null,null);
+  if (cursor != null) {
+    cursor.moveToFirst();
+    int idx=cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+    result=cursor.getString(idx);
+    cursor.close();
+  }
+  return result;
+}

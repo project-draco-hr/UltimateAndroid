@@ -1,0 +1,5 @@
+{
+  super(in);
+  mThumbnailsPaths=in.readArrayList(String.class.getClassLoader());
+  mTakePictureFilePath=in.readString();
+}

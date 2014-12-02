@@ -1,0 +1,7 @@
+{
+  ArrayList<String> thumbnailsPaths=new ArrayList<String>();
+  for (  PatioThumbnail patioThumbnail : mPatioThumbnails) {
+    thumbnailsPaths.add(patioThumbnail.getThumbnailPath());
+  }
+  return thumbnailsPaths;
+}

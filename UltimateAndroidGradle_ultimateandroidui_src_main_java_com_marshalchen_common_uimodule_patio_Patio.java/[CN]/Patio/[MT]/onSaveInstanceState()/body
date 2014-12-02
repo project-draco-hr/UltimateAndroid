@@ -1,0 +1,7 @@
+{
+  Parcelable superState=super.onSaveInstanceState();
+  SavedState savedState=new SavedState(superState);
+  savedState.setThumbnailsPaths(getThumbnailsPaths());
+  savedState.setTakePicturePath(mTakePicturePath);
+  return savedState;
+}

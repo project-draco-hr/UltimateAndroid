@@ -1,0 +1,7 @@
+{
+  SavedState savedState=(SavedState)state;
+  super.onRestoreInstanceState(savedState.getSuperState());
+  ArrayList<String> thumbnailsPaths=savedState.getThumbnailsPaths();
+  String takePicturePath=savedState.getTakePicturePath();
+  restoreState(thumbnailsPaths,takePicturePath);
+}

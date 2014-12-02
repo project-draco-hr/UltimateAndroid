@@ -1,0 +1,6 @@
+{
+  for (  PatioThumbnail patioThumbnail : mPatioThumbnails) {
+    patioThumbnail.setSelected(false);
+  }
+  checkToolbarsStatus();
+}

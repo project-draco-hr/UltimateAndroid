@@ -1,0 +1,5 @@
+{
+  if (mToolbarRemoveActions.getVisibility() == View.VISIBLE)   return;
+  new SlideOutAnimation(mToolbarAddActions).setDirection(Animation.DIRECTION_UP).animate();
+  new SlideInAnimation(mToolbarRemoveActions).setDirection(Animation.DIRECTION_UP).animate();
+}

@@ -1,0 +1,9 @@
+{
+  int count=mPatioThumbnails.size();
+  Resources res=mContext.getResources();
+  String thumbnailsCountMessage=String.format(mThumbnailsMessageString,count,mMaxPictures);
+  mThumbnailsCount.setText(thumbnailsCountMessage);
+  boolean actionsEnabled=mPatioThumbnails.size() < mMaxPictures;
+  mTakePicture.setEnabled(actionsEnabled);
+  mAttachPicture.setEnabled(actionsEnabled);
+}
