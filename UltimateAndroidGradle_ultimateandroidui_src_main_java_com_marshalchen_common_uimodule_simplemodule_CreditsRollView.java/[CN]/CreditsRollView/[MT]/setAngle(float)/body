@@ -1,0 +1,6 @@
+{
+  if (Math.abs(mAngle - angle) > FLOAT_EPSILON) {
+    mAngle=angle;
+    invalidate();
+  }
+}

@@ -1,0 +1,27 @@
+{
+  mPaddingLeft=getPaddingLeft();
+  mPaddingTop=getPaddingTop();
+  mPaddingRight=getPaddingRight();
+  mPaddingBottom=getPaddingBottom();
+  final CharSequence text=getText();
+  if (TextUtils.isEmpty(text)) {
+    return;
+  }
+  int contentWidth=getWidth() - mPaddingLeft - mPaddingRight;
+  int contentHeight=getHeight() - mPaddingTop - mPaddingBottom;
+  final int saveCnt=canvas.save();
+  canvas.getMatrix(mMatrix);
+  mCamera.save();
+  int cX=contentWidth / 2 + mPaddingLeft;
+  int cY=contentHeight / 2 + mPaddingTop;
+  mCamera.rotateX(mAngle);
+  mCamera.translate(0,0,mDistanceFromText);
+  mCamera.getMatrix(mMatrix);
+  mMatrix.preTranslate(-cX,-cY);
+  mMatrix.postTranslate(cX,cY);
+  mCamera.restore();
+  canvas.concat(mMatrix);
+  canvas.translate(0f,contentHeight - mScrollPosition * (mTextLayout.getHeight() + mEndScrollMult * contentHeight));
+  mTextLayout.draw(canvas);
+  canvas.restoreToCount(saveCnt);
+}
