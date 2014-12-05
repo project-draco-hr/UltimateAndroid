@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.observable_scroll_view_activity_main);
+  ListView listView=(ListView)findViewById(android.R.id.list);
+  listView.setAdapter(new SimpleAdapter(this,getData(),R.layout.observable_scroll_view_list_item_main,new String[]{TAG_CLASS_NAME,TAG_DESCRIPTION},new int[]{R.id.className,R.id.description}));
+  listView.setOnItemClickListener(this);
+}

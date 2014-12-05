@@ -1,0 +1,3 @@
+{
+  return ViewHelper.getTranslationY(mHeaderView) == 0;
+}

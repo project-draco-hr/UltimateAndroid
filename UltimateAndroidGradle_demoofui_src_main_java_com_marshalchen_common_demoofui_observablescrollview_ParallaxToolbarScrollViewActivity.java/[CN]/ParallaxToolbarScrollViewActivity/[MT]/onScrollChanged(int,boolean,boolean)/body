@@ -1,0 +1,6 @@
+{
+  int baseColor=getResources().getColor(R.color.primary);
+  float alpha=1 - (float)Math.max(0,mParallaxImageHeight - scrollY) / mParallaxImageHeight;
+  setBackgroundAlpha(mToolbarView,alpha,baseColor);
+  ViewHelper.setTranslationY(mImageView,scrollY / 2);
+}

@@ -1,0 +1,11 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_parallaxtoolbarscrollview);
+  setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+  mImageView=findViewById(R.id.image);
+  mToolbarView=findViewById(R.id.toolbar);
+  setBackgroundAlpha(mToolbarView,0,getResources().getColor(R.color.primary));
+  ObservableScrollView scrollView=(ObservableScrollView)findViewById(R.id.scroll);
+  scrollView.setScrollViewCallbacks(this);
+  mParallaxImageHeight=getResources().getDimensionPixelSize(R.dimen.parallax_image_height);
+}

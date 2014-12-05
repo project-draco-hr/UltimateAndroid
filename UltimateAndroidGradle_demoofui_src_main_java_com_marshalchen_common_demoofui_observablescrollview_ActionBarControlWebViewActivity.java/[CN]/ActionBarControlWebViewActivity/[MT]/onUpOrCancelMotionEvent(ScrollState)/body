@@ -1,0 +1,13 @@
+{
+  ActionBar ab=getSupportActionBar();
+  if (scrollState == ScrollState.UP) {
+    if (ab.isShowing()) {
+      ab.hide();
+    }
+  }
+ else   if (scrollState == ScrollState.DOWN) {
+    if (!ab.isShowing()) {
+      ab.show();
+    }
+  }
+}

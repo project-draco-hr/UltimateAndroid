@@ -1,0 +1,20 @@
+{
+  int toolbarHeight=mToolbarView.getHeight();
+  final ObservableListView listView=(ObservableListView)view.findViewById(R.id.list);
+  if (listView == null) {
+    return;
+  }
+  if (scrollState == ScrollState.UP) {
+    if (toolbarHeight < listView.getCurrentScrollY()) {
+      hideToolbar();
+    }
+ else     if (listView.getCurrentScrollY() < toolbarHeight) {
+      showToolbar();
+    }
+  }
+ else   if (scrollState == ScrollState.DOWN) {
+    if (toolbarHeight < listView.getCurrentScrollY()) {
+      showToolbar();
+    }
+  }
+}

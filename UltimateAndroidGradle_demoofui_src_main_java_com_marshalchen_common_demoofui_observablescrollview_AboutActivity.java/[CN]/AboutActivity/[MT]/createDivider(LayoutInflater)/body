@@ -1,0 +1,3 @@
+{
+  return inflater.inflate(R.layout.divider,null);
+}

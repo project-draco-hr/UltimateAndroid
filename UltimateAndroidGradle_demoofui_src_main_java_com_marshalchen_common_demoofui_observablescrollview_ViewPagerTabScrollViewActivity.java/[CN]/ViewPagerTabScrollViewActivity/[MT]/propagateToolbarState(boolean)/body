@@ -1,0 +1,24 @@
+{
+  int toolbarHeight=mToolbarView.getHeight();
+  mPagerAdapter.setScrollY(isShown ? 0 : toolbarHeight);
+  for (int i=0; i < mPagerAdapter.getCount(); i++) {
+    if (i == mPager.getCurrentItem()) {
+      continue;
+    }
+    Fragment f=mPagerAdapter.getItemAt(i);
+    if (f == null) {
+      continue;
+    }
+    ObservableScrollView scrollView=(ObservableScrollView)f.getView().findViewById(R.id.scroll);
+    if (isShown) {
+      if (0 < scrollView.getCurrentScrollY()) {
+        scrollView.scrollTo(0,0);
+      }
+    }
+ else {
+      if (scrollView.getCurrentScrollY() < toolbarHeight) {
+        scrollView.scrollTo(0,toolbarHeight);
+      }
+    }
+  }
+}

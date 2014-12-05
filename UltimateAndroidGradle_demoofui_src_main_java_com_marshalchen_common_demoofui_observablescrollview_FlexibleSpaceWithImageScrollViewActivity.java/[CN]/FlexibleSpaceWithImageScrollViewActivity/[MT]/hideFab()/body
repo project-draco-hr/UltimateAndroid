@@ -1,0 +1,7 @@
+{
+  if (mFabIsShown) {
+    ViewPropertyAnimator.animate(mFab).cancel();
+    ViewPropertyAnimator.animate(mFab).scaleX(0).scaleY(0).setDuration(200).start();
+    mFabIsShown=false;
+  }
+}

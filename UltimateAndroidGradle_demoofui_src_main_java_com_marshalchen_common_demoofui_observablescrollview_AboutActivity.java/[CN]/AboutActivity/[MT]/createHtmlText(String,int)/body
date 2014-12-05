@@ -1,0 +1,10 @@
+{
+  TextView text=new TextView(this);
+  text.setAutoLinkMask(Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES);
+  text.setText(Html.fromHtml(s));
+  LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+  int marginPx=(0 < margin) ? (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,margin,getResources().getDisplayMetrics()) : 0;
+  layoutParams.setMargins(0,marginPx,0,marginPx);
+  text.setLayoutParams(layoutParams);
+  return text;
+}

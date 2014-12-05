@@ -1,0 +1,4 @@
+{
+  mCustomTabColorizer=customTabColorizer;
+  invalidate();
+}

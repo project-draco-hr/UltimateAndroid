@@ -1,0 +1,13 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_toolbarcontrolwebview);
+  setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+  mHeaderView=findViewById(R.id.header);
+  ViewCompat.setElevation(mHeaderView,getResources().getDimension(R.dimen.toolbar_elevation));
+  mToolbarView=findViewById(R.id.toolbar);
+  mScrollView=(ObservableScrollView)findViewById(R.id.scroll);
+  mScrollView.setScrollViewCallbacks(mScrollViewScrollCallbacks);
+  ObservableWebView mWebView=(ObservableWebView)findViewById(R.id.web);
+  mWebView.setScrollViewCallbacks(mWebViewScrollCallbacks);
+  mWebView.loadUrl("file:///android_asset/lipsum.html");
+}

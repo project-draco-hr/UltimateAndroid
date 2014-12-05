@@ -1,0 +1,30 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_flexiblespacetoolbarscrollview);
+  setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  mFlexibleSpaceView=findViewById(R.id.flexible_space);
+  mTitleView=(TextView)findViewById(R.id.title);
+  mTitleView.setText(getTitle());
+  setTitle(null);
+  mToolbarView=findViewById(R.id.toolbar);
+  final ObservableScrollView scrollView=(ObservableScrollView)findViewById(R.id.scroll);
+  scrollView.setScrollViewCallbacks(this);
+  mFlexibleSpaceHeight=getResources().getDimensionPixelSize(R.dimen.flexible_space_height);
+  int flexibleSpaceAndToolbarHeight=mFlexibleSpaceHeight + getActionBarSize();
+  findViewById(R.id.body).setPadding(0,flexibleSpaceAndToolbarHeight,0,0);
+  mFlexibleSpaceView.getLayoutParams().height=flexibleSpaceAndToolbarHeight;
+  ViewTreeObserver vto=mTitleView.getViewTreeObserver();
+  vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
+    @Override public void onGlobalLayout(){
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+        mTitleView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+      }
+ else {
+        mTitleView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+      }
+      updateFlexibleSpaceText(scrollView.getCurrentScrollY());
+    }
+  }
+);
+}

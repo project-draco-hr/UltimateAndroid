@@ -1,0 +1,5 @@
+{
+  Map<String,Object> map=(Map<String,Object>)parent.getItemAtPosition(position);
+  Intent intent=(Intent)map.get(TAG_INTENT);
+  startActivity(intent);
+}

@@ -1,0 +1,4 @@
+{
+  mTabViewLayoutId=layoutResId;
+  mTabViewTextViewId=textViewId;
+}

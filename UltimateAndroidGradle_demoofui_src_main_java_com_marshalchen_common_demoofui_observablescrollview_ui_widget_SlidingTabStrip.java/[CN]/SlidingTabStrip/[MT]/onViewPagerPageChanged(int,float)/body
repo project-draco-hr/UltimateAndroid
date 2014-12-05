@@ -1,0 +1,5 @@
+{
+  mSelectedPosition=position;
+  mSelectionOffset=positionOffset;
+  invalidate();
+}

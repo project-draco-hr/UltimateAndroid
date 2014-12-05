@@ -1,0 +1,16 @@
+{
+  ObservableListView listView=(ObservableListView)view.findViewById(R.id.list);
+  if (listView == null) {
+    return;
+  }
+  if (isShown) {
+    if (0 < listView.getCurrentScrollY()) {
+      listView.setSelection(0);
+    }
+  }
+ else {
+    if (listView.getCurrentScrollY() < toolbarHeight) {
+      listView.setSelection(1);
+    }
+  }
+}

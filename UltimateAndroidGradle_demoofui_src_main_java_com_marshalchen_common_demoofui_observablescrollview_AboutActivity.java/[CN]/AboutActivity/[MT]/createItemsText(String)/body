@@ -1,0 +1,11 @@
+{
+  StringBuilder s=new StringBuilder();
+  for (  String name : names) {
+    if (s.length() > 0) {
+      s.append("<br>");
+    }
+    s.append("- ");
+    s.append(name);
+  }
+  return createHtmlText(s.toString(),8);
+}

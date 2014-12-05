@@ -1,0 +1,8 @@
+{
+  float headerTranslationY=ViewHelper.getTranslationY(mHeaderView);
+  if (headerTranslationY != 0) {
+    ViewPropertyAnimator.animate(mHeaderView).cancel();
+    ViewPropertyAnimator.animate(mHeaderView).translationY(0).setDuration(200).start();
+  }
+  propagateToolbarState(true);
+}

@@ -1,0 +1,12 @@
+{
+  LayoutInflater inflater=LayoutInflater.from(this);
+  LinearLayout content=(LinearLayout)findViewById(R.id.licenses);
+  String[] softwareList=getResources().getStringArray(R.array.software_list);
+  String[] licenseList=getResources().getStringArray(R.array.license_list);
+  content.addView(createItemsText(softwareList));
+  for (int i=0; i < softwareList.length; i++) {
+    content.addView(createDivider(inflater));
+    content.addView(createHeader(softwareList[i]));
+    content.addView(createHtmlText(licenseList[i]));
+  }
+}
