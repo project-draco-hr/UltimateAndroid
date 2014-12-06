@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_toolbarcontrolrecyclerview);
+  setContentView(R.layout.observable_scroll_view_activity_toolbarcontrolrecyclerview);
   setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
   mHeaderView=findViewById(R.id.header);
   ViewCompat.setElevation(mHeaderView,getResources().getDimension(R.dimen.toolbar_elevation));
@@ -13,7 +13,7 @@
   for (int i=1; i <= 100; i++) {
     items.add("Item " + i);
   }
-  View headerView=LayoutInflater.from(this).inflate(R.layout.recycler_header,null);
+  View headerView=LayoutInflater.from(this).inflate(R.layout.observable_scroll_view_recycler_header,null);
   mRecyclerView.setAdapter(new SimpleHeaderRecyclerAdapter(this,items,headerView));
   ViewTreeObserver vto=mRecyclerView.getViewTreeObserver();
   vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){

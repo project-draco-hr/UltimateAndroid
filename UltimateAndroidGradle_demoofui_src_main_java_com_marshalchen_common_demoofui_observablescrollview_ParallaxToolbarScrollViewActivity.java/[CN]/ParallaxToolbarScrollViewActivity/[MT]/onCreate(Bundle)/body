@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_parallaxtoolbarscrollview);
+  setContentView(R.layout.observable_scroll_view_activity_parallaxtoolbarscrollview);
   setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
   mImageView=findViewById(R.id.image);
   mToolbarView=findViewById(R.id.toolbar);

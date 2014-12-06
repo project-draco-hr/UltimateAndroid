@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_actionbarcontrolgridview);
+  setContentView(R.layout.observable_scroll_view_activity_actionbarcontrolgridview);
   ObservableGridView gridView=(ObservableGridView)findViewById(R.id.grid);
   gridView.setScrollViewCallbacks(this);
   List<String> items=new ArrayList<String>();

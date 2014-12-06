@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_flexiblespacetoolbarscrollview);
+  setContentView(R.layout.observable_scroll_view_activity_flexiblespacetoolbarscrollview);
   setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
   getSupportActionBar().setDisplayHomeAsUpEnabled(true);
   mFlexibleSpaceView=findViewById(R.id.flexible_space);

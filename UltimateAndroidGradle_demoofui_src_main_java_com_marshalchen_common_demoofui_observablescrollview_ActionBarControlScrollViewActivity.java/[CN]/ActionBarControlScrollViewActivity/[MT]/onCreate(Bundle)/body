@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_actionbarcontrolscrollview);
+  setContentView(R.layout.observable_scroll_view_activity_actionbarcontrolscrollview);
   ObservableScrollView scrollView=(ObservableScrollView)findViewById(R.id.scroll);
   scrollView.setScrollViewCallbacks(this);
 }

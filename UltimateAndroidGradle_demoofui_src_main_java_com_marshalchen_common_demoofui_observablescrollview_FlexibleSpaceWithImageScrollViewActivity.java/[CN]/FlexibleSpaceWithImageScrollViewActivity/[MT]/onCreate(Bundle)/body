@@ -1,6 +1,6 @@
 {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_flexiblespacewithimagescrollview);
+  setContentView(R.layout.observable_scroll_view_activity_flexiblespacewithimagescrollview);
   setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
   mFlexibleSpaceImageHeight=getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
   mFlexibleSpaceShowFabOffset=getResources().getDimensionPixelSize(R.dimen.flexible_space_show_fab_offset);

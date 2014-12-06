@@ -4,6 +4,7 @@
   mainIntent.addCategory(CATEGORY_SAMPLES);
   PackageManager pm=getPackageManager();
   List<ResolveInfo> list=pm.queryIntentActivities(mainIntent,0);
+  Logs.d("observable-----" + (list == null));
   if (list == null) {
     return data;
   }
@@ -21,5 +22,6 @@
     }
   }
   Collections.sort(data,DISPLAY_NAME_COMPARATOR);
+  Logs.d("data------" + data.size());
   return data;
 }
