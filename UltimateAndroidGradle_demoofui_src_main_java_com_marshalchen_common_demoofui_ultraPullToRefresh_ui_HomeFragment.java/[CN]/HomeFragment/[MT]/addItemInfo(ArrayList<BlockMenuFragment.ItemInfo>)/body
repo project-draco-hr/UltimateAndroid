@@ -1,0 +1,63 @@
+{
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_grid_view,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(WithGridView.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_frame_layout,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(WithTextViewInFrameLayoutFragment.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_only_text_view,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(EvenOnlyATextView.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_keep_header,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(KeepHeader.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_hide_header,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(HideHeader.class,null);
+    }
+  }
+));
+  itemInfos.add(null);
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_release_to_refresh,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(ReleaseToRefresh.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_pull_to_refresh,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(PullToRefresh.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_auto_fresh,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(AutoRefresh.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_storehouse_header_using_string_array,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(StoreHouseUsingStringArray.class,null);
+    }
+  }
+));
+  itemInfos.add(newItemInfo(R.string.ptr_demo_block_storehouse_header_using_string,R.color.cube_mints_4d90fe,new OnClickListener(){
+    @Override public void onClick(    View v){
+      getContext().pushFragmentToBackStack(StoreHouseUsingString.class,null);
+    }
+  }
+));
+}
