@@ -1,0 +1,19 @@
+{
+  int toolbarHeight=mToolbarView.getHeight();
+  mPagerAdapter.setScrollY(isShown ? 0 : toolbarHeight);
+  for (int i=0; i < mPagerAdapter.getCount(); i++) {
+    if (i == mPager.getCurrentItem()) {
+      continue;
+    }
+    Fragment f=mPagerAdapter.getItemAt(i);
+    if (f == null) {
+      continue;
+    }
+    View view=f.getView();
+    if (view == null) {
+      continue;
+    }
+    propagateToolbarStateForScrollView(isShown,view,toolbarHeight);
+    propagateToolbarStateForListView(isShown,view,toolbarHeight);
+  }
+}

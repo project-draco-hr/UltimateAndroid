@@ -1,0 +1,6 @@
+{
+  if (sInstance == null) {
+    sInstance=new DemoDuiTangImageResizer();
+  }
+  return sInstance;
+}

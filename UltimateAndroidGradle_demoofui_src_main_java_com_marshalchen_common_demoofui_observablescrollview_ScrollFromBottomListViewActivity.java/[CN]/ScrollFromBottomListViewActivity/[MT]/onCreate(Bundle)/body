@@ -1,0 +1,34 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.observable_scroll_view_activity_toolbarcontrollistview);
+  setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+  mHeaderView=findViewById(R.id.header);
+  ViewCompat.setElevation(mHeaderView,getResources().getDimension(R.dimen.toolbar_elevation));
+  mToolbarView=findViewById(R.id.toolbar);
+  mListView=(ObservableListView)findViewById(R.id.list);
+  mListView.setScrollViewCallbacks(this);
+  LayoutInflater inflater=LayoutInflater.from(this);
+  mListView.addHeaderView(inflater.inflate(R.layout.observable_scroll_view_padding,null));
+  mListView.addHeaderView(inflater.inflate(R.layout.observable_scroll_view_padding,null));
+  List<String> items=new ArrayList<String>();
+  for (int i=1; i <= 100; i++) {
+    items.add("Item " + i);
+  }
+  mListView.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items));
+  ViewTreeObserver vto=mListView.getViewTreeObserver();
+  vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
+    @Override public void onGlobalLayout(){
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+        mListView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+      }
+ else {
+        mListView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+      }
+      int count=mListView.getAdapter().getCount() - 1;
+      int position=count == 0 ? 1 : count > 0 ? count : 0;
+      mListView.smoothScrollToPosition(position);
+      mListView.setSelection(position);
+    }
+  }
+);
+}

@@ -1,0 +1,4 @@
+{
+  mThumbnailPath=thumbnailPath;
+  mThumbnailView=thumbnailView;
+}

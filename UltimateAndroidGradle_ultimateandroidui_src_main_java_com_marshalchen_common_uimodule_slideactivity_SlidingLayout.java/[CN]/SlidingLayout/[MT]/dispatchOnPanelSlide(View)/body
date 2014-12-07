@@ -1,0 +1,5 @@
+{
+  if (mPanelSlideListener != null) {
+    mPanelSlideListener.onPanelSlide(panel,mSlideOffset);
+  }
+}

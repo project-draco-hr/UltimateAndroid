@@ -1,0 +1,5 @@
+{
+  View view=layoutInflater.inflate(R.layout.ultra_pull_refresh_with_long_press_list_view_item,null);
+  mImageView=(CubeImageView)view.findViewById(R.id.with_long_press_list_image);
+  return view;
+}

@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.observable_scroll_view_activity_actionbarcontrolwebview);
+  ObservableWebView webView=(ObservableWebView)findViewById(R.id.web);
+  webView.setScrollViewCallbacks(this);
+  webView.loadUrl("file:///android_asset/lipsum.html");
+}

@@ -1,0 +1,19 @@
+{
+  mScrolling=true;
+  mScrollAnimator=ObjectAnimator.ofInt(mSeekBar,"progress",mSeekBar.getProgress(),mSeekBar.getMax());
+  mScrollAnimator.setDuration((long)(SCROLL_ANIM_DURATION * (1 - (float)mSeekBar.getProgress() / mSeekBar.getMax())));
+  mScrollAnimator.setInterpolator(new LinearInterpolator());
+  mScrollAnimator.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animation){
+    }
+    @Override public void onAnimationEnd(    Animator animation){
+      mScrolling=false;
+    }
+    @Override public void onAnimationCancel(    Animator animation){
+    }
+    @Override public void onAnimationRepeat(    Animator animation){
+    }
+  }
+);
+  mScrollAnimator.start();
+}

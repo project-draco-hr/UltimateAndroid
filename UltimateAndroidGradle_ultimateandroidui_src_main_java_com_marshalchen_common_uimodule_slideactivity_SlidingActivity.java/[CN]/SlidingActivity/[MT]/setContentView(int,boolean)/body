@@ -1,0 +1,4 @@
+{
+  this.hideTitle=hideTitle;
+  setContentView(layoutResID);
+}

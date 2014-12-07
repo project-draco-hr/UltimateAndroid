@@ -1,0 +1,4 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.slide_activity_activity_detail);
+}

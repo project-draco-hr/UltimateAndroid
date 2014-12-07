@@ -1,0 +1,13 @@
+{
+  int tabStripChildCount=mTabStrip.getChildCount();
+  if ((tabStripChildCount == 0) || (position < 0) || (position >= tabStripChildCount)) {
+    return;
+  }
+  mTabStrip.onViewPagerPageChanged(position,positionOffset);
+  View selectedTitle=mTabStrip.getChildAt(position);
+  int extraOffset=(selectedTitle != null) ? (int)(positionOffset * selectedTitle.getWidth()) : 0;
+  scrollToTab(position,extraOffset);
+  if (mViewPagerPageChangeListener != null) {
+    mViewPagerPageChangeListener.onPageScrolled(position,positionOffset,positionOffsetPixels);
+  }
+}

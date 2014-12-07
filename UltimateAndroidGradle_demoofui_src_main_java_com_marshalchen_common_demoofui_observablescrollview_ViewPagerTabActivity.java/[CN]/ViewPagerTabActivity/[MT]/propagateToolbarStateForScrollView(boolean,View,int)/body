@@ -1,0 +1,16 @@
+{
+  ObservableScrollView scrollView=(ObservableScrollView)view.findViewById(R.id.scroll);
+  if (scrollView == null) {
+    return;
+  }
+  if (isShown) {
+    if (0 < scrollView.getCurrentScrollY()) {
+      scrollView.scrollTo(0,0);
+    }
+  }
+ else {
+    if (scrollView.getCurrentScrollY() < toolbarHeight) {
+      scrollView.scrollTo(0,toolbarHeight);
+    }
+  }
+}

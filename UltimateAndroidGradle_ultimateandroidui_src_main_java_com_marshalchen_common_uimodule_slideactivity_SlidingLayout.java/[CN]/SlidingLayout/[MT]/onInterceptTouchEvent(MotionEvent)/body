@@ -1,0 +1,47 @@
+{
+  final int action=MotionEventCompat.getActionMasked(ev);
+  if (!mCanSlide && action == MotionEvent.ACTION_DOWN && getChildCount() > 1) {
+    final View secondChild=getChildAt(1);
+    if (secondChild != null) {
+      mPreservedOpenState=!mDragHelper.isViewUnder(secondChild,(int)ev.getX(),(int)ev.getY());
+    }
+  }
+  if (!mCanSlide || (mIsUnableToDrag && action != MotionEvent.ACTION_DOWN)) {
+    mDragHelper.cancel();
+    return super.onInterceptTouchEvent(ev);
+  }
+  if (action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_UP) {
+    mDragHelper.cancel();
+    return false;
+  }
+  boolean interceptTap=false;
+switch (action) {
+case MotionEvent.ACTION_DOWN:
+{
+      mIsUnableToDrag=false;
+      final float x=ev.getX();
+      final float y=ev.getY();
+      mInitialMotionX=x;
+      mInitialMotionY=y;
+      if (mDragHelper.isViewUnder(mSlideableView,(int)x,(int)y) && isDimmed(mSlideableView)) {
+        interceptTap=true;
+      }
+      break;
+    }
+case MotionEvent.ACTION_MOVE:
+{
+    final float x=ev.getX();
+    final float y=ev.getY();
+    final float adx=Math.abs(x - mInitialMotionX);
+    final float ady=Math.abs(y - mInitialMotionY);
+    final int slop=mDragHelper.getTouchSlop();
+    if (adx > slop && ady > adx || canScroll(this,false,Math.round(x - mInitialMotionX),Math.round(x),Math.round(y))) {
+      mDragHelper.cancel();
+      mIsUnableToDrag=true;
+      return false;
+    }
+  }
+}
+final boolean interceptForDrag=mDragHelper.shouldInterceptTouchEvent(ev);
+return interceptForDrag || interceptTap;
+}

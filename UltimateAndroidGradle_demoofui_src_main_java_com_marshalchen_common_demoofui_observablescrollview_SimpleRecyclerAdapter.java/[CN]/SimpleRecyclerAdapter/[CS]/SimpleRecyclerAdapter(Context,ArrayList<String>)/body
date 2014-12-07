@@ -1,0 +1,4 @@
+{
+  mInflater=LayoutInflater.from(context);
+  mItems=items;
+}

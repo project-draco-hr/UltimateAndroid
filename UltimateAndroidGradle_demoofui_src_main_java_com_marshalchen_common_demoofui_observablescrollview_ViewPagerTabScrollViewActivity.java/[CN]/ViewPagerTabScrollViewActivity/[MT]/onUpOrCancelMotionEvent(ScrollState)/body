@@ -1,0 +1,26 @@
+{
+  mBaseTranslationY=0;
+  Fragment fragment=getCurrentFragment();
+  if (fragment == null) {
+    return;
+  }
+  View view=fragment.getView();
+  if (view == null) {
+    return;
+  }
+  int toolbarHeight=mToolbarView.getHeight();
+  final ObservableScrollView scrollView=(ObservableScrollView)view.findViewById(R.id.scroll);
+  if (scrollState == ScrollState.UP) {
+    if (toolbarHeight < scrollView.getCurrentScrollY()) {
+      hideToolbar();
+    }
+ else     if (scrollView.getCurrentScrollY() < toolbarHeight) {
+      showToolbar();
+    }
+  }
+ else   if (scrollState == ScrollState.DOWN) {
+    if (toolbarHeight < scrollView.getCurrentScrollY()) {
+      showToolbar();
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  if (view instanceof Button) {
+    if (view.getId() == R.id.patio_action_take_picture) {
+      mListener.onTakePictureClick();
+    }
+    if (view.getId() == R.id.patio_action_attach_picture) {
+      mListener.onAddPictureClick();
+    }
+    if (view.getId() == R.id.patio_action_remove_picture) {
+      removeSelectedThumbnails();
+    }
+    if (view.getId() == R.id.patio_action_cancel) {
+      cancelThumbnailSelection();
+    }
+  }
+  if (view instanceof ImageView) {
+    for (    PatioThumbnail patioThumbnail : mPatioThumbnails) {
+      if (patioThumbnail.getThumbnailView().equals(view)) {
+        patioThumbnail.setSelected(!patioThumbnail.isSelected());
+        break;
+      }
+    }
+    checkToolbarsStatus();
+  }
+}

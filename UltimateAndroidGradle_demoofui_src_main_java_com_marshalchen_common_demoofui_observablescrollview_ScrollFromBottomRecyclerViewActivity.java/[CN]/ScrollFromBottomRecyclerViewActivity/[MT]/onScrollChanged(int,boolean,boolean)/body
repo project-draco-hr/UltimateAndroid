@@ -1,0 +1,14 @@
+{
+  if (dragging) {
+    int toolbarHeight=mToolbarView.getHeight();
+    if (firstScroll) {
+      float currentHeaderTranslationY=ViewHelper.getTranslationY(mHeaderView);
+      if (-toolbarHeight < currentHeaderTranslationY && toolbarHeight < scrollY) {
+        mBaseTranslationY=scrollY;
+      }
+    }
+    int headerTranslationY=Math.min(0,Math.max(-toolbarHeight,-(scrollY - mBaseTranslationY)));
+    ViewPropertyAnimator.animate(mHeaderView).cancel();
+    ViewHelper.setTranslationY(mHeaderView,headerTranslationY);
+  }
+}

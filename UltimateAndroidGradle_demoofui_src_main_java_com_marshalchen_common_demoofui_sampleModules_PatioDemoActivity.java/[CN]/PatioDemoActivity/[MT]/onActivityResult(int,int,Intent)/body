@@ -1,0 +1,8 @@
+{
+  if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_ATTACH_PICTURE) {
+    mPatio.handleAttachPictureResult(data);
+  }
+  if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_TAKE_PICTURE) {
+    mPatio.handleTakePictureResult(data);
+  }
+}

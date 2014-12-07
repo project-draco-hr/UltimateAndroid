@@ -1,0 +1,13 @@
+{
+  if (mDragHelper.getViewDragState() == ViewDragHelper.STATE_IDLE) {
+    if (mSlideOffset == 0) {
+      updateObscuredViewsVisibility(mSlideableView);
+      dispatchOnPanelClosed(mSlideableView);
+      mPreservedOpenState=false;
+    }
+ else {
+      dispatchOnPanelOpened(mSlideableView);
+      mPreservedOpenState=true;
+    }
+  }
+}

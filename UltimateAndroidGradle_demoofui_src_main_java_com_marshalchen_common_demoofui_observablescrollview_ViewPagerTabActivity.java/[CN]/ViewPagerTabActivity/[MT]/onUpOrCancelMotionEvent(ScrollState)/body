@@ -1,0 +1,13 @@
+{
+  mBaseTranslationY=0;
+  Fragment fragment=getCurrentFragment();
+  if (fragment == null) {
+    return;
+  }
+  View view=fragment.getView();
+  if (view == null) {
+    return;
+  }
+  adjustToolbarForScrollViews(scrollState,view);
+  adjustToolbarForListViews(scrollState,view);
+}

@@ -1,0 +1,27 @@
+{
+  List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+  Intent mainIntent=new Intent(Intent.ACTION_MAIN,null);
+  mainIntent.addCategory(CATEGORY_SAMPLES);
+  PackageManager pm=getPackageManager();
+  List<ResolveInfo> list=pm.queryIntentActivities(mainIntent,0);
+  Logs.d("observable-----" + (list == null));
+  if (list == null) {
+    return data;
+  }
+  for (  ResolveInfo info : list) {
+    CharSequence labelSeq=info.loadLabel(pm);
+    String label=labelSeq != null ? labelSeq.toString() : info.activityInfo.name;
+    String[] labelPath=label.split("/");
+    String nextLabel=labelPath[0];
+    if (labelPath.length == 1) {
+      String nameLabel=info.activityInfo.name.replace(info.activityInfo.packageName + "","");
+      if (nameLabel.contains(".")) {
+        nameLabel=nameLabel.replaceAll("[^.]*\\.","");
+      }
+      addItem(data,nameLabel,nextLabel,activityIntent(info.activityInfo.applicationInfo.packageName,info.activityInfo.name));
+    }
+  }
+  Collections.sort(data,DISPLAY_NAME_COMPARATOR);
+  Logs.d("data------" + data.size());
+  return data;
+}

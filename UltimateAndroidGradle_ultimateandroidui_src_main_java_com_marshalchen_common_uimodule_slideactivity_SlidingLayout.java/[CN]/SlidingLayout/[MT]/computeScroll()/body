@@ -1,0 +1,9 @@
+{
+  if (mDragHelper.continueSettling(true)) {
+    if (!mCanSlide) {
+      mDragHelper.abort();
+      return;
+    }
+    ViewCompat.postInvalidateOnAnimation(this);
+  }
+}

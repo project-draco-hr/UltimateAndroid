@@ -1,0 +1,3 @@
+{
+  return inflater.inflate(R.layout.observable_scroll_view_divider,null);
+}

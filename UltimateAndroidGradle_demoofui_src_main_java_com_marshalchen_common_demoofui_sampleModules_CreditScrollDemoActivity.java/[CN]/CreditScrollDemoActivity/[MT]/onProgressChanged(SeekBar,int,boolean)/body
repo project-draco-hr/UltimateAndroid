@@ -1,0 +1,3 @@
+{
+  mCreditsRollView.setScrollPosition(progress / 100000f);
+}

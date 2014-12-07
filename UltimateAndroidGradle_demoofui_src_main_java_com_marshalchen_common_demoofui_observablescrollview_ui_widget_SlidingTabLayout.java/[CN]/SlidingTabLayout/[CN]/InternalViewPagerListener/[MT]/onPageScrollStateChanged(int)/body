@@ -1,0 +1,6 @@
+{
+  mScrollState=state;
+  if (mViewPagerPageChangeListener != null) {
+    mViewPagerPageChangeListener.onPageScrollStateChanged(state);
+  }
+}

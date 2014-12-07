@@ -1,0 +1,3 @@
+{
+  mTabStrip.setSelectedIndicatorColors(colors);
+}

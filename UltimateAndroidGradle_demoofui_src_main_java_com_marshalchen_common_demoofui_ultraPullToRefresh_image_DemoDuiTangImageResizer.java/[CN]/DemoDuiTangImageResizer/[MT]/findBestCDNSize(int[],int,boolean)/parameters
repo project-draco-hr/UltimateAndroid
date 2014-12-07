@@ -1,0 +1,3 @@
+int[] array
+int size
+boolean higher

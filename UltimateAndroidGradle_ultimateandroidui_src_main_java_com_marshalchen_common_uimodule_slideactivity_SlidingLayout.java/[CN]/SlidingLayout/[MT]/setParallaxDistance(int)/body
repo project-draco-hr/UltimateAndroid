@@ -1,0 +1,4 @@
+{
+  mParallaxBy=parallaxBy;
+  requestLayout();
+}

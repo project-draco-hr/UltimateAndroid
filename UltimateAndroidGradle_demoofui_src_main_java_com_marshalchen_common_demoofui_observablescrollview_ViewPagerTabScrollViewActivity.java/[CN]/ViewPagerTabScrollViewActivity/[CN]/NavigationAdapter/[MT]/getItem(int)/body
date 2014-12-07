@@ -1,0 +1,10 @@
+{
+  Fragment f=new ViewPagerTabScrollViewFragment();
+  if (0 <= mScrollY) {
+    Bundle args=new Bundle();
+    args.putInt(ViewPagerTabScrollViewFragment.ARG_SCROLL_Y,mScrollY);
+    f.setArguments(args);
+  }
+  mPages.put(position,f);
+  return f;
+}

@@ -1,0 +1,4 @@
+{
+  super(fm);
+  mPages=new SparseArray<Fragment>();
+}

@@ -1,0 +1,24 @@
+{
+  final LayoutParams lp=(LayoutParams)v.getLayoutParams();
+  if (mag > 0 && fadeColor != 0) {
+    final int baseAlpha=(fadeColor & 0xff000000) >>> 24;
+    int imag=(int)(baseAlpha * mag);
+    int color=imag << 24 | (fadeColor & 0xffffff);
+    if (lp.dimPaint == null) {
+      lp.dimPaint=new Paint();
+    }
+    lp.dimPaint.setColorFilter(new PorterDuffColorFilter(color,PorterDuff.Mode.SRC_OVER));
+    if (ViewCompat.getLayerType(v) != ViewCompat.LAYER_TYPE_HARDWARE) {
+      ViewCompat.setLayerType(v,ViewCompat.LAYER_TYPE_HARDWARE,lp.dimPaint);
+    }
+    invalidateChildRegion(v);
+  }
+ else   if (ViewCompat.getLayerType(v) != ViewCompat.LAYER_TYPE_NONE) {
+    if (lp.dimPaint != null) {
+      lp.dimPaint.setColorFilter(null);
+    }
+    final DisableLayerRunnable dlr=new DisableLayerRunnable(v);
+    mPostedRunnables.add(dlr);
+    ViewCompat.postOnAnimation(this,dlr);
+  }
+}

@@ -1,0 +1,5 @@
+{
+  Log.d(TAG,"File Path: " + mTakePicturePath);
+  addThumbnail(mTakePicturePath);
+  PatioUtils.addNewImageToGallery(mContext,mTakePicturePath);
+}

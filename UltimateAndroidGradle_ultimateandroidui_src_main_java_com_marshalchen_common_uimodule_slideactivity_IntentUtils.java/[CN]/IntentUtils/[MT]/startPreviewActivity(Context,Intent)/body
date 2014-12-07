@@ -1,0 +1,3 @@
+{
+  startPreviewActivity(context,intent,0);
+}

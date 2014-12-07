@@ -1,0 +1,5 @@
+{
+  if (viewHolder instanceof ItemViewHolder) {
+    ((ItemViewHolder)viewHolder).textView.setText(mItems.get(position - 1));
+  }
+}

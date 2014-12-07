@@ -1,0 +1,6 @@
+{
+  if (mPanelSlideListener != null) {
+    mPanelSlideListener.onPanelOpened(panel);
+  }
+  sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED);
+}

@@ -1,0 +1,37 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.observable_scroll_view_activity_flexiblespacewithimagescrollview);
+  setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+  mFlexibleSpaceImageHeight=getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
+  mFlexibleSpaceShowFabOffset=getResources().getDimensionPixelSize(R.dimen.flexible_space_show_fab_offset);
+  mActionBarSize=getActionBarSize();
+  mToolbarColor=getResources().getColor(R.color.primary);
+  mToolbar=findViewById(R.id.toolbar);
+  if (!TOOLBAR_IS_STICKY) {
+    mToolbar.setBackgroundColor(Color.TRANSPARENT);
+  }
+  mImageView=findViewById(R.id.image);
+  mOverlayView=findViewById(R.id.overlay);
+  mScrollView=(ObservableScrollView)findViewById(R.id.scroll);
+  mScrollView.setScrollViewCallbacks(this);
+  mTitleView=(TextView)findViewById(R.id.title);
+  mTitleView.setText(getTitle());
+  setTitle(null);
+  mFab=findViewById(R.id.fab);
+  mFabMargin=getResources().getDimensionPixelSize(R.dimen.margin_standard);
+  ViewHelper.setScaleX(mFab,0);
+  ViewHelper.setScaleY(mFab,0);
+  ViewTreeObserver vto=mScrollView.getViewTreeObserver();
+  vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
+    @Override public void onGlobalLayout(){
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+        mScrollView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+      }
+ else {
+        mScrollView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+      }
+      mScrollView.scrollTo(0,mFlexibleSpaceImageHeight - mActionBarSize);
+    }
+  }
+);
+}

@@ -1,0 +1,12 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.observable_scroll_view_activity_about);
+  ActionBar ab=getSupportActionBar();
+  if (ab != null) {
+    ab.setDisplayHomeAsUpEnabled(true);
+    ab.setHomeButtonEnabled(true);
+  }
+  ((TextView)findViewById(R.id.app_version)).setText(getString(R.string.msg_app_version,BuildConfig.VERSION_NAME));
+  ((TextView)findViewById(R.id.lib_version)).setText(getString(R.string.msg_lib_version));
+  initLicenses();
+}

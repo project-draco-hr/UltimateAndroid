@@ -1,0 +1,26 @@
+{
+  View view=inflater.inflate(R.layout.observable_scroll_view_fragment_scrollview,container,false);
+  final ObservableScrollView scrollView=(ObservableScrollView)view.findViewById(R.id.scroll);
+  Activity parentActivity=getActivity();
+  if (parentActivity instanceof ObservableScrollViewCallbacks) {
+    Bundle args=getArguments();
+    if (args != null && args.containsKey(ARG_SCROLL_Y)) {
+      final int scrollY=args.getInt(ARG_SCROLL_Y,0);
+      ViewTreeObserver vto=scrollView.getViewTreeObserver();
+      vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
+        @Override public void onGlobalLayout(){
+          if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+            scrollView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+          }
+ else {
+            scrollView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+          }
+          scrollView.scrollTo(0,scrollY);
+        }
+      }
+);
+    }
+    scrollView.setScrollViewCallbacks((ObservableScrollViewCallbacks)parentActivity);
+  }
+  return view;
+}

@@ -1,0 +1,21 @@
+{
+  mBaseTranslationY=0;
+  float headerTranslationY=ViewHelper.getTranslationY(mHeaderView);
+  int toolbarHeight=mToolbarView.getHeight();
+  if (scrollState == ScrollState.UP) {
+    if (toolbarHeight < mScrollView.getCurrentScrollY()) {
+      if (headerTranslationY != -toolbarHeight) {
+        ViewPropertyAnimator.animate(mHeaderView).cancel();
+        ViewPropertyAnimator.animate(mHeaderView).translationY(-toolbarHeight).setDuration(200).start();
+      }
+    }
+  }
+ else   if (scrollState == ScrollState.DOWN) {
+    if (toolbarHeight < mScrollView.getCurrentScrollY()) {
+      if (headerTranslationY != 0) {
+        ViewPropertyAnimator.animate(mHeaderView).cancel();
+        ViewPropertyAnimator.animate(mHeaderView).translationY(0).setDuration(200).start();
+      }
+    }
+  }
+}

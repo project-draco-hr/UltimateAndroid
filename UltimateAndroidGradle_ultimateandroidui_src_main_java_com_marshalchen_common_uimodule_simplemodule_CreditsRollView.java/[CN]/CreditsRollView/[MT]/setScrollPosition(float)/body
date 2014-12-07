@@ -1,0 +1,12 @@
+{
+  if (scrollPosition < 0f) {
+    scrollPosition=0f;
+  }
+ else   if (scrollPosition > 1f) {
+    scrollPosition=1f;
+  }
+  if (Math.abs(mScrollPosition - scrollPosition) > FLOAT_EPSILON) {
+    mScrollPosition=scrollPosition;
+    invalidate();
+  }
+}

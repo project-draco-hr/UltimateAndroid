@@ -1,0 +1,19 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.credit_roll_activity_main);
+  mSeekBar=(SeekBar)findViewById(R.id.seekbar);
+  mSeekBar.setOnSeekBarChangeListener(this);
+  mCreditsRollView=(CreditsRollView)findViewById(R.id.creditsroll);
+  mCreditsRollView.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      if (!mScrolling) {
+        animateScroll();
+      }
+ else {
+        stopScrollAnimation();
+      }
+    }
+  }
+);
+  Toast.makeText(this,"Tap the empty space to animate the credits roll, or use the scrollbar",Toast.LENGTH_SHORT).show();
+}

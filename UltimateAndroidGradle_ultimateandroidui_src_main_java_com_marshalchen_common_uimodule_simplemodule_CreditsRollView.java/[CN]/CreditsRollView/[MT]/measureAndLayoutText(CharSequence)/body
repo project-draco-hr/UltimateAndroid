@@ -1,0 +1,8 @@
+{
+  if (TextUtils.isEmpty(text)) {
+    mTextLayout=null;
+    return;
+  }
+  int availableWidth=getWidth() - mPaddingLeft - mPaddingRight;
+  mTextLayout=new StaticLayout(text,mTextPaint,availableWidth,Layout.Alignment.ALIGN_CENTER,1.1f,0f,true);
+}

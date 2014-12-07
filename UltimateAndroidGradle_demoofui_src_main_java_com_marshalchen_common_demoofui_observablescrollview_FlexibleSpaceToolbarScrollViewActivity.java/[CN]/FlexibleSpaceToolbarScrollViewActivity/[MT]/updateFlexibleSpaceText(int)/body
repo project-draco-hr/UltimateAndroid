@@ -1,0 +1,20 @@
+{
+  ViewHelper.setTranslationY(mFlexibleSpaceView,-scrollY);
+  int adjustedScrollY=scrollY;
+  if (scrollY < 0) {
+    adjustedScrollY=0;
+  }
+ else   if (mFlexibleSpaceHeight < scrollY) {
+    adjustedScrollY=mFlexibleSpaceHeight;
+  }
+  float maxScale=(float)(mFlexibleSpaceHeight - mToolbarView.getHeight()) / mToolbarView.getHeight();
+  float scale=maxScale * ((float)mFlexibleSpaceHeight - adjustedScrollY) / mFlexibleSpaceHeight;
+  ViewHelper.setPivotX(mTitleView,0);
+  ViewHelper.setPivotY(mTitleView,0);
+  ViewHelper.setScaleX(mTitleView,1 + scale);
+  ViewHelper.setScaleY(mTitleView,1 + scale);
+  ViewHelper.setTranslationY(mTitleView,ViewHelper.getTranslationY(mFlexibleSpaceView) + mFlexibleSpaceView.getHeight() - mTitleView.getHeight() * (1 + scale));
+  int maxTitleTranslationY=mToolbarView.getHeight() + mFlexibleSpaceHeight - (int)(mTitleView.getHeight() * (1 + scale));
+  int titleTranslationY=(int)(maxTitleTranslationY * ((float)mFlexibleSpaceHeight - adjustedScrollY) / mFlexibleSpaceHeight);
+  ViewHelper.setTranslationY(mTitleView,titleTranslationY);
+}

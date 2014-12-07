@@ -1,0 +1,16 @@
+{
+  if (mGetDisplayList != null && mRecreateDisplayList != null) {
+    try {
+      mRecreateDisplayList.setBoolean(child,true);
+      mGetDisplayList.invoke(child,(Object[])null);
+    }
+ catch (    Exception e) {
+      Log.e(TAG,"Error refreshing display list state",e);
+    }
+  }
+ else {
+    child.invalidate();
+    return;
+  }
+  super.invalidateChildRegion(parent,child);
+}

@@ -1,0 +1,9 @@
+{
+  final LayoutParams lp=(LayoutParams)releasedChild.getLayoutParams();
+  int left=getPaddingLeft() + lp.leftMargin;
+  if (xvel > 0 || (xvel == 0 && mSlideOffset > 0.5f)) {
+    left+=mSlideRange;
+  }
+  mDragHelper.settleCapturedViewAt(left,releasedChild.getTop());
+  invalidate();
+}

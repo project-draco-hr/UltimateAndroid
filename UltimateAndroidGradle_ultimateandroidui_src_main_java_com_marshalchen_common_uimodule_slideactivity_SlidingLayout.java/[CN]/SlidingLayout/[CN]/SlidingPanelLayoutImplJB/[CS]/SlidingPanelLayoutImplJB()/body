@@ -1,0 +1,15 @@
+{
+  try {
+    mGetDisplayList=View.class.getDeclaredMethod("getDisplayList",(Class[])null);
+  }
+ catch (  NoSuchMethodException e) {
+    Log.e(TAG,"Couldn't fetch getDisplayList method; dimming won't work right.",e);
+  }
+  try {
+    mRecreateDisplayList=View.class.getDeclaredField("mRecreateDisplayList");
+    mRecreateDisplayList.setAccessible(true);
+  }
+ catch (  NoSuchFieldException e) {
+    Log.e(TAG,"Couldn't fetch mRecreateDisplayList field; dimming will be slow.",e);
+  }
+}

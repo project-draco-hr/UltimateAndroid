@@ -1,0 +1,3 @@
+{
+  return mIndicatorColors[position % mIndicatorColors.length];
+}

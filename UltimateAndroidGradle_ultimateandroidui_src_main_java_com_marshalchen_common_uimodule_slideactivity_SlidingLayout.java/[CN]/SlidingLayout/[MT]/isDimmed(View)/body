@@ -1,0 +1,7 @@
+{
+  if (child == null) {
+    return false;
+  }
+  final LayoutParams lp=(LayoutParams)child.getLayoutParams();
+  return mCanSlide && lp.dimWhenOffset && mSlideOffset > 0;
+}

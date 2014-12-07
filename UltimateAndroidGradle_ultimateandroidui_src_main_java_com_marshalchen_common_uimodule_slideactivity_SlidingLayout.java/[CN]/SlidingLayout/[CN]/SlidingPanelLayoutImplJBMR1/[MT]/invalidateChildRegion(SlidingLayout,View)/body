@@ -1,0 +1,3 @@
+{
+  ViewCompat.setLayerPaint(child,((LayoutParams)child.getLayoutParams()).dimPaint);
+}

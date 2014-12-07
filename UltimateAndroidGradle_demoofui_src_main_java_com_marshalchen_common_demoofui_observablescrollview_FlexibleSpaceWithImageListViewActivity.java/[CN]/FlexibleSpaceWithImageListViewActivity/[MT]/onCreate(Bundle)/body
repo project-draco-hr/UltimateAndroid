@@ -1,0 +1,42 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.observable_scroll_view_activity_flexiblespacewithimagelistview);
+  setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+  mFlexibleSpaceImageHeight=getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
+  mFlexibleSpaceShowFabOffset=getResources().getDimensionPixelSize(R.dimen.flexible_space_show_fab_offset);
+  mActionBarSize=getActionBarSize();
+  mToolbarColor=getResources().getColor(R.color.primary);
+  mToolbar=findViewById(R.id.toolbar);
+  if (!TOOLBAR_IS_STICKY) {
+    mToolbar.setBackgroundColor(Color.TRANSPARENT);
+  }
+  mImageView=findViewById(R.id.image);
+  mOverlayView=findViewById(R.id.overlay);
+  ObservableListView listView=(ObservableListView)findViewById(R.id.list);
+  listView.setScrollViewCallbacks(this);
+  View paddingView=new View(this);
+  AbsListView.LayoutParams lp=new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT,mFlexibleSpaceImageHeight);
+  paddingView.setLayoutParams(lp);
+  paddingView.setClickable(true);
+  listView.addHeaderView(paddingView);
+  List<String> items=new ArrayList<String>();
+  for (int i=1; i <= 100; i++) {
+    items.add("Item " + i);
+  }
+  listView.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items));
+  mTitleView=(TextView)findViewById(R.id.title);
+  mTitleView.setText(getTitle());
+  setTitle(null);
+  mFab=findViewById(R.id.fab);
+  mFabMargin=getResources().getDimensionPixelSize(R.dimen.margin_standard);
+  ViewHelper.setScaleX(mFab,0);
+  ViewHelper.setScaleY(mFab,0);
+  mListBackgroundView=findViewById(R.id.list_background);
+  final View contentView=getWindow().getDecorView().findViewById(android.R.id.content);
+  contentView.post(new Runnable(){
+    @Override public void run(){
+      mListBackgroundView.getLayoutParams().height=contentView.getHeight();
+    }
+  }
+);
+}

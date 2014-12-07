@@ -1,0 +1,19 @@
+{
+  super.onCreate();
+  instance=this;
+  String environment="";
+  if (environment.equals("production")) {
+    CLog.setLogLevel(CLog.LEVEL_ERROR);
+  }
+ else   if (environment.equals("beta")) {
+    CLog.setLogLevel(CLog.LEVEL_WARNING);
+  }
+ else {
+    CLog.setLogLevel(CLog.LEVEL_VERBOSE);
+  }
+  ImageLoaderFactory.setDefaultImageResizer(DemoDuiTangImageResizer.getInstance());
+  String dir="request-cache";
+  ImageLoaderFactory.init(this);
+  RequestCacheManager.init(this,dir,1024 * 10,1024 * 10);
+  Cube.onCreate(this);
+}

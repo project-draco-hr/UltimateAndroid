@@ -1,0 +1,13 @@
+{
+  LayoutInflater inflater=LayoutInflater.from(mContext);
+  ImageView imageView=(ImageView)inflater.inflate(THUMBNAIL_LAYOUT_RES_ID,mThumbnailsContainer,false);
+  int resizeDimension=mThumbnailWidth > mThumbnailHeight ? Float.valueOf(mThumbnailWidth).intValue() : Float.valueOf(mThumbnailHeight).intValue();
+  Picasso.with(mContext).load(new File(thumbnailPath)).resize(resizeDimension,resizeDimension).centerCrop().into(imageView);
+  ViewGroup.LayoutParams layoutParams=imageView.getLayoutParams();
+  layoutParams.width=Float.valueOf(mThumbnailWidth).intValue();
+  layoutParams.height=Float.valueOf(mThumbnailHeight).intValue();
+  mThumbnailsContainer.addView(imageView,0,layoutParams);
+  imageView.setOnClickListener(this);
+  mPatioThumbnails.add(new PatioThumbnail(thumbnailPath,imageView));
+  updateThumbnailsMessage();
+}

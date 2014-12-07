@@ -1,0 +1,20 @@
+{
+  final Rect rect=mTmpRect;
+  src.getBoundsInParent(rect);
+  dest.setBoundsInParent(rect);
+  src.getBoundsInScreen(rect);
+  dest.setBoundsInScreen(rect);
+  dest.setVisibleToUser(src.isVisibleToUser());
+  dest.setPackageName(src.getPackageName());
+  dest.setClassName(src.getClassName());
+  dest.setContentDescription(src.getContentDescription());
+  dest.setEnabled(src.isEnabled());
+  dest.setClickable(src.isClickable());
+  dest.setFocusable(src.isFocusable());
+  dest.setFocused(src.isFocused());
+  dest.setAccessibilityFocused(src.isAccessibilityFocused());
+  dest.setSelected(src.isSelected());
+  dest.setLongClickable(src.isLongClickable());
+  dest.addAction(src.getActions());
+  dest.setMovementGranularities(src.getMovementGranularities());
+}

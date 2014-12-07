@@ -1,0 +1,16 @@
+{
+  mTakePicturePath=null;
+  File pictureFile=null;
+  try {
+    pictureFile=PatioUtils.getNewImageFile();
+  }
+ catch (  IOException ex) {
+    ex.printStackTrace();
+  }
+  if (pictureFile == null)   return null;
+  mTakePicturePath=pictureFile.getAbsolutePath();
+  Log.d(TAG,"Path: " + mTakePicturePath);
+  Intent takePictureIntent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+  takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(pictureFile));
+  return takePictureIntent;
+}

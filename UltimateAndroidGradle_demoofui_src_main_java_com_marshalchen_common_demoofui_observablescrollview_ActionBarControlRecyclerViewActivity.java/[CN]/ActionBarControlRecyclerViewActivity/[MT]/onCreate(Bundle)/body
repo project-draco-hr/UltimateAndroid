@@ -1,0 +1,13 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.observable_scroll_view_activity_actionbarcontrolrecyclerview);
+  ObservableRecyclerView recyclerView=(ObservableRecyclerView)findViewById(R.id.recycler);
+  recyclerView.setLayoutManager(new LinearLayoutManager(this));
+  recyclerView.setHasFixedSize(true);
+  recyclerView.setScrollViewCallbacks(this);
+  ArrayList<String> items=new ArrayList<String>();
+  for (int i=1; i <= 100; i++) {
+    items.add("Item " + i);
+  }
+  recyclerView.setAdapter(new SimpleRecyclerAdapter(this,items));
+}

@@ -1,0 +1,33 @@
+{
+  setHeaderTitle(R.string.ptr_demo_block_frame_layout);
+  final View contentView=inflater.inflate(R.layout.ultra_pull_refresh_fragment_classic_header_with_viewgroup,container,false);
+  final PtrClassicFrameLayout ptrFrame=(PtrClassicFrameLayout)contentView.findViewById(R.id.fragment_rotate_header_with_view_group_frame);
+  ptrFrame.setPtrHandler(new PtrHandler(){
+    @Override public void onRefreshBegin(    PtrFrameLayout frame){
+      frame.postDelayed(new Runnable(){
+        @Override public void run(){
+          ptrFrame.refreshComplete();
+        }
+      }
+,1800);
+    }
+    @Override public boolean checkCanDoRefresh(    PtrFrameLayout frame,    View content,    View header){
+      return true;
+    }
+  }
+);
+  ptrFrame.setLastUpdateTimeRelateObject(this);
+  ptrFrame.setResistance(1.7f);
+  ptrFrame.setRatioOfHeaderHeightToRefresh(1.2f);
+  ptrFrame.setDurationToClose(200);
+  ptrFrame.setDurationToCloseHeader(1000);
+  ptrFrame.setPullToRefresh(false);
+  ptrFrame.setKeepHeaderWhenRefresh(true);
+  ptrFrame.postDelayed(new Runnable(){
+    @Override public void run(){
+    }
+  }
+,150);
+  setupViews(ptrFrame);
+  return contentView;
+}

@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.patio_patio_activity_main);
+  mPatio=(Patio)findViewById(R.id.patio);
+  mPatio.setCallbacksListener(this);
+}

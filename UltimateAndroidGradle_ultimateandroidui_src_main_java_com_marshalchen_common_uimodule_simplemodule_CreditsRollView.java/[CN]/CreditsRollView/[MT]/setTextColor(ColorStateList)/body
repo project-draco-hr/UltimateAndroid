@@ -1,0 +1,11 @@
+{
+  super.setTextColor(colors);
+  if (!colors.isStateful()) {
+    mTextColor=colors.getDefaultColor();
+  }
+ else {
+    mTextColor=colors.getColorForState(getDrawableState(),colors.getDefaultColor());
+  }
+  initTextPaint();
+  invalidate();
+}

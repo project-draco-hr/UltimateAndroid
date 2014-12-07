@@ -1,0 +1,6 @@
+{
+  if (Math.abs(mEndScrollMult - endScrollMult) > FLOAT_EPSILON) {
+    mEndScrollMult=endScrollMult;
+    invalidate();
+  }
+}

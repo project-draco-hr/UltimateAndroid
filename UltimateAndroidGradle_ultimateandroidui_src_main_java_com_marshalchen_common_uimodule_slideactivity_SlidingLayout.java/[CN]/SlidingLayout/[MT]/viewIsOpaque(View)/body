@@ -1,0 +1,9 @@
+{
+  if (ViewCompat.isOpaque(v))   return true;
+  if (Build.VERSION.SDK_INT >= 18)   return false;
+  final Drawable bg=v.getBackground();
+  if (bg != null) {
+    return bg.getOpacity() == PixelFormat.OPAQUE;
+  }
+  return false;
+}
