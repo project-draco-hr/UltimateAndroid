@@ -1,0 +1,19 @@
+{
+  super.onViewCreated(view,savedInstanceState);
+  final ProgressLayout progressLayout=(ProgressLayout)view.findViewById(R.id.progress_layout);
+  WebView webView=(WebView)view.findViewById(R.id.web_view);
+  webView.setWebViewClient(new WebViewClient(){
+    @Override public void onPageStarted(    WebView view,    String url,    Bitmap favicon){
+      progressLayout.setProgress(true);
+    }
+    @Override public void onPageFinished(    WebView view,    String url){
+      progressLayout.setProgress(false);
+    }
+    @Override public void onReceivedError(    WebView view,    int errorCode,    String description,    String failingUrl){
+      Log.d(TAG,"onReceivedError: " + errorCode + " : "+ description+ " : "+ failingUrl);
+      super.onReceivedError(view,errorCode,description,failingUrl);
+    }
+  }
+);
+  webView.loadUrl("http://google.com");
+}

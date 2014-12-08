@@ -1,0 +1,10 @@
+{
+  String item=(String)l.getAdapter().getItem(position);
+  if (item.equals(HANDLER)) {
+    getFragmentManager().beginTransaction().replace(R.id.root_container,HandlerFragment.newInstance()).addToBackStack(null).commit();
+  }
+ else   if (item.equals(WEB_VIEW)) {
+    getFragmentManager().beginTransaction().replace(R.id.root_container,WebViewFragment.newInstance()).addToBackStack(null).commit();
+  }
+  ((ActionBarActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+}

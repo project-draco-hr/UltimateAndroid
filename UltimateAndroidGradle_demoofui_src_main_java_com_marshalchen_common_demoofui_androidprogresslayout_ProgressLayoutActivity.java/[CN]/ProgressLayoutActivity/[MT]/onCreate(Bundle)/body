@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.android_progress_layout_activity_main);
+  if (savedInstanceState == null) {
+    getSupportFragmentManager().beginTransaction().replace(R.id.root_container,ListFragment.newInstance()).commit();
+  }
+}

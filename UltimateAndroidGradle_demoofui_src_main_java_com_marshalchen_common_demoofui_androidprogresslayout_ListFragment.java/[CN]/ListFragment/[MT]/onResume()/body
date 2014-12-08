@@ -1,0 +1,6 @@
+{
+  super.onResume();
+  ActionBar actionBar=((ProgressLayoutActivity)getActivity()).getSupportActionBar();
+  actionBar.setDisplayHomeAsUpEnabled(false);
+  actionBar.setHomeButtonEnabled(false);
+}
