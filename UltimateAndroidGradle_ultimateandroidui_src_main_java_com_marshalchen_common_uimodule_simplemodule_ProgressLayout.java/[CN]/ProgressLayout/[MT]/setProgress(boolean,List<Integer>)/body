@@ -1,0 +1,8 @@
+{
+  mProgressView.setVisibility(visible ? View.VISIBLE : View.GONE);
+  for (  View v : mContentViews) {
+    if (!skipIds.contains(v.getId())) {
+      v.setVisibility(visible ? View.GONE : View.VISIBLE);
+    }
+  }
+}

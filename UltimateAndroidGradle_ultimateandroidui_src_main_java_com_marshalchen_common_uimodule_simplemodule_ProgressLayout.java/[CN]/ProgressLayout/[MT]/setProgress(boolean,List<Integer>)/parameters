@@ -1,0 +1,2 @@
+boolean visible
+List<Integer> skipIds
