@@ -1,0 +1,4 @@
+{
+  String text=(String)parent.getItemAtPosition(position);
+  getFragmentManager().beginTransaction().replace(R.id.root_container,TextFragment.newInstance(text)).addToBackStack(null).commit();
+}

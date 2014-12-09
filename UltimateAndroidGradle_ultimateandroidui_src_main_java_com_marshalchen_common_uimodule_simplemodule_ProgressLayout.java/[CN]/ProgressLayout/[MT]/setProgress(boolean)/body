@@ -1,0 +1,3 @@
+{
+  setProgress(visible,Collections.<Integer>emptyList());
+}

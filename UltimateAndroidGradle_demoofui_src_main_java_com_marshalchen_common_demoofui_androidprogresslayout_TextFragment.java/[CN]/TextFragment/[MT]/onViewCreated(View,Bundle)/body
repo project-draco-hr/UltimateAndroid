@@ -1,0 +1,5 @@
+{
+  super.onViewCreated(view,savedInstanceState);
+  final String paramText=getArguments().getString(PARAM_TEXT);
+  ((TextView)view.findViewById(R.id.text)).setText(paramText);
+}

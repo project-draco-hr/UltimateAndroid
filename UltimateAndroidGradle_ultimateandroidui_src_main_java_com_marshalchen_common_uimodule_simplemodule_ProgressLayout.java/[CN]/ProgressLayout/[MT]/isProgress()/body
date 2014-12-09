@@ -1,0 +1,3 @@
+{
+  return mProgressView.getVisibility() == View.VISIBLE;
+}

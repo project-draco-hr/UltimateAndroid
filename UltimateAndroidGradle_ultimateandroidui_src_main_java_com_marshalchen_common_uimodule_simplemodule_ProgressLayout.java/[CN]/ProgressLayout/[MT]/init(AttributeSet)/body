@@ -1,0 +1,26 @@
+{
+  TypedArray a=getContext().obtainStyledAttributes(attrs,R.styleable.ProgressLayout);
+  int backgroundColor=a.getColor(R.styleable.ProgressLayout_progressLayoutProgressBackground,Color.TRANSPARENT);
+  boolean startFromProgress=a.getBoolean(R.styleable.ProgressLayout_progressLayoutProgress,false);
+  a.recycle();
+  LayoutParams layoutParams;
+  if (backgroundColor == Color.TRANSPARENT) {
+    mProgressView=new ProgressBar(getContext());
+    layoutParams=new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+    layoutParams.addRule(CENTER_IN_PARENT);
+  }
+ else {
+    LinearLayout linearLayout=new LinearLayout(getContext());
+    linearLayout.setGravity(Gravity.CENTER);
+    linearLayout.setBackgroundColor(backgroundColor);
+    layoutParams=new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+    ProgressBar progressBar=new ProgressBar(getContext());
+    linearLayout.addView(progressBar);
+    mProgressView=linearLayout;
+  }
+  mProgressView.setTag(TAG_PROGRESS);
+  if (!startFromProgress) {
+    mProgressView.setVisibility(View.GONE);
+  }
+  addView(mProgressView,layoutParams);
+}

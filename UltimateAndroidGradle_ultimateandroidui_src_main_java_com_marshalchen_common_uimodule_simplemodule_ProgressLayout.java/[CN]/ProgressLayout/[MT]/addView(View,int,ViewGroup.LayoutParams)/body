@@ -1,0 +1,6 @@
+{
+  super.addView(child,index,params);
+  if (child.getTag() == null || !child.getTag().equals(TAG_PROGRESS)) {
+    mContentViews.add(child);
+  }
+}

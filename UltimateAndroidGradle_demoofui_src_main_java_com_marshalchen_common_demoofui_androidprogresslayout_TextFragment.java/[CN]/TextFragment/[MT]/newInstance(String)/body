@@ -1,0 +1,7 @@
+{
+  Bundle args=new Bundle();
+  args.putString(PARAM_TEXT,text);
+  TextFragment textFragment=new TextFragment();
+  textFragment.setArguments(args);
+  return textFragment;
+}

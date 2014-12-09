@@ -1,0 +1,7 @@
+{
+  super.onViewCreated(view,savedInstanceState);
+  List<String> items=new ArrayList<String>();
+  items.add(HANDLER);
+  items.add(WEB_VIEW);
+  setListAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,items));
+}
