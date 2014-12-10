@@ -1,0 +1,6 @@
+{
+  super(source);
+  progress=source.readInt();
+  max=source.readInt();
+  min=source.readInt();
+}

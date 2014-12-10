@@ -1,0 +1,6 @@
+{
+  int widthSize=MeasureSpec.getSize(widthMeasureSpec);
+  int height=mThumb.getIntrinsicHeight() + getPaddingTop() + getPaddingBottom();
+  height+=(mAddedTouchBounds * 2);
+  setMeasuredDimension(widthSize,height);
+}

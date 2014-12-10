@@ -1,0 +1,3 @@
+{
+  mNumber.setText(value);
+}

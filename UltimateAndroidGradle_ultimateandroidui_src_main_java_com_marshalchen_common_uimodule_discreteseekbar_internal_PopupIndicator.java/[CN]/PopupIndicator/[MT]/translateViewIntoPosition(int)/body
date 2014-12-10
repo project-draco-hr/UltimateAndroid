@@ -1,0 +1,3 @@
+{
+  mPopupView.setFloatOffset(x + mDrawingLocation[0]);
+}

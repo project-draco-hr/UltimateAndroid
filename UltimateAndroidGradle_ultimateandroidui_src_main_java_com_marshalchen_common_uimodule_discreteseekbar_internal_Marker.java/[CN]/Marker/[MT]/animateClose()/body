@@ -1,0 +1,10 @@
+{
+  mMarkerDrawable.stop();
+  ViewCompat.animate(mNumber).alpha(0f).setDuration(100).withEndAction(new Runnable(){
+    @Override public void run(){
+      mNumber.setVisibility(View.INVISIBLE);
+      mMarkerDrawable.animateToNormal();
+    }
+  }
+).start();
+}

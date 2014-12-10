@@ -1,0 +1,4 @@
+{
+  mWindowManager.addView(mPopupView,p);
+  mPopupView.mMarker.animateOpen();
+}

@@ -1,0 +1,4 @@
+{
+  scheduleSelf(opener,SystemClock.uptimeMillis() + 100);
+  mRunning=true;
+}

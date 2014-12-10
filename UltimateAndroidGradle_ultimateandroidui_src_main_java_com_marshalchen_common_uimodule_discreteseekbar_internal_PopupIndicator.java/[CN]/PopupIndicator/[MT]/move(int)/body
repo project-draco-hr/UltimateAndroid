@@ -1,0 +1,6 @@
+{
+  if (!isShowing()) {
+    return;
+  }
+  translateViewIntoPosition(x);
+}

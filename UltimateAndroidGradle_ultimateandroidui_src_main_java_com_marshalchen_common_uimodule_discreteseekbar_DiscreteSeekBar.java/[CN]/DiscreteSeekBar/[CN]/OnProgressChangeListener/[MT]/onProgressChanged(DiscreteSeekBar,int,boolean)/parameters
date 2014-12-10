@@ -1,0 +1,3 @@
+DiscreteSeekBar seekBar
+int value
+boolean fromUser

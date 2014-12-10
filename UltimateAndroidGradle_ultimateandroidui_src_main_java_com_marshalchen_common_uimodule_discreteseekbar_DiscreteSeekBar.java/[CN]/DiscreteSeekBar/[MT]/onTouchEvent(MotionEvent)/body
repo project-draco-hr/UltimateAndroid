@@ -1,0 +1,28 @@
+{
+  if (!isEnabled()) {
+    return false;
+  }
+  int actionMasked=MotionEventCompat.getActionMasked(event);
+switch (actionMasked) {
+case MotionEvent.ACTION_DOWN:
+    mDownX=event.getX();
+  startDragging(event,isInScrollingContainer());
+break;
+case MotionEvent.ACTION_MOVE:
+if (isDragging()) {
+updateDragging(event);
+}
+ else {
+final float x=event.getX();
+if (Math.abs(x - mDownX) > mTouchSlop) {
+  startDragging(event,false);
+}
+}
+break;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+stopDragging();
+break;
+}
+return true;
+}

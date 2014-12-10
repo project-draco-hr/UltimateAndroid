@@ -1,0 +1,9 @@
+{
+  mOffset=x;
+  int centerDiffX=mMarker.getMeasuredWidth() / 2;
+  int offset=(x - centerDiffX);
+  mMarker.offsetLeftAndRight(offset - mMarker.getLeft());
+  if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+    invalidate();
+  }
+}

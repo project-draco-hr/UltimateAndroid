@@ -1,0 +1,6 @@
+{
+  measureChildren(widthMeasureSpec,heightMeasureSpec);
+  int widthSize=MeasureSpec.getSize(widthMeasureSpec);
+  int heightSie=mMarker.getMeasuredHeight();
+  setMeasuredDimension(widthSize,heightSie);
+}

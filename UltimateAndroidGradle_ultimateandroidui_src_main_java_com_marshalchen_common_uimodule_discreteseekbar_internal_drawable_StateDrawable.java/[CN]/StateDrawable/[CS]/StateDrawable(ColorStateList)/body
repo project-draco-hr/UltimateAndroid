@@ -1,0 +1,6 @@
+{
+  super();
+  mTintStateList=tintStateList;
+  mCurrentColor=tintStateList.getDefaultColor();
+  mPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
+}

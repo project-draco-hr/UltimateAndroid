@@ -1,0 +1,10 @@
+{
+  DisplayMetrics displayMetrics=getResources().getDisplayMetrics();
+  mNumber.setText("-" + maxValue);
+  int wSpec=MeasureSpec.makeMeasureSpec(displayMetrics.widthPixels,MeasureSpec.AT_MOST);
+  int hSpec=MeasureSpec.makeMeasureSpec(displayMetrics.heightPixels,MeasureSpec.AT_MOST);
+  mNumber.measure(wSpec,hSpec);
+  mWidth=Math.max(mNumber.getMeasuredWidth(),mNumber.getMeasuredHeight());
+  removeView(mNumber);
+  addView(mNumber,new FrameLayout.LayoutParams(mWidth,mWidth,Gravity.LEFT | Gravity.TOP));
+}

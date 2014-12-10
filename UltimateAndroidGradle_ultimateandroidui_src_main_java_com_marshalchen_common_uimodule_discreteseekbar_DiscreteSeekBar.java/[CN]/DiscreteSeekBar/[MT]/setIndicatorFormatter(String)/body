@@ -1,0 +1,4 @@
+{
+  mIndicatorFormatter=formatter;
+  updateProgressMessage(mValue);
+}

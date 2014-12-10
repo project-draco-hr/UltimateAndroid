@@ -1,0 +1,4 @@
+{
+  mRectF.set(getBounds());
+  canvas.drawOval(mRectF,paint);
+}

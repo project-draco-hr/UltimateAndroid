@@ -1,0 +1,5 @@
+{
+  int centerDiffX=mMarker.getMeasuredWidth() / 2;
+  int offset=(mOffset - centerDiffX);
+  mMarker.layout(offset,0,offset + mMarker.getMeasuredWidth(),mMarker.getMeasuredHeight());
+}

@@ -1,0 +1,6 @@
+{
+  float initial=mAnimationInitialValue;
+  float destination=mReverse ? INACTIVE_SCALE : ACTIVE_SCALE;
+  mCurrentScale=initial + (destination - initial) * factor;
+  invalidateSelf();
+}

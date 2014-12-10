@@ -1,0 +1,5 @@
+{
+  int specWidth=View.MeasureSpec.makeMeasureSpec(screenSize.x,View.MeasureSpec.EXACTLY);
+  int specHeight=View.MeasureSpec.makeMeasureSpec(screenSize.y,View.MeasureSpec.AT_MOST);
+  mPopupView.measure(specWidth,specHeight);
+}

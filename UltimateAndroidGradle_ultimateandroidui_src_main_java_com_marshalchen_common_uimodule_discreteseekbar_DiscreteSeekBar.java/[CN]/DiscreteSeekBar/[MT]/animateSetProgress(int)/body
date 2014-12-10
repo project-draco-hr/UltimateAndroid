@@ -1,0 +1,21 @@
+{
+  final float curProgress=isAnimationRunning() ? getAnimationPosition() : getProgress();
+  if (progress < mMin) {
+    progress=mMin;
+  }
+ else   if (progress > mMax) {
+    progress=mMax;
+  }
+  if (mPositionAnimator != null) {
+    mPositionAnimator.cancel();
+  }
+  mAnimationTarget=progress;
+  mPositionAnimator=AnimatorCompat.create(curProgress,progress,new AnimatorCompat.AnimationFrameUpdateListener(){
+    @Override public void onAnimationFrame(    float currentValue){
+      setAnimationPosition(currentValue);
+    }
+  }
+);
+  mPositionAnimator.setDuration(PROGRESS_ANIMATION_DURATION);
+  mPositionAnimator.start();
+}

@@ -1,0 +1,7 @@
+{
+  float initial=mAnimationInitialValue;
+  float destination=mReverse ? 0f : 1f;
+  mCurrentScale=initial + (destination - initial) * factor;
+  computePath(getBounds());
+  invalidateSelf();
+}

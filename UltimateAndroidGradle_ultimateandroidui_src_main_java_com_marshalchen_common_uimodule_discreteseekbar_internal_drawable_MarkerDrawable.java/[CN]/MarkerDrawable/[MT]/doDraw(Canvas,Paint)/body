@@ -1,0 +1,8 @@
+{
+  if (!mPath.isEmpty()) {
+    paint.setStyle(Paint.Style.FILL);
+    int color=blendColors(mStartColor,mEndColor,mCurrentScale);
+    paint.setColor(color);
+    canvas.drawPath(mPath,paint);
+  }
+}

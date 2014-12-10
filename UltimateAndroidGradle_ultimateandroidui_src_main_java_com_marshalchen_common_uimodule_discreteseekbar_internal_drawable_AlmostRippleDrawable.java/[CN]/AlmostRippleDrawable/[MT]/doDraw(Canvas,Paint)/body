@@ -1,0 +1,21 @@
+{
+  Rect bounds=getBounds();
+  int size=Math.min(bounds.width(),bounds.height());
+  float scale=mCurrentScale;
+  int rippleColor=mRippleColor;
+  int bgColor=mRippleBgColor;
+  float radius=(size / 2);
+  float radiusAnimated=radius * scale;
+  if (scale > INACTIVE_SCALE) {
+    if (bgColor != 0) {
+      paint.setColor(bgColor);
+      paint.setAlpha(decreasedAlpha(Color.alpha(bgColor)));
+      canvas.drawCircle(bounds.centerX(),bounds.centerY(),radius,paint);
+    }
+    if (rippleColor != 0) {
+      paint.setColor(rippleColor);
+      paint.setAlpha(modulateAlpha(Color.alpha(rippleColor)));
+      canvas.drawCircle(bounds.centerX(),bounds.centerY(),radiusAnimated,paint);
+    }
+  }
+}

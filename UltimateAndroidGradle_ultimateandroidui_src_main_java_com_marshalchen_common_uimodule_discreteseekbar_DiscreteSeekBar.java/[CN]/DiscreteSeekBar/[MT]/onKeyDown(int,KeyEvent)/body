@@ -1,0 +1,19 @@
+{
+  boolean handled=false;
+  if (isEnabled()) {
+    int progress=getAnimatedProgress();
+switch (keyCode) {
+case KeyEvent.KEYCODE_DPAD_LEFT:
+      handled=true;
+    if (progress <= mMin)     break;
+  animateSetProgress(progress - mKeyProgressIncrement);
+break;
+case KeyEvent.KEYCODE_DPAD_RIGHT:
+handled=true;
+if (progress >= mMax) break;
+animateSetProgress(progress + mKeyProgressIncrement);
+break;
+}
+}
+return handled || super.onKeyDown(keyCode,event);
+}

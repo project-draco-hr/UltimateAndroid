@@ -1,0 +1,11 @@
+{
+  int thumbWidth=mThumb.getIntrinsicWidth();
+  int addedThumb=mAddedTouchBounds;
+  int halfThumb=thumbWidth / 2;
+  float scaleDraw=(mValue - mMin) / (float)(mMax - mMin);
+  int left=getPaddingLeft() + halfThumb + addedThumb;
+  int right=getWidth() - (getPaddingRight() + halfThumb + addedThumb);
+  int available=right - left;
+  final int thumbPos=(int)(scaleDraw * available + 0.5f);
+  updateThumbPos(thumbPos);
+}

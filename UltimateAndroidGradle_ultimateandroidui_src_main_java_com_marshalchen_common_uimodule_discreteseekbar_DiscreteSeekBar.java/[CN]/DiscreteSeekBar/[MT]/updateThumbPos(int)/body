@@ -1,0 +1,33 @@
+{
+  int thumbWidth=mThumb.getIntrinsicWidth();
+  int halfThumb=thumbWidth / 2;
+  int start;
+  if (isRtl()) {
+    start=getWidth() - getPaddingRight() - mAddedTouchBounds;
+    posX=start - posX - thumbWidth;
+  }
+ else {
+    start=getPaddingLeft() + mAddedTouchBounds;
+    posX=start + posX;
+  }
+  mThumb.copyBounds(mInvalidateRect);
+  mThumb.setBounds(posX,mInvalidateRect.top,posX + thumbWidth,mInvalidateRect.bottom);
+  if (isRtl()) {
+    mScrubber.getBounds().right=start - halfThumb;
+    mScrubber.getBounds().left=posX + halfThumb;
+  }
+ else {
+    mScrubber.getBounds().left=start + halfThumb;
+    mScrubber.getBounds().right=posX + halfThumb;
+  }
+  final Rect finalBounds=mTempRect;
+  mThumb.copyBounds(finalBounds);
+  if (!isInEditMode()) {
+    mIndicator.move(finalBounds.centerX());
+  }
+  mInvalidateRect.inset(-mAddedTouchBounds,-mAddedTouchBounds);
+  finalBounds.inset(-mAddedTouchBounds,-mAddedTouchBounds);
+  mInvalidateRect.union(finalBounds);
+  SeekBarCompat.setHotspotBounds(mRipple,finalBounds.left,finalBounds.top,finalBounds.right,finalBounds.bottom);
+  invalidate(mInvalidateRect);
+}

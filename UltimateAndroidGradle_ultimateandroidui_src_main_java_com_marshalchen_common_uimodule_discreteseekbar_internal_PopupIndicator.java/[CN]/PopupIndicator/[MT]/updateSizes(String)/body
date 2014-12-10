@@ -1,0 +1,6 @@
+{
+  dismissComplete();
+  if (mPopupView != null) {
+    mPopupView.mMarker.resetSizes(maxValue);
+  }
+}

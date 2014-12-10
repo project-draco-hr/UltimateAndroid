@@ -1,0 +1,6 @@
+{
+  if (mListener != null) {
+    mListener.onClosingComplete();
+  }
+  dismissComplete();
+}

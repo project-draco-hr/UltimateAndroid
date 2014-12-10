@@ -1,0 +1,3 @@
+{
+  number.setTextDirection(textDirection);
+}

@@ -1,0 +1,8 @@
+{
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    return SeekBarCompatDontCrash.getRipple(colorStateList);
+  }
+ else {
+    return new AlmostRippleDrawable(colorStateList);
+  }
+}

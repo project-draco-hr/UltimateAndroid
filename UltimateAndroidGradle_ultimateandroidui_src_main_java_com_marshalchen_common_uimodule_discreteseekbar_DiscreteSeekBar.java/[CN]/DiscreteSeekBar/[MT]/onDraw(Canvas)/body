@@ -1,0 +1,9 @@
+{
+  if (!isLollipopOrGreater) {
+    mRipple.draw(canvas);
+  }
+  super.onDraw(canvas);
+  mTrack.draw(canvas);
+  mScrubber.draw(canvas);
+  mThumb.draw(canvas);
+}

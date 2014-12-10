@@ -1,0 +1,4 @@
+{
+  mMarkerDrawable.stop();
+  mMarkerDrawable.animateToPressed();
+}

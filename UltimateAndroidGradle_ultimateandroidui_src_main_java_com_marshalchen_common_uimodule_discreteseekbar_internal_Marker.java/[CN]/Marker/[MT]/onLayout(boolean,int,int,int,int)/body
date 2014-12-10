@@ -1,0 +1,8 @@
+{
+  int left=getPaddingLeft();
+  int top=getPaddingTop();
+  int right=getWidth() - getPaddingRight();
+  int bottom=getHeight() - getPaddingBottom();
+  mNumber.layout(left,top,left + mWidth,top + mWidth);
+  mMarkerDrawable.setBounds(left,top,right,bottom);
+}

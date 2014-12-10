@@ -1,0 +1,54 @@
+{
+  int[] oldState=getState();
+  boolean oldPressed=false;
+  for (  int i : oldState) {
+    if (i == android.R.attr.state_pressed) {
+      oldPressed=true;
+    }
+  }
+  super.setState(stateSet);
+  boolean focused=false;
+  boolean pressed=false;
+  boolean disabled=true;
+  for (  int i : stateSet) {
+    if (i == android.R.attr.state_focused) {
+      focused=true;
+    }
+ else     if (i == android.R.attr.state_pressed) {
+      pressed=true;
+    }
+ else     if (i == android.R.attr.state_enabled) {
+      disabled=false;
+    }
+  }
+  if (disabled) {
+    unscheduleSelf(mUpdater);
+    mRippleColor=mDisabledColor;
+    mRippleBgColor=0;
+    mCurrentScale=ACTIVE_SCALE / 2;
+    invalidateSelf();
+  }
+ else {
+    if (pressed) {
+      animateToPressed();
+      mRippleColor=mRippleBgColor=mPressedColor;
+    }
+ else     if (oldPressed) {
+      mRippleColor=mRippleBgColor=mPressedColor;
+      animateToNormal();
+    }
+ else     if (focused) {
+      mRippleColor=mFocusedColor;
+      mRippleBgColor=0;
+      mCurrentScale=ACTIVE_SCALE;
+      invalidateSelf();
+    }
+ else {
+      mRippleColor=0;
+      mRippleBgColor=0;
+      mCurrentScale=INACTIVE_SCALE;
+      invalidateSelf();
+    }
+  }
+  return true;
+}

@@ -1,0 +1,13 @@
+{
+  WindowManager.LayoutParams p=new WindowManager.LayoutParams();
+  p.gravity=Gravity.START | Gravity.TOP;
+  p.width=ViewGroup.LayoutParams.MATCH_PARENT;
+  p.height=ViewGroup.LayoutParams.MATCH_PARENT;
+  p.format=PixelFormat.TRANSLUCENT;
+  p.flags=computeFlags(p.flags);
+  p.type=WindowManager.LayoutParams.TYPE_APPLICATION_PANEL;
+  p.token=token;
+  p.softInputMode=WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN;
+  p.setTitle("DiscreteSeekBar Indicator:" + Integer.toHexString(hashCode()));
+  return p;
+}

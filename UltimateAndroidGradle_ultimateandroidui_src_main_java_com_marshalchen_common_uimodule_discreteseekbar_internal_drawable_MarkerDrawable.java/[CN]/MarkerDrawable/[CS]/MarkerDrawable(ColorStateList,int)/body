@@ -1,0 +1,7 @@
+{
+  super(tintList);
+  mInterpolator=new AccelerateDecelerateInterpolator();
+  mClosedStateSize=closedSize;
+  mStartColor=tintList.getColorForState(new int[]{android.R.attr.state_pressed},tintList.getDefaultColor());
+  mEndColor=tintList.getDefaultColor();
+}

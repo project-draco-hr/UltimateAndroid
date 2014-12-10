@@ -1,0 +1,6 @@
+{
+  super.writeToParcel(outcoming,flags);
+  outcoming.writeInt(progress);
+  outcoming.writeInt(max);
+  outcoming.writeInt(min);
+}

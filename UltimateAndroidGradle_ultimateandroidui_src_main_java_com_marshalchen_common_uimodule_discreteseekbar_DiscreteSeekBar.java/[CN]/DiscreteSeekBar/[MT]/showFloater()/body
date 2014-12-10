@@ -1,0 +1,7 @@
+{
+  if (!isInEditMode()) {
+    mThumb.animateToPressed();
+    mIndicator.showIndicator(this,mThumb.getBounds());
+    notifyBubble(true);
+  }
+}

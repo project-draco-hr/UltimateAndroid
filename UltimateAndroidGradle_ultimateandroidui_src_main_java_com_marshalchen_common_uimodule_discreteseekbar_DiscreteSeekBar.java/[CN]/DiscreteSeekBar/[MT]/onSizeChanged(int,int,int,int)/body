@@ -1,0 +1,16 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  int thumbWidth=mThumb.getIntrinsicWidth();
+  int thumbHeight=mThumb.getIntrinsicHeight();
+  int addedThumb=mAddedTouchBounds;
+  int halfThumb=thumbWidth / 2;
+  int paddingLeft=getPaddingLeft() + addedThumb;
+  int paddingRight=getPaddingRight();
+  int bottom=getHeight() - getPaddingBottom() - addedThumb;
+  mThumb.setBounds(paddingLeft,bottom - thumbHeight,paddingLeft + thumbWidth,bottom);
+  int trackHeight=Math.max(mTrackHeight / 2,1);
+  mTrack.setBounds(paddingLeft + halfThumb,bottom - halfThumb - trackHeight,getWidth() - halfThumb - paddingRight- addedThumb,bottom - halfThumb + trackHeight);
+  int scrubberHeight=Math.max(mScrubberHeight / 2,2);
+  mScrubber.setBounds(paddingLeft + halfThumb,bottom - halfThumb - scrubberHeight,paddingLeft + halfThumb,bottom - halfThumb + scrubberHeight);
+  updateThumbPosFromCurrentProgress();
+}

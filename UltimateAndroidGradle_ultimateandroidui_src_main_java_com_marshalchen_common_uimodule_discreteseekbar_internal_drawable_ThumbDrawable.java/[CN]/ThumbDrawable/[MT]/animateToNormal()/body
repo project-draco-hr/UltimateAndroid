@@ -1,0 +1,6 @@
+{
+  mOpen=false;
+  mRunning=false;
+  unscheduleSelf(opener);
+  invalidateSelf();
+}

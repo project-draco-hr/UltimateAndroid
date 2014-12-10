@@ -1,0 +1,23 @@
+{
+  setHotspot(ev.getX(),ev.getY());
+  int x=(int)ev.getX();
+  Rect oldBounds=mThumb.getBounds();
+  int halfThumb=oldBounds.width() / 2;
+  int addedThumb=mAddedTouchBounds;
+  int newX=x - mDraggOffset + halfThumb;
+  int left=getPaddingLeft() + halfThumb + addedThumb;
+  int right=getWidth() - (getPaddingRight() + halfThumb + addedThumb);
+  if (newX < left) {
+    newX=left;
+  }
+ else   if (newX > right) {
+    newX=right;
+  }
+  int available=right - left;
+  float scale=(float)(newX - left) / (float)available;
+  if (isRtl()) {
+    scale=1f - scale;
+  }
+  int progress=Math.round((scale * (mMax - mMin)) + mMin);
+  setProgress(progress,true);
+}

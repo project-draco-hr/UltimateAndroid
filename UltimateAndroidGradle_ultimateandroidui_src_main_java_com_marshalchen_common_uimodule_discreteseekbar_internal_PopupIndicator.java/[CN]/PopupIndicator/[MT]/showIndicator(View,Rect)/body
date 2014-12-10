@@ -1,0 +1,15 @@
+{
+  if (isShowing()) {
+    mPopupView.mMarker.animateOpen();
+    return;
+  }
+  IBinder windowToken=parent.getWindowToken();
+  if (windowToken != null) {
+    WindowManager.LayoutParams p=createPopupLayout(windowToken);
+    p.gravity=Gravity.TOP | GravityCompat.START;
+    updateLayoutParamsForPosiion(parent,p,touchBounds.bottom);
+    mShowing=true;
+    translateViewIntoPosition(touchBounds.centerX());
+    invokePopup(p);
+  }
+}

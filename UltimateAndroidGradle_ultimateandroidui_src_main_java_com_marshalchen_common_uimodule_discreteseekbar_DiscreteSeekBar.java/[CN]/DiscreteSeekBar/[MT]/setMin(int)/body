@@ -1,0 +1,10 @@
+{
+  mMin=min;
+  if (mMin > mMax) {
+    setMax(mMin + 1);
+  }
+  updateKeyboardRange();
+  if (mValue < mMin || mValue > mMax) {
+    setProgress(mMin);
+  }
+}
