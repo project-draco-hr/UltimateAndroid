@@ -1,0 +1,5 @@
+{
+  mFromAlpha=fromAlpha;
+  mToAlpha=toAlpha;
+  super.start();
+}

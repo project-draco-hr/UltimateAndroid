@@ -1,0 +1,6 @@
+{
+  if (mMatchOutListener != null) {
+    mMatchOutListener.onBegin();
+  }
+  mHandler.sendEmptyMessage(0);
+}

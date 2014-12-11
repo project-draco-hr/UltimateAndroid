@@ -1,0 +1,44 @@
+{
+  this.setLayerType(View.LAYER_TYPE_SOFTWARE,null);
+  Utils.init(getContext());
+  mLineWidth=Utils.dp2px(1);
+  mDropHeight=Utils.dp2px(40);
+  horizontalRandomness=Utils.SCREEN_WIDTH_PIXELS / 2;
+  setPadding(0,Utils.dp2px(mPaddingTop),0,Utils.dp2px(mPaddingTop));
+  mHandler=new Handler(){
+    @Override public void dispatchMessage(    Message msg){
+      super.dispatchMessage(msg);
+      if (STATE == 1) {
+        if (progress < 100) {
+          progress++;
+          setProgress((progress * 1f / (100)));
+          mHandler.sendEmptyMessageDelayed(0,(long)(mInTime * 10));
+        }
+ else {
+          STATE=2;
+          if (mMatchInListener != null) {
+            mMatchInListener.onFinish();
+          }
+        }
+      }
+ else       if (STATE == 2) {
+        if (mIsInLoading) {
+          lightFinish();
+        }
+        if (progress > 0) {
+          progress--;
+          setProgress((progress * 1f / (100)));
+          mHandler.sendEmptyMessageDelayed(0,(long)(mOutTime * 10));
+        }
+ else {
+          progress=0;
+          if (mMatchOutListener != null) {
+            mMatchOutListener.onFinish();
+          }
+          STATE=1;
+        }
+      }
+    }
+  }
+;
+}

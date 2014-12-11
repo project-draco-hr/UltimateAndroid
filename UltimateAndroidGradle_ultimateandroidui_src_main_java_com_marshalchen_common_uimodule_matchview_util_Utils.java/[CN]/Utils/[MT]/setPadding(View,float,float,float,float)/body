@@ -1,0 +1,3 @@
+{
+  view.setPadding(designedDP2px(left),dp2px(top),designedDP2px(right),dp2px(bottom));
+}

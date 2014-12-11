@@ -1,0 +1,10 @@
+{
+  this.index=index;
+  midPoint=new PointF((start.x + end.x) / 2,(start.y + end.y) / 2);
+  mCStartPoint=new PointF(start.x - midPoint.x,start.y - midPoint.y);
+  mCEndPoint=new PointF(end.x - midPoint.x,end.y - midPoint.y);
+  setColor(color);
+  setLineWidth(lineWidth);
+  mPaint.setAntiAlias(true);
+  mPaint.setStyle(Paint.Style.STROKE);
+}

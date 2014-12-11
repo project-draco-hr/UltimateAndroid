@@ -1,0 +1,4 @@
+{
+  mIsInLoading=false;
+  mAniController.stop();
+}

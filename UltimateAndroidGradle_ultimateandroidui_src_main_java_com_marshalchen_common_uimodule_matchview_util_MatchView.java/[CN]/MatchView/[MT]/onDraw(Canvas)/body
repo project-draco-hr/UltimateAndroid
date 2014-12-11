@@ -1,0 +1,51 @@
+{
+  super.onDraw(canvas);
+  float progress=mProgress;
+  int c1=canvas.save();
+  int len=mItemList.size();
+  for (int i=0; i < mItemList.size(); i++) {
+    canvas.save();
+    MatchItem LoadingViewItem=mItemList.get(i);
+    float offsetX=mOffsetX + LoadingViewItem.midPoint.x;
+    float offsetY=mOffsetY + LoadingViewItem.midPoint.y;
+    if (mIsInLoading) {
+      LoadingViewItem.getTransformation(getDrawingTime(),mTransformation);
+      canvas.translate(offsetX,offsetY);
+    }
+ else {
+      if (progress == 0) {
+        LoadingViewItem.resetPosition(horizontalRandomness);
+        continue;
+      }
+      float startPadding=(1 - internalAnimationFactor) * i / len;
+      float endPadding=1 - internalAnimationFactor - startPadding;
+      if (progress == 1 || progress >= 1 - endPadding) {
+        canvas.translate(offsetX,offsetY);
+        LoadingViewItem.setAlpha(mBarDarkAlpha);
+      }
+ else {
+        float realProgress;
+        if (progress <= startPadding) {
+          realProgress=0;
+        }
+ else {
+          realProgress=Math.min(1,(progress - startPadding) / internalAnimationFactor);
+        }
+        offsetX+=LoadingViewItem.translationX * (1 - realProgress);
+        offsetY+=-mDropHeight * (1 - realProgress);
+        Matrix matrix=new Matrix();
+        matrix.postRotate(360 * realProgress);
+        matrix.postScale(realProgress,realProgress);
+        matrix.postTranslate(offsetX,offsetY);
+        LoadingViewItem.setAlpha(mBarDarkAlpha * realProgress);
+        canvas.concat(matrix);
+      }
+    }
+    LoadingViewItem.draw(canvas);
+    canvas.restore();
+  }
+  if (mIsInLoading) {
+    invalidate();
+  }
+  canvas.restoreToCount(c1);
+}

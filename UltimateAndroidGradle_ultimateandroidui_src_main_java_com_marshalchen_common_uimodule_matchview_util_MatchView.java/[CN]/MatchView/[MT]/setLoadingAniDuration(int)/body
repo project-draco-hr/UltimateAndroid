@@ -1,0 +1,4 @@
+{
+  mLoadingAniDuration=duration;
+  mLoadingAniSegDuration=duration;
+}

@@ -1,0 +1,10 @@
+{
+  if (mItemList.size() == 0) {
+    return;
+  }
+  STATE=1;
+  mHandler.sendEmptyMessage(0);
+  if (mMatchInListener != null) {
+    mMatchInListener.onBegin();
+  }
+}

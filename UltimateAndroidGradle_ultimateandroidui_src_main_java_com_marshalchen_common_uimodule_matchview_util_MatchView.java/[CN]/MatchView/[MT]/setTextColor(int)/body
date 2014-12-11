@@ -1,0 +1,7 @@
+{
+  mTextColor=color;
+  for (int i=0; i < mItemList.size(); i++) {
+    mItemList.get(i).setColor(color);
+  }
+  return this;
+}

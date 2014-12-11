@@ -1,0 +1,3 @@
+{
+  mPaint.setAlpha((int)(alpha * 255));
+}

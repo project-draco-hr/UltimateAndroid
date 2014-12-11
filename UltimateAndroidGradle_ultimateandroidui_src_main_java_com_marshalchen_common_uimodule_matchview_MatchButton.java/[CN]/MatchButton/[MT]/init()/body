@@ -1,0 +1,4 @@
+{
+  PraseText();
+  super.init();
+}

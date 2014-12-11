@@ -1,0 +1,23 @@
+{
+  float drawWidth=0;
+  float drawHeight=0;
+  boolean shouldLayout=mItemList.size() > 0;
+  mItemList.clear();
+  for (int i=0; i < pointList.size(); i++) {
+    float[] line=pointList.get(i);
+    PointF startPoint=new PointF(Utils.dp2px(line[0]) * mScale,Utils.dp2px(line[1]) * mScale);
+    PointF endPoint=new PointF(Utils.dp2px(line[2]) * mScale,Utils.dp2px(line[3]) * mScale);
+    drawWidth=Math.max(drawWidth,startPoint.x);
+    drawWidth=Math.max(drawWidth,endPoint.x);
+    drawHeight=Math.max(drawHeight,startPoint.y);
+    drawHeight=Math.max(drawHeight,endPoint.y);
+    MatchItem item=new MatchItem(i,startPoint,endPoint,mTextColor,mLineWidth);
+    item.resetPosition(horizontalRandomness);
+    mItemList.add(item);
+  }
+  mDrawZoneWidth=(int)Math.ceil(drawWidth);
+  mDrawZoneHeight=(int)Math.ceil(drawHeight);
+  if (shouldLayout) {
+    requestLayout();
+  }
+}

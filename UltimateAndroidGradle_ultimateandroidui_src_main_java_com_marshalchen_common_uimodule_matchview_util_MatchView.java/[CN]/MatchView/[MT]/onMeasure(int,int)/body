@@ -1,0 +1,8 @@
+{
+  int height=getTopOffset() + mDrawZoneHeight + getBottomOffset();
+  heightMeasureSpec=MeasureSpec.makeMeasureSpec(height,MeasureSpec.EXACTLY);
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  mOffsetX=(getMeasuredWidth() - mDrawZoneWidth) / 2;
+  mOffsetY=getTopOffset();
+  mDropHeight=getTopOffset();
+}
