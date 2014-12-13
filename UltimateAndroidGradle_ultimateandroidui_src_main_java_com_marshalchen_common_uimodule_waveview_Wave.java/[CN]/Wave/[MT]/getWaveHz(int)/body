@@ -1,0 +1,11 @@
+{
+switch (size) {
+case WaveView.LARGE:
+    return WAVE_HZ_FAST;
+case WaveView.MIDDLE:
+  return WAVE_HZ_NORMAL;
+case WaveView.LITTLE:
+return WAVE_HZ_SLOW;
+}
+return 0;
+}

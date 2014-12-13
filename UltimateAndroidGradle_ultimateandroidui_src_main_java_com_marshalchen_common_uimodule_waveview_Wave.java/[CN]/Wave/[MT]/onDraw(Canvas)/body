@@ -1,0 +1,5 @@
+{
+  super.onDraw(canvas);
+  canvas.drawPath(mBlowWavePath,mBlowWavePaint);
+  canvas.drawPath(mAboveWavePath,mAboveWavePaint);
+}

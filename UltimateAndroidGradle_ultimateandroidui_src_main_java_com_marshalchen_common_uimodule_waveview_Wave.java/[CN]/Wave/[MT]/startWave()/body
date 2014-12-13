@@ -1,0 +1,11 @@
+{
+  if (getWidth() != 0) {
+    int width=getWidth();
+    mWaveLength=width * mWaveMultiple;
+    left=getLeft();
+    right=getRight();
+    bottom=getBottom();
+    mMaxRight=right + X_SPACE;
+    omega=PI2 / mWaveLength;
+  }
+}

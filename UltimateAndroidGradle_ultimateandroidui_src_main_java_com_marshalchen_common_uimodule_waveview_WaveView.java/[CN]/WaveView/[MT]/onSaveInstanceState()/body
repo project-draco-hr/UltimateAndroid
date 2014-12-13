@@ -1,0 +1,6 @@
+{
+  Parcelable superState=super.onSaveInstanceState();
+  SavedState ss=new SavedState(superState);
+  ss.progress=mProgress;
+  return ss;
+}

@@ -1,0 +1,9 @@
+{
+synchronized (Wave.this) {
+    long start=System.currentTimeMillis();
+    calculatePath();
+    invalidate();
+    long gap=16 - System.currentTimeMillis() - start;
+    postDelayed(this,gap < 0 ? 0 : gap);
+  }
+}

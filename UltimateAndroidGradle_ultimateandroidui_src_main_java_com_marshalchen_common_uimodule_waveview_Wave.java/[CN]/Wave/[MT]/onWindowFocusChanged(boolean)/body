@@ -1,0 +1,8 @@
+{
+  super.onWindowFocusChanged(hasWindowFocus);
+  if (hasWindowFocus) {
+    if (mWaveLength == 0) {
+      startWave();
+    }
+  }
+}

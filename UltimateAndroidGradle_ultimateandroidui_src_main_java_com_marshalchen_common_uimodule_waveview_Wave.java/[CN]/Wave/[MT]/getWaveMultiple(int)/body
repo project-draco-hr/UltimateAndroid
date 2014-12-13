@@ -1,0 +1,11 @@
+{
+switch (size) {
+case WaveView.LARGE:
+    return WAVE_LENGTH_MULTIPLE_LARGE;
+case WaveView.MIDDLE:
+  return WAVE_LENGTH_MULTIPLE_MIDDLE;
+case WaveView.LITTLE:
+return WAVE_LENGTH_MULTIPLE_LITTLE;
+}
+return 0;
+}

@@ -1,0 +1,14 @@
+{
+  if (mBlowOffset > Float.MAX_VALUE - 100) {
+    mBlowOffset=0;
+  }
+ else {
+    mBlowOffset+=mWaveHz;
+  }
+  if (mAboveOffset > Float.MAX_VALUE - 100) {
+    mAboveOffset=0;
+  }
+ else {
+    mAboveOffset+=mWaveHz;
+  }
+}
