@@ -1,0 +1,7 @@
+{
+  mNumber.setVisibility(View.VISIBLE);
+  ViewCompat.animate(mNumber).alpha(1f).setDuration(100).start();
+  if (getParent() instanceof MarkerDrawable.MarkerAnimationListener) {
+    ((MarkerDrawable.MarkerAnimationListener)getParent()).onOpeningComplete();
+  }
+}

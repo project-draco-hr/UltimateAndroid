@@ -1,0 +1,18 @@
+{
+  mAboveWavePath.reset();
+  mBlowWavePath.reset();
+  getWaveOffset();
+  float y;
+  mAboveWavePath.moveTo(left,bottom);
+  for (float x=0; x <= mMaxRight; x+=X_SPACE) {
+    y=(float)(mWaveHeight * Math.sin(omega * x + mAboveOffset) + mWaveHeight);
+    mAboveWavePath.lineTo(x,y);
+  }
+  mAboveWavePath.lineTo(right,bottom);
+  mBlowWavePath.moveTo(left,bottom);
+  for (float x=0; x <= mMaxRight; x+=X_SPACE) {
+    y=(float)(mWaveHeight * Math.sin(omega * x + mBlowOffset) + mWaveHeight);
+    mBlowWavePath.lineTo(x,y);
+  }
+  mBlowWavePath.lineTo(right,bottom);
+}

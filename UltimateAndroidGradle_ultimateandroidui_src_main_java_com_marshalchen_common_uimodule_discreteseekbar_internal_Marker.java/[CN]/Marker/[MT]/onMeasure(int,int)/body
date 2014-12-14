@@ -1,0 +1,7 @@
+{
+  measureChildren(widthMeasureSpec,heightMeasureSpec);
+  int widthSize=mWidth + getPaddingLeft() + getPaddingRight();
+  int heightSize=mWidth + getPaddingTop() + getPaddingBottom();
+  int diff=(int)((1.41f * mWidth) - mWidth) / 2;
+  setMeasuredDimension(widthSize,heightSize + diff + mSeparation);
+}

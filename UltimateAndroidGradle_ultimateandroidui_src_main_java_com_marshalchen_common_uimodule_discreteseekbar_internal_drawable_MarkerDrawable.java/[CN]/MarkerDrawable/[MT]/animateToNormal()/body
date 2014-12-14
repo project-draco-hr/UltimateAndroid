@@ -1,0 +1,15 @@
+{
+  mReverse=true;
+  unscheduleSelf(mUpdater);
+  if (mCurrentScale > 0) {
+    mRunning=true;
+    mAnimationInitialValue=mCurrentScale;
+    float durationFactor=1f - mCurrentScale;
+    mDuration=ANIMATION_DURATION - (int)(ANIMATION_DURATION * durationFactor);
+    mStartTime=SystemClock.uptimeMillis();
+    scheduleSelf(mUpdater,mStartTime + FRAME_DURATION);
+  }
+ else {
+    notifyFinishedToListener();
+  }
+}

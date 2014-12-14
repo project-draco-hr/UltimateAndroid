@@ -1,0 +1,23 @@
+{
+  final float currentScale=mCurrentScale;
+  final Path path=mPath;
+  final RectF rect=mRect;
+  final Matrix matrix=mMatrix;
+  path.reset();
+  int totalSize=Math.min(bounds.width(),bounds.height());
+  float initial=mClosedStateSize;
+  float destination=totalSize;
+  float currentSize=initial + (destination - initial) * currentScale;
+  float halfSize=currentSize / 2f;
+  float inverseScale=1f - currentScale;
+  float cornerSize=halfSize * inverseScale;
+  float[] corners=new float[]{halfSize,halfSize,halfSize,halfSize,halfSize,halfSize,cornerSize,cornerSize};
+  rect.set(bounds.left,bounds.top,bounds.left + currentSize,bounds.top + currentSize);
+  path.addRoundRect(rect,corners,Path.Direction.CCW);
+  matrix.reset();
+  matrix.postRotate(-45,bounds.left + halfSize,bounds.top + halfSize);
+  matrix.postTranslate((bounds.width() - currentSize) / 2,0);
+  float hDiff=(bounds.bottom - currentSize - mExternalOffset) * inverseScale;
+  matrix.postTranslate(0,hDiff);
+  path.transform(matrix);
+}

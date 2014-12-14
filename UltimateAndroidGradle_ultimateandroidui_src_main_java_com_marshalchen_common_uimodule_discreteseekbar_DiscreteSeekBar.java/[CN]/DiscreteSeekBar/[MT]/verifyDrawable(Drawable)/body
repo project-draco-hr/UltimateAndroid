@@ -1,0 +1,3 @@
+{
+  return who == mThumb || who == mTrack || who == mScrubber || who == mRipple || super.verifyDrawable(who);
+}

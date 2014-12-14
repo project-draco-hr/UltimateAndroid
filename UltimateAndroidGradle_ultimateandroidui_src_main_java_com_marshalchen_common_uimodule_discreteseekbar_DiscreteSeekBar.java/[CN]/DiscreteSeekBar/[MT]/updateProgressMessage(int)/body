@@ -1,0 +1,5 @@
+{
+  if (!isInEditMode()) {
+    mIndicator.setValue(convertValueToMessage(mNumericTransformer.transform(value)));
+  }
+}

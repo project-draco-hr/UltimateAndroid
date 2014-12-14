@@ -1,0 +1,4 @@
+{
+  this.mProgress=progress > 100 ? 100 : progress;
+  computeWaveToTop();
+}

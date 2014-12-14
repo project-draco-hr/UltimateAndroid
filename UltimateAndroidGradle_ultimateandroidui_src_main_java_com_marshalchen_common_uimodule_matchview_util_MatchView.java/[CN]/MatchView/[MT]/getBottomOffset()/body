@@ -1,0 +1,3 @@
+{
+  return getPaddingBottom() + Utils.dp2px(10);
+}

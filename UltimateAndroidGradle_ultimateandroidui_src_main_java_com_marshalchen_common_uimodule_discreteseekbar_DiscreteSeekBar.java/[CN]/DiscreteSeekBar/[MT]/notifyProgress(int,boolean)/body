@@ -1,0 +1,6 @@
+{
+  if (mPublicChangeListener != null) {
+    mPublicChangeListener.onProgressChanged(DiscreteSeekBar.this,value,fromUser);
+  }
+  onValueChanged(value);
+}

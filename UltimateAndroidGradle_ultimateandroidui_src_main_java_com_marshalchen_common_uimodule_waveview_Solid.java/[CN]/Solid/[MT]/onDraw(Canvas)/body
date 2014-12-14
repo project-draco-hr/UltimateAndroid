@@ -1,0 +1,5 @@
+{
+  super.onDraw(canvas);
+  canvas.drawRect(getLeft(),0,getRight(),getBottom(),blowWavePaint);
+  canvas.drawRect(getLeft(),0,getRight(),getBottom(),aboveWavePaint);
+}

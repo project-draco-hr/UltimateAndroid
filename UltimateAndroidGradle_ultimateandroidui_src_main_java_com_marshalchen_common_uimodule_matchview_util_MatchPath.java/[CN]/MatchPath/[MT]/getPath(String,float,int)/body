@@ -1,0 +1,41 @@
+{
+  ArrayList<float[]> list=new ArrayList<float[]>();
+  float offsetForWidth=0;
+  for (int i=0; i < str.length(); i++) {
+    int pos=str.charAt(i);
+    int key=sPointList.indexOfKey(pos);
+    if (key == -1) {
+      continue;
+    }
+    float[] points=sPointList.get(pos);
+    if (isButtonModle) {
+      float[] points1=new float[points.length + 16];
+      for (int j=0; j < sPointList.get(H_TOP_BOTTOM).length; j++) {
+        points1[j]=sPointList.get(H_TOP_BOTTOM)[j];
+      }
+      for (int j=0; j < points.length; j++) {
+        points1[j + 16]=points[j];
+      }
+      points=points1;
+    }
+    int pointCount=points.length / 4;
+    for (int j=0; j < pointCount; j++) {
+      float[] line=new float[4];
+      for (int k=0; k < 4; k++) {
+        float l=points[j * 4 + k];
+        if (k % 2 == 0) {
+          line[k]=(l + offsetForWidth) * scale;
+        }
+ else {
+          line[k]=l * scale;
+        }
+      }
+      list.add(line);
+    }
+    offsetForWidth+=57 + gapBetweenLetter;
+  }
+  if (isButtonModle) {
+    isButtonModle=false;
+  }
+  return list;
+}

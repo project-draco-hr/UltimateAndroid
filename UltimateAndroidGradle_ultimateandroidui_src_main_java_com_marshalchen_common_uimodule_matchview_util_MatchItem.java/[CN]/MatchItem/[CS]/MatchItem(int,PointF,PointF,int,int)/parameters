@@ -1,0 +1,5 @@
+int index
+PointF start
+PointF end
+int color
+int lineWidth

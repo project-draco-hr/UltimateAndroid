@@ -1,0 +1,10 @@
+{
+  super.onLayout(changed,left,top,right,bottom);
+  if (changed) {
+    removeCallbacks(mShowIndicatorRunnable);
+    if (!isInEditMode()) {
+      mIndicator.dismissComplete();
+    }
+    updateFromDrawableState();
+  }
+}

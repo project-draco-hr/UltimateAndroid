@@ -1,0 +1,6 @@
+{
+  mWindowManager=(WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+  mPopupView=new Floater(context,attrs,defStyleAttr,maxValue);
+  DisplayMetrics displayMetrics=context.getResources().getDisplayMetrics();
+  screenSize.set(displayMetrics.widthPixels,displayMetrics.heightPixels);
+}

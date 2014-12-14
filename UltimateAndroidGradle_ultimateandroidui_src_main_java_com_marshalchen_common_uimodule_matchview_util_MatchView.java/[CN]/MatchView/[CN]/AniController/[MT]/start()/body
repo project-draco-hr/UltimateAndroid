@@ -1,0 +1,8 @@
+{
+  mRunning=true;
+  mTick=0;
+  mInterval=mLoadingAniDuration / mItemList.size();
+  mCountPerSeg=mLoadingAniSegDuration / mInterval;
+  mSegCount=mItemList.size() / mCountPerSeg + 1;
+  run();
+}

@@ -1,0 +1,4 @@
+{
+  mAlpha=alpha;
+  invalidateSelf();
+}

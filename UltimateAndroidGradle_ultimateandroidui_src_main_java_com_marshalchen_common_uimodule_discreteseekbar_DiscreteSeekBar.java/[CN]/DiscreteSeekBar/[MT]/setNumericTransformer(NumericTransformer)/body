@@ -1,0 +1,7 @@
+{
+  mNumericTransformer=transformer != null ? transformer : new DefaultNumericTransformer();
+  if (!isInEditMode()) {
+    mIndicator.updateSizes(convertValueToMessage(mNumericTransformer.transform(mMax)));
+  }
+  updateProgressMessage(mValue);
+}

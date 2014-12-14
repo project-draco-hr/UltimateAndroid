@@ -1,0 +1,7 @@
+{
+  super.onDetachedFromWindow();
+  removeCallbacks(mShowIndicatorRunnable);
+  if (!isInEditMode()) {
+    mIndicator.dismissComplete();
+  }
+}

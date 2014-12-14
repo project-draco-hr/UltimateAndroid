@@ -1,0 +1,8 @@
+{
+  final float inverseFactor=1f - factor;
+  float a=(Color.alpha(color1) * factor) + (Color.alpha(color2) * inverseFactor);
+  float r=(Color.red(color1) * factor) + (Color.red(color2) * inverseFactor);
+  float g=(Color.green(color1) * factor) + (Color.green(color2) * inverseFactor);
+  float b=(Color.blue(color1) * factor) + (Color.blue(color2) * inverseFactor);
+  return Color.argb((int)a,(int)r,(int)g,(int)b);
+}

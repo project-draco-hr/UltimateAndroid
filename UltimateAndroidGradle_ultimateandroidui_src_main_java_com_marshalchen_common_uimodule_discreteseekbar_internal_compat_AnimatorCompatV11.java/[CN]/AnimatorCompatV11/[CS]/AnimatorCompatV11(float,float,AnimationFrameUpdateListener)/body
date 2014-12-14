@@ -1,0 +1,10 @@
+{
+  super();
+  animator=ValueAnimator.ofFloat(start,end);
+  animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator animation){
+      listener.onAnimationFrame((Float)animation.getAnimatedValue());
+    }
+  }
+);
+}

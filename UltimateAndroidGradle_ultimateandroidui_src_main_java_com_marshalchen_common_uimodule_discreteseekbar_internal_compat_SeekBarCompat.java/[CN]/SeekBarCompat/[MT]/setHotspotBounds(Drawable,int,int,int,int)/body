@@ -1,0 +1,9 @@
+{
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    int size=(right - left) / 8;
+    DrawableCompat.setHotspotBounds(drawable,left + size,top + size,right - size,bottom - size);
+  }
+ else {
+    drawable.setBounds(left,top,right,bottom);
+  }
+}

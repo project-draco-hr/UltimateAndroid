@@ -1,0 +1,6 @@
+{
+  super.onWindowFocusChanged(hasWindowFocus);
+  if (hasWindowFocus) {
+    computeWaveToTop();
+  }
+}

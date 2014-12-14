@@ -1,0 +1,3 @@
+{
+  DrawableCompat.setHotspot(mRipple,x,y);
+}

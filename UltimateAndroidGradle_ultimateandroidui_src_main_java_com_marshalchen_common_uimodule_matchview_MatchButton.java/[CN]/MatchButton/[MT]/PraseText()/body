@@ -1,0 +1,10 @@
+{
+  if (!TextUtils.isEmpty(mContent)) {
+    MatchPath.isButtonModle=true;
+    StringBuffer strBuffer=new StringBuffer();
+    strBuffer.append(MatchPath.V_LEFT);
+    strBuffer.append(mContent);
+    strBuffer.append(MatchPath.V_RIGHT);
+    this.mContent=strBuffer.toString();
+  }
+}

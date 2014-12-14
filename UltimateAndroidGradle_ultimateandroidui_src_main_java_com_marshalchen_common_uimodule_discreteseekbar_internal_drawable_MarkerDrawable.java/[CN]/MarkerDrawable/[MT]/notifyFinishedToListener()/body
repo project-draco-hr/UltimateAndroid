@@ -1,0 +1,10 @@
+{
+  if (mMarkerListener != null) {
+    if (mReverse) {
+      mMarkerListener.onClosingComplete();
+    }
+ else {
+      mMarkerListener.onOpeningComplete();
+    }
+  }
+}

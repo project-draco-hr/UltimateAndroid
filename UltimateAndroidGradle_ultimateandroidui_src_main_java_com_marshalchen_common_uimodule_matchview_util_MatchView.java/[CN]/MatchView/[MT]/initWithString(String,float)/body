@@ -1,0 +1,4 @@
+{
+  ArrayList<float[]> pointList=MatchPath.getPath(str,fontSize * 0.01f,14);
+  initWithPointList(pointList);
+}

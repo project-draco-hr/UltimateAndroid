@@ -1,0 +1,9 @@
+{
+  this.setBackgroundColor(Color.TRANSPARENT);
+  if (!TextUtils.isEmpty(mContent)) {
+    setTextColor(mTextColor);
+    setTextSize(mTextSize);
+    initWithString(mContent);
+    show();
+  }
+}

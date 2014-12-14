@@ -1,0 +1,7 @@
+{
+  if (!mOpen) {
+    Rect bounds=getBounds();
+    float radius=(mSize / 2);
+    canvas.drawCircle(bounds.centerX(),bounds.centerY(),radius,paint);
+  }
+}

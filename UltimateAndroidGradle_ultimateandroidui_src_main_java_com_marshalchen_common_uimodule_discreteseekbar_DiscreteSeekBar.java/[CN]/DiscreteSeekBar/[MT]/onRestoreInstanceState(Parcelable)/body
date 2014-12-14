@@ -1,0 +1,11 @@
+{
+  if (state == null || !state.getClass().equals(CustomState.class)) {
+    super.onRestoreInstanceState(state);
+    return;
+  }
+  CustomState customState=(CustomState)state;
+  setMin(customState.min);
+  setMax(customState.max);
+  setProgress(customState.progress,false);
+  super.onRestoreInstanceState(customState.getSuperState());
+}

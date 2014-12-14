@@ -1,0 +1,5 @@
+{
+  Random random=new Random();
+  int randomNumber=-random.nextInt(horizontalRandomness) + horizontalRandomness;
+  translationX=randomNumber;
+}

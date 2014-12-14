@@ -1,0 +1,3 @@
+{
+  initWithString(str,mTextSize);
+}

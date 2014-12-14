@@ -1,0 +1,6 @@
+{
+  mPaint.setColor(mCurrentColor);
+  int alpha=modulateAlpha(Color.alpha(mCurrentColor));
+  mPaint.setAlpha(alpha);
+  doDraw(canvas,mPaint);
+}

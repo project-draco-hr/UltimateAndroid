@@ -1,0 +1,29 @@
+{
+  if (mDialog == null) {
+    mDialog=new Dialog(getActivity(),R.style.match_view_dialog);
+    mDialog.setContentView(R.layout.match_view_dialog_match);
+    mDialog.setCanceledOnTouchOutside(true);
+    mDialog.getWindow().setGravity(Gravity.CENTER);
+    View view=mDialog.getWindow().getDecorView();
+    matchTextView=(MatchTextView)view.findViewById(R.id.mTextView);
+    matchTextView.setMatchOutListener(new MatchView.MatchOutListener(){
+      @Override public void onBegin(){
+      }
+      @Override public void onProgressUpdate(      float progress){
+      }
+      @Override public void onFinish(){
+        MatchDialog.super.onStop();
+      }
+    }
+);
+    mMatchButton=(MatchButton)view.findViewById(R.id.mButton);
+    mMatchButton.setOnClickListener(new View.OnClickListener(){
+      @Override public void onClick(      View v){
+        mMatchButton.hide();
+        matchTextView.hide();
+      }
+    }
+);
+  }
+  return mDialog;
+}

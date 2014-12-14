@@ -1,0 +1,3 @@
+{
+  return (ViewCompat.getLayoutDirection(this) == LAYOUT_DIRECTION_RTL) && mMirrorForRtl;
+}

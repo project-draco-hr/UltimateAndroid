@@ -1,0 +1,16 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.wave_view_activity);
+  seekBar=(SeekBar)findViewById(R.id.seek_bar);
+  waveView=(WaveView)findViewById(R.id.wave_view);
+  seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+    @Override public void onProgressChanged(    SeekBar seekBar,    int progress,    boolean fromUser){
+      waveView.setProgress(progress);
+    }
+    @Override public void onStartTrackingTouch(    SeekBar seekBar){
+    }
+    @Override public void onStopTrackingTouch(    SeekBar seekBar){
+    }
+  }
+);
+}

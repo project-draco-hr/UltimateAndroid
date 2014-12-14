@@ -1,0 +1,4 @@
+{
+  mMarkerDrawable.draw(canvas);
+  super.dispatchDraw(canvas);
+}

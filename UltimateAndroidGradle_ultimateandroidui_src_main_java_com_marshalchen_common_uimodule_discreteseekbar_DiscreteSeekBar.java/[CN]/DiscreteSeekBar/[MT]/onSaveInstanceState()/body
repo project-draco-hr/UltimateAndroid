@@ -1,0 +1,8 @@
+{
+  Parcelable superState=super.onSaveInstanceState();
+  CustomState state=new CustomState(superState);
+  state.progress=getProgress();
+  state.max=mMax;
+  state.min=mMin;
+  return state;
+}

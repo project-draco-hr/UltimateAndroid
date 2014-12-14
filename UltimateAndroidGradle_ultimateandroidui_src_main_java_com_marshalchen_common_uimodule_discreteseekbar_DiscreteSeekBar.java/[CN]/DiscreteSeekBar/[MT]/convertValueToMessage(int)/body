@@ -1,0 +1,8 @@
+{
+  String format=mIndicatorFormatter != null ? mIndicatorFormatter : DEFAULT_FORMATTER;
+  if (mFormatter == null || mFormatter.locale().equals(Locale.getDefault())) {
+    int bufferSize=format.length() + String.valueOf(mMax).length();
+    mFormatter=new Formatter(new StringBuilder(bufferSize),Locale.getDefault());
+  }
+  return mFormatter.format(format,value).toString();
+}

@@ -1,0 +1,6 @@
+{
+  if (SCREEN_WIDTH_DP != 320) {
+    designedDp=designedDp * SCREEN_WIDTH_DP / 320f;
+  }
+  return dp2px(designedDp);
+}

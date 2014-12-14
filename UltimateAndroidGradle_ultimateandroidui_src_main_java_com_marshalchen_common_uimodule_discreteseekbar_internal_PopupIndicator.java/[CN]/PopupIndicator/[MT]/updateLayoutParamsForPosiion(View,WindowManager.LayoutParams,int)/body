@@ -1,0 +1,10 @@
+{
+  measureFloater();
+  int measuredHeight=mPopupView.getMeasuredHeight();
+  int paddingBottom=mPopupView.mMarker.getPaddingBottom();
+  anchor.getLocationInWindow(mDrawingLocation);
+  p.x=0;
+  p.y=mDrawingLocation[1] - measuredHeight + yOffset + paddingBottom;
+  p.width=screenSize.x;
+  p.height=measuredHeight;
+}

@@ -1,0 +1,5 @@
+{
+  if (getParent() instanceof MarkerDrawable.MarkerAnimationListener) {
+    ((MarkerDrawable.MarkerAnimationListener)getParent()).onClosingComplete();
+  }
+}

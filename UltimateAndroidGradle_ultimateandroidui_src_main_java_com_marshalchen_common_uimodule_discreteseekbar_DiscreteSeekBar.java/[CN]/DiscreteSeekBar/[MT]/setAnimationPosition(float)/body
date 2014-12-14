@@ -1,0 +1,5 @@
+{
+  mAnimationPosition=position;
+  float currentScale=(position - mMin) / (float)(mMax - mMin);
+  updateProgressFromAnimation(currentScale);
+}

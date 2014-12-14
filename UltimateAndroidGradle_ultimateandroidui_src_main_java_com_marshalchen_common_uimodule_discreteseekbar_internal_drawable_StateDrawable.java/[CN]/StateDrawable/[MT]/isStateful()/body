@@ -1,0 +1,3 @@
+{
+  return (mTintStateList.isStateful()) || super.isStateful();
+}

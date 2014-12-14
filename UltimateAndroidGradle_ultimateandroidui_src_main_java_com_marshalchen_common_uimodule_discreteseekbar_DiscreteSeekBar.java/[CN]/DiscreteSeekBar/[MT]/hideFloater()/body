@@ -1,0 +1,7 @@
+{
+  removeCallbacks(mShowIndicatorRunnable);
+  if (!isInEditMode()) {
+    mIndicator.dismiss();
+    notifyBubble(false);
+  }
+}

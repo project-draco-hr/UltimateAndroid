@@ -1,0 +1,7 @@
+{
+  super(tintStateList);
+  mInterpolator=new AccelerateDecelerateInterpolator();
+  mFocusedColor=tintStateList.getColorForState(new int[]{android.R.attr.state_focused},0xFFFF0000);
+  mPressedColor=tintStateList.getColorForState(new int[]{android.R.attr.state_pressed},0xFFFF0000);
+  mDisabledColor=tintStateList.getColorForState(new int[]{-android.R.attr.state_enabled},0xFFFF0000);
+}

@@ -1,0 +1,24 @@
+{
+  int[] state=getDrawableState();
+  boolean focused=false;
+  boolean pressed=false;
+  for (  int i : state) {
+    if (i == FOCUSED_STATE) {
+      focused=true;
+    }
+ else     if (i == PRESSED_STATE) {
+      pressed=true;
+    }
+  }
+  if (isEnabled() && (focused || pressed)) {
+    removeCallbacks(mShowIndicatorRunnable);
+    postDelayed(mShowIndicatorRunnable,INDICATOR_DELAY_FOR_TAPS);
+  }
+ else {
+    hideFloater();
+  }
+  mThumb.setState(state);
+  mTrack.setState(state);
+  mScrubber.setState(state);
+  mRipple.setState(state);
+}

@@ -1,0 +1,9 @@
+{
+  final int color=mTintStateList.getColorForState(state,mCurrentColor);
+  if (color != mCurrentColor) {
+    mCurrentColor=color;
+    invalidateSelf();
+    return true;
+  }
+  return false;
+}

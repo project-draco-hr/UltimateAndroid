@@ -1,0 +1,20 @@
+{
+  final Rect bounds=mTempRect;
+  mThumb.copyBounds(bounds);
+  bounds.inset(-mAddedTouchBounds,-mAddedTouchBounds);
+  mIsDragging=(bounds.contains((int)ev.getX(),(int)ev.getY()));
+  if (!mIsDragging && mAllowTrackClick && !ignoreTrackIfInScrollContainer) {
+    mIsDragging=true;
+    mDraggOffset=(bounds.width() / 2) - mAddedTouchBounds;
+    updateDragging(ev);
+    mThumb.copyBounds(bounds);
+    bounds.inset(-mAddedTouchBounds,-mAddedTouchBounds);
+  }
+  if (mIsDragging) {
+    setPressed(true);
+    attemptClaimDrag();
+    setHotspot(ev.getX(),ev.getY());
+    mDraggOffset=(int)(ev.getX() - bounds.left - mAddedTouchBounds);
+  }
+  return mIsDragging;
+}

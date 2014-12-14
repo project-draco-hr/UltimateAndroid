@@ -1,0 +1,10 @@
+{
+  if (isShowing()) {
+    mShowing=false;
+    try {
+      mWindowManager.removeViewImmediate(mPopupView);
+    }
+  finally {
+    }
+  }
+}

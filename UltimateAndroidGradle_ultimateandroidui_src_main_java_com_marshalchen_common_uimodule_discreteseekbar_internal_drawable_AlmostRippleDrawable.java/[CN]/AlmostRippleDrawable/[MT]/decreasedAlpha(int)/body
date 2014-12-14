@@ -1,0 +1,4 @@
+{
+  int scale=100 + (100 >> 7);
+  return alpha * scale >> 8;
+}

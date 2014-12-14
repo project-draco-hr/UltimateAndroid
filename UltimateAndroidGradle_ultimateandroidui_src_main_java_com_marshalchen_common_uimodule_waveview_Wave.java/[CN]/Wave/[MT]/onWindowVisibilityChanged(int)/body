@@ -1,0 +1,11 @@
+{
+  super.onWindowVisibilityChanged(visibility);
+  if (View.GONE == visibility) {
+    removeCallbacks(mRefreshProgressRunnable);
+  }
+ else {
+    removeCallbacks(mRefreshProgressRunnable);
+    mRefreshProgressRunnable=new RefreshProgressRunnable();
+    post(mRefreshProgressRunnable);
+  }
+}

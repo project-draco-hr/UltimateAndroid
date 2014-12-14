@@ -1,0 +1,5 @@
+{
+  super(context);
+  mMarker=new Marker(context,attrs,defStyleAttr,maxValue);
+  addView(mMarker,new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,Gravity.LEFT | Gravity.TOP));
+}

@@ -1,0 +1,6 @@
+{
+  int range=mMax - mMin;
+  if ((mKeyProgressIncrement == 0) || (range / mKeyProgressIncrement > 20)) {
+    mKeyProgressIncrement=Math.max(1,Math.round((float)range / 20));
+  }
+}

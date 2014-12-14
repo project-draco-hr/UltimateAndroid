@@ -1,0 +1,12 @@
+{
+  value=Math.max(mMin,Math.min(mMax,value));
+  if (isAnimationRunning()) {
+    mPositionAnimator.cancel();
+  }
+  if (mValue != value) {
+    notifyProgress(value,fromUser);
+    mValue=value;
+    updateProgressMessage(value);
+    updateThumbPosFromCurrentProgress();
+  }
+}

@@ -1,0 +1,16 @@
+{
+  Rect bounds=mThumb.getBounds();
+  int halfThumb=bounds.width() / 2;
+  int addedThumb=mAddedTouchBounds;
+  int left=getPaddingLeft() + halfThumb + addedThumb;
+  int right=getWidth() - (getPaddingRight() + halfThumb + addedThumb);
+  int available=right - left;
+  int progress=Math.round((scale * (mMax - mMin)) + mMin);
+  if (progress != getProgress()) {
+    mValue=progress;
+    notifyProgress(mValue,true);
+    updateProgressMessage(progress);
+  }
+  final int thumbPos=(int)(scale * available + 0.5f);
+  updateThumbPos(thumbPos);
+}
