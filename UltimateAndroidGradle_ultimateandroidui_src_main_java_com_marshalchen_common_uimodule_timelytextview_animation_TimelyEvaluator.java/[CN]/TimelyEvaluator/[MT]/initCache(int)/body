@@ -1,0 +1,5 @@
+{
+  if (_cachedPoints == null || _cachedPoints.length != pointsCount) {
+    _cachedPoints=new float[pointsCount][2];
+  }
+}
