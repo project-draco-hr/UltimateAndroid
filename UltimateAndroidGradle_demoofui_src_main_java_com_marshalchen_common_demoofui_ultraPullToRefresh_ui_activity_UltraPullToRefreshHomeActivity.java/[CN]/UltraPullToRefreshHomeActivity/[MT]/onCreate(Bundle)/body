@@ -1,5 +1,0 @@
-{
-  super.onCreate(bundle);
-  setContentView(R.layout.ultra_pull_refresh_activity_main);
-  pushFragmentToBackStack(HomeFragment.class,null);
-}

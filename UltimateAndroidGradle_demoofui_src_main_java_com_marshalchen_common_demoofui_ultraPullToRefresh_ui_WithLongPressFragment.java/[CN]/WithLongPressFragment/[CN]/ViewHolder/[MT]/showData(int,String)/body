@@ -1,3 +1,0 @@
-{
-  mImageView.loadImage(mImageLoader,itemData);
-}

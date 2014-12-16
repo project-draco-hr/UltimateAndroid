@@ -1,4 +1,0 @@
-{
-  setHeaderTitle(R.string.ptr_demo_block_keep_header);
-  ptrFrame.setKeepHeaderWhenRefresh(true);
-}
