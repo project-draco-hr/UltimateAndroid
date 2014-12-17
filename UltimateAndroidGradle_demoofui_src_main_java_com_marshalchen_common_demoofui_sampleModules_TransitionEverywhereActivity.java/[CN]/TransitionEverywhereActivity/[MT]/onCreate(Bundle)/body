@@ -1,0 +1,11 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.transition_everwhere_activity_basic_transitions);
+  RadioGroup radioGroup=(RadioGroup)findViewById(R.id.select_scene);
+  radioGroup.setOnCheckedChangeListener(this);
+  mSceneRoot=(ViewGroup)findViewById(R.id.scene_root);
+  mScene1=new Scene(mSceneRoot,mSceneRoot.findViewById(R.id.container));
+  mScene2=Scene.getSceneForLayout(mSceneRoot,R.layout.transition_everwhere_scene2,this);
+  mScene3=Scene.getSceneForLayout(mSceneRoot,R.layout.transition_everwhere_scene3,this);
+  mTransitionManagerForScene3=TransitionInflater.from(this).inflateTransitionManager(R.anim.transition_everwhere_scene3_transition_manager,mSceneRoot);
+}

@@ -1,0 +1,39 @@
+{
+switch (checkedId) {
+case R.id.select_scene_1:
+{
+      TransitionManager.go(mScene1);
+      break;
+    }
+case R.id.select_scene_2:
+{
+    TransitionSet set=new TransitionSet();
+    Slide slide=new Slide(Gravity.LEFT);
+    slide.addTarget(R.id.transition_title);
+    set.addTransition(slide);
+    set.addTransition(new ChangeBounds());
+    set.addTransition(new ChangeImageTransform());
+    set.setOrdering(TransitionSet.ORDERING_TOGETHER);
+    set.setDuration(350);
+    TransitionManager.go(mScene2,set);
+    break;
+  }
+case R.id.select_scene_3:
+{
+  mTransitionManagerForScene3.transitionTo(mScene3);
+  break;
+}
+case R.id.select_scene_4:
+{
+TransitionManager.beginDelayedTransition(mSceneRoot,new ChangeBounds());
+View square=mSceneRoot.findViewById(R.id.transition_square);
+ViewGroup.LayoutParams params=square.getLayoutParams();
+int newSize=getResources().getDimensionPixelSize(R.dimen.square_size_expanded);
+params.width=newSize;
+params.height=newSize;
+square.setLayoutParams(params);
+square.invalidate();
+break;
+}
+}
+}
