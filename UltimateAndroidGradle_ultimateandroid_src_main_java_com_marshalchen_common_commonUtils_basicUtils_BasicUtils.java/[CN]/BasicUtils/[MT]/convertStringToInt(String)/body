@@ -9,7 +9,6 @@
  catch (  Exception e) {
     e.printStackTrace();
     Logs.e(e.getMessage());
-    Logs.e("num----" + num);
   }
  finally {
     return numInt;
