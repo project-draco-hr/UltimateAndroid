@@ -1,0 +1,11 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.ultra_pull_refresh_activity_main);
+  mPtrFrameLayout=(PtrFrameLayout)findViewById(R.id.store_house_ptr_frame);
+  mPtrFrameLayout.setResistance(1.7f);
+  mPtrFrameLayout.setRatioOfHeaderHeightToRefresh(1.2f);
+  mPtrFrameLayout.setDurationToClose(200);
+  mPtrFrameLayout.setDurationToCloseHeader(1000);
+  mPtrFrameLayout.setPullToRefresh(false);
+  mPtrFrameLayout.setKeepHeaderWhenRefresh(true);
+}

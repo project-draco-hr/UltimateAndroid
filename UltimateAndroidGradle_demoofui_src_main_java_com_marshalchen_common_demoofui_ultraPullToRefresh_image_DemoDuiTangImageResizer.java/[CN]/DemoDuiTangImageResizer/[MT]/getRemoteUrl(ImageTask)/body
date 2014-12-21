@@ -1,7 +1,0 @@
-{
-  String url=imageTask.getOriginUrl();
-  int size=findBestCDNSize(CDN_FIX_WIDTH_SIZE,imageTask.getRequestSize().x,true);
-  url=url.replace(TAG,TAG + DOT + size+ SP+ size);
-  CLog.d("test","getRemoteUrl: %s %s",imageTask.getRequestSize(),url);
-  return url;
-}

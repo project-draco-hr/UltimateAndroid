@@ -1,0 +1,32 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.ultra_pull_refresh_store_house_activity_main);
+  mPtrFrameLayout=(PtrFrameLayout)findViewById(R.id.store_house_ptr_frame);
+  mPtrFrameLayout.setResistance(1.7f);
+  mPtrFrameLayout.setRatioOfHeaderHeightToRefresh(1.2f);
+  mPtrFrameLayout.setDurationToClose(200);
+  mPtrFrameLayout.setDurationToCloseHeader(1000);
+  mPtrFrameLayout.setPullToRefresh(false);
+  mPtrFrameLayout.setKeepHeaderWhenRefresh(true);
+  final StoreHouseHeader header=new StoreHouseHeader(this);
+  header.setPadding(0,BasicUiUtils.dip2px(this,15.0f),0,0);
+  header.initWithString("Marshal Chen");
+  mPtrFrameLayout.setHeaderView(header);
+  mPtrFrameLayout.addPtrUIHandler(header);
+  mPtrFrameLayout.setPtrHandler(new PtrHandler(){
+    @Override public boolean checkCanDoRefresh(    PtrFrameLayout ptrFrameLayout,    View view,    View view2){
+      boolean canbePullDown=PtrDefaultHandler.checkContentCanBePulledDown(ptrFrameLayout,view,view2);
+      Logs.d("canbepull----" + canbePullDown);
+      return canbePullDown;
+    }
+    @Override public void onRefreshBegin(    PtrFrameLayout ptrFrameLayout){
+      ptrFrameLayout.postDelayed(new Runnable(){
+        @Override public void run(){
+          mPtrFrameLayout.refreshComplete();
+        }
+      }
+,1800);
+    }
+  }
+);
+}

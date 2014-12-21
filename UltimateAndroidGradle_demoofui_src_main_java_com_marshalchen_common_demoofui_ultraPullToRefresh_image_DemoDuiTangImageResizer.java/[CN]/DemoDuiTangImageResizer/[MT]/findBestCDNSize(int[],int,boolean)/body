@@ -1,7 +1,0 @@
-{
-  if (size >= array[array.length - 1]) {
-    return array[array.length - 1];
-  }
-  int pos=binarySearch(array,size,higher);
-  return array[pos];
-}

@@ -1,4 +1,0 @@
-{
-  setHeaderTitle(R.string.ptr_demo_block_pull_to_refresh);
-  ptrFrame.setPullToRefresh(true);
-}

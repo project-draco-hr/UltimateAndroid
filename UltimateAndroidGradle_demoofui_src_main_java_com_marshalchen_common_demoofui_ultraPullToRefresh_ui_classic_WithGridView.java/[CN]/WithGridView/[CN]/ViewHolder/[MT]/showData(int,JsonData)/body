@@ -1,4 +1,0 @@
-{
-  String url=itemData.optString("pic");
-  mImageView.loadImage(mImageLoader,url);
-}

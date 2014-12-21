@@ -1,0 +1,4 @@
+{
+  this.controlPoints=controlPoints;
+  this.pointsCount=(controlPoints.length + 2) / 3;
+}

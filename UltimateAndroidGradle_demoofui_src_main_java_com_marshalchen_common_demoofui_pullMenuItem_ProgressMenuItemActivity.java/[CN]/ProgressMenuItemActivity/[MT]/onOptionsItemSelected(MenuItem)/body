@@ -1,0 +1,9 @@
+{
+switch (item.getItemId()) {
+case R.id.action_refresh:
+    new ReloadAsyncTask(progressHelper).execute();
+  return true;
+default :
+return super.onOptionsItemSelected(item);
+}
+}

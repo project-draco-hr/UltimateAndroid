@@ -1,0 +1,4 @@
+{
+  this.controlPoints=controlPoints;
+  invalidate();
+}
