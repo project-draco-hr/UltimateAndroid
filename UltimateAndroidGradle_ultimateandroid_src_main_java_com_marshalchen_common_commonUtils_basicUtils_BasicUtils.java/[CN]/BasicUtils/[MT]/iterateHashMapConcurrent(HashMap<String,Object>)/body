@@ -1,0 +1,7 @@
+{
+  Iterator<Map.Entry<String,Object>> iterator=hashMap.entrySet().iterator();
+  while (iterator.hasNext()) {
+    Map.Entry<String,Object> entry=iterator.next();
+    Logs.d("key: " + entry.getKey() + "   "+ "value:  "+ entry.getValue().toString());
+  }
+}

@@ -1,7 +1,7 @@
 {
   try {
     for (Iterator it=list.iterator(); it.hasNext(); ) {
-      iterateHashMap((HashMap)it.next(),classAndMethodName);
+      iterateHashMapConcurrent((HashMap)it.next());
     }
   }
  catch (  Exception e) {
