@@ -1,4 +1,3 @@
 {
-  final float scale=context.getResources().getDisplayMetrics().density;
-  return (int)(dpValue * scale + 0.5f);
+  return (int)Math.ceil(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dpValue,context.getResources().getDisplayMetrics()));
 }
