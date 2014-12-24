@@ -1,0 +1,8 @@
+{
+  if (isPortrait) {
+    activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+  }
+ else {
+    activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+  }
+}
