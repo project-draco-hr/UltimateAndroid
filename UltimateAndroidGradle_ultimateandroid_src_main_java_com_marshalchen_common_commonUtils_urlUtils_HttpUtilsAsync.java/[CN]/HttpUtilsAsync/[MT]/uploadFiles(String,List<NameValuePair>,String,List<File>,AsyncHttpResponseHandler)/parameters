@@ -1,4 +1,5 @@
 String url
 List<NameValuePair> paramsList
 String fileParams
-File[] files
+List<File> files
+AsyncHttpResponseHandler responseHandler
