@@ -6,7 +6,7 @@
       params.put(nameValuePair.getName(),nameValuePair.getValue());
     }
   }
-  if (BasicUtils.judgeNotNull(files))   params.put(fileParams,files);
+  if (BasicUtils.judgeNotNull(file))   params.put(fileParams,file);
   syncHttpClient.setTimeout(timeout);
   syncHttpClient.post(url,params,responseHandler);
 }
