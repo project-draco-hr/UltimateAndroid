@@ -1,5 +1,3 @@
 {
-  Message message=new Message();
-  message.what=what;
-  handler.sendMessageDelayed(message,delayTime);
+  handler.sendEmptyMessageDelayed(what,delayTime);
 }

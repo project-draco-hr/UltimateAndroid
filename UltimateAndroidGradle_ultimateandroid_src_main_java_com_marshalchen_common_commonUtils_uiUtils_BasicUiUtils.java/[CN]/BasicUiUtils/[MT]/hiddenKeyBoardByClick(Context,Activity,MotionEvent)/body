@@ -1,0 +1,5 @@
+{
+  if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+    BasicUiUtils.hiddenKeyboard(context,activity);
+  }
+}

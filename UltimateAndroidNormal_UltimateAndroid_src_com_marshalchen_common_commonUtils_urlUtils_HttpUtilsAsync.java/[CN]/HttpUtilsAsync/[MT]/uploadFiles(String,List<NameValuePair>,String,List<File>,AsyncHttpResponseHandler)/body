@@ -1,0 +1,17 @@
+{
+  SyncHttpClient syncHttpClient=new SyncHttpClient();
+  RequestParams params=new RequestParams();
+  try {
+    if (BasicUtils.judgeNotNull(paramsList)) {
+      for (      NameValuePair nameValuePair : paramsList) {
+        params.put(nameValuePair.getName(),nameValuePair.getValue());
+      }
+    }
+    if (BasicUtils.judgeNotNull(files))     params.put(fileParams,files);
+  }
+ catch (  Exception e) {
+    Logs.e(e,"");
+  }
+  syncHttpClient.setTimeout(TIME_OUT);
+  syncHttpClient.post(url,params,responseHandler);
+}

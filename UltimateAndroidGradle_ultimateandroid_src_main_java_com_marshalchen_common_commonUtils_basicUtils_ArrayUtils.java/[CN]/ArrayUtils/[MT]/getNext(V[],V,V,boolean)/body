@@ -4,7 +4,7 @@
   }
   int currentPosition=-1;
   for (int i=0; i < sourceArray.length; i++) {
-    if (ObjectUtils.isEquals(value,sourceArray[i])) {
+    if (isEquals(value,sourceArray[i])) {
       currentPosition=i;
       break;
     }

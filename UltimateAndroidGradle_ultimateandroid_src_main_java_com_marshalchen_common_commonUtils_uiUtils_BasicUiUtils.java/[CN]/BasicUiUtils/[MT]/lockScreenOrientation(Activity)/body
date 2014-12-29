@@ -1,0 +1,8 @@
+{
+  if (activity.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+    activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+  }
+  if (activity.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+    activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+  }
+}

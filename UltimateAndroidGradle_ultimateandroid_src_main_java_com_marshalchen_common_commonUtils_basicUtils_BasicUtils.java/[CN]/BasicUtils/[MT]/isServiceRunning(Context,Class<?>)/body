@@ -1,0 +1,12 @@
+{
+  ActivityManager activityManager=(ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+  List<ActivityManager.RunningServiceInfo> services=activityManager.getRunningServices(Integer.MAX_VALUE);
+  for (  ActivityManager.RunningServiceInfo serviceInfo : services) {
+    ComponentName componentName=serviceInfo.service;
+    String serviceName=componentName.getClassName();
+    if (serviceName.equals(cls.getName())) {
+      return true;
+    }
+  }
+  return false;
+}
