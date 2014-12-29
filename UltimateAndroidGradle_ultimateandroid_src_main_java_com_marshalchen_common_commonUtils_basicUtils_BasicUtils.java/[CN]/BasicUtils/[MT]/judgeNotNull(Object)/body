@@ -1,3 +1,4 @@
 {
-  return judgeNotNull(object,new Object[0]);
+  if (object == null)   return false;
+  return true;
 }
