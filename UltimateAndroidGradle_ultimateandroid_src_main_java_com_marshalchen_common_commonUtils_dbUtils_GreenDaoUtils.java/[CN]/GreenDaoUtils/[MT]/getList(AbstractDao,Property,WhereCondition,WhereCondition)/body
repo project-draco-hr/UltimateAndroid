@@ -1,5 +1,5 @@
 {
   setIfLog();
-  List indexFavList=dao.queryBuilder().where(cond,condMore).orderAsc(orderProperty).list();
+  List indexFavList=dao.queryBuilder().where(whereCondition,whereConditions).orderAsc(orderProperty).list();
   return indexFavList;
 }
