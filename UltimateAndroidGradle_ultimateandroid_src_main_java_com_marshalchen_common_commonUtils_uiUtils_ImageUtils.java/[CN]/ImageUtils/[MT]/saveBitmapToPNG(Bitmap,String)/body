@@ -1,7 +1,7 @@
 {
-  File file=new File(path);
+  File file=new File(name);
   FileOutputStream out=new FileOutputStream(file);
-  if (bitmap.compress(Bitmap.CompressFormat.JPEG,100,out)) {
+  if (bitmap.compress(Bitmap.CompressFormat.PNG,100,out)) {
     out.flush();
     out.close();
   }
