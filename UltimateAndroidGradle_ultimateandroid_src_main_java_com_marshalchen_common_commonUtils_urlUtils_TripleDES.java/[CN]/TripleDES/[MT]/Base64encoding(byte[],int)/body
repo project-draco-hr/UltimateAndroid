@@ -1,6 +1,6 @@
 {
   String result="";
-  if (judgeVerionOfSdk() > 7) {
+  if (getSdkVersion() > 7) {
     result=Base64.encodeToString(context,type);
   }
  else {

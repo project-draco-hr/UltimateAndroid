@@ -17,7 +17,6 @@
             String[] vss=vs[i].split("=");
             if ("member".equals(vss[0])) {
               rst=vs[i] + ";";
-              Log.d("Chen","cookie??????:" + rst);
               isok++;
             }
           }
@@ -28,11 +27,9 @@
       strResult=EntityUtils.toString(httpResponse.getEntity());
     }
  else {
-      Log.i(TAG,"????????????");
     }
   }
  catch (  Exception e) {
-    Log.i(TAG,"??????????????????");
     strResult="net_ex";
   }
   return strResult;

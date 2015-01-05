@@ -1,6 +1,6 @@
 {
   byte[] result;
-  if (judgeVerionOfSdk() > 17) {
+  if (getSdkVersion() > 17) {
     result=Base64.encode(context,type);
   }
  else {
