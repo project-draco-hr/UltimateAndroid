@@ -1,4 +1,4 @@
 AbstractDao dao
 Property orderProperty
-WhereCondition cond
-WhereCondition condMore
+WhereCondition whereCondition
+WhereCondition whereConditions

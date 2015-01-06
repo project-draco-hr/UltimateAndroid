@@ -1,12 +1,6 @@
 {
-  try {
-    MessageDigest digest=MessageDigest.getInstance("SHA-1");
-    digest.update(s.getBytes());
-    byte messageDigest[]=digest.digest();
-    return toHexString(messageDigest);
-  }
- catch (  NoSuchAlgorithmException e) {
-    e.printStackTrace();
-  }
-  return "";
+  MessageDigest digest=MessageDigest.getInstance("SHA-1");
+  digest.update(string.getBytes());
+  byte messageDigest[]=digest.digest();
+  return toHexString(messageDigest);
 }

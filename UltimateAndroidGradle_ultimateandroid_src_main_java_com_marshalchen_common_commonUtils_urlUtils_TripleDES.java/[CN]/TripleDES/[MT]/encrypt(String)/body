@@ -14,5 +14,6 @@
   final byte[] plainTextBytes=message.getBytes("utf-8");
   final byte[] cipherText=cipher.doFinal(plainTextBytes);
   String ss=Base64encoding(cipherText,0);
-  return Base64encodingByte(cipherText,0);
+  byte[] result=Base64encodingByte(cipherText,0);
+  return new String(result,"UTF-8");
 }

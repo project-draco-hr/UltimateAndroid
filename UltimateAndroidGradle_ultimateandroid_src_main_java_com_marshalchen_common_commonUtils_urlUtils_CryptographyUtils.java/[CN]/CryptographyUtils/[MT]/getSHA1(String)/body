@@ -1,0 +1,3 @@
+{
+  return getCryptography(content,"SHA1");
+}

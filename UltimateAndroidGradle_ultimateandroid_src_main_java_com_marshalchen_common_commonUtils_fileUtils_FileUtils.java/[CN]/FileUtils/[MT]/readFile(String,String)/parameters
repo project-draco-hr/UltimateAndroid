@@ -1,2 +1,2 @@
-String filePath
-String charsetName
+String fileName
+String charset

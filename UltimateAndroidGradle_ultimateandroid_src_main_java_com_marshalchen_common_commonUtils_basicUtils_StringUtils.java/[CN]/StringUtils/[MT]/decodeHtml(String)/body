@@ -1,5 +1,5 @@
 {
-  String rst=str;
+  String rst=string;
   rst=rst.replaceAll("&lt;","<");
   rst=rst.replaceAll("&gt;",">");
   rst=rst.replaceAll("&quot;","\"");

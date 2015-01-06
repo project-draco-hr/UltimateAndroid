@@ -1,0 +1,3 @@
+{
+  return readFile(fileName,"UTF-8");
+}

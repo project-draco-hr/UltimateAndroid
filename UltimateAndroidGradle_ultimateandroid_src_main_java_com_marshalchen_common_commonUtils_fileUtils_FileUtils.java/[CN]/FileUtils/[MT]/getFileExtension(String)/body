@@ -1,8 +1,8 @@
 {
-  if (StringUtils.isBlank(filePath)) {
-    return filePath;
+  if (!BasicUtils.judgeNotNull(filePath)) {
+    return "";
   }
-  int extenPosi=filePath.lastIndexOf(FILE_EXTENSION_SEPARATOR);
+  int extenPosi=filePath.lastIndexOf(".");
   int filePosi=filePath.lastIndexOf(File.separator);
   if (extenPosi == -1) {
     return "";

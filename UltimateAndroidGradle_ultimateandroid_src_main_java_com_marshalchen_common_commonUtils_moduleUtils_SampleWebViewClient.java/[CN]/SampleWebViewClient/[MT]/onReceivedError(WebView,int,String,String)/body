@@ -1,5 +1,5 @@
 {
   super.onReceivedError(view,errorCode,description,failingUrl);
   Logs.i("-MyWebViewClient->onReceivedError()--\n errorCode=" + errorCode + " \ndescription="+ description+ " \nfailingUrl="+ failingUrl);
-  view.loadDataWithBaseURL("","<html><body><h1>" + "Network error" + "</h1></body></html>","text/html","utf-8",null);
+  view.loadDataWithBaseURL("",showErrorString,"text/html","utf-8",null);
 }

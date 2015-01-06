@@ -1,2 +1,2 @@
 Context context
-String crtUrl
+String certFilePath

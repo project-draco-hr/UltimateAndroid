@@ -1,5 +1,4 @@
 {
-  System.out.println("customview hideeeeeeeeeeeeeeeeeeeeeeeeeee");
   if (mCustomView == null)   return;
   mCustomView.setVisibility(View.GONE);
   mCustomViewContainer.removeView(mCustomView);

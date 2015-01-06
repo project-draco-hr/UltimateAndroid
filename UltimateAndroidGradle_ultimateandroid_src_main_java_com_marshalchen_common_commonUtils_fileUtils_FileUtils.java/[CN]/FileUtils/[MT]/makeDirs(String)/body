@@ -1,7 +1,5 @@
 {
-  String folderName=getFolderName(filePath);
-  File folder=new File(folderName);
-  Logs.d(folder.getAbsolutePath() + "   " + folder.exists());
+  File folder=new File(dirPath);
   if (folder.exists()) {
     return false;
   }

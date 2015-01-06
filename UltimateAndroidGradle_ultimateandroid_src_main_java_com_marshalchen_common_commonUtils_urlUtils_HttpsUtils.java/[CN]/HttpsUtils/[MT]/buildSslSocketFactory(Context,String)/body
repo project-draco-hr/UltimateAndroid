@@ -1,7 +1,7 @@
 {
   try {
     CertificateFactory cf=CertificateFactory.getInstance("X.509");
-    InputStream is=context.getResources().getAssets().open(crtUrl);
+    InputStream is=context.getResources().getAssets().open(certFilePath);
     InputStream caInput=new BufferedInputStream(is);
     Certificate ca;
     try {
