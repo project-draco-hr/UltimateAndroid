@@ -11,7 +11,7 @@
     return true;
   }
  catch (  IOException e) {
-    throw new RuntimeException("IOException occurred. ",e);
+    throw e;
   }
  finally {
     if (fileWriter != null) {
@@ -19,7 +19,7 @@
         fileWriter.close();
       }
  catch (      IOException e) {
-        throw new RuntimeException("IOException occurred. ",e);
+        throw e;
       }
     }
   }

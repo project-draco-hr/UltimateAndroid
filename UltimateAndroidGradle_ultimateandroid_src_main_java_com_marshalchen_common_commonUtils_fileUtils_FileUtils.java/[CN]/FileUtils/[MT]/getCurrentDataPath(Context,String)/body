@@ -2,7 +2,7 @@
   String currentDataPath="";
   if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
     currentDataPath=Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + folderName;
-    createDir(currentDataPath);
+    makeDirs(currentDataPath);
   }
  else {
     currentDataPath=context.getFilesDir().getAbsolutePath();

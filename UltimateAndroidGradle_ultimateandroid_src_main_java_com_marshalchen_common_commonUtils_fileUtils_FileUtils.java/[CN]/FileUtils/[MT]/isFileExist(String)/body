@@ -1,5 +1,5 @@
 {
-  if (StringUtils.isBlank(filePath)) {
+  if (!BasicUtils.judgeNotNull(filePath)) {
     return false;
   }
   File file=new File(filePath);

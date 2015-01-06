@@ -1,0 +1,35 @@
+{
+  if (fileName == null || !fileName.isFile()) {
+    return null;
+  }
+  StringBuilder sb=new StringBuilder("");
+  BufferedReader reader=null;
+  try {
+    InputStreamReader is=new InputStreamReader(new FileInputStream(fileName),charset);
+    reader=new BufferedReader(is);
+    String line=null;
+    while ((line=reader.readLine()) != null) {
+      if (!sb.toString().equals("")) {
+        sb.append("\r\n");
+      }
+      sb.append(line);
+    }
+    reader.close();
+    return sb.toString();
+  }
+ catch (  IOException e) {
+    Logs.e(e,"IOException");
+    throw e;
+  }
+ finally {
+    if (reader != null) {
+      try {
+        reader.close();
+      }
+ catch (      IOException e) {
+        Logs.e(e,"IOException occurred when closing BufferedReader");
+        throw e;
+      }
+    }
+  }
+}

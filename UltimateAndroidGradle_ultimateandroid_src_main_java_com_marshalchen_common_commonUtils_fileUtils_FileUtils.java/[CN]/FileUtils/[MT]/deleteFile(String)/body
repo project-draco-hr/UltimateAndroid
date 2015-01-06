@@ -1,8 +1,5 @@
 {
-  if (StringUtils.isBlank(path)) {
-    return true;
-  }
-  File file=new File(path);
+  File file=new File(filePath);
   if (!file.exists()) {
     return true;
   }
@@ -17,7 +14,7 @@
       f.delete();
     }
  else     if (f.isDirectory()) {
-      deleteFileFromPath(f.getAbsolutePath());
+      deleteFile(f.getAbsolutePath());
     }
   }
   return file.delete();
