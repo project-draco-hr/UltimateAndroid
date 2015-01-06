@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_animation_utils_demo);
+  imageView=(ImageView)findViewById(R.id.animationUtilsDemoImageView);
+  HandlerUtils.sendMessageHandlerDelay(shakeHandler,0,1000);
+  HandlerUtils.sendMessageHandlerDelay(leftShakeHandler,0,3000);
+}
