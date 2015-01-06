@@ -2,7 +2,7 @@
   SSLSocketFactory sslsocketfactory=(SSLSocketFactory)SSLSocketFactory.getDefault();
   URL url=null;
   try {
-    url=new URL("https://xxx.xxx");
+    url=new URL(urlLink);
     HttpsURLConnection conn=(HttpsURLConnection)url.openConnection();
     conn.setSSLSocketFactory(sslsocketfactory);
     InputStream inputstream=conn.getInputStream();

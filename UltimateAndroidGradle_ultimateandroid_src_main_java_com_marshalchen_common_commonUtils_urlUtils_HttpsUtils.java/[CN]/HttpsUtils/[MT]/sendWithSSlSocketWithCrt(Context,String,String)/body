@@ -1,20 +1,31 @@
 {
-  SSLSocketFactory sslsocketfactory=buildSslSocketFactory(context,crtUri);
-  URL url=null;
+  SSLSocketFactory sslsocketfactory=buildSslSocketFactory(context,certFilePath);
+  URL url;
+  InputStream inputstream=null;
+  InputStreamReader inputstreamreader=null;
+  BufferedReader bufferedreader=null;
+  StringBuilder content=new StringBuilder("");
   try {
     url=new URL(uri);
     HttpsURLConnection conn=(HttpsURLConnection)url.openConnection();
     conn.setSSLSocketFactory(sslsocketfactory);
-    InputStream inputstream=conn.getInputStream();
-    InputStreamReader inputstreamreader=new InputStreamReader(inputstream);
-    BufferedReader bufferedreader=new BufferedReader(inputstreamreader);
+    inputstream=conn.getInputStream();
+    inputstreamreader=new InputStreamReader(inputstream);
+    bufferedreader=new BufferedReader(inputstreamreader);
     String string=null;
     while ((string=bufferedreader.readLine()) != null) {
-      Logs.d("Received " + string);
+      content.append(string);
     }
+    bufferedreader.close();
+    return content.toString();
   }
  catch (  Exception e) {
-    e.printStackTrace();
     Logs.e(e,"");
+    throw e;
+  }
+ finally {
+    if (inputstream != null)     inputstream.close();
+    if (inputstreamreader != null)     inputstreamreader.close();
+    if (bufferedreader != null)     bufferedreader.close();
   }
 }
