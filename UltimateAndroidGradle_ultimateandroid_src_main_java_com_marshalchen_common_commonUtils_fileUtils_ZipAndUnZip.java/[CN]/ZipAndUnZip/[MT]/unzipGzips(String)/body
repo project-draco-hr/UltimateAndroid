@@ -1,3 +1,3 @@
 {
-  unzipGzips(inFileName,getFileName(inFileName));
+  unzipGzips(inFileName,FileUtils.getFileNameWithoutExtension(inFileName));
 }

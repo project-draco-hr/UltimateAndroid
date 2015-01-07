@@ -2,7 +2,7 @@
   GZIPInputStream in=null;
   FileOutputStream out=null;
   try {
-    if (!getExtension(inFileName).equalsIgnoreCase("gz")) {
+    if (!FileUtils.getFileExtension(inFileName).equalsIgnoreCase("gz")) {
       System.err.println("File name must have extension of \".gz\"");
       System.exit(1);
     }
