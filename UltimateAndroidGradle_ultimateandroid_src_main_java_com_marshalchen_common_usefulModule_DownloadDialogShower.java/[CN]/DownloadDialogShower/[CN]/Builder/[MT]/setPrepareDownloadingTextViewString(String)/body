@@ -1,0 +1,4 @@
+{
+  downloadDialogShower.setPrepareDownloadingTextViewString(title);
+  return this;
+}

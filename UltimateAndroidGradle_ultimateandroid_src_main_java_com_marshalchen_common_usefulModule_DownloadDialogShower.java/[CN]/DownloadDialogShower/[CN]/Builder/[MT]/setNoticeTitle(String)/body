@@ -1,0 +1,4 @@
+{
+  downloadDialogShower.setNoticeTitle(title);
+  return this;
+}

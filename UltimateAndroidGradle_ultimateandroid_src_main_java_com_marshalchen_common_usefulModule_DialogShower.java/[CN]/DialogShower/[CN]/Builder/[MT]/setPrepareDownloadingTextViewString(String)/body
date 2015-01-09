@@ -1,4 +1,0 @@
-{
-  dialogShower.setPrepareDownloadingTextViewString(title);
-  return this;
-}

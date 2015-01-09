@@ -1,4 +1,0 @@
-{
-  initDefaults(context);
-  dialogShower=new DialogShower(builderContext);
-}

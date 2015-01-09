@@ -1,0 +1,4 @@
+{
+  downloadDialogShower.setCurrentDownload(title);
+  return this;
+}
