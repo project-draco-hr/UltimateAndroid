@@ -1,4 +1,4 @@
 {
-  DisplayImageOptions.Builder builder=new DisplayImageOptions.Builder().resetViewBeforeLoading(false).showImageOnLoading(R.drawable.titanic_wave_black).considerExifParams(false).imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2).bitmapConfig(Bitmap.Config.ARGB_8888).displayer(new SimpleBitmapDisplayer()).handler(new Handler()).cacheInMemory(true).cacheOnDisc(true);
+  DisplayImageOptions.Builder builder=new DisplayImageOptions.Builder().resetViewBeforeLoading(false).showImageOnLoading(R.drawable.titanic_wave_black).considerExifParams(false).imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2).bitmapConfig(Bitmap.Config.ARGB_8888).displayer(new SimpleBitmapDisplayer()).handler(new Handler()).cacheInMemory(true).cacheOnDisk(true);
   return builder;
 }
