@@ -9,7 +9,7 @@
   int readedBytes=0;
   byte buf[]=new byte[4096];
   try {
-    zipIn=new ZipInputStream(new BufferedInputStream(new FileInputStream(unZipfileName)));
+    zipIn=new ZipInputStream(new BufferedInputStream(new FileInputStream(unzipfileName)));
     while ((zipEntry=zipIn.getNextEntry()) != null) {
       file=new File(mDestPath + zipEntry.getName());
       if (zipEntry.isDirectory()) {
