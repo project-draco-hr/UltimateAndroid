@@ -1,10 +1,10 @@
 {
-  if (context == null || BasicUtils.judgeNotNull(packageName)) {
+  if (context == null || !BasicUtils.judgeNotNull(packageName)) {
     return null;
   }
   ActivityManager activityManager=(ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
   List<RunningTaskInfo> tasksInfo=activityManager.getRunningTasks(1);
-  if (BasicUtils.judgeNotNull(tasksInfo)) {
+  if (!BasicUtils.judgeNotNull(tasksInfo)) {
     return null;
   }
   try {
