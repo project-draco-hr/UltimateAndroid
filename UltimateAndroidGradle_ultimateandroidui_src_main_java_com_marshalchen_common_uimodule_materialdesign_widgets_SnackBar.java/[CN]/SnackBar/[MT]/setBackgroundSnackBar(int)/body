@@ -1,4 +1,0 @@
-{
-  backgroundSnackBar=color;
-  if (view != null)   view.setBackgroundColor(color);
-}

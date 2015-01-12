@@ -1,4 +1,0 @@
-Activity activity
-String text
-String buttonText
-View.OnClickListener onClickListener

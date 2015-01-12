@@ -1,8 +1,0 @@
-{
-  ViewHelper.setX(ball,getHeight() / 2 - ball.getWidth() / 2);
-  ball.xIni=ViewHelper.getX(ball);
-  ball.xFin=getWidth() - getHeight() / 2 - ball.getWidth() / 2;
-  ball.xCen=getWidth() / 2 - ball.getWidth() / 2;
-  placedBall=true;
-  ball.animateCheck();
-}

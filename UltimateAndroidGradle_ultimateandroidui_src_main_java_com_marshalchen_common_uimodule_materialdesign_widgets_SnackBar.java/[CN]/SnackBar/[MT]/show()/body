@@ -1,8 +1,0 @@
-{
-  super.show();
-  view.setVisibility(View.VISIBLE);
-  view.startAnimation(AnimationUtils.loadAnimation(activity,R.anim.material_design_snackbar_show_animation));
-  if (!mIndeterminate) {
-    dismissTimer.start();
-  }
-}

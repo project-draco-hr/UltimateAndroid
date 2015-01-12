@@ -1,4 +1,0 @@
-{
-  super(context);
-  setBackgroundColor(getResources().getColor(android.R.color.transparent));
-}

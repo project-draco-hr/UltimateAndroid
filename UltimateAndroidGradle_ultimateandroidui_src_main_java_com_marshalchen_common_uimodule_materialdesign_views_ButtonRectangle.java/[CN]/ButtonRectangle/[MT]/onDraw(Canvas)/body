@@ -1,9 +1,0 @@
-{
-  super.onDraw(canvas);
-  if (x != -1) {
-    Rect src=new Rect(0,0,getWidth() - Utils.dpToPx(6,getResources()),getHeight() - Utils.dpToPx(7,getResources()));
-    Rect dst=new Rect(Utils.dpToPx(6,getResources()),Utils.dpToPx(6,getResources()),getWidth() - Utils.dpToPx(6,getResources()),getHeight() - Utils.dpToPx(7,getResources()));
-    canvas.drawBitmap(makeCircle(),src,dst,null);
-  }
-  invalidate();
-}

@@ -1,3 +1,0 @@
-{
-  textButton.setText(text.toUpperCase());
-}
