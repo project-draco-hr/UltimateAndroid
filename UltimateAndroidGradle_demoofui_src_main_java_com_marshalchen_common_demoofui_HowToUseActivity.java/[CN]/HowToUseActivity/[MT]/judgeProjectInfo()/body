@@ -1,0 +1,8 @@
+{
+switch (data) {
+case "SwipeLayoutActivity":
+    mHowToUseDetail.setText("compile \"com.daimajia.swipelayout:library:1.1.7@aar\"");
+  mHowToUseProjectDetail.setText("https://github.com/daimajia/AndroidSwipeLayout");
+break;
+}
+}

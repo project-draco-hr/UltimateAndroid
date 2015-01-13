@@ -12,5 +12,9 @@
     startActivity(new Intent(this,NestedExample.class));
     return true;
   }
+ else   if (id == R.id.how_to_use) {
+    BasicUtils.sendIntent(this,HowToUseActivity.class,"data","SwipeLayoutActivity");
+    return true;
+  }
   return super.onOptionsItemSelected(item);
 }
