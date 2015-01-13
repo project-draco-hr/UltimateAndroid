@@ -1,7 +1,0 @@
-{
-  if (mode == Mode.Multiple)   mOpenPositions.add(position);
- else {
-    closeAllExcept(layout);
-    mOpenPosition=position;
-  }
-}

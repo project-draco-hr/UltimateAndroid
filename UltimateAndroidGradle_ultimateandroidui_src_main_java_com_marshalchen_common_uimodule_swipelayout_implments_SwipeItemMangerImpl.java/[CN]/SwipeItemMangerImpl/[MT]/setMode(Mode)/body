@@ -1,6 +1,0 @@
-{
-  this.mode=mode;
-  mOpenPositions.clear();
-  mShownLayouts.clear();
-  mOpenPosition=INVALID_POSITION;
-}

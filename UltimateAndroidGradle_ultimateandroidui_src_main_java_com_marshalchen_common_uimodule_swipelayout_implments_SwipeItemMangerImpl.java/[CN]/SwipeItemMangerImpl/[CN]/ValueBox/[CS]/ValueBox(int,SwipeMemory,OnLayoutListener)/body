@@ -1,5 +1,0 @@
-{
-  this.swipeMemory=swipeMemory;
-  this.onLayoutListener=onLayoutListener;
-  this.position=position;
-}

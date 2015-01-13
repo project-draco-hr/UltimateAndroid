@@ -1,7 +1,0 @@
-{
-  Rect rect=computeSurfaceLayoutArea(false);
-  getSurfaceView().layout(rect.left,rect.top,rect.right,rect.bottom);
-  rect=computeBottomLayoutAreaViaSurface(ShowMode.PullOut,rect);
-  getBottomView().layout(rect.left,rect.top,rect.right,rect.bottom);
-  bringChildToFront(getSurfaceView());
-}

@@ -1,6 +1,0 @@
-{
-  super.computeScroll();
-  if (mDragHelper.continueSettling(true)) {
-    ViewCompat.postInvalidateOnAnimation(this);
-  }
-}
