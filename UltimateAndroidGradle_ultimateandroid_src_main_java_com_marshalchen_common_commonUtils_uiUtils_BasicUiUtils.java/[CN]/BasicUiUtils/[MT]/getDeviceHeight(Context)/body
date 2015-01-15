@@ -1,0 +1,4 @@
+{
+  WindowManager manager=(WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+  return manager.getDefaultDisplay().getHeight();
+}
