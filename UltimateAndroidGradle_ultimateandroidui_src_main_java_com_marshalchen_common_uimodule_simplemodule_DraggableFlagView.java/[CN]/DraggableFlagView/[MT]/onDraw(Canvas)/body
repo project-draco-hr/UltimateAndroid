@@ -1,0 +1,37 @@
+{
+  super.onDraw(canvas);
+  canvas.drawColor(Color.TRANSPARENT);
+  int startCircleX=0, startCircleY=0;
+  if (isTouched) {
+    startCircleX=startPoint.x + curRadius;
+    startCircleY=startPoint.y - curRadius;
+    canvas.drawCircle(startCircleX,startCircleY,curRadius,paint);
+    int endCircleX=endPoint.x;
+    int endCircleY=endPoint.y;
+    canvas.drawCircle(endCircleX,endCircleY,originRadius,paint);
+    if (!isArrivedMaxMoved) {
+      path.reset();
+      double sin=triangle.deltaY / triangle.hypotenuse;
+      double cos=triangle.deltaX / triangle.hypotenuse;
+      path.moveTo((float)(startCircleX - curRadius * sin),(float)(startCircleY - curRadius * cos));
+      path.lineTo((float)(startCircleX + curRadius * sin),(float)(startCircleY + curRadius * cos));
+      path.quadTo((startCircleX + endCircleX) / 2,(startCircleY + endCircleY) / 2,(float)(endCircleX + originRadius * sin),(float)(endCircleY + originRadius * cos));
+      path.lineTo((float)(endCircleX - originRadius * sin),(float)(endCircleY - originRadius * cos));
+      path.quadTo((startCircleX + endCircleX) / 2,(startCircleY + endCircleY) / 2,(float)(startCircleX - curRadius * sin),(float)(startCircleY - curRadius * cos));
+      canvas.drawPath(path,paint);
+    }
+    float textH=-textFontMetrics.ascent - textFontMetrics.descent;
+    canvas.drawText(text,endCircleX,endCircleY + textH / 2,textPaint);
+  }
+ else {
+    if (curRadius > 0) {
+      startCircleX=curRadius;
+      startCircleY=originHeight - curRadius;
+      canvas.drawCircle(startCircleX,startCircleY,curRadius,paint);
+      if (curRadius == originRadius) {
+        float textH=-textFontMetrics.ascent - textFontMetrics.descent;
+        canvas.drawText(text,startCircleX,startCircleY + textH / 2,textPaint);
+      }
+    }
+  }
+}

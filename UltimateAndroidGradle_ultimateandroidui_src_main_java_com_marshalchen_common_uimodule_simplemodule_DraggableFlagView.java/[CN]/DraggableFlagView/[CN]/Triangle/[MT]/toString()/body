@@ -1,0 +1,3 @@
+{
+  return "Triangle{" + "deltaX=" + deltaX + ", deltaY="+ deltaY+ ", hypotenuse="+ hypotenuse+ '}';
+}

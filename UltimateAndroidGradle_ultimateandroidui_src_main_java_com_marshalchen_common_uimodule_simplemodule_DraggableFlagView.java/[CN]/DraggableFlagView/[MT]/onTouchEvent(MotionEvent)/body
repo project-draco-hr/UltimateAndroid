@@ -1,0 +1,45 @@
+{
+  super.onTouchEvent(event);
+switch (event.getAction()) {
+case MotionEvent.ACTION_DOWN:
+    isTouched=true;
+  this.setLayoutParams(newLp);
+endPoint.x=(int)downX;
+endPoint.y=(int)downY;
+changeViewHeight(this,ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+postInvalidate();
+downX=event.getX() + location[0];
+downY=event.getY() + location[1];
+break;
+case MotionEvent.ACTION_MOVE:
+triangle.deltaX=event.getX() - downX;
+triangle.deltaY=-1 * (event.getY() - downY);
+double distance=Math.sqrt(triangle.deltaX * triangle.deltaX + triangle.deltaY * triangle.deltaY);
+triangle.hypotenuse=distance;
+refreshCurRadiusByMoveDistance((int)distance);
+endPoint.x=(int)event.getX();
+endPoint.y=(int)event.getY();
+postInvalidate();
+break;
+case MotionEvent.ACTION_UP:
+isTouched=false;
+this.setLayoutParams(originLp);
+if (isArrivedMaxMoved) {
+changeViewHeight(this,originWidth,originHeight);
+postInvalidate();
+if (null != onDraggableFlagViewListener) {
+onDraggableFlagViewListener.onFlagDismiss(this);
+}
+Logs.d(TAG,"????????????...");
+resetAfterDismiss();
+}
+ else {
+changeViewHeight(this,originWidth,originHeight);
+startRollBackAnimation(500);
+}
+downX=Float.MAX_VALUE;
+downY=Float.MAX_VALUE;
+break;
+}
+return true;
+}

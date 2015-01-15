@@ -1,0 +1,12 @@
+{
+  if (distance > maxMoveLength) {
+    isArrivedMaxMoved=true;
+    curRadius=0;
+  }
+ else {
+    isArrivedMaxMoved=false;
+    float calcRadius=(1 - 1f * distance / maxMoveLength) * originRadius;
+    float maxRadius=BasicUiUtils.dip2px(context,2);
+    curRadius=(int)Math.max(calcRadius,maxRadius);
+  }
+}

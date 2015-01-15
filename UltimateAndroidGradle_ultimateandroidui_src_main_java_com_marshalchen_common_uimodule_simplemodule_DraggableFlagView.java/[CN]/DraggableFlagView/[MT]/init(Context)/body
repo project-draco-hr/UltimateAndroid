@@ -1,0 +1,13 @@
+{
+  this.context=context;
+  setBackgroundColor(Color.TRANSPARENT);
+  paint=new Paint();
+  paint.setColor(patientColor);
+  paint.setAntiAlias(true);
+  textPaint=new TextPaint();
+  textPaint.setAntiAlias(true);
+  textPaint.setColor(Color.WHITE);
+  textPaint.setTextSize(BasicUiUtils.dp2px(context,12));
+  textPaint.setTextAlign(Paint.Align.CENTER);
+  textFontMetrics=textPaint.getFontMetrics();
+}

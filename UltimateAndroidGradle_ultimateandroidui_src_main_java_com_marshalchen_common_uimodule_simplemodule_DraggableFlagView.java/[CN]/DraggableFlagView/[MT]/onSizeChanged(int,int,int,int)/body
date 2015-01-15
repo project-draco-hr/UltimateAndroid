@@ -1,0 +1,18 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  if (isFirst && w > 0 && h > 0) {
+    isFirst=false;
+    originWidth=w;
+    originHeight=h;
+    originRadius=Math.min(originWidth,originHeight) / 2;
+    curRadius=originRadius;
+    touchedPointRadius=originRadius;
+    maxMoveLength=BasicUiUtils.getDeviceHeight(context) / 6;
+    refreshStartPoint();
+    ViewGroup.LayoutParams lp=this.getLayoutParams();
+    if (RelativeLayout.LayoutParams.class.isAssignableFrom(lp.getClass())) {
+      originLp=(RelativeLayout.LayoutParams)lp;
+    }
+    newLp=new RelativeLayout.LayoutParams(lp.width,lp.height);
+  }
+}

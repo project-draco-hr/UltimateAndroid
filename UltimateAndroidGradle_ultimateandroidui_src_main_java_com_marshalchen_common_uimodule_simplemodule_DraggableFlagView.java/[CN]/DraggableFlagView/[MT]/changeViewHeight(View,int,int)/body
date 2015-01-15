@@ -1,0 +1,9 @@
+{
+  ViewGroup.LayoutParams lp=view.getLayoutParams();
+  if (null == lp) {
+    lp=originLp;
+  }
+  lp.width=width;
+  lp.height=height;
+  view.setLayoutParams(lp);
+}

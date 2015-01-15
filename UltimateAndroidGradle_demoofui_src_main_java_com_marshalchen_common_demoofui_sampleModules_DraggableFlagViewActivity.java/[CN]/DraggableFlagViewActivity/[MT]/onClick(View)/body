@@ -1,0 +1,7 @@
+{
+switch (v.getId()) {
+case R.id.main_btn:
+    draggableFlagView.setText("7");
+  break;
+}
+}
