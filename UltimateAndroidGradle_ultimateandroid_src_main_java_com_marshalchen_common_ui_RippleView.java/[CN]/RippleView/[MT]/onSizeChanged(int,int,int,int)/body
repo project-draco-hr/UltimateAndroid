@@ -2,4 +2,8 @@
   super.onSizeChanged(w,h,oldw,oldh);
   WIDTH=w;
   HEIGHT=h;
+  scaleAnimation=new ScaleAnimation(1.0f,zoomScale,1.0f,zoomScale,w / 2,h / 2);
+  scaleAnimation.setDuration(zoomDuration);
+  scaleAnimation.setRepeatMode(Animation.REVERSE);
+  scaleAnimation.setRepeatCount(1);
 }

@@ -1,6 +1,7 @@
 {
+  if (isInEditMode())   return;
   final TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.RippleView);
-  rippleColor=typedArray.getColor(R.styleable.RippleView_rv_color,getResources().getColor(R.color.white));
+  rippleColor=typedArray.getColor(R.styleable.RippleView_rv_color,getResources().getColor(R.color.rippelColor));
   rippleType=typedArray.getInt(R.styleable.RippleView_rv_type,0);
   hasToZoom=typedArray.getBoolean(R.styleable.RippleView_rv_zoom,false);
   isCentered=typedArray.getBoolean(R.styleable.RippleView_rv_centered,false);
@@ -9,8 +10,8 @@
   PAINT_ALPHA=typedArray.getInteger(R.styleable.RippleView_rv_alpha,PAINT_ALPHA);
   ripplePadding=typedArray.getDimensionPixelSize(R.styleable.RippleView_rv_ripplePadding,0);
   canvasHandler=new Handler();
-  scaleAnimation=AnimationUtils.loadAnimation(context,R.anim.ripple_zoom);
-  scaleAnimation.setDuration(typedArray.getInteger(R.styleable.RippleView_rv_zoomDuration,150));
+  zoomScale=typedArray.getFloat(R.styleable.RippleView_rv_zoomScale,1.03f);
+  zoomDuration=typedArray.getInt(R.styleable.RippleView_rv_zoomDuration,200);
   paint=new Paint();
   paint.setAntiAlias(true);
   paint.setStyle(Paint.Style.FILL);
@@ -18,6 +19,11 @@
   paint.setAlpha(PAINT_ALPHA);
   this.setWillNotDraw(false);
   gestureDetector=new GestureDetector(context,new GestureDetector.SimpleOnGestureListener(){
+    @Override public void onLongPress(    MotionEvent event){
+      super.onLongPress(event);
+      animateRipple(event);
+      sendClickEvent(true);
+    }
     @Override public boolean onSingleTapConfirmed(    MotionEvent e){
       return true;
     }
@@ -27,4 +33,5 @@
   }
 );
   this.setDrawingCacheEnabled(true);
+  this.setClickable(true);
 }
