@@ -1,0 +1,4 @@
+{
+  textUnit=unit;
+  setProgress(progress);
+}

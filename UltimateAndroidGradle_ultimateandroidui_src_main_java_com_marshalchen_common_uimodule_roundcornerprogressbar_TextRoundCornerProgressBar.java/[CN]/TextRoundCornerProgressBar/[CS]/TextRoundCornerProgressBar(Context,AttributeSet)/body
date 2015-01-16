@@ -1,0 +1,27 @@
+{
+  super(context,attrs);
+  if (!isInEditMode()) {
+    isProgressBarCreated=false;
+    isProgressSetBeforeDraw=false;
+    isMaxProgressSetBeforeDraw=false;
+    isBackgroundColorSetBeforeDraw=false;
+    isProgressColorSetBeforeDraw=false;
+    LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    inflater.inflate(R.layout.round_corner_progress_bar_round_corner_with_text_layout,this);
+    setup(context,attrs);
+    isProgressBarCreated=true;
+  }
+ else {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+      setBackground(new ColorDrawable(Color.parseColor("#CCCCCC")));
+    }
+ else {
+      setBackgroundColor(Color.parseColor("#CCCCCC"));
+    }
+    setGravity(Gravity.CENTER);
+    setPadding(0,(int)dp2px(5),0,(int)dp2px(5));
+    TextView tv=new TextView(context);
+    tv.setText("TextRoundCornerProgressBar");
+    addView(tv);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  progressTwo.setProgress(progress2);
+  progressThree.setProgress(progress2);
+  textProgressTwo.setText("" + progress2);
+  updateProgressTwoColor();
+}

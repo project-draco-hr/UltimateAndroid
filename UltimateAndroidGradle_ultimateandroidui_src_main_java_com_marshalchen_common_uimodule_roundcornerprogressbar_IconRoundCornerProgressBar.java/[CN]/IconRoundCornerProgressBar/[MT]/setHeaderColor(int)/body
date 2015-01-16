@@ -1,0 +1,17 @@
+{
+  headerColor=color;
+  int radius=this.radius - (padding / 2);
+  GradientDrawable gradient=new GradientDrawable();
+  gradient.setShape(GradientDrawable.RECTANGLE);
+  gradient.setColor(headerColor);
+  gradient.setCornerRadii(new float[]{radius,radius,0,0,0,0,radius,radius});
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    layoutHeader.setBackgroundDrawable(gradient);
+  }
+ else {
+    layoutHeader.setBackground(gradient);
+  }
+  if (!isProgressBarCreated) {
+    isHeaderColorSetBeforeDraw=true;
+  }
+}

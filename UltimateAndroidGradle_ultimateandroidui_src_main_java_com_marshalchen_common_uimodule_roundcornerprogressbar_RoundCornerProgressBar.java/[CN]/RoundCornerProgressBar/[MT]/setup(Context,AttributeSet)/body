@@ -1,0 +1,48 @@
+{
+  int color;
+  TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.RoundCornerProgress);
+  DisplayMetrics metrics=getContext().getResources().getDisplayMetrics();
+  radius=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,radius,metrics);
+  radius=(int)typedArray.getDimension(R.styleable.RoundCornerProgress_rcp_backgroundRadius,radius);
+  layoutBackground=(LinearLayout)findViewById(R.id.round_corner_progress_background);
+  padding=(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,padding,metrics);
+  padding=(int)typedArray.getDimension(R.styleable.RoundCornerProgress_rcp_backgroundPadding,padding);
+  layoutBackground.setPadding(padding,padding,padding,padding);
+  if (!isBackgroundColorSetBeforeDraw) {
+    color=typedArray.getColor(R.styleable.RoundCornerProgress_rcp_backgroundColor,backgroundColor);
+    setBackgroundColor(color);
+  }
+  ViewTreeObserver observer=layoutBackground.getViewTreeObserver();
+  observer.addOnGlobalLayoutListener(new OnGlobalLayoutListener(){
+    @Override public void onGlobalLayout(){
+      layoutBackground.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+      int height=0;
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        backgroundWidth=layoutBackground.getMeasuredWidth();
+        height=layoutBackground.getMeasuredHeight();
+      }
+ else {
+        backgroundWidth=layoutBackground.getWidth();
+        height=layoutBackground.getHeight();
+      }
+      backgroundHeight=(height == 0) ? (int)dp2px(DEFAULT_PROGRESS_BAR_HEIGHT) : height;
+      LayoutParams params=(LayoutParams)layoutBackground.getLayoutParams();
+      params.height=backgroundHeight;
+      layoutBackground.setLayoutParams(params);
+      setProgress(progress);
+    }
+  }
+);
+  layoutProgress=(LinearLayout)findViewById(R.id.round_corner_progress_progress);
+  if (!isProgressColorSetBeforeDraw) {
+    color=typedArray.getColor(R.styleable.RoundCornerProgress_rcp_progressColor,progressColor);
+    setProgressColor(color);
+  }
+  if (!isMaxProgressSetBeforeDraw) {
+    max=(int)typedArray.getInt(R.styleable.RoundCornerProgress_rcp_max,0);
+  }
+  if (!isProgressSetBeforeDraw) {
+    progress=(int)typedArray.getInt(R.styleable.RoundCornerProgress_rcp_progress,0);
+  }
+  typedArray.recycle();
+}

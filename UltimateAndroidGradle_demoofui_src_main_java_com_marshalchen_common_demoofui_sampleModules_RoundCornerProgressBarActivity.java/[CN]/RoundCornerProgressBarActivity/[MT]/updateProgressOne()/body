@@ -1,0 +1,4 @@
+{
+  progressOne.setProgress(progress1);
+  textProgressOne.setText("" + progress1);
+}

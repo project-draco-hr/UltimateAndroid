@@ -1,0 +1,23 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.round_corner_progress_bar_activity_activity_main);
+  progressOne=(IconRoundCornerProgressBar)findViewById(R.id.progress_one);
+  progressOne.setProgressColor(getResources().getColor(R.color.round_corner_progress_bar_custom_progress_blue_progress));
+  progressOne.setHeaderColor(getResources().getColor(R.color.round_corner_progress_bar_custom_progress_blue_header));
+  progressOne.setBackgroundColor(getResources().getColor(R.color.round_corner_progress_bar_custom_progress_background));
+  textProgressOne=(TextView)findViewById(R.id.text_progress_one);
+  btnProgressOneDecrease=(Button)findViewById(R.id.button_progress_one_decrease);
+  btnProgressOneDecrease.setOnClickListener(this);
+  btnProgressOneIncrease=(Button)findViewById(R.id.button_progress_one_increase);
+  btnProgressOneIncrease.setOnClickListener(this);
+  updateProgressOne();
+  progressThree=(TextRoundCornerProgressBar)findViewById(R.id.progress_three);
+  progressTwo=(RoundCornerProgressBar)findViewById(R.id.progress_two);
+  progressTwo.setBackgroundColor(getResources().getColor(R.color.round_corner_progress_bar_custom_progress_background));
+  textProgressTwo=(TextView)findViewById(R.id.text_progress_two);
+  btnProgressTwoDecrease=(Button)findViewById(R.id.button_progress_two_decrease);
+  btnProgressTwoDecrease.setOnClickListener(this);
+  btnProgressTwoIncrease=(Button)findViewById(R.id.button_progress_two_increase);
+  btnProgressTwoIncrease.setOnClickListener(this);
+  updateProgressTwo();
+}
