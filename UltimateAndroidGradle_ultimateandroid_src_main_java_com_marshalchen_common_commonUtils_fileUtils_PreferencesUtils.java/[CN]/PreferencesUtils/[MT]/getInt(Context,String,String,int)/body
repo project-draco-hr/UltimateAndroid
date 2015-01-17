@@ -1,4 +1,4 @@
 {
-  SharedPreferences settings=context.getSharedPreferences(preferenceName,Context.MODE_PRIVATE);
-  return settings.getInt(key,defaultValue);
+  SharedPreferences sharedPreferences=context.getSharedPreferences(preferenceName,Context.MODE_PRIVATE);
+  return sharedPreferences.getInt(key,defaultValue);
 }
