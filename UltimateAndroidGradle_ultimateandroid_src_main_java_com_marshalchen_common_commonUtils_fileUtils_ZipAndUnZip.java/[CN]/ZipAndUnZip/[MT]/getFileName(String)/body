@@ -1,8 +1,0 @@
-{
-  String fname="";
-  int i=f.lastIndexOf('.');
-  if (i > 0 && i < f.length() - 1) {
-    fname=f.substring(0,i);
-  }
-  return fname;
-}

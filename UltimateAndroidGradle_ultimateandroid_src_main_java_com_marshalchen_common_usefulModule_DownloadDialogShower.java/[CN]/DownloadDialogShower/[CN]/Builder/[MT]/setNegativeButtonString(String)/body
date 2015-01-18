@@ -1,0 +1,4 @@
+{
+  downloadDialogShower.setNegativeButtonString(title);
+  return this;
+}

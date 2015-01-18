@@ -1,5 +1,0 @@
-{
-  super.setEnabled(enabled);
-  if (enabled)   setBackgroundColor(beforeBackground);
- else   setBackgroundColor(disabledBackgroundColor);
-}

@@ -1,3 +1,0 @@
-{
-  super(context,android.R.style.Theme_Translucent);
-}

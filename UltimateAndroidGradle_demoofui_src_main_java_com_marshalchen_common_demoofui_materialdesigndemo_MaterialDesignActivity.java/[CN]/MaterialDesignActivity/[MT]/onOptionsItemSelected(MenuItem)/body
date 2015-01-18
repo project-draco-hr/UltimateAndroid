@@ -1,0 +1,8 @@
+{
+  int id=item.getItemId();
+  if (id == R.id.howToUse) {
+    BasicUtils.sendIntent(this,HowToUseActivity.class,"data","MaterialDesignActivity");
+    return true;
+  }
+  return super.onOptionsItemSelected(item);
+}

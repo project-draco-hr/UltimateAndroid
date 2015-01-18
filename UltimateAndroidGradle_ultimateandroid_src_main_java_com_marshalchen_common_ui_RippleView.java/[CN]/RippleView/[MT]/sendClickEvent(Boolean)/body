@@ -1,0 +1,12 @@
+{
+  if (getParent() instanceof ListView) {
+    final int position=((ListView)getParent()).getPositionForView(this);
+    final long id=((ListView)getParent()).getItemIdAtPosition(position);
+    if (isLongClick) {
+      if (((ListView)getParent()).getOnItemLongClickListener() != null)       ((ListView)getParent()).getOnItemLongClickListener().onItemLongClick(((ListView)getParent()),this,position,id);
+    }
+ else {
+      if (((ListView)getParent()).getOnItemClickListener() != null)       ((ListView)getParent()).getOnItemClickListener().onItemClick(((ListView)getParent()),this,position,id);
+    }
+  }
+}

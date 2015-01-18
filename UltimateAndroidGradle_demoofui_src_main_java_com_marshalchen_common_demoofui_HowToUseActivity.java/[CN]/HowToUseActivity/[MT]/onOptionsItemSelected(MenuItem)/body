@@ -1,0 +1,7 @@
+{
+  int id=item.getItemId();
+  if (id == R.id.howToUse) {
+    return true;
+  }
+  return super.onOptionsItemSelected(item);
+}

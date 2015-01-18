@@ -1,0 +1,21 @@
+{
+  int id=v.getId();
+switch (id) {
+case R.id.button_progress_one_decrease:
+    progress1=(progress1 > 0) ? progress1 - 1 : progress1;
+  updateProgressOne();
+break;
+case R.id.button_progress_one_increase:
+progress1=(progress1 < progressOne.getMax()) ? progress1 + 1 : progress1;
+updateProgressOne();
+break;
+case R.id.button_progress_two_decrease:
+progress2=(progress2 > 0) ? progress2 - 1 : progress2;
+updateProgressTwo();
+break;
+case R.id.button_progress_two_increase:
+progress2=(progress2 < progressTwo.getMax()) ? progress2 + 1 : progress2;
+updateProgressTwo();
+break;
+}
+}

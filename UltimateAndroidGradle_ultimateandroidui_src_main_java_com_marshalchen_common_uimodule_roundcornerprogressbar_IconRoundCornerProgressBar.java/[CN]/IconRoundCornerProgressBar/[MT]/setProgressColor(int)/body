@@ -1,0 +1,17 @@
+{
+  progressColor=color;
+  int radius=this.radius - (padding / 2);
+  GradientDrawable gradient=new GradientDrawable();
+  gradient.setShape(GradientDrawable.RECTANGLE);
+  gradient.setColor(progressColor);
+  gradient.setCornerRadii(new float[]{0,0,radius,radius,radius,radius,0,0});
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+    layoutProgress.setBackgroundDrawable(gradient);
+  }
+ else {
+    layoutProgress.setBackground(gradient);
+  }
+  if (!isProgressBarCreated) {
+    isProgressColorSetBeforeDraw=true;
+  }
+}

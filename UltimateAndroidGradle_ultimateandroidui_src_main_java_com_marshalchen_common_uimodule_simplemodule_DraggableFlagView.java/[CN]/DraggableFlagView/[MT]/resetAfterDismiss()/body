@@ -1,0 +1,7 @@
+{
+  this.setVisibility(GONE);
+  text="";
+  isArrivedMaxMoved=false;
+  curRadius=originRadius;
+  postInvalidate();
+}

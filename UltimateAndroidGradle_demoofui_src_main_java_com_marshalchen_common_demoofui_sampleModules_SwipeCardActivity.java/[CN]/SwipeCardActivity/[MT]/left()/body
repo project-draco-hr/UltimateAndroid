@@ -1,0 +1,3 @@
+{
+  flingContainer.getTopCardListener().selectLeft();
+}

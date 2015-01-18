@@ -1,6 +1,0 @@
-{
-  super.onDraw(canvas);
-  if (firstAnimationOver == false)   drawFirstAnimation(canvas);
-  if (cont > 0)   drawSecondAnimation(canvas);
-  invalidate();
-}

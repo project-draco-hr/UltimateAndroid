@@ -1,7 +1,0 @@
-{
-  int surfaceLeft=getSurfaceView().getLeft();
-  int surfaceTop=getSurfaceView().getTop();
-  if (surfaceLeft == getPaddingLeft() && surfaceTop == getPaddingTop())   return Status.Close;
-  if (surfaceLeft == (getPaddingLeft() - mDragDistance) || surfaceLeft == (getPaddingLeft() + mDragDistance) || surfaceTop == (getPaddingTop() - mDragDistance) || surfaceTop == (getPaddingTop() + mDragDistance))   return Status.Open;
-  return Status.Middle;
-}

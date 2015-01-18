@@ -1,0 +1,7 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_how_to_use);
+  ButterKnife.inject(this);
+  data=getIntent().getStringExtra("data");
+  judgeProjectInfo();
+}

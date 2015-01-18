@@ -1,5 +1,0 @@
-{
-  super(context);
-  setBackgroundResource(R.drawable.material_design_background_checkbox_uncheck);
-  sprite=BitmapFactory.decodeResource(context.getResources(),R.drawable.material_design_sprite_check);
-}

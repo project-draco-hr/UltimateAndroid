@@ -1,4 +1,0 @@
-{
-  mDragEdge=dragEdge;
-  requestLayout();
-}

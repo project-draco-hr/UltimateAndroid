@@ -1,3 +1,4 @@
 {
-  return true;
+  this.onTouchEvent(event);
+  return super.onInterceptTouchEvent(event);
 }

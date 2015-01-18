@@ -1,4 +1,0 @@
-{
-  if (myView.getId() == android.R.id.content)   return myView.getTop();
- else   return myView.getTop() + getRelativeTop((View)myView.getParent());
-}

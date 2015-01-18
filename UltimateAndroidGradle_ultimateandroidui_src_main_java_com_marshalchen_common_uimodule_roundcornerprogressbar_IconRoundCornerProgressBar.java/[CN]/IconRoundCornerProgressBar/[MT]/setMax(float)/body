@@ -1,0 +1,6 @@
+{
+  if (!isProgressBarCreated) {
+    isMaxProgressSetBeforeDraw=true;
+  }
+  this.max=max;
+}

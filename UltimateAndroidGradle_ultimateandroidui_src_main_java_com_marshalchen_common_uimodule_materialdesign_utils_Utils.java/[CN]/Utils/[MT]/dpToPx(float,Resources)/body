@@ -1,4 +1,0 @@
-{
-  float px=TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dp,resources.getDisplayMetrics());
-  return (int)px;
-}

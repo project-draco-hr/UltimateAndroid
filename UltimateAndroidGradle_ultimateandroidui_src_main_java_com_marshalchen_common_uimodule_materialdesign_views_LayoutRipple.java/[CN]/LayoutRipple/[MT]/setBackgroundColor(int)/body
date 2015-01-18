@@ -1,5 +1,0 @@
-{
-  this.backgroundColor=color;
-  if (isEnabled())   beforeBackground=backgroundColor;
-  super.setBackgroundColor(color);
-}

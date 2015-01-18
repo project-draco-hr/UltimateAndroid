@@ -1,0 +1,3 @@
+{
+  unzipGzips(inFileName,FileUtils.getFileNameWithoutExtension(inFileName));
+}

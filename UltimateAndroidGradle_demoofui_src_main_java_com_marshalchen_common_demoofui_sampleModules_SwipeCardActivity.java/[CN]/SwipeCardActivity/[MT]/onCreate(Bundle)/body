@@ -1,0 +1,47 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.swipe_card_activity_my);
+  ButterKnife.inject(this);
+  al=new ArrayList<>();
+  al.add("php");
+  al.add("c");
+  al.add("python");
+  al.add("java");
+  al.add("html");
+  al.add("c++");
+  al.add("css");
+  al.add("javascript");
+  arrayAdapter=new ArrayAdapter<>(this,R.layout.swipe_card_item,R.id.helloText,al);
+  flingContainer.setAdapter(arrayAdapter);
+  flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener(){
+    @Override public void removeFirstObjectInAdapter(){
+      Log.d("LIST","removed object!");
+      al.remove(0);
+      arrayAdapter.notifyDataSetChanged();
+    }
+    @Override public void onLeftCardExit(    Object dataObject){
+      makeToast(SwipeCardActivity.this,"Left!");
+    }
+    @Override public void onRightCardExit(    Object dataObject){
+      makeToast(SwipeCardActivity.this,"Right!");
+    }
+    @Override public void onAdapterAboutToEmpty(    int itemsInAdapter){
+      al.add("XML ".concat(String.valueOf(i)));
+      arrayAdapter.notifyDataSetChanged();
+      Log.d("LIST","notified");
+      i++;
+    }
+    @Override public void onScroll(    float scrollProgressPercent){
+      View view=flingContainer.getSelectedView();
+      view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
+      view.findViewById(R.id.item_swipe_left_indicator).setAlpha(scrollProgressPercent > 0 ? scrollProgressPercent : 0);
+    }
+  }
+);
+  flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener(){
+    @Override public void onItemClicked(    int itemPosition,    Object dataObject){
+      makeToast(SwipeCardActivity.this,"Clicked!");
+    }
+  }
+);
+}

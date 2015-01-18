@@ -1,0 +1,10 @@
+{
+  location=new int[2];
+  this.getLocationInWindow(location);
+  try {
+    location[1]=location[1] - BasicUiUtils.getTopBarHeight((Activity)context);
+  }
+ catch (  Exception ex) {
+  }
+  startPoint.set(location[0],location[1] + getMeasuredHeight());
+}

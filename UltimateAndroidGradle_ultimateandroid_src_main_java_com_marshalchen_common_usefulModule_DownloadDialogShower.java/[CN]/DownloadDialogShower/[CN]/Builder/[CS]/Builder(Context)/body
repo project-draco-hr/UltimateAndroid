@@ -1,0 +1,4 @@
+{
+  initDefaults(context);
+  downloadDialogShower=new DownloadDialogShower(builderContext);
+}

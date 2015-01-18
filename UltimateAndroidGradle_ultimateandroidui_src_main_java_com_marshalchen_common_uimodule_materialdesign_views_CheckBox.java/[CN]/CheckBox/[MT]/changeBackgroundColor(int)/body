@@ -1,5 +1,0 @@
-{
-  LayerDrawable layer=(LayerDrawable)getBackground();
-  GradientDrawable shape=(GradientDrawable)layer.findDrawableByLayerId(R.id.shape_bacground);
-  shape.setColor(color);
-}

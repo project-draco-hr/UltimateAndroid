@@ -1,5 +1,0 @@
-{
-  animation.cancel();
-  ViewHelper.setX(progressView,0);
-  runAnimation=false;
-}

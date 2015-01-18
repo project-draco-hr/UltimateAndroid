@@ -1,3 +1,3 @@
 {
-  clearSharePreference(context,PREFERENCE_NAME);
+  clearSharePreference(context,preferenceName);
 }

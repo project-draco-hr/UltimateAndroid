@@ -1,6 +1,0 @@
-{
-  setMinimumHeight(Utils.dpToPx(minHeight,getResources()));
-  setMinimumWidth(Utils.dpToPx(minWidth,getResources()));
-  setBackgroundResource(background);
-  setBackgroundColor(backgroundColor);
-}

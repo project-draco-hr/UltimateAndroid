@@ -1,4 +1,0 @@
-{
-  super(context);
-  setBackgroundResource(R.drawable.material_design_background_switch_ball_uncheck);
-}

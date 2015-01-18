@@ -1,4 +1,0 @@
-{
-  if (myView.getId() == android.R.id.content)   return myView.getLeft();
- else   return myView.getLeft() + getRelativeLeft((View)myView.getParent());
-}

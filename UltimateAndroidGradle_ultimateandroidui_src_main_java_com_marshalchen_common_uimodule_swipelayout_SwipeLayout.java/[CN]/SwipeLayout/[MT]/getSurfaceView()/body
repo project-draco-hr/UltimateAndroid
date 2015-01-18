@@ -1,3 +1,0 @@
-{
-  return (ViewGroup)getChildAt(1);
-}

@@ -1,0 +1,11 @@
+{
+  if (progress2 <= 3) {
+    progressTwo.setProgressColor(getResources().getColor(R.color.round_corner_progress_bar_custom_progress_red_progress));
+  }
+ else   if (progress2 > 3 && progress2 <= 6) {
+    progressTwo.setProgressColor(getResources().getColor(R.color.round_corner_progress_bar_custom_progress_orange_progress));
+  }
+ else   if (progress2 > 6) {
+    progressTwo.setProgressColor(getResources().getColor(R.color.round_corner_progress_bar_custom_progress_green_progress));
+  }
+}

@@ -1,0 +1,13 @@
+{
+  super(context,attrs);
+  TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.DraggableFlagView);
+  int indexCount=a.getIndexCount();
+  for (int i=0; i < indexCount; i++) {
+    int attrIndex=a.getIndex(i);
+    if (attrIndex == R.styleable.DraggableFlagView_df_color) {
+      patientColor=a.getColor(attrIndex,Color.RED);
+    }
+  }
+  a.recycle();
+  init(context);
+}

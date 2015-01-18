@@ -1,8 +1,0 @@
-{
-  rippleSpeed=Utils.dpToPx(2,getResources());
-  rippleSize=10;
-  setMinimumHeight(Utils.dpToPx(sizeRadius * 2,getResources()));
-  setMinimumWidth(Utils.dpToPx(sizeRadius * 2,getResources()));
-  setBackgroundResource(R.drawable.material_design_background_button_float);
-  setBackgroundColor(backgroundColor);
-}

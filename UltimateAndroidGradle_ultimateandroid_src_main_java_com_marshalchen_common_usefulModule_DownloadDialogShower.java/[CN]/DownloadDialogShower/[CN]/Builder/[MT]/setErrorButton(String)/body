@@ -1,0 +1,4 @@
+{
+  downloadDialogShower.setErrorButton(title);
+  return this;
+}

@@ -22,11 +22,11 @@
       tmpBitmap.recycle();
     }
     paint.setColor(rippleColor);
-    timer++;
     if (rippleType == 1) {
       if ((((float)timer * FRAME_RATE) / DURATION) > 0.6f)       paint.setAlpha((int)(PAINT_ALPHA - ((PAINT_ALPHA) * (((float)timerEmpty * FRAME_RATE) / (durationEmpty)))));
  else       paint.setAlpha(PAINT_ALPHA);
     }
  else     paint.setAlpha((int)(PAINT_ALPHA - ((PAINT_ALPHA) * (((float)timer * FRAME_RATE) / DURATION))));
+    timer++;
   }
 }

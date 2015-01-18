@@ -1,6 +1,0 @@
-{
-  MessageDigest digest=MessageDigest.getInstance("SHA-1");
-  digest.update(string.getBytes());
-  byte messageDigest[]=digest.digest();
-  return toHexString(messageDigest);
-}

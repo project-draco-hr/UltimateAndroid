@@ -1,0 +1,4 @@
+{
+  DisplayMetrics displayMetrics=getContext().getResources().getDisplayMetrics();
+  return Math.round(dp * (displayMetrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+}

@@ -1,0 +1,8 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.draggable_flag_activity_main);
+  findViewById(R.id.main_btn).setOnClickListener(this);
+  draggableFlagView=(DraggableFlagView)findViewById(R.id.main_dfv);
+  draggableFlagView.setOnDraggableFlagViewListener(this);
+  draggableFlagView.setText("7");
+}

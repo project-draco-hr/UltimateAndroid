@@ -1,4 +1,0 @@
-{
-  dialogShower.setErrorButton(title);
-  return this;
-}

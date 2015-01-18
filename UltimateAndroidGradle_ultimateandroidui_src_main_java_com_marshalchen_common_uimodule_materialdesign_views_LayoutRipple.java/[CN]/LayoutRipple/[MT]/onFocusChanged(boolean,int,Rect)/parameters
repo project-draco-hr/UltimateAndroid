@@ -1,3 +1,0 @@
-boolean gainFocus
-int direction
-Rect previouslyFocusedRect

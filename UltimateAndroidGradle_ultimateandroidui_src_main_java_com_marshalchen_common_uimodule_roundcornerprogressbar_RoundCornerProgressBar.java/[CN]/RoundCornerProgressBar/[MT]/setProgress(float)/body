@@ -1,0 +1,12 @@
+{
+  progress=(progress > max) ? max : progress;
+  progress=(progress < 0) ? 0 : progress;
+  this.progress=progress;
+  float ratio=max / progress;
+  LayoutParams params=(LayoutParams)layoutProgress.getLayoutParams();
+  params.width=(int)((backgroundWidth - (padding * 2)) / ratio);
+  layoutProgress.setLayoutParams(params);
+  if (!isProgressBarCreated) {
+    isProgressSetBeforeDraw=true;
+  }
+}

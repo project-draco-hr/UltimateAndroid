@@ -1,6 +1,0 @@
-{
-  int r=(this.backgroundColor >> 16) & 0xFF;
-  int g=(this.backgroundColor >> 8) & 0xFF;
-  int b=(this.backgroundColor >> 0) & 0xFF;
-  return Color.argb(128,r,g,b);
-}
