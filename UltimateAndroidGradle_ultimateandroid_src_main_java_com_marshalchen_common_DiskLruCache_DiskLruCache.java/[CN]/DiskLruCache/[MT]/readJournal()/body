@@ -20,6 +20,12 @@
       }
     }
     redundantOpCount=lineCount - lruEntries.size();
+    if (reader.hasUnterminatedLine()) {
+      rebuildJournal();
+    }
+ else {
+      journalWriter=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(journalFile,true),Util.US_ASCII));
+    }
   }
   finally {
     Util.closeQuietly(reader);

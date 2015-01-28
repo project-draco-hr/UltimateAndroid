@@ -2,5 +2,4 @@
   super.onCreate();
   ImageLoaderConfiguration config=UniversalImageLoader.getDefaultImageLoaderConfiguration(getApplicationContext());
   ImageLoader.getInstance().init(config);
-  ActiveAndroid.initialize(this);
 }

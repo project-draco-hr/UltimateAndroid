@@ -20,7 +20,6 @@
     try {
       cache.readJournal();
       cache.processJournal();
-      cache.journalWriter=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(cache.journalFile,true),Util.US_ASCII));
       return cache;
     }
  catch (    IOException journalIsCorrupt) {
