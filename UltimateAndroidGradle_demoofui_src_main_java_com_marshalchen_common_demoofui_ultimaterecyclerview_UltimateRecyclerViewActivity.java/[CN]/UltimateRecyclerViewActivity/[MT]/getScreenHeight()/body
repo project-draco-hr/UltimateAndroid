@@ -1,0 +1,3 @@
+{
+  return findViewById(android.R.id.content).getHeight();
+}

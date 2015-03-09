@@ -1,0 +1,3 @@
+{
+  swapPositions(stringList,from,to);
+}
