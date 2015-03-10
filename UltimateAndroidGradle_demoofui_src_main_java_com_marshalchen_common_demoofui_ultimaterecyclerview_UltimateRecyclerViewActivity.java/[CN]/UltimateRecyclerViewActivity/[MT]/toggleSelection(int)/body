@@ -1,0 +1,4 @@
+{
+  simpleRecyclerViewAdapter.toggleSelection(position);
+  actionMode.setTitle("Selected " + "1");
+}

@@ -1,0 +1,4 @@
+{
+  Logs.d("actionmode---" + (mode == null));
+  return true;
+}
