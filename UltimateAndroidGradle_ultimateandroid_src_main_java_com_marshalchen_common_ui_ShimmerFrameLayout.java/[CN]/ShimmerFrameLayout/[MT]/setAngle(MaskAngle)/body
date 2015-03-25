@@ -1,0 +1,4 @@
+{
+  mMask.angle=angle;
+  resetAll();
+}

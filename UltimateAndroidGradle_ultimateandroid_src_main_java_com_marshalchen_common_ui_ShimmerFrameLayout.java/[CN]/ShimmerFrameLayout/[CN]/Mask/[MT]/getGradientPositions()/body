@@ -1,0 +1,9 @@
+{
+switch (shape) {
+default :
+case LINEAR:
+    return new float[]{Math.max((1.0f - intensity - dropoff) / 2,0.0f),Math.max((1.0f - intensity) / 2,0.0f),Math.min((1.0f + intensity) / 2,1.0f),Math.min((1.0f + intensity + dropoff) / 2,1.0f)};
+case RADIAL:
+  return new float[]{0.0f,Math.min(intensity,1.0f),Math.min(intensity + dropoff,1.0f)};
+}
+}

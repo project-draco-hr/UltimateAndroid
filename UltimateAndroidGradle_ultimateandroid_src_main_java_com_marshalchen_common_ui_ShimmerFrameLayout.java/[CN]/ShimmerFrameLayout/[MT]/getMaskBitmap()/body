@@ -1,0 +1,60 @@
+{
+  if (mMaskBitmap != null) {
+    return mMaskBitmap;
+  }
+  int width=mMask.maskWidth(getWidth());
+  int height=mMask.maskHeight(getHeight());
+  mMaskBitmap=createBitmapAndGcIfNecessary(width,height);
+  Canvas canvas=new Canvas(mMaskBitmap);
+  Shader gradient;
+switch (mMask.shape) {
+default :
+case LINEAR:
+{
+      int x1, y1;
+      int x2, y2;
+switch (mMask.angle) {
+default :
+case CW_0:
+        x1=0;
+      y1=0;
+    x2=width;
+  y2=0;
+break;
+case CW_90:
+x1=0;
+y1=0;
+x2=0;
+y2=height;
+break;
+case CW_180:
+x1=width;
+y1=0;
+x2=0;
+y2=0;
+break;
+case CW_270:
+x1=0;
+y1=height;
+x2=0;
+y2=0;
+break;
+}
+gradient=new LinearGradient(x1,y1,x2,y2,mMask.getGradientColors(),mMask.getGradientPositions(),Shader.TileMode.REPEAT);
+break;
+}
+case RADIAL:
+{
+int x=width / 2;
+int y=height / 2;
+gradient=new RadialGradient(x,y,(float)(Math.max(width,height) / Math.sqrt(2)),mMask.getGradientColors(),mMask.getGradientPositions(),Shader.TileMode.REPEAT);
+break;
+}
+}
+canvas.rotate(mMask.tilt,width / 2,height / 2);
+Paint paint=new Paint();
+paint.setShader(gradient);
+int padding=(int)(Math.sqrt(2) * Math.max(width,height)) / 2;
+canvas.drawRect(-padding,-padding,width + padding,height + padding,paint);
+return mMaskBitmap;
+}

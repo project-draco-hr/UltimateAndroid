@@ -1,0 +1,10 @@
+{
+  if (mRenderUnmaskBitmap != null) {
+    mRenderUnmaskBitmap.recycle();
+    mRenderUnmaskBitmap=null;
+  }
+  if (mRenderMaskBitmap != null) {
+    mRenderMaskBitmap.recycle();
+    mRenderMaskBitmap=null;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  Bitmap unmaskBitmap=tryObtainRenderUnmaskBitmap();
+  Bitmap maskBitmap=tryObtainRenderMaskBitmap();
+  if (unmaskBitmap == null || maskBitmap == null) {
+    return false;
+  }
+  drawUnmasked(new Canvas(unmaskBitmap));
+  canvas.drawBitmap(unmaskBitmap,0,0,mAlphaPaint);
+  drawMasked(new Canvas(maskBitmap));
+  canvas.drawBitmap(maskBitmap,0,0,null);
+  return true;
+}

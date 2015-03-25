@@ -1,0 +1,7 @@
+{
+  if (mMaskOffsetX == maskOffsetX) {
+    return;
+  }
+  mMaskOffsetX=maskOffsetX;
+  invalidate();
+}

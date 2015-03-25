@@ -1,0 +1,9 @@
+{
+  Bitmap maskBitmap=getMaskBitmap();
+  if (maskBitmap == null) {
+    return;
+  }
+  renderCanvas.clipRect(mMaskOffsetX,mMaskOffsetY,mMaskOffsetX + maskBitmap.getWidth(),mMaskOffsetY + maskBitmap.getHeight());
+  super.dispatchDraw(renderCanvas);
+  renderCanvas.drawBitmap(maskBitmap,mMaskOffsetX,mMaskOffsetY,mMaskPaint);
+}

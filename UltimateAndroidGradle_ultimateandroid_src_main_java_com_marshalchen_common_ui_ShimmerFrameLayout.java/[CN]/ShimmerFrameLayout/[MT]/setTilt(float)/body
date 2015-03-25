@@ -1,0 +1,4 @@
+{
+  mMask.tilt=tilt;
+  resetAll();
+}

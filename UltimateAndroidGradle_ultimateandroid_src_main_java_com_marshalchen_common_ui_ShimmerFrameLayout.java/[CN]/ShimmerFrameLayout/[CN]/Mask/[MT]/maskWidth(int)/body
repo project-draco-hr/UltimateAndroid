@@ -1,0 +1,3 @@
+{
+  return fixedWidth > 0 ? fixedWidth : (int)(width * relativeWidth);
+}

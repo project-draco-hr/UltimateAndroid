@@ -1,0 +1,7 @@
+{
+  super.onAttachedToWindow();
+  if (mGlobalLayoutListener == null) {
+    mGlobalLayoutListener=getLayoutListener();
+  }
+  getViewTreeObserver().addOnGlobalLayoutListener(mGlobalLayoutListener);
+}

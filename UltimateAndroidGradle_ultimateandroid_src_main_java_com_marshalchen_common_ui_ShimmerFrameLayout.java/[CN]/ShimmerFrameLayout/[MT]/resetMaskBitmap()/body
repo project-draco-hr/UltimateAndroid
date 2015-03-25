@@ -1,0 +1,6 @@
+{
+  if (mMaskBitmap != null) {
+    mMaskBitmap.recycle();
+    mMaskBitmap=null;
+  }
+}

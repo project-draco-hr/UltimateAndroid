@@ -1,0 +1,9 @@
+{
+  if (mAnimator != null) {
+    mAnimator.end();
+    mAnimator.removeAllUpdateListeners();
+    mAnimator.cancel();
+  }
+  mAnimator=null;
+  mAnimationStarted=false;
+}

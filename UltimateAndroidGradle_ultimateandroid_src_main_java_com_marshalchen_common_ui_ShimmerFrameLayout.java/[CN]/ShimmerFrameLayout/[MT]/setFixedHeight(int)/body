@@ -1,0 +1,4 @@
+{
+  mMask.fixedHeight=fixedHeight;
+  resetAll();
+}

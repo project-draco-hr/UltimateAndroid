@@ -1,0 +1,9 @@
+{
+  try {
+    return Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);
+  }
+ catch (  OutOfMemoryError e) {
+    System.gc();
+    return Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);
+  }
+}

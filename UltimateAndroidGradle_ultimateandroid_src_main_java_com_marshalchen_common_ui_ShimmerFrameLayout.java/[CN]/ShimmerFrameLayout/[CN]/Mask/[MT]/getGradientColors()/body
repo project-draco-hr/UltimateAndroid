@@ -1,0 +1,9 @@
+{
+switch (shape) {
+default :
+case LINEAR:
+    return new int[]{Color.TRANSPARENT,Color.BLACK,Color.BLACK,Color.TRANSPARENT};
+case RADIAL:
+  return new int[]{Color.BLACK,Color.BLACK,Color.TRANSPARENT};
+}
+}

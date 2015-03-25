@@ -1,0 +1,8 @@
+{
+  stopShimmerAnimation();
+  if (mGlobalLayoutListener != null) {
+    getViewTreeObserver().removeGlobalOnLayoutListener(mGlobalLayoutListener);
+    mGlobalLayoutListener=null;
+  }
+  super.onDetachedFromWindow();
+}

@@ -1,0 +1,4 @@
+{
+  mMask.dropoff=dropoff;
+  resetAll();
+}

@@ -1,0 +1,4 @@
+{
+  mRepeatCount=repeatCount;
+  resetAll();
+}
