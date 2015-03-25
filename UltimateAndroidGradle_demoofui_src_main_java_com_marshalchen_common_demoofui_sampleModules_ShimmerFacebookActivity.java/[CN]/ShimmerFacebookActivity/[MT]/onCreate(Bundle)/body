@@ -1,0 +1,15 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.shimmer_facebook_main);
+  mShimmerViewContainer=(ShimmerFrameLayout)findViewById(R.id.shimmer_view_container);
+  mPresetButtons=new Button[]{(Button)findViewById(R.id.preset_button0),(Button)findViewById(R.id.preset_button1),(Button)findViewById(R.id.preset_button2),(Button)findViewById(R.id.preset_button3),(Button)findViewById(R.id.preset_button4)};
+  for (int i=0; i < mPresetButtons.length; i++) {
+    final int preset=i;
+    mPresetButtons[i].setOnClickListener(new View.OnClickListener(){
+      @Override public void onClick(      View view){
+        selectPreset(preset,true);
+      }
+    }
+);
+  }
+}

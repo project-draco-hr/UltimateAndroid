@@ -1,0 +1,48 @@
+{
+  if (mCurrentPreset == preset) {
+    return;
+  }
+  if (mCurrentPreset >= 0) {
+  }
+  mCurrentPreset=preset;
+  boolean isPlaying=mShimmerViewContainer.isAnimationStarted();
+  mShimmerViewContainer.useDefaults();
+  if (mPresetToast != null) {
+    mPresetToast.cancel();
+  }
+switch (preset) {
+default :
+case 0:
+    mPresetToast=Toast.makeText(this,"Default",Toast.LENGTH_SHORT);
+  break;
+case 1:
+mShimmerViewContainer.setDuration(5000);
+mShimmerViewContainer.setRepeatMode(ObjectAnimator.REVERSE);
+mPresetToast=Toast.makeText(this,"Slow and reverse",Toast.LENGTH_SHORT);
+break;
+case 2:
+mShimmerViewContainer.setBaseAlpha(0.1f);
+mShimmerViewContainer.setDropoff(0.1f);
+mShimmerViewContainer.setTilt(0);
+mPresetToast=Toast.makeText(this,"Thin, straight and transparent",Toast.LENGTH_SHORT);
+break;
+case 3:
+mShimmerViewContainer.setAngle(ShimmerFrameLayout.MaskAngle.CW_90);
+mPresetToast=Toast.makeText(this,"Sweep angle 90",Toast.LENGTH_SHORT);
+break;
+case 4:
+mShimmerViewContainer.setBaseAlpha(0);
+mShimmerViewContainer.setDuration(2000);
+mShimmerViewContainer.setDropoff(0.1f);
+mShimmerViewContainer.setIntensity(0.35f);
+mShimmerViewContainer.setMaskShape(ShimmerFrameLayout.MaskShape.RADIAL);
+mPresetToast=Toast.makeText(this,"Spotlight",Toast.LENGTH_SHORT);
+break;
+}
+if (showToast) {
+mPresetToast.show();
+}
+if (isPlaying) {
+mShimmerViewContainer.startShimmerAnimation();
+}
+}
