@@ -1,0 +1,10 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.search_drawable_activity);
+  imageView=(ImageView)findViewById(R.id.search);
+  textView=(TextView)findViewById(R.id.text);
+  searchDrawable=new SearchDrawable();
+  imageView.setImageDrawable(searchDrawable);
+  startUpAnimation();
+  imageView.setOnClickListener(this);
+}
