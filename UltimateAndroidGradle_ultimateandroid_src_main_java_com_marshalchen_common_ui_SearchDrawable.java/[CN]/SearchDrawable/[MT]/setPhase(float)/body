@@ -1,0 +1,8 @@
+{
+  mPhase=phase;
+  float len=pm.getLength();
+  DashPathEffect effect=new DashPathEffect(new float[]{len,len},-phase * len);
+  mPaint.setPathEffect(effect);
+  createEditorPath(phase);
+  invalidateSelf();
+}

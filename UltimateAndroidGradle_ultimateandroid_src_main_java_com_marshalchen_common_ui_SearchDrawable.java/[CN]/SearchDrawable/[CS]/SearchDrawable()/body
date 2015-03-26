@@ -1,0 +1,9 @@
+{
+  mPaint.setStyle(Paint.Style.STROKE);
+  mPaint.setStrokeWidth(4);
+  mPaint.setColor(Color.WHITE);
+  mPaint.setAntiAlias(true);
+  createSearchPath(0);
+  pm=new PathMeasure(mPath,false);
+  editorPath=new Path();
+}
