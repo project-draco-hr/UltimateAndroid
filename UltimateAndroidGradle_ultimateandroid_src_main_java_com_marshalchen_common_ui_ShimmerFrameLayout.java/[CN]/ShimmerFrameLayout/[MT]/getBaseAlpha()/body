@@ -1,0 +1,3 @@
+{
+  return (float)mAlphaPaint.getAlpha() / 0xff;
+}

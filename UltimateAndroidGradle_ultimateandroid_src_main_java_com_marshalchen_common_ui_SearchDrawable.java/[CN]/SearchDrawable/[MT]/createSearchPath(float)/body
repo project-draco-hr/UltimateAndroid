@@ -1,0 +1,28 @@
+{
+  RectF oval=new RectF(0.0f,0.0f,mRadius * 2.0f,mRadius * 2.0f);
+  float cx=oval.centerX();
+  float cy=oval.centerY();
+  float rx=oval.width() / 2.0f;
+  float ry=oval.height() / 2.0f;
+  final float TAN_PI_OVER_8=0.414213562f;
+  final float ROOT_2_OVER_2=0.707106781f;
+  float sx=rx * TAN_PI_OVER_8;
+  float sy=ry * TAN_PI_OVER_8;
+  float mx=rx * ROOT_2_OVER_2;
+  float my=ry * ROOT_2_OVER_2;
+  float L=oval.left;
+  float T=oval.top;
+  float R=oval.right;
+  float B=oval.bottom;
+  mPath=new Path();
+  mPath.moveTo(cx + mx,cy + my);
+  mPath.quadTo(cx + sx,B,cx,B);
+  mPath.quadTo(cx - sx,B,cx - mx,cy + my);
+  mPath.quadTo(L,cy + sy,L,cy);
+  mPath.quadTo(L,cy - sy,cx - mx,cy - my);
+  mPath.quadTo(cx - sx,T,cx,T);
+  mPath.quadTo(cx + sx,T,cx + mx,cy - my);
+  mPath.quadTo(R,cy - sy,R,cy);
+  mPath.quadTo(R,cy + sy,cx + mx,cy + my);
+  mPath.lineTo(1.5f * R,1.5f * B);
+}

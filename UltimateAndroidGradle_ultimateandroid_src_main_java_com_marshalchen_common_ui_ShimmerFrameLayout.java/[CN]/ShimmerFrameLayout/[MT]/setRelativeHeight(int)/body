@@ -1,0 +1,4 @@
+{
+  mMask.relativeHeight=relativeHeight;
+  resetAll();
+}

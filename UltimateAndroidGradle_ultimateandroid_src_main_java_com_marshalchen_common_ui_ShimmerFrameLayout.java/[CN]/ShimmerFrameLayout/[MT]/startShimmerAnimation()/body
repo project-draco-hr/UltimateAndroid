@@ -1,0 +1,8 @@
+{
+  if (mAnimationStarted) {
+    return;
+  }
+  Animator animator=getShimmerAnimation();
+  animator.start();
+  mAnimationStarted=true;
+}

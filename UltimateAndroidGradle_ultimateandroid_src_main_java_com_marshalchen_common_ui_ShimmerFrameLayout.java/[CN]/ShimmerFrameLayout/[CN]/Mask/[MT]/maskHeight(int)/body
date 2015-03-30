@@ -1,0 +1,3 @@
+{
+  return fixedHeight > 0 ? fixedHeight : (int)(height * relativeHeight);
+}

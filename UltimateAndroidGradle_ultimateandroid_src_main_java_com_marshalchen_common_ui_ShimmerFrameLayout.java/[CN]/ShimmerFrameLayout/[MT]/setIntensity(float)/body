@@ -1,0 +1,4 @@
+{
+  mMask.intensity=intensity;
+  resetAll();
+}

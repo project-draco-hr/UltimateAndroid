@@ -1,0 +1,8 @@
+{
+  canvas.save();
+  canvas.translate(distance * mPhase,0.0f);
+  canvas.drawPath(mPath,mPaint);
+  mPaint.setPathEffect(null);
+  canvas.drawPath(editorPath,mPaint);
+  canvas.restore();
+}

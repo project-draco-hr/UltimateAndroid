@@ -1,0 +1,5 @@
+{
+  stopShimmerAnimation();
+  resetMaskBitmap();
+  resetRenderedView();
+}

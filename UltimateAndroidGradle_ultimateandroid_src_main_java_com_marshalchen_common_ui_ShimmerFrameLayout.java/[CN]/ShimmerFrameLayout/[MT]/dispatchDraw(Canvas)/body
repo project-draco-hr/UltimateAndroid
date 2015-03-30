@@ -1,0 +1,7 @@
+{
+  if (!mAnimationStarted || getWidth() <= 0 || getHeight() <= 0) {
+    super.dispatchDraw(canvas);
+    return;
+  }
+  dispatchDrawUsingBitmap(canvas);
+}

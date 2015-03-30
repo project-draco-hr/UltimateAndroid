@@ -1,0 +1,19 @@
+{
+  setAutoStart(false);
+  setDuration(1000);
+  setRepeatCount(ObjectAnimator.INFINITE);
+  setRepeatDelay(0);
+  setRepeatMode(ObjectAnimator.RESTART);
+  mMask.angle=MaskAngle.CW_0;
+  mMask.shape=MaskShape.LINEAR;
+  mMask.dropoff=0.5f;
+  mMask.fixedWidth=0;
+  mMask.fixedHeight=0;
+  mMask.intensity=0.0f;
+  mMask.relativeWidth=1.0f;
+  mMask.relativeHeight=1.0f;
+  mMask.tilt=20;
+  mMaskTranslation=new MaskTranslation();
+  setBaseAlpha(0.3f);
+  resetAll();
+}

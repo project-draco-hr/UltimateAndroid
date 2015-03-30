@@ -1,0 +1,5 @@
+{
+  editorPath.reset();
+  editorPath.moveTo(3f * mRadius,3f * mRadius);
+  editorPath.lineTo(3f * mRadius - 400 * phase,3f * mRadius);
+}

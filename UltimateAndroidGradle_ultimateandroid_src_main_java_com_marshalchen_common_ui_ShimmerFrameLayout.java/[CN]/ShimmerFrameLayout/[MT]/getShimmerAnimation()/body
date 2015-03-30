@@ -1,0 +1,39 @@
+{
+  if (mAnimator != null) {
+    return mAnimator;
+  }
+  int width=getWidth();
+  int height=getHeight();
+switch (mMask.shape) {
+default :
+case LINEAR:
+switch (mMask.angle) {
+default :
+case CW_0:
+      mMaskTranslation.set(-width,0,width,0);
+    break;
+case CW_90:
+  mMaskTranslation.set(0,-height,0,height);
+break;
+case CW_180:
+mMaskTranslation.set(width,0,-width,0);
+break;
+case CW_270:
+mMaskTranslation.set(0,height,0,-height);
+break;
+}
+}
+mAnimator=ValueAnimator.ofFloat(0.0f,1.0f + (float)mRepeatDelay / mDuration);
+mAnimator.setDuration(mDuration + mRepeatDelay);
+mAnimator.setRepeatCount(mRepeatCount);
+mAnimator.setRepeatMode(mRepeatMode);
+mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+@Override public void onAnimationUpdate(ValueAnimator animation){
+float value=Math.max(0.0f,Math.min(1.0f,(Float)animation.getAnimatedValue()));
+setMaskOffsetX((int)(mMaskTranslation.fromX * (1 - value) + mMaskTranslation.toX * value));
+setMaskOffsetY((int)(mMaskTranslation.fromY * (1 - value) + mMaskTranslation.toY * value));
+}
+}
+);
+return mAnimator;
+}

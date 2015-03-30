@@ -1,0 +1,6 @@
+{
+  if (mRenderMaskBitmap == null) {
+    mRenderMaskBitmap=tryCreateRenderBitmap();
+  }
+  return mRenderMaskBitmap;
+}

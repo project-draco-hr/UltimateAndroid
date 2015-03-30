@@ -1,0 +1,89 @@
+{
+  super(context,attrs,defStyle);
+  setWillNotDraw(false);
+  mMask=new Mask();
+  mAlphaPaint=new Paint();
+  mMaskPaint=new Paint();
+  mMaskPaint.setAntiAlias(true);
+  mMaskPaint.setDither(true);
+  mMaskPaint.setFilterBitmap(true);
+  mMaskPaint.setXfermode(DST_IN_PORTER_DUFF_XFERMODE);
+  useDefaults();
+  if (attrs != null) {
+    TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.ShimmerFrameLayout,0,0);
+    try {
+      if (a.hasValue(R.styleable.ShimmerFrameLayout_auto_start)) {
+        setAutoStart(a.getBoolean(R.styleable.ShimmerFrameLayout_auto_start,false));
+      }
+      if (a.hasValue(R.styleable.ShimmerFrameLayout_base_alpha)) {
+        setBaseAlpha(a.getFloat(R.styleable.ShimmerFrameLayout_base_alpha,0));
+      }
+      if (a.hasValue(R.styleable.ShimmerFrameLayout_shimmerduration)) {
+        setDuration(a.getInt(R.styleable.ShimmerFrameLayout_shimmerduration,0));
+      }
+      if (a.hasValue(R.styleable.ShimmerFrameLayout_repeat_count)) {
+        setRepeatCount(a.getInt(R.styleable.ShimmerFrameLayout_repeat_count,0));
+      }
+      if (a.hasValue(R.styleable.ShimmerFrameLayout_repeat_delay)) {
+        setRepeatDelay(a.getInt(R.styleable.ShimmerFrameLayout_repeat_delay,0));
+      }
+      if (a.hasValue(R.styleable.ShimmerFrameLayout_repeat_mode)) {
+        setRepeatMode(a.getInt(R.styleable.ShimmerFrameLayout_repeat_mode,0));
+      }
+      if (a.hasValue(R.styleable.ShimmerFrameLayout_shimmerangle)) {
+        int angle=a.getInt(R.styleable.ShimmerFrameLayout_shimmerangle,0);
+switch (angle) {
+default :
+case 0:
+          mMask.angle=MaskAngle.CW_0;
+        break;
+case 90:
+      mMask.angle=MaskAngle.CW_90;
+    break;
+case 180:
+  mMask.angle=MaskAngle.CW_180;
+break;
+case 270:
+mMask.angle=MaskAngle.CW_270;
+break;
+}
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_shimmershape)) {
+int shape=a.getInt(R.styleable.ShimmerFrameLayout_shimmerangle,0);
+switch (shape) {
+default :
+case 0:
+mMask.shape=MaskShape.LINEAR;
+break;
+case 1:
+mMask.shape=MaskShape.RADIAL;
+break;
+}
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_shimmerdropoff)) {
+mMask.dropoff=a.getFloat(R.styleable.ShimmerFrameLayout_shimmerdropoff,0);
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_fixed_width)) {
+mMask.fixedWidth=a.getDimensionPixelSize(R.styleable.ShimmerFrameLayout_fixed_width,0);
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_fixed_height)) {
+mMask.fixedHeight=a.getDimensionPixelSize(R.styleable.ShimmerFrameLayout_fixed_height,0);
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_shimmerintensity)) {
+mMask.intensity=a.getFloat(R.styleable.ShimmerFrameLayout_shimmerintensity,0);
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_relative_width)) {
+mMask.relativeWidth=a.getFloat(R.styleable.ShimmerFrameLayout_relative_width,0);
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_relative_height)) {
+mMask.relativeHeight=a.getFloat(R.styleable.ShimmerFrameLayout_relative_height,0);
+}
+if (a.hasValue(R.styleable.ShimmerFrameLayout_tilt)) {
+mMask.tilt=a.getFloat(R.styleable.ShimmerFrameLayout_tilt,0);
+}
+}
+  finally {
+a.recycle();
+}
+}
+}

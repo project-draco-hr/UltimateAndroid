@@ -1,0 +1,4 @@
+{
+  mMask.relativeWidth=relativeWidth;
+  resetAll();
+}

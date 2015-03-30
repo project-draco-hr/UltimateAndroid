@@ -1,0 +1,12 @@
+{
+  return new ViewTreeObserver.OnGlobalLayoutListener(){
+    @Override public void onGlobalLayout(){
+      boolean animationStarted=mAnimationStarted;
+      resetAll();
+      if (mAutoStart || animationStarted) {
+        startShimmerAnimation();
+      }
+    }
+  }
+;
+}

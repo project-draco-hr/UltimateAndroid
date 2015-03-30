@@ -1,0 +1,4 @@
+{
+  mRepeatDelay=repeatDelay;
+  resetAll();
+}

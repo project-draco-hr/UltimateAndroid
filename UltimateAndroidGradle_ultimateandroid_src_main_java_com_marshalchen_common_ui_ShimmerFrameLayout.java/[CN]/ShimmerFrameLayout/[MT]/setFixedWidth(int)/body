@@ -1,0 +1,4 @@
+{
+  mMask.fixedWidth=fixedWidth;
+  resetAll();
+}

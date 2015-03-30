@@ -1,0 +1,4 @@
+{
+  mShimmerViewContainer.stopShimmerAnimation();
+  super.onPause();
+}
