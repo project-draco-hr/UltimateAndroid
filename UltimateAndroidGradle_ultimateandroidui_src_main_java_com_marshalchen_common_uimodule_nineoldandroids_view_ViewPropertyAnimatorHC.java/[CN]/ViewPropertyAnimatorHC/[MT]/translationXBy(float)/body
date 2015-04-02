@@ -1,4 +1,0 @@
-{
-  animatePropertyBy(TRANSLATION_X,value);
-  return this;
-}

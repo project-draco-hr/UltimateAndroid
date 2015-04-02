@@ -1,4 +1,0 @@
-{
-  animateProperty(Y,value);
-  return this;
-}

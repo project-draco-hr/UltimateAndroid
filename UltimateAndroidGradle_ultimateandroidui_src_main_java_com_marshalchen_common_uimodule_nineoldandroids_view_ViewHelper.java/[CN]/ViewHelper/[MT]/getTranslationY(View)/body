@@ -1,3 +1,0 @@
-{
-  return NEEDS_PROXY ? wrap(view).getTranslationY() : Honeycomb.getTranslationY(view);
-}
