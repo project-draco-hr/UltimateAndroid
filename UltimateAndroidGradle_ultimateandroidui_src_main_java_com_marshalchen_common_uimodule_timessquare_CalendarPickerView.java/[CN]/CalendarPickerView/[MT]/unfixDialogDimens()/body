@@ -1,6 +1,0 @@
-{
-  Logs.d("Reset the fixed dimensions to allow for re-measurement");
-  getLayoutParams().height=LayoutParams.MATCH_PARENT;
-  getLayoutParams().width=LayoutParams.MATCH_PARENT;
-  requestLayout();
-}

@@ -1,0 +1,10 @@
+{
+  getLayoutParams().height=getMeasuredHeight();
+  getLayoutParams().width=getMeasuredWidth();
+  post(new Runnable(){
+    @Override public void run(){
+      scrollToSelectedDates();
+    }
+  }
+);
+}

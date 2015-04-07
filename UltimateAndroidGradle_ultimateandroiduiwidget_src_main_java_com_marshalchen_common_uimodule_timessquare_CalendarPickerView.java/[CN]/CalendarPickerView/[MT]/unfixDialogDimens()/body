@@ -1,0 +1,5 @@
+{
+  getLayoutParams().height=LayoutParams.MATCH_PARENT;
+  getLayoutParams().width=LayoutParams.MATCH_PARENT;
+  requestLayout();
+}
