@@ -2,10 +2,10 @@
   super(context,attrs);
   if (attrs != null) {
     TypedArray a=getContext().obtainStyledAttributes(attrs,R.styleable.ArcLayout,0,0);
-    mChildSize=Math.max(a.getDimensionPixelSize(R.styleable.ArcLayout_childSize,0),0);
+    mChildSize=Math.max(a.getDimensionPixelSize(R.styleable.ArcLayout_arcChildSize,0),0);
     a.recycle();
     a=getContext().obtainStyledAttributes(attrs,R.styleable.RayLayout,0,0);
-    mLeftHolderWidth=Math.max(a.getDimensionPixelSize(R.styleable.RayLayout_leftHolderWidth,0),0);
+    mLeftHolderWidth=Math.max(a.getDimensionPixelSize(R.styleable.RayLayout_arcLeftHolderWidth,0),0);
     a.recycle();
   }
 }
