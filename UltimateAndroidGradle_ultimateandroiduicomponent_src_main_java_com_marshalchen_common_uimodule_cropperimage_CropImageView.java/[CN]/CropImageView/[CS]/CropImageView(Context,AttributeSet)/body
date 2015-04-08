@@ -1,0 +1,15 @@
+{
+  super(context,attrs);
+  TypedArray ta=context.obtainStyledAttributes(attrs,R.styleable.CropperImageView,0,0);
+  try {
+    mGuidelines=ta.getInteger(R.styleable.CropperImageView_crop_guidelines,DEFAULT_GUIDELINES);
+    mFixAspectRatio=ta.getBoolean(R.styleable.CropperImageView_crop_fixAspectRatio,DEFAULT_FIXED_ASPECT_RATIO);
+    mAspectRatioX=ta.getInteger(R.styleable.CropperImageView_crop_aspectRatioX,DEFAULT_ASPECT_RATIO_X);
+    mAspectRatioY=ta.getInteger(R.styleable.CropperImageView_crop_aspectRatioY,DEFAULT_ASPECT_RATIO_Y);
+    mImageResource=ta.getResourceId(R.styleable.CropperImageView_crop_imageResource,DEFAULT_IMAGE_RESOURCE);
+  }
+  finally {
+    ta.recycle();
+  }
+  init(context);
+}
