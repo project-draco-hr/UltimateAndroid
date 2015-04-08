@@ -1,6 +1,6 @@
 {
   TypedArray a=context.obtainStyledAttributes(attrs,R.styleable.CustomShapeImageView);
-  mShape=a.getInt(R.styleable.CustomShapeImageView_shape_custom,Shape.CIRCLE);
+  mShape=a.getInt(R.styleable.CustomShapeImageView_custom_shape_custom,Shape.CIRCLE);
   mSvgRawResourceId=a.getResourceId(R.styleable.CustomShapeImageView_svg_raw_resource,0);
   a.recycle();
 }
