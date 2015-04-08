@@ -30,13 +30,13 @@
   if (attributeSet != null) {
     TypedArray a=mContext.getTheme().obtainStyledAttributes(attributeSet,R.styleable.Patio,0,0);
     try {
-      mMaxPictures=a.getInt(R.styleable.Patio_maxPictures,DEFAULT_MAX_PICTURES);
-      mThumbnailHeight=a.getDimension(R.styleable.Patio_thumbnailHeight,mThumbnailHeight);
-      mThumbnailWidth=a.getDimension(R.styleable.Patio_thumbnailWidth,mThumbnailWidth);
-      mThumbnailsMessageString=a.getString(R.styleable.Patio_thumbnailsMessage);
-      thumbnailsContainerPadding=a.getDimension(R.styleable.Patio_thumbnailsContainerPadding,thumbnailsContainerPadding);
-      actionsTextColor=a.getColor(R.styleable.Patio_actionsTextColor,actionsTextColor);
-      thumbnailsWrapperBackground=a.getColor(R.styleable.Patio_thumbnailsContainerBackground,thumbnailsWrapperBackground);
+      mMaxPictures=a.getInt(R.styleable.Patio_patio_maxPictures,DEFAULT_MAX_PICTURES);
+      mThumbnailHeight=a.getDimension(R.styleable.Patio_patio_thumbnailHeight,mThumbnailHeight);
+      mThumbnailWidth=a.getDimension(R.styleable.Patio_patio_thumbnailWidth,mThumbnailWidth);
+      mThumbnailsMessageString=a.getString(R.styleable.Patio_patio_thumbnailsMessage);
+      thumbnailsContainerPadding=a.getDimension(R.styleable.Patio_patio_thumbnailsContainerPadding,thumbnailsContainerPadding);
+      actionsTextColor=a.getColor(R.styleable.Patio_patio_actionsTextColor,actionsTextColor);
+      thumbnailsWrapperBackground=a.getColor(R.styleable.Patio_patio_thumbnailsContainerBackground,thumbnailsWrapperBackground);
     }
   finally {
       a.recycle();
