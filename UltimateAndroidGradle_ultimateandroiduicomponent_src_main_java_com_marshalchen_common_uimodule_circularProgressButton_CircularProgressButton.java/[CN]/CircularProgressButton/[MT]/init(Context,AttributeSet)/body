@@ -1,5 +1,5 @@
 {
-  mStrokeWidth=(int)getContext().getResources().getDimension(R.dimen.stroke_width);
+  mStrokeWidth=(int)getContext().getResources().getDimension(R.dimen.circular_progress_stroke_width);
   initAttributes(context,attributeSet);
   mMaxProgress=100;
   mState=State.IDLE;
