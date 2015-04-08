@@ -3,8 +3,8 @@
   int beforeWidth=getWidth();
   int beforeHeight=getHeight();
   super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-  int afterWidth=MeasureSpec.getSize(widthMeasureSpec);
-  int afterHeight=MeasureSpec.getSize(heightMeasureSpec);
+  int afterWidth=View.MeasureSpec.getSize(widthMeasureSpec);
+  int afterHeight=View.MeasureSpec.getSize(heightMeasureSpec);
   boolean sizeChanged=(beforeHeight == afterHeight) && (beforeWidth == afterWidth);
   if (this.mLayout != null) {
     mLayout.setDimensions(afterWidth,afterHeight);
