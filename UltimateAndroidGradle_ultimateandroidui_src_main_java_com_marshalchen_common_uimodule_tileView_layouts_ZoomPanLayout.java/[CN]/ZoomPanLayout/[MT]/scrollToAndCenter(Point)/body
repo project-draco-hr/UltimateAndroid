@@ -1,6 +1,0 @@
-{
-  int x=(int)-(getWidth() * 0.5);
-  int y=(int)-(getHeight() * 0.5);
-  point.offset(x,y);
-  scrollToPoint(point);
-}

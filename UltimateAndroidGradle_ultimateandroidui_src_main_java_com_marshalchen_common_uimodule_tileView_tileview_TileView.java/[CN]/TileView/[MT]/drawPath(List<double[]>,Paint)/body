@@ -1,4 +1,0 @@
-{
-  List<Point> points=positionManager.translate(positions);
-  return pathManager.addPath(points,paint);
-}

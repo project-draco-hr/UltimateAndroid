@@ -1,4 +1,0 @@
-{
-  DetailLevel detailLevel=new DetailLevel(this,scale,pattern,downsample);
-  addDetailLevel(detailLevel);
-}

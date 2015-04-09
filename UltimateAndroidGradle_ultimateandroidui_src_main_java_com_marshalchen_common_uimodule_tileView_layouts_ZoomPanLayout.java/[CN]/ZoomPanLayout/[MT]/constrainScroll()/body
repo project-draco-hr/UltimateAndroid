@@ -1,8 +1,0 @@
-{
-  Point currentScroll=new Point(getScrollX(),getScrollY());
-  Point limitScroll=new Point(currentScroll);
-  constrainPoint(limitScroll);
-  if (!currentScroll.equals(limitScroll)) {
-    scrollToPoint(limitScroll);
-  }
-}

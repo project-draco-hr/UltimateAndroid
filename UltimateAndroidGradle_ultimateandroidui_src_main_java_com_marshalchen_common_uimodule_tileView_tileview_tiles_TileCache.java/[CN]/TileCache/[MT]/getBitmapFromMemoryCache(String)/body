@@ -1,3 +1,0 @@
-{
-  return memoryCache.get(key);
-}

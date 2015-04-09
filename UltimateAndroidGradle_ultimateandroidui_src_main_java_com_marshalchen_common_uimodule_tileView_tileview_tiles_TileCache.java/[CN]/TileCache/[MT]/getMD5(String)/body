@@ -1,7 +1,0 @@
-{
-  if (digest != null) {
-    digest.update(fileName.getBytes(),0,fileName.length());
-    return new BigInteger(1,digest.digest()).toString(16);
-  }
-  return fileName.replace("[^a-z0-9_-]","_");
-}

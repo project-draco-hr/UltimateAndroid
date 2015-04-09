@@ -1,6 +1,0 @@
-{
-  Point point=translate(x,y);
-  point.x=(int)((0.5 + point.x) * scale);
-  point.y=(int)((0.5 + point.y) * scale);
-  return point;
-}

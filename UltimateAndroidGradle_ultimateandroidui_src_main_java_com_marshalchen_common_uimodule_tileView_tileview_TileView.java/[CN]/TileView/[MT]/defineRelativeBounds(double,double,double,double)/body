@@ -1,3 +1,0 @@
-{
-  positionManager.setBounds(left,top,right,bottom);
-}

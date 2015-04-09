@@ -1,7 +1,0 @@
-{
-  if (o instanceof Tile) {
-    Tile m=(Tile)o;
-    return (m.getLeft() == getLeft()) && (m.getTop() == getTop()) && (m.getWidth() == getWidth())&& (m.getHeight() == getHeight())&& (m.getFileName().equals(getFileName()));
-  }
-  return false;
-}

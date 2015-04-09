@@ -1,3 +1,0 @@
-{
-  return SensorManager.GRAVITY_EARTH * 39.37f * mPpi* friction;
-}

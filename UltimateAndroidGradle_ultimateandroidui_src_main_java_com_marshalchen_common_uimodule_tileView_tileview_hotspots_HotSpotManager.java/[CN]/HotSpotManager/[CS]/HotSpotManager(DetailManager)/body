@@ -1,3 +1,0 @@
-{
-  detailManager.addDetailLevelEventListener(this);
-}

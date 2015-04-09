@@ -1,8 +1,0 @@
-{
-  definedBounds=false;
-  left=0;
-  top=0;
-  right=pixelWidth;
-  bottom=pixelHeight;
-  calculateOffsets();
-}

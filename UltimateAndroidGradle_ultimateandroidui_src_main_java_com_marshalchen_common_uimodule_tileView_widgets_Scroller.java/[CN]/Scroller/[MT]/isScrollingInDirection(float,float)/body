@@ -1,3 +1,0 @@
-{
-  return !mFinished && Math.signum(xvel) == Math.signum(mFinalX - mStartX) && Math.signum(yvel) == Math.signum(mFinalY - mStartY);
-}

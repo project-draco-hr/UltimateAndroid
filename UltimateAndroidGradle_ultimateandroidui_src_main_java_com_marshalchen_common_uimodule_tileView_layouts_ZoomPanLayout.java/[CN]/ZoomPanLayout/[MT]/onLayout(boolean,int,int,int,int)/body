@@ -1,7 +1,0 @@
-{
-  clip.layout(0,0,clip.getMeasuredWidth(),clip.getMeasuredHeight());
-  constrainScroll();
-  if (changed) {
-    calculateMinimumScaleToFit();
-  }
-}

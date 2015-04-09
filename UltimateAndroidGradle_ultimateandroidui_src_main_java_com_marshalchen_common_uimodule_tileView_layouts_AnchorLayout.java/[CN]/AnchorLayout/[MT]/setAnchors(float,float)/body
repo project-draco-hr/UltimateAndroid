@@ -1,5 +1,0 @@
-{
-  anchorX=aX;
-  anchorY=aY;
-  requestLayout();
-}

@@ -1,7 +1,0 @@
-{
-  super(width,height);
-  x=left;
-  y=top;
-  anchorX=aX;
-  anchorY=aY;
-}

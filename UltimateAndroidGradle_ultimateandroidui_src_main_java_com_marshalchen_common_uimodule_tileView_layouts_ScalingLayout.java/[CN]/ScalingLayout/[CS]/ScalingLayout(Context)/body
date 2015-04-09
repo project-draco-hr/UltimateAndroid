@@ -1,4 +1,0 @@
-{
-  super(context);
-  setWillNotDraw(false);
-}
