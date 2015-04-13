@@ -1,0 +1,17 @@
+{
+  double width=clone.getWidth() / 2.0;
+  double height=clone.getHeight() / 2.0;
+  double invmaxrad=1.0 / (width < height ? width : height);
+  width+=_offsetX * width;
+  height+=_offsetY * height;
+  double u=x - width;
+  double v=y - height;
+  double r=Math.sqrt(u * u + v * v);
+  double theta=Math.atan2(v,u);
+  double t=1 - ((r * _size) * invmaxrad);
+  t=(t < 0) ? 0 : (t * t * t);
+  theta+=(t * _twist) / 100.0;
+  un_x=IImageFilter.Function.FClampDouble(width + r * Math.cos(theta),0.0,clone.getWidth() - 1.0);
+  un_y=IImageFilter.Function.FClampDouble(height + r * Math.sin(theta),0.0,clone.getHeight() - 1.0);
+  return new double[]{un_x,un_y};
+}

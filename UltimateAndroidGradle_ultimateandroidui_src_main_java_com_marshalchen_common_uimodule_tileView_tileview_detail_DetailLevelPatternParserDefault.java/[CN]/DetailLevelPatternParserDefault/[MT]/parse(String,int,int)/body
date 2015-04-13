@@ -1,3 +1,0 @@
-{
-  return pattern.replace("%col%",Integer.toString(column)).replace("%row%",Integer.toString(row));
-}

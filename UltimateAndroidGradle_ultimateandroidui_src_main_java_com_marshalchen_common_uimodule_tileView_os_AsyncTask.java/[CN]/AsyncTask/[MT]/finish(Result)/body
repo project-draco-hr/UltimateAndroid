@@ -1,9 +1,0 @@
-{
-  if (isCancelled()) {
-    onCancelled(result);
-  }
- else {
-    onPostExecute(result);
-  }
-  mStatus=Status.FINISHED;
-}

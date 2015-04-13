@@ -1,0 +1,42 @@
+{
+  Calendar cal=Calendar.getInstance(locale);
+  cal.setTime(startCal.getTime());
+  List<List<MonthCellDescriptor>> cells=new ArrayList<List<MonthCellDescriptor>>();
+  cal.set(DAY_OF_MONTH,1);
+  int firstDayOfWeek=cal.get(DAY_OF_WEEK);
+  int offset=cal.getFirstDayOfWeek() - firstDayOfWeek;
+  if (offset > 0) {
+    offset-=7;
+  }
+  cal.add(Calendar.DATE,offset);
+  Calendar minSelectedCal=minDate(selectedCals);
+  Calendar maxSelectedCal=maxDate(selectedCals);
+  while ((cal.get(MONTH) < month.getMonth() + 1 || cal.get(YEAR) < month.getYear()) && cal.get(YEAR) <= month.getYear()) {
+    List<MonthCellDescriptor> weekCells=new ArrayList<MonthCellDescriptor>();
+    cells.add(weekCells);
+    for (int c=0; c < 7; c++) {
+      Date date=cal.getTime();
+      boolean isCurrentMonth=cal.get(MONTH) == month.getMonth();
+      boolean isSelected=isCurrentMonth && containsDate(selectedCals,cal);
+      boolean isSelectable=isCurrentMonth && betweenDates(cal,minCal,maxCal) && isDateSelectable(date);
+      boolean isToday=sameDate(cal,today);
+      boolean isHighlighted=containsDate(highlightedCals,cal);
+      int value=cal.get(DAY_OF_MONTH);
+      MonthCellDescriptor.RangeState rangeState=MonthCellDescriptor.RangeState.NONE;
+      if (selectedCals.size() > 1) {
+        if (sameDate(minSelectedCal,cal)) {
+          rangeState=MonthCellDescriptor.RangeState.FIRST;
+        }
+ else         if (sameDate(maxDate(selectedCals),cal)) {
+          rangeState=MonthCellDescriptor.RangeState.LAST;
+        }
+ else         if (betweenDates(cal,minSelectedCal,maxSelectedCal)) {
+          rangeState=MonthCellDescriptor.RangeState.MIDDLE;
+        }
+      }
+      weekCells.add(new MonthCellDescriptor(date,isCurrentMonth,isSelectable,isSelected,isToday,isHighlighted,value,rangeState));
+      cal.add(DATE,1);
+    }
+  }
+  return cells;
+}

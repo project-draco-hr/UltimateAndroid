@@ -1,6 +1,0 @@
-{
-  if (currentDetailLevel != null) {
-    return currentDetailLevel.getScale();
-  }
-  return 1;
-}

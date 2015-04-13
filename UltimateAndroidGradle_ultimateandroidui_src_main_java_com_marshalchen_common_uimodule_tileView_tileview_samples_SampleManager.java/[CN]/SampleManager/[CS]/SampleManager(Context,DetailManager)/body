@@ -1,6 +1,0 @@
-{
-  super(context);
-  detailManager=dm;
-  detailManager.addDetailLevelEventListener(this);
-  update();
-}

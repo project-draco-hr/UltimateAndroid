@@ -1,4 +1,0 @@
-{
-  getList().setAdapter(adapter);
-  super.setAdapter(adapter);
-}

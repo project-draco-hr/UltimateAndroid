@@ -1,9 +1,0 @@
-{
-  pixelWidth=w;
-  pixelHeight=h;
-  if (!definedBounds) {
-    right=pixelWidth;
-    bottom=pixelHeight;
-    calculateOffsets();
-  }
-}

@@ -1,6 +1,0 @@
-{
-  while (getChildCount() > 0) {
-    View child=getChildAt(0);
-    removeView(child);
-  }
-}

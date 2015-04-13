@@ -1,9 +1,0 @@
-{
-  long start=System.currentTimeMillis();
-  int cellHeight=bottom - top;
-  for (int c=0, numChildren=getChildCount(); c < numChildren; c++) {
-    final View child=getChildAt(c);
-    child.layout(c * cellSize,0,(c + 1) * cellSize,cellHeight);
-  }
-  Logs.d("Row.onLayout %d ms",System.currentTimeMillis() - start);
-}

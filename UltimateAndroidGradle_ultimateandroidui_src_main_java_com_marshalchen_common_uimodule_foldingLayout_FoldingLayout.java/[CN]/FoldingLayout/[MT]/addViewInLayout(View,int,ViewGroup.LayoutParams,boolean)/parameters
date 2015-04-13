@@ -1,4 +1,0 @@
-View child
-int index
-ViewGroup.LayoutParams params
-boolean preventRequestLayout

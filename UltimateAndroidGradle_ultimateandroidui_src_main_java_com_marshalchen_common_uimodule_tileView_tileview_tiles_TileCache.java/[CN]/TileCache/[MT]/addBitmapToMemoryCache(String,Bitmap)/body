@@ -1,8 +1,0 @@
-{
-  if (key == null || bitmap == null) {
-    return;
-  }
-  if (getBitmapFromMemoryCache(key) == null) {
-    memoryCache.put(key,bitmap);
-  }
-}

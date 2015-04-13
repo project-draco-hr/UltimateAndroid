@@ -1,6 +1,0 @@
-{
-  updateViewport();
-  tileManager.requestRender();
-  sampleManager.update();
-  pathManager.setShouldDraw(true);
-}

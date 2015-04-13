@@ -1,3 +1,0 @@
-{
-  this(zm,s,p,d,DEFAULT_TILE_SIZE,DEFAULT_TILE_SIZE);
-}

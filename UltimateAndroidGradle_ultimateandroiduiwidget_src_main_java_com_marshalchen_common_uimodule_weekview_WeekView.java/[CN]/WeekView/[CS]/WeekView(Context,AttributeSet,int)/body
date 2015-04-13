@@ -1,0 +1,30 @@
+{
+  super(context,attrs,defStyleAttr);
+  mContext=context;
+  TypedArray a=context.getTheme().obtainStyledAttributes(attrs,R.styleable.WeekView,0,0);
+  try {
+    mFirstDayOfWeek=a.getInteger(R.styleable.WeekView_firstDayOfWeek,mFirstDayOfWeek);
+    mHourHeight=a.getDimensionPixelSize(R.styleable.WeekView_hourHeight,mHourHeight);
+    mTextSize=a.getDimensionPixelSize(R.styleable.WeekView_weekTextSize,(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,mTextSize,context.getResources().getDisplayMetrics()));
+    mHeaderColumnPadding=a.getDimensionPixelSize(R.styleable.WeekView_headerColumnPadding,mHeaderColumnPadding);
+    mColumnGap=a.getDimensionPixelSize(R.styleable.WeekView_columnGap,mColumnGap);
+    mHeaderColumnTextColor=a.getColor(R.styleable.WeekView_headerColumnTextColor,mHeaderColumnTextColor);
+    mNumberOfVisibleDays=a.getInteger(R.styleable.WeekView_noOfVisibleDays,mNumberOfVisibleDays);
+    mHeaderRowPadding=a.getDimensionPixelSize(R.styleable.WeekView_headerRowPadding,mHeaderRowPadding);
+    mHeaderRowBackgroundColor=a.getColor(R.styleable.WeekView_headerRowBackgroundColor,mHeaderRowBackgroundColor);
+    mDayBackgroundColor=a.getColor(R.styleable.WeekView_dayBackgroundColor,mDayBackgroundColor);
+    mHourSeparatorColor=a.getColor(R.styleable.WeekView_hourSeparatorColor,mHourSeparatorColor);
+    mTodayBackgroundColor=a.getColor(R.styleable.WeekView_todayBackgroundColor,mTodayBackgroundColor);
+    mHourSeparatorHeight=a.getDimensionPixelSize(R.styleable.WeekView_hourSeparatorHeight,mHourSeparatorHeight);
+    mTodayHeaderTextColor=a.getColor(R.styleable.WeekView_todayHeaderTextColor,mTodayHeaderTextColor);
+    mEventTextSize=a.getDimensionPixelSize(R.styleable.WeekView_eventTextSize,(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,mEventTextSize,context.getResources().getDisplayMetrics()));
+    mEventTextColor=a.getColor(R.styleable.WeekView_eventTextColor,mEventTextColor);
+    mEventPadding=a.getDimensionPixelSize(R.styleable.WeekView_hourSeparatorHeight,mEventPadding);
+    mHeaderColumnBackgroundColor=a.getColor(R.styleable.WeekView_headerColumnBackground,mHeaderColumnBackgroundColor);
+    mDayNameLength=a.getInteger(R.styleable.WeekView_dayNameLength,mDayNameLength);
+  }
+  finally {
+    a.recycle();
+  }
+  init();
+}

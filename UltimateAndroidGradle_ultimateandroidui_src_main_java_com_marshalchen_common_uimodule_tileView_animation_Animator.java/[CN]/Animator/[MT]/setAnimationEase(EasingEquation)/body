@@ -1,6 +1,0 @@
-{
-  if (e == null || !(e instanceof EasingEquation)) {
-    e=Linear.EaseNone;
-  }
-  ease=e;
-}

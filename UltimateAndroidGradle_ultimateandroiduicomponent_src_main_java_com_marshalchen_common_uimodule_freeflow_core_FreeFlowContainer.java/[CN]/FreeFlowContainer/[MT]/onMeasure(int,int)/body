@@ -1,0 +1,27 @@
+{
+  logLifecycleEvent(" onMeasure ");
+  int beforeWidth=getWidth();
+  int beforeHeight=getHeight();
+  super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+  int afterWidth=View.MeasureSpec.getSize(widthMeasureSpec);
+  int afterHeight=View.MeasureSpec.getSize(heightMeasureSpec);
+  boolean sizeChanged=(beforeHeight == afterHeight) && (beforeWidth == afterWidth);
+  if (this.mLayout != null) {
+    mLayout.setDimensions(afterWidth,afterHeight);
+  }
+  if (mLayout == null || mAdapter == null) {
+    logLifecycleEvent("Nothing to do: returning");
+    return;
+  }
+  if (markAdapterDirty || markLayoutDirty) {
+    computeLayout(afterWidth,afterHeight);
+  }
+  if (dataSetChanged) {
+    dataSetChanged=false;
+    for (    FreeFlowItem item : frames.values()) {
+      if (item.itemIndex >= 0 && item.itemSection >= 0) {
+        mAdapter.getItemView(item.itemSection,item.itemIndex,item.view,this);
+      }
+    }
+  }
+}

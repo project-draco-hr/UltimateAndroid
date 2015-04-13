@@ -1,8 +1,0 @@
-{
-  tweens.remove(tween);
-  if (tweens.size() == 0) {
-    if (hasMessages(RENDER)) {
-      removeMessages(RENDER);
-    }
-  }
-}

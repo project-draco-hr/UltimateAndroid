@@ -1,0 +1,5 @@
+{
+  _amount=amount / 100.0;
+  _offsetX=IImageFilter.Function.FClampDouble(offsetX,-1.0,1.0);
+  _offsetY=IImageFilter.Function.FClampDouble(offsetY,-1.0,1.0);
+}

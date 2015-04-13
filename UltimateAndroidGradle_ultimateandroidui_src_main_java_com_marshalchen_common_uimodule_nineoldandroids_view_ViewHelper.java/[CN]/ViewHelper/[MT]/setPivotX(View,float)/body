@@ -1,8 +1,0 @@
-{
-  if (NEEDS_PROXY) {
-    wrap(view).setPivotX(pivotX);
-  }
- else {
-    Honeycomb.setPivotX(view,pivotX);
-  }
-}

@@ -1,3 +1,0 @@
-{
-  mNative=new WeakReference<android.view.ViewPropertyAnimator>(view.animate());
-}

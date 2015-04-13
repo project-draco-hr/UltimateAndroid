@@ -1,6 +1,0 @@
-{
-  if (renderListener != null) {
-    renderListener.onRenderCancelled();
-  }
-  isRendering=false;
-}

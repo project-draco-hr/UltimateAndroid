@@ -1,9 +1,0 @@
-{
-  constrainPoint(point);
-  int startX=getScrollX();
-  int startY=getScrollY();
-  int dx=point.x - startX;
-  int dy=point.y - startY;
-  scroller.startScroll(startX,startY,dx,dy,SLIDE_DURATION);
-  invalidate();
-}

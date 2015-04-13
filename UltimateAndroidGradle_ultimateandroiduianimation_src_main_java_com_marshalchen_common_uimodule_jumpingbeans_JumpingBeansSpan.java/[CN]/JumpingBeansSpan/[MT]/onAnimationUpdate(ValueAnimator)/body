@@ -1,0 +1,17 @@
+{
+  TextView v=textView.get();
+  if (v != null) {
+    if (isAttachedToHierarchy(v)) {
+      shift=(int)animation.getAnimatedValue();
+      v.invalidate();
+    }
+ else {
+      animation.setCurrentPlayTime(0);
+      animation.start();
+    }
+  }
+ else {
+    teardown();
+    Log.e("JumpingBeans","!!! Remember to call JumpingBeans.stopJumping() when appropriate !!!");
+  }
+}

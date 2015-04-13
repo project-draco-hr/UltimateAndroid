@@ -1,4 +1,0 @@
-{
-  animateProperty(ROTATION,value);
-  return this;
-}

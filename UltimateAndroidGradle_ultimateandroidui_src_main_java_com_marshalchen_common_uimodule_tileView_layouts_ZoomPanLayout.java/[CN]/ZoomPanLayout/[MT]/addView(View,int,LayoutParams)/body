@@ -1,4 +1,0 @@
-{
-  LayoutParams lp=new LayoutParams(scaledWidth,scaledHeight);
-  clip.addView(child,index,lp);
-}

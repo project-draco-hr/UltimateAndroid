@@ -1,6 +1,0 @@
-{
-  if (e == null) {
-    e=Linear.EaseNone;
-  }
-  ease=e;
-}

@@ -1,7 +1,0 @@
-{
-  computedViewport.set(viewport);
-  computedViewport.top-=padding;
-  computedViewport.left-=padding;
-  computedViewport.bottom+=padding;
-  computedViewport.right+=padding;
-}

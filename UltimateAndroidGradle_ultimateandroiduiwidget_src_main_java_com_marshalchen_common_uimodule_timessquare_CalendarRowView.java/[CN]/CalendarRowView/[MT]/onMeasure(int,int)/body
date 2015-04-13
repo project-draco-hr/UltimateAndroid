@@ -1,0 +1,18 @@
+{
+  long start=System.currentTimeMillis();
+  final int totalWidth=MeasureSpec.getSize(widthMeasureSpec);
+  cellSize=totalWidth / 7;
+  int cellWidthSpec=makeMeasureSpec(cellSize,EXACTLY);
+  int cellHeightSpec=isHeaderRow ? makeMeasureSpec(cellSize,AT_MOST) : cellWidthSpec;
+  int rowHeight=0;
+  for (int c=0, numChildren=getChildCount(); c < numChildren; c++) {
+    final View child=getChildAt(c);
+    child.measure(cellWidthSpec,cellHeightSpec);
+    if (child.getMeasuredHeight() > rowHeight) {
+      rowHeight=child.getMeasuredHeight();
+    }
+  }
+  final int widthWithPadding=totalWidth + getPaddingLeft() + getPaddingRight();
+  final int heightWithPadding=rowHeight + getPaddingTop() + getPaddingBottom();
+  setMeasuredDimension(widthWithPadding,heightWithPadding);
+}

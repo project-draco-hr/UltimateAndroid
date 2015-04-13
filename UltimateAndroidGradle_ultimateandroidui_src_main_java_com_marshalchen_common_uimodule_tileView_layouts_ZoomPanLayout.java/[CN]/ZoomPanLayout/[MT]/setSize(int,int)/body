@@ -1,7 +1,0 @@
-{
-  baseWidth=wide;
-  baseHeight=tall;
-  scaledWidth=(int)(baseWidth * scale);
-  scaledHeight=(int)(baseHeight * scale);
-  updateClip();
-}

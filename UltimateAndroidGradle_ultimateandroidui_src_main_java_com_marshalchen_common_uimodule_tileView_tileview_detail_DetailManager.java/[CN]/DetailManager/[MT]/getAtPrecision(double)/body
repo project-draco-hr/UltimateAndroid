@@ -1,3 +1,0 @@
-{
-  return Math.round(s * DECIMAL) / DECIMAL;
-}
