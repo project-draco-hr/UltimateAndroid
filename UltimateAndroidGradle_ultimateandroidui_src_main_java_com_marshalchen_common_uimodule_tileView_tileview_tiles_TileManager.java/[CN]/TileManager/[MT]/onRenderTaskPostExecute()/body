@@ -1,8 +1,0 @@
-{
-  isRendering=false;
-  cleanup();
-  requestRender();
-  if (renderListener != null) {
-    renderListener.onRenderComplete();
-  }
-}

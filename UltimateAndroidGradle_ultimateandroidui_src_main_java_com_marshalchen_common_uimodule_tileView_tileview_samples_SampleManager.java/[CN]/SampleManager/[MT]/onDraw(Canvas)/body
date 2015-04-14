@@ -1,8 +1,0 @@
-{
-  if (bitmap != null) {
-    area.right=getWidth();
-    area.bottom=getHeight();
-    canvas.drawBitmap(bitmap,null,area,null);
-  }
-  super.onDraw(canvas);
-}

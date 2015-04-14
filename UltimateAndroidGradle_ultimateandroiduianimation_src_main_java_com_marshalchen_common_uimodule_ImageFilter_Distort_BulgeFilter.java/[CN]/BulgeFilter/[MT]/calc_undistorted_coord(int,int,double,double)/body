@@ -1,0 +1,21 @@
+{
+  double hw=clone.getWidth() / 2.0;
+  double hh=clone.getHeight() / 2.0;
+  double maxrad=(hw < hh ? hw : hh);
+  hw+=_offsetX * hw;
+  hh+=_offsetY * hh;
+  double u=x - hw;
+  double v=y - hh;
+  double r=Math.sqrt(u * u + v * v);
+  double rscale1=1.0 - (r / maxrad);
+  if (rscale1 > 0) {
+    double rscale2=1.0 - _amount * rscale1 * rscale1;
+    un_x=IImageFilter.Function.FClampDouble(u * rscale2 + hw,0.0,clone.getWidth() - 1.0);
+    un_y=IImageFilter.Function.FClampDouble(v * rscale2 + hh,0.0,clone.getHeight() - 1.0);
+  }
+ else {
+    un_x=x;
+    un_y=y;
+  }
+  return new double[]{un_x,un_y};
+}

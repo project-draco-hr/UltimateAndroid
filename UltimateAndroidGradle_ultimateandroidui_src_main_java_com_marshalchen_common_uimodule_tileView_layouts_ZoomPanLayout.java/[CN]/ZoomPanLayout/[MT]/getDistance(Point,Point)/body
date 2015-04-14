@@ -1,5 +1,0 @@
-{
-  int x=p1.x - p2.x;
-  int y=p1.y - p2.y;
-  return Math.sqrt(x * x + y * y);
-}

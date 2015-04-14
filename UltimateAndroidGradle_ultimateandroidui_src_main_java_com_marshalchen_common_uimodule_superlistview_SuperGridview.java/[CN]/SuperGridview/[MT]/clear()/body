@@ -1,3 +1,0 @@
-{
-  getList().setAdapter(null);
-}

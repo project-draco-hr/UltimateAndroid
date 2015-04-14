@@ -1,0 +1,30 @@
+{
+  final boolean isVertical=isVertical();
+  final Lanes lanes=getLanes();
+  lanes.reset(0);
+  for (int i=0; i <= position; i++) {
+    StaggeredItemEntry entry=(StaggeredItemEntry)getItemEntryForPosition(i);
+    if (entry != null) {
+      mTempLaneInfo.set(entry.startLane,entry.anchorLane);
+      if (mTempLaneInfo.isUndefined()) {
+        lanes.findLane(mTempLaneInfo,getLaneSpanForPosition(i),TwoWayLayoutManager.Direction.END);
+        entry.setLane(mTempLaneInfo);
+      }
+      lanes.getChildFrame(mTempRect,entry.width,entry.height,mTempLaneInfo,TwoWayLayoutManager.Direction.END);
+    }
+ else {
+      final View child=recycler.getViewForPosition(i);
+      measureChild(child,TwoWayLayoutManager.Direction.END);
+      entry=(StaggeredItemEntry)getItemEntryForPosition(i);
+      mTempLaneInfo.set(entry.startLane,entry.anchorLane);
+      lanes.getChildFrame(mTempRect,getDecoratedMeasuredWidth(child),getDecoratedMeasuredHeight(child),mTempLaneInfo,TwoWayLayoutManager.Direction.END);
+      cacheItemFrame(entry,mTempRect);
+    }
+    if (i != position) {
+      pushChildFrame(entry,mTempRect,entry.startLane,entry.span,TwoWayLayoutManager.Direction.END);
+    }
+  }
+  lanes.getLane(mTempLaneInfo.startLane,mTempRect);
+  lanes.reset(TwoWayLayoutManager.Direction.END);
+  lanes.offset(offset - (isVertical ? mTempRect.bottom : mTempRect.right));
+}

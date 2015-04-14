@@ -1,7 +1,0 @@
-{
-  if (contains(detailLevel)) {
-    return;
-  }
-  add(detailLevel);
-  Collections.sort(this);
-}

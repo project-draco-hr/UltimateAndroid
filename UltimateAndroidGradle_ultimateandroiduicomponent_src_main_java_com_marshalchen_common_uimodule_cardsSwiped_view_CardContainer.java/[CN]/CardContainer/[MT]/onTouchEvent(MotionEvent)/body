@@ -1,0 +1,70 @@
+{
+  if (mTopCard == null) {
+    return false;
+  }
+  if (mGestureDetector.onTouchEvent(event)) {
+    return true;
+  }
+  final int pointerIndex;
+  final float x, y;
+  final float dx, dy;
+switch (event.getActionMasked()) {
+case MotionEvent.ACTION_DOWN:
+    mTopCard.getHitRect(childRect);
+  pointerIndex=event.getActionIndex();
+x=event.getX(pointerIndex);
+y=event.getY(pointerIndex);
+if (!childRect.contains((int)x,(int)y)) {
+return false;
+}
+mLastTouchX=x;
+mLastTouchY=y;
+mActivePointerId=event.getPointerId(pointerIndex);
+float[] points=new float[]{x - mTopCard.getLeft(),y - mTopCard.getTop()};
+mTopCard.getMatrix().invert(mMatrix);
+mMatrix.mapPoints(points);
+mTopCard.setPivotX(points[0]);
+mTopCard.setPivotY(points[1]);
+break;
+case MotionEvent.ACTION_MOVE:
+pointerIndex=event.findPointerIndex(mActivePointerId);
+x=event.getX(pointerIndex);
+y=event.getY(pointerIndex);
+dx=x - mLastTouchX;
+dy=y - mLastTouchY;
+if (Math.abs(dx) > mTouchSlop || Math.abs(dy) > mTouchSlop) {
+mDragging=true;
+}
+if (!mDragging) {
+return true;
+}
+mTopCard.setTranslationX(mTopCard.getTranslationX() + dx);
+mTopCard.setTranslationY(mTopCard.getTranslationY() + dy);
+mTopCard.setRotation(40 * mTopCard.getTranslationX() / (getWidth() / 2.f));
+mLastTouchX=x;
+mLastTouchY=y;
+break;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+if (!mDragging) {
+return true;
+}
+mDragging=false;
+mActivePointerId=INVALID_POINTER_ID;
+ValueAnimator animator=ObjectAnimator.ofPropertyValuesHolder(mTopCard,PropertyValuesHolder.ofFloat("translationX",0),PropertyValuesHolder.ofFloat("translationY",0),PropertyValuesHolder.ofFloat("rotation",(float)Math.toDegrees(mRandom.nextGaussian() * DISORDERED_MAX_ROTATION_RADIANS)),PropertyValuesHolder.ofFloat("pivotX",mTopCard.getWidth() / 2.f),PropertyValuesHolder.ofFloat("pivotY",mTopCard.getHeight() / 2.f)).setDuration(250);
+animator.setInterpolator(new AccelerateInterpolator());
+animator.start();
+break;
+case MotionEvent.ACTION_POINTER_UP:
+pointerIndex=event.getActionIndex();
+final int pointerId=event.getPointerId(pointerIndex);
+if (pointerId == mActivePointerId) {
+final int newPointerIndex=pointerIndex == 0 ? 1 : 0;
+mLastTouchX=event.getX(newPointerIndex);
+mLastTouchY=event.getY(newPointerIndex);
+mActivePointerId=event.getPointerId(newPointerIndex);
+}
+break;
+}
+return true;
+}

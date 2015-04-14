@@ -1,7 +1,0 @@
-{
-  scrollToPoint(new Point(rect.left,rect.top));
-  double scaleX=getWidth() / (double)rect.width();
-  double scaleY=getHeight() / (double)rect.height();
-  double minimumScale=Math.min(scaleX,scaleY);
-  smoothScaleTo(minimumScale,SLIDE_DURATION);
-}

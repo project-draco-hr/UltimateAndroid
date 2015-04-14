@@ -1,0 +1,9 @@
+{
+  this.typedArray=typedArray;
+  startCurrentMonth=typedArray.getBoolean(R.styleable.DayPickerView_dpv_startCurrentMonth,false);
+  selectedDays=new SelectedDays<CalendarDay>();
+  mContext=context;
+  mController=datePickerController;
+  calendar=Calendar.getInstance();
+  init();
+}

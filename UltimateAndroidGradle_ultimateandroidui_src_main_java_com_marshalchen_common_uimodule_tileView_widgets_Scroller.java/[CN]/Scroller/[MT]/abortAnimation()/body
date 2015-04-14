@@ -1,5 +1,0 @@
-{
-  mCurrX=mFinalX;
-  mCurrY=mFinalY;
-  mFinished=true;
-}

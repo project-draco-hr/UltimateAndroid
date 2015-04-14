@@ -1,0 +1,13 @@
+{
+  post(new Runnable(){
+    @Override public void run(){
+      if (smoothScroll) {
+        smoothScrollToPosition(selectedIndex);
+      }
+ else {
+        setSelection(selectedIndex);
+      }
+    }
+  }
+);
+}

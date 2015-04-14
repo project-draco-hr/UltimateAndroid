@@ -1,4 +1,0 @@
-{
-  mView=new WeakReference<View>(view);
-  mProxy=AnimatorProxy.wrap(view);
-}

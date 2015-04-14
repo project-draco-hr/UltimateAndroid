@@ -1,5 +1,0 @@
-{
-  Keyframe.ObjectKeyframe kfClone=new Keyframe.ObjectKeyframe(getFraction(),mValue);
-  kfClone.setInterpolator(getInterpolator());
-  return kfClone;
-}

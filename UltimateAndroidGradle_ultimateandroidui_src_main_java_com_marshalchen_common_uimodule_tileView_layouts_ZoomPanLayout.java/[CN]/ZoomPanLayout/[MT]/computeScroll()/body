@@ -1,8 +1,0 @@
-{
-  if (scroller.computeScrollOffset()) {
-    Point destination=new Point(scroller.getCurrX(),scroller.getCurrY());
-    scrollToPoint(destination);
-    dispatchScrollActionNotification();
-    postInvalidate();
-  }
-}

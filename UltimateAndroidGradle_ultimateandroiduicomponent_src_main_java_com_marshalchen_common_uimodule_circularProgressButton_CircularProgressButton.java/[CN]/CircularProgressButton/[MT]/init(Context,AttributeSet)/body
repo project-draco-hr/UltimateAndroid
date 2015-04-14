@@ -1,0 +1,10 @@
+{
+  mStrokeWidth=(int)getContext().getResources().getDimension(R.dimen.circular_progress_stroke_width);
+  initAttributes(context,attributeSet);
+  mMaxProgress=100;
+  mState=State.IDLE;
+  mStateManager=new StateManager(this);
+  setText(mIdleText);
+  initIdleStateDrawable();
+  setBackgroundCompat(mIdleStateDrawable);
+}

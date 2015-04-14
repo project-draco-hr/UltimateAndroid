@@ -1,5 +1,0 @@
-float scale
-String pattern
-String downsample
-int tileWidth
-int tileHeight

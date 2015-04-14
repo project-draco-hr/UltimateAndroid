@@ -1,4 +1,0 @@
-{
-  scaleToFit=shouldScaleToFit;
-  calculateMinimumScaleToFit();
-}

@@ -1,4 +1,0 @@
-{
-  setTileDecoder(decoder);
-  setDownsampleDecoder(decoder);
-}

@@ -1,0 +1,22 @@
+{
+  final int viewType=layoutParams.viewType;
+  final int position=layoutParams.position;
+  if (viewType == ITEM_VIEW_TYPE_HEADER_OR_FOOTER || viewType == ITEM_VIEW_TYPE_IGNORE) {
+    super.onMeasureChild(child,layoutParams);
+  }
+ else {
+    if (DBG)     Log.d(TAG,"onMeasureChild BEFORE position:" + position + " h:"+ getMeasuredHeight());
+    int childWidthSpec=View.MeasureSpec.makeMeasureSpec(mColumnWidth,View.MeasureSpec.EXACTLY);
+    int childHeightSpec;
+    if (layoutParams.height > 0) {
+      childHeightSpec=View.MeasureSpec.makeMeasureSpec(layoutParams.height,View.MeasureSpec.EXACTLY);
+    }
+ else {
+      childHeightSpec=View.MeasureSpec.makeMeasureSpec(LayoutParams.WRAP_CONTENT,View.MeasureSpec.UNSPECIFIED);
+    }
+    child.measure(childWidthSpec,childHeightSpec);
+  }
+  final int childHeight=getChildHeight(child);
+  setPositionHeightRatio(position,childHeight);
+  if (DBG)   Log.d(TAG,"onMeasureChild AFTER position:" + position + " h:"+ childHeight);
+}

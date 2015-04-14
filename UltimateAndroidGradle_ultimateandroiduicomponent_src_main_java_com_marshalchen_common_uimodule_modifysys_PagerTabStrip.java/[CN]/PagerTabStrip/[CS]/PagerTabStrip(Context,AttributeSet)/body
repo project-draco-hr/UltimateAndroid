@@ -1,0 +1,33 @@
+{
+  super(context,attrs);
+  mIndicatorColor=mTextColor;
+  mTabPaint.setColor(mIndicatorColor);
+  final float density=context.getResources().getDisplayMetrics().density;
+  mIndicatorHeight=(int)(INDICATOR_HEIGHT * density + 0.5f);
+  mMinPaddingBottom=(int)(MIN_PADDING_BOTTOM * density + 0.5f);
+  mMinTextSpacing=(int)(MIN_TEXT_SPACING * density);
+  mTabPadding=(int)(TAB_PADDING * density + 0.5f);
+  mFullUnderlineHeight=(int)(FULL_UNDERLINE_HEIGHT * density + 0.5f);
+  mMinStripHeight=(int)(MIN_STRIP_HEIGHT * density + 0.5f);
+  mTouchSlop=ViewConfiguration.get(context).getScaledTouchSlop();
+  setPadding(getPaddingLeft(),getPaddingTop(),getPaddingRight(),getPaddingBottom());
+  setTextSpacing(getTextSpacing());
+  setWillNotDraw(false);
+  mPrevText.setFocusable(true);
+  mPrevText.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+    }
+  }
+);
+  mNextText.setFocusable(true);
+  mNextText.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      mPager.setCurrentItem(mPager.getCurrentItem() + 1);
+    }
+  }
+);
+  if (getBackground() == null) {
+    mDrawFullUnderline=true;
+  }
+}

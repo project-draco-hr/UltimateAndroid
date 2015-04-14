@@ -1,3 +1,0 @@
-{
-  return "(left=" + left + ", top="+ top+ ", width="+ width+ ", height="+ height+ ", file="+ file+ ")";
-}

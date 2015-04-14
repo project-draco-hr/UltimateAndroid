@@ -1,0 +1,7 @@
+{
+  TypedArray a=getContext().obtainStyledAttributes(attr,R.styleable.CardContainer);
+  setGravity(a.getInteger(R.styleable.CardContainer_android_gravity,Gravity.CENTER));
+  int orientation=a.getInteger(R.styleable.CardContainer_cardContainerOrientation,1);
+  setOrientation(Orientations.Orientation.fromIndex(orientation));
+  a.recycle();
+}
