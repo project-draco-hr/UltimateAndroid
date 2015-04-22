@@ -1,0 +1,4 @@
+{
+  this.radius=0;
+  this.margin=0;
+}
