@@ -1,0 +1,5 @@
+{
+  this.selectorStrokeWidth=selectorStrokeWidth;
+  this.requestLayout();
+  this.invalidate();
+}

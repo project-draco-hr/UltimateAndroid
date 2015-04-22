@@ -1,0 +1,15 @@
+{
+  int result;
+  int specMode=MeasureSpec.getMode(measureSpec);
+  int specSize=MeasureSpec.getSize(measureSpec);
+  if (specMode == MeasureSpec.EXACTLY) {
+    result=specSize;
+  }
+ else   if (specMode == MeasureSpec.AT_MOST) {
+    result=specSize;
+  }
+ else {
+    result=canvasSize;
+  }
+  return result;
+}

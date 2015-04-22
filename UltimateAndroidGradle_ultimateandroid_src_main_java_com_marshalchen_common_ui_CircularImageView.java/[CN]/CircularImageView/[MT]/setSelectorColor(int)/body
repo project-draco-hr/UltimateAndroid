@@ -1,0 +1,4 @@
+{
+  this.selectorFilter=new PorterDuffColorFilter(selectorColor,PorterDuff.Mode.SRC_ATOP);
+  this.invalidate();
+}

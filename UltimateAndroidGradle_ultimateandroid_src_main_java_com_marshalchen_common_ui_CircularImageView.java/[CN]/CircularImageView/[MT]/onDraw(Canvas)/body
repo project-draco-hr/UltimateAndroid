@@ -1,0 +1,25 @@
+{
+  if (image == null)   return;
+  if (image.getHeight() == 0 || image.getWidth() == 0)   return;
+  int oldCanvasSize=canvasSize;
+  canvasSize=getWidth() < getHeight() ? getWidth() : getHeight();
+  if (oldCanvasSize != canvasSize)   updateBitmapShader();
+  paint.setShader(shader);
+  int outerWidth=0;
+  int center=canvasSize / 2;
+  if (hasSelector && isSelected) {
+    outerWidth=selectorStrokeWidth;
+    center=(canvasSize - (outerWidth * 2)) / 2;
+    paint.setColorFilter(selectorFilter);
+    canvas.drawCircle(center + outerWidth,center + outerWidth,((canvasSize - (outerWidth * 2)) / 2) + outerWidth - 4.0f,paintSelectorBorder);
+  }
+ else   if (hasBorder) {
+    outerWidth=borderWidth;
+    center=(canvasSize - (outerWidth * 2)) / 2;
+    paint.setColorFilter(null);
+    RectF rekt=new RectF(0 + outerWidth / 2,0 + outerWidth / 2,canvasSize - outerWidth / 2,canvasSize - outerWidth / 2);
+    canvas.drawArc(rekt,360,360,false,paintBorder);
+  }
+ else   paint.setColorFilter(null);
+  canvas.drawCircle(center + outerWidth,center + outerWidth,((canvasSize - (outerWidth * 2)) / 2),paint);
+}

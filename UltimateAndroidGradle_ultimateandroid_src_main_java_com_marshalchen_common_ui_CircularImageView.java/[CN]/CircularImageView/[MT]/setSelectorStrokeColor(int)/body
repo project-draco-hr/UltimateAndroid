@@ -1,0 +1,4 @@
+{
+  if (paintSelectorBorder != null)   paintSelectorBorder.setColor(selectorStrokeColor);
+  this.invalidate();
+}

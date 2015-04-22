@@ -1,0 +1,5 @@
+{
+  super.setImageURI(uri);
+  image=drawableToBitmap(getDrawable());
+  if (canvasSize > 0)   updateBitmapShader();
+}

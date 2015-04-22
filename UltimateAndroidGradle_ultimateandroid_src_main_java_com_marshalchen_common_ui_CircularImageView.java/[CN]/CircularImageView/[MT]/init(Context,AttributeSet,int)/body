@@ -1,0 +1,33 @@
+{
+  paint=new Paint();
+  paint.setAntiAlias(true);
+  paintBorder=new Paint();
+  paintBorder.setAntiAlias(true);
+  paintBorder.setStyle(Paint.Style.STROKE);
+  paintSelectorBorder=new Paint();
+  paintSelectorBorder.setAntiAlias(true);
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)   setLayerType(LAYER_TYPE_SOFTWARE,null);
+  TypedArray attributes=context.obtainStyledAttributes(attrs,R.styleable.CircularImageView,defStyle,0);
+  hasBorder=attributes.getBoolean(R.styleable.CircularImageView_civ_border,false);
+  hasSelector=attributes.getBoolean(R.styleable.CircularImageView_civ_selector,false);
+  shadowEnabled=attributes.getBoolean(R.styleable.CircularImageView_civ_shadow,SHADOW_ENABLED);
+  if (hasBorder) {
+    int defaultBorderSize=(int)(2 * context.getResources().getDisplayMetrics().density + 0.5f);
+    setBorderWidth(attributes.getDimensionPixelOffset(R.styleable.CircularImageView_civ_borderWidth,defaultBorderSize));
+    setBorderColor(attributes.getColor(R.styleable.CircularImageView_civ_borderColor,Color.WHITE));
+  }
+  if (hasSelector) {
+    int defaultSelectorSize=(int)(2 * context.getResources().getDisplayMetrics().density + 0.5f);
+    setSelectorColor(attributes.getColor(R.styleable.CircularImageView_civ_selectorColor,Color.TRANSPARENT));
+    setSelectorStrokeWidth(attributes.getDimensionPixelOffset(R.styleable.CircularImageView_civ_selectorStrokeWidth,defaultSelectorSize));
+    setSelectorStrokeColor(attributes.getColor(R.styleable.CircularImageView_civ_selectorStrokeColor,Color.BLUE));
+  }
+  if (shadowEnabled) {
+    shadowRadius=attributes.getFloat(R.styleable.CircularImageView_civ_shadowRadius,SHADOW_RADIUS);
+    shadowDx=attributes.getFloat(R.styleable.CircularImageView_civ_shadowDx,SHADOW_DX);
+    shadowDy=attributes.getFloat(R.styleable.CircularImageView_civ_shadowDy,SHADOW_DY);
+    shadowColor=attributes.getColor(R.styleable.CircularImageView_civ_shadowColor,SHADOW_COLOR);
+    setShadowEnabled(true);
+  }
+  attributes.recycle();
+}
