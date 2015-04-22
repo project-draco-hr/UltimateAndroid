@@ -1,0 +1,3 @@
+{
+  return ((getWindow().getDecorView().getSystemUiVisibility() & View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) != 0);
+}

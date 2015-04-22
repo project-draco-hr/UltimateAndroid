@@ -1,0 +1,5 @@
+{
+  MenuInflater inflater=getMenuInflater();
+  inflater.inflate(R.menu.snack_bar_recyclerview_sample,menu);
+  return true;
+}

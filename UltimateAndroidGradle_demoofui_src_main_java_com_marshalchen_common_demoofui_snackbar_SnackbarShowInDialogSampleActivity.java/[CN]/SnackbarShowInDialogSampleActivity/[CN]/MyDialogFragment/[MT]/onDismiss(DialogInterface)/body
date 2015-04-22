@@ -1,0 +1,6 @@
+{
+  super.onDismiss(dialog);
+  mListView.setOnItemClickListener(null);
+  mListView=null;
+  mSnackbarContainer=null;
+}

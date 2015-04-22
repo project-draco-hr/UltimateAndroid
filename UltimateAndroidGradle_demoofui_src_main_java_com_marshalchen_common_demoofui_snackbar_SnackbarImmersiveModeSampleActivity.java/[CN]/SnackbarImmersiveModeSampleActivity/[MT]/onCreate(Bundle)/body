@@ -1,0 +1,28 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.snack_bar_activity_immersive_mode_sample);
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  hideSystemUI();
+  Button singleLineButton=(Button)findViewById(R.id.single_line);
+  singleLineButton.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      SnackbarManager.show(Snackbar.with(SnackbarImmersiveModeSampleActivity.this).text("Single-line snackbar"));
+    }
+  }
+);
+  Button multiLineButton=(Button)findViewById(R.id.multi_line);
+  multiLineButton.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      SnackbarManager.show(Snackbar.with(SnackbarImmersiveModeSampleActivity.this).type(SnackbarType.MULTI_LINE).text("This is a multi-line snackbar. Keep in mind that snackbars" + " are meant for VERY short messages"));
+    }
+  }
+);
+  ViewGroup container=(ViewGroup)findViewById(android.R.id.content);
+  container.setClickable(true);
+  container.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      onClickContainerView();
+    }
+  }
+);
+}

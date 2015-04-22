@@ -1,0 +1,3 @@
+{
+  getSupportFragmentManager().beginTransaction().add(new MyDialogFragment(),FRAGMENT_TAG_MY_DIALOG).commit();
+}

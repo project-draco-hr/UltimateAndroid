@@ -1,0 +1,12 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.snack_bar_activity_show_in_dialog_sample);
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  final Button button=(Button)findViewById(android.R.id.button1);
+  button.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      openDialog();
+    }
+  }
+);
+}

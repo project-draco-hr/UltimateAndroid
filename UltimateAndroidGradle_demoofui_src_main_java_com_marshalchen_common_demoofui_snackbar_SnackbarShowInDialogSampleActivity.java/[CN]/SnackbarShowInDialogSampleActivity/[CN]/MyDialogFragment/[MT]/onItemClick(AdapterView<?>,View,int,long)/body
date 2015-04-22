@@ -1,0 +1,3 @@
+{
+  SnackbarManager.show(Snackbar.with(getActivity()).text(String.format("Item %d pressed",(position + 1))).actionLabel("Close").actionColor(Color.parseColor("#FF8A80")).duration(Snackbar.SnackbarDuration.LENGTH_LONG).attachToAbsListView(mListView),mSnackbarContainer,true);
+}

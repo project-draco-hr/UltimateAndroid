@@ -1,0 +1,6 @@
+{
+  super.onWindowFocusChanged(hasFocus);
+  if (hasFocus) {
+    hideSystemUI();
+  }
+}
