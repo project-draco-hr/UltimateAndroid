@@ -1,0 +1,5 @@
+{
+  image=(ImageView)view.findViewById(R.id.image);
+  indicator=(ImageView)view.findViewById(R.id.checkmark);
+  view.setTag(this);
+}

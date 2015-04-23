@@ -1,0 +1,5 @@
+{
+  boolean retValue=mScaleGesture.onTouchEvent(event);
+  retValue=mGestureDetector.onTouchEvent(event) || retValue;
+  return retValue || super.onTouchEvent(event);
+}

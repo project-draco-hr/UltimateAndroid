@@ -1,0 +1,5 @@
+{
+  name.setText(data.name);
+  size.setText(data.images.size() + "???");
+  Picasso.with(mContext).load(new File(data.cover.path)).placeholder(R.drawable.multi_image_select_default_error).resize(mImageSize,mImageSize).centerCrop().into(cover);
+}

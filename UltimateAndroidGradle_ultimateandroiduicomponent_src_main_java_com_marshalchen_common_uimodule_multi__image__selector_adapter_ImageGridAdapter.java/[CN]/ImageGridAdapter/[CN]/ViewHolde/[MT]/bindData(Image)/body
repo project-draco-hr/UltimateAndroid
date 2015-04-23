@@ -1,0 +1,19 @@
+{
+  if (data == null)   return;
+  if (showSelectIndicator) {
+    indicator.setVisibility(View.VISIBLE);
+    if (mSelectedImages.contains(data)) {
+      indicator.setImageResource(R.drawable.multi_image_select_btn_selected);
+    }
+ else {
+      indicator.setImageResource(R.drawable.multi_image_select_btn_unselected);
+    }
+  }
+ else {
+    indicator.setVisibility(View.GONE);
+  }
+  File imageFile=new File(data.path);
+  if (mItemSize > 0) {
+    Picasso.with(mContext).load(imageFile).placeholder(R.drawable.multi_image_select_default_error).resize(mItemSize,mItemSize).centerCrop().into(image);
+  }
+}

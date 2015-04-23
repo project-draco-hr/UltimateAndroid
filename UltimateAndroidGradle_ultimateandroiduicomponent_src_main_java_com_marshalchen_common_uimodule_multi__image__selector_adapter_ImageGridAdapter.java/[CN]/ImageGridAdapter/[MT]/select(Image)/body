@@ -1,0 +1,9 @@
+{
+  if (mSelectedImages.contains(image)) {
+    mSelectedImages.remove(image);
+  }
+ else {
+    mSelectedImages.add(image);
+  }
+  notifyDataSetChanged();
+}

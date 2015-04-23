@@ -1,0 +1,10 @@
+{
+  try {
+    Image other=(Image)o;
+    return this.path.equalsIgnoreCase(other.path);
+  }
+ catch (  ClassCastException e) {
+    e.printStackTrace();
+  }
+  return super.equals(o);
+}

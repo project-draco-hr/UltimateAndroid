@@ -1,0 +1,3 @@
+{
+  return showCamera ? mImages.size() + 1 : mImages.size();
+}

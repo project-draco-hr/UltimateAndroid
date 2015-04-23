@@ -1,0 +1,33 @@
+{
+  Log.d(TAG,"on change");
+  final int orientation=newConfig.orientation;
+  if (mFolderPopupWindow != null) {
+    if (mFolderPopupWindow.isShowing()) {
+      mFolderPopupWindow.dismiss();
+    }
+  }
+  mGridView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
+    @Override @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public void onGlobalLayout(){
+      final int height=mGridView.getHeight();
+      final int desireSize=getResources().getDimensionPixelOffset(R.dimen.multi_image_select_image_size);
+      Log.d(TAG,"Desire Size = " + desireSize);
+      final int numCount=mGridView.getWidth() / desireSize;
+      Log.d(TAG,"Grid Size = " + mGridView.getWidth());
+      Log.d(TAG,"num count = " + numCount);
+      final int columnSpace=getResources().getDimensionPixelOffset(R.dimen.multi_image_select_space_size);
+      int columnWidth=(mGridView.getWidth() - columnSpace * (numCount - 1)) / numCount;
+      mImageAdapter.setItemSize(columnWidth);
+      if (mFolderPopupWindow != null) {
+        mFolderPopupWindow.setHeight(height * 5 / 8);
+      }
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+        mGridView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+      }
+ else {
+        mGridView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+      }
+    }
+  }
+);
+  super.onConfigurationChanged(newConfig);
+}

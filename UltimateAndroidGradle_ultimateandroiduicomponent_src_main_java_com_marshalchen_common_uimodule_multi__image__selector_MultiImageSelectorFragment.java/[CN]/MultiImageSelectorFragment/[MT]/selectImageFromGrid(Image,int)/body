@@ -1,0 +1,38 @@
+{
+  if (image != null) {
+    if (mode == MODE_MULTI) {
+      if (resultList.contains(image.path)) {
+        resultList.remove(image.path);
+        if (resultList.size() != 0) {
+          mPreviewBtn.setEnabled(true);
+          mPreviewBtn.setText("preview" + "(" + resultList.size() + ")");
+        }
+ else {
+          mPreviewBtn.setEnabled(false);
+          mPreviewBtn.setText("preview");
+        }
+        if (mCallback != null) {
+          mCallback.onImageUnselected(image.path);
+        }
+      }
+ else {
+        if (mDesireImageCount == resultList.size()) {
+          Toast.makeText(getActivity(),"msg_amount_limit",Toast.LENGTH_SHORT).show();
+          return;
+        }
+        resultList.add(image.path);
+        mPreviewBtn.setEnabled(true);
+        mPreviewBtn.setText("preview" + "(" + resultList.size() + ")");
+        if (mCallback != null) {
+          mCallback.onImageSelected(image.path);
+        }
+      }
+      mImageAdapter.select(image);
+    }
+ else     if (mode == MODE_SINGLE) {
+      if (mCallback != null) {
+        mCallback.onSingleImageSelected(image.path);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  for (  String path : resultList) {
+    Image image=getImageByPath(path);
+    if (image != null) {
+      mSelectedImages.add(image);
+    }
+  }
+  if (mSelectedImages.size() > 0) {
+    notifyDataSetChanged();
+  }
+}

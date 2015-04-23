@@ -1,0 +1,10 @@
+{
+  Intent cameraIntent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+  if (cameraIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(mTmpFile));
+    startActivityForResult(cameraIntent,REQUEST_CAMERA);
+  }
+ else {
+    Toast.makeText(getActivity(),"msg_no_camera",Toast.LENGTH_SHORT).show();
+  }
+}

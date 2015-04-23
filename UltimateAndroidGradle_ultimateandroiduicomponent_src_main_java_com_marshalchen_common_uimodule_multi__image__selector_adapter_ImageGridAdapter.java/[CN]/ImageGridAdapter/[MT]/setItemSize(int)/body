@@ -1,0 +1,8 @@
+{
+  if (mItemSize == columnWidth) {
+    return;
+  }
+  mItemSize=columnWidth;
+  mItemLayoutParams=new GridView.LayoutParams(mItemSize,mItemSize);
+  notifyDataSetChanged();
+}

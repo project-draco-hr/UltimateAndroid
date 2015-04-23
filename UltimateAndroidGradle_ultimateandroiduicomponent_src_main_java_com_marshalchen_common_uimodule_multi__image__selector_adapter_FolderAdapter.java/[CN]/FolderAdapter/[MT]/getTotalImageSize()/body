@@ -1,0 +1,9 @@
+{
+  int result=0;
+  if (mFolders != null && mFolders.size() > 0) {
+    for (    Folder f : mFolders) {
+      result+=f.images.size();
+    }
+  }
+  return result;
+}

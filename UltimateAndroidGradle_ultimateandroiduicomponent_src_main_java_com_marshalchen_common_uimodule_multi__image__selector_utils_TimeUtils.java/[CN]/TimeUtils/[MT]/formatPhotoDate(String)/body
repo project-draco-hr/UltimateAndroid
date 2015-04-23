@@ -1,0 +1,8 @@
+{
+  File file=new File(path);
+  if (file.exists()) {
+    long time=file.lastModified();
+    return formatPhotoDate(time);
+  }
+  return "1970-01-01";
+}

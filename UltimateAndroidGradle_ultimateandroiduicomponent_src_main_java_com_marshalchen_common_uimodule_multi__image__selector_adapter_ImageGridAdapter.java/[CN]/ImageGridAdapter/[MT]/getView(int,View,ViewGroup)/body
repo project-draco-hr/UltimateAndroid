@@ -1,0 +1,29 @@
+{
+  int type=getItemViewType(i);
+  if (type == TYPE_CAMERA) {
+    view=mInflater.inflate(R.layout.multi_image_select_list_item_camera,viewGroup,false);
+    view.setTag(null);
+  }
+ else   if (type == TYPE_NORMAL) {
+    ViewHolde holde;
+    if (view == null) {
+      view=mInflater.inflate(R.layout.multi_image_select_list_item_image,viewGroup,false);
+      holde=new ViewHolde(view);
+    }
+ else {
+      holde=(ViewHolde)view.getTag();
+      if (holde == null) {
+        view=mInflater.inflate(R.layout.multi_image_select_list_item_image,viewGroup,false);
+        holde=new ViewHolde(view);
+      }
+    }
+    if (holde != null) {
+      holde.bindData(getItem(i));
+    }
+  }
+  GridView.LayoutParams lp=(GridView.LayoutParams)view.getLayoutParams();
+  if (lp.height != mItemSize) {
+    view.setLayoutParams(mItemLayoutParams);
+  }
+  return view;
+}

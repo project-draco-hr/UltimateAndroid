@@ -1,0 +1,9 @@
+{
+  super.onAttach(activity);
+  try {
+    mCallback=(Callback)activity;
+  }
+ catch (  ClassCastException e) {
+    throw new ClassCastException("The Activity must implement MultiImageSelectorFragment.Callback interface...");
+  }
+}

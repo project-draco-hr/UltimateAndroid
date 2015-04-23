@@ -1,0 +1,11 @@
+{
+  if (!resultList.contains(path)) {
+    resultList.add(path);
+  }
+  if (resultList.size() > 0) {
+    mSubmitButton.setText("??????(" + resultList.size() + "/"+ mDefaultCount+ ")");
+    if (!mSubmitButton.isEnabled()) {
+      mSubmitButton.setEnabled(true);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  if (w != oldw || h != oldh) {
+    int cx=(w - getDrawable().getIntrinsicWidth()) / 2;
+    int cy=(h - getDrawable().getIntrinsicHeight()) / 2;
+    mImageMatrix.setTranslate(cx,cy);
+    setImageMatrix(mImageMatrix);
+    mCenterX=w / 2;
+    mCenterY=h / 2;
+  }
+}
