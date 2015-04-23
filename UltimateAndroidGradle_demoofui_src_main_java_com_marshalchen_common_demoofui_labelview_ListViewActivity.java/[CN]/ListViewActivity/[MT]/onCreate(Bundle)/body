@@ -1,0 +1,10 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.label_view_activity_list_view);
+  _listView=(ListView)findViewById(R.id.list_view);
+  _categoryAdapter=new CategoryAdapter(this,null);
+  _listView.setAdapter(_categoryAdapter);
+  getCategoryData();
+  getCategoryData();
+  getCategoryData();
+}

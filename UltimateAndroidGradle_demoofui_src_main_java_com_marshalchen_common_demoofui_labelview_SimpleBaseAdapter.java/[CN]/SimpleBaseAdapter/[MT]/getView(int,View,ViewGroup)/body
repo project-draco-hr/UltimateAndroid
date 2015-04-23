@@ -1,0 +1,12 @@
+{
+  ViewHolder holder;
+  if (null == convertView) {
+    convertView=View.inflate(context,getItemResource(),null);
+    holder=new ViewHolder(convertView);
+    convertView.setTag(holder);
+  }
+ else {
+    holder=(ViewHolder)convertView.getTag();
+  }
+  return getItemView(position,convertView,holder);
+}

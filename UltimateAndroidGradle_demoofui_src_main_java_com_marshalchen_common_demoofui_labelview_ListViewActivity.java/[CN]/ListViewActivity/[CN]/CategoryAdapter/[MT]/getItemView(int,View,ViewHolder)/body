@@ -1,0 +1,16 @@
+{
+  CategoryData item=(CategoryData)_categoryAdapter.getItem(position);
+  TextView textView=holder.getView(R.id.text);
+  textView.setText(item.text);
+  ImageView imageView=holder.getView(R.id.image);
+  imageView.setImageResource(Integer.parseInt(item.image));
+  LabelView label=holder.getView(12345);
+  if (label == null) {
+    label=new LabelView(ListViewActivity.this);
+    label.setId(12345);
+    label.setBackgroundColor(0xffE91E63);
+    label.setTargetViewInBaseAdapter(imageView,138,10,LabelView.Gravity.LEFT_TOP);
+  }
+  label.setText(item.label);
+  return convertView;
+}
