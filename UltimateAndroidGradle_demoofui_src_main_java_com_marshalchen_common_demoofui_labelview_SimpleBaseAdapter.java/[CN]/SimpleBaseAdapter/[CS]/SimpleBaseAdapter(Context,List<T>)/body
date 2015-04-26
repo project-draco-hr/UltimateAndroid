@@ -1,0 +1,4 @@
+{
+  this.context=context;
+  this.data=data == null ? new ArrayList<T>() : new ArrayList<T>(data);
+}

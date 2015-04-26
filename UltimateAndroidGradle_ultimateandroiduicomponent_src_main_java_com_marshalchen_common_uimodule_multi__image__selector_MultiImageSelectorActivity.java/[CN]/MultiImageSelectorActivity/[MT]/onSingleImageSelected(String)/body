@@ -1,0 +1,7 @@
+{
+  Intent data=new Intent();
+  resultList.add(path);
+  data.putStringArrayListExtra(EXTRA_RESULT,resultList);
+  setResult(RESULT_OK,data);
+  finish();
+}

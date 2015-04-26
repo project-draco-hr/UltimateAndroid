@@ -1,0 +1,13 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.snack_bar_activity_recyclerview_sample);
+  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  mRecyclerView=(RecyclerView)findViewById(android.R.id.list);
+  mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+  List<String> data=new ArrayList<String>();
+  for (int i=0; i < 25; i++) {
+    data.add(String.format("Item %d",(i + 1)));
+  }
+  SimpleDataAdapter adapter=new SimpleDataAdapter(android.R.layout.simple_list_item_1,data,this);
+  mRecyclerView.setAdapter(adapter);
+}

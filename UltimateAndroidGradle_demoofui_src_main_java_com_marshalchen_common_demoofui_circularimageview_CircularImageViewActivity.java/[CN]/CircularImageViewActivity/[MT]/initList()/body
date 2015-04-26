@@ -1,0 +1,27 @@
+{
+  View headerView=((LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.circular_image_view_header,mList,false);
+  mList.addHeaderView(headerView,null,false);
+  View footerView=((LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.circular_image_view_footer,mList,false);
+  mList.addFooterView(footerView,null,false);
+  final CircularImageView imgDoge=(CircularImageView)headerView.findViewById(R.id.imgDoge);
+  final TextView txtWow=(TextView)headerView.findViewById(R.id.txtWow);
+  final TextView txtClick=(TextView)headerView.findViewById(R.id.txtClick);
+  imgDoge.setOnTouchListener(new View.OnTouchListener(){
+    @Override public boolean onTouch(    View v,    MotionEvent event){
+      if (imgDoge.isSelected()) {
+        txtWow.setVisibility(View.VISIBLE);
+        txtClick.setVisibility(View.VISIBLE);
+      }
+ else {
+        txtWow.setVisibility(View.INVISIBLE);
+        txtClick.setVisibility(View.INVISIBLE);
+      }
+      return false;
+    }
+  }
+);
+  final CircularImageView imgNetwork=(CircularImageView)footerView.findViewById(R.id.imgNetwork);
+  loadWebImage(imgNetwork);
+  mAdapter=new SimpleAdapter(this,images);
+  mList.setAdapter(mAdapter);
+}

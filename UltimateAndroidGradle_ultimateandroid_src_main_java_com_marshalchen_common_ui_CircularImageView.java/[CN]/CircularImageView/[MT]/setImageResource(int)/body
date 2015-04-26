@@ -1,0 +1,5 @@
+{
+  super.setImageResource(resId);
+  image=drawableToBitmap(getDrawable());
+  if (canvasSize > 0)   updateBitmapShader();
+}

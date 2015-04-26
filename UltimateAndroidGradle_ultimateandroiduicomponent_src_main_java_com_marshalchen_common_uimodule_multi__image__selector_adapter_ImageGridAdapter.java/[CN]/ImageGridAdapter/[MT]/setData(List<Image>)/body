@@ -1,0 +1,10 @@
+{
+  mSelectedImages.clear();
+  if (images != null && images.size() > 0) {
+    mImages=images;
+  }
+ else {
+    mImages.clear();
+  }
+  notifyDataSetChanged();
+}

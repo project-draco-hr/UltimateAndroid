@@ -1,0 +1,6 @@
+{
+  mContext=context;
+  mInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+  this.showCamera=showCamera;
+  mItemLayoutParams=new GridView.LayoutParams(GridView.LayoutParams.MATCH_PARENT,GridView.LayoutParams.MATCH_PARENT);
+}

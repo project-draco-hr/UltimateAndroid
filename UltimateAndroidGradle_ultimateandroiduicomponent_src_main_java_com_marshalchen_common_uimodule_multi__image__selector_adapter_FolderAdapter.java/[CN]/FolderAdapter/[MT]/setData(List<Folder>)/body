@@ -1,0 +1,9 @@
+{
+  if (folders != null && folders.size() > 0) {
+    mFolders=folders;
+  }
+ else {
+    mFolders.clear();
+  }
+  notifyDataSetChanged();
+}

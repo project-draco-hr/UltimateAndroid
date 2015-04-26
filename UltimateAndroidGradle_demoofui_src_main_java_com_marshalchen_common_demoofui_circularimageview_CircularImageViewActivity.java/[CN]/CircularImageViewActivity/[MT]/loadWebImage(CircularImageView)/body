@@ -1,0 +1,4 @@
+{
+  final String URL="http://i.imgur.com/LrwApXg.png";
+  imgNetwork.setImageResource(R.drawable.test);
+}

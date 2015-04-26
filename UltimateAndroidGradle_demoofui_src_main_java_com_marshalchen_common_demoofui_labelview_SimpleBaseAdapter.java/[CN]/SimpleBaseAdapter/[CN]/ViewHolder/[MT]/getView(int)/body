@@ -1,0 +1,8 @@
+{
+  View v=views.get(resId);
+  if (null == v) {
+    v=convertView.findViewById(resId);
+    views.put(resId,v);
+  }
+  return (T)v;
+}

@@ -1,0 +1,28 @@
+{
+  mTouchSlop=ViewConfiguration.get(context).getScaledTouchSlop();
+  setScaleType(ScaleType.MATRIX);
+  mImageMatrix=new Matrix();
+  mScaleGesture=new ScaleGestureDetector(context,new ScaleGestureDetector.SimpleOnScaleGestureListener(){
+    @Override public boolean onScale(    ScaleGestureDetector detector){
+      float factor=detector.getScaleFactor();
+      mImageMatrix.postScale(factor,factor,mCenterX,mCenterY);
+      setImageMatrix(mImageMatrix);
+      return true;
+    }
+  }
+);
+  mGestureDetector=new GestureDetectorCompat(context,new GestureDetector.SimpleOnGestureListener(){
+    @Override public boolean onDoubleTap(    MotionEvent e){
+      mImageMatrix.postScale(1.f,1.f,mCenterX,mCenterY);
+      setImageMatrix(mImageMatrix);
+      return true;
+    }
+    @Override public boolean onScroll(    MotionEvent e1,    MotionEvent e2,    float distanceX,    float distanceY){
+      return true;
+    }
+    @Override public boolean onDown(    MotionEvent e){
+      return true;
+    }
+  }
+);
+}

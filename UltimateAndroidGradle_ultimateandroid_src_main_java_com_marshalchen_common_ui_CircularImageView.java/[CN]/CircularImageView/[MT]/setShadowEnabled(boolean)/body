@@ -1,0 +1,4 @@
+{
+  shadowEnabled=enabled;
+  updateShadow();
+}

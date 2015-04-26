@@ -1,0 +1,10 @@
+{
+  if (image == null)   return;
+  shader=new BitmapShader(image,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
+  if (canvasSize != image.getWidth() || canvasSize != image.getHeight()) {
+    Matrix matrix=new Matrix();
+    float scale=(float)canvasSize / (float)image.getWidth();
+    matrix.setScale(scale,scale);
+    shader.setLocalMatrix(matrix);
+  }
+}

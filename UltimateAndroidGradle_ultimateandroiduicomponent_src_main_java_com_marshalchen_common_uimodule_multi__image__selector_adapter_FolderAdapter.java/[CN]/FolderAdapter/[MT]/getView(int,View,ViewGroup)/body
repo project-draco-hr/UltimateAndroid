@@ -1,0 +1,30 @@
+{
+  ViewHolder holder;
+  if (view == null) {
+    view=mInflater.inflate(R.layout.multi_image_select_list_item_folder,viewGroup,false);
+    holder=new ViewHolder(view);
+  }
+ else {
+    holder=(ViewHolder)view.getTag();
+  }
+  if (holder != null) {
+    if (i == 0) {
+      holder.name.setText("????????????");
+      holder.size.setText(getTotalImageSize() + "???");
+      if (mFolders.size() > 0) {
+        Folder f=mFolders.get(0);
+        Picasso.with(mContext).load(new File(f.cover.path)).error(R.drawable.multi_image_select_default_error).resize(mImageSize,mImageSize).centerCrop().into(holder.cover);
+      }
+    }
+ else {
+      holder.bindData(getItem(i));
+    }
+    if (lastSelected == i) {
+      holder.indicator.setVisibility(View.VISIBLE);
+    }
+ else {
+      holder.indicator.setVisibility(View.GONE);
+    }
+  }
+  return view;
+}

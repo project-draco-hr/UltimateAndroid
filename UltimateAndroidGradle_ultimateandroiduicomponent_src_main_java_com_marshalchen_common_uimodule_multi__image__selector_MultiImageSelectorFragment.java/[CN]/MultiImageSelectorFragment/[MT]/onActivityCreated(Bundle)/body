@@ -1,0 +1,4 @@
+{
+  super.onActivityCreated(savedInstanceState);
+  getActivity().getSupportLoaderManager().initLoader(LOADER_ALL,null,mLoaderCallback);
+}

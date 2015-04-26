@@ -1,0 +1,4 @@
+{
+  final View rowView=LayoutInflater.from(mContext).inflate(mLayoutId,parent,false);
+  return new SimpleViewHolder(rowView);
+}

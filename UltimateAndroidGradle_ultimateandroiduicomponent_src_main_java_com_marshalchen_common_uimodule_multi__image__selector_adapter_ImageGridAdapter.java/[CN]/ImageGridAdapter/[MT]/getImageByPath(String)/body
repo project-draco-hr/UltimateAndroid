@@ -1,0 +1,10 @@
+{
+  if (mImages != null && mImages.size() > 0) {
+    for (    Image image : mImages) {
+      if (image.path.equalsIgnoreCase(path)) {
+        return image;
+      }
+    }
+  }
+  return null;
+}

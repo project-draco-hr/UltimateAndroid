@@ -1,0 +1,6 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.circular_image_view_activity_main);
+  initViews();
+  initList();
+}

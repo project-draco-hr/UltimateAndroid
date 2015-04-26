@@ -1,0 +1,5 @@
+{
+  mContext=context;
+  mInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+  mImageSize=mContext.getResources().getDimensionPixelOffset(R.dimen.multi_image_select_folder_cover_size);
+}

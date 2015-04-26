@@ -1,0 +1,3 @@
+{
+  return inflater.inflate(R.layout.multi_image_select_fragment_multi_image,container,false);
+}

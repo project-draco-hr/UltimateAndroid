@@ -1,0 +1,5 @@
+{
+  data.clear();
+  data.addAll(elem);
+  notifyDataSetChanged();
+}

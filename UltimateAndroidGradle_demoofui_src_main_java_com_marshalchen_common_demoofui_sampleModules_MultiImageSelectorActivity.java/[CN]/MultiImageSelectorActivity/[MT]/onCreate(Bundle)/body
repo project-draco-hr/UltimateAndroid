@@ -1,0 +1,45 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.multi_image_select_activity_main);
+  mResultText=(TextView)findViewById(R.id.result);
+  mChoiceMode=(RadioGroup)findViewById(R.id.choice_mode);
+  mShowCamera=(RadioGroup)findViewById(R.id.show_camera);
+  mRequestNum=(EditText)findViewById(R.id.request_num);
+  mChoiceMode.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+    @Override public void onCheckedChanged(    RadioGroup radioGroup,    int checkedId){
+      if (checkedId == R.id.multi) {
+        mRequestNum.setEnabled(true);
+      }
+ else {
+        mRequestNum.setEnabled(false);
+        mRequestNum.setText("");
+      }
+    }
+  }
+);
+  findViewById(R.id.button).setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View view){
+      int selectedMode=com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.MODE_MULTI;
+      if (mChoiceMode.getCheckedRadioButtonId() == R.id.single) {
+        selectedMode=com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.MODE_SINGLE;
+      }
+ else {
+        selectedMode=com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.MODE_MULTI;
+      }
+      boolean showCamera=mShowCamera.getCheckedRadioButtonId() == R.id.show;
+      int maxNum=9;
+      if (!TextUtils.isEmpty(mRequestNum.getText())) {
+        maxNum=Integer.valueOf(mRequestNum.getText().toString());
+      }
+      Intent intent=new Intent(MultiImageSelectorActivity.this,com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.class);
+      intent.putExtra(com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.EXTRA_SHOW_CAMERA,showCamera);
+      intent.putExtra(com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.EXTRA_SELECT_COUNT,maxNum);
+      intent.putExtra(com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.EXTRA_SELECT_MODE,selectedMode);
+      if (mSelectPath != null && mSelectPath.size() > 0) {
+        intent.putExtra(com.marshalchen.common.uimodule.multi_image_selector.MultiImageSelectorActivity.EXTRA_DEFAULT_SELECTED_LIST,mSelectPath);
+      }
+      startActivityForResult(intent,REQUEST_IMAGE);
+    }
+  }
+);
+}

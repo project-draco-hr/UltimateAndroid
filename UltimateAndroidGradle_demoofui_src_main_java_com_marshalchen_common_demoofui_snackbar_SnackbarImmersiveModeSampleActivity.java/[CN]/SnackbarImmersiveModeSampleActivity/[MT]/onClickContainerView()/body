@@ -1,0 +1,8 @@
+{
+  if (isSystemUiHidden()) {
+    showSystemUI();
+  }
+ else {
+    hideSystemUI();
+  }
+}

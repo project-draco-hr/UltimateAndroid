@@ -1,0 +1,19 @@
+{
+  ViewHolder holder=null;
+  if (convertView == null) {
+    LayoutInflater mInflater=(LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    convertView=mInflater.inflate(R.layout.circular_image_view_row,parent,false);
+    holder=new ViewHolder();
+    holder.imgAvatar=(CircularImageView)convertView.findViewById(R.id.imgAvatar);
+    convertView.setTag(holder);
+  }
+ else   holder=(ViewHolder)convertView.getTag();
+  holder.imgAvatar.setImageResource(mImages[position]);
+  holder.imgAvatar.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      mContext.startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://google.com")));
+    }
+  }
+);
+  return convertView;
+}

@@ -1,0 +1,12 @@
+{
+switch (item.getItemId()) {
+case android.R.id.home:
+    finish();
+  return true;
+case R.id.action_add_snackbar:
+SnackbarManager.show(Snackbar.with(SnackbarRecyclerViewSampleActivity.this).text("Woo, snackbar!").actionLabel("Close").actionColor(Color.parseColor("#FF8A80")).duration(Snackbar.SnackbarDuration.LENGTH_LONG).attachToRecyclerView(mRecyclerView));
+return true;
+default :
+return super.onOptionsItemSelected(item);
+}
+}

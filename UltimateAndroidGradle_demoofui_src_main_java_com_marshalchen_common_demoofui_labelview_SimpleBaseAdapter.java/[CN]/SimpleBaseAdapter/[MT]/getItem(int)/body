@@ -1,0 +1,4 @@
+{
+  if (position >= data.size())   return null;
+  return data.get(position);
+}

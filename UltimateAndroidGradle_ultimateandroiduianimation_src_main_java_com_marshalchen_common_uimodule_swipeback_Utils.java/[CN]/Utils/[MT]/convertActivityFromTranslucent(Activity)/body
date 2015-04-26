@@ -1,0 +1,9 @@
+{
+  try {
+    Method method=Activity.class.getDeclaredMethod("convertFromTranslucent");
+    method.setAccessible(true);
+    method.invoke(activity);
+  }
+ catch (  Throwable t) {
+  }
+}

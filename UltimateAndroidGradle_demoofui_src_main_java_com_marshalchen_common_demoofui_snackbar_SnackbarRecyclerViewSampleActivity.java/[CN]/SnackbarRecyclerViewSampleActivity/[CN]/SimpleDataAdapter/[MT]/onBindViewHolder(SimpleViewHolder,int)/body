@@ -1,0 +1,4 @@
+{
+  String data=mData.get(position);
+  viewHolder.getText1().setText(data);
+}

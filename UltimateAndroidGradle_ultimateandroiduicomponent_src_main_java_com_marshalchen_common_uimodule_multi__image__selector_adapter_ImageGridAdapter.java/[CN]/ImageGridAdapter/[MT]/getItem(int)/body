@@ -1,0 +1,11 @@
+{
+  if (showCamera) {
+    if (i == 0) {
+      return null;
+    }
+    return mImages.get(i - 1);
+  }
+ else {
+    return mImages.get(i);
+  }
+}

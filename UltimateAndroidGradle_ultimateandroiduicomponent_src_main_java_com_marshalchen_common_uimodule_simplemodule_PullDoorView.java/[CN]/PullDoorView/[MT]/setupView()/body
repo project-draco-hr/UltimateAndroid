@@ -1,0 +1,15 @@
+{
+  Interpolator polator=new BounceInterpolator();
+  mScroller=new Scroller(mContext,polator);
+  WindowManager wm=(WindowManager)(mContext.getSystemService(Context.WINDOW_SERVICE));
+  DisplayMetrics dm=new DisplayMetrics();
+  wm.getDefaultDisplay().getMetrics(dm);
+  mScreenHeigh=dm.heightPixels;
+  mScreenWidth=dm.widthPixels;
+  this.setBackgroundColor(Color.argb(0,0,0,0));
+  mImgView=new ImageView(mContext);
+  mImgView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+  mImgView.setScaleType(ImageView.ScaleType.FIT_XY);
+  mImgView.setImageResource(R.drawable.circle_button_ic_action_tick);
+  addView(mImgView);
+}

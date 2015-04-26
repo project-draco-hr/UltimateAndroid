@@ -1,0 +1,5 @@
+{
+  mLayoutId=layoutId;
+  mContext=context;
+  mData=data;
+}

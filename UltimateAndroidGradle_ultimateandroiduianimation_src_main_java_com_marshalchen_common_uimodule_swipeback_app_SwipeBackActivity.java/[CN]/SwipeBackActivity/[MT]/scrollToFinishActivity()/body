@@ -1,0 +1,4 @@
+{
+  Utils.convertActivityToTranslucent(this);
+  getSwipeBackLayout().scrollToFinishActivity();
+}

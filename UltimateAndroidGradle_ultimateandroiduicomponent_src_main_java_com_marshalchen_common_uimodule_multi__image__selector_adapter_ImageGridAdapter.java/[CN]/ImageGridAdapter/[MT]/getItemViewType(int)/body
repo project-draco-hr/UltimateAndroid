@@ -1,0 +1,6 @@
+{
+  if (showCamera) {
+    return position == 0 ? TYPE_CAMERA : TYPE_NORMAL;
+  }
+  return TYPE_NORMAL;
+}

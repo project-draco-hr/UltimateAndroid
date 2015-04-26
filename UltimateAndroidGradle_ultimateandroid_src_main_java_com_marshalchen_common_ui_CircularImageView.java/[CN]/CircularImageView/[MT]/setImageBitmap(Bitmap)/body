@@ -1,0 +1,5 @@
+{
+  super.setImageBitmap(bm);
+  image=bm;
+  if (canvasSize > 0)   updateBitmapShader();
+}
