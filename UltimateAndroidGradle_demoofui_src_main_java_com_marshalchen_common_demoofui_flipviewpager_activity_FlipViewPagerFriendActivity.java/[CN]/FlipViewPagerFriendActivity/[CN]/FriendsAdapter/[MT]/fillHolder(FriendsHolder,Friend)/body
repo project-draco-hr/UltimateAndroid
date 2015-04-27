@@ -1,0 +1,8 @@
+{
+  if (friend == null)   return;
+  Iterator<TextView> iViews=holder.interests.iterator();
+  Iterator<String> iInterests=friend.getInterests().iterator();
+  while (iViews.hasNext() && iInterests.hasNext())   iViews.next().setText(iInterests.next());
+  holder.infoPage.setBackgroundColor(getResources().getColor(friend.getBackground()));
+  holder.nickName.setText(friend.getNickname());
+}

@@ -1,0 +1,27 @@
+{
+  final FriendsHolder holder;
+  if (convertView == null) {
+    holder=new FriendsHolder();
+    convertView=getLayoutInflater().inflate(R.layout.flip_view_pager_friends_merge_page,parent,false);
+    holder.leftAvatar=(ImageView)convertView.findViewById(R.id.first);
+    holder.rightAvatar=(ImageView)convertView.findViewById(R.id.second);
+    holder.infoPage=getLayoutInflater().inflate(R.layout.flip_view_pager_friends_info,parent,false);
+    holder.nickName=(TextView)holder.infoPage.findViewById(R.id.nickname);
+    for (    int id : IDS_INTEREST)     holder.interests.add((TextView)holder.infoPage.findViewById(id));
+    convertView.setTag(holder);
+  }
+ else {
+    holder=(FriendsHolder)convertView.getTag();
+  }
+switch (position) {
+case 1:
+    holder.leftAvatar.setImageResource(friend1.getAvatar());
+  if (friend2 != null)   holder.rightAvatar.setImageResource(friend2.getAvatar());
+break;
+default :
+fillHolder(holder,position == 0 ? friend1 : friend2);
+holder.infoPage.setTag(holder);
+return holder.infoPage;
+}
+return convertView;
+}

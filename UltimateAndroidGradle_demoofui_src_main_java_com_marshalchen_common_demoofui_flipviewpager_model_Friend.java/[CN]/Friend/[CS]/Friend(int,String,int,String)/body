@@ -1,0 +1,6 @@
+{
+  this.avatar=avatar;
+  this.nickname=nickname;
+  this.background=background;
+  interests.addAll(Arrays.asList(interest));
+}
