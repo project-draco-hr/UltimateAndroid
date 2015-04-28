@@ -1,0 +1,5 @@
+{
+  doAnim=false;
+  double stopValue=mSpring.getCurrentValue();
+  mSpring.setCurrentValue(stopValue);
+}

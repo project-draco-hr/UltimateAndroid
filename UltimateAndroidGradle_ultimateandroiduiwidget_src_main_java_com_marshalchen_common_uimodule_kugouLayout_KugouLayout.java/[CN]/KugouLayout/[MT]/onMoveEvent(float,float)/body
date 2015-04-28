@@ -1,0 +1,4 @@
+{
+  mOffsetPixels+=dx;
+  moveContent();
+}

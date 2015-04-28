@@ -1,0 +1,52 @@
+{
+  final int action=ev.getAction() & MotionEvent.ACTION_MASK;
+  if (mVelocityTracker == null)   mVelocityTracker=VelocityTracker.obtain();
+  mVelocityTracker.addMovement(ev);
+switch (action) {
+case MotionEvent.ACTION_MOVE:
+    final int pointerIndex=ev.findPointerIndex(mActivePointerId);
+  if (pointerIndex == -1) {
+    mIsDragging=false;
+    mActivePointerId=INVALID_POINTER;
+    Log.i(TAG,"onTouchEvent MotionEvent.ACTION_MOVE return false");
+    return false;
+  }
+if (!mIsDragging) {
+  final float x=ev.getX(pointerIndex);
+  final float y=ev.getY(pointerIndex);
+  final float dx=x - mLastMotionX;
+  final float dy=y - mLastMotionY;
+  if (checkTouchSlop(dx,dy)) {
+    if (onMoveAllowDrag((int)x,(int)y,dx,dy)) {
+      setLayoutState(STATE_DRAGGING);
+      mIsDragging=true;
+      mLastMotionX=x;
+      mLastMotionY=y;
+    }
+ else {
+      mInitialMotionX=x;
+      mInitialMotionY=y;
+    }
+  }
+}
+if (mIsDragging) {
+final float x=ev.getX(pointerIndex);
+final float y=ev.getY(pointerIndex);
+onMoveEvent(x - mLastMotionX,y - mLastMotionY);
+mLastMotionX=x;
+mLastMotionY=y;
+}
+break;
+case MotionEvent.ACTION_CANCEL:
+case MotionEvent.ACTION_UP:
+int index=ev.findPointerIndex(mActivePointerId);
+index=index == -1 ? 0 : index;
+final int x=(int)ev.getX(index);
+final int y=(int)ev.getY(index);
+onActionUp(x,y);
+mActivePointerId=INVALID_POINTER;
+mIsDragging=false;
+break;
+}
+return true;
+}

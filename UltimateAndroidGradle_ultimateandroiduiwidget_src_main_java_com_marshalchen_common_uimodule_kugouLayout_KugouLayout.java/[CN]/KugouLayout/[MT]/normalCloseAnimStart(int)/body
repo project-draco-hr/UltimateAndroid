@@ -1,0 +1,7 @@
+{
+  closingChangeAlpha=true;
+  showingChangeAlpha=false;
+  if (closeDirection == RIGHT)   mOffsetAnimator.setFloatValues(mOffsetPixels,getWidth());
+ else   mOffsetAnimator.setFloatValues(mOffsetPixels,-getWidth());
+  mAnimatorSet.start();
+}

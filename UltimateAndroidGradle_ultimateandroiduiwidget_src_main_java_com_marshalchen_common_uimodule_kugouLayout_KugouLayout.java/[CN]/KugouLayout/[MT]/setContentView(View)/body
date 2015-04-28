@@ -1,0 +1,6 @@
+{
+  if (mKugouLayout.mContentContainer.getChildCount() != 0) {
+    throw new RuntimeException("kugou layout can only have one direct child view ");
+  }
+  mKugouLayout.mContentContainer.addView(view,LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
+}

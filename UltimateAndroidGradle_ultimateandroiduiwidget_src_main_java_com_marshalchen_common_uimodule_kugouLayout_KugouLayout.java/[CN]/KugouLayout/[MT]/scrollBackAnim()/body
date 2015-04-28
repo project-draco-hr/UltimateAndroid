@@ -1,0 +1,4 @@
+{
+  if (REBOUND_ANIM == mAnimType || ALWAYS_REBOUND == mAnimType)   reboundAnimStart();
+ else   normalAnimStart();
+}

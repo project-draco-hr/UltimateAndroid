@@ -1,0 +1,58 @@
+{
+  final int action=ev.getAction();
+switch (action) {
+case MotionEvent.ACTION_DOWN:
+{
+      mLastMotionX=mInitialMotionX=ev.getX();
+      mLastMotionY=mInitialMotionY=ev.getY();
+      final boolean allowDrag=onDownAllowDrag((int)mInitialMotionX,(int)mInitialMotionY);
+      mActivePointerId=ev.getPointerId(0);
+      if (allowDrag) {
+        setLayoutState(mBackgroundVisible ? STATE_OPEN : STATE_CLOSED);
+        mIsDragging=false;
+        stopAnim();
+      }
+      break;
+    }
+case MotionEvent.ACTION_MOVE:
+  final int activePointerId=mActivePointerId;
+if (activePointerId == INVALID_POINTER) {
+  break;
+}
+final int pointerIndex=ev.findPointerIndex(activePointerId);
+if (pointerIndex == -1) {
+mIsDragging=false;
+mActivePointerId=INVALID_POINTER;
+return false;
+}
+final float x=ev.getX(pointerIndex);
+final float y=ev.getY(pointerIndex);
+final float dx=x - mLastMotionX;
+final float dy=y - mLastMotionY;
+if (checkTouchSlop(dx,dy)) {
+if (mOffsetPixels == 0 && canChildScroll(ev.getRawX(),ev.getRawY())) {
+onActionUp((int)ev.getX(),(int)ev.getY());
+return false;
+}
+final boolean allowDrag=onMoveAllowDrag((int)x,(int)y,dx,dy);
+if (allowDrag) {
+setLayoutState(STATE_DRAGGING);
+mIsDragging=true;
+mLastMotionX=x;
+mLastMotionY=y;
+}
+}
+ else if (checkHorizonSlop(dx,dy)) {
+onActionUp((int)ev.getX(),(int)ev.getY());
+return false;
+}
+break;
+case MotionEvent.ACTION_UP:
+case MotionEvent.ACTION_CANCEL:
+mActivePointerId=INVALID_POINTER;
+mIsDragging=false;
+onActionUp((int)ev.getX(),(int)ev.getY());
+return false;
+}
+return mIsDragging;
+}

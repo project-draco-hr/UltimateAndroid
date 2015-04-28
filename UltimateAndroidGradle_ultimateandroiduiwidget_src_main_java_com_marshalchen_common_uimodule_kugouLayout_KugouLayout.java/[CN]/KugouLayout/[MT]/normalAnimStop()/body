@@ -1,0 +1,3 @@
+{
+  if (mAnimatorSet.isRunning())   mAnimatorSet.cancel();
+}

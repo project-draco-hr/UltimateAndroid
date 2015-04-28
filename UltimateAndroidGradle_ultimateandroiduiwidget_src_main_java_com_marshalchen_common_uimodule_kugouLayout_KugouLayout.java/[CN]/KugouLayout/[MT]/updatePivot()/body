@@ -1,0 +1,4 @@
+{
+  mContentContainer.setPivotX(getWidth() / 2);
+  mContentContainer.setPivotY((int)(getHeight() * 1.5));
+}

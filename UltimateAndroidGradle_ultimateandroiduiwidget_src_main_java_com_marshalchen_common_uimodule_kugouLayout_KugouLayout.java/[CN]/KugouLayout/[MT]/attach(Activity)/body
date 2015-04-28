@@ -1,0 +1,6 @@
+{
+  mKugouLayout.setId(R.id.kugou_layout_md__drawer);
+  attachToContent(activity,mKugouLayout);
+  mKugouLayout.mContentContainer.setBackgroundColor(0x0);
+  return mKugouLayout;
+}

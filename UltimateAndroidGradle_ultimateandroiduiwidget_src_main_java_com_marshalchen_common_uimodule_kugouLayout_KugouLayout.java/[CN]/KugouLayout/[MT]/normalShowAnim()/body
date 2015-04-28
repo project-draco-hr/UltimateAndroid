@@ -1,0 +1,4 @@
+{
+  mOffsetAnimator.setFloatValues(getWidth(),0);
+  mAnimatorSet.start();
+}

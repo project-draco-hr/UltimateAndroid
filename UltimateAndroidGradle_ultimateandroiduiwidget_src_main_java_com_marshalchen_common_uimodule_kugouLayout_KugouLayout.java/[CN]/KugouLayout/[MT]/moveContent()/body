@@ -1,0 +1,11 @@
+{
+  if (USE_TRANSLATIONS) {
+    mContentContainer.setTranslationX(mOffsetPixels / 2);
+    mContentContainer.setRotation(mOffsetPixels / 60);
+  }
+ else {
+    mContentContainer.offsetLeftAndRight(((int)mOffsetPixels - getLeft()) / 2);
+    mContentContainer.setRotation(((int)mOffsetPixels - getLeft()) / 60);
+  }
+  invalidate();
+}

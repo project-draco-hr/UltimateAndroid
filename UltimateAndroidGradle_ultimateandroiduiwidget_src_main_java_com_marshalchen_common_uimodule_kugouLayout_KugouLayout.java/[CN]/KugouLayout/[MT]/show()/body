@@ -1,0 +1,11 @@
+{
+  showingChangeAlpha=true;
+  setAlpha(0);
+  setVisibility(VISIBLE);
+  if (mAnimType == NORMAL_ANIM) {
+    normalShowAnim();
+  }
+ else {
+    reboundShowAnim();
+  }
+}

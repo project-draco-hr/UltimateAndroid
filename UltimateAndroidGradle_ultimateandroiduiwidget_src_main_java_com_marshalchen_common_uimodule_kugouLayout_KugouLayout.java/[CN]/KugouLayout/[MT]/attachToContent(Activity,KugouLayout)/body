@@ -1,0 +1,9 @@
+{
+  Window window=activity.getWindow();
+  ViewGroup decorView=(ViewGroup)window.getDecorView();
+  ViewGroup decorChild=(ViewGroup)decorView.getChildAt(0);
+  decorView.removeAllViews();
+  mKugouLayout.mContentContainer.addView(decorChild,decorChild.getLayoutParams());
+  decorView.addView(mKugouLayout,LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
+  window.setBackgroundDrawable(new ColorDrawable(0x0));
+}
