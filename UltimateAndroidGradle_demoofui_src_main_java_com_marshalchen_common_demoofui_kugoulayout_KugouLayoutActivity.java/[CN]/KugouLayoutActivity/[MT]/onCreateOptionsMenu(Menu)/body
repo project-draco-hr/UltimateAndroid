@@ -1,0 +1,4 @@
+{
+  getMenuInflater().inflate(R.menu.kugou_layout_menu_main,menu);
+  return true;
+}

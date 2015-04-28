@@ -1,0 +1,13 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.kugou_layout_activity_main);
+  kugouLayout=new KugouLayout(this);
+  kugouLayout.attach(this);
+  kugouLayout.addHorizontalScrollableView(findViewById(R.id.horizontalScrollView));
+  kugouLayout.setLayoutCloseListener(new KugouLayout.LayoutCloseListener(){
+    @Override public void onLayoutClose(){
+      finish();
+    }
+  }
+);
+}
