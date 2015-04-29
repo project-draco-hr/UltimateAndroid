@@ -1,0 +1,60 @@
+{
+  setBackgroundColor(0x0);
+  final ViewConfiguration configuration=ViewConfiguration.get(context);
+  mTouchSlop=configuration.getScaledTouchSlop();
+  mMaxVelocity=configuration.getScaledMaximumFlingVelocity();
+  mContentContainer=new UnClickableFrameLayout(context);
+  mContentContainer.setId(R.id.kugou_layout_md__content);
+  mAnimatorSet=new AnimatorSet();
+  mOffsetAnimator=ObjectAnimator.ofFloat(this,aOffset,0,0);
+  mOffsetAnimator.setDuration(ANIM_DURATION);
+  mAnimatorSet.playTogether(mOffsetAnimator);
+  mAnimatorSet.setInterpolator(mInterpolator);
+  mOffsetAnimator.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animation){
+    }
+    @Override public void onAnimationEnd(    Animator animation){
+      float endValue=(Float)mOffsetAnimator.getAnimatedValue();
+      if ((endValue == getWidth() || endValue == -getWidth())) {
+        setVisibility(INVISIBLE);
+        if (null != mLayoutCloseListener) {
+          mLayoutCloseListener.onLayoutClose();
+        }
+      }
+ else       if (endValue == 0 && showingChangeAlpha) {
+        showingChangeAlpha=false;
+      }
+    }
+    @Override public void onAnimationCancel(    Animator animation){
+    }
+    @Override public void onAnimationRepeat(    Animator animation){
+    }
+  }
+);
+  mSpringSystem=SpringSystem.create();
+  mSpring=mSpringSystem.createSpring();
+  SpringConfig config=new SpringConfig(70,9);
+  mSpring.setSpringConfig(config);
+  mSpring.setCurrentValue(0);
+  mSpring.addListener(new SpringListener(){
+    @Override public void onSpringUpdate(    Spring spring){
+      if (doAnim) {
+        double newValue=1 - spring.getCurrentValue();
+        mOffsetPixels=(float)newValue * mBeginOffsetX;
+        moveContent();
+        if (showingChangeAlpha) {
+          changeAlpha();
+        }
+      }
+    }
+    @Override public void onSpringAtRest(    Spring spring){
+    }
+    @Override public void onSpringActivate(    Spring spring){
+    }
+    @Override public void onSpringEndStateChange(    Spring spring){
+    }
+  }
+);
+  super.addView(mContentContainer,0,new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+  mContentContainer.setLayerType(View.LAYER_TYPE_HARDWARE,null);
+}

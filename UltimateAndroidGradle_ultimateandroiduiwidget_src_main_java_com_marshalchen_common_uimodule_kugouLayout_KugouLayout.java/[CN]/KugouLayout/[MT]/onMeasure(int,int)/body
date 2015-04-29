@@ -1,0 +1,13 @@
+{
+  final int width=MeasureSpec.getSize(widthMeasureSpec);
+  final int height=MeasureSpec.getSize(heightMeasureSpec);
+  mWidth=width;
+  final int contentWidthMeasureSpec=getChildMeasureSpec(widthMeasureSpec,0,width);
+  final int contentHeightMeasureSpec=getChildMeasureSpec(heightMeasureSpec,0,height);
+  mContentContainer.measure(contentWidthMeasureSpec,contentHeightMeasureSpec);
+  mDragRange=getChildMeasureSpec(widthMeasureSpec,0,width);
+  mCloseDistance=mDragRange / 2;
+  setMeasuredDimension(width,height);
+  updateDragRange();
+  updatePivot();
+}

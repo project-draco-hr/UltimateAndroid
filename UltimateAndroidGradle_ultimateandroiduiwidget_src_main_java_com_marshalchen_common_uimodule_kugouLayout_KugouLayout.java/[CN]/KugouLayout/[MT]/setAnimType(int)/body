@@ -1,0 +1,15 @@
+{
+switch (animType) {
+case REBOUND_ANIM:
+    mAnimType=REBOUND_ANIM;
+  break;
+case NORMAL_ANIM:
+mAnimType=NORMAL_ANIM;
+break;
+case ALWAYS_REBOUND:
+mAnimType=ALWAYS_REBOUND;
+break;
+default :
+throw new IllegalArgumentException("animType should be NORMAL_ANIM or NORMAL_ANIM or ALWAYS_REBOUND");
+}
+}

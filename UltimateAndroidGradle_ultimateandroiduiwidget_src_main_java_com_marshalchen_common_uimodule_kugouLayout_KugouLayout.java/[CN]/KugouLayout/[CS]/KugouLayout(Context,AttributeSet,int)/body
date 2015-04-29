@@ -1,0 +1,6 @@
+{
+  super(context,attrs,defStyleAttr);
+  init(context);
+  mKugouLayout=this;
+  if (context instanceof Activity)   mParentActivity=(Activity)context;
+}

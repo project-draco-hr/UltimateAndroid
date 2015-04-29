@@ -1,0 +1,3 @@
+{
+  setContentView(mParentActivity.getLayoutInflater().inflate(ResId,null));
+}

@@ -1,0 +1,6 @@
+{
+  doAnim=true;
+  mOffsetPixels=mBeginOffsetX=getWidth();
+  mSpring.setCurrentValue(0);
+  mSpring.setEndValue(1);
+}

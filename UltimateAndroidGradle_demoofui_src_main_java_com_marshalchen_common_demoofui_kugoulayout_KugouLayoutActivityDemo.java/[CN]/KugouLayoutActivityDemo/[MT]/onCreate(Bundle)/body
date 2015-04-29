@@ -1,0 +1,16 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.kugou_layout_activity2);
+  kugouLayout=(KugouLayout)findViewById(R.id.kugoulayout);
+  kugouLayout.setContentView(R.layout.kugou_layout_activity_main);
+  kugouLayout.setAnimType(KugouLayout.REBOUND_ANIM);
+  kugouLayout.addHorizontalScrollableView(kugouLayout.findViewById(R.id.horizontalScrollView));
+  kugouLayout.setLayoutCloseListener(new KugouLayout.LayoutCloseListener(){
+    @Override public void onLayoutClose(){
+      System.out.println("you do something here when layout close");
+    }
+  }
+);
+  KugouLayout kugouLayout1=(KugouLayout)findViewById(R.id.kugoulayout2);
+  kugouLayout1.setContentView(R.layout.kugou_layout_imagelayout);
+}

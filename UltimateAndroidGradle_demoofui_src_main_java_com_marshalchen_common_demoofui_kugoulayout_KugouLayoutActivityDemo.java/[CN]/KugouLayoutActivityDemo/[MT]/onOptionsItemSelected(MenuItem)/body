@@ -1,0 +1,17 @@
+{
+switch (item.getItemId()) {
+case R.id.action_normal_anim:
+    kugouLayout.setAnimType(KugouLayout.NORMAL_ANIM);
+  return true;
+case R.id.action_rebound_anim:
+kugouLayout.setAnimType(KugouLayout.REBOUND_ANIM);
+return true;
+case R.id.action_always_rebound_anim:
+kugouLayout.setAnimType(KugouLayout.ALWAYS_REBOUND);
+return true;
+case R.id.action_show:
+kugouLayout.show();
+return true;
+}
+return false;
+}

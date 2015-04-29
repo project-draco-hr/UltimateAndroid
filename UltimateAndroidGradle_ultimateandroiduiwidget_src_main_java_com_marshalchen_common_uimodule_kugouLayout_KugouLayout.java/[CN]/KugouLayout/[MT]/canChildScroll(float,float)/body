@@ -1,0 +1,14 @@
+{
+  int[] location=new int[2];
+  View childView;
+  scrollChildListIterator=scrollChildList.iterator();
+  while (scrollChildListIterator.hasNext()) {
+    childView=scrollChildListIterator.next();
+    childView.getLocationInWindow(location);
+    rect.set(childView.getLeft(),location[1],childView.getRight(),location[1] + childView.getHeight());
+    if (rect.contains((int)rawX,(int)rawY)) {
+      return true;
+    }
+  }
+  return false;
+}

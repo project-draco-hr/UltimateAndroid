@@ -1,0 +1,9 @@
+{
+  showingChangeAlpha=false;
+  mBeginOffsetX=mOffsetPixels;
+  stopAnim();
+  mOffsetPixels=mBeginOffsetX;
+  mSpring.setCurrentValue(0);
+  mSpring.setEndValue(1);
+  doAnim=true;
+}

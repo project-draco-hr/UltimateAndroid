@@ -1,0 +1,4 @@
+{
+  mOffsetAnimator.setFloatValues(mOffsetPixels,0);
+  mAnimatorSet.start();
+}

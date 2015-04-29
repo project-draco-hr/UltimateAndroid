@@ -1,0 +1,5 @@
+int position
+View convertView
+ViewGroup parent
+Friend friend1
+Friend friend2

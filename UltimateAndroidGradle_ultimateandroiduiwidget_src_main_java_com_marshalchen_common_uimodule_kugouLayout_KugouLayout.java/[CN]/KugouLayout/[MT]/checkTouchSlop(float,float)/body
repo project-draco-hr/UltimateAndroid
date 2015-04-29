@@ -1,0 +1,3 @@
+{
+  return Math.abs(dx) > mTouchSlop && Math.abs(dx) > Math.abs(dy);
+}
