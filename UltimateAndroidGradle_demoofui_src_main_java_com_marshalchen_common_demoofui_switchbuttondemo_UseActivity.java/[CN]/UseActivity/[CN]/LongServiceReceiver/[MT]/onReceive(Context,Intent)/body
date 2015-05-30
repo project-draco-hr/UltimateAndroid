@@ -1,0 +1,8 @@
+{
+  if (receiverIntent.getAction().equals("PROGRESS_UPDATE")) {
+    onProgressUpdate(receiverIntent.getIntExtra("progress",0));
+    return;
+  }
+  mLongSb.slideToChecked(true);
+  mStartBt.setEnabled(true);
+}
