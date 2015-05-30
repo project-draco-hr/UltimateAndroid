@@ -14,5 +14,4 @@
     }
     listView.onBottomComplete();
   }
-  super.onPostExecute(result);
 }

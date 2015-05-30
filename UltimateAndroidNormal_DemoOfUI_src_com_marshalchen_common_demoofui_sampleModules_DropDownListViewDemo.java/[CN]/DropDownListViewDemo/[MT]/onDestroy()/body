@@ -1,0 +1,5 @@
+{
+  super.onDestroy();
+  if (onClickReceiver != null)   LocalBroadcastManager.getInstance(this).unregisterReceiver(onClickReceiver);
+  if (onDropDownReceiver != null)   LocalBroadcastManager.getInstance(this).unregisterReceiver(onDropDownReceiver);
+}
