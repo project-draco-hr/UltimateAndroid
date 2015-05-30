@@ -23,5 +23,12 @@
   }
   mGridView.setAdapter(mAdapter);
   mGridView.setOnItemClickListener(this);
+  fetchDataReceiver=new BroadcastReceiver(){
+    @Override public void onReceive(    Context receiverContext,    Intent receiverIntent){
+      fillAdapter();
+    }
+  }
+;
+  LocalBroadcastManager.getInstance(this).registerReceiver(fetchDataReceiver,new IntentFilter(FETCH_DATA_FILTER));
   fetchData();
 }
