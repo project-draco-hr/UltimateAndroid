@@ -2,6 +2,10 @@
   super.onCreate(savedInstanceState);
   setContentView(R.layout.jsoup_activity);
   ButterKnife.inject(this);
-  new Title().execute();
+  titleReceiver=new Title();
+  LocalBroadcastManager.getInstance(this).registerReceiver(titleReceiver,new IntentFilter(TITLE_FILTER));
+  Intent title=new Intent(this,TitleService.class);
+  title.putExtra("url",url);
+  this.startService(title);
   mJsoupTextView.setText(UtilsDemo.TestJsoup());
 }

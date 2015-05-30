@@ -1,0 +1,4 @@
+{
+  String title=receiverIntent.getStringExtra("title");
+  Logs.d("title---" + title);
+}
