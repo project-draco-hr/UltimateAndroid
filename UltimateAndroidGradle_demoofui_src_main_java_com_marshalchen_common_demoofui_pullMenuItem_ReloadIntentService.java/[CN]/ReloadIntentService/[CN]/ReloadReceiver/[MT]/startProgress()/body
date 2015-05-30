@@ -1,4 +1,3 @@
 {
-  super.onPreExecute();
   progressHelper.startProgress();
 }
