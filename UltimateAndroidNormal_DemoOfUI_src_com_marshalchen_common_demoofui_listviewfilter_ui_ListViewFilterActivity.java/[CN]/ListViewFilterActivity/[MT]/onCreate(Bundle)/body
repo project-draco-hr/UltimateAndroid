@@ -4,6 +4,8 @@
   mItems=new ArrayList<String>(Arrays.asList(ITEMS));
   mListSectionPos=new ArrayList<Integer>();
   mListItems=new ArrayList<String>();
+  populateReceiver=new PoplulateReceiver();
+  LocalBroadcastManager.getInstance(this).registerReceiver(populateReceiver,new IntentFilter(POPULATE_FILTER));
   if (savedInstanceState != null) {
     mListItems=savedInstanceState.getStringArrayList("mListItems");
     mListSectionPos=savedInstanceState.getIntegerArrayList("mListSectionPos");
@@ -17,6 +19,12 @@
     }
   }
  else {
-    new Poplulate().execute(mItems);
+    Intent populate=new Intent(this,PopulateService.class);
+    populateReceiver.showLoading();
+    populate.putExtra("mListSectionPos",mListSectionPos);
+    populate.putExtra("mListItems",mListItems);
+    populate.putExtra("mItems",mItems);
+    populate.putExtra("params",mItems);
+    this.startService(populate);
   }
 }

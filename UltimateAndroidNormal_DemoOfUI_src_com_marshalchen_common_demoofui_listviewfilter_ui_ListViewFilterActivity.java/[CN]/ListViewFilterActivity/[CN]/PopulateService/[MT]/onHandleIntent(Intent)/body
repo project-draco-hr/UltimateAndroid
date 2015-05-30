@@ -1,7 +1,11 @@
 {
+  this.mListSectionPos=intent.getIntegerArrayListExtra("mListSectionPos");
+  this.mListItems=intent.getStringArrayListExtra("mListItems");
+  this.mItems=intent.getStringArrayListExtra("mItems");
+  ArrayList<String> params=intent.getStringArrayListExtra("params");
   mListItems.clear();
   mListSectionPos.clear();
-  ArrayList<String> items=params[0];
+  ArrayList<String> items=params;
   if (mItems.size() > 0) {
     Collections.sort(items);
     int i=0;
@@ -21,5 +25,8 @@
       i++;
     }
   }
-  return null;
+  Intent resultIntent=new Intent(POPULATE_FILTER);
+  resultIntent.putExtra("mListItems",mListItems);
+  resultIntent.putExtra("mListSectionPos",mListSectionPos);
+  LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent);
 }
