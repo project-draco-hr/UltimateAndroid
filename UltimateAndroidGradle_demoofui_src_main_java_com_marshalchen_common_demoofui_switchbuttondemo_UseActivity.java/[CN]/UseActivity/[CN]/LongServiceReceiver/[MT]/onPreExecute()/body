@@ -1,0 +1,4 @@
+{
+  mLongSb.setChecked(false);
+  mStartBt.setEnabled(false);
+}

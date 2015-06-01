@@ -1,5 +1,11 @@
 {
   ArrayList<String> filtered=(ArrayList<String>)results.values;
   setIndexBarViewVisibility(constraint.toString());
-  new Poplulate().execute(filtered);
+  Intent populate=new Intent(ListViewFilterActivity.this,PopulateService.class);
+  populateReceiver.showLoading();
+  populate.putExtra("mListSectionPos",mListSectionPos);
+  populate.putExtra("mListItems",mListItems);
+  populate.putExtra("mItems",mItems);
+  populate.putExtra("params",filtered);
+  ListViewFilterActivity.this.startService(populate);
 }

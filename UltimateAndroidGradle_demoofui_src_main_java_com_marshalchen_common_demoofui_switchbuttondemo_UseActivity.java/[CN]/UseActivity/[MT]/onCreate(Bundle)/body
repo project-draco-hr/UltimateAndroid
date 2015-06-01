@@ -8,9 +8,16 @@
     }
   }
 );
+  longServiceReceiver=new LongServiceReceiver();
+  IntentFilter recevierFilter=new IntentFilter();
+  recevierFilter.addAction("LongServiceReceiver_ReturnIntent");
+  recevierFilter.addAction("PROGRESS_UPDATE");
+  LocalBroadcastManager.getInstance(this).registerReceiver(longServiceReceiver,recevierFilter);
   mStartBt.setOnClickListener(new OnClickListener(){
     @Override public void onClick(    View v){
-      new LongTask().execute();
+      Intent longService=new Intent(UseActivity.this,LongService.class);
+      longServiceReceiver.onPreExecute();
+      UseActivity.this.startService(longService);
     }
   }
 );

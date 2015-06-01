@@ -1,4 +1,0 @@
-{
-  super.onPostExecute(aVoid);
-  progressHelper.stopProgress();
-}
