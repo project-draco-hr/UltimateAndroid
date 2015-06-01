@@ -1,0 +1,10 @@
+{
+  try {
+    Thread.sleep(3000);
+  }
+ catch (  final InterruptedException e) {
+    Log.d(getClass().getCanonicalName(),e.toString());
+  }
+  Intent resultIntent=new Intent(ProgressMenuItemActivity.RELOAD_FILTER);
+  LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent);
+}

@@ -2,15 +2,23 @@
   super.onCreate(savedInstanceState);
   setContentView(R.layout.drop_down_listview_demo);
   listView=(DropDownListView)findViewById(R.id.list_view);
+  onDropDownReceiver=new GetDataReceiver(true);
+  LocalBroadcastManager.getInstance(this).registerReceiver(onDropDownReceiver,new IntentFilter("onDropDownReceiver"));
   listView.setOnDropDownListener(new DropDownListView.OnDropDownListener(){
     @Override public void onDropDown(){
-      new GetDataTask(true).execute();
+      Intent getData=new Intent(DropDownListViewDemo.this,GetDataService.class);
+      getData.putExtra("FILTER","onDropDownReceiver");
+      DropDownListViewDemo.this.startService(getData);
     }
   }
 );
+  onClickReceiver=new GetDataReceiver(false);
+  LocalBroadcastManager.getInstance(this).registerReceiver(onClickReceiver,new IntentFilter("onClickReceiver"));
   listView.setOnBottomListener(new OnClickListener(){
     @Override public void onClick(    View v){
-      new GetDataTask(false).execute();
+      Intent getData=new Intent(DropDownListViewDemo.this,GetDataService.class);
+      getData.putExtra("FILTER","onClickReceiver");
+      DropDownListViewDemo.this.startService(getData);
     }
   }
 );

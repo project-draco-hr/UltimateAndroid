@@ -1,5 +1,0 @@
-{
-  super.onPreExecute();
-  mLongSb.setChecked(false);
-  mStartBt.setEnabled(false);
-}

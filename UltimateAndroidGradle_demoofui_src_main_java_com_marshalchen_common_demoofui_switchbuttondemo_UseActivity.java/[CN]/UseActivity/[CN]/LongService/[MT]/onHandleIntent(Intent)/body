@@ -1,0 +1,16 @@
+{
+  while (progress < 100) {
+    progress++;
+    try {
+      Thread.sleep(20);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Intent updateIntent=new Intent("PROGRESS_UPDATE");
+    updateIntent.putExtra("progress",progress);
+    LocalBroadcastManager.getInstance(this).sendBroadcast(updateIntent);
+  }
+  Intent resultIntent=new Intent("LongServiceReceiver_ReturnIntent");
+  LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent);
+}
