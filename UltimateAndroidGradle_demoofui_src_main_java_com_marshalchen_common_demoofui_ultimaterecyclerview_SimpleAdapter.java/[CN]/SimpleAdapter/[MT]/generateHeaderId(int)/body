@@ -1,0 +1,4 @@
+{
+  if (getItem(position).length() > 0)   return getItem(position).charAt(0);
+ else   return -1;
+}

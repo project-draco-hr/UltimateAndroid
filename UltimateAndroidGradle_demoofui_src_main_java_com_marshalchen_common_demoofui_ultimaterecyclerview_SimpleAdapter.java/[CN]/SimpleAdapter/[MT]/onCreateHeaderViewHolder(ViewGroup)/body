@@ -1,0 +1,6 @@
+{
+  View view=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.stick_header_item,viewGroup,false);
+  return new RecyclerView.ViewHolder(view){
+  }
+;
+}

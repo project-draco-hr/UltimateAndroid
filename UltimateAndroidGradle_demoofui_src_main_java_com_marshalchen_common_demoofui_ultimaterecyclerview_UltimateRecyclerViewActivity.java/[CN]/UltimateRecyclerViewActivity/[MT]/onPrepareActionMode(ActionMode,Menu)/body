@@ -1,4 +1,0 @@
-{
-  this.actionMode=mode;
-  return false;
-}
