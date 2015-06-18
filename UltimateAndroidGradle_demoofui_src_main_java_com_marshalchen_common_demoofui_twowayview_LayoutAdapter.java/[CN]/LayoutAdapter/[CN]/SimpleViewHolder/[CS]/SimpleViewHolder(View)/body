@@ -1,4 +1,0 @@
-{
-  super(view);
-  title=(TextView)view.findViewById(R.id.title);
-}

@@ -1,4 +1,0 @@
-{
-  offsetLane(lane,offset);
-  invalidateEdges();
-}

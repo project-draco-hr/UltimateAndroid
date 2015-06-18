@@ -1,8 +1,0 @@
-{
-  final Bundle state=new Bundle();
-  state.putInt(STATE_KEY_CHOICE_MODE,mChoiceMode.ordinal());
-  state.putParcelable(STATE_KEY_CHECKED_STATES,mCheckedStates);
-  state.putParcelable(STATE_KEY_CHECKED_ID_STATES,mCheckedIdStates);
-  state.putInt(STATE_KEY_CHECKED_COUNT,mCheckedCount);
-  return state;
-}

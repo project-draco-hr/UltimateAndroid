@@ -1,6 +1,0 @@
-{
-  childFrame.left=getDecoratedLeft(child);
-  childFrame.top=getDecoratedTop(child);
-  childFrame.right=getDecoratedRight(child);
-  childFrame.bottom=getDecoratedBottom(child);
-}

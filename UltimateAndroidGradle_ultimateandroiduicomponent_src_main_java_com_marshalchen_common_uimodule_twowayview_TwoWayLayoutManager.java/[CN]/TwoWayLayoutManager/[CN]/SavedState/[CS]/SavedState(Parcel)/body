@@ -1,5 +1,0 @@
-{
-  this.superState=EMPTY_STATE;
-  anchorItemPosition=in.readInt();
-  itemSelectionState=in.readParcelable(((Object)this).getClass().getClassLoader());
-}

@@ -1,3 +1,0 @@
-{
-  return getLaneSpan((LayoutParams)child.getLayoutParams(),isVertical());
-}

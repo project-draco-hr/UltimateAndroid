@@ -1,4 +1,0 @@
-{
-  out.writeInt(anchorItemPosition);
-  out.writeParcelable(itemSelectionState,flags);
-}

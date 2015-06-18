@@ -1,8 +1,0 @@
-{
-  final int limit=getEndWithPadding() + extraSpace;
-  final int itemCount=state.getItemCount();
-  while (canAddMoreViews(Direction.END,limit) && position < itemCount) {
-    makeAndAddView(position,Direction.END,recycler);
-    position++;
-  }
-}

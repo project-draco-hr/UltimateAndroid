@@ -1,4 +1,0 @@
-{
-  final LayoutParams lp=(LayoutParams)child.getLayoutParams();
-  return getWidth() - getPaddingLeft() - getPaddingRight()- getChildWidth(lp.colSpan);
-}

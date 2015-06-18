@@ -1,3 +1,0 @@
-{
-  return (startLane == NO_LANE || anchorLane == NO_LANE);
-}

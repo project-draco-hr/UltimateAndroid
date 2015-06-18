@@ -1,4 +1,0 @@
-{
-  final MarginLayoutParams lp=(MarginLayoutParams)child.getLayoutParams();
-  return super.getDecoratedMeasuredHeight(child) + lp.topMargin + lp.bottomMargin;
-}

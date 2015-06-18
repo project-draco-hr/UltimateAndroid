@@ -1,3 +1,0 @@
-{
-  return (mIsVertical ? getDecoratedBottom(child) : getDecoratedRight(child));
-}

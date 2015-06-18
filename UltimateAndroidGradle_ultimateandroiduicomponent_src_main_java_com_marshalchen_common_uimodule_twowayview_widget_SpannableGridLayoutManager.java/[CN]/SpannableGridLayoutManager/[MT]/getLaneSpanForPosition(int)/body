@@ -1,7 +1,0 @@
-{
-  final SpannableItemEntry entry=(SpannableItemEntry)getItemEntryForPosition(position);
-  if (entry == null) {
-    throw new IllegalStateException("Could not find span for position " + position);
-  }
-  return getLaneSpan(entry,isVertical());
-}

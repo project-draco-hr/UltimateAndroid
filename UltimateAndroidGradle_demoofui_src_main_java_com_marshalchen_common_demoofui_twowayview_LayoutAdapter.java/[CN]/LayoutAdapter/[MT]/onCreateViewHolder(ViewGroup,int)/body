@@ -1,4 +1,0 @@
-{
-  final View view=LayoutInflater.from(mContext).inflate(R.layout.two_way_view_item,parent,false);
-  return new SimpleViewHolder(view);
-}

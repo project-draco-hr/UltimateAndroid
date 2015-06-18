@@ -1,4 +1,0 @@
-{
-  mItems.remove(position);
-  notifyItemRemoved(position);
-}

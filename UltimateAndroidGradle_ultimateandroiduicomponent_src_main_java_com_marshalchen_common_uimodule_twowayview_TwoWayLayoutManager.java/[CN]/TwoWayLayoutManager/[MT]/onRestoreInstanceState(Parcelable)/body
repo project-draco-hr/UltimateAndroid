@@ -1,4 +1,0 @@
-{
-  mPendingSavedState=(SavedState)state;
-  requestLayout();
-}

@@ -1,8 +1,0 @@
-{
-  if (mIsVertical) {
-    return getHeight() - getPaddingBottom() - getPaddingTop();
-  }
- else {
-    return getWidth() - getPaddingRight() - getPaddingLeft();
-  }
-}

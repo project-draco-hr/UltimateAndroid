@@ -1,6 +1,0 @@
-{
-  final int position=getPosition(child);
-  getLaneForPosition(mTempLaneInfo,position,direction);
-  getDecoratedChildFrame(child,mChildFrame);
-  popChildFrame(getItemEntryForPosition(position),mChildFrame,mTempLaneInfo.startLane,getLaneSpanForChild(child),direction);
-}

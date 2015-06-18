@@ -1,3 +1,0 @@
-{
-  mItemSpacing.getItemOffsets(outRect,itemPosition,parent);
-}

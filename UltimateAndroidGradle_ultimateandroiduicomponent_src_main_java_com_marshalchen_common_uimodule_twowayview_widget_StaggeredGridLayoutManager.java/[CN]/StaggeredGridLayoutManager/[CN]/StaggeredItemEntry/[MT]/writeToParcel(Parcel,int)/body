@@ -1,6 +1,0 @@
-{
-  super.writeToParcel(out,flags);
-  out.writeInt(span);
-  out.writeInt(width);
-  out.writeInt(height);
-}

@@ -1,6 +1,0 @@
-{
-  if (recyclerView == null) {
-    return null;
-  }
-  return (ItemClickSupport)recyclerView.getTag(R.id.twowayview_item_click_support);
-}

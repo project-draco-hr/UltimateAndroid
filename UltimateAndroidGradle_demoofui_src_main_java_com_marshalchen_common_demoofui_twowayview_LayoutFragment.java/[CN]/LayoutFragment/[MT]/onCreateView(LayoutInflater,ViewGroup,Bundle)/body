@@ -1,3 +1,0 @@
-{
-  return inflater.inflate(mLayoutId,container,false);
-}
