@@ -1,0 +1,13 @@
+{
+  this.url=intent.getStringExtra("url");
+  try {
+    Document document=Jsoup.connect(url).get();
+    title=document.title();
+  }
+ catch (  IOException e) {
+    e.printStackTrace();
+  }
+  Intent resultIntent=new Intent(TITLE_FILTER);
+  resultIntent.putExtra("title",title);
+  LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent);
+}

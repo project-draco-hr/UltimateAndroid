@@ -1,0 +1,10 @@
+{
+  try {
+    Thread.sleep(1000);
+  }
+ catch (  InterruptedException e) {
+    ;
+  }
+  Intent resultIntent=new Intent(intent.getStringExtra("FILTER"));
+  LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent);
+}

@@ -1,0 +1,5 @@
+{
+  SystemClock.sleep(FETCH_DATA_TASK_DURATION);
+  Intent resultIntent=new Intent(FETCH_DATA_FILTER);
+  LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent);
+}

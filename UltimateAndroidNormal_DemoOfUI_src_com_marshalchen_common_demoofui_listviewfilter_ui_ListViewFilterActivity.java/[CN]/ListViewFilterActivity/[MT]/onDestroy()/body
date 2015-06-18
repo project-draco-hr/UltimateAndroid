@@ -1,0 +1,4 @@
+{
+  super.onDestroy();
+  if (populateReceiver != null)   LocalBroadcastManager.getInstance(this).unregisterReceiver(populateReceiver);
+}

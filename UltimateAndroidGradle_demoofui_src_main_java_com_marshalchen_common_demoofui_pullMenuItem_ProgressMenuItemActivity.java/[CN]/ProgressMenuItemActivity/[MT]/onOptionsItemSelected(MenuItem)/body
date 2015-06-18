@@ -1,8 +1,10 @@
 {
 switch (item.getItemId()) {
 case R.id.action_refresh:
-    new ReloadAsyncTask(progressHelper).execute();
-  return true;
+    Intent reloadService=new Intent(this,ReloadIntentService.class);
+  reloadReceiver.startProgress();
+this.startService(reloadService);
+return true;
 case R.id.howToUse:
 BasicUtils.sendIntent(this,HowToUseActivity.class,"data","ProgressMenuItemActivity");
 return true;

@@ -1,0 +1,5 @@
+{
+  if (customHeaderView != null)   position--;
+  if (position < stringList.size())   return stringList.get(position);
+ else   return "";
+}
