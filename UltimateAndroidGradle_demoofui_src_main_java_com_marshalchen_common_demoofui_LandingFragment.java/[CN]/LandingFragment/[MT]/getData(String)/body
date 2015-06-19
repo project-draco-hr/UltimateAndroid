@@ -24,6 +24,7 @@
   addItemToTop(myData,"FloatingActionButtonDemo",new Intent(getActivity(),FloatingActionButtonDemo.class));
   addItemToTop(myData,"CoolDragAndDropActivity",new Intent(getActivity(),CoolDragAndDropActivity.class));
   addItemToTop(myData,"MaterialDesignActivity",new Intent(getActivity(),MaterialDesignActivity.class));
+  addItemToTop(myData,"MaterialAnimationActivity",new Intent(getActivity(),MaterialAnimationActivity.class));
   addItemToTop(myData,"SearchDrawableActivity",new Intent(getActivity(),SearchDrawableActivity.class));
   addItemToTop(myData,"UltimateRecyclerViewActivity",new Intent(getActivity(),UltimateRecyclerViewActivity.class));
   return myData;

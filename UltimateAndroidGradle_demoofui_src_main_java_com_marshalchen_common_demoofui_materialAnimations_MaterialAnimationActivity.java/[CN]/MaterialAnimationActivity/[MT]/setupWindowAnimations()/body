@@ -1,0 +1,7 @@
+{
+  Explode explode=new Explode();
+  explode.setDuration(2000);
+  getWindow().setExitTransition(explode);
+  Fade fade=new Fade();
+  getWindow().setReenterTransition(fade);
+}

@@ -1,0 +1,45 @@
+{
+  sceneRoot=(LinearLayout)findViewById(R.id.scene_root);
+  squareRed=findViewById(R.id.square_red);
+  squareRed.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      Intent i=new Intent(MaterialAnimationActivity.this,DetailActivity1.class);
+      ActivityOptions transitionActivityOptions=ActivityOptions.makeSceneTransitionAnimation(MaterialAnimationActivity.this);
+      startActivity(i,transitionActivityOptions.toBundle());
+    }
+  }
+);
+  squareBlue=findViewById(R.id.square_blue);
+  squareBlue.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      Intent i=new Intent(MaterialAnimationActivity.this,DetailActivity2.class);
+      View sharedView=squareBlue;
+      String transitionName="square_blue_name";
+      ActivityOptions transitionActivityOptions=ActivityOptions.makeSceneTransitionAnimation(MaterialAnimationActivity.this,sharedView,transitionName);
+      startActivity(i,transitionActivityOptions.toBundle());
+    }
+  }
+);
+  squareGreen=findViewById(R.id.square_green);
+  squareGreen.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      TransitionManager.beginDelayedTransition(sceneRoot);
+      setViewWidth(squareRed,500);
+      setViewWidth(squareBlue,500);
+      setViewWidth(squareGreen,500);
+      setViewWidth(squareOrange,500);
+    }
+  }
+);
+  squareOrange=findViewById(R.id.square_orange);
+  squareOrange.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      Intent i=new Intent(MaterialAnimationActivity.this,DetailActivity3.class);
+      View sharedView=squareOrange;
+      String transitionName="square_orange_name";
+      ActivityOptions transitionActivityOptions=ActivityOptions.makeSceneTransitionAnimation(MaterialAnimationActivity.this,sharedView,transitionName);
+      startActivity(i,transitionActivityOptions.toBundle());
+    }
+  }
+);
+}

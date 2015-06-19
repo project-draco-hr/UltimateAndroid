@@ -1,0 +1,20 @@
+{
+  Transition sharedElementReturnTransition=getWindow().getSharedElementReturnTransition();
+  sharedElementReturnTransition.setStartDelay(ANIM_DURATION);
+  Transition returnTransition=getWindow().getReturnTransition();
+  returnTransition.setDuration(ANIM_DURATION);
+  returnTransition.addListener(new Transition.TransitionListener(){
+    @Override public void onTransitionStart(    Transition transition){
+      animateRevealHide(bgViewGroup);
+    }
+    @Override public void onTransitionEnd(    Transition transition){
+    }
+    @Override public void onTransitionCancel(    Transition transition){
+    }
+    @Override public void onTransitionPause(    Transition transition){
+    }
+    @Override public void onTransitionResume(    Transition transition){
+    }
+  }
+);
+}

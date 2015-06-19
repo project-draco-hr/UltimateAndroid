@@ -1,0 +1,15 @@
+{
+  int cx=(viewRoot.getLeft() + viewRoot.getRight()) / 2;
+  int cy=(viewRoot.getTop() + viewRoot.getBottom()) / 2;
+  int initialRadius=viewRoot.getWidth();
+  Animator anim=ViewAnimationUtils.createCircularReveal(viewRoot,cx,cy,initialRadius,0);
+  anim.addListener(new AnimatorListenerAdapter(){
+    @Override public void onAnimationEnd(    Animator animation){
+      super.onAnimationEnd(animation);
+      viewRoot.setVisibility(View.INVISIBLE);
+    }
+  }
+);
+  anim.setDuration(ANIM_DURATION);
+  anim.start();
+}
