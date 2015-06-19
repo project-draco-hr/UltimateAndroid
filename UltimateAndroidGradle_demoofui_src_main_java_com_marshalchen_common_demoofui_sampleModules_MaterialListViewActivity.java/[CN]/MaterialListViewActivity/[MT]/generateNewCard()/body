@@ -1,7 +1,8 @@
 {
-  Card card=new BasicImageButtonsCard();
-  card.setBitmap(mContext,R.drawable.test_back1);
+  SimpleCard card=new BasicImageButtonsCard(this);
+  card.setDrawable(R.drawable.test_back1);
   card.setTitle("I'm new");
   card.setDescription("I've been generated on runtime!");
+  card.setTag("BASIC_IMAGE_BUTTONS_CARD");
   return card;
 }

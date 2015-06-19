@@ -1,110 +1,127 @@
 {
   String title="Card number " + (position + 1);
   String description="Lorem ipsum dolor sit amet";
-  int type=position % 5;
-  final Card card;
+  int type=position % 6;
+  SimpleCard card;
   Drawable icon;
 switch (type) {
 case 0:
-    card=new SmallImageCard();
+    card=new SmallImageCard(this);
   card.setDescription(description);
 card.setTitle(title);
-icon=getResources().getDrawable(R.drawable.ic_launcher);
-card.setBitmap(icon);
+card.setDrawable(R.drawable.ic_launcher);
+card.setDismissible(true);
+card.setTag("SMALL_IMAGE_CARD");
 return card;
 case 1:
-card=new BigImageCard();
+card=new BigImageCard(this);
 card.setDescription(description);
 card.setTitle(title);
-icon=getResources().getDrawable(R.drawable.test);
-card.setBitmap(icon);
-card.setCanDismiss(false);
+card.setDrawable("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png");
+card.setTag("BIG_IMAGE_CARD");
 return card;
 case 2:
-card=new BasicImageButtonsCard();
+card=new BasicImageButtonsCard(this);
 card.setDescription(description);
 card.setTitle(title);
-icon=getResources().getDrawable(R.drawable.test_back);
-card.setBitmap(icon);
+card.setDrawable(R.drawable.test_back);
+card.setTag("BASIC_IMAGE_BUTTON_CARD");
 ((BasicImageButtonsCard)card).setLeftButtonText("LEFT");
 ((BasicImageButtonsCard)card).setRightButtonText("RIGHT");
-if (position % 2 == 0) ((BasicImageButtonsCard)card).setShowDivider(true);
+if (position % 2 == 0) ((BasicImageButtonsCard)card).setDividerVisible(true);
 ((BasicImageButtonsCard)card).setOnLeftButtonPressedListener(new OnButtonPressListener(){
-@Override public void onButtonPressedListener(TextView textView){
+@Override public void onButtonPressedListener(View view,Card card){
 Toast.makeText(mContext,"You have pressed the left button",Toast.LENGTH_SHORT).show();
-adapter.getItem(0).setTitle("CHANGED ON RUNTIME");
-adapter.notifyDataSetChanged();
+((SimpleCard)card).setTitle("CHANGED ON RUNTIME");
 }
 }
 );
 ((BasicImageButtonsCard)card).setOnRightButtonPressedListener(new OnButtonPressListener(){
-@Override public void onButtonPressedListener(TextView textView){
-Toast.makeText(mContext,"You have pressed the right button",Toast.LENGTH_SHORT).show();
+@Override public void onButtonPressedListener(View view,Card card){
+Toast.makeText(mContext,"You have pressed the right button on card " + ((SimpleCard)card).getTitle(),Toast.LENGTH_SHORT).show();
+mListView.remove(card);
 }
 }
 );
+card.setDismissible(true);
 return card;
 case 3:
-card=new BasicButtonsCard();
+card=new BasicButtonsCard(this);
 card.setDescription(description);
 card.setTitle(title);
+card.setTag("BASIC_BUTTONS_CARD");
 ((BasicButtonsCard)card).setLeftButtonText("LEFT");
 ((BasicButtonsCard)card).setRightButtonText("RIGHT");
-if (position % 2 == 0) ((BasicButtonsCard)card).setShowDivider(true);
+((BasicButtonsCard)card).setRightButtonTextColorRes(R.color.accent_material_dark);
+if (position % 2 == 0) ((BasicButtonsCard)card).setDividerVisible(true);
 ((BasicButtonsCard)card).setOnLeftButtonPressedListener(new OnButtonPressListener(){
-@Override public void onButtonPressedListener(TextView textView){
+@Override public void onButtonPressedListener(View view,Card card){
 Toast.makeText(mContext,"You have pressed the left button",Toast.LENGTH_SHORT).show();
 }
 }
 );
 ((BasicButtonsCard)card).setOnRightButtonPressedListener(new OnButtonPressListener(){
-@Override public void onButtonPressedListener(TextView textView){
+@Override public void onButtonPressedListener(View view,Card card){
 Toast.makeText(mContext,"You have pressed the right button",Toast.LENGTH_SHORT).show();
 }
 }
 );
+card.setDismissible(true);
 return card;
 case 4:
-card=new WelcomeCard();
+card=new WelcomeCard(this);
 card.setTitle("Welcome Card");
 card.setDescription("I am the description");
+card.setTag("WELCOME_CARD");
 ((WelcomeCard)card).setSubtitle("My subtitle!");
 ((WelcomeCard)card).setButtonText("Okay!");
 ((WelcomeCard)card).setOnButtonPressedListener(new OnButtonPressListener(){
-@Override public void onButtonPressedListener(TextView textView){
-Toast.makeText(mContext,"A welcome card has been dismissed",Toast.LENGTH_SHORT).show();
+@Override public void onButtonPressedListener(View view,Card card){
+Toast.makeText(mContext,"Welcome!",Toast.LENGTH_SHORT).show();
 }
 }
 );
-if (position % 2 == 0) ((WelcomeCard)card).setBackgroundColorFromId(mContext,R.color.background_material_dark);
+if (position % 2 == 0) ((WelcomeCard)card).setBackgroundColorRes(R.color.background_material_dark);
+card.setDismissible(true);
+return card;
+case 5:
+card=new BasicListCard(this);
+card.setTitle("List Card");
+card.setDescription("Take a list");
+BasicListAdapter adapter=new BasicListAdapter(this);
+adapter.add("Text1");
+adapter.add("Text2");
+adapter.add("Text3");
+card.setTag("LIST_CARD");
+((BasicListCard)card).setAdapter(adapter);
+card.setDismissible(true);
 return card;
 default :
-card=new BigImageButtonsCard();
+card=new BigImageButtonsCard(this);
 card.setDescription(description);
 card.setTitle(title);
-icon=getResources().getDrawable(R.drawable.test_back2);
-card.setBitmap(icon);
+card.setDrawable(R.drawable.test);
+card.setTag("BIG_IMAGE_BUTTONS_CARD");
 ((BigImageButtonsCard)card).setLeftButtonText("ADD CARD");
 ((BigImageButtonsCard)card).setRightButtonText("RIGHT BUTTON");
 if (position % 2 == 0) {
-((BigImageButtonsCard)card).setShowDivider(true);
+((BigImageButtonsCard)card).setDividerVisible(true);
 }
 ((BigImageButtonsCard)card).setOnLeftButtonPressedListener(new OnButtonPressListener(){
-@Override public void onButtonPressedListener(TextView textView){
+@Override public void onButtonPressedListener(View view,Card card){
 Log.d("ADDING","CARD");
-CardList newCards=new CardList();
-newCards.add(generateNewCard());
-mListView.addCardsToExistingAdapter(newCards);
+mListView.add(generateNewCard());
 Toast.makeText(mContext,"Added new card",Toast.LENGTH_SHORT).show();
 }
 }
 );
 ((BigImageButtonsCard)card).setOnRightButtonPressedListener(new OnButtonPressListener(){
-@Override public void onButtonPressedListener(TextView textView){
+@Override public void onButtonPressedListener(View view,Card card){
 Toast.makeText(mContext,"You have pressed the right button",Toast.LENGTH_SHORT).show();
 }
 }
 );
+card.setDismissible(true);
 return card;
 }
 }

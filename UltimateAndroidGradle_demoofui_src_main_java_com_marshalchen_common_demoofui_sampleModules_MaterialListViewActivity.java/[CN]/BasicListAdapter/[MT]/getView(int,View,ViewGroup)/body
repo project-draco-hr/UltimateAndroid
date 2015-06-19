@@ -1,0 +1,14 @@
+{
+  ViewHolder viewHolder;
+  if (convertView == null) {
+    convertView=LayoutInflater.from(getContext()).inflate(R.layout.material_list_view_list_item,parent,false);
+    viewHolder=new ViewHolder();
+    viewHolder.mCheckBox=(CheckBox)convertView.findViewById(R.id.checkBox);
+    convertView.setTag(viewHolder);
+  }
+ else {
+    viewHolder=(ViewHolder)convertView.getTag();
+  }
+  viewHolder.mCheckBox.setText(getItem(position));
+  return convertView;
+}

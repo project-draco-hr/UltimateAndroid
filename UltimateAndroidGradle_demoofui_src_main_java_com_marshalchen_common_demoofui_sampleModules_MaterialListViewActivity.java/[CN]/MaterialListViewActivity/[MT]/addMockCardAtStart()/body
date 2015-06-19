@@ -1,0 +1,11 @@
+{
+  BasicImageButtonsCard card=new BasicImageButtonsCard(this);
+  card.setDrawable(R.drawable.test_back2);
+  card.setTitle("Hi there");
+  card.setDescription("I've been added on top!");
+  card.setLeftButtonText("LEFT");
+  card.setRightButtonText("RIGHT");
+  card.setTag("BASIC_IMAGE_BUTTONS_CARD");
+  card.setDismissible(true);
+  mListView.addAtStart(card);
+}
