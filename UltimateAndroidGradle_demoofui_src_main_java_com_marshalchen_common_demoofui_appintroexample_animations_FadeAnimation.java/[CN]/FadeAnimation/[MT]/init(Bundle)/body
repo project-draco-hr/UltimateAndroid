@@ -1,0 +1,7 @@
+{
+  addSlide(new FirstSlide(),getApplicationContext());
+  addSlide(new SecondSlide(),getApplicationContext());
+  addSlide(new ThirdSlide(),getApplicationContext());
+  addSlide(new FourthSlide(),getApplicationContext());
+  setFadeAnimation();
+}

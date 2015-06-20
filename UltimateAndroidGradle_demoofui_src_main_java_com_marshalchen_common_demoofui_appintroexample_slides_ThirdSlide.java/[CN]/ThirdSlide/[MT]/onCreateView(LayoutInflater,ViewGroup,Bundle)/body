@@ -1,0 +1,4 @@
+{
+  View v=inflater.inflate(R.layout.app_inrto_intro3,container,false);
+  return v;
+}

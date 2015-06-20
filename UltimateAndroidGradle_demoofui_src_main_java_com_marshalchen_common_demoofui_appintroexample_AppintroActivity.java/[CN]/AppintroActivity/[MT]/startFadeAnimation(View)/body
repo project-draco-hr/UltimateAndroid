@@ -1,0 +1,4 @@
+{
+  Intent intent=new Intent(this,FadeAnimation.class);
+  startActivity(intent);
+}
