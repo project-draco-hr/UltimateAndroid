@@ -1,5 +1,5 @@
 {
   File cacheDir=StorageUtils.getCacheDirectory(context);
-  ImageLoaderConfiguration.Builder builder=new ImageLoaderConfiguration.Builder(context).threadPoolSize(3).threadPriority(Thread.NORM_PRIORITY - 1).tasksProcessingOrder(QueueProcessingType.FIFO).denyCacheImageMultipleSizesInMemory().memoryCacheSizePercentage(13).diskCache(new UnlimitedDiscCache(cacheDir)).diskCacheFileCount(1000).diskCacheFileNameGenerator(new HashCodeFileNameGenerator()).imageDownloader(new BaseImageDownloader(context)).imageDecoder(new BaseImageDecoder(false)).defaultDisplayImageOptions(getDefaultImageOptions());
+  ImageLoaderConfiguration.Builder builder=new ImageLoaderConfiguration.Builder(context).threadPoolSize(3).threadPriority(Thread.NORM_PRIORITY - 1).tasksProcessingOrder(QueueProcessingType.FIFO).denyCacheImageMultipleSizesInMemory().memoryCacheSizePercentage(13).diskCache(new UnlimitedDiskCache(cacheDir)).diskCacheFileCount(1000).diskCacheFileNameGenerator(new HashCodeFileNameGenerator()).imageDownloader(new BaseImageDownloader(context)).imageDecoder(new BaseImageDecoder(false)).defaultDisplayImageOptions(getDefaultImageOptions());
   return builder;
 }
