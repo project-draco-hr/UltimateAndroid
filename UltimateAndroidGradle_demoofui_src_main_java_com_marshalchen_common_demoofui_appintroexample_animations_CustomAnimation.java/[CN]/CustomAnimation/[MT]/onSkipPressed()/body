@@ -1,0 +1,4 @@
+{
+  loadMainActivity();
+  Toast.makeText(getApplicationContext(),"skip",Toast.LENGTH_SHORT).show();
+}

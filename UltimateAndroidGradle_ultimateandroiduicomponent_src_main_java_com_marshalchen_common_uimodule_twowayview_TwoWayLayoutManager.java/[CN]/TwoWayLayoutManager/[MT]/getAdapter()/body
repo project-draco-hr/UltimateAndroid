@@ -1,3 +1,0 @@
-{
-  return (mRecyclerView != null ? mRecyclerView.getAdapter() : null);
-}

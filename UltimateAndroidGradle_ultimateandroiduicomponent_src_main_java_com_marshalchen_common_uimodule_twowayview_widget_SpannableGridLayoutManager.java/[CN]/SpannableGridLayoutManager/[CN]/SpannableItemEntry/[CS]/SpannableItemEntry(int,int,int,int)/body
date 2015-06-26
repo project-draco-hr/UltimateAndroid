@@ -1,5 +1,0 @@
-{
-  super(startLane,anchorLane);
-  this.colSpan=colSpan;
-  this.rowSpan=rowSpan;
-}

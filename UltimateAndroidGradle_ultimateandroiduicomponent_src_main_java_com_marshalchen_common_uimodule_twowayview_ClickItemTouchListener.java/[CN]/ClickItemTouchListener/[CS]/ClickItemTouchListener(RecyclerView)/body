@@ -1,3 +1,0 @@
-{
-  mGestureDetector=new ItemClickGestureDetector(hostView.getContext(),new ItemClickGestureListener(hostView));
-}

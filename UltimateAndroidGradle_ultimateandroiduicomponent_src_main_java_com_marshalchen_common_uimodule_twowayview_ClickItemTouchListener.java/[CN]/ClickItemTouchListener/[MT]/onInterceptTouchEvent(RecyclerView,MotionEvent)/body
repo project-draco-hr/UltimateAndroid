@@ -1,7 +1,0 @@
-{
-  if (!isAttachedToWindow(recyclerView) || !hasAdapter(recyclerView)) {
-    return false;
-  }
-  mGestureDetector.onTouchEvent(event);
-  return false;
-}

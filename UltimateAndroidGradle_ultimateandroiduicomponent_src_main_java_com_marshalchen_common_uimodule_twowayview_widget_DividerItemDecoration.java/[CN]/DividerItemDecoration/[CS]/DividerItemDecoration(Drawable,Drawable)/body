@@ -1,5 +1,0 @@
-{
-  mVerticalDivider=verticalDivider;
-  mHorizontalDivider=horizontalDivider;
-  mItemSpacing=createSpacing(mVerticalDivider,mHorizontalDivider);
-}

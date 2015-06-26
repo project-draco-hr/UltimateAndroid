@@ -1,5 +1,0 @@
-{
-  if (mFragment != null) {
-    ft.detach(mFragment);
-  }
-}

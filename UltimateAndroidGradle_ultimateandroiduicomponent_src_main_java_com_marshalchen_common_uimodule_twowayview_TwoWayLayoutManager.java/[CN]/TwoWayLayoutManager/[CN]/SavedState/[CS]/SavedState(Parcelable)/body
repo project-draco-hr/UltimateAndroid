@@ -1,6 +1,0 @@
-{
-  if (superState == null) {
-    throw new IllegalArgumentException("superState must not be null");
-  }
-  this.superState=(superState != EMPTY_STATE ? superState : null);
-}

@@ -1,8 +1,0 @@
-{
-  boolean result=super.checkLayoutParams(lp);
-  if (lp instanceof LayoutParams) {
-    final LayoutParams staggeredLp=(LayoutParams)lp;
-    result&=(staggeredLp.span >= 1 && staggeredLp.span <= getLaneCount());
-  }
-  return result;
-}

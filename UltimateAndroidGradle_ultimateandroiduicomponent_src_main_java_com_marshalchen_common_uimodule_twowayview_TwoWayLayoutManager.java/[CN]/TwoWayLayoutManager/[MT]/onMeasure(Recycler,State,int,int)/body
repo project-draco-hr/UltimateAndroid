@@ -1,3 +1,0 @@
-{
-  super.onMeasure(recycler,state,widthSpec,heightSpec);
-}

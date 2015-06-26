@@ -1,0 +1,5 @@
+{
+  addSlide(new FirstSlide2(),getApplicationContext());
+  addSlide(new SecondSlide2(),getApplicationContext());
+  addSlide(new ThirdSlide2(),getApplicationContext());
+}

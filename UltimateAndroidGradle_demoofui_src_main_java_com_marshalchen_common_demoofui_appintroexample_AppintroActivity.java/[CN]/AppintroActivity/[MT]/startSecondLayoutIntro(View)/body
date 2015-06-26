@@ -1,0 +1,4 @@
+{
+  Intent intent=new Intent(this,SecondLayoutIntro.class);
+  startActivity(intent);
+}

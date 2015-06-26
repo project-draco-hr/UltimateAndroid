@@ -1,0 +1,5 @@
+{
+  ViewGroup.LayoutParams params=view.getLayoutParams();
+  params.width=x;
+  view.setLayoutParams(params);
+}

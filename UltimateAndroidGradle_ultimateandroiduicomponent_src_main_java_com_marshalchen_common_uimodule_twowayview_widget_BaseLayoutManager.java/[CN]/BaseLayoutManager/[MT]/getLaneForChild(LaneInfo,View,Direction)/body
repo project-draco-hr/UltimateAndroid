@@ -1,3 +1,0 @@
-{
-  getLaneForPosition(outInfo,getPosition(child),direction);
-}

@@ -1,5 +1,0 @@
-ItemEntry entry
-Rect childFrame
-int lane
-int laneSpan
-Direction direction

@@ -1,3 +1,0 @@
-{
-  return (mItemEntries != null ? mItemEntries.length : 0);
-}

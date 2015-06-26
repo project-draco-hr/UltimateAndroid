@@ -1,4 +1,0 @@
-{
-  super(startLane,anchorLane);
-  this.span=span;
-}

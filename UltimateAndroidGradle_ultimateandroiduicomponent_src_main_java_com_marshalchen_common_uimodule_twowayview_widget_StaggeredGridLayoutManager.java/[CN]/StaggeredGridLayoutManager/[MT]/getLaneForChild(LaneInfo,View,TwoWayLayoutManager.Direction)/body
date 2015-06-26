@@ -1,6 +1,0 @@
-{
-  super.getLaneForChild(outInfo,child,direction);
-  if (outInfo.isUndefined()) {
-    getLanes().findLane(outInfo,getLaneSpanForChild(child),direction);
-  }
-}

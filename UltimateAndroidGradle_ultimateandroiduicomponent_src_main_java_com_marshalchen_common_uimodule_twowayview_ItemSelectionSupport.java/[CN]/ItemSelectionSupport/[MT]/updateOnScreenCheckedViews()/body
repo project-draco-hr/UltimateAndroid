@@ -1,8 +1,0 @@
-{
-  final int count=mRecyclerView.getChildCount();
-  for (int i=0; i < count; i++) {
-    final View child=mRecyclerView.getChildAt(i);
-    final int position=mRecyclerView.getChildPosition(child);
-    setViewChecked(child,mCheckedStates.get(position));
-  }
-}

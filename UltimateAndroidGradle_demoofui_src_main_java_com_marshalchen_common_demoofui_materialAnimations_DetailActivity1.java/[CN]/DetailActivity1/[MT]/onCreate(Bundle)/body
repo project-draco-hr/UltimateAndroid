@@ -1,0 +1,5 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_animation_activity_details1);
+  setupWindowAnimations();
+}

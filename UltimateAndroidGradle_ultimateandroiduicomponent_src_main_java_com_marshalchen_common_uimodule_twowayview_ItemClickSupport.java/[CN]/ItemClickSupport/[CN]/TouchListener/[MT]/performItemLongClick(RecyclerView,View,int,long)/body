@@ -1,7 +1,0 @@
-{
-  if (mItemLongClickListener != null) {
-    view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
-    return mItemLongClickListener.onItemLongClick(parent,view,position,id);
-  }
-  return false;
-}

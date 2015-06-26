@@ -3,12 +3,20 @@
   setContentView(R.layout.material_list_activity_main);
   mContext=this;
   mListView=(MaterialListView)findViewById(R.id.material_listview);
-  cardsList=new CardList();
   fillArray();
-  adapter=new MaterialListViewAdapter(this,cardsList);
-  mListView.setMaterialListViewAdapter(adapter);
   mListView.setOnDismissCallback(new OnDismissCallback(){
     @Override public void onDismiss(    Card card,    int position){
+      String tag=card.getTag().toString();
+      Toast.makeText(mContext,"You have dismissed a " + tag,Toast.LENGTH_SHORT).show();
+    }
+  }
+);
+  mListView.addOnItemTouchListener(new RecyclerItemClickListener.OnItemClickListener(){
+    @Override public void onItemClick(    CardItemView view,    int position){
+      Log.d("CARD_TYPE",view.getTag().toString());
+    }
+    @Override public void onItemLongClick(    CardItemView view,    int position){
+      Log.d("LONG_CLICK",view.getTag().toString());
     }
   }
 );

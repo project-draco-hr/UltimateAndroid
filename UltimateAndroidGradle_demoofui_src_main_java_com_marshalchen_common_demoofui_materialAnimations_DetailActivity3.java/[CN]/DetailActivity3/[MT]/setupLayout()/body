@@ -1,0 +1,3 @@
+{
+  bgViewGroup=findViewById(R.id.backgroundViewGroup);
+}

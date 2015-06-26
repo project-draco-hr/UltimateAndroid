@@ -1,6 +1,0 @@
-{
-  if (mPendingSavedState != null) {
-    return 0;
-  }
-  return mPendingScrollOffset;
-}

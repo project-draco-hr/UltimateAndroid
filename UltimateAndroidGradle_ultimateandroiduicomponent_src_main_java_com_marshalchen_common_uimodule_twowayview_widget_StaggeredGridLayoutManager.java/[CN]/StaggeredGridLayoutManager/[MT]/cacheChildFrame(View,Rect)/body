@@ -1,8 +1,0 @@
-{
-  StaggeredItemEntry entry=(StaggeredItemEntry)getItemEntryForPosition(getPosition(child));
-  if (entry == null) {
-    throw new IllegalStateException("Tried to cache frame on undefined item");
-  }
-  cacheItemFrame(entry,childFrame);
-  return entry;
-}

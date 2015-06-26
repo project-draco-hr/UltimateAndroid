@@ -1,7 +1,0 @@
-{
-  final StaggeredItemEntry entry=(StaggeredItemEntry)getItemEntryForPosition(position);
-  if (entry == null) {
-    throw new IllegalStateException("Could not find span for position " + position);
-  }
-  return entry.span;
-}

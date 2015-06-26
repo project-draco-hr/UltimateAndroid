@@ -1,5 +1,0 @@
-{
-  if (mTargetChild != null) {
-    onSingleTapUp(event);
-  }
-}

@@ -1,9 +1,0 @@
-{
-  if (mNumColumns == numColumns) {
-    return;
-  }
-  mNumColumns=numColumns;
-  if (isVertical()) {
-    requestLayout();
-  }
-}

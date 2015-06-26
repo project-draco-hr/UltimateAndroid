@@ -1,6 +1,0 @@
-{
-  if (!(layout instanceof TwoWayLayoutManager)) {
-    throw new IllegalArgumentException("TwoWayView can only use TwoWayLayoutManager " + "subclasses as its layout manager");
-  }
-  super.setLayoutManager(layout);
-}

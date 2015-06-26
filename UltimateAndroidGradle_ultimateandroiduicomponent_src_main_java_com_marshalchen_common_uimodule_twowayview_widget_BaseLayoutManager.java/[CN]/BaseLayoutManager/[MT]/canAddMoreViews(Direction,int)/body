@@ -1,8 +1,0 @@
-{
-  if (direction == Direction.START) {
-    return (mLanes.getInnerStart() > limit);
-  }
- else {
-    return (mLanes.getInnerEnd() < limit);
-  }
-}

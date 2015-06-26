@@ -1,8 +1,0 @@
-{
-  if (mItemClickListener != null) {
-    view.playSoundEffect(SoundEffectConstants.CLICK);
-    mItemClickListener.onItemClick(parent,view,position,id);
-    return true;
-  }
-  return false;
-}
