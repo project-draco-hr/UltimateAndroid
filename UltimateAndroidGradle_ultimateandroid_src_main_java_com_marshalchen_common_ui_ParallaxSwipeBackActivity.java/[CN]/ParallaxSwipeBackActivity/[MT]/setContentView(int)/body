@@ -1,0 +1,3 @@
+{
+  setContentView(getLayoutInflater().inflate(id,null));
+}

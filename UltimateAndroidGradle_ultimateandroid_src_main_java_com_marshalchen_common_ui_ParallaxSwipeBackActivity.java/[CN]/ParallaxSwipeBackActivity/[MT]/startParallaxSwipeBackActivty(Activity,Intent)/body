@@ -1,0 +1,3 @@
+{
+  startParallaxSwipeBackActivty(activity,intent,false);
+}

@@ -1,0 +1,5 @@
+{
+  super.setContentView(slidingPaneLayout,params);
+  frameLayout.removeAllViews();
+  frameLayout.addView(v,params);
+}

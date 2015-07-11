@@ -1,0 +1,36 @@
+{
+  try {
+    slidingPaneLayout=new SlidingPaneLayout(this);
+    Field f_overHang=SlidingPaneLayout.class.getDeclaredField("mOverhangSize");
+    f_overHang.setAccessible(true);
+    f_overHang.set(slidingPaneLayout,0);
+    slidingPaneLayout.setPanelSlideListener(this);
+    slidingPaneLayout.setSliderFadeColor(getResources().getColor(android.R.color.transparent));
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+  }
+  super.onCreate(savedInstanceState);
+  mFileTemp=new File(getCacheDir(),WINDOWBITMAP);
+  defaultTranslationX=dip2px(defaultTranslationX);
+  shadowWidth=dip2px(shadowWidth);
+  FrameLayout behindframeLayout=new FrameLayout(this);
+  behindImageView=new ImageView(this);
+  behindImageView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT));
+  behindframeLayout.addView(behindImageView,0);
+  LinearLayout containerLayout=new LinearLayout(this);
+  containerLayout.setOrientation(LinearLayout.HORIZONTAL);
+  containerLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+  containerLayout.setLayoutParams(new ViewGroup.LayoutParams(getWindowManager().getDefaultDisplay().getWidth() + shadowWidth,ViewGroup.LayoutParams.MATCH_PARENT));
+  frameLayout=new FrameLayout(this);
+  frameLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+  frameLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT));
+  shadowImageView=new ImageView(this);
+  shadowImageView.setBackgroundResource(R.drawable.parallax_swipe_back_shadow);
+  shadowImageView.setLayoutParams(new LinearLayout.LayoutParams(shadowWidth,LinearLayout.LayoutParams.MATCH_PARENT));
+  containerLayout.addView(shadowImageView);
+  containerLayout.addView(frameLayout);
+  containerLayout.setTranslationX(-shadowWidth);
+  slidingPaneLayout.addView(behindframeLayout,0);
+  slidingPaneLayout.addView(containerLayout,1);
+}

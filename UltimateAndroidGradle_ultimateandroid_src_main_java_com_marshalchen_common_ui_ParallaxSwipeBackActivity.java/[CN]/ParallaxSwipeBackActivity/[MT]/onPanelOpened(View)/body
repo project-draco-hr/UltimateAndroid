@@ -1,0 +1,4 @@
+{
+  finish();
+  this.overridePendingTransition(0,0);
+}
