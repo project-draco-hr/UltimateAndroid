@@ -1,0 +1,4 @@
+{
+  String date="You picked the following date: " + dayOfMonth + "/"+ monthOfYear+ "/"+ year;
+  dateTextView.setText(date);
+}
