@@ -1,0 +1,38 @@
+{
+  mFragmentContainerView=getActivity().findViewById(fragmentId);
+  mDrawerLayout=drawerLayout;
+  mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,GravityCompat.START);
+  ActionBar actionBar=getActivity().getActionBar();
+  mDrawerToggle=new ActionBarDrawerToggle(getActivity(),mDrawerLayout,R.drawable.ic_drawer,R.string.drawer_open,R.string.drawer_close){
+    @Override public void onDrawerClosed(    View drawerView){
+      super.onDrawerClosed(drawerView);
+      if (!isAdded()) {
+        return;
+      }
+      getActivity().invalidateOptionsMenu();
+    }
+    @Override public void onDrawerOpened(    View drawerView){
+      super.onDrawerOpened(drawerView);
+      if (!isAdded()) {
+        return;
+      }
+      if (!mUserLearnedDrawer) {
+        mUserLearnedDrawer=true;
+        SharedPreferences sp=PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sp.edit().putBoolean(PREF_USER_LEARNED_DRAWER,true).commit();
+      }
+      getActivity().invalidateOptionsMenu();
+    }
+  }
+;
+  if (!mUserLearnedDrawer && !mFromSavedInstanceState) {
+    mDrawerLayout.openDrawer(mFragmentContainerView);
+  }
+  mDrawerLayout.post(new Runnable(){
+    @Override public void run(){
+      mDrawerToggle.syncState();
+    }
+  }
+);
+  mDrawerLayout.setDrawerListener(mDrawerToggle);
+}

@@ -1,0 +1,4 @@
+{
+  super.onLayout(changed,l,t,r,b);
+  mPercentLayoutHelper.restoreOriginalParams();
+}
