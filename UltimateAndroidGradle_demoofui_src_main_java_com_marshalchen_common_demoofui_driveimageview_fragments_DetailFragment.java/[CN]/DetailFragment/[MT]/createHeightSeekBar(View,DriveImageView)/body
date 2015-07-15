@@ -1,0 +1,15 @@
+{
+  SeekBar heightSeekBar=(SeekBar)view.findViewById(R.id.detail_drive_height);
+  heightSeekBar.setMax(HEIGHT_SEEKBAR_MAX);
+  heightSeekBar.setProgress(HEIGHT_SEEKBAR_PROGRESS);
+  heightSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+    @Override public void onProgressChanged(    SeekBar seekBar,    int i,    boolean b){
+      imageView.setCustomHeight(Float.valueOf(i));
+    }
+    @Override public void onStartTrackingTouch(    SeekBar seekBar){
+    }
+    @Override public void onStopTrackingTouch(    SeekBar seekBar){
+    }
+  }
+);
+}

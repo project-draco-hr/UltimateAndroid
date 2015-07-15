@@ -1,0 +1,15 @@
+{
+  SeekBar seekBar=(SeekBar)view.findViewById(R.id.detail_seekbar);
+  seekBar.setMax(OPACITY_SEEKBAR_MAX);
+  seekBar.setProgress(OPACITY_SEEKBAR_PROGRESS);
+  seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+    @Override public void onProgressChanged(    SeekBar seekBar,    int i,    boolean b){
+      imageView.setAlphaValue(Float.valueOf(i / 100.0f));
+    }
+    @Override public void onStartTrackingTouch(    SeekBar seekBar){
+    }
+    @Override public void onStopTrackingTouch(    SeekBar seekBar){
+    }
+  }
+);
+}

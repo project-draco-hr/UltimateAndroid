@@ -1,0 +1,15 @@
+{
+  SeekBar folderSeekBar=(SeekBar)view.findViewById(R.id.detail_drive_folder);
+  folderSeekBar.setMax(FOLDER_SEEKBAR_MAX);
+  folderSeekBar.setProgress(FOLDER_SEEKBAR_PROGRESS);
+  folderSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+    @Override public void onProgressChanged(    SeekBar seekBar,    int i,    boolean b){
+      imageView.setFolderCorner(Float.valueOf(i));
+    }
+    @Override public void onStartTrackingTouch(    SeekBar seekBar){
+    }
+    @Override public void onStopTrackingTouch(    SeekBar seekBar){
+    }
+  }
+);
+}
