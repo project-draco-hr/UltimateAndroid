@@ -1,0 +1,267 @@
+{
+  mOvershootInterpolator=new OvershootInterpolator(mOvershootValue);
+  mArrowLineToDot=ValueAnimator.ofFloat(0,mRadius / 4);
+  mArrowLineToDot.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator valueAnimator){
+      mArrowLineToDotAnimatedValue=(float)valueAnimator.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mArrowLineToDot.setDuration(200);
+  mArrowLineToDot.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+      mState=State.ANIMATING_LINE_TO_DOT;
+      if (mOnProgressUpdateListener != null) {
+        mOnProgressUpdateListener.onAnimationStarted();
+      }
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  mArrowLineToDot.setInterpolator(new AccelerateInterpolator());
+  mArrowLineToHorizontalLine=ValueAnimator.ofFloat(0,mRadius / 2);
+  mArrowLineToHorizontalLine.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator valueAnimator){
+      mArrowLineToHorizontalLineAnimatedValue=(float)valueAnimator.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mArrowLineToHorizontalLine.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  mArrowLineToHorizontalLine.setDuration(600);
+  mArrowLineToHorizontalLine.setStartDelay(400);
+  mArrowLineToHorizontalLine.setInterpolator(mOvershootInterpolator);
+  mDotToProgressAnimation=ValueAnimator.ofFloat(0,mRadius);
+  mDotToProgressAnimation.setDuration(600);
+  mDotToProgressAnimation.setStartDelay(600);
+  mDotToProgressAnimation.setInterpolator(mOvershootInterpolator);
+  mDotToProgressAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator valueAnimator){
+      mDotToProgressAnimatedValue=(float)valueAnimator.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mDotToProgressAnimation.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+      if (mWhichProgress == State.ANIMATING_PROGRESS)       mProgressAnimationSet.start();
+ else       if (mWhichProgress == State.ANIMATING_MANUAL_PROGRESS)       mManualProgressAnimationSet.start();
+      mState=mWhichProgress;
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  mArrowToLineAnimatorSet=new AnimatorSet();
+  mArrowToLineAnimatorSet.playTogether(mArrowLineToDot,mArrowLineToHorizontalLine,mDotToProgressAnimation);
+  mProgressAnimation=ValueAnimator.ofFloat(0,360f);
+  mProgressAnimation.setStartDelay(500);
+  mProgressAnimation.setInterpolator(new LinearInterpolator());
+  mProgressAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator valueAnimator){
+      mCurrentGlobalProgressValue=(float)valueAnimator.getAnimatedValue();
+      if (mOnProgressUpdateListener != null) {
+        mOnProgressUpdateListener.onProgressUpdate(mCurrentGlobalProgressValue);
+      }
+      invalidate();
+    }
+  }
+);
+  mProgressAnimation.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+      mDotToProgressAnimatedValue=0;
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  mProgressAnimation.setDuration(mProgressDuration);
+  mManualProgressAnimation=ValueAnimator.ofFloat(mFromArc,mToArc);
+  mManualProgressAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator valueAnimator){
+      mCurrentGlobalManualProgressValue=(float)valueAnimator.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mManualProgressAnimation.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+      if (mOnProgressUpdateListener != null) {
+        mOnProgressUpdateListener.onManualProgressStarted();
+      }
+      mDotToProgressAnimatedValue=0;
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+      if (mOnProgressUpdateListener != null) {
+        mOnProgressUpdateListener.onManualProgressEnded();
+      }
+      if (mToArc > 359) {
+        mCollapseAnimation.start();
+      }
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  mExpandAnimation=ValueAnimator.ofFloat(0,mRadius / 6);
+  mExpandAnimation.setDuration(300);
+  mExpandAnimation.setInterpolator(new DecelerateInterpolator());
+  mExpandAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator animation){
+      mExpandCollapseValue=(float)animation.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mCollapseAnimation=ValueAnimator.ofFloat(mRadius / 6,mStrokeWidth / 2);
+  mCollapseAnimation.setDuration(300);
+  mCollapseAnimation.setStartDelay(300);
+  mCollapseAnimation.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+      if (mState == State.ANIMATING_MANUAL_PROGRESS) {
+        if (mResultState == State.ANIMATING_ERROR) {
+          mErrorAnimation.start();
+        }
+ else         if (mResultState == State.ANIMATING_SUCCESS) {
+          mSuccessAnimation.start();
+        }
+      }
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  mCollapseAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+  mCollapseAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator animation){
+      mExpandCollapseValue=(float)animation.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mManualProgressAnimationSet=new AnimatorSet();
+  mManualProgressAnimationSet.playSequentially(mExpandAnimation,mManualProgressAnimation);
+  mProgressAnimationSet=new AnimatorSet();
+  mProgressAnimationSet.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animation){
+    }
+    @Override public void onAnimationEnd(    Animator animation){
+      if (mResultState == State.ANIMATING_ERROR) {
+        mErrorAnimation.start();
+      }
+ else       if (mResultState == State.ANIMATING_SUCCESS) {
+        mSuccessAnimation.start();
+      }
+    }
+    @Override public void onAnimationCancel(    Animator animation){
+    }
+    @Override public void onAnimationRepeat(    Animator animation){
+    }
+  }
+);
+  mProgressAnimationSet.playSequentially(mExpandAnimation,mProgressAnimation,mCollapseAnimation);
+  mErrorAnimation=ValueAnimator.ofFloat(0,mRadius / 4);
+  mErrorAnimation.setDuration(600);
+  mErrorAnimation.setStartDelay(500);
+  mErrorAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+  mErrorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator valueAnimator){
+      mErrorValue=(float)valueAnimator.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mErrorAnimation.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+      mState=State.ANIMATING_ERROR;
+      if (mOnProgressUpdateListener != null) {
+        mOnProgressUpdateListener.onAnimationError();
+      }
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+      postDelayed(new Runnable(){
+        @Override public void run(){
+          if (mOnProgressUpdateListener != null) {
+            mOnProgressUpdateListener.onAnimationEnded();
+          }
+          mState=State.IDLE;
+          resetValues();
+          invalidate();
+        }
+      }
+,mResultDuration);
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+  mSuccessAnimation=ValueAnimator.ofFloat(0,mRadius / 4);
+  mSuccessAnimation.setDuration(600);
+  mSuccessAnimation.setStartDelay(500);
+  mSuccessAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+  mSuccessAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator valueAnimator){
+      mSuccessValue=(float)valueAnimator.getAnimatedValue();
+      invalidate();
+    }
+  }
+);
+  mSuccessAnimation.addListener(new Animator.AnimatorListener(){
+    @Override public void onAnimationStart(    Animator animator){
+      mState=State.ANIMATING_SUCCESS;
+      if (mOnProgressUpdateListener != null) {
+        mOnProgressUpdateListener.onAnimationSuccess();
+      }
+    }
+    @Override public void onAnimationEnd(    Animator animator){
+      postDelayed(new Runnable(){
+        @Override public void run(){
+          if (mOnProgressUpdateListener != null) {
+            mOnProgressUpdateListener.onAnimationEnded();
+          }
+          mState=State.IDLE;
+          resetValues();
+          invalidate();
+        }
+      }
+,mResultDuration);
+    }
+    @Override public void onAnimationCancel(    Animator animator){
+    }
+    @Override public void onAnimationRepeat(    Animator animator){
+    }
+  }
+);
+}

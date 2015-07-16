@@ -1,0 +1,6 @@
+{
+  super.writeToParcel(dest,flags);
+  dest.writeInt(isFlashing ? 1 : 0);
+  dest.writeInt(isConfigurationChanged ? 1 : 0);
+  dest.writeLongArray(mmCurrentPlayTime);
+}

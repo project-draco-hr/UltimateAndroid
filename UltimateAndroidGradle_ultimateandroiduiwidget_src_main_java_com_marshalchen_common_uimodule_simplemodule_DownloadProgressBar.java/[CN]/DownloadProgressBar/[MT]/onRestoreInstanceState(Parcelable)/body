@@ -1,0 +1,13 @@
+{
+  if (state instanceof SavedState) {
+    SavedState savedState=(SavedState)state;
+    mState=savedState.mState;
+    super.onRestoreInstanceState(savedState.getSuperState());
+    if (mState != State.IDLE) {
+      continueAnimation(mState,savedState.mmCurrentPlayTime);
+    }
+  }
+ else {
+    super.onRestoreInstanceState(state);
+  }
+}

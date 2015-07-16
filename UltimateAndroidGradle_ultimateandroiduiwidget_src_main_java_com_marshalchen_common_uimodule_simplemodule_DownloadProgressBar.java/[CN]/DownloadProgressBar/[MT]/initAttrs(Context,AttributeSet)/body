@@ -1,0 +1,18 @@
+{
+  TypedArray array=context.obtainStyledAttributes(attrs,R.styleable.DownloadProgressView,0,0);
+  try {
+    mRadius=array.getDimension(R.styleable.DownloadProgressView_dpv_circleRadius,0);
+    mStrokeWidth=array.getDimension(R.styleable.DownloadProgressView_dpv_strokeWidth,0);
+    mLineWidth=array.getDimension(R.styleable.DownloadProgressView_dpv_lineWidth,0);
+    mProgressDuration=array.getInteger(R.styleable.DownloadProgressView_dpv_progressDuration,DEFAULT_PROGRESS_DURATION);
+    mResultDuration=array.getInteger(R.styleable.DownloadProgressView_dpv_resultDuration,DEFAULT_RESULT_DURATION);
+    mProgressBackgroundColor=array.getColor(R.styleable.DownloadProgressView_dpv_progressBackgroundColor,0);
+    mDrawingColor=array.getColor(R.styleable.DownloadProgressView_dpv_drawingColor,0);
+    mProgressColor=array.getColor(R.styleable.DownloadProgressView_dpv_progressColor,0);
+    mCircleBackgroundColor=array.getColor(R.styleable.DownloadProgressView_dpv_circleBackgroundColor,0);
+    mOvershootValue=array.getFloat(R.styleable.DownloadProgressView_dpv_overshootValue,DEFAULT_OVERSHOOT_VALUE);
+  }
+  finally {
+    array.recycle();
+  }
+}

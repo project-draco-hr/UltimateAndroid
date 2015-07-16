@@ -1,0 +1,22 @@
+{
+  mCirclePaint=new Paint();
+  mCirclePaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+  mCirclePaint.setStyle(Paint.Style.STROKE);
+  mCirclePaint.setColor(mCircleBackgroundColor);
+  mCirclePaint.setStrokeWidth(mStrokeWidth);
+  mDrawingPaint=new Paint();
+  mDrawingPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+  mDrawingPaint.setStyle(Paint.Style.STROKE);
+  mDrawingPaint.setColor(mDrawingColor);
+  mDrawingPaint.setStrokeWidth(mLineWidth);
+  mProgressPaint=new Paint();
+  mProgressPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+  mProgressPaint.setColor(mProgressColor);
+  mProgressPaint.setStyle(Paint.Style.FILL);
+  mProgressBackgroundPaint=new Paint();
+  mProgressBackgroundPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+  mProgressBackgroundPaint.setColor(mProgressBackgroundColor);
+  mProgressBackgroundPaint.setStyle(Paint.Style.FILL);
+  mState=State.IDLE;
+  setupAnimations();
+}
