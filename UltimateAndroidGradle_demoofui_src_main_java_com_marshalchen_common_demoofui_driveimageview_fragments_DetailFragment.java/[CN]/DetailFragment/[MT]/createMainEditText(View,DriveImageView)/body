@@ -1,0 +1,16 @@
+{
+  EditText mainEditText=(EditText)view.findViewById(R.id.detail_main);
+  mainEditText.setText(imageView.getDriveImageModel().getMainTitle());
+  mainEditText.addTextChangedListener(new TextWatcher(){
+    @Override public void beforeTextChanged(    CharSequence charSequence,    int i,    int i1,    int i2){
+    }
+    @Override public void onTextChanged(    CharSequence charSequence,    int i,    int i1,    int i2){
+    }
+    @Override public void afterTextChanged(    Editable editable){
+      DriveImageModel model=imageView.getDriveImageModel();
+      model.setMainTitle(editable.toString());
+      imageView.setDriveImageModel(model);
+    }
+  }
+);
+}

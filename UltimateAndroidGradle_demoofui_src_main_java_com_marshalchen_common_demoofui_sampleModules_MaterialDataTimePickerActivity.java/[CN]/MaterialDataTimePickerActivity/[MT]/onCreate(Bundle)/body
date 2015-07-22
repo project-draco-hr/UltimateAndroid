@@ -1,0 +1,35 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_data_time_picker_activity_main);
+  timeTextView=(TextView)findViewById(R.id.time_textview);
+  dateTextView=(TextView)findViewById(R.id.date_textview);
+  Button timeButton=(Button)findViewById(R.id.time_button);
+  Button dateButton=(Button)findViewById(R.id.date_button);
+  mode24Hours=(CheckBox)findViewById(R.id.mode_24_hours);
+  modeDarkTime=(CheckBox)findViewById(R.id.mode_dark_time);
+  modeDarkDate=(CheckBox)findViewById(R.id.mode_dark_date);
+  timeButton.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      Calendar now=Calendar.getInstance();
+      TimePickerDialog tpd=TimePickerDialog.newInstance(MaterialDataTimePickerActivity.this,now.get(Calendar.HOUR_OF_DAY),now.get(Calendar.MINUTE),mode24Hours.isChecked());
+      tpd.setThemeDark(modeDarkTime.isChecked());
+      tpd.setOnCancelListener(new DialogInterface.OnCancelListener(){
+        @Override public void onCancel(        DialogInterface dialogInterface){
+          Log.d("TimePicker","Dialog was cancelled");
+        }
+      }
+);
+      tpd.show(getFragmentManager(),"Timepickerdialog");
+    }
+  }
+);
+  dateButton.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      Calendar now=Calendar.getInstance();
+      DatePickerDialog dpd=DatePickerDialog.newInstance(MaterialDataTimePickerActivity.this,now.get(Calendar.YEAR),now.get(Calendar.MONTH),now.get(Calendar.DAY_OF_MONTH));
+      dpd.setThemeDark(modeDarkDate.isChecked());
+      dpd.show(getFragmentManager(),"Datepickerdialog");
+    }
+  }
+);
+}

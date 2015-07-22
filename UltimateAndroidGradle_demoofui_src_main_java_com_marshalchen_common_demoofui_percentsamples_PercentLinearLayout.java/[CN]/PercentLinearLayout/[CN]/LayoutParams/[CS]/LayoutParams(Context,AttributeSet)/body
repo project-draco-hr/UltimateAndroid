@@ -1,0 +1,4 @@
+{
+  super(c,attrs);
+  mPercentLayoutInfo=PercentLayoutHelper.getPercentLayoutInfo(c,attrs);
+}

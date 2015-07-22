@@ -1,0 +1,27 @@
+{
+  try {
+    View decorView=activity.getWindow().getDecorView();
+    decorView.setDrawingCacheEnabled(true);
+    decorView.buildDrawingCache();
+    Bitmap b1=decorView.getDrawingCache();
+    Rect frame=new Rect();
+    activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
+    int statusBarHeight=frame.top;
+    Log.e(TAG,"statusBarHeight:" + statusBarHeight);
+    int width=activity.getWindowManager().getDefaultDisplay().getWidth();
+    int height=activity.getWindowManager().getDefaultDisplay().getHeight();
+    Bitmap bitmap;
+    if (isFullScreen) {
+      bitmap=Bitmap.createBitmap(b1,0,0,width,height);
+    }
+ else {
+      bitmap=Bitmap.createBitmap(b1,0,statusBarHeight,width,height - statusBarHeight);
+    }
+    decorView.destroyDrawingCache();
+    FileOutputStream out=new FileOutputStream(mFileTemp);
+    bitmap.compress(Bitmap.CompressFormat.JPEG,100,out);
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+  }
+}

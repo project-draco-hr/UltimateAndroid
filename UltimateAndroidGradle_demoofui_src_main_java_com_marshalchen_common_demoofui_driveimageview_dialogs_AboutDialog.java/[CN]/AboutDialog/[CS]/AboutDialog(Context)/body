@@ -1,0 +1,13 @@
+{
+  super(context);
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+  setContentView(R.layout.drive_image_view_aboutdialog);
+  closeButton=(Button)findViewById(R.id.about_submit);
+  closeButton.setEnabled(true);
+  closeButton.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      dismiss();
+    }
+  }
+);
+}

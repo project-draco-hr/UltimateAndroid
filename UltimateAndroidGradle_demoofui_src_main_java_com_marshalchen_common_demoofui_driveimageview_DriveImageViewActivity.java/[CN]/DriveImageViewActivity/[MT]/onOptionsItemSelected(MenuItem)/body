@@ -1,0 +1,16 @@
+{
+switch (item.getItemId()) {
+case android.R.id.home:
+    FragmentManager fm=getFragmentManager();
+  if (fm.getBackStackEntryCount() > 0) {
+    fm.popBackStack();
+  }
+return true;
+case R.id.menu_item_help:
+AboutDialog aboutDialog=new AboutDialog(this);
+aboutDialog.show();
+return true;
+default :
+return super.onOptionsItemSelected(item);
+}
+}

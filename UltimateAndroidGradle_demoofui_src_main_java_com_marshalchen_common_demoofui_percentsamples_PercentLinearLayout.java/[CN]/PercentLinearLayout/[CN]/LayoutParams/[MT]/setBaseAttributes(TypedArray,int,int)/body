@@ -1,0 +1,3 @@
+{
+  PercentLayoutHelper.fetchWidthAndHeight(this,a,widthAttr,heightAttr);
+}

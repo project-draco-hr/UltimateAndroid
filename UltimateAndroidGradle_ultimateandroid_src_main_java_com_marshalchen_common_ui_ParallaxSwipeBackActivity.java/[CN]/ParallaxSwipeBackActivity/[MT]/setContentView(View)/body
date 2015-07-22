@@ -1,0 +1,10 @@
+{
+  setContentView(v,new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT));
+  try {
+    behindImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+    behindImageView.setImageBitmap(getBitmap());
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+  }
+}

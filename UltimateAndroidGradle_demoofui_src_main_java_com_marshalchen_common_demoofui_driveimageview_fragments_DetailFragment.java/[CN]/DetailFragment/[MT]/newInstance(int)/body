@@ -1,0 +1,7 @@
+{
+  DetailFragment fragment=new DetailFragment();
+  Bundle args=new Bundle();
+  args.putInt(ARRAY_POS,position);
+  fragment.setArguments(args);
+  return fragment;
+}

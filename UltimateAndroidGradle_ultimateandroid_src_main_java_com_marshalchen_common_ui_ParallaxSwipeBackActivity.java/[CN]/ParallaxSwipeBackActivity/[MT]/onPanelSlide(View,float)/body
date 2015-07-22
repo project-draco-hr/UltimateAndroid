@@ -1,0 +1,5 @@
+{
+  Log.e(TAG,"onPanelSlide ???" + v);
+  behindImageView.setTranslationX(v * defaultTranslationX - defaultTranslationX);
+  shadowImageView.setAlpha(v < 0.8 ? 1 : (1.5f - v));
+}

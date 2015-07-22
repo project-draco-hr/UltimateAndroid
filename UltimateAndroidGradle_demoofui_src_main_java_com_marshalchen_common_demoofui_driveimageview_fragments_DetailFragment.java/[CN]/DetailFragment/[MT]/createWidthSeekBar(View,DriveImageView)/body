@@ -1,0 +1,15 @@
+{
+  SeekBar widthSeekBar=(SeekBar)view.findViewById(R.id.detail_drive_width);
+  widthSeekBar.setMax(WIDTH_SEEKBAR_MAX);
+  widthSeekBar.setProgress(WIDTH_SEEKBAR_PROGRESS);
+  widthSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+    @Override public void onProgressChanged(    SeekBar seekBar,    int i,    boolean b){
+      imageView.setCustomFolderSpacing(Float.valueOf(i));
+    }
+    @Override public void onStartTrackingTouch(    SeekBar seekBar){
+    }
+    @Override public void onStopTrackingTouch(    SeekBar seekBar){
+    }
+  }
+);
+}

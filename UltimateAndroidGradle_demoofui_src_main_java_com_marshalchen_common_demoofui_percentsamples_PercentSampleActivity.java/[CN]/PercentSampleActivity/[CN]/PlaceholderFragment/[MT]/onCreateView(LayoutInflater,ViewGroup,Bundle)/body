@@ -1,0 +1,6 @@
+{
+  int nb_frag=getArguments().getInt(ARG_SECTION_NUMBER);
+  int resID=getActivity().getResources().getIdentifier("android_percent_support_view" + String.valueOf(nb_frag),"layout",getActivity().getPackageName());
+  View rootView=inflater.inflate(resID,container,false);
+  return rootView;
+}

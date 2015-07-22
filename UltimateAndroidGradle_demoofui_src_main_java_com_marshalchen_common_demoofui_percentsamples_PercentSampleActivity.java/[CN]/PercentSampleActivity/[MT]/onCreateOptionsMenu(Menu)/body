@@ -1,0 +1,7 @@
+{
+  if (!mNavigationDrawerFragment.isDrawerOpen()) {
+    getMenuInflater().inflate(R.menu.android_percent_support_main,menu);
+    return true;
+  }
+  return super.onCreateOptionsMenu(menu);
+}

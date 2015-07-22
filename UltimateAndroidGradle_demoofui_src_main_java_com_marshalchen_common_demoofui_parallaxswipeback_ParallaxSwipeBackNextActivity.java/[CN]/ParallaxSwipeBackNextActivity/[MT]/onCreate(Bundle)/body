@@ -1,0 +1,25 @@
+{
+  this.overridePendingTransition(R.anim.slide_right_in,R.anim.slide_right_out);
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.parallax_swipe_back_activity_next);
+  index=getIntent().getIntExtra("index",0);
+  ImageView imageView=(ImageView)findViewById(R.id.image);
+  imageView.setImageResource(images[index]);
+  TextView textView=(TextView)findViewById(R.id.next);
+  textView.setText(textView.getText().toString() + index);
+  final Intent intent=new Intent(this,ParallaxSwipeBackNextActivity.class);
+  intent.putExtra("index",++index);
+  if (index == images.length) {
+    textView.setText("FINISH ACTIVITY");
+  }
+  textView.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      if (index == images.length) {
+        finish();
+        ParallaxSwipeBackNextActivity.this.overridePendingTransition(R.anim.slide_right_in,R.anim.slide_right_out);
+      }
+ else       startParallaxSwipeBackActivty(ParallaxSwipeBackNextActivity.this,intent);
+    }
+  }
+);
+}

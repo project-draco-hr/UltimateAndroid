@@ -1,0 +1,4 @@
+{
+  super(context,0,descriptions);
+  this.fragmentManager=fragmentManager;
+}

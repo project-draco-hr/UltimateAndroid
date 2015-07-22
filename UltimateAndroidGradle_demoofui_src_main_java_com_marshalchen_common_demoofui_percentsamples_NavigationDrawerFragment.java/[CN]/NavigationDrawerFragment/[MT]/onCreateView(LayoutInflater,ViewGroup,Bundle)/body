@@ -1,0 +1,12 @@
+{
+  mDrawerListView=(ListView)inflater.inflate(R.layout.android_percent_support_fragment_navigation_drawer,container,false);
+  mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+    @Override public void onItemClick(    AdapterView<?> parent,    View view,    int position,    long id){
+      selectItem(position);
+    }
+  }
+);
+  mDrawerListView.setAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,android.R.id.text1,new String[]{"title_section1","title_section2","title_section3","title_section4","title_section5"}));
+  mDrawerListView.setItemChecked(mCurrentSelectedPosition,true);
+  return mDrawerListView;
+}

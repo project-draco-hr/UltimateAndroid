@@ -1,0 +1,4 @@
+{
+  super.onAttach(activity);
+  ((PercentSampleActivity)activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
+}
