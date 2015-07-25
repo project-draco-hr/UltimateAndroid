@@ -1,0 +1,10 @@
+{
+switch (state) {
+case PRESS:
+    isVisible=true;
+  enterAnimator.start();
+break;
+case RELEASE:
+exitAnimator.start();
+}
+}

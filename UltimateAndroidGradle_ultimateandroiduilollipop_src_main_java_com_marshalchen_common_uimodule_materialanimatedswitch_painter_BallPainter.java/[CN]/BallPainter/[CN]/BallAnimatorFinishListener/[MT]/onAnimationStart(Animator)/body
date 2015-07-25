@@ -1,0 +1,3 @@
+{
+  ballFinishObservable.setBallState(BallFinishObservable.BallState.MOVE);
+}

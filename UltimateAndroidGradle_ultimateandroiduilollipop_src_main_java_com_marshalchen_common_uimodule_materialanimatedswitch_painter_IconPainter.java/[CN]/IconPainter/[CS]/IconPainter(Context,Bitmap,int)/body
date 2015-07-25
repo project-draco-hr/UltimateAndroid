@@ -1,0 +1,6 @@
+{
+  this.context=context;
+  this.iconBitmap=bitmap;
+  this.margin=margin;
+  init();
+}

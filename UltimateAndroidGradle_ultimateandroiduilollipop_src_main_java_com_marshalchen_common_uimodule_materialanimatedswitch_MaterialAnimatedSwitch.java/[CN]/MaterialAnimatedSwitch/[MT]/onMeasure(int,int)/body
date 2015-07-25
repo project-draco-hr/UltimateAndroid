@@ -1,0 +1,10 @@
+{
+  int width=Utils.dpToPx(45,getResources());
+  int height=Utils.dpToPx(28,getResources());
+  setMeasuredDimension(width,height);
+  basePainter.onSizeChanged(height,width);
+  ballShadowPainter.onSizeChanged(height,width);
+  ballPainter.onSizeChanged(height,width);
+  iconPressPainter.onSizeChanged(height,width);
+  iconReleasePainter.onSizeChanged(height,width);
+}

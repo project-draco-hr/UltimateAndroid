@@ -1,0 +1,6 @@
+int bgColor
+int toBgColor
+int padding
+BallFinishObservable ballFinishObservable
+BallMoveObservable ballMoveObservable
+Context context

@@ -1,0 +1,14 @@
+{
+  paint=new Paint();
+  paint.setColor(bgColor);
+  paint.setStyle(Paint.Style.FILL);
+  paint.setAntiAlias(true);
+  toBgPainter=new Paint();
+  toBgPainter.setColor(toBgColor);
+  toBgPainter.setStyle(Paint.Style.FILL);
+  toBgPainter.setAntiAlias(true);
+  toBgPainter.setAlpha(0);
+  radius=(int)context.getResources().getDimension(R.dimen.ball_radius);
+  ballStartPositionX=(int)context.getResources().getDimension(R.dimen.ball_start_position);
+  ballPositionX=padding;
+}

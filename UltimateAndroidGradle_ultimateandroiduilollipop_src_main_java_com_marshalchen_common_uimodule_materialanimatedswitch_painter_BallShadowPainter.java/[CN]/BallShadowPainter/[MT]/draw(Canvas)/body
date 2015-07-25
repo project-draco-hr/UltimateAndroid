@@ -1,0 +1,3 @@
+{
+  canvas.drawCircle(ballPositionX,(height / 2) + 2,radius,paint);
+}

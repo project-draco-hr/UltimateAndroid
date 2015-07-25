@@ -1,0 +1,12 @@
+{
+  super.onTouchEvent(event);
+switch (event.getAction()) {
+case MotionEvent.ACTION_DOWN:
+    if (isClickable) {
+      doActionDown();
+    }
+  return true;
+default :
+return false;
+}
+}

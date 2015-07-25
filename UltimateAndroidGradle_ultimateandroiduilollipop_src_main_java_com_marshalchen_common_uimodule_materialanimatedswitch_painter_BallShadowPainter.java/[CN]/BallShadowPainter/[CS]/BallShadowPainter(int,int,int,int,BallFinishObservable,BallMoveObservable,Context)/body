@@ -1,0 +1,5 @@
+{
+  super(bgColor,toBgColor,padding,ballFinishObservable,ballMoveObservable,context);
+  paint.setColor(shadowColor);
+  paint.setMaskFilter(new BlurMaskFilter(3,BlurMaskFilter.Blur.NORMAL));
+}

@@ -1,0 +1,3 @@
+{
+  iconYPosition=(int)animation.getAnimatedValue();
+}

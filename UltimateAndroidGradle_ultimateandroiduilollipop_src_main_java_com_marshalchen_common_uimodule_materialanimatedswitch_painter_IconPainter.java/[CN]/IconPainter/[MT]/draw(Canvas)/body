@@ -1,0 +1,5 @@
+{
+  if (isVisible) {
+    canvas.drawBitmap(iconBitmap,iconXPosition,iconYPosition,paint);
+  }
+}

@@ -1,0 +1,8 @@
+{
+  if (actualState.equals(MaterialAnimatedSwitchState.PRESS)) {
+    ballFinishObservable.setBallState(BallFinishObservable.BallState.PRESS);
+  }
+ else {
+    ballFinishObservable.setBallState(BallFinishObservable.BallState.RELEASE);
+  }
+}

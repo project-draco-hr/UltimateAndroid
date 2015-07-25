@@ -1,0 +1,5 @@
+{
+  paint=new Paint();
+  paint.setAntiAlias(true);
+  initBitmap();
+}

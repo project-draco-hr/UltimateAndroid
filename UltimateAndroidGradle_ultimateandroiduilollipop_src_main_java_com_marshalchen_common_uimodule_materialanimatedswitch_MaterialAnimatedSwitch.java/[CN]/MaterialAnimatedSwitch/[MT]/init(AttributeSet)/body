@@ -1,0 +1,5 @@
+{
+  TypedArray attributes=getContext().obtainStyledAttributes(attrs,R.styleable.materialAnimatedSwitch);
+  initAttributes(attributes);
+  init();
+}

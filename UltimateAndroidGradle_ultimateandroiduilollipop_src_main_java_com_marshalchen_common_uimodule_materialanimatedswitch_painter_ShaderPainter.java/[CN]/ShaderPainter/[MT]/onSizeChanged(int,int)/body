@@ -1,0 +1,5 @@
+{
+  this.height=height;
+  this.width=width;
+  createMask(height,width,10);
+}

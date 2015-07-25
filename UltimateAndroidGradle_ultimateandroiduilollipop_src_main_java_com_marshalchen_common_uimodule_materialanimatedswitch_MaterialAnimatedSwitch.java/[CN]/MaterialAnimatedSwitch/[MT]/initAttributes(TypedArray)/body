@@ -1,0 +1,8 @@
+{
+  baseColorRelease=attributes.getColor(R.styleable.materialAnimatedSwitch_base_release_color,baseColorRelease);
+  baseColorPress=attributes.getColor(R.styleable.materialAnimatedSwitch_base_press_color,baseColorPress);
+  ballColorRelease=attributes.getColor(R.styleable.materialAnimatedSwitch_ball_release_color,ballColorRelease);
+  ballColorPress=attributes.getColor(R.styleable.materialAnimatedSwitch_ball_press_color,ballColorPress);
+  pressIcon=BitmapFactory.decodeResource(getResources(),attributes.getResourceId(R.styleable.materialAnimatedSwitch_icon_press,R.drawable.tack_save_button_32_blue));
+  releaseIcon=BitmapFactory.decodeResource(getResources(),attributes.getResourceId(R.styleable.materialAnimatedSwitch_icon_release,R.drawable.tack_save_button_32_white));
+}

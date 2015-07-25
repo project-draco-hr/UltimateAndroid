@@ -1,0 +1,6 @@
+{
+  maskPaint=new Paint();
+  maskPaint.setColor(Color.TRANSPARENT);
+  maskPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+  maskPaint.setStyle(Paint.Style.FILL);
+}

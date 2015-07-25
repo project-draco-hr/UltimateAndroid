@@ -1,0 +1,10 @@
+{
+  int movementAnimationDuration=context.getResources().getInteger(R.integer.animation_duration);
+  int exitAnimationDuration=context.getResources().getInteger(R.integer.exitAnimator);
+  enterAnimator=ValueAnimator.ofInt();
+  enterAnimator.setDuration(movementAnimationDuration);
+  enterAnimator.addUpdateListener(new EnterValueAnimatorListener());
+  exitAnimator=ValueAnimator.ofInt();
+  exitAnimator.setDuration(exitAnimationDuration);
+  exitAnimator.addUpdateListener(new ExitValueAnimatorListener());
+}

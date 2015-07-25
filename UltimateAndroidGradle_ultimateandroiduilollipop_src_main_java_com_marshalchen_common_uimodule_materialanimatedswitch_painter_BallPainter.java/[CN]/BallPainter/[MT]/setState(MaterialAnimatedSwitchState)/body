@@ -1,0 +1,11 @@
+{
+switch (state) {
+case PRESS:
+    actualState=MaterialAnimatedSwitchState.PRESS;
+  moveAnimator.start();
+break;
+case RELEASE:
+actualState=MaterialAnimatedSwitchState.RELEASE;
+moveAnimator.reverse();
+}
+}

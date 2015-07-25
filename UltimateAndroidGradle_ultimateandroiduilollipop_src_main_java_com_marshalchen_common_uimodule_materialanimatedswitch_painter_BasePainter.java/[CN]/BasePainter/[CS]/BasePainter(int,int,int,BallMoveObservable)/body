@@ -1,0 +1,7 @@
+{
+  this.bgColor=bgColor;
+  this.toBgColor=toBgColor;
+  this.padding=padding;
+  this.ballMoveObservable=ballMoveObservable;
+  init();
+}

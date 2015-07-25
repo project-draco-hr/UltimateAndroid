@@ -1,0 +1,5 @@
+{
+  BallMoveObservable ballMoveObservable=(BallMoveObservable)observable;
+  int ballPositionX=ballMoveObservable.getBallPosition();
+  iconXPosition=ballPositionX - iconMargin;
+}

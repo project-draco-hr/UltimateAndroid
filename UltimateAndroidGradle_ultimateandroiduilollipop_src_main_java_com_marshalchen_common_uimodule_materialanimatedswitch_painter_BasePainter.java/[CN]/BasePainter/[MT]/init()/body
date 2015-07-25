@@ -1,0 +1,13 @@
+{
+  paint=new Paint();
+  paint.setColor(bgColor);
+  paint.setStrokeCap(Paint.Cap.ROUND);
+  paint.setAntiAlias(true);
+  toBgPainter=new Paint();
+  toBgPainter.setColor(toBgColor);
+  toBgPainter.setStrokeCap(Paint.Cap.ROUND);
+  toBgPainter.setAntiAlias(true);
+  toBgPainter.setAlpha(0);
+  initColorAnimator();
+  ballMoveObservable.addObserver(this);
+}

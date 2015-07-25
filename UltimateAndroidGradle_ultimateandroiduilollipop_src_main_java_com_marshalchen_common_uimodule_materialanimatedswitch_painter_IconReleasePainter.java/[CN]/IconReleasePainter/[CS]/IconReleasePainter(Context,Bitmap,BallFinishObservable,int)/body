@@ -1,0 +1,6 @@
+{
+  super(context,bitmap,margin);
+  initValueAnimator();
+  this.ballFinishObservable=ballFinishObservable;
+  initObserver();
+}

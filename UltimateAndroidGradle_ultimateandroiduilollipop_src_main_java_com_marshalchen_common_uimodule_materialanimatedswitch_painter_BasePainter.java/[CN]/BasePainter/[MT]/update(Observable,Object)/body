@@ -1,0 +1,4 @@
+{
+  int value=((BallMoveObservable)observable).getBallAnimationValue();
+  colorAnimator.setCurrentPlayTime(value);
+}

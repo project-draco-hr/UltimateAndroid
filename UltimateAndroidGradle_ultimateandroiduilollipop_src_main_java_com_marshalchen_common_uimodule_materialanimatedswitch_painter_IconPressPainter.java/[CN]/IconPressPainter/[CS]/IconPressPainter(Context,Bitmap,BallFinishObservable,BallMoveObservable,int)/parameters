@@ -1,0 +1,5 @@
+Context context
+Bitmap bitmap
+BallFinishObservable ballFinishObservable
+BallMoveObservable ballMoveObservable
+int margin

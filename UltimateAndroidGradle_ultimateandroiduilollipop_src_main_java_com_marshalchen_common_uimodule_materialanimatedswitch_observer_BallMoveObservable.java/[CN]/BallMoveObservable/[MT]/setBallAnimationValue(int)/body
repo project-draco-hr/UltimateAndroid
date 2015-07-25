@@ -1,0 +1,5 @@
+{
+  this.ballAnimationValue=val;
+  setChanged();
+  notifyObservers();
+}

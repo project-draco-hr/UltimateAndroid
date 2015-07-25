@@ -1,0 +1,6 @@
+{
+  this.height=height;
+  this.width=width;
+  paint.setStrokeWidth(height / 2);
+  toBgPainter.setStrokeWidth(height / 2);
+}

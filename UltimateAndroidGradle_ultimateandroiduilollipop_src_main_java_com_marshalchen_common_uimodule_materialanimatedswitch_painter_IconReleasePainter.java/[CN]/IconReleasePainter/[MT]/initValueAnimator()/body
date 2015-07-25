@@ -1,0 +1,21 @@
+{
+  int movementAnimationDuration=context.getResources().getInteger(R.integer.animation_duration);
+  int alphaAnimationDuration=context.getResources().getInteger(R.integer.alpha_animation_duration);
+  int curveCompensation=context.getResources().getInteger(R.integer.animation_curvature_compensation);
+  enterXAnimator=ValueAnimator.ofInt(0,width);
+  enterXAnimator.setDuration(movementAnimationDuration);
+  enterXAnimator.addUpdateListener(new EnterXAnimationListener());
+  exitXAnimator=ValueAnimator.ofInt();
+  exitXAnimator.setDuration(movementAnimationDuration);
+  exitXAnimator.addUpdateListener(new EnterXAnimationListener());
+  enterYAnimator=ValueAnimator.ofInt(width,0);
+  enterYAnimator.setDuration(movementAnimationDuration - curveCompensation);
+  enterYAnimator.addUpdateListener(new EnterYAnimationListener());
+  exitYAnimator=ValueAnimator.ofInt();
+  exitYAnimator.setDuration(movementAnimationDuration);
+  exitYAnimator.addUpdateListener(new EnterYAnimationListener());
+  exitAlphaAnimator=ValueAnimator.ofInt(0,255);
+  exitAlphaAnimator.setDuration(alphaAnimationDuration);
+  exitAlphaAnimator.addUpdateListener(new AlphaAnimatorUpdateListener());
+  exitAlphaAnimator.addListener(new AlphaAnimatorStateListener());
+}
