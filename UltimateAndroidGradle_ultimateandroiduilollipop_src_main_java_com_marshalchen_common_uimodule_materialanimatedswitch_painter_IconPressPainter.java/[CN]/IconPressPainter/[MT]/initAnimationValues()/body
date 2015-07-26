@@ -1,4 +1,4 @@
 {
-  enterAnimationStartValue=(int)context.getResources().getDimension(R.dimen.enterAnimationStartValue);
-  exitAnimationExitValue=(int)context.getResources().getDimension(R.dimen.exitAnimationExitValue);
+  enterAnimationStartValue=(int)context.getResources().getDimension(R.dimen.mas_enterAnimationStartValue);
+  exitAnimationExitValue=(int)context.getResources().getDimension(R.dimen.mas_exitAnimationExitValue);
 }
