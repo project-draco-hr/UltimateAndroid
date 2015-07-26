@@ -1,0 +1,17 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.material_animated_switch_activity_main);
+  mainView=findViewById(R.id.main);
+  materialAnimatedSwitch=(MaterialAnimatedSwitch)findViewById(R.id.pin);
+  materialAnimatedSwitch2=(MaterialAnimatedSwitch)findViewById(R.id.pin2);
+  materialAnimatedSwitch3=(MaterialAnimatedSwitch)findViewById(R.id.pin3);
+  materialAnimatedSwitch4=(MaterialAnimatedSwitch)findViewById(R.id.pin4);
+  masterSwitch=(MaterialAnimatedSwitch)findViewById(R.id.masterSwitch);
+  materialAnimatedSwitch.setOnCheckedChangeListener(new MaterialAnimatedSwitch.OnCheckedChangeListener(){
+    @Override public void onCheckedChanged(    boolean isChecked){
+      Toast.makeText(MaterialAnimatedSwitchActivity.this,materialAnimatedSwitch.isChecked() + "",Toast.LENGTH_SHORT).show();
+      materialAnimatedSwitch2.toggle();
+    }
+  }
+);
+}
