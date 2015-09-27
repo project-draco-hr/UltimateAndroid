@@ -68,25 +68,26 @@
     float alpha=1f * (90f - angle) / 90f;
     if (axis == AXIS_TOP) {
       if (orientationVertical) {
-        h=(cardVertices[Y_00] - cardVertices[Y_01]) * (1.0f - cos(d2r(angle)));
-        z=(cardVertices[Y_00] - cardVertices[Y_01]) * sin(d2r(angle));
+        h=(cardVertices[Y_00] - cardVertices[Y_01]) * (1.0f - (float)cos(d2r(angle)));
+        z=(cardVertices[Y_00] - cardVertices[Y_01]) * (float)sin(d2r(angle));
         shadowVertices=new float[]{cardVertices[X_00],cardVertices[Y_01] + h,z,cardVertices[X_01],cardVertices[Y_01],0f,cardVertices[X_11],cardVertices[Y_11],0f,cardVertices[X_10],cardVertices[Y_01] + h,z};
       }
  else {
-        w=(cardVertices[X_10] - cardVertices[X_00]) * (1.0f - cos(d2r(angle)));
-        z=(cardVertices[X_10] - cardVertices[X_00]) * sin(d2r(angle));
+        w=(cardVertices[X_10] - cardVertices[X_00]) * (1.0f - (float)cos(d2r(angle)));
+        z=(cardVertices[X_10] - cardVertices[X_00]) * (float)sin(d2r(angle));
         shadowVertices=new float[]{cardVertices[X_10] - w,cardVertices[Y_00],z,cardVertices[X_11] - w,cardVertices[Y_01],z,cardVertices[X_11],cardVertices[Y_11],0f,cardVertices[X_10],cardVertices[Y_10],0f};
       }
     }
  else {
       if (orientationVertical) {
-        h=(cardVertices[Y_00] - cardVertices[Y_01]) * (1f - cos(d2r(angle)));
-        z=(cardVertices[Y_00] - cardVertices[Y_01]) * sin(d2r(angle));
+        h=(cardVertices[Y_00] - cardVertices[Y_01]) * (1f - (float)cos(d2r(angle)));
+        z=(cardVertices[Y_00] - cardVertices[Y_01]) * (float)sin(d2r(angle));
         shadowVertices=new float[]{cardVertices[X_00],cardVertices[Y_00],0f,cardVertices[X_01],cardVertices[Y_00] - h,z,cardVertices[X_11],cardVertices[Y_00] - h,z,cardVertices[X_10],cardVertices[Y_00],0f};
       }
  else {
-        w=(cardVertices[X_10] - cardVertices[X_00]) * (1f - cos(d2r(angle)));
-        z=(cardVertices[X_10] - cardVertices[X_00]) * sin(d2r(angle));
+        double tempDouble=d2r(angle);
+        w=(cardVertices[X_10] - cardVertices[X_00]) * (1f - (float)cos(tempDouble));
+        z=(cardVertices[X_10] - cardVertices[X_00]) * (float)sin(tempDouble);
         shadowVertices=new float[]{cardVertices[X_00],cardVertices[Y_00],0f,cardVertices[X_01],cardVertices[Y_01],0f,cardVertices[X_00] + w,cardVertices[Y_11],z,cardVertices[X_01] + w,cardVertices[Y_10],z};
       }
     }
