@@ -20,7 +20,7 @@ case MotionEvent.ACTION_MOVE:
     final float y=getActiveY(ev);
     final float dx=x - mLastTouchX, dy=y - mLastTouchY;
     if (!mIsDragging) {
-      mIsDragging=FloatMath.sqrt((dx * dx) + (dy * dy)) >= mTouchSlop;
+      mIsDragging=Math.sqrt((dx * dx) + (dy * dy)) >= mTouchSlop;
     }
     if (mIsDragging) {
       mListener.onDrag(dx,dy);
