@@ -1,0 +1,7 @@
+{
+  this.height=height;
+  this.width=width;
+  middle=height / 2;
+  initAnimator();
+  initColorAnimator();
+}

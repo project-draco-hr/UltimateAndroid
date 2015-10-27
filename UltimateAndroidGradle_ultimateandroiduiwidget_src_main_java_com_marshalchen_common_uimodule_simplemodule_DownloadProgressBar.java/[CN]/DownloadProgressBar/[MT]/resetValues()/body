@@ -1,0 +1,9 @@
+{
+  mArrowLineToDotAnimatedValue=0;
+  mArrowLineToHorizontalLineAnimatedValue=0;
+  mCurrentGlobalProgressValue=0;
+  mCurrentGlobalManualProgressValue=0;
+  mManualProgressAnimation.setFloatValues(0,0);
+  mToArc=0;
+  mFromArc=0;
+}

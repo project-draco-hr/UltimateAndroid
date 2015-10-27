@@ -1,0 +1,4 @@
+{
+  if (mSuccessAnimation.isRunning() || mErrorAnimation.isRunning())   return;
+  mResultState=State.ANIMATING_ERROR;
+}

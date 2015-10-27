@@ -1,0 +1,5 @@
+{
+  this.state=state;
+  setChanged();
+  notifyObservers();
+}

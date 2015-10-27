@@ -1,0 +1,8 @@
+{
+  int from=padding;
+  int to=width - padding;
+  ballMovementRange=to - from;
+  moveAnimator=ValueAnimator.ofInt(from,to);
+  moveAnimator.addUpdateListener(new BallAnimatorListener());
+  moveAnimator.addListener(new BallAnimatorFinishListener());
+}

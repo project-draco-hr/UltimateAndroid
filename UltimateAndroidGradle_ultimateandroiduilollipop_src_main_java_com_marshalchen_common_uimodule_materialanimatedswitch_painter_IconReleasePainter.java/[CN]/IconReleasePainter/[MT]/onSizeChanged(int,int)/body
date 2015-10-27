@@ -1,0 +1,11 @@
+{
+  super.onSizeChanged(height,width);
+  initValues();
+  initAnimationsValues();
+  iconYPosition=middle - (iconMargin);
+  iconXPosition=margin - iconMargin;
+  enterXAnimator.setIntValues(0,width);
+  enterYAnimator.setIntValues(enterYAnimationStart,middle);
+  exitYAnimator.setIntValues(middle,exitYAnimatorFinish);
+  exitXAnimator.setIntValues(exitXAnimationStart,0);
+}

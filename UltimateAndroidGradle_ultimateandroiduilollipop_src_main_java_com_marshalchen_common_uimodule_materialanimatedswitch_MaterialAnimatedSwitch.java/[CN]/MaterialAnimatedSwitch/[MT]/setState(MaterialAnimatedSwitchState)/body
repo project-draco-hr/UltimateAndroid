@@ -1,0 +1,7 @@
+{
+  basePainter.setState(materialAnimatedSwitchState);
+  ballPainter.setState(materialAnimatedSwitchState);
+  ballShadowPainter.setState(materialAnimatedSwitchState);
+  iconPressPainter.setState(materialAnimatedSwitchState);
+  iconReleasePainter.setState(materialAnimatedSwitchState);
+}

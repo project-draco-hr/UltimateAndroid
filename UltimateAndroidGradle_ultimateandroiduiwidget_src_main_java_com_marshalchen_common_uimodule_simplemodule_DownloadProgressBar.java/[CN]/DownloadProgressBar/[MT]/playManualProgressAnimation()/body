@@ -1,0 +1,6 @@
+{
+  mWhichProgress=State.ANIMATING_MANUAL_PROGRESS;
+  mResultState=State.ANIMATING_SUCCESS;
+  mArrowToLineAnimatorSet.start();
+  invalidate();
+}

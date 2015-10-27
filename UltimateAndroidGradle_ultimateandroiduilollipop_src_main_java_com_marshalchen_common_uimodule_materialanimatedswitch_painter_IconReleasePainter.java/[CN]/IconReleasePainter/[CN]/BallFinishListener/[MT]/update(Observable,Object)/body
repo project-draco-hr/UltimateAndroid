@@ -1,0 +1,8 @@
+{
+  BallFinishObservable.BallState ballState=((BallFinishObservable)observable).getState();
+switch (ballState) {
+case PRESS:
+    isVisible=false;
+  break;
+}
+}

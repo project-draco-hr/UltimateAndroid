@@ -1,0 +1,6 @@
+{
+  super(source);
+  isFlashing=source.readInt() == 1;
+  isConfigurationChanged=source.readInt() == 1;
+  mmCurrentPlayTime=source.createLongArray();
+}

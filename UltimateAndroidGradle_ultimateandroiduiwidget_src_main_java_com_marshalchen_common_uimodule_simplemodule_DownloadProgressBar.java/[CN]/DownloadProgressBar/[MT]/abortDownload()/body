@@ -1,0 +1,7 @@
+{
+  if (mExpandAnimation.isRunning() || mProgressAnimation.isRunning()) {
+    mProgressAnimationSet.cancel();
+    mCollapseAnimation.start();
+    invalidate();
+  }
+}

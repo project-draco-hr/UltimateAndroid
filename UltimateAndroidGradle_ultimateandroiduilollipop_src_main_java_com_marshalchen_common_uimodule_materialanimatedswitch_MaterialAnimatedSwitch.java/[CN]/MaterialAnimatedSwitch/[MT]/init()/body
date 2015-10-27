@@ -1,0 +1,8 @@
+{
+  margin=(int)getContext().getResources().getDimension(R.dimen.margin);
+  initObservables();
+  initPainters();
+  actualState=MaterialAnimatedSwitchState.INIT;
+  setState(actualState);
+  setLayerType(View.LAYER_TYPE_SOFTWARE,null);
+}

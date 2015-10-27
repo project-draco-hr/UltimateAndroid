@@ -1,0 +1,12 @@
+{
+  super.onSizeChanged(w,h,oldw,oldh);
+  mCenterX=w / 2f;
+  mCenterY=h / 2f;
+  mPaddingX=w / 2f - mRadius;
+  mPaddingY=h / 2f - mRadius;
+  mCircleBounds=new RectF();
+  mCircleBounds.top=mPaddingY;
+  mCircleBounds.left=mPaddingX;
+  mCircleBounds.bottom=h / 2f + mRadius;
+  mCircleBounds.right=w / 2f + mRadius;
+}

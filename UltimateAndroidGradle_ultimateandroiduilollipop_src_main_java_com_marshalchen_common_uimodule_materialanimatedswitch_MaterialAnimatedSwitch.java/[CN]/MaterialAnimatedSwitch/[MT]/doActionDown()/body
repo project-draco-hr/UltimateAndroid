@@ -1,0 +1,11 @@
+{
+  if (actualState.equals(MaterialAnimatedSwitchState.RELEASE) || actualState.equals(MaterialAnimatedSwitchState.INIT) || actualState == null) {
+    actualState=MaterialAnimatedSwitchState.PRESS;
+    setState(actualState);
+  }
+ else {
+    actualState=MaterialAnimatedSwitchState.RELEASE;
+    setState(actualState);
+  }
+  playSoundEffect(SoundEffectConstants.CLICK);
+}

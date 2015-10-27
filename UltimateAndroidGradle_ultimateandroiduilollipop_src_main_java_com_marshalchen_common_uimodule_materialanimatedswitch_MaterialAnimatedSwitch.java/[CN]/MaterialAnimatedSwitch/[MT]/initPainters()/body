@@ -1,0 +1,7 @@
+{
+  basePainter=new BasePainter(baseColorRelease,baseColorPress,margin,ballMoveObservable);
+  ballPainter=new BallPainter(ballColorRelease,ballColorPress,margin,ballFinishObservable,ballMoveObservable,getContext());
+  ballShadowPainter=new BallShadowPainter(ballShadowColor,ballShadowColor,margin,ballShadowColor,ballFinishObservable,ballMoveObservable,getContext());
+  iconPressPainter=new IconPressPainter(getContext(),pressIcon,ballFinishObservable,ballMoveObservable,margin);
+  iconReleasePainter=new IconReleasePainter(getContext(),releaseIcon,ballFinishObservable,margin);
+}

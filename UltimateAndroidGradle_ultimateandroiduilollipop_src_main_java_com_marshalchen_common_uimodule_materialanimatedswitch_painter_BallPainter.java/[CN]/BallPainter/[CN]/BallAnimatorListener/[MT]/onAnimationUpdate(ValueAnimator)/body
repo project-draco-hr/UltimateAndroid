@@ -1,0 +1,9 @@
+{
+  int value=(int)animation.getAnimatedValue();
+  ballPositionX=value;
+  int pixelMove=value - padding;
+  int rangeValue=getAnimatedRange(pixelMove);
+  colorAnimator.setCurrentPlayTime(rangeValue);
+  ballMoveObservable.setBallPosition(ballPositionX);
+  ballMoveObservable.setBallAnimationValue(rangeValue);
+}

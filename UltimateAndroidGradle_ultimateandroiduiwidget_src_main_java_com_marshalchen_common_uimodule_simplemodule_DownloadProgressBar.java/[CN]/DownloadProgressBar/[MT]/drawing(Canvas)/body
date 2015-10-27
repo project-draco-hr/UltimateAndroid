@@ -1,0 +1,65 @@
+{
+  canvas.drawCircle(mCenterX,mCenterY,mRadius,mCirclePaint);
+switch (mState) {
+case IDLE:
+    canvas.drawLine(mCenterX,mCenterY - mRadius / 2,mCenterX,mCenterY + mRadius / 2,mDrawingPaint);
+  canvas.drawLine(mCenterX - mRadius / 2,mCenterY,mCenterX,mCenterY + mRadius / 2,mDrawingPaint);
+canvas.drawLine(mCenterX,mCenterY + mRadius / 2,mCenterX + mRadius / 2,mCenterY,mDrawingPaint);
+break;
+case ANIMATING_LINE_TO_DOT:
+if (!mDotToProgressAnimation.isRunning()) {
+canvas.drawLine(mCenterX,mCenterY - mRadius / 2 + mArrowLineToDotAnimatedValue * 2 - mStrokeWidth / 2,mCenterX,mCenterY + mRadius / 2 - mArrowLineToDotAnimatedValue * 2 + mStrokeWidth / 2,mDrawingPaint);
+}
+canvas.drawLine(mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2,mCenterY,mCenterX,mCenterY + mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue,mDrawingPaint);
+canvas.drawLine(mCenterX,mCenterY + mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue,mCenterX + mRadius / 2 + mArrowLineToHorizontalLineAnimatedValue / 2,mCenterY,mDrawingPaint);
+break;
+case ANIMATING_PROGRESS:
+float progress=((mCenterX + mRadius / 2 + mArrowLineToHorizontalLineAnimatedValue / 2) - (mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2)) / 360f;
+mDrawingPaint.setStrokeWidth(mStrokeWidth);
+canvas.drawArc(mCircleBounds,-90,mCurrentGlobalProgressValue,false,mDrawingPaint);
+mProgressBackgroundBounds.left=mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2;
+mProgressBackgroundBounds.top=mCenterY - mExpandCollapseValue;
+mProgressBackgroundBounds.right=mCenterX + mRadius / 2 + mArrowLineToHorizontalLineAnimatedValue / 2;
+mProgressBackgroundBounds.bottom=mCenterY + mExpandCollapseValue;
+canvas.drawRoundRect(mProgressBackgroundBounds,45,45,mProgressBackgroundPaint);
+mProgressBounds.left=mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2;
+mProgressBounds.top=mCenterY - mExpandCollapseValue;
+mProgressBounds.right=mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2 + progress * mCurrentGlobalProgressValue;
+mProgressBounds.bottom=mCenterY + mExpandCollapseValue;
+canvas.drawRoundRect(mProgressBounds,45,45,mProgressPaint);
+break;
+case ANIMATING_MANUAL_PROGRESS:
+float manualProgress=((mCenterX + mRadius / 2 + mArrowLineToHorizontalLineAnimatedValue / 2) - (mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2)) / 360f;
+mDrawingPaint.setStrokeWidth(mStrokeWidth);
+canvas.drawArc(mCircleBounds,-90,mCurrentGlobalManualProgressValue,false,mDrawingPaint);
+mProgressBackgroundBounds.left=mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2;
+mProgressBackgroundBounds.top=mCenterY - mExpandCollapseValue;
+mProgressBackgroundBounds.right=mCenterX + mRadius / 2 + mArrowLineToHorizontalLineAnimatedValue / 2;
+mProgressBackgroundBounds.bottom=mCenterY + mExpandCollapseValue;
+canvas.drawRoundRect(mProgressBackgroundBounds,45,45,mProgressBackgroundPaint);
+mProgressBounds.left=mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2;
+mProgressBounds.top=mCenterY - mExpandCollapseValue;
+mProgressBounds.right=mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2 + manualProgress * mCurrentGlobalManualProgressValue;
+mProgressBounds.bottom=mCenterY + mExpandCollapseValue;
+canvas.drawRoundRect(mProgressBounds,45,45,mProgressPaint);
+break;
+case ANIMATING_SUCCESS:
+mDrawingPaint.setStrokeWidth(mLineWidth);
+canvas.drawArc(mCircleBounds,0,360,false,mDrawingPaint);
+canvas.drawLine(mCenterX - mRadius / 2 + mSuccessValue * 2 - mSuccessValue / (float)Math.sqrt(2f) / 2,mCenterY + mSuccessValue,mCenterX + mSuccessValue * 2 - mSuccessValue / (float)Math.sqrt(2f) / 2,mCenterY - mSuccessValue,mDrawingPaint);
+canvas.drawLine(mCenterX - mSuccessValue - 2 * mSuccessValue / (float)Math.sqrt(2f) / 2,mCenterY,mCenterX + mRadius / 2 - mSuccessValue * 2 - mSuccessValue / (float)Math.sqrt(2f) / 2,mCenterY + mSuccessValue,mDrawingPaint);
+break;
+case ANIMATING_ERROR:
+mDrawingPaint.setStrokeWidth(mLineWidth);
+canvas.drawArc(mCircleBounds,0,360,false,mDrawingPaint);
+canvas.drawLine(mCenterX - mRadius / 2 - mRadius / 4 + mErrorValue * 2,mCenterY + mErrorValue,mCenterX + mErrorValue,mCenterY - mErrorValue,mDrawingPaint);
+canvas.drawLine(mCenterX - mErrorValue,mCenterY - mErrorValue,mCenterX + mRadius / 2 + mRadius / 4 - mErrorValue * 2,mCenterY + mErrorValue,mDrawingPaint);
+break;
+}
+if (mDotToProgressAnimatedValue > 0) {
+canvas.drawCircle(mCenterX,mCenterY - mDotToProgressAnimatedValue,mStrokeWidth / 2,mDrawingPaint);
+}
+if (mDotToProgressAnimation.isRunning() && !mArrowLineToHorizontalLine.isRunning()) {
+canvas.drawLine(mCenterX - mRadius / 2 - mArrowLineToHorizontalLineAnimatedValue / 2,mCenterY,mCenterX + mRadius / 2 + mArrowLineToHorizontalLineAnimatedValue / 2,mCenterY,mDrawingPaint);
+}
+}

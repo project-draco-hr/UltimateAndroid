@@ -1,0 +1,5 @@
+{
+  exitXAnimationStart=(int)context.getResources().getDimension(R.dimen.mas_exitXAnimationStart);
+  exitYAnimatorFinish=(int)context.getResources().getDimension(R.dimen.mas_exitYAnimatorFinish);
+  enterYAnimationStart=(int)context.getResources().getDimension(R.dimen.mas_enterYAnimationStart);
+}

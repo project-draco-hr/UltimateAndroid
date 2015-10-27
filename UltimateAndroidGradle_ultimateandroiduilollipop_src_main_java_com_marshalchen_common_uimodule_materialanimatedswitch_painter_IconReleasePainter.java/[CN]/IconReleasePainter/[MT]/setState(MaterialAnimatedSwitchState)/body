@@ -1,0 +1,18 @@
+{
+  this.actualState=state;
+switch (state) {
+case INIT:
+    isVisible=true;
+  break;
+case PRESS:
+exitYAnimator.start();
+exitXAnimator.reverse();
+exitAlphaAnimator.reverse();
+break;
+case RELEASE:
+isVisible=true;
+enterXAnimator.reverse();
+enterYAnimator.start();
+break;
+}
+}

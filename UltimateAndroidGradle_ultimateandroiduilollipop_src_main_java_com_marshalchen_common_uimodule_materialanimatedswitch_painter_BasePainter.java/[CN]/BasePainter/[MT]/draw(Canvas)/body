@@ -1,0 +1,4 @@
+{
+  canvas.drawLine(padding,height / 2,width - padding,height / 2,paint);
+  canvas.drawLine(padding,height / 2,width - padding,height / 2,toBgPainter);
+}

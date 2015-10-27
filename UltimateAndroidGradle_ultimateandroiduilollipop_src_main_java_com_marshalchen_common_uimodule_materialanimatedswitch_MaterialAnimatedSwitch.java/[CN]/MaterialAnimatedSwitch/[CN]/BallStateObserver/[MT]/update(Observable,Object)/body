@@ -1,0 +1,14 @@
+{
+  BallFinishObservable ballFinishObservable=(BallFinishObservable)observable;
+  isClickable=!ballFinishObservable.getState().equals(BallFinishObservable.BallState.MOVE);
+  if (ballFinishObservable.getState().equals(BallFinishObservable.BallState.PRESS)) {
+    if (onCheckedChangeListener != null) {
+      onCheckedChangeListener.onCheckedChanged(true);
+    }
+  }
+ else   if (ballFinishObservable.getState().equals(BallFinishObservable.BallState.RELEASE)) {
+    if (onCheckedChangeListener != null) {
+      onCheckedChangeListener.onCheckedChanged(false);
+    }
+  }
+}

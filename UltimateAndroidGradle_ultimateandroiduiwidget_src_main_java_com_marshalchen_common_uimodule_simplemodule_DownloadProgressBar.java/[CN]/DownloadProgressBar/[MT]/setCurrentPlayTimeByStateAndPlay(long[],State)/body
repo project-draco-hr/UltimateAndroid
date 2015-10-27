@@ -1,0 +1,24 @@
+{
+switch (mState) {
+case ANIMATING_LINE_TO_DOT:
+    mArrowToLineAnimatorSet.start();
+  for (int i=0; i < mArrowToLineAnimatorSet.getChildAnimations().size(); i++) {
+    ((ValueAnimator)mArrowToLineAnimatorSet.getChildAnimations().get(i)).setCurrentPlayTime(tab[i]);
+  }
+break;
+case ANIMATING_PROGRESS:
+mProgressAnimationSet.start();
+for (int i=0; i < mProgressAnimationSet.getChildAnimations().size(); i++) {
+((ValueAnimator)mProgressAnimationSet.getChildAnimations().get(i)).setCurrentPlayTime(tab[i]);
+}
+break;
+case ANIMATING_ERROR:
+mErrorAnimation.start();
+mErrorAnimation.setCurrentPlayTime(tab[0]);
+break;
+case ANIMATING_SUCCESS:
+mSuccessAnimation.start();
+mSuccessAnimation.setCurrentPlayTime(tab[0]);
+break;
+}
+}

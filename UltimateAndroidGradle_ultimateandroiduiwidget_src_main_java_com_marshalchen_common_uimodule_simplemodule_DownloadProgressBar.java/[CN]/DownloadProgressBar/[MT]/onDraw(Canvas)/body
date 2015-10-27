@@ -1,0 +1,4 @@
+{
+  super.onDraw(canvas);
+  drawing(canvas);
+}

@@ -1,0 +1,4 @@
+{
+  ballFinishObservable.addObserver(new BallFinishListener());
+  ballMoveObservable.addObserver(new BallMoveListener());
+}

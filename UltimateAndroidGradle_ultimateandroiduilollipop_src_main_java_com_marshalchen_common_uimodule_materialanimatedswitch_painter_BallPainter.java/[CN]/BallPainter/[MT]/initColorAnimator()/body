@@ -1,0 +1,10 @@
+{
+  colorAnimator=ValueAnimator.ofInt(0,255);
+  colorAnimator.setDuration(ballMovementRange);
+  colorAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+    @Override public void onAnimationUpdate(    ValueAnimator animation){
+      toBgPainter.setAlpha((Integer)animation.getAnimatedValue());
+    }
+  }
+);
+}

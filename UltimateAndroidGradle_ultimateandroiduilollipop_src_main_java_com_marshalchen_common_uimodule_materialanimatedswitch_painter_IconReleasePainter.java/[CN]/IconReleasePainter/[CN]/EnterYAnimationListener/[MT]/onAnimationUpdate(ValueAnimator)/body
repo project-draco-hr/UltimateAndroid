@@ -1,0 +1,7 @@
+{
+  iconYPosition=((int)animation.getAnimatedValue() - iconMargin);
+  if (animation.getCurrentPlayTime() > animation.getDuration() / 2 && !alphaEnterTrigger && actualState.equals(MaterialAnimatedSwitchState.RELEASE)) {
+    exitAlphaAnimator.start();
+    alphaEnterTrigger=true;
+  }
+}

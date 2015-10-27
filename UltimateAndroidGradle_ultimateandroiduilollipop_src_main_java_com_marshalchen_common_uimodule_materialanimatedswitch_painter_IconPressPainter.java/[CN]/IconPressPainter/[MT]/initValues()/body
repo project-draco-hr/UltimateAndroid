@@ -1,0 +1,6 @@
+{
+  middle=height / 2;
+  iconMargin=imageWidth / 2;
+  ballRadius=(int)context.getResources().getDimension(R.dimen.mas_ball_radius);
+  iconXPosition=(width - ballRadius) + iconMargin;
+}

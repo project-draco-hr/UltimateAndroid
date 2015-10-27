@@ -1,0 +1,9 @@
+{
+  super.onDraw(canvas);
+  basePainter.draw(canvas);
+  ballShadowPainter.draw(canvas);
+  ballPainter.draw(canvas);
+  iconPressPainter.draw(canvas);
+  iconReleasePainter.draw(canvas);
+  invalidate();
+}

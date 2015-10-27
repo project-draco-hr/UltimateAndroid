@@ -1,0 +1,4 @@
+{
+  canvas.drawCircle(ballPositionX,middle,radius,paint);
+  canvas.drawCircle(ballPositionX,middle,radius,toBgPainter);
+}
