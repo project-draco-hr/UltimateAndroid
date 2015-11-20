@@ -1,0 +1,5 @@
+{
+  blurImageView.cancelImageLoadForSafty();
+  fullBlurImageView.cancelImageLoadForSafty();
+  super.onDestroy();
+}
