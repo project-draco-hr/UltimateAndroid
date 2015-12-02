@@ -1,0 +1,26 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.blur_image_view_activity_main);
+  fastBlurBtn=(Button)findViewById(R.id.fast_blur_btn);
+  blurImageView=(BlurImageView)findViewById(R.id.blur_image_view);
+  fullBlurImageView=(BlurImageView)findViewById(R.id.full_blur_image_view);
+  fastBlurBtn.setOnClickListener(new View.OnClickListener(){
+    @Override public void onClick(    View v){
+      if (!alreadyCompelete) {
+        int blurFactor=getBlurFactor();
+        fullBlurImageView.setBlurFactor(blurFactor);
+        fullBlurImageView.setFullImageByUrl(mediumSmUrl[getResIndex()],mediumNmUrl[getResIndex()]);
+        blurImageView.setBlurFactor(blurFactor);
+        blurImageView.setBlurImageByUrl(mediumSmUrl[getResIndex()]);
+        alreadyCompelete=true;
+      }
+ else {
+        blurImageView.clear();
+        fullBlurImageView.clear();
+        currentIndex++;
+        alreadyCompelete=false;
+      }
+    }
+  }
+);
+}

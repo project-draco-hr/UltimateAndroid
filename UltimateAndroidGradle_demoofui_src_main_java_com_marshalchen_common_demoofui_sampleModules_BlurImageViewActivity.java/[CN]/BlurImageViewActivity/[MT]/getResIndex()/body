@@ -1,0 +1,6 @@
+{
+  if (currentIndex > 3) {
+    currentIndex=currentIndex - 4;
+  }
+  return currentIndex;
+}

@@ -1,0 +1,3 @@
+{
+  return BlurImageView.DEFAULT_BLUR_FACTOR;
+}
