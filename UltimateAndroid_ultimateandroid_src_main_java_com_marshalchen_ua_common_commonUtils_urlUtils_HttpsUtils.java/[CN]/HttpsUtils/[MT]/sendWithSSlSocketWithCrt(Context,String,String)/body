@@ -1,5 +1,5 @@
 {
-  SSLSocketFactory sslsocketfactory=buildSslSocketFactory(context,certFilePath);
+  SSLSocketFactory sslsocketfactory=getSSLSocketFactory(context,certFilePath);
   URL url;
   InputStream inputstream=null;
   InputStreamReader inputstreamreader=null;

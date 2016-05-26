@@ -1,0 +1,15 @@
+{
+  KeyManagerFactory kmf=null;
+  try {
+    String keyStoreType="BKS";
+    KeyStore keyStore=KeyStore.getInstance(keyStoreType);
+    keyStore.load(key,keyPassword.toCharArray());
+    String kmfAlgorithm=KeyManagerFactory.getDefaultAlgorithm();
+    kmf=KeyManagerFactory.getInstance(kmfAlgorithm);
+    kmf.init(keyStore,keyPassword.toCharArray());
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+  }
+  return kmf;
+}

@@ -1,0 +1,4 @@
+{
+  InputStream is=context.getResources().getAssets().open(certFilePath);
+  return getSSLSocketFactory(is,key,keyPassword);
+}
