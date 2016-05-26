@@ -1,0 +1,4 @@
+{
+  SharedPreferences sharedPreferences=context.getSharedPreferences(preferenceName,Context.MODE_PRIVATE);
+  return sharedPreferences.getString(key,defaultValue);
+}

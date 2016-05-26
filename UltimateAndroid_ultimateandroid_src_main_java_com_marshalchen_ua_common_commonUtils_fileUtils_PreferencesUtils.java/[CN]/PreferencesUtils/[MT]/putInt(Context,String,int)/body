@@ -1,0 +1,3 @@
+{
+  return putInt(context,preferenceName,key,value);
+}

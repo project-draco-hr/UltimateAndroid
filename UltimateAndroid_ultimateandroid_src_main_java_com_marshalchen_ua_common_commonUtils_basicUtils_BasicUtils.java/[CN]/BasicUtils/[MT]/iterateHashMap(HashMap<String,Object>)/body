@@ -1,0 +1,7 @@
+{
+  for (  Map.Entry<String,Object> entry : hashMap.entrySet()) {
+    String key=entry.getKey();
+    Object value=entry.getValue();
+    Logs.d("key: " + key + "   "+ "value:  "+ value.toString());
+  }
+}

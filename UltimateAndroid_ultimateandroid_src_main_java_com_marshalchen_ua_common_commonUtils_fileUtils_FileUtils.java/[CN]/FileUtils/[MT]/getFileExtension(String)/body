@@ -1,0 +1,11 @@
+{
+  if (!BasicUtils.judgeNotNull(filePath)) {
+    return "";
+  }
+  int extenPosi=filePath.lastIndexOf(".");
+  int filePosi=filePath.lastIndexOf(File.separator);
+  if (extenPosi == -1) {
+    return "";
+  }
+  return (filePosi >= extenPosi) ? "" : filePath.substring(extenPosi + 1);
+}

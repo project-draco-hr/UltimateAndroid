@@ -1,0 +1,10 @@
+{
+  try {
+    FileWriter writer=new FileWriter(fileName,true);
+    writer.write(content);
+    writer.close();
+  }
+ catch (  IOException e) {
+    e.printStackTrace();
+  }
+}

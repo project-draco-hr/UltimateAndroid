@@ -1,0 +1,4 @@
+AbstractDao dao
+Property orderProperty
+WhereCondition whereCondition
+WhereCondition whereConditions

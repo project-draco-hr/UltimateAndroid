@@ -1,0 +1,10 @@
+{
+  WebSettings wSet=webView.getSettings();
+  wSet.setJavaScriptEnabled(true);
+  wSet.setDomStorageEnabled(true);
+  wSet.setAppCachePath(appCacheDir);
+  wSet.setAllowFileAccess(true);
+  wSet.setAppCacheEnabled(true);
+  wSet.setCacheMode(WebSettings.LOAD_DEFAULT);
+  return wSet;
+}

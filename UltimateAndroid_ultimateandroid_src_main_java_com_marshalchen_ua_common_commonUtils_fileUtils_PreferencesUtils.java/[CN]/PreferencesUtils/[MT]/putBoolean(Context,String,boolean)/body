@@ -1,0 +1,3 @@
+{
+  return putBoolean(context,preferenceName,key,value);
+}

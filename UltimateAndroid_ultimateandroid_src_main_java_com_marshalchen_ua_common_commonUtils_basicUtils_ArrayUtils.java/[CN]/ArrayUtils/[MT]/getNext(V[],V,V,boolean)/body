@@ -1,0 +1,19 @@
+{
+  if (isEmpty(sourceArray)) {
+    return defaultValue;
+  }
+  int currentPosition=-1;
+  for (int i=0; i < sourceArray.length; i++) {
+    if (isEquals(value,sourceArray[i])) {
+      currentPosition=i;
+      break;
+    }
+  }
+  if (currentPosition == -1) {
+    return defaultValue;
+  }
+  if (currentPosition == sourceArray.length - 1) {
+    return isCircle ? sourceArray[0] : defaultValue;
+  }
+  return sourceArray[currentPosition + 1];
+}

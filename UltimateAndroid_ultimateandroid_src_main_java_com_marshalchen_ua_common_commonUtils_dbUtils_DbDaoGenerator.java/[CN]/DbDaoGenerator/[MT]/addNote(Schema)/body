@@ -1,0 +1,10 @@
+{
+  Entity note=schema.addEntity("Brand");
+  note.addIdProperty();
+  note.addStringProperty("brandName").notNull();
+  note.addStringProperty("brandId").notNull();
+  note.addDateProperty("brandImageUri");
+  note.addStringProperty("brandInfos");
+  note.setHasKeepSections(true);
+  note.setSkipGeneration(true);
+}

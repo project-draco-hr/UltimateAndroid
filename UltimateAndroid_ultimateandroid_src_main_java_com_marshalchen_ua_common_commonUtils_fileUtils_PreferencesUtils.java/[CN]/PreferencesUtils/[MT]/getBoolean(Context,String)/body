@@ -1,0 +1,3 @@
+{
+  return getBoolean(context,preferenceName,key);
+}

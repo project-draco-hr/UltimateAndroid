@@ -1,0 +1,3 @@
+{
+  return mThread != null && mThread.isAlive();
+}

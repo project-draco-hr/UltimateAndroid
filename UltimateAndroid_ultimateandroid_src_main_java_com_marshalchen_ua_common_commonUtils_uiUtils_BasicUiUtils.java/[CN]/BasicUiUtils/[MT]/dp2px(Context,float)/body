@@ -1,0 +1,4 @@
+{
+  float scale=context.getResources().getDisplayMetrics().density;
+  return (int)Math.ceil(dpValue * scale);
+}

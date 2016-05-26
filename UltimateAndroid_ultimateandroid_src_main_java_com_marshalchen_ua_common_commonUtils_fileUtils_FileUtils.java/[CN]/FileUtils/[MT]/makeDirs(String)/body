@@ -1,0 +1,7 @@
+{
+  File folder=new File(dirPath);
+  if (folder.exists()) {
+    return false;
+  }
+  return (folder.exists() && folder.isDirectory()) ? true : folder.mkdirs();
+}

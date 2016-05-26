@@ -1,0 +1,4 @@
+{
+  downloadDialogShower.setUpdateCurrentTextViewString(title);
+  return this;
+}

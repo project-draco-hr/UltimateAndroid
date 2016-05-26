@@ -1,0 +1,10 @@
+{
+  String result="";
+  if (getSdkVersion() > 7) {
+    result=Base64.encodeToString(context,type);
+  }
+ else {
+    result=com.marshalchen.ua.common.commonUtils.urlUtils.Base64.encodeBytes(context);
+  }
+  return result;
+}

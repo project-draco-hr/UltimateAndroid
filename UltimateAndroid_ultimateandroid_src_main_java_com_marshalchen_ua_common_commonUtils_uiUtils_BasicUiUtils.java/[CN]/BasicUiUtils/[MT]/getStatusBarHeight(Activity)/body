@@ -1,0 +1,5 @@
+{
+  Rect frame=new Rect();
+  activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
+  return frame.top;
+}

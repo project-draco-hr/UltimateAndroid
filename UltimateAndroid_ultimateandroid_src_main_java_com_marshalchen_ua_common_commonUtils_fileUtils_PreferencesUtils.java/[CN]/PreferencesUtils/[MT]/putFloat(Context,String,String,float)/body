@@ -1,0 +1,6 @@
+{
+  SharedPreferences sharedPreferences=context.getSharedPreferences(preferenceName,Context.MODE_PRIVATE);
+  SharedPreferences.Editor editor=sharedPreferences.edit();
+  editor.putFloat(key,value);
+  return editor.commit();
+}

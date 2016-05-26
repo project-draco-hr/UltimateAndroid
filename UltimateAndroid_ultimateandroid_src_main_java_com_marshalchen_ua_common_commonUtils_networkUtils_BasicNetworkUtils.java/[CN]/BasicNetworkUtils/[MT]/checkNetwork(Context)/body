@@ -1,0 +1,8 @@
+{
+  ConnectivityManager conn=(ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+  NetworkInfo net=conn.getActiveNetworkInfo();
+  if (net != null && net.isConnected()) {
+    return true;
+  }
+  return false;
+}

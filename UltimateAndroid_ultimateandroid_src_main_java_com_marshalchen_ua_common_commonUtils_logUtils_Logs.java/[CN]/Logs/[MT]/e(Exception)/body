@@ -1,0 +1,6 @@
+{
+  if (sIsLogEnabled) {
+    Log.e(sApplicationTag,getContent(getCurrentStackTraceElement()) + "\n>" + exception.getMessage());
+    exception.printStackTrace();
+  }
+}

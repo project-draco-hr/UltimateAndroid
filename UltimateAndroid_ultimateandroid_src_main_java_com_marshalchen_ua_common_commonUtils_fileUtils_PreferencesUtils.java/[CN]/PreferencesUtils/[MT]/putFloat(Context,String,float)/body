@@ -1,0 +1,3 @@
+{
+  return putFloat(context,preferenceName,key,value);
+}

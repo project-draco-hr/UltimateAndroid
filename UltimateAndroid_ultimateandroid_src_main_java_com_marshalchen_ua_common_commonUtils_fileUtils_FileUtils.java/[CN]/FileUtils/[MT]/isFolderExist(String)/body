@@ -1,0 +1,7 @@
+{
+  if (!BasicUtils.judgeNotNull(directoryPath)) {
+    return false;
+  }
+  File dire=new File(directoryPath);
+  return (dire.exists() && dire.isDirectory());
+}

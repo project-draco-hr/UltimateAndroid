@@ -1,0 +1,3 @@
+{
+  new AlertDialog.Builder(context).setPositiveButton("OK",null).setTitle(title).setMessage(message).show();
+}

@@ -1,0 +1,3 @@
+{
+  return execCommand(commands == null ? null : commands.toArray(new String[]{}),isRoot,true);
+}

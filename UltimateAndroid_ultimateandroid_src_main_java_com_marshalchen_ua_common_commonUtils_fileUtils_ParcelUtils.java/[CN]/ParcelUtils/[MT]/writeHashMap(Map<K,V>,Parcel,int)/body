@@ -1,0 +1,12 @@
+{
+  if (map != null) {
+    out.writeInt(map.size());
+    for (    Entry<K,V> entry : map.entrySet()) {
+      out.writeParcelable(entry.getKey(),flags);
+      out.writeParcelable(entry.getValue(),flags);
+    }
+  }
+ else {
+    out.writeInt(-1);
+  }
+}

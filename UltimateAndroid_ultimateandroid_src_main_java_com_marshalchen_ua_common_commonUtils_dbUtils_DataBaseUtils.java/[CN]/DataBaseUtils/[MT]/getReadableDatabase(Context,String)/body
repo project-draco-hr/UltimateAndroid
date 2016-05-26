@@ -1,0 +1,12 @@
+{
+  File dbFile=context.getDatabasePath(databaseName);
+  if (dbFile != null && !dbFile.exists()) {
+    try {
+      copyDatabase(context,dbFile,databaseName);
+    }
+ catch (    IOException e) {
+      throw new RuntimeException("Copying database error",e);
+    }
+  }
+  return SQLiteDatabase.openDatabase(dbFile.getPath(),null,SQLiteDatabase.OPEN_READONLY);
+}

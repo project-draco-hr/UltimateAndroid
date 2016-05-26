@@ -1,0 +1,21 @@
+{
+  File file=new File(filePath);
+  if (!file.exists()) {
+    return true;
+  }
+  if (file.isFile()) {
+    return file.delete();
+  }
+  if (!file.isDirectory()) {
+    return false;
+  }
+  for (  File f : file.listFiles()) {
+    if (f.isFile()) {
+      f.delete();
+    }
+ else     if (f.isDirectory()) {
+      deleteFile(f.getAbsolutePath());
+    }
+  }
+  return file.delete();
+}

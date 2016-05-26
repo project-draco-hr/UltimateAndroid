@@ -1,0 +1,17 @@
+{
+  String tag=NEXT_TAG.get();
+  if (tag != null) {
+    NEXT_TAG.remove();
+    return tag;
+  }
+  StackTraceElement[] stackTrace=new Throwable().getStackTrace();
+  if (stackTrace.length < 6) {
+    throw new IllegalStateException("Synthetic stacktrace didn't have enough elements: are you using proguard?");
+  }
+  tag=stackTrace[5].getClassName();
+  Matcher m=ANONYMOUS_CLASS.matcher(tag);
+  if (m.find()) {
+    tag=m.replaceAll("");
+  }
+  return tag.substring(tag.lastIndexOf('.') + 1);
+}

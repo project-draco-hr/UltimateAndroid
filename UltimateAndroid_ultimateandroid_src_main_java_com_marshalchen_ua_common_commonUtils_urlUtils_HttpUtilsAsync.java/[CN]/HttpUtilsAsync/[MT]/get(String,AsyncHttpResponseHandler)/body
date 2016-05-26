@@ -1,0 +1,4 @@
+{
+  client.setTimeout(timeout);
+  client.get(getAbsoluteUrl(url),responseHandler);
+}
