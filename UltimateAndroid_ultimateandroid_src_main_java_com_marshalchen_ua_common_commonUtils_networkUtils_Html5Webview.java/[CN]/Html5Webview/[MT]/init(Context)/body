@@ -2,9 +2,9 @@
   mContext=context;
   Activity mActivity=(Activity)mContext;
   mLayout=new FrameLayout(context);
-  mBrowserFrameLayout=(FrameLayout)LayoutInflater.from(mActivity).inflate(R.layout.custom_screen,null);
-  mContentView=(FrameLayout)mBrowserFrameLayout.findViewById(R.id.main_content);
-  mCustomViewContainer=(FrameLayout)mBrowserFrameLayout.findViewById(R.id.fullscreen_custom_content);
+  mBrowserFrameLayout=(FrameLayout)LayoutInflater.from(mActivity).inflate(R.layout.html5_webview_custom_screen,null);
+  mContentView=(FrameLayout)mBrowserFrameLayout.findViewById(R.id.html5_webview_main_content);
+  mCustomViewContainer=(FrameLayout)mBrowserFrameLayout.findViewById(R.id.html5_webview_fullscreen_custom_content);
   mLayout.addView(mBrowserFrameLayout,COVER_SCREEN_PARAMS);
   WebSettings s=getSettings();
   s.setBuiltInZoomControls(true);
