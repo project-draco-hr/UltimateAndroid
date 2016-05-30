@@ -1,9 +1,9 @@
 {
   super.onCreate(savedInstanceState);
   setContentView(R.layout.activity_main);
+  ButterKnife.setDebug(true);
   ButterKnife.bind(this);
   listData=getData("com.marshalchen.ultimateandroid.demo");
-  mainActivityListView=(ListView)findViewById(R.id.mainActivityListView);
   mainActivityListView.setAdapter(new ListviewAdapter(listData));
   mainActivityListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
     @Override public void onItemClick(    AdapterView<?> parent,    View view,    int position,    long id){
@@ -11,5 +11,4 @@
     }
   }
 );
-  Timber.plant(new Timber.DebugTree());
 }

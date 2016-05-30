@@ -1,0 +1,14 @@
+{
+  return new Observer<Boolean>(){
+    @Override public void onCompleted(){
+      addData("complete");
+    }
+    @Override public void onError(    Throwable e){
+      addData("error     " + e.getMessage());
+    }
+    @Override public void onNext(    Boolean aBoolean){
+      addData(String.format("onNext with return value \"%b\"",aBoolean));
+    }
+  }
+;
+}

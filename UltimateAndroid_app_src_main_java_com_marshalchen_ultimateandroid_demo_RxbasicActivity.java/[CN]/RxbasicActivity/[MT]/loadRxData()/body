@@ -1,0 +1,4 @@
+{
+  addData("fab click");
+  subscription=getObservable().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(getObserver());
+}

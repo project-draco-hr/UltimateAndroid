@@ -1,13 +1,8 @@
 {
   super.onCreate(savedInstanceState);
   setContentView(R.layout.activity_rxbasic);
-  Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
+  ButterKnife.bind(this);
   setSupportActionBar(toolbar);
-  FloatingActionButton fab=(FloatingActionButton)findViewById(R.id.fab);
-  fab.setOnClickListener(new View.OnClickListener(){
-    @Override public void onClick(    View view){
-      Snackbar.make(view,"Replace with your own action",Snackbar.LENGTH_LONG).setAction("Action",null).show();
-    }
-  }
-);
+  dataAdapter=new DataAdapter(this,new ArrayList<String>());
+  rxBasicListview.setAdapter(dataAdapter);
 }

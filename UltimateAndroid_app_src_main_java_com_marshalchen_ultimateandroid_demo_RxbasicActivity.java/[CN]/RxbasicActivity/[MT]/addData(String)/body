@@ -1,0 +1,17 @@
+{
+  if (isCurrentlyOnMainThread()) {
+    dataList.add(0,logMsg + " (main thread) ");
+    dataAdapter.clear();
+    dataAdapter.addAll(dataList);
+  }
+ else {
+    dataList.add(0,logMsg + " (NOT main thread) ");
+    new Handler(Looper.getMainLooper()).post(new Runnable(){
+      @Override public void run(){
+        dataAdapter.clear();
+        dataAdapter.addAll(dataList);
+      }
+    }
+);
+  }
+}
