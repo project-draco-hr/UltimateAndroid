@@ -1,0 +1,17 @@
+{
+  List<Map<String,?>> myData=new ArrayList<Map<String,?>>();
+  Intent intent=new Intent(prefix,null);
+  PackageManager pm=getPackageManager();
+  List<ResolveInfo> list=pm.queryIntentActivities(intent,0);
+  if (null == list)   return myData;
+  int len=list.size();
+  for (int i=0; i < len; i++) {
+    ResolveInfo info=list.get(i);
+    String activityName=info.activityInfo.name;
+    String[] labelPath=activityName.split("\\.");
+    String nextLabel=labelPath[labelPath.length - 1];
+    addItem(myData,nextLabel,activityIntent(info.activityInfo.applicationInfo.packageName,info.activityInfo.name));
+  }
+  Collections.sort(myData,sDisplayNameComparator);
+  return myData;
+}
