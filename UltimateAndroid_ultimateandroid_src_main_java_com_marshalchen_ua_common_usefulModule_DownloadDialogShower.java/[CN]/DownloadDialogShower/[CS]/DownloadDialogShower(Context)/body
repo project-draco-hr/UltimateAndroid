@@ -1,4 +1,3 @@
 {
   this.mContext=mContext;
-  initVariables();
 }
