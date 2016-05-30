@@ -1,3 +1,0 @@
-{
-  client.post(getAbsoluteUrl(url),responseHandler);
-}
