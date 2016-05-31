@@ -3,6 +3,6 @@
   setContentView(R.layout.activity_rxbasic);
   ButterKnife.bind(this);
   setSupportActionBar(toolbar);
-  dataAdapter=new DataAdapter(this,new ArrayList<String>());
+  dataAdapter=new DataAdapter(this,dataList);
   rxBasicListview.setAdapter(dataAdapter);
 }

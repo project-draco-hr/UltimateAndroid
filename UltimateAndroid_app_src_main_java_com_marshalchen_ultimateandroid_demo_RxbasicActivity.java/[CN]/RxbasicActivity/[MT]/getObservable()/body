@@ -3,7 +3,7 @@
     @Override public Boolean call(    Boolean aBoolean){
       addData("Within Observable");
       _doSomeLongOperation_thatBlocksCurrentThread();
-      return aBoolean;
+      return false;
     }
   }
 );
