@@ -1,0 +1,4 @@
+{
+  super.onReceivedError(view,request,error);
+  view.loadDataWithBaseURL("",showErrorString,"text/html","utf-8",null);
+}
