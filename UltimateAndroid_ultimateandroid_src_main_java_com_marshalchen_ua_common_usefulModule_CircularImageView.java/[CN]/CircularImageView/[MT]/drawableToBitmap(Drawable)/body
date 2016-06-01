@@ -1,0 +1,21 @@
+{
+  if (drawable == null)   return null;
+ else   if (drawable instanceof BitmapDrawable) {
+    Log.i(TAG,"Bitmap drawable!");
+    return ((BitmapDrawable)drawable).getBitmap();
+  }
+  int intrinsicWidth=drawable.getIntrinsicWidth();
+  int intrinsicHeight=drawable.getIntrinsicHeight();
+  if (!(intrinsicWidth > 0 && intrinsicHeight > 0))   return null;
+  try {
+    Bitmap bitmap=Bitmap.createBitmap(intrinsicWidth,intrinsicHeight,Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(bitmap);
+    drawable.setBounds(0,0,canvas.getWidth(),canvas.getHeight());
+    drawable.draw(canvas);
+    return bitmap;
+  }
+ catch (  OutOfMemoryError e) {
+    Log.e(TAG,"Encountered OutOfMemoryError while generating bitmap!");
+    return null;
+  }
+}

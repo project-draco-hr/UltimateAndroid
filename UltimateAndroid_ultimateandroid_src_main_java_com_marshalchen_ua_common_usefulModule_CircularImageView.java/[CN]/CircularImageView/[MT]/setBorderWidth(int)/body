@@ -1,0 +1,6 @@
+{
+  this.borderWidth=borderWidth;
+  if (paintBorder != null)   paintBorder.setStrokeWidth(borderWidth);
+  requestLayout();
+  invalidate();
+}

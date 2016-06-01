@@ -1,0 +1,5 @@
+{
+  float radius=shadowEnabled ? shadowRadius : 0;
+  paintBorder.setShadowLayer(radius,shadowDx,shadowDy,shadowColor);
+  paintSelectorBorder.setShadowLayer(radius,shadowDx,shadowDy,shadowColor);
+}

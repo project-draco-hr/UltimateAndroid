@@ -1,0 +1,7 @@
+{
+  shadowRadius=radius;
+  shadowDx=dx;
+  shadowDy=dy;
+  shadowColor=color;
+  updateShadow();
+}

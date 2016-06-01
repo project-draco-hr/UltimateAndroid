@@ -1,0 +1,3 @@
+{
+  super.startScroll(startX,startY,dx,dy,(int)(mDuration * mScrollFactor));
+}

@@ -1,0 +1,6 @@
+{
+  ClipData clipData=ClipData.newPlainText("UA",text);
+  ClipboardManager manager=(ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+  manager.setPrimaryClip(clipData);
+  Toast.makeText(context,success,Toast.LENGTH_SHORT).show();
+}

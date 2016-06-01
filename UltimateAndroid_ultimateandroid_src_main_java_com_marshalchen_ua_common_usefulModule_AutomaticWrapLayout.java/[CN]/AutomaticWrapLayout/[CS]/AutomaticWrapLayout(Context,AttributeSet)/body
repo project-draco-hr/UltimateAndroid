@@ -1,0 +1,5 @@
+{
+  super(context,attrs);
+  VIEW_MARGIN=BasicUiUtils.dip2px(context,6.0f);
+  this.context=context;
+}
