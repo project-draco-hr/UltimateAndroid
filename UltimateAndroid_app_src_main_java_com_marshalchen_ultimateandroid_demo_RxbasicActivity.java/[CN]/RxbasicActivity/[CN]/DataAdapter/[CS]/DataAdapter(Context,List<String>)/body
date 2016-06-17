@@ -1,3 +1,0 @@
-{
-  super(context,R.layout.item_listview_activity_main,R.id.main_activity_listview_item_textview,logs);
-}

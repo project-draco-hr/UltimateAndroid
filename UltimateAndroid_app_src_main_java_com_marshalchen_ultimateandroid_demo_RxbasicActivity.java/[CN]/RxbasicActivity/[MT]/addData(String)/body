@@ -1,5 +1,0 @@
-{
-  Logs.d("addData---" + dataList.size());
-  dataList.add(0,logMsg + " (main thread) ");
-  dataAdapter.notifyDataSetChanged();
-}

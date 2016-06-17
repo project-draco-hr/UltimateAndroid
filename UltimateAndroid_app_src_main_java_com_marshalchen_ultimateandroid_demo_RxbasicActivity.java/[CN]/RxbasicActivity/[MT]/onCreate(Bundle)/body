@@ -1,8 +1,0 @@
-{
-  super.onCreate(savedInstanceState);
-  setContentView(R.layout.activity_rxbasic);
-  ButterKnife.bind(this);
-  setSupportActionBar(toolbar);
-  dataAdapter=new DataAdapter(this,dataList);
-  rxBasicListview.setAdapter(dataAdapter);
-}
