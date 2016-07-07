@@ -1,3 +1,0 @@
-{
-  setFocusedWindow(activity.getWindow().getDecorView());
-}
