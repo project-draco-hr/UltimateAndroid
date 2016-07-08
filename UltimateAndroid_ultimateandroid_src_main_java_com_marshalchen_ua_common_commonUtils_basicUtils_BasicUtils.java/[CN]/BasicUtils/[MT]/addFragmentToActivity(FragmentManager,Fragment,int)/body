@@ -1,0 +1,7 @@
+{
+  Preconditions.checkNotNull(fragmentManager);
+  Preconditions.checkNotNull(fragment);
+  FragmentTransaction transaction=fragmentManager.beginTransaction();
+  transaction.add(frameId,fragment);
+  transaction.commit();
+}

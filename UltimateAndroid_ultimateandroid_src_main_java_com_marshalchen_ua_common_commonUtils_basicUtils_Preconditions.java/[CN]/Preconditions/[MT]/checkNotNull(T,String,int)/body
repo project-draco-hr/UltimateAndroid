@@ -1,0 +1,6 @@
+{
+  if (obj == null) {
+    throw new NullPointerException(format(errorMessageTemplate,p1));
+  }
+  return obj;
+}
