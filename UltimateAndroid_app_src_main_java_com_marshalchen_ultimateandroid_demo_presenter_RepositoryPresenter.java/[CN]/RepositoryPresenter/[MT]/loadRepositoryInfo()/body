@@ -1,0 +1,16 @@
+{
+  repositoryView.showProgressBar();
+  Subscriber subscriber=new Subscriber<RepositoryList<List<Repository>>>(){
+    @Override public void onCompleted(){
+      Logs.d("completed");
+    }
+    @Override public void onError(    Throwable e){
+      Logs.e(e.getMessage());
+    }
+    @Override public void onNext(    RepositoryList<List<Repository>> repositoryList){
+      repositoryView.setReposotories(repositoryList);
+    }
+  }
+;
+  GithubApiService.getInstance().loadRepositoryInfo(subscriber,"stars:>100","java");
+}

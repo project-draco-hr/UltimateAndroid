@@ -1,0 +1,10 @@
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_main);
+  ButterKnife.bind(this);
+  repositoryPresenter=new RepositoryPresenter(this);
+  repositoryPresenter.loadRepositoryInfo();
+  mainRecyclerview.setHasFixedSize(true);
+  mLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+  mainRecyclerview.setLayoutManager(mLayoutManager);
+}

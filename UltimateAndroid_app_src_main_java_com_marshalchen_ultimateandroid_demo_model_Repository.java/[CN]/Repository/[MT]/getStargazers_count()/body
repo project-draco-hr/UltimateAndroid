@@ -1,0 +1,3 @@
+{
+  return stargazers_count;
+}

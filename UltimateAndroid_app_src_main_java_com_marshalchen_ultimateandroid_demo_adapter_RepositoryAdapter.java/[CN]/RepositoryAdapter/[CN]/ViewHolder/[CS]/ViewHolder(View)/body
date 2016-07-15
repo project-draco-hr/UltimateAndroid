@@ -1,0 +1,4 @@
+{
+  super(itemView);
+  ButterKnife.bind(this,itemView);
+}

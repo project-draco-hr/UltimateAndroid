@@ -1,0 +1,6 @@
+{
+  mAdapter=new RepositoryAdapter(repositoryList.getRepositories());
+  mainRecyclerview.setAdapter(mAdapter);
+  mainProgressBar.setVisibility(View.GONE);
+  mainRecyclerview.setVisibility(View.VISIBLE);
+}

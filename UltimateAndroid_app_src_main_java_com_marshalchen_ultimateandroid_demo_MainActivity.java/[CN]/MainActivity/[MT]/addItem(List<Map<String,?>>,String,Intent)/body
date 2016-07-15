@@ -1,6 +1,0 @@
-{
-  Map<String,Object> temp=new HashMap<String,Object>();
-  temp.put("title",name);
-  temp.put("intent",intent);
-  data.add(temp);
-}

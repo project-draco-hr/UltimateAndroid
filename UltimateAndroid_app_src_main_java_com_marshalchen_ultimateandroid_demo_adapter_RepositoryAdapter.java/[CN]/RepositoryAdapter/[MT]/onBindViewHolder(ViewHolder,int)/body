@@ -1,0 +1,7 @@
+{
+  holder.ownerName.setText(repositoryList.get(position).getOwner().getLogin());
+  Glide.with(holder.itemView.getContext()).load(repositoryList.get(position).getOwner().getAvatar_url()).bitmapTransform(getTransform(position,holder.itemView.getContext())).placeholder(R.mipmap.ic_launcher).into(holder.ownerAvatar);
+  holder.repositoryName.setText(repositoryList.get(position).getName());
+  holder.repositoryForks.setText("forks:" + repositoryList.get(position).getForks_count());
+  holder.repositoryStars.setText("stars:" + repositoryList.get(position).getWatchers());
+}

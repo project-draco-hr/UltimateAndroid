@@ -1,0 +1,60 @@
+{
+  if (position % 19 == 0) {
+    return new CropCircleTransformation(mContext);
+  }
+ else   if (position % 19 == 1) {
+    return new RoundedCornersTransformation(mContext,30,0,RoundedCornersTransformation.CornerType.BOTTOM);
+  }
+ else   if (position % 19 == 2) {
+    return new CropTransformation(mContext,300,100,CropTransformation.CropType.BOTTOM);
+  }
+ else   if (position % 19 == 3) {
+    return new CropSquareTransformation(mContext);
+  }
+ else   if (position % 19 == 4) {
+    return new CropTransformation(mContext,300,100,CropTransformation.CropType.CENTER);
+  }
+ else   if (position % 19 == 5) {
+    return new ColorFilterTransformation(mContext,Color.argb(80,255,0,0));
+  }
+ else   if (position % 19 == 6) {
+    return new GrayscaleTransformation(mContext);
+  }
+ else   if (position % 19 == 7) {
+    return new CropTransformation(mContext,300,100);
+  }
+ else   if (position % 19 == 8) {
+    return new BlurTransformation(mContext,25);
+  }
+ else   if (position % 19 == 9) {
+    return new ToonFilterTransformation(mContext);
+  }
+ else   if (position % 19 == 10) {
+    return new SepiaFilterTransformation(mContext);
+  }
+ else   if (position % 19 == 11) {
+    return new ContrastFilterTransformation(mContext,2.0f);
+  }
+ else   if (position % 19 == 12) {
+    return new InvertFilterTransformation(mContext);
+  }
+ else   if (position % 19 == 13) {
+    return new PixelationFilterTransformation(mContext,20);
+  }
+ else   if (position % 19 == 14) {
+    return new SketchFilterTransformation(mContext);
+  }
+ else   if (position % 19 == 15) {
+    return new SwirlFilterTransformation(mContext,0.5f,1.0f,new PointF(0.5f,0.5f));
+  }
+ else   if (position % 19 == 16) {
+    return new BrightnessFilterTransformation(mContext,0.5f);
+  }
+ else   if (position % 19 == 17) {
+    return new KuwaharaFilterTransformation(mContext,25);
+  }
+ else   if (position % 19 == 18) {
+    return new VignetteFilterTransformation(mContext,new PointF(0.5f,0.5f),new float[]{0.0f,0.0f,0.0f},0f,0.75f);
+  }
+  return null;
+}

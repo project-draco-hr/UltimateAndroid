@@ -1,0 +1,4 @@
+{
+  mainProgressBar.setVisibility(View.VISIBLE);
+  mainRecyclerview.setVisibility(View.GONE);
+}

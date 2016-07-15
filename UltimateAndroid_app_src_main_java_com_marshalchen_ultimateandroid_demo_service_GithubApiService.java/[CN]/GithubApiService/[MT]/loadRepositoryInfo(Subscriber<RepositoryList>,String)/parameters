@@ -1,0 +1,2 @@
+Subscriber<RepositoryList> subscriber
+String query

@@ -1,0 +1,3 @@
+{
+  this.ssh_url=ssh_url;
+}

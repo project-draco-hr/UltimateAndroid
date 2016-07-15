@@ -1,0 +1,3 @@
+{
+  githubApiServiceInterface.getRepositoryBySearch(BasicUtils.judgeNotNull(language) ? query + URLDecoder.decode("+") + "language:"+ language : query,sort,order).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(subscriber);
+}

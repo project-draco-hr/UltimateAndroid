@@ -1,0 +1,3 @@
+{
+  return subscriptions_url;
+}

@@ -1,0 +1,3 @@
+{
+  return releases_url;
+}

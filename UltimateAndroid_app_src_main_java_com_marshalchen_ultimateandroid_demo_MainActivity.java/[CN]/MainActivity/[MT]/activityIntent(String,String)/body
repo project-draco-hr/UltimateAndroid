@@ -1,5 +1,0 @@
-{
-  Intent result=new Intent();
-  result.setClassName(pkg,componentName);
-  return result;
-}

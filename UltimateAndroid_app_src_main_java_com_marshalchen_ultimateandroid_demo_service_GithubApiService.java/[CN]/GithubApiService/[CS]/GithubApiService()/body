@@ -1,0 +1,7 @@
+{
+  OkHttpClient.Builder httpclientBuilder=new OkHttpClient.Builder();
+  httpclientBuilder.connectTimeout(5,TimeUnit.SECONDS);
+  httpclientBuilder.addNetworkInterceptor(new StethoInterceptor());
+  retrofit=new Retrofit.Builder().client(httpclientBuilder.build()).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJavaCallAdapterFactory.create()).baseUrl(BASE_URL).build();
+  githubApiServiceInterface=retrofit.create(GithubApiServiceInterface.class);
+}

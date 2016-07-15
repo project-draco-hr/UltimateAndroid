@@ -1,0 +1,4 @@
+BitmapPool pool
+Bitmap toTransform
+int outWidth
+int outHeight
